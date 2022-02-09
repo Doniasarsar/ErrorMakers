@@ -193,6 +193,6 @@ class __TwigTemplate_eeb3bd3a5ad78a11a38cd0c3ed1c22ef00ed2e2d46ccdfef8d2b607f921
         {% block body '' %}
     </body>
 </html>
-", "@WebProfiler/Profiler/base.html.twig", "/Users/skanderzouaoui/Documents/ProTECH/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base.html.twig");
+", "@WebProfiler/Profiler/base.html.twig", "/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base.html.twig");
     }
 }

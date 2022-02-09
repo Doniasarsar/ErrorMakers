@@ -189,6 +189,6 @@ class __TwigTemplate_62226f07c3d69125d2ffc7750ac417c32391d5dcb7f539c43666da97ee8
         </div>
     </div>
 </div>
-", "@Twig/Exception/traces.html.twig", "/Users/skanderzouaoui/Documents/ProTECH/vendor/symfony/twig-bundle/Resources/views/Exception/traces.html.twig");
+", "@Twig/Exception/traces.html.twig", "/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/twig-bundle/Resources/views/Exception/traces.html.twig");
     }
 }

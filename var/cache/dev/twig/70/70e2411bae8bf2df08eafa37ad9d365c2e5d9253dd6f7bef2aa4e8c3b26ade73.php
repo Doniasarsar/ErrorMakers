@@ -83,6 +83,6 @@ class __TwigTemplate_c44e81fc2c37a4991179c1439d5ac207d24365bb21acb6cc4ec05b42d53
 {{ status_code }} {{ status_text }}
 
 */
-", "@Twig/Exception/error.css.twig", "/Users/skanderzouaoui/Documents/ProTECH/vendor/symfony/twig-bundle/Resources/views/Exception/error.css.twig");
+", "@Twig/Exception/error.css.twig", "/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/twig-bundle/Resources/views/Exception/error.css.twig");
     }
 }

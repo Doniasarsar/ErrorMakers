@@ -1671,6 +1671,6 @@ class __TwigTemplate_686badb9b6c337e5b11709159897d46b1a1ac1d18bcc6485e275652fda8
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "/Users/skanderzouaoui/Documents/ProTECH/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
     }
 }
