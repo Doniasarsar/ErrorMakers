@@ -3,14 +3,14 @@
     
 <!-- index-431:41-->
 <head>
-    {% block stylesheets %}
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>ProTECH</title>
+    {% block title %}<title>ProTECH</title> {% endblock %}
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block stylesheets %}
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/favicon.png')}}">
     <!-- Material Design Iconic Font-V2.2.0 -->
     <link rel="stylesheet" href="{{asset('css/material-design-iconic-font.min.css')}}">
     <!-- Font Awesome -->
@@ -45,7 +45,7 @@
     <script src="{{asset('s/vendor/modernizr-2.8.3.min.js')}}j"></script>
 </head>
         {% endblock %}
-    </head>
+   
 <!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
@@ -427,8 +427,6 @@
             <!-- Header Area End Here -->
 
             {% block body %} {% endblock %}
-
-
 
        <!-- Begin Footer Area -->
        <div class="footer">
