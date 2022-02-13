@@ -66,6 +66,11 @@ class Utilisateurs
      */
     private $Livraison;
 
+    /**
+     * @ORM\Column(type="json")
+     */
+    private $Role = [];
+
     
 
     public function __construct()
@@ -176,6 +181,25 @@ class Utilisateurs
                 $livraison->setUtilisateurs(null);
             }
         }
+
+        return $this;
+    }
+
+  
+
+    
+    public function getRole(): array
+    {
+        $roles = $this->Role;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = 'ROLE_USER';
+
+        return array_unique($roles);
+    }
+
+    public function setRole(array $roles): self
+    {
+        $this->Role = $roles;
 
         return $this;
     }

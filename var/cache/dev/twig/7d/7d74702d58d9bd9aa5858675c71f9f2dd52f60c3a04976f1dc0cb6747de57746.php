@@ -24,13 +24,15 @@ class __TwigTemplate_d8bec2988c7f807f716a31a72a97dd142431a5609538a728bf3a73b1092
 
         $this->source = $this->getSourceContext();
 
-        $this->parent = false;
-
         $this->blocks = [
-            'stylesheets' => [$this, 'block_stylesheets'],
             'body' => [$this, 'block_body'],
-            'javascripts' => [$this, 'block_javascripts'],
         ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "baseBack.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -42,30 +44,8 @@ class __TwigTemplate_d8bec2988c7f807f716a31a72a97dd142431a5609538a728bf3a73b1092
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "admin/index.html.twig"));
 
-        // line 1
-        echo "
-<!DOCTYPE html>
-<html lang=\"en\">
-<head>
-  <meta charset=\"utf-8\">
-  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-  <title>ProTECH| Dashboard</title>
-";
-        // line 8
-        $this->displayBlock('stylesheets', $context, $blocks);
-        // line 31
-        echo "</head>
-";
-        // line 32
-        $this->displayBlock('body', $context, $blocks);
-        // line 365
-        echo "
-";
-        // line 366
-        $this->displayBlock('javascripts', $context, $blocks);
-        // line 402
-        echo "
-";
+        $this->parent = $this->loadTemplate("baseBack.html.twig", "admin/index.html.twig", 1);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -74,72 +54,7 @@ class __TwigTemplate_d8bec2988c7f807f716a31a72a97dd142431a5609538a728bf3a73b1092
 
     }
 
-    // line 8
-    public function block_stylesheets($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
-
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
-
-        // line 9
-        echo "  <!-- Google Font: Source Sans Pro -->
-  <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback')\">
-  <!-- Font Awesome -->
-  <link rel=\"stylesheet\" href=\"";
-        // line 12
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/fontawesome-free/css/all.min.css"), "html", null, true);
-        echo "\">
-  <!-- Ionicons -->
-  <link rel=\"stylesheet\" href=\"https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css\">
-  <!-- Tempusdominus Bootstrap 4 -->
-  <link rel=\"stylesheet\" href=\"";
-        // line 16
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"), "html", null, true);
-        echo "\">
-  <!-- iCheck -->
-  <link rel=\"stylesheet\" href=\"";
-        // line 18
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/icheck-bootstrap/icheck-bootstrap.min.css"), "html", null, true);
-        echo "\">
-  <!-- JQVMap -->
-  <link rel=\"stylesheet\" href=\"";
-        // line 20
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jqvmap/jqvmap.min.css"), "html", null, true);
-        echo "\">
-  <!-- Theme style -->
-  <link rel=\"stylesheet\" href=\"";
-        // line 22
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("dist/css/adminlte.min.css"), "html", null, true);
-        echo "\">
-  <!-- overlayScrollbars -->
-  <link rel=\"stylesheet\" href=\"";
-        // line 24
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/overlayScrollbars/css/OverlayScrollbars.min.css"), "html", null, true);
-        echo "\">
-  <!-- Daterange picker -->
-  <link rel=\"stylesheet\" href=\"";
-        // line 26
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/daterangepicker/daterangepicker.css"), "html", null, true);
-        echo "\">
-  <!-- summernote -->
-  <link rel=\"stylesheet\" href=\"";
-        // line 28
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/summernote/summernote-bs4.min.css"), "html", null, true);
-        echo "\">
-
-  ";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-        
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
-
-    }
-
-    // line 32
+    // line 3
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -149,246 +64,8 @@ class __TwigTemplate_d8bec2988c7f807f716a31a72a97dd142431a5609538a728bf3a73b1092
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 33
-        echo "<body class=\"hold-transition sidebar-mini layout-fixed\">
-<div class=\"wrapper\">
-
-  <!-- Preloader -->
-  <div class=\"preloader flex-column justify-content-center align-items-center\">
-    <img class=\"animation__shake\" src=\"";
-        // line 38
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("dist/img/AdminLTELogo.png"), "html", null, true);
-        echo "\" alt=\"AdminLTELogo\" height=\"60\" width=\"60\">
-  </div>
-
-  <!-- Navbar -->
-  <nav class=\"main-header navbar navbar-expand navbar-white navbar-light\">
-    <!-- Left navbar links -->
-    <ul class=\"navbar-nav\">
-      <li class=\"nav-item\">
-        <a class=\"nav-link\" data-widget=\"pushmenu\" href=\"#\" role=\"button\"><i class=\"fas fa-bars\"></i></a>
-      </li>
-      <li class=\"nav-item d-none d-sm-inline-block\">
-        <a href=\"#\" class=\"nav-link\">Home</a>
-      </li>
-      <li class=\"nav-item d-none d-sm-inline-block\">
-        <a href=\"#\" class=\"nav-link\">Contact</a>
-      </li>
-    </ul>
-
-    <!-- Right navbar links -->
-    <ul class=\"navbar-nav ml-auto\">
-      <!-- Navbar Search -->
-      <li class=\"nav-item\">
-        <a class=\"nav-link\" data-widget=\"navbar-search\" href=\"#\" role=\"button\">
-          <i class=\"fas fa-search\"></i>
-        </a>
-        <div class=\"navbar-search-block\">
-          <form class=\"form-inline\">
-            <div class=\"input-group input-group-sm\">
-              <input class=\"form-control form-control-navbar\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
-              <div class=\"input-group-append\">
-                <button class=\"btn btn-navbar\" type=\"submit\">
-                  <i class=\"fas fa-search\"></i>
-                </button>
-                <button class=\"btn btn-navbar\" type=\"button\" data-widget=\"navbar-search\">
-                  <i class=\"fas fa-times\"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </li>
-
-      <!-- Messages Dropdown Menu -->
-      <li class=\"nav-item dropdown\">
-        <a class=\"nav-link\" data-toggle=\"dropdown\" href=\"#\">
-          <i class=\"far fa-comments\"></i>
-          <span class=\"badge badge-danger navbar-badge\">3</span>
-        </a>
-        <div class=\"dropdown-menu dropdown-menu-lg dropdown-menu-right\">
-          <a href=\"#\" class=\"dropdown-item\">
-            <!-- Message Start -->
-            <div class=\"media\">
-              <img src=\"";
-        // line 90
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("dist/img/user1-128x128.jpg"), "html", null, true);
-        echo "\" alt=\"User Avatar\" class=\"img-size-50 mr-3 img-circle\">
-              <div class=\"media-body\">
-                <h3 class=\"dropdown-item-title\">
-                  Brad Diesel
-                  <span class=\"float-right text-sm text-danger\"><i class=\"fas fa-star\"></i></span>
-                </h3>
-                <p class=\"text-sm\">Call me whenever you can...</p>
-                <p class=\"text-sm text-muted\"><i class=\"far fa-clock mr-1\"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class=\"dropdown-divider\"></div>
-          <a href=\"#\" class=\"dropdown-item\">
-            <!-- Message Start -->
-            <div class=\"media\">
-              <img src=\"";
-        // line 106
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("dist/img/user8-128x128.jpg"), "html", null, true);
-        echo "\" alt=\"User Avatar\" class=\"img-size-50 img-circle mr-3\">
-              <div class=\"media-body\">
-                <h3 class=\"dropdown-item-title\">
-                  John Pierce
-                  <span class=\"float-right text-sm text-muted\"><i class=\"fas fa-star\"></i></span>
-                </h3>
-                <p class=\"text-sm\">I got your message bro</p>
-                <p class=\"text-sm text-muted\"><i class=\"far fa-clock mr-1\"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class=\"dropdown-divider\"></div>
-          <a href=\"#\" class=\"dropdown-item\">
-            <!-- Message Start -->
-            <div class=\"media\">
-              <img src=\"";
-        // line 122
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("dist/img/user3-128x128.jpg"), "html", null, true);
-        echo "\" alt=\"User Avatar\" class=\"img-size-50 img-circle mr-3\">
-              <div class=\"media-body\">
-                <h3 class=\"dropdown-item-title\">
-                  Nora Silvester
-                  <span class=\"float-right text-sm text-warning\"><i class=\"fas fa-star\"></i></span>
-                </h3>
-                <p class=\"text-sm\">The subject goes here</p>
-                <p class=\"text-sm text-muted\"><i class=\"far fa-clock mr-1\"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class=\"dropdown-divider\"></div>
-          <a href=\"#\" class=\"dropdown-item dropdown-footer\">See All Messages</a>
-        </div>
-      </li>
-      <!-- Notifications Dropdown Menu -->
-      <li class=\"nav-item dropdown\">
-        <a class=\"nav-link\" data-toggle=\"dropdown\" href=\"#\">
-          <i class=\"far fa-bell\"></i>
-          <span class=\"badge badge-warning navbar-badge\">15</span>
-        </a>
-        <div class=\"dropdown-menu dropdown-menu-lg dropdown-menu-right\">
-          <span class=\"dropdown-item dropdown-header\">15 Notifications</span>
-          <div class=\"dropdown-divider\"></div>
-          <a href=\"#\" class=\"dropdown-item\">
-            <i class=\"fas fa-envelope mr-2\"></i> 4 new messages
-            <span class=\"float-right text-muted text-sm\">3 mins</span>
-          </a>
-          <div class=\"dropdown-divider\"></div>
-          <a href=\"#\" class=\"dropdown-item\">
-            <i class=\"fas fa-users mr-2\"></i> 8 friend requests
-            <span class=\"float-right text-muted text-sm\">12 hours</span>
-          </a>
-          <div class=\"dropdown-divider\"></div>
-          <a href=\"#\" class=\"dropdown-item\">
-            <i class=\"fas fa-file mr-2\"></i> 3 new reports
-            <span class=\"float-right text-muted text-sm\">2 days</span>
-          </a>
-          <div class=\"dropdown-divider\"></div>
-          <a href=\"#\" class=\"dropdown-item dropdown-footer\">See All Notifications</a>
-        </div>
-      </li>
-      <li class=\"nav-item\">
-        <a class=\"nav-link\" data-widget=\"fullscreen\" href=\"#\" role=\"button\">
-          <i class=\"fas fa-expand-arrows-alt\"></i>
-        </a>
-      </li>
-      <li class=\"nav-item\">
-        <a class=\"nav-link\" data-widget=\"control-sidebar\" data-controlsidebar-slide=\"true\" href=\"#\" role=\"button\">
-          <i class=\"fas fa-th-large\"></i>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <!-- /.navbar -->
-
-  <!-- Main Sidebar Container -->
-  <aside class=\"main-sidebar sidebar-dark-primary elevation-4\">
-    <!-- Brand Logo -->
-    <a href=\"index3.html\" class=\"brand-link\">
-      <img src=\"";
-        // line 183
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("dist/img/AdminLTELogo.png"), "html", null, true);
-        echo "\" alt=\"AdminLTE Logo\" class=\"brand-image img-circle elevation-3\" style=\"opacity: .8\">
-      <span class=\"brand-text font-weight-light\">AdminLTE 3</span>
-    </a>
-
-    <!-- Sidebar -->
-    <div class=\"sidebar\">
-      <!-- Sidebar user panel (optional) -->
-      <div class=\"user-panel mt-3 pb-3 mb-3 d-flex\">
-        <div class=\"image\">
-          <img src=\"";
-        // line 192
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("dist/img/user2-160x160.jpg"), "html", null, true);
-        echo "\" class=\"img-circle elevation-2\" alt=\"User Image\">
-        </div>
-        <div class=\"info\">
-          <a href=\"#\" class=\"d-block\">Alexander Pierce</a>
-        </div>
-      </div>
-
-      <!-- SidebarSearch Form -->
-      <div class=\"form-inline\">
-        <div class=\"input-group\" data-widget=\"sidebar-search\">
-          <input class=\"form-control form-control-sidebar\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
-          <div class=\"input-group-append\">
-            <button class=\"btn btn-sidebar\">
-              <i class=\"fas fa-search fa-fw\"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sidebar Menu -->
-      <nav class=\"mt-2\">
-        <ul class=\"nav nav-pills nav-sidebar flex-column\" data-widget=\"treeview\" role=\"menu\" data-accordion=\"false\">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class=\"nav-item menu-open\">
-            <a href=\"#\" class=\"nav-link active\">
-              <i class=\"nav-icon fas fa-tachometer-alt\"></i>
-              <p>
-                Dashboard
-                <i class=\"right fas fa-angle-left\"></i>
-              </p>
-            </a>
-            <ul class=\"nav nav-treeview\">
-              <li class=\"nav-item\">
-                <a href=\"./index.html\" class=\"nav-link active\">
-                  <i class=\"far fa-circle nav-icon\"></i>
-                  <p>Dashboard v1</p>
-                </a>
-              </li>
-              <li class=\"nav-item\">
-                <a href=\"#\" class=\"nav-link\">
-                  <i class=\"far fa-circle nav-icon\"></i>
-                  <p>Dashboard v2</p>
-                </a>
-              </li>
-              <li class=\"nav-item\">
-                <a href=\"#\" class=\"nav-link\">
-                  <i class=\"far fa-circle nav-icon\"></i>
-                  <p>Dashboard v3</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-    
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
-
-  <!-- Content Wrapper. Contains page content -->
+        // line 4
+        echo "   <!-- Content Wrapper. Contains page content -->
   <div class=\"content-wrapper\">
     <!-- Content Header (Page header) -->
     <div class=\"content-header\">
@@ -400,7 +77,7 @@ class __TwigTemplate_d8bec2988c7f807f716a31a72a97dd142431a5609538a728bf3a73b1092
           <div class=\"col-sm-6\">
             <ol class=\"breadcrumb float-sm-right\">
               <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>
-              <li class=\"breadcrumb-item active\">Dashboard v1</li>
+              <li class=\"breadcrumb-item active\">Dashboard</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -408,200 +85,851 @@ class __TwigTemplate_d8bec2988c7f807f716a31a72a97dd142431a5609538a728bf3a73b1092
     </div>
     <!-- /.content-header -->
 
-
     <!-- Main content -->
     <section class=\"content\">
       <div class=\"container-fluid\">
-        <!-- Small boxes (Stat box) -->
+        <!-- Info boxes -->
         <div class=\"row\">
-          <div class=\"col-lg-3 col-6\">
-            <!-- small box -->
-            <div class=\"small-box bg-info\">
-              <div class=\"inner\">
-                <h3>150</h3>
+          <div class=\"col-12 col-sm-6 col-md-3\">
+            <div class=\"info-box\">
+              <span class=\"info-box-icon bg-info elevation-1\"><i class=\"fas fa-cog\"></i></span>
 
-                <p>New Orders</p>
+              <div class=\"info-box-content\">
+                <span class=\"info-box-text\">CPU Traffic</span>
+                <span class=\"info-box-number\">
+                  10
+                  <small>%</small>
+                </span>
               </div>
-              <div class=\"icon\">
-                <i class=\"ion ion-bag\"></i>
-              </div>
-              <a href=\"#\" class=\"small-box-footer\">More info <i class=\"fas fa-arrow-circle-right\"></i></a>
+              <!-- /.info-box-content -->
             </div>
+            <!-- /.info-box -->
           </div>
-          <!-- ./col -->
-          <div class=\"col-lg-3 col-6\">
-            <!-- small box -->
-            <div class=\"small-box bg-success\">
-              <div class=\"inner\">
-                <h3>53<sup style=\"font-size: 20px\">%</sup></h3>
+          <!-- /.col -->
+          <div class=\"col-12 col-sm-6 col-md-3\">
+            <div class=\"info-box mb-3\">
+              <span class=\"info-box-icon bg-danger elevation-1\"><i class=\"fas fa-thumbs-up\"></i></span>
 
-                <p>Bounce Rate</p>
+              <div class=\"info-box-content\">
+                <span class=\"info-box-text\">Likes</span>
+                <span class=\"info-box-number\">41,410</span>
               </div>
-              <div class=\"icon\">
-                <i class=\"ion ion-stats-bars\"></i>
-              </div>
-              <a href=\"#\" class=\"small-box-footer\">More info <i class=\"fas fa-arrow-circle-right\"></i></a>
+              <!-- /.info-box-content -->
             </div>
+            <!-- /.info-box -->
           </div>
-          <!-- ./col -->
-          <div class=\"col-lg-3 col-6\">
-            <!-- small box -->
-            <div class=\"small-box bg-warning\">
-              <div class=\"inner\">
-                <h3>44</h3>
+          <!-- /.col -->
 
-                <p>User Registrations</p>
-              </div>
-              <div class=\"icon\">
-                <i class=\"ion ion-person-add\"></i>
-              </div>
-              <a href=\"#\" class=\"small-box-footer\">More info <i class=\"fas fa-arrow-circle-right\"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class=\"col-lg-3 col-6\">
-            <!-- small box -->
-            <div class=\"small-box bg-danger\">
-              <div class=\"inner\">
-                <h3>65</h3>
+          <!-- fix for small devices only -->
+          <div class=\"clearfix hidden-md-up\"></div>
 
-                <p>Unique Visitors</p>
+          <div class=\"col-12 col-sm-6 col-md-3\">
+            <div class=\"info-box mb-3\">
+              <span class=\"info-box-icon bg-success elevation-1\"><i class=\"fas fa-shopping-cart\"></i></span>
+
+              <div class=\"info-box-content\">
+                <span class=\"info-box-text\">Sales</span>
+                <span class=\"info-box-number\">760</span>
               </div>
-              <div class=\"icon\">
-                <i class=\"ion ion-pie-graph\"></i>
-              </div>
-              <a href=\"#\" class=\"small-box-footer\">More info <i class=\"fas fa-arrow-circle-right\"></i></a>
+              <!-- /.info-box-content -->
             </div>
+            <!-- /.info-box -->
           </div>
-          <!-- ./col -->
+          <!-- /.col -->
+          <div class=\"col-12 col-sm-6 col-md-3\">
+            <div class=\"info-box mb-3\">
+              <span class=\"info-box-icon bg-warning elevation-1\"><i class=\"fas fa-users\"></i></span>
+
+              <div class=\"info-box-content\">
+                <span class=\"info-box-text\">New Members</span>
+                <span class=\"info-box-number\">2,000</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
         </div>
-        <!-- /.row -->    
-      </div><!-- /.container-fluid -->
+        <!-- /.row -->
+
+        <div class=\"row\">
+          <div class=\"col-md-12\">
+            <div class=\"card\">
+              <div class=\"card-header\">
+                <h5 class=\"card-title\">Monthly Recap Report</h5>
+
+                <div class=\"card-tools\">
+                  <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"collapse\">
+                    <i class=\"fas fa-minus\"></i>
+                  </button>
+                  <div class=\"btn-group\">
+                    <button type=\"button\" class=\"btn btn-tool dropdown-toggle\" data-toggle=\"dropdown\">
+                      <i class=\"fas fa-wrench\"></i>
+                    </button>
+                    <div class=\"dropdown-menu dropdown-menu-right\" role=\"menu\">
+                      <a href=\"#\" class=\"dropdown-item\">Action</a>
+                      <a href=\"#\" class=\"dropdown-item\">Another action</a>
+                      <a href=\"#\" class=\"dropdown-item\">Something else here</a>
+                      <a class=\"dropdown-divider\"></a>
+                      <a href=\"#\" class=\"dropdown-item\">Separated link</a>
+                    </div>
+                  </div>
+                  <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"remove\">
+                    <i class=\"fas fa-times\"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class=\"card-body\">
+                <div class=\"row\">
+                  <div class=\"col-md-8\">
+                    <p class=\"text-center\">
+                      <strong>Sales: 1 Jan, 2014 - 30 Jul, 2014</strong>
+                    </p>
+
+                    <div class=\"chart\">
+                      <!-- Sales Chart Canvas -->
+                      <canvas id=\"salesChart\" height=\"180\" style=\"height: 180px;\"></canvas>
+                    </div>
+                    <!-- /.chart-responsive -->
+                  </div>
+                  <!-- /.col -->
+                  <div class=\"col-md-4\">
+                    <p class=\"text-center\">
+                      <strong>Goal Completion</strong>
+                    </p>
+
+                    <div class=\"progress-group\">
+                      Add Products to Cart
+                      <span class=\"float-right\"><b>160</b>/200</span>
+                      <div class=\"progress progress-sm\">
+                        <div class=\"progress-bar bg-primary\" style=\"width: 80%\"></div>
+                      </div>
+                    </div>
+                    <!-- /.progress-group -->
+
+                    <div class=\"progress-group\">
+                      Complete Purchase
+                      <span class=\"float-right\"><b>310</b>/400</span>
+                      <div class=\"progress progress-sm\">
+                        <div class=\"progress-bar bg-danger\" style=\"width: 75%\"></div>
+                      </div>
+                    </div>
+
+                    <!-- /.progress-group -->
+                    <div class=\"progress-group\">
+                      <span class=\"progress-text\">Visit Premium Page</span>
+                      <span class=\"float-right\"><b>480</b>/800</span>
+                      <div class=\"progress progress-sm\">
+                        <div class=\"progress-bar bg-success\" style=\"width: 60%\"></div>
+                      </div>
+                    </div>
+
+                    <!-- /.progress-group -->
+                    <div class=\"progress-group\">
+                      Send Inquiries
+                      <span class=\"float-right\"><b>250</b>/500</span>
+                      <div class=\"progress progress-sm\">
+                        <div class=\"progress-bar bg-warning\" style=\"width: 50%\"></div>
+                      </div>
+                    </div>
+                    <!-- /.progress-group -->
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- ./card-body -->
+              <div class=\"card-footer\">
+                <div class=\"row\">
+                  <div class=\"col-sm-3 col-6\">
+                    <div class=\"description-block border-right\">
+                      <span class=\"description-percentage text-success\"><i class=\"fas fa-caret-up\"></i> 17%</span>
+                      <h5 class=\"description-header\">\$35,210.43</h5>
+                      <span class=\"description-text\">TOTAL REVENUE</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                  <div class=\"col-sm-3 col-6\">
+                    <div class=\"description-block border-right\">
+                      <span class=\"description-percentage text-warning\"><i class=\"fas fa-caret-left\"></i> 0%</span>
+                      <h5 class=\"description-header\">\$10,390.90</h5>
+                      <span class=\"description-text\">TOTAL COST</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                  <div class=\"col-sm-3 col-6\">
+                    <div class=\"description-block border-right\">
+                      <span class=\"description-percentage text-success\"><i class=\"fas fa-caret-up\"></i> 20%</span>
+                      <h5 class=\"description-header\">\$24,813.53</h5>
+                      <span class=\"description-text\">TOTAL PROFIT</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                  <div class=\"col-sm-3 col-6\">
+                    <div class=\"description-block\">
+                      <span class=\"description-percentage text-danger\"><i class=\"fas fa-caret-down\"></i> 18%</span>
+                      <h5 class=\"description-header\">1200</h5>
+                      <span class=\"description-text\">GOAL COMPLETIONS</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+        <!-- Main row -->
+        <div class=\"row\">
+          <!-- Left col -->
+          <div class=\"col-md-8\">
+            <!-- MAP & BOX PANE -->
+            <div class=\"card\">
+              <div class=\"card-header\">
+                <h3 class=\"card-title\">US-Visitors Report</h3>
+
+                <div class=\"card-tools\">
+                  <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"collapse\">
+                    <i class=\"fas fa-minus\"></i>
+                  </button>
+                  <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"remove\">
+                    <i class=\"fas fa-times\"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class=\"card-body p-0\">
+                <div class=\"d-md-flex\">
+                  <div class=\"p-1 flex-fill\" style=\"overflow: hidden\">
+                    <!-- Map will be created here -->
+                    <div id=\"world-map-markers\" style=\"height: 325px; overflow: hidden\">
+                      <div class=\"map\"></div>
+                    </div>
+                  </div>
+                  <div class=\"card-pane-right bg-success pt-2 pb-2 pl-4 pr-4\">
+                    <div class=\"description-block mb-4\">
+                      <div class=\"sparkbar pad\" data-color=\"#fff\">90,70,90,70,75,80,70</div>
+                      <h5 class=\"description-header\">8390</h5>
+                      <span class=\"description-text\">Visits</span>
+                    </div>
+                    <!-- /.description-block -->
+                    <div class=\"description-block mb-4\">
+                      <div class=\"sparkbar pad\" data-color=\"#fff\">90,50,90,70,61,83,63</div>
+                      <h5 class=\"description-header\">30%</h5>
+                      <span class=\"description-text\">Referrals</span>
+                    </div>
+                    <!-- /.description-block -->
+                    <div class=\"description-block\">
+                      <div class=\"sparkbar pad\" data-color=\"#fff\">90,50,90,70,61,83,63</div>
+                      <h5 class=\"description-header\">70%</h5>
+                      <span class=\"description-text\">Organic</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div><!-- /.card-pane-right -->
+                </div><!-- /.d-md-flex -->
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+            <div class=\"row\">
+              <div class=\"col-md-6\">
+                <!-- DIRECT CHAT -->
+                <div class=\"card direct-chat direct-chat-warning\">
+                  <div class=\"card-header\">
+                    <h3 class=\"card-title\">Direct Chat</h3>
+
+                    <div class=\"card-tools\">
+                      <span title=\"3 New Messages\" class=\"badge badge-warning\">3</span>
+                      <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"collapse\">
+                        <i class=\"fas fa-minus\"></i>
+                      </button>
+                      <button type=\"button\" class=\"btn btn-tool\" title=\"Contacts\" data-widget=\"chat-pane-toggle\">
+                        <i class=\"fas fa-comments\"></i>
+                      </button>
+                      <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"remove\">
+                        <i class=\"fas fa-times\"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- /.card-header -->
+                  <div class=\"card-body\">
+                    <!-- Conversations are loaded here -->
+                    <div class=\"direct-chat-messages\">
+                      <!-- Message. Default to the left -->
+                      <div class=\"direct-chat-msg\">
+                        <div class=\"direct-chat-infos clearfix\">
+                          <span class=\"direct-chat-name float-left\">Alexander Pierce</span>
+                          <span class=\"direct-chat-timestamp float-right\">23 Jan 2:00 pm</span>
+                        </div>
+                        <!-- /.direct-chat-infos -->
+                        <img class=\"direct-chat-img\" src=\"dist/img/user1-128x128.jpg\" alt=\"message user image\">
+                        <!-- /.direct-chat-img -->
+                        <div class=\"direct-chat-text\">
+                          Is this template really for free? That's unbelievable!
+                        </div>
+                        <!-- /.direct-chat-text -->
+                      </div>
+                      <!-- /.direct-chat-msg -->
+
+                      <!-- Message to the right -->
+                      <div class=\"direct-chat-msg right\">
+                        <div class=\"direct-chat-infos clearfix\">
+                          <span class=\"direct-chat-name float-right\">Sarah Bullock</span>
+                          <span class=\"direct-chat-timestamp float-left\">23 Jan 2:05 pm</span>
+                        </div>
+                        <!-- /.direct-chat-infos -->
+                        <img class=\"direct-chat-img\" src=\"dist/img/user3-128x128.jpg\" alt=\"message user image\">
+                        <!-- /.direct-chat-img -->
+                        <div class=\"direct-chat-text\">
+                          You better believe it!
+                        </div>
+                        <!-- /.direct-chat-text -->
+                      </div>
+                      <!-- /.direct-chat-msg -->
+
+                      <!-- Message. Default to the left -->
+                      <div class=\"direct-chat-msg\">
+                        <div class=\"direct-chat-infos clearfix\">
+                          <span class=\"direct-chat-name float-left\">Alexander Pierce</span>
+                          <span class=\"direct-chat-timestamp float-right\">23 Jan 5:37 pm</span>
+                        </div>
+                        <!-- /.direct-chat-infos -->
+                        <img class=\"direct-chat-img\" src=\"dist/img/user1-128x128.jpg\" alt=\"message user image\">
+                        <!-- /.direct-chat-img -->
+                        <div class=\"direct-chat-text\">
+                          Working with AdminLTE on a great new app! Wanna join?
+                        </div>
+                        <!-- /.direct-chat-text -->
+                      </div>
+                      <!-- /.direct-chat-msg -->
+
+                      <!-- Message to the right -->
+                      <div class=\"direct-chat-msg right\">
+                        <div class=\"direct-chat-infos clearfix\">
+                          <span class=\"direct-chat-name float-right\">Sarah Bullock</span>
+                          <span class=\"direct-chat-timestamp float-left\">23 Jan 6:10 pm</span>
+                        </div>
+                        <!-- /.direct-chat-infos -->
+                        <img class=\"direct-chat-img\" src=\"dist/img/user3-128x128.jpg\" alt=\"message user image\">
+                        <!-- /.direct-chat-img -->
+                        <div class=\"direct-chat-text\">
+                          I would love to.
+                        </div>
+                        <!-- /.direct-chat-text -->
+                      </div>
+                      <!-- /.direct-chat-msg -->
+
+                    </div>
+                    <!--/.direct-chat-messages-->
+
+                    <!-- Contacts are loaded here -->
+                    <div class=\"direct-chat-contacts\">
+                      <ul class=\"contacts-list\">
+                        <li>
+                          <a href=\"#\">
+                            <img class=\"contacts-list-img\" src=\"dist/img/user1-128x128.jpg\" alt=\"User Avatar\">
+
+                            <div class=\"contacts-list-info\">
+                              <span class=\"contacts-list-name\">
+                                Count Dracula
+                                <small class=\"contacts-list-date float-right\">2/28/2015</small>
+                              </span>
+                              <span class=\"contacts-list-msg\">How have you been? I was...</span>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                          </a>
+                        </li>
+                        <!-- End Contact Item -->
+                        <li>
+                          <a href=\"#\">
+                            <img class=\"contacts-list-img\" src=\"dist/img/user7-128x128.jpg\" alt=\"User Avatar\">
+
+                            <div class=\"contacts-list-info\">
+                              <span class=\"contacts-list-name\">
+                                Sarah Doe
+                                <small class=\"contacts-list-date float-right\">2/23/2015</small>
+                              </span>
+                              <span class=\"contacts-list-msg\">I will be waiting for...</span>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                          </a>
+                        </li>
+                        <!-- End Contact Item -->
+                        <li>
+                          <a href=\"#\">
+                            <img class=\"contacts-list-img\" src=\"dist/img/user3-128x128.jpg\" alt=\"User Avatar\">
+
+                            <div class=\"contacts-list-info\">
+                              <span class=\"contacts-list-name\">
+                                Nadia Jolie
+                                <small class=\"contacts-list-date float-right\">2/20/2015</small>
+                              </span>
+                              <span class=\"contacts-list-msg\">I'll call you back at...</span>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                          </a>
+                        </li>
+                        <!-- End Contact Item -->
+                        <li>
+                          <a href=\"#\">
+                            <img class=\"contacts-list-img\" src=\"dist/img/user5-128x128.jpg\" alt=\"User Avatar\">
+
+                            <div class=\"contacts-list-info\">
+                              <span class=\"contacts-list-name\">
+                                Nora S. Vans
+                                <small class=\"contacts-list-date float-right\">2/10/2015</small>
+                              </span>
+                              <span class=\"contacts-list-msg\">Where is your new...</span>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                          </a>
+                        </li>
+                        <!-- End Contact Item -->
+                        <li>
+                          <a href=\"#\">
+                            <img class=\"contacts-list-img\" src=\"dist/img/user6-128x128.jpg\" alt=\"User Avatar\">
+
+                            <div class=\"contacts-list-info\">
+                              <span class=\"contacts-list-name\">
+                                John K.
+                                <small class=\"contacts-list-date float-right\">1/27/2015</small>
+                              </span>
+                              <span class=\"contacts-list-msg\">Can I take a look at...</span>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                          </a>
+                        </li>
+                        <!-- End Contact Item -->
+                        <li>
+                          <a href=\"#\">
+                            <img class=\"contacts-list-img\" src=\"dist/img/user8-128x128.jpg\" alt=\"User Avatar\">
+
+                            <div class=\"contacts-list-info\">
+                              <span class=\"contacts-list-name\">
+                                Kenneth M.
+                                <small class=\"contacts-list-date float-right\">1/4/2015</small>
+                              </span>
+                              <span class=\"contacts-list-msg\">Never mind I found...</span>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                          </a>
+                        </li>
+                        <!-- End Contact Item -->
+                      </ul>
+                      <!-- /.contacts-list -->
+                    </div>
+                    <!-- /.direct-chat-pane -->
+                  </div>
+                  <!-- /.card-body -->
+                  <div class=\"card-footer\">
+                    <form action=\"#\" method=\"post\">
+                      <div class=\"input-group\">
+                        <input type=\"text\" name=\"message\" placeholder=\"Type Message ...\" class=\"form-control\">
+                        <span class=\"input-group-append\">
+                          <button type=\"button\" class=\"btn btn-warning\">Send</button>
+                        </span>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- /.card-footer-->
+                </div>
+                <!--/.direct-chat -->
+              </div>
+              <!-- /.col -->
+
+              <div class=\"col-md-6\">
+                <!-- USERS LIST -->
+                <div class=\"card\">
+                  <div class=\"card-header\">
+                    <h3 class=\"card-title\">Latest Members</h3>
+
+                    <div class=\"card-tools\">
+                      <span class=\"badge badge-danger\">8 New Members</span>
+                      <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"collapse\">
+                        <i class=\"fas fa-minus\"></i>
+                      </button>
+                      <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"remove\">
+                        <i class=\"fas fa-times\"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- /.card-header -->
+                  <div class=\"card-body p-0\">
+                    <ul class=\"users-list clearfix\">
+                      <li>
+                        <img src=\"dist/img/user1-128x128.jpg\" alt=\"User Image\">
+                        <a class=\"users-list-name\" href=\"#\">Alexander Pierce</a>
+                        <span class=\"users-list-date\">Today</span>
+                      </li>
+                      <li>
+                        <img src=\"dist/img/user8-128x128.jpg\" alt=\"User Image\">
+                        <a class=\"users-list-name\" href=\"#\">Norman</a>
+                        <span class=\"users-list-date\">Yesterday</span>
+                      </li>
+                      <li>
+                        <img src=\"dist/img/user7-128x128.jpg\" alt=\"User Image\">
+                        <a class=\"users-list-name\" href=\"#\">Jane</a>
+                        <span class=\"users-list-date\">12 Jan</span>
+                      </li>
+                      <li>
+                        <img src=\"dist/img/user6-128x128.jpg\" alt=\"User Image\">
+                        <a class=\"users-list-name\" href=\"#\">John</a>
+                        <span class=\"users-list-date\">12 Jan</span>
+                      </li>
+                      <li>
+                        <img src=\"dist/img/user2-160x160.jpg\" alt=\"User Image\">
+                        <a class=\"users-list-name\" href=\"#\">Alexander</a>
+                        <span class=\"users-list-date\">13 Jan</span>
+                      </li>
+                      <li>
+                        <img src=\"dist/img/user5-128x128.jpg\" alt=\"User Image\">
+                        <a class=\"users-list-name\" href=\"#\">Sarah</a>
+                        <span class=\"users-list-date\">14 Jan</span>
+                      </li>
+                      <li>
+                        <img src=\"dist/img/user4-128x128.jpg\" alt=\"User Image\">
+                        <a class=\"users-list-name\" href=\"#\">Nora</a>
+                        <span class=\"users-list-date\">15 Jan</span>
+                      </li>
+                      <li>
+                        <img src=\"dist/img/user3-128x128.jpg\" alt=\"User Image\">
+                        <a class=\"users-list-name\" href=\"#\">Nadia</a>
+                        <span class=\"users-list-date\">15 Jan</span>
+                      </li>
+                    </ul>
+                    <!-- /.users-list -->
+                  </div>
+                  <!-- /.card-body -->
+                  <div class=\"card-footer text-center\">
+                    <a href=\"javascript:\">View All Users</a>
+                  </div>
+                  <!-- /.card-footer -->
+                </div>
+                <!--/.card -->
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+
+            <!-- TABLE: LATEST ORDERS -->
+            <div class=\"card\">
+              <div class=\"card-header border-transparent\">
+                <h3 class=\"card-title\">Latest Orders</h3>
+
+                <div class=\"card-tools\">
+                  <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"collapse\">
+                    <i class=\"fas fa-minus\"></i>
+                  </button>
+                  <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"remove\">
+                    <i class=\"fas fa-times\"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class=\"card-body p-0\">
+                <div class=\"table-responsive\">
+                  <table class=\"table m-0\">
+                    <thead>
+                    <tr>
+                      <th>Order ID</th>
+                      <th>Item</th>
+                      <th>Status</th>
+                      <th>Popularity</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><a href=\"pages/examples/invoice.html\">OR9842</a></td>
+                      <td>Call of Duty IV</td>
+                      <td><span class=\"badge badge-success\">Shipped</span></td>
+                      <td>
+                        <div class=\"sparkbar\" data-color=\"#00a65a\" data-height=\"20\">90,80,90,-70,61,-83,63</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href=\"pages/examples/invoice.html\">OR1848</a></td>
+                      <td>Samsung Smart TV</td>
+                      <td><span class=\"badge badge-warning\">Pending</span></td>
+                      <td>
+                        <div class=\"sparkbar\" data-color=\"#f39c12\" data-height=\"20\">90,80,-90,70,61,-83,68</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href=\"pages/examples/invoice.html\">OR7429</a></td>
+                      <td>iPhone 6 Plus</td>
+                      <td><span class=\"badge badge-danger\">Delivered</span></td>
+                      <td>
+                        <div class=\"sparkbar\" data-color=\"#f56954\" data-height=\"20\">90,-80,90,70,-61,83,63</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href=\"pages/examples/invoice.html\">OR7429</a></td>
+                      <td>Samsung Smart TV</td>
+                      <td><span class=\"badge badge-info\">Processing</span></td>
+                      <td>
+                        <div class=\"sparkbar\" data-color=\"#00c0ef\" data-height=\"20\">90,80,-90,70,-61,83,63</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href=\"pages/examples/invoice.html\">OR1848</a></td>
+                      <td>Samsung Smart TV</td>
+                      <td><span class=\"badge badge-warning\">Pending</span></td>
+                      <td>
+                        <div class=\"sparkbar\" data-color=\"#f39c12\" data-height=\"20\">90,80,-90,70,61,-83,68</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href=\"pages/examples/invoice.html\">OR7429</a></td>
+                      <td>iPhone 6 Plus</td>
+                      <td><span class=\"badge badge-danger\">Delivered</span></td>
+                      <td>
+                        <div class=\"sparkbar\" data-color=\"#f56954\" data-height=\"20\">90,-80,90,70,-61,83,63</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href=\"pages/examples/invoice.html\">OR9842</a></td>
+                      <td>Call of Duty IV</td>
+                      <td><span class=\"badge badge-success\">Shipped</span></td>
+                      <td>
+                        <div class=\"sparkbar\" data-color=\"#00a65a\" data-height=\"20\">90,80,90,-70,61,-83,63</div>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.card-body -->
+              <div class=\"card-footer clearfix\">
+                <a href=\"javascript:void(0)\" class=\"btn btn-sm btn-info float-left\">Place New Order</a>
+                <a href=\"javascript:void(0)\" class=\"btn btn-sm btn-secondary float-right\">View All Orders</a>
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+
+          <div class=\"col-md-4\">
+            <!-- Info Boxes Style 2 -->
+            <div class=\"info-box mb-3 bg-warning\">
+              <span class=\"info-box-icon\"><i class=\"fas fa-tag\"></i></span>
+
+              <div class=\"info-box-content\">
+                <span class=\"info-box-text\">Inventory</span>
+                <span class=\"info-box-number\">5,200</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+            <div class=\"info-box mb-3 bg-success\">
+              <span class=\"info-box-icon\"><i class=\"far fa-heart\"></i></span>
+
+              <div class=\"info-box-content\">
+                <span class=\"info-box-text\">Mentions</span>
+                <span class=\"info-box-number\">92,050</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+            <div class=\"info-box mb-3 bg-danger\">
+              <span class=\"info-box-icon\"><i class=\"fas fa-cloud-download-alt\"></i></span>
+
+              <div class=\"info-box-content\">
+                <span class=\"info-box-text\">Downloads</span>
+                <span class=\"info-box-number\">114,381</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+            <div class=\"info-box mb-3 bg-info\">
+              <span class=\"info-box-icon\"><i class=\"far fa-comment\"></i></span>
+
+              <div class=\"info-box-content\">
+                <span class=\"info-box-text\">Direct Messages</span>
+                <span class=\"info-box-number\">163,921</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+
+            <div class=\"card\">
+              <div class=\"card-header\">
+                <h3 class=\"card-title\">Browser Usage</h3>
+
+                <div class=\"card-tools\">
+                  <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"collapse\">
+                    <i class=\"fas fa-minus\"></i>
+                  </button>
+                  <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"remove\">
+                    <i class=\"fas fa-times\"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class=\"card-body\">
+                <div class=\"row\">
+                  <div class=\"col-md-8\">
+                    <div class=\"chart-responsive\">
+                      <canvas id=\"pieChart\" height=\"150\"></canvas>
+                    </div>
+                    <!-- ./chart-responsive -->
+                  </div>
+                  <!-- /.col -->
+                  <div class=\"col-md-4\">
+                    <ul class=\"chart-legend clearfix\">
+                      <li><i class=\"far fa-circle text-danger\"></i> Chrome</li>
+                      <li><i class=\"far fa-circle text-success\"></i> IE</li>
+                      <li><i class=\"far fa-circle text-warning\"></i> FireFox</li>
+                      <li><i class=\"far fa-circle text-info\"></i> Safari</li>
+                      <li><i class=\"far fa-circle text-primary\"></i> Opera</li>
+                      <li><i class=\"far fa-circle text-secondary\"></i> Navigator</li>
+                    </ul>
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.card-body -->
+              <div class=\"card-footer p-0\">
+                <ul class=\"nav nav-pills flex-column\">
+                  <li class=\"nav-item\">
+                    <a href=\"#\" class=\"nav-link\">
+                      United States of America
+                      <span class=\"float-right text-danger\">
+                        <i class=\"fas fa-arrow-down text-sm\"></i>
+                        12%</span>
+                    </a>
+                  </li>
+                  <li class=\"nav-item\">
+                    <a href=\"#\" class=\"nav-link\">
+                      India
+                      <span class=\"float-right text-success\">
+                        <i class=\"fas fa-arrow-up text-sm\"></i> 4%
+                      </span>
+                    </a>
+                  </li>
+                  <li class=\"nav-item\">
+                    <a href=\"#\" class=\"nav-link\">
+                      China
+                      <span class=\"float-right text-warning\">
+                        <i class=\"fas fa-arrow-left text-sm\"></i> 0%
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- /.footer -->
+            </div>
+            <!-- /.card -->
+
+            <!-- PRODUCT LIST -->
+            <div class=\"card\">
+              <div class=\"card-header\">
+                <h3 class=\"card-title\">Recently Added Products</h3>
+
+                <div class=\"card-tools\">
+                  <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"collapse\">
+                    <i class=\"fas fa-minus\"></i>
+                  </button>
+                  <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"remove\">
+                    <i class=\"fas fa-times\"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class=\"card-body p-0\">
+                <ul class=\"products-list product-list-in-card pl-2 pr-2\">
+                  <li class=\"item\">
+                    <div class=\"product-img\">
+                      <img src=\"dist/img/default-150x150.png\" alt=\"Product Image\" class=\"img-size-50\">
+                    </div>
+                    <div class=\"product-info\">
+                      <a href=\"javascript:void(0)\" class=\"product-title\">Samsung TV
+                        <span class=\"badge badge-warning float-right\">\$1800</span></a>
+                      <span class=\"product-description\">
+                        Samsung 32\" 1080p 60Hz LED Smart HDTV.
+                      </span>
+                    </div>
+                  </li>
+                  <!-- /.item -->
+                  <li class=\"item\">
+                    <div class=\"product-img\">
+                      <img src=\"dist/img/default-150x150.png\" alt=\"Product Image\" class=\"img-size-50\">
+                    </div>
+                    <div class=\"product-info\">
+                      <a href=\"javascript:void(0)\" class=\"product-title\">Bicycle
+                        <span class=\"badge badge-info float-right\">\$700</span></a>
+                      <span class=\"product-description\">
+                        26\" Mongoose Dolomite Men's 7-speed, Navy Blue.
+                      </span>
+                    </div>
+                  </li>
+                  <!-- /.item -->
+                  <li class=\"item\">
+                    <div class=\"product-img\">
+                      <img src=\"dist/img/default-150x150.png\" alt=\"Product Image\" class=\"img-size-50\">
+                    </div>
+                    <div class=\"product-info\">
+                      <a href=\"javascript:void(0)\" class=\"product-title\">
+                        Xbox One <span class=\"badge badge-danger float-right\">
+                        \$350
+                      </span>
+                      </a>
+                      <span class=\"product-description\">
+                        Xbox One Console Bundle with Halo Master Chief Collection.
+                      </span>
+                    </div>
+                  </li>
+                  <!-- /.item -->
+                  <li class=\"item\">
+                    <div class=\"product-img\">
+                      <img src=\"dist/img/default-150x150.png\" alt=\"Product Image\" class=\"img-size-50\">
+                    </div>
+                    <div class=\"product-info\">
+                      <a href=\"javascript:void(0)\" class=\"product-title\">PlayStation 4
+                        <span class=\"badge badge-success float-right\">\$399</span></a>
+                      <span class=\"product-description\">
+                        PlayStation 4 500GB Console (PS4)
+                      </span>
+                    </div>
+                  </li>
+                  <!-- /.item -->
+                </ul>
+              </div>
+              <!-- /.card-body -->
+              <div class=\"card-footer text-center\">
+                <a href=\"javascript:void(0)\" class=\"uppercase\">View All Products</a>
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div><!--/. container-fluid -->
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <footer class=\"main-footer\">
-    <strong>Copyright &copy; 2021-2022 <a href=\"https://adminlte.io\">ProTECH.io</a>.</strong>
-    All rights reserved.
-    <div class=\"float-right d-none d-sm-inline-block\">
-      <b>Version</b> 1.0-
-    </div>
-  </footer>
 
   <!-- Control Sidebar -->
   <aside class=\"control-sidebar control-sidebar-dark\">
     <!-- Control sidebar content goes here -->
   </aside>
   <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
-</body>
 
-</html>
-";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-        
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
-
-    }
-
-    // line 366
-    public function block_javascripts($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
-
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
-
-        // line 367
-        echo "<!-- jQuery -->
-<script src=\"";
-        // line 368
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jquery/jquery.min.js"), "html", null, true);
-        echo "\"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src=\"";
-        // line 370
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jquery-ui/jquery-ui.min.js"), "html", null, true);
-        echo "\"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  \$.widget.bridge('uibutton', \$.ui.button)
-</script>
-<!-- Bootstrap 4 -->
-<script src=\"";
-        // line 376
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/bootstrap/js/bootstrap.bundle.min.js"), "html", null, true);
-        echo "\"></script>
-<!-- ChartJS -->
-<script src=\"";
-        // line 378
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chart.js/Chart.min.js"), "html", null, true);
-        echo "\"></script>
-<!-- Sparkline -->
-<script src=\"";
-        // line 380
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/sparklines/sparkline.js"), "html", null, true);
-        echo "\"></script>
-<!-- JQVMap -->
-<script src=\"";
-        // line 382
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("lugins/jqvmap/jquery.vmap.min.js"), "html", null, true);
-        echo "p\"></script>
-<script src=\"";
-        // line 383
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jqvmap/maps/jquery.vmap.usa.js"), "html", null, true);
-        echo "\"></script>
-<!-- jQuery Knob Chart -->
-<script src=\"";
-        // line 385
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jquery-knob/jquery.knob.min.js"), "html", null, true);
-        echo "\"></script>
-<!-- daterangepicker -->
-<script src=\"";
-        // line 387
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/moment/moment.min.js"), "html", null, true);
-        echo "\"></script>
-<script src=\"";
-        // line 388
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/daterangepicker/daterangepicker.js"), "html", null, true);
-        echo "\"></script>
-<!-- Tempusdominus Bootstrap 4 -->
-<script src=\"";
-        // line 390
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"), "html", null, true);
-        echo "\"></script>
-<!-- Summernote -->
-<script src=\"";
-        // line 392
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/summernote/summernote-bs4.min.js"), "html", null, true);
-        echo "\"></script>
-<!-- overlayScrollbars -->
-<script src=\"";
-        // line 394
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"), "html", null, true);
-        echo "\"></script>
-<!-- AdminLTE App -->
-<script src=\"";
-        // line 396
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("dist/js/adminlte.js"), "html", null, true);
-        echo "\"></script>
-<!-- AdminLTE for demo purposes -->
-<script src=\"";
-        // line 398
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("dist/js/demo.js"), "html", null, true);
-        echo "\"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src=\"";
-        // line 400
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("dist/js/pages/dashboard.js"), "html", null, true);
-        echo "\"></script>
-";
+  ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -615,266 +943,22 @@ class __TwigTemplate_d8bec2988c7f807f716a31a72a97dd142431a5609538a728bf3a73b1092
         return "admin/index.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  602 => 400,  597 => 398,  592 => 396,  587 => 394,  582 => 392,  577 => 390,  572 => 388,  568 => 387,  563 => 385,  558 => 383,  554 => 382,  549 => 380,  544 => 378,  539 => 376,  530 => 370,  525 => 368,  522 => 367,  512 => 366,  329 => 192,  317 => 183,  253 => 122,  234 => 106,  215 => 90,  160 => 38,  153 => 33,  143 => 32,  130 => 28,  125 => 26,  120 => 24,  115 => 22,  110 => 20,  105 => 18,  100 => 16,  93 => 12,  88 => 9,  78 => 8,  67 => 402,  65 => 366,  62 => 365,  60 => 32,  57 => 31,  55 => 8,  46 => 1,);
+        return array (  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("
-<!DOCTYPE html>
-<html lang=\"en\">
-<head>
-  <meta charset=\"utf-8\">
-  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-  <title>ProTECH| Dashboard</title>
-{% block stylesheets %}
-  <!-- Google Font: Source Sans Pro -->
-  <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback')\">
-  <!-- Font Awesome -->
-  <link rel=\"stylesheet\" href=\"{{asset('plugins/fontawesome-free/css/all.min.css')}}\">
-  <!-- Ionicons -->
-  <link rel=\"stylesheet\" href=\"https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css\">
-  <!-- Tempusdominus Bootstrap 4 -->
-  <link rel=\"stylesheet\" href=\"{{asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}\">
-  <!-- iCheck -->
-  <link rel=\"stylesheet\" href=\"{{asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}\">
-  <!-- JQVMap -->
-  <link rel=\"stylesheet\" href=\"{{asset('plugins/jqvmap/jqvmap.min.css')}}\">
-  <!-- Theme style -->
-  <link rel=\"stylesheet\" href=\"{{asset('dist/css/adminlte.min.css')}}\">
-  <!-- overlayScrollbars -->
-  <link rel=\"stylesheet\" href=\"{{asset('plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}\">
-  <!-- Daterange picker -->
-  <link rel=\"stylesheet\" href=\"{{asset('plugins/daterangepicker/daterangepicker.css')}}\">
-  <!-- summernote -->
-  <link rel=\"stylesheet\" href=\"{{asset('plugins/summernote/summernote-bs4.min.css')}}\">
+        return new Source("{% extends \"baseBack.html.twig\" %} 
 
-  {% endblock %}
-</head>
 {% block body %}
-<body class=\"hold-transition sidebar-mini layout-fixed\">
-<div class=\"wrapper\">
-
-  <!-- Preloader -->
-  <div class=\"preloader flex-column justify-content-center align-items-center\">
-    <img class=\"animation__shake\" src=\"{{asset('dist/img/AdminLTELogo.png')}}\" alt=\"AdminLTELogo\" height=\"60\" width=\"60\">
-  </div>
-
-  <!-- Navbar -->
-  <nav class=\"main-header navbar navbar-expand navbar-white navbar-light\">
-    <!-- Left navbar links -->
-    <ul class=\"navbar-nav\">
-      <li class=\"nav-item\">
-        <a class=\"nav-link\" data-widget=\"pushmenu\" href=\"#\" role=\"button\"><i class=\"fas fa-bars\"></i></a>
-      </li>
-      <li class=\"nav-item d-none d-sm-inline-block\">
-        <a href=\"#\" class=\"nav-link\">Home</a>
-      </li>
-      <li class=\"nav-item d-none d-sm-inline-block\">
-        <a href=\"#\" class=\"nav-link\">Contact</a>
-      </li>
-    </ul>
-
-    <!-- Right navbar links -->
-    <ul class=\"navbar-nav ml-auto\">
-      <!-- Navbar Search -->
-      <li class=\"nav-item\">
-        <a class=\"nav-link\" data-widget=\"navbar-search\" href=\"#\" role=\"button\">
-          <i class=\"fas fa-search\"></i>
-        </a>
-        <div class=\"navbar-search-block\">
-          <form class=\"form-inline\">
-            <div class=\"input-group input-group-sm\">
-              <input class=\"form-control form-control-navbar\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
-              <div class=\"input-group-append\">
-                <button class=\"btn btn-navbar\" type=\"submit\">
-                  <i class=\"fas fa-search\"></i>
-                </button>
-                <button class=\"btn btn-navbar\" type=\"button\" data-widget=\"navbar-search\">
-                  <i class=\"fas fa-times\"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </li>
-
-      <!-- Messages Dropdown Menu -->
-      <li class=\"nav-item dropdown\">
-        <a class=\"nav-link\" data-toggle=\"dropdown\" href=\"#\">
-          <i class=\"far fa-comments\"></i>
-          <span class=\"badge badge-danger navbar-badge\">3</span>
-        </a>
-        <div class=\"dropdown-menu dropdown-menu-lg dropdown-menu-right\">
-          <a href=\"#\" class=\"dropdown-item\">
-            <!-- Message Start -->
-            <div class=\"media\">
-              <img src=\"{{asset('dist/img/user1-128x128.jpg')}}\" alt=\"User Avatar\" class=\"img-size-50 mr-3 img-circle\">
-              <div class=\"media-body\">
-                <h3 class=\"dropdown-item-title\">
-                  Brad Diesel
-                  <span class=\"float-right text-sm text-danger\"><i class=\"fas fa-star\"></i></span>
-                </h3>
-                <p class=\"text-sm\">Call me whenever you can...</p>
-                <p class=\"text-sm text-muted\"><i class=\"far fa-clock mr-1\"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class=\"dropdown-divider\"></div>
-          <a href=\"#\" class=\"dropdown-item\">
-            <!-- Message Start -->
-            <div class=\"media\">
-              <img src=\"{{asset('dist/img/user8-128x128.jpg')}}\" alt=\"User Avatar\" class=\"img-size-50 img-circle mr-3\">
-              <div class=\"media-body\">
-                <h3 class=\"dropdown-item-title\">
-                  John Pierce
-                  <span class=\"float-right text-sm text-muted\"><i class=\"fas fa-star\"></i></span>
-                </h3>
-                <p class=\"text-sm\">I got your message bro</p>
-                <p class=\"text-sm text-muted\"><i class=\"far fa-clock mr-1\"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class=\"dropdown-divider\"></div>
-          <a href=\"#\" class=\"dropdown-item\">
-            <!-- Message Start -->
-            <div class=\"media\">
-              <img src=\"{{asset('dist/img/user3-128x128.jpg')}}\" alt=\"User Avatar\" class=\"img-size-50 img-circle mr-3\">
-              <div class=\"media-body\">
-                <h3 class=\"dropdown-item-title\">
-                  Nora Silvester
-                  <span class=\"float-right text-sm text-warning\"><i class=\"fas fa-star\"></i></span>
-                </h3>
-                <p class=\"text-sm\">The subject goes here</p>
-                <p class=\"text-sm text-muted\"><i class=\"far fa-clock mr-1\"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class=\"dropdown-divider\"></div>
-          <a href=\"#\" class=\"dropdown-item dropdown-footer\">See All Messages</a>
-        </div>
-      </li>
-      <!-- Notifications Dropdown Menu -->
-      <li class=\"nav-item dropdown\">
-        <a class=\"nav-link\" data-toggle=\"dropdown\" href=\"#\">
-          <i class=\"far fa-bell\"></i>
-          <span class=\"badge badge-warning navbar-badge\">15</span>
-        </a>
-        <div class=\"dropdown-menu dropdown-menu-lg dropdown-menu-right\">
-          <span class=\"dropdown-item dropdown-header\">15 Notifications</span>
-          <div class=\"dropdown-divider\"></div>
-          <a href=\"#\" class=\"dropdown-item\">
-            <i class=\"fas fa-envelope mr-2\"></i> 4 new messages
-            <span class=\"float-right text-muted text-sm\">3 mins</span>
-          </a>
-          <div class=\"dropdown-divider\"></div>
-          <a href=\"#\" class=\"dropdown-item\">
-            <i class=\"fas fa-users mr-2\"></i> 8 friend requests
-            <span class=\"float-right text-muted text-sm\">12 hours</span>
-          </a>
-          <div class=\"dropdown-divider\"></div>
-          <a href=\"#\" class=\"dropdown-item\">
-            <i class=\"fas fa-file mr-2\"></i> 3 new reports
-            <span class=\"float-right text-muted text-sm\">2 days</span>
-          </a>
-          <div class=\"dropdown-divider\"></div>
-          <a href=\"#\" class=\"dropdown-item dropdown-footer\">See All Notifications</a>
-        </div>
-      </li>
-      <li class=\"nav-item\">
-        <a class=\"nav-link\" data-widget=\"fullscreen\" href=\"#\" role=\"button\">
-          <i class=\"fas fa-expand-arrows-alt\"></i>
-        </a>
-      </li>
-      <li class=\"nav-item\">
-        <a class=\"nav-link\" data-widget=\"control-sidebar\" data-controlsidebar-slide=\"true\" href=\"#\" role=\"button\">
-          <i class=\"fas fa-th-large\"></i>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <!-- /.navbar -->
-
-  <!-- Main Sidebar Container -->
-  <aside class=\"main-sidebar sidebar-dark-primary elevation-4\">
-    <!-- Brand Logo -->
-    <a href=\"index3.html\" class=\"brand-link\">
-      <img src=\"{{asset('dist/img/AdminLTELogo.png')}}\" alt=\"AdminLTE Logo\" class=\"brand-image img-circle elevation-3\" style=\"opacity: .8\">
-      <span class=\"brand-text font-weight-light\">AdminLTE 3</span>
-    </a>
-
-    <!-- Sidebar -->
-    <div class=\"sidebar\">
-      <!-- Sidebar user panel (optional) -->
-      <div class=\"user-panel mt-3 pb-3 mb-3 d-flex\">
-        <div class=\"image\">
-          <img src=\"{{asset('dist/img/user2-160x160.jpg')}}\" class=\"img-circle elevation-2\" alt=\"User Image\">
-        </div>
-        <div class=\"info\">
-          <a href=\"#\" class=\"d-block\">Alexander Pierce</a>
-        </div>
-      </div>
-
-      <!-- SidebarSearch Form -->
-      <div class=\"form-inline\">
-        <div class=\"input-group\" data-widget=\"sidebar-search\">
-          <input class=\"form-control form-control-sidebar\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
-          <div class=\"input-group-append\">
-            <button class=\"btn btn-sidebar\">
-              <i class=\"fas fa-search fa-fw\"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sidebar Menu -->
-      <nav class=\"mt-2\">
-        <ul class=\"nav nav-pills nav-sidebar flex-column\" data-widget=\"treeview\" role=\"menu\" data-accordion=\"false\">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class=\"nav-item menu-open\">
-            <a href=\"#\" class=\"nav-link active\">
-              <i class=\"nav-icon fas fa-tachometer-alt\"></i>
-              <p>
-                Dashboard
-                <i class=\"right fas fa-angle-left\"></i>
-              </p>
-            </a>
-            <ul class=\"nav nav-treeview\">
-              <li class=\"nav-item\">
-                <a href=\"./index.html\" class=\"nav-link active\">
-                  <i class=\"far fa-circle nav-icon\"></i>
-                  <p>Dashboard v1</p>
-                </a>
-              </li>
-              <li class=\"nav-item\">
-                <a href=\"#\" class=\"nav-link\">
-                  <i class=\"far fa-circle nav-icon\"></i>
-                  <p>Dashboard v2</p>
-                </a>
-              </li>
-              <li class=\"nav-item\">
-                <a href=\"#\" class=\"nav-link\">
-                  <i class=\"far fa-circle nav-icon\"></i>
-                  <p>Dashboard v3</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-    
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
-
-  <!-- Content Wrapper. Contains page content -->
+   <!-- Content Wrapper. Contains page content -->
   <div class=\"content-wrapper\">
     <!-- Content Header (Page header) -->
     <div class=\"content-header\">
@@ -886,7 +970,7 @@ class __TwigTemplate_d8bec2988c7f807f716a31a72a97dd142431a5609538a728bf3a73b1092
           <div class=\"col-sm-6\">
             <ol class=\"breadcrumb float-sm-right\">
               <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>
-              <li class=\"breadcrumb-item active\">Dashboard v1</li>
+              <li class=\"breadcrumb-item active\">Dashboard</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -894,136 +978,851 @@ class __TwigTemplate_d8bec2988c7f807f716a31a72a97dd142431a5609538a728bf3a73b1092
     </div>
     <!-- /.content-header -->
 
-
     <!-- Main content -->
     <section class=\"content\">
       <div class=\"container-fluid\">
-        <!-- Small boxes (Stat box) -->
+        <!-- Info boxes -->
         <div class=\"row\">
-          <div class=\"col-lg-3 col-6\">
-            <!-- small box -->
-            <div class=\"small-box bg-info\">
-              <div class=\"inner\">
-                <h3>150</h3>
+          <div class=\"col-12 col-sm-6 col-md-3\">
+            <div class=\"info-box\">
+              <span class=\"info-box-icon bg-info elevation-1\"><i class=\"fas fa-cog\"></i></span>
 
-                <p>New Orders</p>
+              <div class=\"info-box-content\">
+                <span class=\"info-box-text\">CPU Traffic</span>
+                <span class=\"info-box-number\">
+                  10
+                  <small>%</small>
+                </span>
               </div>
-              <div class=\"icon\">
-                <i class=\"ion ion-bag\"></i>
-              </div>
-              <a href=\"#\" class=\"small-box-footer\">More info <i class=\"fas fa-arrow-circle-right\"></i></a>
+              <!-- /.info-box-content -->
             </div>
+            <!-- /.info-box -->
           </div>
-          <!-- ./col -->
-          <div class=\"col-lg-3 col-6\">
-            <!-- small box -->
-            <div class=\"small-box bg-success\">
-              <div class=\"inner\">
-                <h3>53<sup style=\"font-size: 20px\">%</sup></h3>
+          <!-- /.col -->
+          <div class=\"col-12 col-sm-6 col-md-3\">
+            <div class=\"info-box mb-3\">
+              <span class=\"info-box-icon bg-danger elevation-1\"><i class=\"fas fa-thumbs-up\"></i></span>
 
-                <p>Bounce Rate</p>
+              <div class=\"info-box-content\">
+                <span class=\"info-box-text\">Likes</span>
+                <span class=\"info-box-number\">41,410</span>
               </div>
-              <div class=\"icon\">
-                <i class=\"ion ion-stats-bars\"></i>
-              </div>
-              <a href=\"#\" class=\"small-box-footer\">More info <i class=\"fas fa-arrow-circle-right\"></i></a>
+              <!-- /.info-box-content -->
             </div>
+            <!-- /.info-box -->
           </div>
-          <!-- ./col -->
-          <div class=\"col-lg-3 col-6\">
-            <!-- small box -->
-            <div class=\"small-box bg-warning\">
-              <div class=\"inner\">
-                <h3>44</h3>
+          <!-- /.col -->
 
-                <p>User Registrations</p>
-              </div>
-              <div class=\"icon\">
-                <i class=\"ion ion-person-add\"></i>
-              </div>
-              <a href=\"#\" class=\"small-box-footer\">More info <i class=\"fas fa-arrow-circle-right\"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class=\"col-lg-3 col-6\">
-            <!-- small box -->
-            <div class=\"small-box bg-danger\">
-              <div class=\"inner\">
-                <h3>65</h3>
+          <!-- fix for small devices only -->
+          <div class=\"clearfix hidden-md-up\"></div>
 
-                <p>Unique Visitors</p>
+          <div class=\"col-12 col-sm-6 col-md-3\">
+            <div class=\"info-box mb-3\">
+              <span class=\"info-box-icon bg-success elevation-1\"><i class=\"fas fa-shopping-cart\"></i></span>
+
+              <div class=\"info-box-content\">
+                <span class=\"info-box-text\">Sales</span>
+                <span class=\"info-box-number\">760</span>
               </div>
-              <div class=\"icon\">
-                <i class=\"ion ion-pie-graph\"></i>
-              </div>
-              <a href=\"#\" class=\"small-box-footer\">More info <i class=\"fas fa-arrow-circle-right\"></i></a>
+              <!-- /.info-box-content -->
             </div>
+            <!-- /.info-box -->
           </div>
-          <!-- ./col -->
+          <!-- /.col -->
+          <div class=\"col-12 col-sm-6 col-md-3\">
+            <div class=\"info-box mb-3\">
+              <span class=\"info-box-icon bg-warning elevation-1\"><i class=\"fas fa-users\"></i></span>
+
+              <div class=\"info-box-content\">
+                <span class=\"info-box-text\">New Members</span>
+                <span class=\"info-box-number\">2,000</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
         </div>
-        <!-- /.row -->    
-      </div><!-- /.container-fluid -->
+        <!-- /.row -->
+
+        <div class=\"row\">
+          <div class=\"col-md-12\">
+            <div class=\"card\">
+              <div class=\"card-header\">
+                <h5 class=\"card-title\">Monthly Recap Report</h5>
+
+                <div class=\"card-tools\">
+                  <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"collapse\">
+                    <i class=\"fas fa-minus\"></i>
+                  </button>
+                  <div class=\"btn-group\">
+                    <button type=\"button\" class=\"btn btn-tool dropdown-toggle\" data-toggle=\"dropdown\">
+                      <i class=\"fas fa-wrench\"></i>
+                    </button>
+                    <div class=\"dropdown-menu dropdown-menu-right\" role=\"menu\">
+                      <a href=\"#\" class=\"dropdown-item\">Action</a>
+                      <a href=\"#\" class=\"dropdown-item\">Another action</a>
+                      <a href=\"#\" class=\"dropdown-item\">Something else here</a>
+                      <a class=\"dropdown-divider\"></a>
+                      <a href=\"#\" class=\"dropdown-item\">Separated link</a>
+                    </div>
+                  </div>
+                  <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"remove\">
+                    <i class=\"fas fa-times\"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class=\"card-body\">
+                <div class=\"row\">
+                  <div class=\"col-md-8\">
+                    <p class=\"text-center\">
+                      <strong>Sales: 1 Jan, 2014 - 30 Jul, 2014</strong>
+                    </p>
+
+                    <div class=\"chart\">
+                      <!-- Sales Chart Canvas -->
+                      <canvas id=\"salesChart\" height=\"180\" style=\"height: 180px;\"></canvas>
+                    </div>
+                    <!-- /.chart-responsive -->
+                  </div>
+                  <!-- /.col -->
+                  <div class=\"col-md-4\">
+                    <p class=\"text-center\">
+                      <strong>Goal Completion</strong>
+                    </p>
+
+                    <div class=\"progress-group\">
+                      Add Products to Cart
+                      <span class=\"float-right\"><b>160</b>/200</span>
+                      <div class=\"progress progress-sm\">
+                        <div class=\"progress-bar bg-primary\" style=\"width: 80%\"></div>
+                      </div>
+                    </div>
+                    <!-- /.progress-group -->
+
+                    <div class=\"progress-group\">
+                      Complete Purchase
+                      <span class=\"float-right\"><b>310</b>/400</span>
+                      <div class=\"progress progress-sm\">
+                        <div class=\"progress-bar bg-danger\" style=\"width: 75%\"></div>
+                      </div>
+                    </div>
+
+                    <!-- /.progress-group -->
+                    <div class=\"progress-group\">
+                      <span class=\"progress-text\">Visit Premium Page</span>
+                      <span class=\"float-right\"><b>480</b>/800</span>
+                      <div class=\"progress progress-sm\">
+                        <div class=\"progress-bar bg-success\" style=\"width: 60%\"></div>
+                      </div>
+                    </div>
+
+                    <!-- /.progress-group -->
+                    <div class=\"progress-group\">
+                      Send Inquiries
+                      <span class=\"float-right\"><b>250</b>/500</span>
+                      <div class=\"progress progress-sm\">
+                        <div class=\"progress-bar bg-warning\" style=\"width: 50%\"></div>
+                      </div>
+                    </div>
+                    <!-- /.progress-group -->
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- ./card-body -->
+              <div class=\"card-footer\">
+                <div class=\"row\">
+                  <div class=\"col-sm-3 col-6\">
+                    <div class=\"description-block border-right\">
+                      <span class=\"description-percentage text-success\"><i class=\"fas fa-caret-up\"></i> 17%</span>
+                      <h5 class=\"description-header\">\$35,210.43</h5>
+                      <span class=\"description-text\">TOTAL REVENUE</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                  <div class=\"col-sm-3 col-6\">
+                    <div class=\"description-block border-right\">
+                      <span class=\"description-percentage text-warning\"><i class=\"fas fa-caret-left\"></i> 0%</span>
+                      <h5 class=\"description-header\">\$10,390.90</h5>
+                      <span class=\"description-text\">TOTAL COST</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                  <div class=\"col-sm-3 col-6\">
+                    <div class=\"description-block border-right\">
+                      <span class=\"description-percentage text-success\"><i class=\"fas fa-caret-up\"></i> 20%</span>
+                      <h5 class=\"description-header\">\$24,813.53</h5>
+                      <span class=\"description-text\">TOTAL PROFIT</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                  <div class=\"col-sm-3 col-6\">
+                    <div class=\"description-block\">
+                      <span class=\"description-percentage text-danger\"><i class=\"fas fa-caret-down\"></i> 18%</span>
+                      <h5 class=\"description-header\">1200</h5>
+                      <span class=\"description-text\">GOAL COMPLETIONS</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+        <!-- Main row -->
+        <div class=\"row\">
+          <!-- Left col -->
+          <div class=\"col-md-8\">
+            <!-- MAP & BOX PANE -->
+            <div class=\"card\">
+              <div class=\"card-header\">
+                <h3 class=\"card-title\">US-Visitors Report</h3>
+
+                <div class=\"card-tools\">
+                  <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"collapse\">
+                    <i class=\"fas fa-minus\"></i>
+                  </button>
+                  <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"remove\">
+                    <i class=\"fas fa-times\"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class=\"card-body p-0\">
+                <div class=\"d-md-flex\">
+                  <div class=\"p-1 flex-fill\" style=\"overflow: hidden\">
+                    <!-- Map will be created here -->
+                    <div id=\"world-map-markers\" style=\"height: 325px; overflow: hidden\">
+                      <div class=\"map\"></div>
+                    </div>
+                  </div>
+                  <div class=\"card-pane-right bg-success pt-2 pb-2 pl-4 pr-4\">
+                    <div class=\"description-block mb-4\">
+                      <div class=\"sparkbar pad\" data-color=\"#fff\">90,70,90,70,75,80,70</div>
+                      <h5 class=\"description-header\">8390</h5>
+                      <span class=\"description-text\">Visits</span>
+                    </div>
+                    <!-- /.description-block -->
+                    <div class=\"description-block mb-4\">
+                      <div class=\"sparkbar pad\" data-color=\"#fff\">90,50,90,70,61,83,63</div>
+                      <h5 class=\"description-header\">30%</h5>
+                      <span class=\"description-text\">Referrals</span>
+                    </div>
+                    <!-- /.description-block -->
+                    <div class=\"description-block\">
+                      <div class=\"sparkbar pad\" data-color=\"#fff\">90,50,90,70,61,83,63</div>
+                      <h5 class=\"description-header\">70%</h5>
+                      <span class=\"description-text\">Organic</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div><!-- /.card-pane-right -->
+                </div><!-- /.d-md-flex -->
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+            <div class=\"row\">
+              <div class=\"col-md-6\">
+                <!-- DIRECT CHAT -->
+                <div class=\"card direct-chat direct-chat-warning\">
+                  <div class=\"card-header\">
+                    <h3 class=\"card-title\">Direct Chat</h3>
+
+                    <div class=\"card-tools\">
+                      <span title=\"3 New Messages\" class=\"badge badge-warning\">3</span>
+                      <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"collapse\">
+                        <i class=\"fas fa-minus\"></i>
+                      </button>
+                      <button type=\"button\" class=\"btn btn-tool\" title=\"Contacts\" data-widget=\"chat-pane-toggle\">
+                        <i class=\"fas fa-comments\"></i>
+                      </button>
+                      <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"remove\">
+                        <i class=\"fas fa-times\"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- /.card-header -->
+                  <div class=\"card-body\">
+                    <!-- Conversations are loaded here -->
+                    <div class=\"direct-chat-messages\">
+                      <!-- Message. Default to the left -->
+                      <div class=\"direct-chat-msg\">
+                        <div class=\"direct-chat-infos clearfix\">
+                          <span class=\"direct-chat-name float-left\">Alexander Pierce</span>
+                          <span class=\"direct-chat-timestamp float-right\">23 Jan 2:00 pm</span>
+                        </div>
+                        <!-- /.direct-chat-infos -->
+                        <img class=\"direct-chat-img\" src=\"dist/img/user1-128x128.jpg\" alt=\"message user image\">
+                        <!-- /.direct-chat-img -->
+                        <div class=\"direct-chat-text\">
+                          Is this template really for free? That's unbelievable!
+                        </div>
+                        <!-- /.direct-chat-text -->
+                      </div>
+                      <!-- /.direct-chat-msg -->
+
+                      <!-- Message to the right -->
+                      <div class=\"direct-chat-msg right\">
+                        <div class=\"direct-chat-infos clearfix\">
+                          <span class=\"direct-chat-name float-right\">Sarah Bullock</span>
+                          <span class=\"direct-chat-timestamp float-left\">23 Jan 2:05 pm</span>
+                        </div>
+                        <!-- /.direct-chat-infos -->
+                        <img class=\"direct-chat-img\" src=\"dist/img/user3-128x128.jpg\" alt=\"message user image\">
+                        <!-- /.direct-chat-img -->
+                        <div class=\"direct-chat-text\">
+                          You better believe it!
+                        </div>
+                        <!-- /.direct-chat-text -->
+                      </div>
+                      <!-- /.direct-chat-msg -->
+
+                      <!-- Message. Default to the left -->
+                      <div class=\"direct-chat-msg\">
+                        <div class=\"direct-chat-infos clearfix\">
+                          <span class=\"direct-chat-name float-left\">Alexander Pierce</span>
+                          <span class=\"direct-chat-timestamp float-right\">23 Jan 5:37 pm</span>
+                        </div>
+                        <!-- /.direct-chat-infos -->
+                        <img class=\"direct-chat-img\" src=\"dist/img/user1-128x128.jpg\" alt=\"message user image\">
+                        <!-- /.direct-chat-img -->
+                        <div class=\"direct-chat-text\">
+                          Working with AdminLTE on a great new app! Wanna join?
+                        </div>
+                        <!-- /.direct-chat-text -->
+                      </div>
+                      <!-- /.direct-chat-msg -->
+
+                      <!-- Message to the right -->
+                      <div class=\"direct-chat-msg right\">
+                        <div class=\"direct-chat-infos clearfix\">
+                          <span class=\"direct-chat-name float-right\">Sarah Bullock</span>
+                          <span class=\"direct-chat-timestamp float-left\">23 Jan 6:10 pm</span>
+                        </div>
+                        <!-- /.direct-chat-infos -->
+                        <img class=\"direct-chat-img\" src=\"dist/img/user3-128x128.jpg\" alt=\"message user image\">
+                        <!-- /.direct-chat-img -->
+                        <div class=\"direct-chat-text\">
+                          I would love to.
+                        </div>
+                        <!-- /.direct-chat-text -->
+                      </div>
+                      <!-- /.direct-chat-msg -->
+
+                    </div>
+                    <!--/.direct-chat-messages-->
+
+                    <!-- Contacts are loaded here -->
+                    <div class=\"direct-chat-contacts\">
+                      <ul class=\"contacts-list\">
+                        <li>
+                          <a href=\"#\">
+                            <img class=\"contacts-list-img\" src=\"dist/img/user1-128x128.jpg\" alt=\"User Avatar\">
+
+                            <div class=\"contacts-list-info\">
+                              <span class=\"contacts-list-name\">
+                                Count Dracula
+                                <small class=\"contacts-list-date float-right\">2/28/2015</small>
+                              </span>
+                              <span class=\"contacts-list-msg\">How have you been? I was...</span>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                          </a>
+                        </li>
+                        <!-- End Contact Item -->
+                        <li>
+                          <a href=\"#\">
+                            <img class=\"contacts-list-img\" src=\"dist/img/user7-128x128.jpg\" alt=\"User Avatar\">
+
+                            <div class=\"contacts-list-info\">
+                              <span class=\"contacts-list-name\">
+                                Sarah Doe
+                                <small class=\"contacts-list-date float-right\">2/23/2015</small>
+                              </span>
+                              <span class=\"contacts-list-msg\">I will be waiting for...</span>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                          </a>
+                        </li>
+                        <!-- End Contact Item -->
+                        <li>
+                          <a href=\"#\">
+                            <img class=\"contacts-list-img\" src=\"dist/img/user3-128x128.jpg\" alt=\"User Avatar\">
+
+                            <div class=\"contacts-list-info\">
+                              <span class=\"contacts-list-name\">
+                                Nadia Jolie
+                                <small class=\"contacts-list-date float-right\">2/20/2015</small>
+                              </span>
+                              <span class=\"contacts-list-msg\">I'll call you back at...</span>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                          </a>
+                        </li>
+                        <!-- End Contact Item -->
+                        <li>
+                          <a href=\"#\">
+                            <img class=\"contacts-list-img\" src=\"dist/img/user5-128x128.jpg\" alt=\"User Avatar\">
+
+                            <div class=\"contacts-list-info\">
+                              <span class=\"contacts-list-name\">
+                                Nora S. Vans
+                                <small class=\"contacts-list-date float-right\">2/10/2015</small>
+                              </span>
+                              <span class=\"contacts-list-msg\">Where is your new...</span>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                          </a>
+                        </li>
+                        <!-- End Contact Item -->
+                        <li>
+                          <a href=\"#\">
+                            <img class=\"contacts-list-img\" src=\"dist/img/user6-128x128.jpg\" alt=\"User Avatar\">
+
+                            <div class=\"contacts-list-info\">
+                              <span class=\"contacts-list-name\">
+                                John K.
+                                <small class=\"contacts-list-date float-right\">1/27/2015</small>
+                              </span>
+                              <span class=\"contacts-list-msg\">Can I take a look at...</span>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                          </a>
+                        </li>
+                        <!-- End Contact Item -->
+                        <li>
+                          <a href=\"#\">
+                            <img class=\"contacts-list-img\" src=\"dist/img/user8-128x128.jpg\" alt=\"User Avatar\">
+
+                            <div class=\"contacts-list-info\">
+                              <span class=\"contacts-list-name\">
+                                Kenneth M.
+                                <small class=\"contacts-list-date float-right\">1/4/2015</small>
+                              </span>
+                              <span class=\"contacts-list-msg\">Never mind I found...</span>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                          </a>
+                        </li>
+                        <!-- End Contact Item -->
+                      </ul>
+                      <!-- /.contacts-list -->
+                    </div>
+                    <!-- /.direct-chat-pane -->
+                  </div>
+                  <!-- /.card-body -->
+                  <div class=\"card-footer\">
+                    <form action=\"#\" method=\"post\">
+                      <div class=\"input-group\">
+                        <input type=\"text\" name=\"message\" placeholder=\"Type Message ...\" class=\"form-control\">
+                        <span class=\"input-group-append\">
+                          <button type=\"button\" class=\"btn btn-warning\">Send</button>
+                        </span>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- /.card-footer-->
+                </div>
+                <!--/.direct-chat -->
+              </div>
+              <!-- /.col -->
+
+              <div class=\"col-md-6\">
+                <!-- USERS LIST -->
+                <div class=\"card\">
+                  <div class=\"card-header\">
+                    <h3 class=\"card-title\">Latest Members</h3>
+
+                    <div class=\"card-tools\">
+                      <span class=\"badge badge-danger\">8 New Members</span>
+                      <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"collapse\">
+                        <i class=\"fas fa-minus\"></i>
+                      </button>
+                      <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"remove\">
+                        <i class=\"fas fa-times\"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- /.card-header -->
+                  <div class=\"card-body p-0\">
+                    <ul class=\"users-list clearfix\">
+                      <li>
+                        <img src=\"dist/img/user1-128x128.jpg\" alt=\"User Image\">
+                        <a class=\"users-list-name\" href=\"#\">Alexander Pierce</a>
+                        <span class=\"users-list-date\">Today</span>
+                      </li>
+                      <li>
+                        <img src=\"dist/img/user8-128x128.jpg\" alt=\"User Image\">
+                        <a class=\"users-list-name\" href=\"#\">Norman</a>
+                        <span class=\"users-list-date\">Yesterday</span>
+                      </li>
+                      <li>
+                        <img src=\"dist/img/user7-128x128.jpg\" alt=\"User Image\">
+                        <a class=\"users-list-name\" href=\"#\">Jane</a>
+                        <span class=\"users-list-date\">12 Jan</span>
+                      </li>
+                      <li>
+                        <img src=\"dist/img/user6-128x128.jpg\" alt=\"User Image\">
+                        <a class=\"users-list-name\" href=\"#\">John</a>
+                        <span class=\"users-list-date\">12 Jan</span>
+                      </li>
+                      <li>
+                        <img src=\"dist/img/user2-160x160.jpg\" alt=\"User Image\">
+                        <a class=\"users-list-name\" href=\"#\">Alexander</a>
+                        <span class=\"users-list-date\">13 Jan</span>
+                      </li>
+                      <li>
+                        <img src=\"dist/img/user5-128x128.jpg\" alt=\"User Image\">
+                        <a class=\"users-list-name\" href=\"#\">Sarah</a>
+                        <span class=\"users-list-date\">14 Jan</span>
+                      </li>
+                      <li>
+                        <img src=\"dist/img/user4-128x128.jpg\" alt=\"User Image\">
+                        <a class=\"users-list-name\" href=\"#\">Nora</a>
+                        <span class=\"users-list-date\">15 Jan</span>
+                      </li>
+                      <li>
+                        <img src=\"dist/img/user3-128x128.jpg\" alt=\"User Image\">
+                        <a class=\"users-list-name\" href=\"#\">Nadia</a>
+                        <span class=\"users-list-date\">15 Jan</span>
+                      </li>
+                    </ul>
+                    <!-- /.users-list -->
+                  </div>
+                  <!-- /.card-body -->
+                  <div class=\"card-footer text-center\">
+                    <a href=\"javascript:\">View All Users</a>
+                  </div>
+                  <!-- /.card-footer -->
+                </div>
+                <!--/.card -->
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+
+            <!-- TABLE: LATEST ORDERS -->
+            <div class=\"card\">
+              <div class=\"card-header border-transparent\">
+                <h3 class=\"card-title\">Latest Orders</h3>
+
+                <div class=\"card-tools\">
+                  <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"collapse\">
+                    <i class=\"fas fa-minus\"></i>
+                  </button>
+                  <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"remove\">
+                    <i class=\"fas fa-times\"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class=\"card-body p-0\">
+                <div class=\"table-responsive\">
+                  <table class=\"table m-0\">
+                    <thead>
+                    <tr>
+                      <th>Order ID</th>
+                      <th>Item</th>
+                      <th>Status</th>
+                      <th>Popularity</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><a href=\"pages/examples/invoice.html\">OR9842</a></td>
+                      <td>Call of Duty IV</td>
+                      <td><span class=\"badge badge-success\">Shipped</span></td>
+                      <td>
+                        <div class=\"sparkbar\" data-color=\"#00a65a\" data-height=\"20\">90,80,90,-70,61,-83,63</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href=\"pages/examples/invoice.html\">OR1848</a></td>
+                      <td>Samsung Smart TV</td>
+                      <td><span class=\"badge badge-warning\">Pending</span></td>
+                      <td>
+                        <div class=\"sparkbar\" data-color=\"#f39c12\" data-height=\"20\">90,80,-90,70,61,-83,68</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href=\"pages/examples/invoice.html\">OR7429</a></td>
+                      <td>iPhone 6 Plus</td>
+                      <td><span class=\"badge badge-danger\">Delivered</span></td>
+                      <td>
+                        <div class=\"sparkbar\" data-color=\"#f56954\" data-height=\"20\">90,-80,90,70,-61,83,63</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href=\"pages/examples/invoice.html\">OR7429</a></td>
+                      <td>Samsung Smart TV</td>
+                      <td><span class=\"badge badge-info\">Processing</span></td>
+                      <td>
+                        <div class=\"sparkbar\" data-color=\"#00c0ef\" data-height=\"20\">90,80,-90,70,-61,83,63</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href=\"pages/examples/invoice.html\">OR1848</a></td>
+                      <td>Samsung Smart TV</td>
+                      <td><span class=\"badge badge-warning\">Pending</span></td>
+                      <td>
+                        <div class=\"sparkbar\" data-color=\"#f39c12\" data-height=\"20\">90,80,-90,70,61,-83,68</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href=\"pages/examples/invoice.html\">OR7429</a></td>
+                      <td>iPhone 6 Plus</td>
+                      <td><span class=\"badge badge-danger\">Delivered</span></td>
+                      <td>
+                        <div class=\"sparkbar\" data-color=\"#f56954\" data-height=\"20\">90,-80,90,70,-61,83,63</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href=\"pages/examples/invoice.html\">OR9842</a></td>
+                      <td>Call of Duty IV</td>
+                      <td><span class=\"badge badge-success\">Shipped</span></td>
+                      <td>
+                        <div class=\"sparkbar\" data-color=\"#00a65a\" data-height=\"20\">90,80,90,-70,61,-83,63</div>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.card-body -->
+              <div class=\"card-footer clearfix\">
+                <a href=\"javascript:void(0)\" class=\"btn btn-sm btn-info float-left\">Place New Order</a>
+                <a href=\"javascript:void(0)\" class=\"btn btn-sm btn-secondary float-right\">View All Orders</a>
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+
+          <div class=\"col-md-4\">
+            <!-- Info Boxes Style 2 -->
+            <div class=\"info-box mb-3 bg-warning\">
+              <span class=\"info-box-icon\"><i class=\"fas fa-tag\"></i></span>
+
+              <div class=\"info-box-content\">
+                <span class=\"info-box-text\">Inventory</span>
+                <span class=\"info-box-number\">5,200</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+            <div class=\"info-box mb-3 bg-success\">
+              <span class=\"info-box-icon\"><i class=\"far fa-heart\"></i></span>
+
+              <div class=\"info-box-content\">
+                <span class=\"info-box-text\">Mentions</span>
+                <span class=\"info-box-number\">92,050</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+            <div class=\"info-box mb-3 bg-danger\">
+              <span class=\"info-box-icon\"><i class=\"fas fa-cloud-download-alt\"></i></span>
+
+              <div class=\"info-box-content\">
+                <span class=\"info-box-text\">Downloads</span>
+                <span class=\"info-box-number\">114,381</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+            <div class=\"info-box mb-3 bg-info\">
+              <span class=\"info-box-icon\"><i class=\"far fa-comment\"></i></span>
+
+              <div class=\"info-box-content\">
+                <span class=\"info-box-text\">Direct Messages</span>
+                <span class=\"info-box-number\">163,921</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+
+            <div class=\"card\">
+              <div class=\"card-header\">
+                <h3 class=\"card-title\">Browser Usage</h3>
+
+                <div class=\"card-tools\">
+                  <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"collapse\">
+                    <i class=\"fas fa-minus\"></i>
+                  </button>
+                  <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"remove\">
+                    <i class=\"fas fa-times\"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class=\"card-body\">
+                <div class=\"row\">
+                  <div class=\"col-md-8\">
+                    <div class=\"chart-responsive\">
+                      <canvas id=\"pieChart\" height=\"150\"></canvas>
+                    </div>
+                    <!-- ./chart-responsive -->
+                  </div>
+                  <!-- /.col -->
+                  <div class=\"col-md-4\">
+                    <ul class=\"chart-legend clearfix\">
+                      <li><i class=\"far fa-circle text-danger\"></i> Chrome</li>
+                      <li><i class=\"far fa-circle text-success\"></i> IE</li>
+                      <li><i class=\"far fa-circle text-warning\"></i> FireFox</li>
+                      <li><i class=\"far fa-circle text-info\"></i> Safari</li>
+                      <li><i class=\"far fa-circle text-primary\"></i> Opera</li>
+                      <li><i class=\"far fa-circle text-secondary\"></i> Navigator</li>
+                    </ul>
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.card-body -->
+              <div class=\"card-footer p-0\">
+                <ul class=\"nav nav-pills flex-column\">
+                  <li class=\"nav-item\">
+                    <a href=\"#\" class=\"nav-link\">
+                      United States of America
+                      <span class=\"float-right text-danger\">
+                        <i class=\"fas fa-arrow-down text-sm\"></i>
+                        12%</span>
+                    </a>
+                  </li>
+                  <li class=\"nav-item\">
+                    <a href=\"#\" class=\"nav-link\">
+                      India
+                      <span class=\"float-right text-success\">
+                        <i class=\"fas fa-arrow-up text-sm\"></i> 4%
+                      </span>
+                    </a>
+                  </li>
+                  <li class=\"nav-item\">
+                    <a href=\"#\" class=\"nav-link\">
+                      China
+                      <span class=\"float-right text-warning\">
+                        <i class=\"fas fa-arrow-left text-sm\"></i> 0%
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- /.footer -->
+            </div>
+            <!-- /.card -->
+
+            <!-- PRODUCT LIST -->
+            <div class=\"card\">
+              <div class=\"card-header\">
+                <h3 class=\"card-title\">Recently Added Products</h3>
+
+                <div class=\"card-tools\">
+                  <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"collapse\">
+                    <i class=\"fas fa-minus\"></i>
+                  </button>
+                  <button type=\"button\" class=\"btn btn-tool\" data-card-widget=\"remove\">
+                    <i class=\"fas fa-times\"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class=\"card-body p-0\">
+                <ul class=\"products-list product-list-in-card pl-2 pr-2\">
+                  <li class=\"item\">
+                    <div class=\"product-img\">
+                      <img src=\"dist/img/default-150x150.png\" alt=\"Product Image\" class=\"img-size-50\">
+                    </div>
+                    <div class=\"product-info\">
+                      <a href=\"javascript:void(0)\" class=\"product-title\">Samsung TV
+                        <span class=\"badge badge-warning float-right\">\$1800</span></a>
+                      <span class=\"product-description\">
+                        Samsung 32\" 1080p 60Hz LED Smart HDTV.
+                      </span>
+                    </div>
+                  </li>
+                  <!-- /.item -->
+                  <li class=\"item\">
+                    <div class=\"product-img\">
+                      <img src=\"dist/img/default-150x150.png\" alt=\"Product Image\" class=\"img-size-50\">
+                    </div>
+                    <div class=\"product-info\">
+                      <a href=\"javascript:void(0)\" class=\"product-title\">Bicycle
+                        <span class=\"badge badge-info float-right\">\$700</span></a>
+                      <span class=\"product-description\">
+                        26\" Mongoose Dolomite Men's 7-speed, Navy Blue.
+                      </span>
+                    </div>
+                  </li>
+                  <!-- /.item -->
+                  <li class=\"item\">
+                    <div class=\"product-img\">
+                      <img src=\"dist/img/default-150x150.png\" alt=\"Product Image\" class=\"img-size-50\">
+                    </div>
+                    <div class=\"product-info\">
+                      <a href=\"javascript:void(0)\" class=\"product-title\">
+                        Xbox One <span class=\"badge badge-danger float-right\">
+                        \$350
+                      </span>
+                      </a>
+                      <span class=\"product-description\">
+                        Xbox One Console Bundle with Halo Master Chief Collection.
+                      </span>
+                    </div>
+                  </li>
+                  <!-- /.item -->
+                  <li class=\"item\">
+                    <div class=\"product-img\">
+                      <img src=\"dist/img/default-150x150.png\" alt=\"Product Image\" class=\"img-size-50\">
+                    </div>
+                    <div class=\"product-info\">
+                      <a href=\"javascript:void(0)\" class=\"product-title\">PlayStation 4
+                        <span class=\"badge badge-success float-right\">\$399</span></a>
+                      <span class=\"product-description\">
+                        PlayStation 4 500GB Console (PS4)
+                      </span>
+                    </div>
+                  </li>
+                  <!-- /.item -->
+                </ul>
+              </div>
+              <!-- /.card-body -->
+              <div class=\"card-footer text-center\">
+                <a href=\"javascript:void(0)\" class=\"uppercase\">View All Products</a>
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div><!--/. container-fluid -->
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <footer class=\"main-footer\">
-    <strong>Copyright &copy; 2021-2022 <a href=\"https://adminlte.io\">ProTECH.io</a>.</strong>
-    All rights reserved.
-    <div class=\"float-right d-none d-sm-inline-block\">
-      <b>Version</b> 1.0-
-    </div>
-  </footer>
 
   <!-- Control Sidebar -->
   <aside class=\"control-sidebar control-sidebar-dark\">
     <!-- Control sidebar content goes here -->
   </aside>
   <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
-</body>
 
-</html>
-{% endblock %}
-
-{% block javascripts %}
-<!-- jQuery -->
-<script src=\"{{asset('plugins/jquery/jquery.min.js')}}\"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src=\"{{asset('plugins/jquery-ui/jquery-ui.min.js')}}\"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  \$.widget.bridge('uibutton', \$.ui.button)
-</script>
-<!-- Bootstrap 4 -->
-<script src=\"{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}\"></script>
-<!-- ChartJS -->
-<script src=\"{{asset('plugins/chart.js/Chart.min.js')}}\"></script>
-<!-- Sparkline -->
-<script src=\"{{asset('plugins/sparklines/sparkline.js')}}\"></script>
-<!-- JQVMap -->
-<script src=\"{{asset('lugins/jqvmap/jquery.vmap.min.js')}}p\"></script>
-<script src=\"{{asset('plugins/jqvmap/maps/jquery.vmap.usa.js')}}\"></script>
-<!-- jQuery Knob Chart -->
-<script src=\"{{asset('plugins/jquery-knob/jquery.knob.min.js')}}\"></script>
-<!-- daterangepicker -->
-<script src=\"{{asset('plugins/moment/moment.min.js')}}\"></script>
-<script src=\"{{asset('plugins/daterangepicker/daterangepicker.js')}}\"></script>
-<!-- Tempusdominus Bootstrap 4 -->
-<script src=\"{{asset('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}\"></script>
-<!-- Summernote -->
-<script src=\"{{asset('plugins/summernote/summernote-bs4.min.js')}}\"></script>
-<!-- overlayScrollbars -->
-<script src=\"{{asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}\"></script>
-<!-- AdminLTE App -->
-<script src=\"{{asset('dist/js/adminlte.js')}}\"></script>
-<!-- AdminLTE for demo purposes -->
-<script src=\"{{asset('dist/js/demo.js')}}\"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src=\"{{asset('dist/js/pages/dashboard.js')}}\"></script>
-{% endblock %}
-
+  {% endblock %}
 ", "admin/index.html.twig", "/Users/skanderzouaoui/Documents/ProTECH/templates/admin/index.html.twig");
     }
 }

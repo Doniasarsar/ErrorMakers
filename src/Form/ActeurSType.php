@@ -34,6 +34,15 @@ class ActeurSType extends AbstractType
             // 'multiple' => true,
             // 'expanded' => true,
         ])
+        ->add('Role', ChoiceType::class, [
+            'choices' => [
+                'Livreur' => 'ROLE_LIV',
+                'Commercant' => 'ROLE_COMM'
+            ], 
+            'expanded' => true,
+            'multiple' => true,
+            'label' => 'Rôles' 
+        ])
        
       
         ;

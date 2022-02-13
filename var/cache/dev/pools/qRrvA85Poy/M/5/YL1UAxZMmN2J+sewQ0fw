@@ -2,26 +2,24 @@
 
 return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
     $o = [
-        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ManyToOne'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ManyToOne')),
-        clone ($p['Doctrine\\ORM\\Mapping\\JoinColumn'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\JoinColumn')),
+        clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
     ],
     null,
     [
         'stdClass' => [
-            'targetEntity' => [
-                'App\\Entity\\Roles',
+            'type' => [
+                'json',
             ],
-            'inversedBy' => [
-                'utilisateurs',
+            'precision' => [
+                null,
             ],
-            'nullable' => [
-                1 => false,
+            'scale' => [
+                null,
             ],
         ],
     ],
     [
         $o[0],
-        $o[1],
     ],
     []
 ); }];

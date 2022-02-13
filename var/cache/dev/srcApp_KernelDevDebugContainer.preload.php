@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).'/vendor/autoload.php';
-require __DIR__.'/Container9xs8G4C/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerZxfZdBz/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -134,7 +134,7 @@ $classes[] = 'Symfony\Component\Security\Core\Authorization\Voter\TraceableVoter
 $classes[] = 'Symfony\Component\Security\Core\Authorization\Voter\AuthenticatedVoter';
 $classes[] = 'Symfony\Component\Security\Core\Authorization\Voter\ExpressionVoter';
 $classes[] = 'Symfony\Component\Security\Core\Authorization\ExpressionLanguage';
-$classes[] = 'Symfony\Component\Security\Core\Authorization\Voter\RoleVoter';
+$classes[] = 'Symfony\Component\Security\Core\Authorization\Voter\RoleHierarchyVoter';
 $classes[] = 'Symfony\Bundle\SecurityBundle\EventListener\VoteListener';
 $classes[] = 'Symfony\Component\Stopwatch\Stopwatch';
 $classes[] = 'Symfony\Component\DependencyInjection\Config\ContainerParametersResourceChecker';
