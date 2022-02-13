@@ -39,12 +39,26 @@ class ReclamationController extends AbstractController
         {$em=$this->getDoctrine()->getManager();
             $em->persist($reclamations);
             $em->flush();
-            return $this->redirectToRoute('reclamation');
+            return $this->redirectToRoute('r_list');
 
         }
 
         return $this->render('reclamation/add.html.twig', [
             'formA'=>$form->createView(),
+        ]);
+    }
+
+
+    /**
+     * @param ReclamationRepository $rep
+     * @return Response
+     * @Route("reclamation/list", name="r_list")
+     */
+    public function afficher(ReclamationRepository $rep): Response
+    {
+        $reclamations=$rep->findAll();
+        return $this->render('reclamation/listReclamation.html.twig', [
+            'tab' => $reclamations,
         ]);
     }
 

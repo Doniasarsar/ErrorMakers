@@ -17,6 +17,7 @@ return [
         '/front' => [[['_route' => 'front', '_controller' => 'App\\Controller\\FrontController::index'], null, null, null, false, false, null]],
         '/reclamation' => [[['_route' => 'reclamation', '_controller' => 'App\\Controller\\ReclamationController::index'], null, null, null, false, false, null]],
         '/reclamation/add' => [[['_route' => 'r_add', '_controller' => 'App\\Controller\\ReclamationController::add'], null, null, null, false, false, null]],
+        '/reclamation/list' => [[['_route' => 'r_list', '_controller' => 'App\\Controller\\ReclamationController::afficher'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

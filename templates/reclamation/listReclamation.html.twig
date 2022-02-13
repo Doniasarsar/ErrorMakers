@@ -1,0 +1,33 @@
+{% extends 'baseFront.twig'%}
+{% block title %}<title>Liste des Reclamation</title> {% endblock %}
+{% block body %}
+    <div class="container align-content-center mt-50">
+    <h1 align="center">Reclamations List</h1>
+    <div class="form-group">
+    <table class="table table-striped">
+        <tr>
+            <th>ID</th>
+            <th>ID Command</th>
+            <th>Your Name</th>
+            <th>Email</th>
+            <th>Message</th>
+            <th>Reclamation Type</th>
+            <th>Reclamation Date</th>
+            <th>Reclamation Time</th>
+        </tr>
+        {% for r in tab %}
+            <tr>
+                <td>{{ r.id }}</td>
+                <td>{{ r.idCommande }}</td>
+                <td>{{ r.name }}</td>
+                <td>{{ r.email }}</td>
+                <td>{{ r.message }}</td>
+                <td>{{ r.type }}</td>
+                <td>{{ r.date|date('d-m-Y') }}</td>
+                <td>{{ r.time|date('H:i:s') }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    </div>
+    </div>
+{% endblock %}

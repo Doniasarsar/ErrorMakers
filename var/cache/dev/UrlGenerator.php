@@ -19,4 +19,5 @@ return [
     'front' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/front']], [], []],
     'reclamation' => [[], ['_controller' => 'App\\Controller\\ReclamationController::index'], [], [['text', '/reclamation']], [], []],
     'r_add' => [[], ['_controller' => 'App\\Controller\\ReclamationController::add'], [], [['text', '/reclamation/add']], [], []],
+    'r_list' => [[], ['_controller' => 'App\\Controller\\ReclamationController::afficher'], [], [['text', '/reclamation/list']], [], []],
 ];

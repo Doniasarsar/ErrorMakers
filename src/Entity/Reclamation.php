@@ -49,16 +49,19 @@ class Reclamation
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
      */
     private $type;
 
     /**
      * @ORM\Column(type="date")
+     * @Assert\NotBlank
      */
     private $date;
 
     /**
      * @ORM\Column(type="time")
+     * @Assert\NotBlank
      */
     private $time;
 
@@ -70,6 +73,7 @@ class Reclamation
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
      */
     private $idCommande;
 

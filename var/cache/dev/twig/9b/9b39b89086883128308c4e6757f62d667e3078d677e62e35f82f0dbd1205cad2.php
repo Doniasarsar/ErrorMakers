@@ -423,7 +423,10 @@ class __TwigTemplate_7cc31c760fa71c3598c5e97dad16dea1fa7a1da4058af3fab937c31af71
                                                    </li>
                                                    <li><a href=\"index.html\">Other Pages 2</a>
                                                        <ul>
-                                                           <li><a href=\"contact.html\">Contact</a></li>
+                                                           <li><a href=\"";
+        // line 395
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("r_add");
+        echo "\">Contact</a></li>
                                                            <li><a href=\"about-us.html\">About Us</a></li>
                                                            <li><a href=\"faq.html\">FAQ</a></li>
                                                            <li><a href=\"404.html\">404 Error</a></li>
@@ -432,7 +435,10 @@ class __TwigTemplate_7cc31c760fa71c3598c5e97dad16dea1fa7a1da4058af3fab937c31af71
                                                </ul>
                                            </li>
                                            <li><a href=\"about-us.html\">About Us</a></li>
-                                           <li><a href=\"contact.html\">Contact</a></li>
+                                           <li><a href=\"";
+        // line 404
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("r_add");
+        echo "\">Contact</a></li>
                                            <li><a href=\"shop-left-sidebar.html\">Smartwatch</a></li>
                                            <li><a href=\"shop-left-sidebar.html\">Accessories</a></li>
                                        </ul>
@@ -1155,7 +1161,7 @@ class __TwigTemplate_7cc31c760fa71c3598c5e97dad16dea1fa7a1da4058af3fab937c31af71
 
     public function getDebugInfo()
     {
-        return array (  1135 => 815,  1130 => 813,  1125 => 811,  1120 => 809,  1115 => 807,  1110 => 805,  1105 => 803,  1100 => 801,  1095 => 799,  1090 => 797,  1085 => 795,  1080 => 793,  1075 => 791,  1070 => 789,  1065 => 787,  1060 => 785,  1055 => 783,  1050 => 781,  1045 => 779,  1040 => 777,  1034 => 775,  1024 => 774,  1005 => 429,  992 => 45,  987 => 43,  982 => 41,  977 => 39,  972 => 37,  967 => 35,  962 => 33,  957 => 31,  952 => 29,  947 => 27,  942 => 25,  937 => 23,  932 => 21,  927 => 19,  922 => 17,  917 => 15,  912 => 13,  909 => 12,  899 => 11,  880 => 8,  866 => 817,  864 => 774,  783 => 696,  779 => 695,  775 => 694,  771 => 693,  767 => 692,  763 => 691,  756 => 687,  750 => 684,  744 => 681,  738 => 678,  732 => 675,  726 => 672,  693 => 642,  553 => 505,  527 => 482,  511 => 469,  495 => 456,  479 => 443,  464 => 430,  462 => 429,  277 => 247,  262 => 235,  149 => 125,  125 => 104,  121 => 103,  64 => 48,  62 => 11,  58 => 9,  56 => 8,  47 => 1,);
+        return array (  1141 => 815,  1136 => 813,  1131 => 811,  1126 => 809,  1121 => 807,  1116 => 805,  1111 => 803,  1106 => 801,  1101 => 799,  1096 => 797,  1091 => 795,  1086 => 793,  1081 => 791,  1076 => 789,  1071 => 787,  1066 => 785,  1061 => 783,  1056 => 781,  1051 => 779,  1046 => 777,  1040 => 775,  1030 => 774,  1011 => 429,  998 => 45,  993 => 43,  988 => 41,  983 => 39,  978 => 37,  973 => 35,  968 => 33,  963 => 31,  958 => 29,  953 => 27,  948 => 25,  943 => 23,  938 => 21,  933 => 19,  928 => 17,  923 => 15,  918 => 13,  915 => 12,  905 => 11,  886 => 8,  872 => 817,  870 => 774,  789 => 696,  785 => 695,  781 => 694,  777 => 693,  773 => 692,  769 => 691,  762 => 687,  756 => 684,  750 => 681,  744 => 678,  738 => 675,  732 => 672,  699 => 642,  559 => 505,  533 => 482,  517 => 469,  501 => 456,  485 => 443,  470 => 430,  468 => 429,  440 => 404,  428 => 395,  277 => 247,  262 => 235,  149 => 125,  125 => 104,  121 => 103,  64 => 48,  62 => 11,  58 => 9,  56 => 8,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -1554,7 +1560,7 @@ class __TwigTemplate_7cc31c760fa71c3598c5e97dad16dea1fa7a1da4058af3fab937c31af71
                                                    </li>
                                                    <li><a href=\"index.html\">Other Pages 2</a>
                                                        <ul>
-                                                           <li><a href=\"contact.html\">Contact</a></li>
+                                                           <li><a href=\"{{ path('r_add') }}\">Contact</a></li>
                                                            <li><a href=\"about-us.html\">About Us</a></li>
                                                            <li><a href=\"faq.html\">FAQ</a></li>
                                                            <li><a href=\"404.html\">404 Error</a></li>
@@ -1563,7 +1569,7 @@ class __TwigTemplate_7cc31c760fa71c3598c5e97dad16dea1fa7a1da4058af3fab937c31af71
                                                </ul>
                                            </li>
                                            <li><a href=\"about-us.html\">About Us</a></li>
-                                           <li><a href=\"contact.html\">Contact</a></li>
+                                           <li><a href=\"{{ path('r_add') }}\">Contact</a></li>
                                            <li><a href=\"shop-left-sidebar.html\">Smartwatch</a></li>
                                            <li><a href=\"shop-left-sidebar.html\">Accessories</a></li>
                                        </ul>
