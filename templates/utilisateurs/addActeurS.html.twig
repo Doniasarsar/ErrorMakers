@@ -1,0 +1,82 @@
+{% extends "baseFront.html.twig" %}
+{% block title %}<title>ProTECH | Register</title> {% endblock %}
+{% block body %}
+                <!-- Begin Mobile Menu Area -->
+                <div class="mobile-menu-area d-lg-none d-xl-none col-12">
+                    <div class="container"> 
+                        <div class="row">
+                            <div class="mobile-menu">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile Menu Area End Here -->
+            </header>
+            <!-- Header Area End Here -->
+            <!-- Begin Li's Breadcrumb Area -->
+            <div class="breadcrumb-area">
+                <div class="container">
+                    <div class="breadcrumb-content">
+                        <ul>
+                            <li><a href="{{path('front')}}">Home</a></li>
+                            <li class="active">Register</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Li's Breadcrumb Area End Here -->
+            <!-- Begin Login Content Area -->
+            <div class="page-section mb-60">
+                <div class="container">
+                    <div class="row">         
+                       
+                          
+                                <div class="login-form">
+                                    <h4 class="login-title">Register</h4>
+                                    {{ form_start(ActeurSForm,{'attr': {'novalidate': 'novalidate'}} ) }}
+                                    <div class="row">
+                                        <div class="col-md-6 col-12 mb-20">
+                                           
+                                          <td>{{ form_label(ActeurSForm.Prenom,"First Name") }}</td>
+                                          <td>{{ form_widget(ActeurSForm.Prenom,{'attr':{"class":"mb-0"}}) }}</td>
+                                        </div>
+                                        <div class="col-md-6 col-12 mb-20">
+                                          
+                                           {{ form_label(ActeurSForm.Nom,"Last Name") }}
+                                           {{ form_widget(ActeurSForm.Nom,{'attr':{"class":"mb-0"}}) }}
+                                        </div>
+                                        <div class="col-md-6 mb-20">
+                                            {{ form_label(ActeurSForm.Telephone,"Telephone") }}
+                                            {{ form_widget(ActeurSForm.Telephone,{'attr':{"class":"mb-0"}}) }}
+                                           
+                                         </div>
+                                        <div class="col-md-6 mb-20">
+                                            {{ form_label(ActeurSForm.Email,"Email Adress") }}
+                                            {{ form_widget(ActeurSForm.Email,{'attr':{"class":"mb-0"}}) }}
+                                        </div>
+                                        <div class="col-md-6 mb-20">
+                                           {{ form_label(ActeurSForm.Password,"Password") }}
+                                           {{ form_widget(ActeurSForm.Password,{'attr':{"class":"mb-0"}}) }}
+                                        
+                                        </div>
+                                      
+                                        <div class="col-md-12 mb-20">
+                                            {{ form_label(ActeurSForm.Boutique,"Boutique") }}
+                                            {{ form_widget(ActeurSForm.Boutique,{'attr':{"class":"mb-0"}}) }}
+                                            {{ form_errors(ActeurSForm.Boutique,{'attr':{"class":"mb-0"}}) }}
+                                         </div>
+                                       
+                                         
+                                        <div class="col-12">
+                                            {{ form_row(ActeurSForm.Register,{'attr':{ "label":"Register" ,"class":"register-button mt-0"}}) }}
+                                        </div>
+                                        {{ form_end(ActeurSForm) }}
+                                    </div>
+                                </div>
+                        
+                        </div>
+                  
+                </div>
+            </div>
+            <!-- Login Content Area End Here -->
+         {% endblock %}

@@ -171,6 +171,6 @@ class __TwigTemplate_34b7b18d0be8dbc38d6ee541c6b33152dfac8d614da3f39a6e35944f7ce
         {%- endfor -%}
     </pre>
 {% endif %}
-", "@Doctrine/Collector/explain.html.twig", "/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
+", "@Doctrine/Collector/explain.html.twig", "/Users/skanderzouaoui/Documents/ProTECH/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
     }
 }

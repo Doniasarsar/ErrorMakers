@@ -102,6 +102,6 @@ class __TwigTemplate_ace824b6d5d103f4e6715c099eb686f903d2dfc2a5bc50e5eaf13886b6e
     {% if link|default(false) %}</a>{% endif %}
         <div class=\"sf-toolbar-info\">{{ text|default('') }}</div>
 </div>
-", "@WebProfiler/Profiler/toolbar_item.html.twig", "/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/toolbar_item.html.twig");
+", "@WebProfiler/Profiler/toolbar_item.html.twig", "/Users/skanderzouaoui/Documents/ProTECH/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/toolbar_item.html.twig");
     }
 }

@@ -482,6 +482,6 @@ class __TwigTemplate_f1cdb02627a026b93fc90f7bbbf8dd531bbda9452bb9cd075f283903eae
         {% endfor %}
     </table>
 {% endmacro %}
-", "@WebProfiler/Collector/events.html.twig", "/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/web-profiler-bundle/Resources/views/Collector/events.html.twig");
+", "@WebProfiler/Collector/events.html.twig", "/Users/skanderzouaoui/Documents/ProTECH/vendor/symfony/web-profiler-bundle/Resources/views/Collector/events.html.twig");
     }
 }

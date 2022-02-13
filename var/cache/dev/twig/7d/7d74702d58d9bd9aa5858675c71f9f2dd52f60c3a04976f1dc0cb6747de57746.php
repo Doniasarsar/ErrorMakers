@@ -1024,6 +1024,6 @@ class __TwigTemplate_d8bec2988c7f807f716a31a72a97dd142431a5609538a728bf3a73b1092
 <script src=\"{{asset('dist/js/pages/dashboard.js')}}\"></script>
 {% endblock %}
 
-", "admin/index.html.twig", "/Users/skanderzouaoui/Documents/ErrorMakers-3A45/templates/admin/index.html.twig");
+", "admin/index.html.twig", "/Users/skanderzouaoui/Documents/ProTECH/templates/admin/index.html.twig");
     }
 }

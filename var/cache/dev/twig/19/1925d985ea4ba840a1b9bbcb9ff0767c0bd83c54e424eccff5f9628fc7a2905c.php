@@ -83,6 +83,6 @@ class __TwigTemplate_ea3e408ecf27e4a63fe346608c8441eefebc92835ea4b642bfaf84f411d
 <?xml version=\"1.0\" encoding=\"{{ _charset }}\" ?>
 
 <error code=\"{{ status_code }}\" message=\"{{ status_text }}\" />
-", "@Twig/Exception/error.xml.twig", "/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/twig-bundle/Resources/views/Exception/error.xml.twig");
+", "@Twig/Exception/error.xml.twig", "/Users/skanderzouaoui/Documents/ProTECH/vendor/symfony/twig-bundle/Resources/views/Exception/error.xml.twig");
     }
 }

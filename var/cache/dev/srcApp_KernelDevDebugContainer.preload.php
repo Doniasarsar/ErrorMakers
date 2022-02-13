@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).'/vendor/autoload.php';
-require __DIR__.'/ContainerOtjEi3x/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/Container9xs8G4C/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -35,6 +35,12 @@ $classes[] = 'Symfony\Component\HttpFoundation\RequestMatcher';
 $classes[] = 'Symfony\Component\DependencyInjection\ServiceLocator';
 $classes[] = 'App\Controller\AdminController';
 $classes[] = 'App\Controller\FrontController';
+$classes[] = 'App\Controller\UtilisateursController';
+$classes[] = 'App\Form\ActeurSType';
+$classes[] = 'App\Form\UtilisateursType';
+$classes[] = 'App\Repository\BoutiquesRepository';
+$classes[] = 'App\Repository\LivraisonsRepository';
+$classes[] = 'App\Repository\UtilisateursRepository';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Dbal\ManagerRegistryAwareConnectionProvider';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Registry';

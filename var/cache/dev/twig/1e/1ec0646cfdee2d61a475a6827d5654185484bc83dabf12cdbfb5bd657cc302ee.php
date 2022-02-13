@@ -25,6 +25,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
         $this->source = $this->getSourceContext();
 
         $this->blocks = [
+            'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
         ];
     }
@@ -32,7 +33,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
     protected function doGetParent(array $context)
     {
         // line 1
-        return "header-footer.html.twig";
+        return "baseFront.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -44,7 +45,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "front/index.html.twig"));
 
-        $this->parent = $this->loadTemplate("header-footer.html.twig", "front/index.html.twig", 1);
+        $this->parent = $this->loadTemplate("baseFront.html.twig", "front/index.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -55,6 +56,25 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
     }
 
     // line 2
+    public function block_title($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        echo "<title>ProTECH|Home</title>";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 3
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -64,7 +84,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 3
+        // line 4
         echo "    <body>
     
             <!-- Begin Slider With Banner Area -->
@@ -123,7 +143,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                             <div class=\"li-banner\">
                                 <a href=\"#\">
                                     <img src=\"";
-        // line 60
+        // line 61
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/banner/1_1.jpg"), "html", null, true);
         echo "\" alt=\"\">
                                 </a>
@@ -131,7 +151,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                             <div class=\"li-banner mt-15 mt-md-30 mt-xs-25 mb-xs-5\">
                                 <a href=\"#\">
                                     <img src=\"";
-        // line 65
+        // line 66
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/banner/1_2.jpg"), "html", null, true);
         echo "\" alt=\"\">
                                 </a>
@@ -181,7 +201,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 112
+        // line 113
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/1.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -225,7 +245,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 153
+        // line 154
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/2.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -271,7 +291,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 196
+        // line 197
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/3.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -315,7 +335,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 237
+        // line 238
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/4.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -361,7 +381,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 280
+        // line 281
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/5.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -405,7 +425,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 321
+        // line 322
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/6.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -457,7 +477,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 370
+        // line 371
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/12.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -501,7 +521,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 411
+        // line 412
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/11.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -547,7 +567,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 454
+        // line 455
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/10.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -591,7 +611,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 495
+        // line 496
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/9.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -637,7 +657,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 538
+        // line 539
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/8.jp"), "html", null, true);
         echo "g\" alt=\"Li's Product Image\">
                                                 </a>
@@ -681,7 +701,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 579
+        // line 580
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/7.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -733,7 +753,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 628
+        // line 629
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/3.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -777,7 +797,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 669
+        // line 670
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/5.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -823,7 +843,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 712
+        // line 713
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/7.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -867,7 +887,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 753
+        // line 754
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/9.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -913,7 +933,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 796
+        // line 797
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/11.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -957,7 +977,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 837
+        // line 838
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/12.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -1013,7 +1033,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                             <div class=\"single-banner pb-sm-30 pb-xs-30\">
                                 <a href=\"#\">
                                     <img src=\"";
-        // line 890
+        // line 891
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/banner/2_3.jpg"), "html", null, true);
         echo "\" alt=\"Li's Static Banner\">
                                 </a>
@@ -1025,7 +1045,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                             <div class=\"single-banner\">
                                 <a href=\"#\">
                                     <img src=\"";
-        // line 899
+        // line 900
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/banner/2_4.jpg"), "html", null, true);
         echo "\" alt=\"Li's Static Banner\">
                                 </a>
@@ -1060,7 +1080,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 931
+        // line 932
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/1.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -1104,7 +1124,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 972
+        // line 973
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/2.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -1150,7 +1170,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 1015
+        // line 1016
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/3.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -1194,7 +1214,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 1056
+        // line 1057
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/4.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -1240,7 +1260,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 1099
+        // line 1100
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/5.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -1284,7 +1304,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 1140
+        // line 1141
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/6.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -1356,7 +1376,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 1209
+        // line 1210
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/3.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -1400,7 +1420,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 1250
+        // line 1251
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/5.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -1446,7 +1466,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 1293
+        // line 1294
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/7.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -1490,7 +1510,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 1334
+        // line 1335
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/9.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -1536,7 +1556,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 1377
+        // line 1378
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/11.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -1580,7 +1600,7 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 1418
+        // line 1419
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/11.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -1991,12 +2011,13 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
 
     public function getDebugInfo()
     {
-        return array (  1584 => 1418,  1540 => 1377,  1494 => 1334,  1450 => 1293,  1404 => 1250,  1360 => 1209,  1288 => 1140,  1244 => 1099,  1198 => 1056,  1154 => 1015,  1108 => 972,  1064 => 931,  1029 => 899,  1017 => 890,  961 => 837,  917 => 796,  871 => 753,  827 => 712,  781 => 669,  737 => 628,  685 => 579,  641 => 538,  595 => 495,  551 => 454,  505 => 411,  461 => 370,  409 => 321,  365 => 280,  319 => 237,  275 => 196,  229 => 153,  185 => 112,  135 => 65,  127 => 60,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  1604 => 1419,  1560 => 1378,  1514 => 1335,  1470 => 1294,  1424 => 1251,  1380 => 1210,  1308 => 1141,  1264 => 1100,  1218 => 1057,  1174 => 1016,  1128 => 973,  1084 => 932,  1049 => 900,  1037 => 891,  981 => 838,  937 => 797,  891 => 754,  847 => 713,  801 => 670,  757 => 629,  705 => 580,  661 => 539,  615 => 496,  571 => 455,  525 => 412,  481 => 371,  429 => 322,  385 => 281,  339 => 238,  295 => 197,  249 => 154,  205 => 113,  155 => 66,  147 => 61,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends \"header-footer.html.twig\" %}
+        return new Source("{% extends \"baseFront.html.twig\" %}
+{% block title %}<title>ProTECH|Home</title>{% endblock %}
     {% block body %}
     <body>
     
@@ -3801,6 +3822,6 @@ class __TwigTemplate_8600d200b060fe3927f27dddb2e1cfb12faff1a257d6d35ad625ef585c4
             </div>
             <!-- Group Featured Product Area End Here -->
            <!-- jQuery-V1.12.4 -->
-{% endblock %}", "front/index.html.twig", "/Users/skanderzouaoui/Documents/ErrorMakers-3A45/templates/front/index.html.twig");
+{% endblock %}", "front/index.html.twig", "/Users/skanderzouaoui/Documents/ProTECH/templates/front/index.html.twig");
     }
 }

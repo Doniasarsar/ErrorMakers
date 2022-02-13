@@ -471,6 +471,6 @@ class __TwigTemplate_1909b9945fe404688ce2b9a30c27948ce0a64f33be23eacd0c343fefe3b
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/twig.html.twig", "/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/web-profiler-bundle/Resources/views/Collector/twig.html.twig");
+", "@WebProfiler/Collector/twig.html.twig", "/Users/skanderzouaoui/Documents/ProTECH/vendor/symfony/web-profiler-bundle/Resources/views/Collector/twig.html.twig");
     }
 }

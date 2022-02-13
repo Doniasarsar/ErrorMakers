@@ -174,6 +174,6 @@ class __TwigTemplate_df148000e55790d45a8051b6530a2faf9b268732c730c944c7e2df3b5b1
         {% endif %}
     </div>
 {% endblock %}
-", "@WebProfiler/Profiler/open.html.twig", "/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/open.html.twig");
+", "@WebProfiler/Profiler/open.html.twig", "/Users/skanderzouaoui/Documents/ProTECH/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/open.html.twig");
     }
 }

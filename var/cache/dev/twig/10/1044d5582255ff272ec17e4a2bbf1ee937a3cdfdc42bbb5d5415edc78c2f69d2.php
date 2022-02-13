@@ -281,6 +281,6 @@ class __TwigTemplate_3a5e0ec55570f5bd8e1cb63f1cdd689a211d858a0f3ec5cbb34b9e062e3
                 </div>
             </div>
             <!-- Login Content Area End Here -->
-         {% endblock %}", "front/login-register.html.twig", "/Users/skanderzouaoui/Documents/ErrorMakers-3A45/templates/front/login-register.html.twig");
+         {% endblock %}", "front/login-register.html.twig", "/Users/skanderzouaoui/Documents/ProTECH/templates/front/login-register.html.twig");
     }
 }
