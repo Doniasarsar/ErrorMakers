@@ -104,7 +104,7 @@ class __TwigTemplate_471f9c68e9dd8483fd9820ac12b4d67a567b226756eca7e1aa382a7ea3d
                         <ul>
                             <li><a href=\"";
         // line 21
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("front");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\">Home</a></li>
                             <li class=\"active\">Register</li>
                            </ul>
@@ -246,7 +246,7 @@ class __TwigTemplate_471f9c68e9dd8483fd9820ac12b4d67a567b226756eca7e1aa382a7ea3d
                 <div class=\"container\">
                     <div class=\"breadcrumb-content\">
                         <ul>
-                            <li><a href=\"{{path('front')}}\">Home</a></li>
+                            <li><a href=\"{{path('home')}}\">Home</a></li>
                             <li class=\"active\">Register</li>
                            </ul>
                     </div>
@@ -299,6 +299,6 @@ class __TwigTemplate_471f9c68e9dd8483fd9820ac12b4d67a567b226756eca7e1aa382a7ea3d
                 </div>
             </div>
             <!-- Login Content Area End Here -->
-         {% endblock %}", "utilisateurs/addUser.html.twig", "/Users/skanderzouaoui/Documents/ProTECH/templates/utilisateurs/addUser.html.twig");
+         {% endblock %}", "utilisateurs/addUser.html.twig", "/Users/skanderzouaoui/Documents/ErrorMakers-3A45/templates/utilisateurs/addUser.html.twig");
     }
 }

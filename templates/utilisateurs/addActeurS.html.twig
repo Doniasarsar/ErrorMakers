@@ -18,7 +18,7 @@
                 <div class="container">
                     <div class="breadcrumb-content">
                         <ul>
-                            <li><a href="{{path('front')}}">Home</a></li>
+                            <li><a href="{{path('home')}}">Home</a></li>
                             <li class="active">Register</li>
                         </ul>
                     </div>
@@ -50,7 +50,7 @@
                                             {{ form_widget(ActeurSForm.Telephone,{'attr':{"class":"mb-0"}}) }}
                                            
                                          </div>
-                                        <div class="col-md-6 mb-20">
+                                        <div class="col-md-12 mb-20">
                                             {{ form_label(ActeurSForm.Email,"Email Adress") }}
                                             {{ form_widget(ActeurSForm.Email,{'attr':{"class":"mb-0"}}) }}
                                         </div>
@@ -60,10 +60,15 @@
                                         
                                         </div>
                                       
-                                        <div class="col-md-12 mb-20">
+                                        <div class="col-md-6 mb-20">
                                             {{ form_label(ActeurSForm.Boutique,"Boutique") }}
                                             {{ form_widget(ActeurSForm.Boutique,{'attr':{"class":"mb-0"}}) }}
                                             {{ form_errors(ActeurSForm.Boutique,{'attr':{"class":"mb-0"}}) }}
+                                         </div>
+                                         <div class="col-md-6 mb-20">
+                                            {{ form_label(ActeurSForm.Role,"Rôles") }}
+                                            {{ form_widget(ActeurSForm.Role,{'attr':{"class":"mb-0"}}) }}
+                                            {{ form_errors(ActeurSForm.Role,{'attr':{"class":"mb-0"}}) }}
                                          </div>
                                        
                                          

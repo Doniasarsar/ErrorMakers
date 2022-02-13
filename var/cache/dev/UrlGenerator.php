@@ -17,7 +17,7 @@ return [
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     'dashboard' => [[], ['_controller' => 'App\\Controller\\AdminController::index'], [], [['text', '/dashboard']], [], []],
     'u_list' => [[], ['_controller' => 'App\\Controller\\AdminController::afficher'], [], [['text', '/dashboard/listU']], [], []],
-    'front' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/front']], [], []],
+    'home' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/home']], [], []],
     'utilisateurs' => [[], ['_controller' => 'App\\Controller\\UtilisateursController::index'], [], [['text', '/utilisateurs']], [], []],
     'userAdd' => [[], ['_controller' => 'App\\Controller\\UtilisateursController::AddUser'], [], [['text', '/utilisateurs/add']], [], []],
     'acteurSAdd' => [[], ['_controller' => 'App\\Controller\\UtilisateursController::AddActeurS'], [], [['text', '/utilisateurs/addActeur']], [], []],

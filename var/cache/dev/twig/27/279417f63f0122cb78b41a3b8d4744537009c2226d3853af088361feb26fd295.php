@@ -104,7 +104,7 @@ class __TwigTemplate_f3beed83515dc4a40167e62746a892b959fb3bc5bab1f709acf9d05be8f
                         <ul>
                             <li><a href=\"";
         // line 21
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("front");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\">Home</a></li>
                             <li class=\"active\">Register</li>
                         </ul>
@@ -158,7 +158,7 @@ class __TwigTemplate_f3beed83515dc4a40167e62746a892b959fb3bc5bab1f709acf9d05be8f
         echo "
                                            
                                          </div>
-                                        <div class=\"col-md-6 mb-20\">
+                                        <div class=\"col-md-12 mb-20\">
                                             ";
         // line 54
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurSForm"]) || array_key_exists("ActeurSForm", $context) ? $context["ActeurSForm"] : (function () { throw new RuntimeError('Variable "ActeurSForm" does not exist.', 54, $this->source); })()), "Email", [], "any", false, false, false, 54), 'label', ["label" => "Email Adress"]);
@@ -180,7 +180,7 @@ class __TwigTemplate_f3beed83515dc4a40167e62746a892b959fb3bc5bab1f709acf9d05be8f
                                         
                                         </div>
                                       
-                                        <div class=\"col-md-12 mb-20\">
+                                        <div class=\"col-md-6 mb-20\">
                                             ";
         // line 64
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurSForm"]) || array_key_exists("ActeurSForm", $context) ? $context["ActeurSForm"] : (function () { throw new RuntimeError('Variable "ActeurSForm" does not exist.', 64, $this->source); })()), "Boutique", [], "any", false, false, false, 64), 'label', ["label" => "Boutique"]);
@@ -194,17 +194,31 @@ class __TwigTemplate_f3beed83515dc4a40167e62746a892b959fb3bc5bab1f709acf9d05be8f
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurSForm"]) || array_key_exists("ActeurSForm", $context) ? $context["ActeurSForm"] : (function () { throw new RuntimeError('Variable "ActeurSForm" does not exist.', 66, $this->source); })()), "Boutique", [], "any", false, false, false, 66), 'errors', ["attr" => ["class" => "mb-0"]]);
         echo "
                                          </div>
+                                         <div class=\"col-md-6 mb-20\">
+                                            ";
+        // line 69
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurSForm"]) || array_key_exists("ActeurSForm", $context) ? $context["ActeurSForm"] : (function () { throw new RuntimeError('Variable "ActeurSForm" does not exist.', 69, $this->source); })()), "Role", [], "any", false, false, false, 69), 'label', ["label" => "Rôles"]);
+        echo "
+                                            ";
+        // line 70
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurSForm"]) || array_key_exists("ActeurSForm", $context) ? $context["ActeurSForm"] : (function () { throw new RuntimeError('Variable "ActeurSForm" does not exist.', 70, $this->source); })()), "Role", [], "any", false, false, false, 70), 'widget', ["attr" => ["class" => "mb-0"]]);
+        echo "
+                                            ";
+        // line 71
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurSForm"]) || array_key_exists("ActeurSForm", $context) ? $context["ActeurSForm"] : (function () { throw new RuntimeError('Variable "ActeurSForm" does not exist.', 71, $this->source); })()), "Role", [], "any", false, false, false, 71), 'errors', ["attr" => ["class" => "mb-0"]]);
+        echo "
+                                         </div>
                                        
                                          
                                         <div class=\"col-12\">
                                             ";
-        // line 71
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurSForm"]) || array_key_exists("ActeurSForm", $context) ? $context["ActeurSForm"] : (function () { throw new RuntimeError('Variable "ActeurSForm" does not exist.', 71, $this->source); })()), "Register", [], "any", false, false, false, 71), 'row', ["attr" => ["label" => "Register", "class" => "register-button mt-0"]]);
+        // line 76
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurSForm"]) || array_key_exists("ActeurSForm", $context) ? $context["ActeurSForm"] : (function () { throw new RuntimeError('Variable "ActeurSForm" does not exist.', 76, $this->source); })()), "Register", [], "any", false, false, false, 76), 'row', ["attr" => ["label" => "Register", "class" => "register-button mt-0"]]);
         echo "
                                         </div>
                                         ";
-        // line 73
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["ActeurSForm"]) || array_key_exists("ActeurSForm", $context) ? $context["ActeurSForm"] : (function () { throw new RuntimeError('Variable "ActeurSForm" does not exist.', 73, $this->source); })()), 'form_end');
+        // line 78
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["ActeurSForm"]) || array_key_exists("ActeurSForm", $context) ? $context["ActeurSForm"] : (function () { throw new RuntimeError('Variable "ActeurSForm" does not exist.', 78, $this->source); })()), 'form_end');
         echo "
                                     </div>
                                 </div>
@@ -235,7 +249,7 @@ class __TwigTemplate_f3beed83515dc4a40167e62746a892b959fb3bc5bab1f709acf9d05be8f
 
     public function getDebugInfo()
     {
-        return array (  207 => 73,  202 => 71,  194 => 66,  190 => 65,  186 => 64,  178 => 59,  174 => 58,  168 => 55,  164 => 54,  157 => 50,  153 => 49,  147 => 46,  143 => 45,  136 => 41,  132 => 40,  125 => 36,  107 => 21,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
+        return array (  221 => 78,  216 => 76,  208 => 71,  204 => 70,  200 => 69,  194 => 66,  190 => 65,  186 => 64,  178 => 59,  174 => 58,  168 => 55,  164 => 54,  157 => 50,  153 => 49,  147 => 46,  143 => 45,  136 => 41,  132 => 40,  125 => 36,  107 => 21,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -260,7 +274,7 @@ class __TwigTemplate_f3beed83515dc4a40167e62746a892b959fb3bc5bab1f709acf9d05be8f
                 <div class=\"container\">
                     <div class=\"breadcrumb-content\">
                         <ul>
-                            <li><a href=\"{{path('front')}}\">Home</a></li>
+                            <li><a href=\"{{path('home')}}\">Home</a></li>
                             <li class=\"active\">Register</li>
                         </ul>
                     </div>
@@ -292,7 +306,7 @@ class __TwigTemplate_f3beed83515dc4a40167e62746a892b959fb3bc5bab1f709acf9d05be8f
                                             {{ form_widget(ActeurSForm.Telephone,{'attr':{\"class\":\"mb-0\"}}) }}
                                            
                                          </div>
-                                        <div class=\"col-md-6 mb-20\">
+                                        <div class=\"col-md-12 mb-20\">
                                             {{ form_label(ActeurSForm.Email,\"Email Adress\") }}
                                             {{ form_widget(ActeurSForm.Email,{'attr':{\"class\":\"mb-0\"}}) }}
                                         </div>
@@ -302,10 +316,15 @@ class __TwigTemplate_f3beed83515dc4a40167e62746a892b959fb3bc5bab1f709acf9d05be8f
                                         
                                         </div>
                                       
-                                        <div class=\"col-md-12 mb-20\">
+                                        <div class=\"col-md-6 mb-20\">
                                             {{ form_label(ActeurSForm.Boutique,\"Boutique\") }}
                                             {{ form_widget(ActeurSForm.Boutique,{'attr':{\"class\":\"mb-0\"}}) }}
                                             {{ form_errors(ActeurSForm.Boutique,{'attr':{\"class\":\"mb-0\"}}) }}
+                                         </div>
+                                         <div class=\"col-md-6 mb-20\">
+                                            {{ form_label(ActeurSForm.Role,\"Rôles\") }}
+                                            {{ form_widget(ActeurSForm.Role,{'attr':{\"class\":\"mb-0\"}}) }}
+                                            {{ form_errors(ActeurSForm.Role,{'attr':{\"class\":\"mb-0\"}}) }}
                                          </div>
                                        
                                          
@@ -321,6 +340,6 @@ class __TwigTemplate_f3beed83515dc4a40167e62746a892b959fb3bc5bab1f709acf9d05be8f
                 </div>
             </div>
             <!-- Login Content Area End Here -->
-         {% endblock %}", "utilisateurs/addActeurS.html.twig", "/Users/skanderzouaoui/Documents/ProTECH/templates/utilisateurs/addActeurS.html.twig");
+         {% endblock %}", "utilisateurs/addActeurS.html.twig", "/Users/skanderzouaoui/Documents/ErrorMakers-3A45/templates/utilisateurs/addActeurS.html.twig");
     }
 }
