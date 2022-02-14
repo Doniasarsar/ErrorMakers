@@ -16,9 +16,12 @@ return [
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     'dashboard' => [[], ['_controller' => 'App\\Controller\\AdminController::index'], [], [['text', '/dashboard']], [], []],
-    'u_list' => [[], ['_controller' => 'App\\Controller\\AdminController::afficher'], [], [['text', '/dashboard/listU']], [], []],
+    'userlist' => [[], ['_controller' => 'App\\Controller\\AdminController::afficher'], [], [['text', '/dashboard/listU']], [], []],
+    'userdelete' => [['id'], ['_controller' => 'App\\Controller\\AdminController::Delete'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/dashboard/listU/delete']], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/home']], [], []],
     'utilisateurs' => [[], ['_controller' => 'App\\Controller\\UtilisateursController::index'], [], [['text', '/utilisateurs']], [], []],
     'userAdd' => [[], ['_controller' => 'App\\Controller\\UtilisateursController::AddUser'], [], [['text', '/utilisateurs/add']], [], []],
     'acteurSAdd' => [[], ['_controller' => 'App\\Controller\\UtilisateursController::AddActeurS'], [], [['text', '/utilisateurs/addActeur']], [], []],
+    'userupdate' => [['id'], ['_controller' => 'App\\Controller\\UtilisateursController::Update'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/utilisateurs/update']], [], []],
+    'activation' => [['token'], ['_controller' => 'App\\Controller\\UtilisateursController::activation'], [], [['variable', '/', '[^/]++', 'token'], ['text', '/activation']], [], []],
 ];

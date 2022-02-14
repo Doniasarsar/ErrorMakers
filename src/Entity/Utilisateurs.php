@@ -2,11 +2,12 @@
 
 namespace App\Entity;
 
-use App\Repository\UtilisateursRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\UtilisateursRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * @ORM\Entity(repositoryClass=UtilisateursRepository::class)
@@ -70,6 +71,11 @@ class Utilisateurs
      * @ORM\Column(type="json")
      */
     private $Role = [];
+
+    /**
+     * @ORM\Column(type="string", length=50, nullable=true)
+     */
+    private $Token;
 
     
 
@@ -186,7 +192,6 @@ class Utilisateurs
     }
 
   
-
     
     public function getRole(): array
     {
@@ -204,5 +209,16 @@ class Utilisateurs
         return $this;
     }
 
+    public function getToken(): ?string
+    {
+        return $this->Token;
+    }
+
+    public function setToken(?string $Token): self
+    {
+        $this->Token = $Token;
+
+        return $this;
+    }
    
 }

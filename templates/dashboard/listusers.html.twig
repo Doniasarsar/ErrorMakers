@@ -1,0 +1,80 @@
+ {% extends "baseBack.html.twig" %} 
+
+
+ {% block body %}
+ <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">Gestion Utilisateurs</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="{{path('dashboard')}}">Home</a></li>
+            <li class="breadcrumb-item active">Gestion Utilisateurs</li>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+
+
+    <table id="example1" class="table table-bordered table-striped">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>NOM</th>
+        <th>PRENOM</th>
+        <th>EMAIL</th>
+        <th>TELEPHONE</th>
+        <th>ROLE</th>
+        <th colspan="2">OPTION</th>
+       
+      </tr>
+      </thead>
+      <tbody>
+{% for user in users %}
+<tr>
+ 
+<td>{{user.id}}</td>
+<td>{{user.Nom}}</td>
+<td>{{user.Prenom}}</td>
+<td>{{user.Email}}</td>
+<td>{{user.Telephone}}</td>
+<td>{% for role in user.Role %}
+{% if role == "ROLE_USER" %} 
+      Utilisateur
+{% elseif role == "ROLE_ADMIN" %}
+      Administrateur
+{% elseif role == "ROLE_COMM" %}
+      Commercant
+{% elseif role == "ROLE_LIV" %}
+      Livreur
+
+{% endif %}
+{% endfor %}</td>
+<td><a class="btn btn-info" href="{{path("userupdate",{'id':user.id}) }}">Update</a>
+<td><a class="btn btn-danger" href="{{path("userdelete",{'id':user.id}) }}">Delete</a>
+
+</tr>
+{% else %}
+<td colspan="6">Il n'y a aucun utilisateur inscrit!</td>
+
+</tbody>
+{% endfor %}
+</table>               
+    
+
+</div>
+<!-- /.content-wrapper -->
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+  <!-- Control sidebar content goes here -->
+</aside>
+<!-- /.control-sidebar -->
+
+{% endblock %}
