@@ -15,6 +15,9 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
-    'admin' => [[], ['_controller' => 'App\\Controller\\AdminController::index'], [], [['text', '/admin']], [], []],
-    'front' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/front']], [], []],
+    'produit' => [[], ['_controller' => 'App\\Controller\\ProduitController::index'], [], [['text', '/produit']], [], []],
+    'r_list' => [[], ['_controller' => 'App\\Controller\\ProduitController::afficher'], [], [['text', '/produit/list']], [], []],
+    'r_add' => [[], ['_controller' => 'App\\Controller\\ProduitController::add'], [], [['text', '/produit/add']], [], []],
+    'update_produit' => [['id'], ['_controller' => 'App\\Controller\\ProduitController::update'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/produit/edit']], [], []],
+    'r_delete' => [['id'], ['_controller' => 'App\\Controller\\ProduitController::Supprimer'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/produit/delete']], [], []],
 ];
