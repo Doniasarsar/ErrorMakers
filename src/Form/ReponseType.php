@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Reponse;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,7 +14,7 @@ class ReponseType extends AbstractType
     {
         $builder
             ->add('object')
-            ->add('reponse')
+            ->add('reponse', TextareaType::class)
             ->add('idCommand')
             ->add('time')
             ->add('date')
