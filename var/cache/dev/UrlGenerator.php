@@ -15,6 +15,9 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
-    'admin' => [[], ['_controller' => 'App\\Controller\\AdminController::index'], [], [['text', '/admin']], [], []],
-    'front' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/front']], [], []],
+    'livraison_controlleur' => [[], ['_controller' => 'App\\Controller\\LivraisonControlleur::index'], [], [['text', '/livraison/controlleur']], [], []],
+    'r_list' => [[], ['_controller' => 'App\\Controller\\LivraisonControlleur::afficher'], [], [['text', '/livraison/list']], [], []],
+    'r_delete' => [['id'], ['_controller' => 'App\\Controller\\LivraisonControlleur::Supprimer'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/livraison/delete']], [], []],
+    'r_add' => [[], ['_controller' => 'App\\Controller\\LivraisonControlleur::Add'], [], [['text', '/livraison/add']], [], []],
+    'r_update' => [['id'], ['_controller' => 'App\\Controller\\LivraisonControlleur::Update'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/livraison/update']], [], []],
 ];

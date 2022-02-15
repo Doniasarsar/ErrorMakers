@@ -1,22 +1,22 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'dd3e0ee6f4920e6d0d4c0004064afca80bb4699b',
+        'reference' => NULL,
         'name' => '__root__',
         'dev' => true,
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'dd3e0ee6f4920e6d0d4c0004064afca80bb4699b',
+            'reference' => NULL,
             'dev_requirement' => false,
         ),
         'doctrine/annotations' => array(
@@ -74,12 +74,12 @@
             'dev_requirement' => false,
         ),
         'doctrine/doctrine-bundle' => array(
-            'pretty_version' => '2.5.5',
-            'version' => '2.5.5.0',
+            'pretty_version' => '2.5.6',
+            'version' => '2.5.6.0',
             'type' => 'symfony-bundle',
             'install_path' => __DIR__ . '/../doctrine/doctrine-bundle',
             'aliases' => array(),
-            'reference' => '5c086cbbe5327937dd6f90da075f7d421b0f28bc',
+            'reference' => 'f1423b2a640b6ac545b6e0c02575427a4dc1e9dc',
             'dev_requirement' => false,
         ),
         'doctrine/doctrine-migrations-bundle' => array(
@@ -504,12 +504,12 @@
             'dev_requirement' => true,
         ),
         'sebastian/global-state' => array(
-            'pretty_version' => '5.0.3',
-            'version' => '5.0.3.0',
+            'pretty_version' => '5.0.5',
+            'version' => '5.0.5.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../sebastian/global-state',
             'aliases' => array(),
-            'reference' => '23bd5951f7ff26f12d4e3242864df3e08dec4e49',
+            'reference' => '0ca8db5a5fc9c8646244e629625ac486fa286bf2',
             'dev_requirement' => true,
         ),
         'sebastian/lines-of-code' => array(
@@ -777,12 +777,12 @@
             'dev_requirement' => false,
         ),
         'symfony/flex' => array(
-            'pretty_version' => 'v1.18.3',
-            'version' => '1.18.3.0',
+            'pretty_version' => 'v1.18.4',
+            'version' => '1.18.4.0',
             'type' => 'composer-plugin',
             'install_path' => __DIR__ . '/../symfony/flex',
             'aliases' => array(),
-            'reference' => 'd40a6b176b70ea323af2b08507319d1c417520fd',
+            'reference' => '910a5c5ac35b58c9faddc992f56ad7a931d1e064',
             'dev_requirement' => false,
         ),
         'symfony/form' => array(
