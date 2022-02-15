@@ -18,6 +18,8 @@ return [
         '/reclamation' => [[['_route' => 'reclamation', '_controller' => 'App\\Controller\\ReclamationController::index'], null, null, null, false, false, null]],
         '/reclamation/add' => [[['_route' => 'r_add', '_controller' => 'App\\Controller\\ReclamationController::add'], null, null, null, false, false, null]],
         '/reclamation/list' => [[['_route' => 'r_list', '_controller' => 'App\\Controller\\ReclamationController::afficher'], null, null, null, false, false, null]],
+        '/reponse' => [[['_route' => 'reponse', '_controller' => 'App\\Controller\\ReponseController::index'], null, null, null, false, false, null]],
+        '/reponse/recList' => [[['_route' => 'list_reclamation', '_controller' => 'App\\Controller\\ReponseController::afficher'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -36,6 +38,7 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
+                .'|/reponse/add/([^/]++)(*:190)'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -45,8 +48,9 @@ return [
         116 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
-        159 => [
-            [['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null],
+        159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
+        190 => [
+            [['_route' => 'rep_add', '_controller' => 'App\\Controller\\ReponseController::addResponse'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

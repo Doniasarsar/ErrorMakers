@@ -20,4 +20,7 @@ return [
     'reclamation' => [[], ['_controller' => 'App\\Controller\\ReclamationController::index'], [], [['text', '/reclamation']], [], []],
     'r_add' => [[], ['_controller' => 'App\\Controller\\ReclamationController::add'], [], [['text', '/reclamation/add']], [], []],
     'r_list' => [[], ['_controller' => 'App\\Controller\\ReclamationController::afficher'], [], [['text', '/reclamation/list']], [], []],
+    'reponse' => [[], ['_controller' => 'App\\Controller\\ReponseController::index'], [], [['text', '/reponse']], [], []],
+    'list_reclamation' => [[], ['_controller' => 'App\\Controller\\ReponseController::afficher'], [], [['text', '/reponse/recList']], [], []],
+    'rep_add' => [['id'], ['_controller' => 'App\\Controller\\ReponseController::addResponse'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/reponse/add']], [], []],
 ];

@@ -85,58 +85,75 @@ class __TwigTemplate_8d3cbf7fdf7d9f300e2448d7a0c65297fe2ac111f0317525421b61b1ee6
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "    <div class=\"container align-content-center mt-50\">
+        echo "    <!-- Begin Li's Breadcrumb Area -->
+    <div class=\"breadcrumb-area\">
+        <div class=\"container\">
+            <div class=\"breadcrumb-content\">
+                <ul>
+                    <li><a href=\"index.html\">Home</a></li>
+                    <li class=\"active\">Reclamation List</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Li's Breadcrumb Area End Here -->
+    <div class=\"container align-content-center mt-50\">
     <h1 align=\"center\">Reclamations List</h1>
-    <div class=\"form-group\">
+    <div class=\"form-group mt-20\">
     <table class=\"table table-striped\">
         <tr>
             <th>ID</th>
             <th>ID Command</th>
             <th>Your Name</th>
             <th>Email</th>
+            <th>Reclamation Subject</th>
             <th>Message</th>
             <th>Reclamation Type</th>
             <th>Reclamation Date</th>
             <th>Reclamation Time</th>
         </tr>
         ";
-        // line 18
+        // line 31
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["tab"]) || array_key_exists("tab", $context) ? $context["tab"] : (function () { throw new RuntimeError('Variable "tab" does not exist.', 18, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["tab"]) || array_key_exists("tab", $context) ? $context["tab"] : (function () { throw new RuntimeError('Variable "tab" does not exist.', 31, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["r"]) {
-            // line 19
+            // line 32
             echo "            <tr>
                 <td>";
-            // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "id", [], "any", false, false, false, 20), "html", null, true);
+            // line 33
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "id", [], "any", false, false, false, 33), "html", null, true);
             echo "</td>
                 <td>";
-            // line 21
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "idCommande", [], "any", false, false, false, 21), "html", null, true);
+            // line 34
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "idCommande", [], "any", false, false, false, 34), "html", null, true);
             echo "</td>
                 <td>";
-            // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "name", [], "any", false, false, false, 22), "html", null, true);
+            // line 35
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "name", [], "any", false, false, false, 35), "html", null, true);
             echo "</td>
                 <td>";
-            // line 23
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "email", [], "any", false, false, false, 23), "html", null, true);
+            // line 36
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "email", [], "any", false, false, false, 36), "html", null, true);
             echo "</td>
                 <td>";
-            // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "message", [], "any", false, false, false, 24), "html", null, true);
+            // line 37
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "subject", [], "any", false, false, false, 37), "html", null, true);
             echo "</td>
                 <td>";
-            // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "type", [], "any", false, false, false, 25), "html", null, true);
+            // line 38
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "message", [], "any", false, false, false, 38), "html", null, true);
             echo "</td>
                 <td>";
-            // line 26
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "date", [], "any", false, false, false, 26), "d-m-Y"), "html", null, true);
+            // line 39
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "type", [], "any", false, false, false, 39), "html", null, true);
             echo "</td>
                 <td>";
-            // line 27
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "time", [], "any", false, false, false, 27), "H:i:s"), "html", null, true);
+            // line 40
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "date", [], "any", false, false, false, 40), "d-m-Y"), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 41
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "time", [], "any", false, false, false, 41), "H:i:s"), "html", null, true);
             echo "</td>
             </tr>
         ";
@@ -144,7 +161,7 @@ class __TwigTemplate_8d3cbf7fdf7d9f300e2448d7a0c65297fe2ac111f0317525421b61b1ee6
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['r'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 30
+        // line 44
         echo "    </table>
     </div>
     </div>
@@ -169,7 +186,7 @@ class __TwigTemplate_8d3cbf7fdf7d9f300e2448d7a0c65297fe2ac111f0317525421b61b1ee6
 
     public function getDebugInfo()
     {
-        return array (  148 => 30,  139 => 27,  135 => 26,  131 => 25,  127 => 24,  123 => 23,  119 => 22,  115 => 21,  111 => 20,  108 => 19,  104 => 18,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
+        return array (  165 => 44,  156 => 41,  152 => 40,  148 => 39,  144 => 38,  140 => 37,  136 => 36,  132 => 35,  128 => 34,  124 => 33,  121 => 32,  117 => 31,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -177,15 +194,28 @@ class __TwigTemplate_8d3cbf7fdf7d9f300e2448d7a0c65297fe2ac111f0317525421b61b1ee6
         return new Source("{% extends 'baseFront.twig'%}
 {% block title %}<title>Liste des Reclamation</title> {% endblock %}
 {% block body %}
+    <!-- Begin Li's Breadcrumb Area -->
+    <div class=\"breadcrumb-area\">
+        <div class=\"container\">
+            <div class=\"breadcrumb-content\">
+                <ul>
+                    <li><a href=\"index.html\">Home</a></li>
+                    <li class=\"active\">Reclamation List</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Li's Breadcrumb Area End Here -->
     <div class=\"container align-content-center mt-50\">
     <h1 align=\"center\">Reclamations List</h1>
-    <div class=\"form-group\">
+    <div class=\"form-group mt-20\">
     <table class=\"table table-striped\">
         <tr>
             <th>ID</th>
             <th>ID Command</th>
             <th>Your Name</th>
             <th>Email</th>
+            <th>Reclamation Subject</th>
             <th>Message</th>
             <th>Reclamation Type</th>
             <th>Reclamation Date</th>
@@ -197,6 +227,7 @@ class __TwigTemplate_8d3cbf7fdf7d9f300e2448d7a0c65297fe2ac111f0317525421b61b1ee6
                 <td>{{ r.idCommande }}</td>
                 <td>{{ r.name }}</td>
                 <td>{{ r.email }}</td>
+                <td>{{ r.subject}}</td>
                 <td>{{ r.message }}</td>
                 <td>{{ r.type }}</td>
                 <td>{{ r.date|date('d-m-Y') }}</td>

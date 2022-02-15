@@ -1,15 +1,28 @@
 {% extends 'baseFront.twig'%}
 {% block title %}<title>Liste des Reclamation</title> {% endblock %}
 {% block body %}
+    <!-- Begin Li's Breadcrumb Area -->
+    <div class="breadcrumb-area">
+        <div class="container">
+            <div class="breadcrumb-content">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Reclamation List</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Li's Breadcrumb Area End Here -->
     <div class="container align-content-center mt-50">
     <h1 align="center">Reclamations List</h1>
-    <div class="form-group">
+    <div class="form-group mt-20">
     <table class="table table-striped">
         <tr>
             <th>ID</th>
             <th>ID Command</th>
             <th>Your Name</th>
             <th>Email</th>
+            <th>Reclamation Subject</th>
             <th>Message</th>
             <th>Reclamation Type</th>
             <th>Reclamation Date</th>
@@ -21,6 +34,7 @@
                 <td>{{ r.idCommande }}</td>
                 <td>{{ r.name }}</td>
                 <td>{{ r.email }}</td>
+                <td>{{ r.subject}}</td>
                 <td>{{ r.message }}</td>
                 <td>{{ r.type }}</td>
                 <td>{{ r.date|date('d-m-Y') }}</td>

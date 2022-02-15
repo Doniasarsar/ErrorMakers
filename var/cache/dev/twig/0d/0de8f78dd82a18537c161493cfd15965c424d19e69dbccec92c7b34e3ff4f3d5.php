@@ -85,11 +85,20 @@ class __TwigTemplate_6acabd02c61ba0052bfc90dbaf097a2439d19ccb4ad0e7cd044673229c7
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "    <!-- Begin Contact Main Page Area -->
-    <div class=\"contact-main-page mt-60 mb-40 mb-md-40 mb-sm-40 mb-xs-40\">
-        <div class=\"container mb-60\">
-            <div id=\"google-map\"></div>
+        echo "    <!-- Begin Li's Breadcrumb Area -->
+    <div class=\"breadcrumb-area\">
+        <div class=\"container\">
+            <div class=\"breadcrumb-content\">
+                <ul>
+                    <li><a href=\"index.html\">Home</a></li>
+                    <li class=\"active\">Contact</li>
+                </ul>
+            </div>
         </div>
+    </div>
+    <!-- Li's Breadcrumb Area End Here -->
+    <!-- Begin Contact Main Page Area -->
+   
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-lg-5 offset-lg-1 col-md-12 order-1 order-lg-2\">
@@ -117,135 +126,168 @@ class __TwigTemplate_6acabd02c61ba0052bfc90dbaf097a2439d19ccb4ad0e7cd044673229c7
                         <h3 class=\"contact-page-title\">Tell Us Your Message</h3>
                         <div class=\"contact-form\">
                                 ";
-        // line 35
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 35, $this->source); })()), 'form_start', ["attr" => ["novalidate" => "novalidate"]]);
-        echo "
-                                <div class=\"form-group\">
-                                    ";
-        // line 37
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 37, $this->source); })()), "name", [], "any", false, false, false, 37), 'label', ["label" => "Your Name"]);
-        echo "
-                                    ";
-        // line 38
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 38, $this->source); })()), "name", [], "any", false, false, false, 38), 'widget', ["attr" => ["class" => "mb-0"]]);
-        echo "
-                                    ";
-        // line 39
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 39, $this->source); })()), "name", [], "any", false, false, false, 39), 'errors', ["attr" => ["class" => "mb-0"]]);
-        echo "
-                                </div>
-                                <div class=\"form-group\">
-                                    ";
-        // line 42
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 42, $this->source); })()), "email", [], "any", false, false, false, 42), 'label', ["label" => "Your Email"]);
-        echo "
-                                    ";
-        // line 43
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 43, $this->source); })()), "email", [], "any", false, false, false, 43), 'widget');
-        echo "
-                                    ";
         // line 44
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 44, $this->source); })()), "email", [], "any", false, false, false, 44), 'errors');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 44, $this->source); })()), 'form_start', ["attr" => ["novalidate" => "novalidate"]]);
         echo "
-                                </div>
-
-                                <div class=\"row\">
-                                    <div class=\"col-md-6\">
+                                <div class=\"form-group\">
+                                    <div class=\"row\">
+                                        ";
+        // line 47
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 47, $this->source); })()), "name", [], "any", false, false, false, 47), 'label', ["label" => "Your Name"]);
+        echo "
+                                        <span class=\"required\">*</span>
                                         ";
         // line 49
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 49, $this->source); })()), "date", [], "any", false, false, false, 49), 'label', ["label" => "Date"]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 49, $this->source); })()), "name", [], "any", false, false, false, 49), 'widget', ["attr" => ["class" => "mb-0"]]);
         echo "
                                         ";
         // line 50
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 50, $this->source); })()), "date", [], "any", false, false, false, 50), 'widget');
-        echo "
-                                        ";
-        // line 51
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 51, $this->source); })()), "date", [], "any", false, false, false, 51), 'errors');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 50, $this->source); })()), "name", [], "any", false, false, false, 50), 'errors', ["attr" => ["class" => "mb-0"]]);
         echo "
                                     </div>
-                                    <div class=\"col-md-6\">
-                                        ";
-        // line 54
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 54, $this->source); })()), "time", [], "any", false, false, false, 54), 'label', ["label" => "Time"]);
-        echo "
+                                </div>
+                                <div class=\"form-group\">
+                                    <div class=\"row\">
                                         ";
         // line 55
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 55, $this->source); })()), "time", [], "any", false, false, false, 55), 'widget');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 55, $this->source); })()), "email", [], "any", false, false, false, 55), 'label', ["label" => "Your Email"]);
+        echo "
+                                        <span class=\"required\">*</span>
+                                        ";
+        // line 57
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 57, $this->source); })()), "email", [], "any", false, false, false, 57), 'widget');
         echo "
                                         ";
-        // line 56
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 56, $this->source); })()), "time", [], "any", false, false, false, 56), 'errors');
+        // line 58
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 58, $this->source); })()), "email", [], "any", false, false, false, 58), 'errors');
         echo "
                                     </div>
+
                                 </div>
 
+                            
+
                                 <div class=\"form-group mt-4\">
-                                    ";
-        // line 61
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 61, $this->source); })()), "type", [], "any", false, false, false, 61), 'label', ["label" => "Reclamation Type"]);
-        echo "
-                                    ";
-        // line 62
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 62, $this->source); })()), "type", [], "any", false, false, false, 62), 'widget');
-        echo "
-                                    ";
-        // line 63
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 63, $this->source); })()), "type", [], "any", false, false, false, 63), 'errors');
-        echo "
-                                </div>
-                                <div class=\"form-group\">
-                                    ";
-        // line 66
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 66, $this->source); })()), "idCommande", [], "any", false, false, false, 66), 'label', ["label" => "Command ID"]);
-        echo "
+                                    <div class=\"row\"
                                     ";
         // line 67
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 67, $this->source); })()), "idCommande", [], "any", false, false, false, 67), 'widget');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 67, $this->source); })()), "type", [], "any", false, false, false, 67), 'label', ["label" => "Reclamation Type"]);
+        echo "
+                                    <span class=\"required\">*</span>
+                                    ";
+        // line 69
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 69, $this->source); })()), "type", [], "any", false, false, false, 69), 'widget');
         echo "
                                     ";
-        // line 68
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 68, $this->source); })()), "idCommande", [], "any", false, false, false, 68), 'errors');
+        // line 70
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 70, $this->source); })()), "type", [], "any", false, false, false, 70), 'errors');
         echo "
+                                </div>
+
                                 </div>
                                 <div class=\"form-group\">
-                                    ";
-        // line 71
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 71, $this->source); })()), "subject", [], "any", false, false, false, 71), 'label', ["label" => "Reclamation Subject"]);
-        echo "
-                                    ";
-        // line 72
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 72, $this->source); })()), "subject", [], "any", false, false, false, 72), 'widget');
-        echo "
-                                    ";
-        // line 73
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 73, $this->source); })()), "subject", [], "any", false, false, false, 73), 'errors');
-        echo "
-                                </div>
-                                <div class=\"form-group mb-30\">
+                                    <div class=\"row\"
                                     ";
         // line 76
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 76, $this->source); })()), "message", [], "any", false, false, false, 76), 'label', ["label" => "Your Message"]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 76, $this->source); })()), "idCommande", [], "any", false, false, false, 76), 'label', ["label" => "Command ID"]);
         echo "
-                                    ";
-        // line 77
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 77, $this->source); })()), "message", [], "any", false, false, false, 77), 'widget');
-        echo "
+                                    <span class=\"required\">*</span>
                                     ";
         // line 78
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 78, $this->source); })()), "message", [], "any", false, false, false, 78), 'errors');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 78, $this->source); })()), "idCommande", [], "any", false, false, false, 78), 'widget');
         echo "
+                                    ";
+        // line 79
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 79, $this->source); })()), "idCommande", [], "any", false, false, false, 79), 'errors');
+        echo "
+                                </div>
+
+                                </div>
+                                <div class=\"form-group\">
+                                    <div class=\"row\"
+                                    ";
+        // line 85
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 85, $this->source); })()), "subject", [], "any", false, false, false, 85), 'label', ["label" => "Reclamation Subject"]);
+        echo "
+                                    <span class=\"required\">*</span>
+                                    ";
+        // line 87
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 87, $this->source); })()), "subject", [], "any", false, false, false, 87), 'widget');
+        echo "
+                                    ";
+        // line 88
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 88, $this->source); })()), "subject", [], "any", false, false, false, 88), 'errors');
+        echo "
+                                    </div>
+
+                                </div>
+                                <div class=\"row\">
+                                    <div class=\"col-md-6\">
+                                        <div class=\"row\"
+                                        ";
+        // line 95
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 95, $this->source); })()), "date", [], "any", false, false, false, 95), 'label', ["label" => "Date"]);
+        echo "
+                                        <span class=\"required\">*</span>
+                                        ";
+        // line 97
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 97, $this->source); })()), "date", [], "any", false, false, false, 97), 'widget');
+        echo "
+                                        ";
+        // line 98
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 98, $this->source); })()), "date", [], "any", false, false, false, 98), 'errors');
+        echo "
+                                    </div>
+
+                                    </div>
+                                    <div class=\"col-md-6\">
+                                        <div class=\"row\"
+                                        ";
+        // line 104
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 104, $this->source); })()), "time", [], "any", false, false, false, 104), 'label', ["label" => "Time"]);
+        echo "
+                                        <span class=\"required\">*</span>
+                                        ";
+        // line 106
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 106, $this->source); })()), "time", [], "any", false, false, false, 106), 'widget');
+        echo "
+                                        ";
+        // line 107
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 107, $this->source); })()), "time", [], "any", false, false, false, 107), 'errors');
+        echo "
+                                    </div>
+
+                                    </div>
+                                </div>
+                                <div class=\"form-group mb-30\">
+                                    <div class=\"row\"
+                                    ";
+        // line 114
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 114, $this->source); })()), "message", [], "any", false, false, false, 114), 'label', ["label" => "Your Message"]);
+        echo "
+                                    <span class=\"required\">*</span>
+                                    ";
+        // line 116
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 116, $this->source); })()), "message", [], "any", false, false, false, 116), 'widget');
+        echo "
+                                    ";
+        // line 117
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 117, $this->source); })()), "message", [], "any", false, false, false, 117), 'errors');
+        echo "
+                                    </div>
+
                                 </div>
                                 <div class=\"form-group\">
                                     ";
-        // line 81
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 81, $this->source); })()), "Ajouter", [], "any", false, false, false, 81), 'row', ["label" => "Send"]);
+        // line 122
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 122, $this->source); })()), "Ajouter", [], "any", false, false, false, 122), 'row', ["label" => "Send"]);
         echo "
+                                    </div>
                                 </div>
 
                                 ";
-        // line 84
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 84, $this->source); })()), 'form_end');
+        // line 126
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 126, $this->source); })()), 'form_end');
         echo "
                         </div>
                         <p class=\"form-messege\"></p>
@@ -256,200 +298,7 @@ class __TwigTemplate_6acabd02c61ba0052bfc90dbaf097a2439d19ccb4ad0e7cd044673229c7
     </div>
     <!-- Contact Main Page Area End Here -->
 
-    <!-- Google Map -->
-    <script src=\"https://maps.google.com/maps/api/js?sensor=false&amp;libraries=geometry&amp;v=3.22&amp;key=AIzaSyChs2QWiAhnzz0a4OEhzqCXwx_qA9ST_lE\"></script>
-
-    <script>
-        // When the window has finished loading create our google map below
-        google.maps.event.addDomListener(window, 'load', init);
-        function init() {
-            // Basic options for a simple Google Map
-            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-            var mapOptions = {
-                // How zoomed in you want the map to start at (always required)
-                zoom: 12,
-                scrollwheel: false,
-                // The latitude and longitude to center the map (always required)
-                center: new google.maps.LatLng(40.740610, -73.935242), // New York
-                // How you would like to style the map.
-                // This is where you would paste any style found on
-                styles: [{
-                    \"featureType\": \"water\",
-                    \"elementType\": \"geometry\",
-                    \"stylers\": [{
-                        \"color\": \"#e9e9e9\"
-                    },
-                        {
-                            \"lightness\": 17
-                        }
-                    ]
-                },
-                    {
-                        \"featureType\": \"landscape\",
-                        \"elementType\": \"geometry\",
-                        \"stylers\": [{
-                            \"color\": \"#f5f5f5\"
-                        },
-                            {
-                                \"lightness\": 20
-                            }
-                        ]
-                    },
-                    {
-                        \"featureType\": \"road.highway\",
-                        \"elementType\": \"geometry.fill\",
-                        \"stylers\": [{
-                            \"color\": \"#ffffff\"
-                        },
-                            {
-                                \"lightness\": 17
-                            }
-                        ]
-                    },
-                    {
-                        \"featureType\": \"road.highway\",
-                        \"elementType\": \"geometry.stroke\",
-                        \"stylers\": [{
-                            \"color\": \"#ffffff\"
-                        },
-                            {
-                                \"lightness\": 29
-                            },
-                            {
-                                \"weight\": 0.2
-                            }
-                        ]
-                    },
-                    {
-                        \"featureType\": \"road.arterial\",
-                        \"elementType\": \"geometry\",
-                        \"stylers\": [{
-                            \"color\": \"#ffffff\"
-                        },
-                            {
-                                \"lightness\": 18
-                            }
-                        ]
-                    },
-                    {
-                        \"featureType\": \"road.local\",
-                        \"elementType\": \"geometry\",
-                        \"stylers\": [{
-                            \"color\": \"#ffffff\"
-                        },
-                            {
-                                \"lightness\": 16
-                            }
-                        ]
-                    },
-                    {
-                        \"featureType\": \"poi\",
-                        \"elementType\": \"geometry\",
-                        \"stylers\": [{
-                            \"color\": \"#f5f5f5\"
-                        },
-                            {
-                                \"lightness\": 21
-                            }
-                        ]
-                    },
-                    {
-                        \"featureType\": \"poi.park\",
-                        \"elementType\": \"geometry\",
-                        \"stylers\": [{
-                            \"color\": \"#dedede\"
-                        },
-                            {
-                                \"lightness\": 21
-                            }
-                        ]
-                    },
-                    {
-                        \"elementType\": \"labels.text.stroke\",
-                        \"stylers\": [{
-                            \"visibility\": \"on\"
-                        },
-                            {
-                                \"color\": \"#ffffff\"
-                            },
-                            {
-                                \"lightness\": 16
-                            }
-                        ]
-                    },
-                    {
-                        \"elementType\": \"labels.text.fill\",
-                        \"stylers\": [{
-                            \"saturation\": 36
-                        },
-                            {
-                                \"color\": \"#333333\"
-                            },
-                            {
-                                \"lightness\": 40
-                            }
-                        ]
-                    },
-                    {
-                        \"elementType\": \"labels.icon\",
-                        \"stylers\": [{
-                            \"visibility\": \"off\"
-                        }]
-                    },
-                    {
-                        \"featureType\": \"transit\",
-                        \"elementType\": \"geometry\",
-                        \"stylers\": [{
-                            \"color\": \"#f2f2f2\"
-                        },
-                            {
-                                \"lightness\": 19
-                            }
-                        ]
-                    },
-                    {
-                        \"featureType\": \"administrative\",
-                        \"elementType\": \"geometry.fill\",
-                        \"stylers\": [{
-                            \"color\": \"#fefefe\"
-                        },
-                            {
-                                \"lightness\": 20
-                            }
-                        ]
-                    },
-                    {
-                        \"featureType\": \"administrative\",
-                        \"elementType\": \"geometry.stroke\",
-                        \"stylers\": [{
-                            \"color\": \"#fefefe\"
-                        },
-                            {
-                                \"lightness\": 17
-                            },
-                            {
-                                \"weight\": 1.2
-                            }
-                        ]
-                    }
-                ]
-            };
-
-            // Get the HTML DOM element that will contain your map
-            // We are using a div with id=\"map\" seen below in the <body>
-            var mapElement = document.getElementById('google-map');
-
-            // Create the Google Map using our element and options defined above
-            var map = new google.maps.Map(mapElement, mapOptions);
-
-            // Let's also add a marker while we're at it
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(40.740610, -73.935242),
-                map: map,
-                title: 'Limupa',
-                animation: google.maps.Animation.BOUNCE
-            });
-        }
+   
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -471,7 +320,7 @@ class __TwigTemplate_6acabd02c61ba0052bfc90dbaf097a2439d19ccb4ad0e7cd044673229c7
 
     public function getDebugInfo()
     {
-        return array (  248 => 84,  242 => 81,  236 => 78,  232 => 77,  228 => 76,  222 => 73,  218 => 72,  214 => 71,  208 => 68,  204 => 67,  200 => 66,  194 => 63,  190 => 62,  186 => 61,  178 => 56,  174 => 55,  170 => 54,  164 => 51,  160 => 50,  156 => 49,  148 => 44,  144 => 43,  140 => 42,  134 => 39,  130 => 38,  126 => 37,  121 => 35,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
+        return array (  290 => 126,  283 => 122,  275 => 117,  271 => 116,  266 => 114,  256 => 107,  252 => 106,  247 => 104,  238 => 98,  234 => 97,  229 => 95,  219 => 88,  215 => 87,  210 => 85,  201 => 79,  197 => 78,  192 => 76,  183 => 70,  179 => 69,  174 => 67,  162 => 58,  158 => 57,  153 => 55,  145 => 50,  141 => 49,  136 => 47,  130 => 44,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -479,11 +328,20 @@ class __TwigTemplate_6acabd02c61ba0052bfc90dbaf097a2439d19ccb4ad0e7cd044673229c7
         return new Source("{% extends 'baseFront.twig'%}
 {% block title %}<title>Reclamation</title> {% endblock %}
 {% block body %}
-    <!-- Begin Contact Main Page Area -->
-    <div class=\"contact-main-page mt-60 mb-40 mb-md-40 mb-sm-40 mb-xs-40\">
-        <div class=\"container mb-60\">
-            <div id=\"google-map\"></div>
+    <!-- Begin Li's Breadcrumb Area -->
+    <div class=\"breadcrumb-area\">
+        <div class=\"container\">
+            <div class=\"breadcrumb-content\">
+                <ul>
+                    <li><a href=\"index.html\">Home</a></li>
+                    <li class=\"active\">Contact</li>
+                </ul>
+            </div>
         </div>
+    </div>
+    <!-- Li's Breadcrumb Area End Here -->
+    <!-- Begin Contact Main Page Area -->
+   
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-lg-5 offset-lg-1 col-md-12 order-1 order-lg-2\">
@@ -512,51 +370,84 @@ class __TwigTemplate_6acabd02c61ba0052bfc90dbaf097a2439d19ccb4ad0e7cd044673229c7
                         <div class=\"contact-form\">
                                 {{ form_start(formA,{'attr': {'novalidate': 'novalidate'}} ) }}
                                 <div class=\"form-group\">
-                                    {{ form_label(formA.name,\"Your Name\") }}
-                                    {{ form_widget(formA.name,{'attr':{\"class\":\"mb-0\"}}) }}
-                                    {{ form_errors(formA.name,{'attr':{\"class\":\"mb-0\"}}) }}
+                                    <div class=\"row\">
+                                        {{ form_label(formA.name,\"Your Name\") }}
+                                        <span class=\"required\">*</span>
+                                        {{ form_widget(formA.name,{'attr':{\"class\":\"mb-0\"}}) }}
+                                        {{ form_errors(formA.name,{'attr':{\"class\":\"mb-0\"}}) }}
+                                    </div>
                                 </div>
                                 <div class=\"form-group\">
-                                    {{ form_label(formA.email,\"Your Email\") }}
-                                    {{ form_widget(formA.email)}}
-                                    {{ form_errors(formA.email) }}
+                                    <div class=\"row\">
+                                        {{ form_label(formA.email,\"Your Email\") }}
+                                        <span class=\"required\">*</span>
+                                        {{ form_widget(formA.email)}}
+                                        {{ form_errors(formA.email) }}
+                                    </div>
+
                                 </div>
 
-                                <div class=\"row\">
-                                    <div class=\"col-md-6\">
-                                        {{ form_label(formA.date,\"Date\") }}
-                                        {{ form_widget(formA.date)}}
-                                        {{ form_errors(formA.date) }}
-                                    </div>
-                                    <div class=\"col-md-6\">
-                                        {{ form_label(formA.time,\"Time\") }}
-                                        {{ form_widget(formA.time)}}
-                                        {{ form_errors(formA.time) }}
-                                    </div>
-                                </div>
+                            
 
                                 <div class=\"form-group mt-4\">
+                                    <div class=\"row\"
                                     {{ form_label(formA.type,\"Reclamation Type\") }}
+                                    <span class=\"required\">*</span>
                                     {{ form_widget(formA.type)}}
                                     {{ form_errors(formA.type) }}
                                 </div>
+
+                                </div>
                                 <div class=\"form-group\">
+                                    <div class=\"row\"
                                     {{ form_label(formA.idCommande,\"Command ID\") }}
+                                    <span class=\"required\">*</span>
                                     {{ form_widget(formA.idCommande)}}
                                     {{ form_errors(formA.idCommande) }}
                                 </div>
+
+                                </div>
                                 <div class=\"form-group\">
+                                    <div class=\"row\"
                                     {{ form_label(formA.subject,\"Reclamation Subject\") }}
+                                    <span class=\"required\">*</span>
                                     {{ form_widget(formA.subject) }}
                                     {{ form_errors(formA.subject) }}
+                                    </div>
+
+                                </div>
+                                <div class=\"row\">
+                                    <div class=\"col-md-6\">
+                                        <div class=\"row\"
+                                        {{ form_label(formA.date,\"Date\") }}
+                                        <span class=\"required\">*</span>
+                                        {{ form_widget(formA.date)}}
+                                        {{ form_errors(formA.date) }}
+                                    </div>
+
+                                    </div>
+                                    <div class=\"col-md-6\">
+                                        <div class=\"row\"
+                                        {{ form_label(formA.time,\"Time\") }}
+                                        <span class=\"required\">*</span>
+                                        {{ form_widget(formA.time)}}
+                                        {{ form_errors(formA.time) }}
+                                    </div>
+
+                                    </div>
                                 </div>
                                 <div class=\"form-group mb-30\">
+                                    <div class=\"row\"
                                     {{ form_label(formA.message,\"Your Message\") }}
+                                    <span class=\"required\">*</span>
                                     {{ form_widget(formA.message) }}
                                     {{ form_errors(formA.message) }}
+                                    </div>
+
                                 </div>
                                 <div class=\"form-group\">
-                                    {{ form_row(formA.Ajouter, {'label': 'Send'}) }}
+                                    {{ form_row(formA.Ajouter, {\"label\":\"Send\"},{'attr':{ \"class\":\"btn btn-primary btn-lg\" }}) }}
+                                    </div>
                                 </div>
 
                                 {{ form_end(formA) }}
@@ -569,200 +460,7 @@ class __TwigTemplate_6acabd02c61ba0052bfc90dbaf097a2439d19ccb4ad0e7cd044673229c7
     </div>
     <!-- Contact Main Page Area End Here -->
 
-    <!-- Google Map -->
-    <script src=\"https://maps.google.com/maps/api/js?sensor=false&amp;libraries=geometry&amp;v=3.22&amp;key=AIzaSyChs2QWiAhnzz0a4OEhzqCXwx_qA9ST_lE\"></script>
-
-    <script>
-        // When the window has finished loading create our google map below
-        google.maps.event.addDomListener(window, 'load', init);
-        function init() {
-            // Basic options for a simple Google Map
-            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-            var mapOptions = {
-                // How zoomed in you want the map to start at (always required)
-                zoom: 12,
-                scrollwheel: false,
-                // The latitude and longitude to center the map (always required)
-                center: new google.maps.LatLng(40.740610, -73.935242), // New York
-                // How you would like to style the map.
-                // This is where you would paste any style found on
-                styles: [{
-                    \"featureType\": \"water\",
-                    \"elementType\": \"geometry\",
-                    \"stylers\": [{
-                        \"color\": \"#e9e9e9\"
-                    },
-                        {
-                            \"lightness\": 17
-                        }
-                    ]
-                },
-                    {
-                        \"featureType\": \"landscape\",
-                        \"elementType\": \"geometry\",
-                        \"stylers\": [{
-                            \"color\": \"#f5f5f5\"
-                        },
-                            {
-                                \"lightness\": 20
-                            }
-                        ]
-                    },
-                    {
-                        \"featureType\": \"road.highway\",
-                        \"elementType\": \"geometry.fill\",
-                        \"stylers\": [{
-                            \"color\": \"#ffffff\"
-                        },
-                            {
-                                \"lightness\": 17
-                            }
-                        ]
-                    },
-                    {
-                        \"featureType\": \"road.highway\",
-                        \"elementType\": \"geometry.stroke\",
-                        \"stylers\": [{
-                            \"color\": \"#ffffff\"
-                        },
-                            {
-                                \"lightness\": 29
-                            },
-                            {
-                                \"weight\": 0.2
-                            }
-                        ]
-                    },
-                    {
-                        \"featureType\": \"road.arterial\",
-                        \"elementType\": \"geometry\",
-                        \"stylers\": [{
-                            \"color\": \"#ffffff\"
-                        },
-                            {
-                                \"lightness\": 18
-                            }
-                        ]
-                    },
-                    {
-                        \"featureType\": \"road.local\",
-                        \"elementType\": \"geometry\",
-                        \"stylers\": [{
-                            \"color\": \"#ffffff\"
-                        },
-                            {
-                                \"lightness\": 16
-                            }
-                        ]
-                    },
-                    {
-                        \"featureType\": \"poi\",
-                        \"elementType\": \"geometry\",
-                        \"stylers\": [{
-                            \"color\": \"#f5f5f5\"
-                        },
-                            {
-                                \"lightness\": 21
-                            }
-                        ]
-                    },
-                    {
-                        \"featureType\": \"poi.park\",
-                        \"elementType\": \"geometry\",
-                        \"stylers\": [{
-                            \"color\": \"#dedede\"
-                        },
-                            {
-                                \"lightness\": 21
-                            }
-                        ]
-                    },
-                    {
-                        \"elementType\": \"labels.text.stroke\",
-                        \"stylers\": [{
-                            \"visibility\": \"on\"
-                        },
-                            {
-                                \"color\": \"#ffffff\"
-                            },
-                            {
-                                \"lightness\": 16
-                            }
-                        ]
-                    },
-                    {
-                        \"elementType\": \"labels.text.fill\",
-                        \"stylers\": [{
-                            \"saturation\": 36
-                        },
-                            {
-                                \"color\": \"#333333\"
-                            },
-                            {
-                                \"lightness\": 40
-                            }
-                        ]
-                    },
-                    {
-                        \"elementType\": \"labels.icon\",
-                        \"stylers\": [{
-                            \"visibility\": \"off\"
-                        }]
-                    },
-                    {
-                        \"featureType\": \"transit\",
-                        \"elementType\": \"geometry\",
-                        \"stylers\": [{
-                            \"color\": \"#f2f2f2\"
-                        },
-                            {
-                                \"lightness\": 19
-                            }
-                        ]
-                    },
-                    {
-                        \"featureType\": \"administrative\",
-                        \"elementType\": \"geometry.fill\",
-                        \"stylers\": [{
-                            \"color\": \"#fefefe\"
-                        },
-                            {
-                                \"lightness\": 20
-                            }
-                        ]
-                    },
-                    {
-                        \"featureType\": \"administrative\",
-                        \"elementType\": \"geometry.stroke\",
-                        \"stylers\": [{
-                            \"color\": \"#fefefe\"
-                        },
-                            {
-                                \"lightness\": 17
-                            },
-                            {
-                                \"weight\": 1.2
-                            }
-                        ]
-                    }
-                ]
-            };
-
-            // Get the HTML DOM element that will contain your map
-            // We are using a div with id=\"map\" seen below in the <body>
-            var mapElement = document.getElementById('google-map');
-
-            // Create the Google Map using our element and options defined above
-            var map = new google.maps.Map(mapElement, mapOptions);
-
-            // Let's also add a marker while we're at it
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(40.740610, -73.935242),
-                map: map,
-                title: 'Limupa',
-                animation: google.maps.Animation.BOUNCE
-            });
-        }
+   
 {% endblock %}", "reclamation/add.html.twig", "C:\\Users\\mariem\\Documents\\piDEV\\ErrorMakers-3A45\\templates\\reclamation\\add.html.twig");
     }
 }
