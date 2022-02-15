@@ -42,7 +42,7 @@ class Reponse
      */
     private $date;
 
-    public function getId(): ?int
+    public function getIdReponse(): ?int
     {
         return $this->idReponse;
     }

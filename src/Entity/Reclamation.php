@@ -50,6 +50,7 @@ class Reclamation
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank
+     * * @Assert\Choice({"Hardware", "Software", "Reparation"})
      */
     private $type;
 

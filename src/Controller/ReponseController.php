@@ -5,13 +5,14 @@ namespace App\Controller;
 use App\Entity\Reponse;
 use App\Form\ReponseType;
 use App\Entity\Reclamation;
+use App\Repository\ReponseRepository;
 use App\Repository\ReclamationRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ReponseController extends AbstractController
 {
@@ -58,7 +59,7 @@ class ReponseController extends AbstractController
         {$em=$this->getDoctrine()->getManager();
             $em->persist($reponses);
             $em->flush();
-            return $this->redirectToRoute('rep_list');
+            return $this->redirectToRoute('reponse_list');
 
         }
 
@@ -70,18 +71,31 @@ class ReponseController extends AbstractController
         ]);
     }
 
+      /**
+     * @param ReponseRepository $rep
+     * @return Response
+     * @Route("reponse/list", name="reponse_list")
+     */
+    public function afficher_reponses(ReponseRepository $rep): Response
+    {
+        $reponses=$rep->findAll();
+        return $this->render('reponse/listReponses.html.twig', [
+            'tab1' => $reponses,
+        ]);
+    }
+
      /**
      * @return Reponse
-     * @Route("/dashboard/listU/delete/{id}", name="userdelete")
+     * @Route("/response/delete/{idReponse}", name="response_delete")
      */
 
-    /*public function Delete($id,Repository $rep){
-        $user=$rep->find($id);
+    public function Delete($idReponse, ReponseRepository $rep){
+        $response=$rep->find($idReponse);
         $em=$this->getDoctrine()->getManager();
-        $em->remove($user);
+        $em->remove($response);
         $em->flush();
 
-        return $this->redirectToRoute('userlist');
-    }*/
+        return $this->redirectToRoute('reponse_list');
+    }
 
 }

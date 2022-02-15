@@ -20,6 +20,7 @@ return [
         '/reclamation/list' => [[['_route' => 'r_list', '_controller' => 'App\\Controller\\ReclamationController::afficher'], null, null, null, false, false, null]],
         '/reponse' => [[['_route' => 'reponse', '_controller' => 'App\\Controller\\ReponseController::index'], null, null, null, false, false, null]],
         '/reponse/recList' => [[['_route' => 'list_reclamation', '_controller' => 'App\\Controller\\ReponseController::afficher'], null, null, null, false, false, null]],
+        '/reponse/list' => [[['_route' => 'reponse_list', '_controller' => 'App\\Controller\\ReponseController::afficher_reponses'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -38,7 +39,10 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/reponse/add/([^/]++)(*:190)'
+                .'|/re(?'
+                    .'|ponse/add/([^/]++)(*:193)'
+                    .'|sponse/delete/([^/]++)(*:223)'
+                .')'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -49,8 +53,9 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        190 => [
-            [['_route' => 'rep_add', '_controller' => 'App\\Controller\\ReponseController::addResponse'], ['id'], null, null, false, true, null],
+        193 => [[['_route' => 'rep_add', '_controller' => 'App\\Controller\\ReponseController::addResponse'], ['id'], null, null, false, true, null]],
+        223 => [
+            [['_route' => 'response_delete', '_controller' => 'App\\Controller\\ReponseController::Delete'], ['idReponse'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

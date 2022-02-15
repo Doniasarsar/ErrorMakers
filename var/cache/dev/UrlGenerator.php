@@ -23,4 +23,6 @@ return [
     'reponse' => [[], ['_controller' => 'App\\Controller\\ReponseController::index'], [], [['text', '/reponse']], [], []],
     'list_reclamation' => [[], ['_controller' => 'App\\Controller\\ReponseController::afficher'], [], [['text', '/reponse/recList']], [], []],
     'rep_add' => [['id'], ['_controller' => 'App\\Controller\\ReponseController::addResponse'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/reponse/add']], [], []],
+    'reponse_list' => [[], ['_controller' => 'App\\Controller\\ReponseController::afficher_reponses'], [], [['text', '/reponse/list']], [], []],
+    'response_delete' => [['idReponse'], ['_controller' => 'App\\Controller\\ReponseController::Delete'], [], [['variable', '/', '[^/]++', 'idReponse'], ['text', '/response/delete']], [], []],
 ];
