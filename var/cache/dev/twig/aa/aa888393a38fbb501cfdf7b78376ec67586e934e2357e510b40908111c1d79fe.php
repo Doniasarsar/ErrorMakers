@@ -55,7 +55,7 @@ class __TwigTemplate_3bc8082ef113cb12ea23739cc4d7cc8a5f46be444a7b5d18397ab22b356
 
     }
 
-    // line 3
+    // line 2
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -65,7 +65,7 @@ class __TwigTemplate_3bc8082ef113cb12ea23739cc4d7cc8a5f46be444a7b5d18397ab22b356
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Log in!";
+        echo "<title>ProTECH | Register</title> ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -74,7 +74,7 @@ class __TwigTemplate_3bc8082ef113cb12ea23739cc4d7cc8a5f46be444a7b5d18397ab22b356
 
     }
 
-    // line 5
+    // line 3
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -84,59 +84,74 @@ class __TwigTemplate_3bc8082ef113cb12ea23739cc4d7cc8a5f46be444a7b5d18397ab22b356
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
-        echo "<form method=\"post\">
-    ";
-        // line 7
-        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 7, $this->source); })())) {
-            // line 8
-            echo "        <div class=\"alert alert-danger\">";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 8, $this->source); })()), "messageKey", [], "any", false, false, false, 8), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 8, $this->source); })()), "messageData", [], "any", false, false, false, 8), "security"), "html", null, true);
-            echo "</div>
-    ";
-        }
-        // line 10
-        echo "
-    ";
-        // line 11
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 11, $this->source); })()), "user", [], "any", false, false, false, 11)) {
-            // line 12
-            echo "        <div class=\"mb-3\">
-            You are logged in as ";
-            // line 13
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 13, $this->source); })()), "user", [], "any", false, false, false, 13), "username", [], "any", false, false, false, 13), "html", null, true);
-            echo ", <a href=\"";
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
-            echo "\">Logout</a>
-        </div>
-    ";
-        }
-        // line 16
-        echo "
-    <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
-    <label for=\"inputEmail\">Email</label>
-    <input type=\"email\" value=\"";
-        // line 19
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 19, $this->source); })()), "html", null, true);
-        echo "\" name=\"Email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" required autofocus>
-    <label for=\"inputPassword\">Password</label>
-    <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
-
-    <input type=\"hidden\" name=\"_csrf_token\"
-           value=\"";
-        // line 24
-        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
-        echo "\"
-    >
-
-    ";
-        // line 37
-        echo "
-    <button class=\"btn btn-lg btn-primary\" type=\"submit\">
-        Sign in
-    </button>
-</form>
-";
+        // line 4
+        echo "                <!-- Begin Mobile Menu Area -->
+                <div class=\"mobile-menu-area d-lg-none d-xl-none col-12\">
+                    <div class=\"container\"> 
+                        <div class=\"row\">
+                            <div class=\"mobile-menu\">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile Menu Area End Here -->
+            </header>
+            <!-- Header Area End Here -->
+            <!-- Begin Li's Breadcrumb Area -->
+            <div class=\"breadcrumb-area\">
+                <div class=\"container\">
+                    <div class=\"breadcrumb-content\">
+                        <ul>
+                            <li><a href=\"";
+        // line 21
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
+        echo "\">Home</a></li>
+                            <li class=\"active\">Register</li>
+                           </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Li's Breadcrumb Area End Here -->
+            <!-- Begin Login Content Area -->
+                            <div class=\"page-section mb-60\">
+                                <div class=\"container\">             
+                                        <div class=\"row\">
+                                         <form action=\"";
+        // line 32
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
+        echo "\" method =\"post\">
+                                            <div class=\"login-form\">
+                                                <h4 class=\"login-title\"><a href=\"";
+        // line 34
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("userAdd");
+        echo "\">Or Create account</a></h4>
+                                                <h4 class=\"login-title\">Login</h4>
+                                                <div class=\"row\">
+                                                    <div class=\"col-md-12 col-12 mb-20\">
+                                                        <label>Email Address*</label>
+                                                        <input class=\"mb-0\" type=\"email\" placeholder=\"Email Address\"
+                                                        required name=\"_username\">
+                                                    </div>
+                                                    <div class=\"col-12 mb-20\">
+                                                        <label>Password</label>
+                                                        <input class=\"mb-0\" type=\"password\" placeholder=\"Password\" 
+                                                        required name=\"_password\">
+                                                    </div>
+                                                    
+                                                    <div class=\"col-md-4 mt-10 mb-20 text-left text-md-right\">
+                                                        <a href=\"#\"> Forgotten pasward?</a>
+                                                    </div>
+                                                    <div class=\"col-md-12\">
+                                                        <button type=\"submit\" class=\"register-button mt-0\">Login</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                 </div>
+                            </div>
+              
+            <!-- Login Content Area End Here -->
+         ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -157,53 +172,71 @@ class __TwigTemplate_3bc8082ef113cb12ea23739cc4d7cc8a5f46be444a7b5d18397ab22b356
 
     public function getDebugInfo()
     {
-        return array (  134 => 37,  128 => 24,  120 => 19,  115 => 16,  107 => 13,  104 => 12,  102 => 11,  99 => 10,  93 => 8,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  126 => 34,  121 => 32,  107 => 21,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'baseFront.html.twig' %}
-
-{% block title %}Log in!{% endblock %}
-
+        return new Source("{% extends \"baseFront.html.twig\" %}
+{% block title %}<title>ProTECH | Register</title> {% endblock %}
 {% block body %}
-<form method=\"post\">
-    {% if error %}
-        <div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
-
-    {% if app.user %}
-        <div class=\"mb-3\">
-            You are logged in as {{ app.user.username }}, <a href=\"{{ path('app_logout') }}\">Logout</a>
-        </div>
-    {% endif %}
-
-    <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
-    <label for=\"inputEmail\">Email</label>
-    <input type=\"email\" value=\"{{ last_username }}\" name=\"Email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" required autofocus>
-    <label for=\"inputPassword\">Password</label>
-    <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
-
-    <input type=\"hidden\" name=\"_csrf_token\"
-           value=\"{{ csrf_token('authenticate') }}\"
-    >
-
-    {#
-        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-        See https://symfony.com/doc/current/security/remember_me.html
-
-        <div class=\"checkbox mb-3\">
-            <label>
-                <input type=\"checkbox\" name=\"_remember_me\"> Remember me
-            </label>
-        </div>
-    #}
-
-    <button class=\"btn btn-lg btn-primary\" type=\"submit\">
-        Sign in
-    </button>
-</form>
-{% endblock %}
-", "security/login.html.twig", "/Users/skanderzouaoui/Documents/ErrorMakers-3A45/templates/security/login.html.twig");
+                <!-- Begin Mobile Menu Area -->
+                <div class=\"mobile-menu-area d-lg-none d-xl-none col-12\">
+                    <div class=\"container\"> 
+                        <div class=\"row\">
+                            <div class=\"mobile-menu\">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile Menu Area End Here -->
+            </header>
+            <!-- Header Area End Here -->
+            <!-- Begin Li's Breadcrumb Area -->
+            <div class=\"breadcrumb-area\">
+                <div class=\"container\">
+                    <div class=\"breadcrumb-content\">
+                        <ul>
+                            <li><a href=\"{{path('home')}}\">Home</a></li>
+                            <li class=\"active\">Register</li>
+                           </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Li's Breadcrumb Area End Here -->
+            <!-- Begin Login Content Area -->
+                            <div class=\"page-section mb-60\">
+                                <div class=\"container\">             
+                                        <div class=\"row\">
+                                         <form action=\"{{  path('login') }}\" method =\"post\">
+                                            <div class=\"login-form\">
+                                                <h4 class=\"login-title\"><a href=\"{{path('userAdd')}}\">Or Create account</a></h4>
+                                                <h4 class=\"login-title\">Login</h4>
+                                                <div class=\"row\">
+                                                    <div class=\"col-md-12 col-12 mb-20\">
+                                                        <label>Email Address*</label>
+                                                        <input class=\"mb-0\" type=\"email\" placeholder=\"Email Address\"
+                                                        required name=\"_username\">
+                                                    </div>
+                                                    <div class=\"col-12 mb-20\">
+                                                        <label>Password</label>
+                                                        <input class=\"mb-0\" type=\"password\" placeholder=\"Password\" 
+                                                        required name=\"_password\">
+                                                    </div>
+                                                    
+                                                    <div class=\"col-md-4 mt-10 mb-20 text-left text-md-right\">
+                                                        <a href=\"#\"> Forgotten pasward?</a>
+                                                    </div>
+                                                    <div class=\"col-md-12\">
+                                                        <button type=\"submit\" class=\"register-button mt-0\">Login</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                 </div>
+                            </div>
+              
+            <!-- Login Content Area End Here -->
+         {% endblock %}", "security/login.html.twig", "/Users/skanderzouaoui/Documents/ErrorMakers-3A45/templates/security/login.html.twig");
     }
 }

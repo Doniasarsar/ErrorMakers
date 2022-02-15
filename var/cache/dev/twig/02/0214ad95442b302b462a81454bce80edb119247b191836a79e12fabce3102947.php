@@ -177,20 +177,31 @@ class __TwigTemplate_471f9c68e9dd8483fd9820ac12b4d67a567b226756eca7e1aa382a7ea3d
         echo "
                                            ";
         // line 58
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["userForm"]) || array_key_exists("userForm", $context) ? $context["userForm"] : (function () { throw new RuntimeError('Variable "userForm" does not exist.', 58, $this->source); })()), "Password", [], "any", false, false, false, 58), 'widget', ["attr" => ["class" => "mb-0", "type" => "PasswordType"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["userForm"]) || array_key_exists("userForm", $context) ? $context["userForm"] : (function () { throw new RuntimeError('Variable "userForm" does not exist.', 58, $this->source); })()), "Password", [], "any", false, false, false, 58), 'widget', ["attr" => ["class" => "mb-0"]]);
         echo "
                                            
                                         </div>
-                                       <div class=\"col-12\">
+                                        <div class=\"col-md-6 mb-20\">
                                             ";
         // line 62
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["userForm"]) || array_key_exists("userForm", $context) ? $context["userForm"] : (function () { throw new RuntimeError('Variable "userForm" does not exist.', 62, $this->source); })()), "Register", [], "any", false, false, false, 62), 'row', ["attr" => ["label" => "Register", "class" => "register-button mt-0"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["userForm"]) || array_key_exists("userForm", $context) ? $context["userForm"] : (function () { throw new RuntimeError('Variable "userForm" does not exist.', 62, $this->source); })()), "ConfirmPassword", [], "any", false, false, false, 62), 'label', ["label" => "Confirm Password"]);
+        echo "
+                                            ";
+        // line 63
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["userForm"]) || array_key_exists("userForm", $context) ? $context["userForm"] : (function () { throw new RuntimeError('Variable "userForm" does not exist.', 63, $this->source); })()), "ConfirmPassword", [], "any", false, false, false, 63), 'widget', ["attr" => ["class" => "mb-0"]]);
+        echo "
+                                            
+                                         </div>
+                                       <div class=\"col-12\">
+                                            ";
+        // line 67
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["userForm"]) || array_key_exists("userForm", $context) ? $context["userForm"] : (function () { throw new RuntimeError('Variable "userForm" does not exist.', 67, $this->source); })()), "Register", [], "any", false, false, false, 67), 'row', ["attr" => ["label" => "Register", "class" => "register-button mt-0"]]);
         echo "
                                           
                                         </div>
                                         ";
-        // line 65
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["userForm"]) || array_key_exists("userForm", $context) ? $context["userForm"] : (function () { throw new RuntimeError('Variable "userForm" does not exist.', 65, $this->source); })()), 'form_end');
+        // line 70
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["userForm"]) || array_key_exists("userForm", $context) ? $context["userForm"] : (function () { throw new RuntimeError('Variable "userForm" does not exist.', 70, $this->source); })()), 'form_end');
         echo "
                                     </div>
                                 </div>
@@ -221,7 +232,7 @@ class __TwigTemplate_471f9c68e9dd8483fd9820ac12b4d67a567b226756eca7e1aa382a7ea3d
 
     public function getDebugInfo()
     {
-        return array (  193 => 65,  187 => 62,  180 => 58,  176 => 57,  170 => 54,  166 => 53,  159 => 49,  155 => 48,  148 => 44,  144 => 43,  137 => 39,  133 => 38,  126 => 34,  122 => 33,  107 => 21,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
+        return array (  204 => 70,  198 => 67,  191 => 63,  187 => 62,  180 => 58,  176 => 57,  170 => 54,  166 => 53,  159 => 49,  155 => 48,  148 => 44,  144 => 43,  137 => 39,  133 => 38,  126 => 34,  122 => 33,  107 => 21,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -283,9 +294,14 @@ class __TwigTemplate_471f9c68e9dd8483fd9820ac12b4d67a567b226756eca7e1aa382a7ea3d
                                           </div>
                                         <div class=\"col-md-6 mb-20\">
                                            {{ form_label(userForm.Password,\"Password\") }}
-                                           {{ form_widget(userForm.Password,{'attr':{\"class\":\"mb-0\" ,\"type\":\"PasswordType\"}}) }}
+                                           {{ form_widget(userForm.Password,{'attr':{\"class\":\"mb-0\"}}) }}
                                            
                                         </div>
+                                        <div class=\"col-md-6 mb-20\">
+                                            {{ form_label(userForm.ConfirmPassword,\"Confirm Password\") }}
+                                            {{ form_widget(userForm.ConfirmPassword,{'attr':{\"class\":\"mb-0\"}}) }}
+                                            
+                                         </div>
                                        <div class=\"col-12\">
                                             {{ form_row(userForm.Register,{'attr':{ \"label\":\"Register\" ,\"class\":\"register-button mt-0\"}}) }}
                                           

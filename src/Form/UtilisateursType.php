@@ -21,6 +21,7 @@ class UtilisateursType extends AbstractType
             ->add('Email' ,EmailType::class)
             ->add('Telephone',NumberType::class)
             ->add('Password', PasswordType::class)
+            ->add('ConfirmPassword', PasswordType::class)
           
         ;
     }

@@ -25,6 +25,7 @@ class ActeurSType extends AbstractType
         ->add('Email' ,EmailType::class)
         ->add('Telephone',NumberType::class)
         ->add('Password', PasswordType::class)
+        ->add('ConfirmPassword', PasswordType::class)
          ->add('Boutique', EntityType::class, [
            
             'class' => Boutiques::class,

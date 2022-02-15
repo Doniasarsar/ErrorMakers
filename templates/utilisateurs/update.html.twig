@@ -55,9 +55,16 @@
                                           </div>
                                         <div class="col-md-8 mb-10">
                                            {{ form_label(userForm.Password,"Password") }}
-                                           {{ form_widget(userForm.Password,{'attr':{"class":"mb-0" }}) }}
+                                           {{ form_widget(userForm.Password ,{ 'value': user.getPassword() } )}}
                                            
                                         </div>
+                                        <div class="col-md-8 mb-10">
+                                            
+                                            {% if true == true %}
+                                            {% do userForm.ConfirmPassword.setRendered() %}
+                                            {% endif %}
+                                            
+                                         </div>
                                        <div class="col-12">
                                             {{ form_row(userForm.Update,{'attr':{ "label":"Update" ,"class":"register-button mt-0"}}) }}
                                           

@@ -24,4 +24,6 @@ return [
     'acteurSAdd' => [[], ['_controller' => 'App\\Controller\\UtilisateursController::AddActeurS'], [], [['text', '/utilisateurs/addActeur']], [], []],
     'userupdate' => [['id'], ['_controller' => 'App\\Controller\\UtilisateursController::Update'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/utilisateurs/update']], [], []],
     'activation' => [['token'], ['_controller' => 'App\\Controller\\UtilisateursController::activation'], [], [['variable', '/', '[^/]++', 'token'], ['text', '/activation']], [], []],
+    'login' => [[], ['_controller' => 'App\\Controller\\UtilisateursController::login'], [], [['text', '/login']], [], []],
+    'logout' => [[], ['_controller' => 'App\\Controller\\UtilisateursController::logout'], [], [['text', '/logout']], [], []],
 ];

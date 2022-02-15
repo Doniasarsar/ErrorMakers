@@ -50,7 +50,7 @@
                                             {{ form_widget(ActeurSForm.Telephone,{'attr':{"class":"mb-0"}}) }}
                                            
                                          </div>
-                                        <div class="col-md-12 mb-20">
+                                        <div class="col-md-6 mb-20">
                                             {{ form_label(ActeurSForm.Email,"Email Adress") }}
                                             {{ form_widget(ActeurSForm.Email,{'attr':{"class":"mb-0"}}) }}
                                         </div>
@@ -59,7 +59,11 @@
                                            {{ form_widget(ActeurSForm.Password,{'attr':{"class":"mb-0"}}) }}
                                         
                                         </div>
-                                      
+                                        <div class="col-md-6 mb-20">
+                                            {{ form_label(ActeurSForm.ConfirmPassword,"Confirm Password") }}
+                                            {{ form_widget(ActeurSForm.ConfirmPassword,{'attr':{"class":"mb-0"}}) }}
+                                         
+                                         </div>
                                         <div class="col-md-6 mb-20">
                                             {{ form_label(ActeurSForm.Boutique,"Boutique") }}
                                             {{ form_widget(ActeurSForm.Boutique,{'attr':{"class":"mb-0"}}) }}

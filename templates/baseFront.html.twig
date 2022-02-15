@@ -212,11 +212,21 @@
                                     
                                     <ul class="hm-menu">
                                         <!-- Begin Header Middle Wishlist Area -->
-                                        <li class="hm-wishlist">
+                                         {% if not app.user %}
+                                         <li class="hm-wishlist">
                                             <a href="{{path('userAdd')}}">    
                                                 <i class="fa fa-user-o"></i>
                                             </a>
                                         </li>
+                                        {% else %}
+                                        
+                                            <a href="{{path('logout')}}">    
+                                                logout
+                                            </a>
+                                     
+                                            
+                                        {% endif %}
+                                        
                                         <!-- Header Middle Wishlist Area End Here -->
                                         <!-- Begin Header Mini Cart Area -->
                                         <li class="hm-minicart">
@@ -396,6 +406,16 @@
                                            <li><a href="contact.html">Contact</a></li>
                                            <li><a href="shop-left-sidebar.html">Smartwatch</a></li>
                                            <li><a href="shop-left-sidebar.html">Accessories</a></li>
+                                           {% if not app.user %}
+                                           <li><a href="{{path('login')}}">Login</a></li>
+                                          {% else %}
+                                          
+                                                <li><a href="{{path("userupdate",{'id':app.user.id}) }}">Account</a></li>
+                                              </a>
+                                       
+                                              
+                                          {% endif %}
+
                                        </ul>
                                    </nav>
                                </div>

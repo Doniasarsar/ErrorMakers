@@ -7,12 +7,18 @@ use App\Repository\UtilisateursRepository;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 
 /**
  * @ORM\Entity(repositoryClass=UtilisateursRepository::class)
+ * @UniqueEntity(
+ * fields={"Email"},
+ * message= "Email already exist !" 
+ * )
  */
-class Utilisateurs
+class Utilisateurs implements UserInterface
 {
     /**
      * @ORM\Id
@@ -56,6 +62,11 @@ class Utilisateurs
      * @Assert\Length(min=8, minMessage = "Your Password must be at least {{ limit }} characters long",)
      */
     private $Password;
+
+    /**
+     * @Assert\EqualTo(propertyPath="Password", message="Password and confirm password doesn't match")
+     */
+    private $ConfirmPassword;
 
     /**
      * @ORM\OneToOne(targetEntity=Boutiques::class, cascade={"persist", "remove"})
@@ -148,6 +159,17 @@ class Utilisateurs
 
         return $this;
     }
+    public function getConfirmPassword(): ?string
+    {
+        return $this->ConfirmPassword;
+    }
+
+    public function setConfirmPassword(string $ConfirmPassword): self
+    {
+        $this->ConfirmPassword = $ConfirmPassword;
+
+        return $this;
+    }
 
     public function getBoutique(): ?Boutiques
     {
@@ -220,5 +242,21 @@ class Utilisateurs
 
         return $this;
     }
+
+    public function getRoles(): array
+    {
+        $roles = $this->Role;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = 'ROLE_USER';
+
+        return array_unique($roles);
+    }
+    public function getUsername(): ?string
+    {
+        return $this->Email;
+    }
+    public function eraseCredentials(){}
+    public function getSalt(){}
+   
    
 }

@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class UtilisateursController extends AbstractController
 {
@@ -27,7 +28,7 @@ class UtilisateursController extends AbstractController
      * @Route("/utilisateurs/add",name="userAdd")
      */
 
-    public function AddUser(Request $request){
+    public function AddUser(Request $request , UserPasswordEncoderInterface $encoder){
         $em = $this->getDoctrine()->getManager();
         $user= new Utilisateurs();
         $form=$this ->createForm(UtilisateursType::class,$user);
@@ -37,21 +38,13 @@ class UtilisateursController extends AbstractController
         {
             $user->setToken(md5(uniqid()));
 
+            $hash = $encoder->encodePassword($user, $user->getPassword());
+            $user->setPassword($hash);
+
+
             $em=$this->getDoctrine()->getManager();
             $em->persist($user);
             $em->flush();
-
-        /*    $message=(new \Swift_Message('Activation du compte'))
-            ->setFrom('mohamedskander.zouaoui@esprit.tn')
-            ->setTo($user->getEmail())
-            ->setBody(
-                $this->renderView('email/activation.html.twig' , ['token' => $user->getToken()] 
-        ),
-            'text/html'
-        );
-        $mailer->send($message);
-        */
-
             return $this->redirectToRoute('home');
 
         }
@@ -65,7 +58,7 @@ class UtilisateursController extends AbstractController
      * @Route("/utilisateurs/addActeur",name="acteurSAdd")
      */
 
-    public function AddActeurS(Request $request){
+    public function AddActeurS(Request $request , UserPasswordEncoderInterface $encoder){
         $em = $this->getDoctrine()->getManager();
         $user= new Utilisateurs();
         $form=$this ->createForm(ActeurSType::class,$user);
@@ -74,6 +67,9 @@ class UtilisateursController extends AbstractController
         if($form->isSubmitted() && $form->isValid())
         {
             $user->setToken(md5(uniqid()));
+
+            $hash = $encoder->encodePassword($user, $user->getPassword());
+            $user->setPassword($hash);
 
             $em=$this->getDoctrine()->getManager();
             $em->persist($user);
@@ -86,10 +82,13 @@ class UtilisateursController extends AbstractController
             'ActeurSForm'=>$form->createView(),
         ]);
     }
+
+  
+
      /**
      * @Route("/utilisateurs/update/{id}",name="userupdate")
      */
-    public function Update($id,UtilisateursRepository $rep,Request $request){
+    public function Update($id,UtilisateursRepository $rep,Request $request , UserPasswordEncoderInterface $encoder){
         
         $user=$rep->find($id);
 
@@ -99,12 +98,19 @@ class UtilisateursController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
+
+            $user->setToken(md5(uniqid()));
+
+            $hash = $encoder->encodePassword($user, $user->getPassword());
+            $user->setPassword($hash);
+
         $em=$this->getDoctrine()->getManager();
         $em->flush();
             return $this->redirectToRoute('home');
 
         }return $this->render("utilisateurs/update.html.twig", [
             'userForm'=>$form->createView(),
+            'user'=>$user,
         ]);
 
      }
@@ -123,8 +129,19 @@ class UtilisateursController extends AbstractController
             $em->flush();
 
             $this->addFlash('message','Compte activé');
-            return $this->redirectToRoute('home');
+            return $this->redirectToRoute('login');
      }
+     /**
+     * @Route("/login", name="login")
+     */
+    public function login(): Response
+    {
+        return $this->render('security/login.html.twig');
+    }
+     /**
+     * @Route("/logout", name="logout")
+     */
+    public function logout(){}
 
      
 }
