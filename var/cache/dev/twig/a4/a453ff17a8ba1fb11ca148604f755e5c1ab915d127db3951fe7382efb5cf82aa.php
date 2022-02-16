@@ -154,41 +154,44 @@ class __TwigTemplate_ed78fd28857d0625cd3f5f324dc85751fb7412c3f82cd2838a94a4b2661
                 // line 61
                 echo "                    <td>Non livré </td>
                     ";
-            } else {
-                // line 63
+            }
+            // line 63
+            echo "                    ";
+            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["class"], "etatcommande", [], "any", false, false, false, 63), 1))) {
+                // line 64
                 echo "                    <td> livré </td>
                     ";
             }
-            // line 65
+            // line 66
             echo "                    ";
-            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["class"], "modePaiemenet", [], "any", false, false, false, 65), 0))) {
-                // line 66
+            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["class"], "modePaiemenet", [], "any", false, false, false, 66), 0))) {
+                // line 67
                 echo "                    <td>Par Carte Bancaire </td>
                     ";
             } else {
-                // line 68
+                // line 69
                 echo "                    <td>Par Cash </td>
                     ";
             }
-            // line 70
+            // line 71
             echo "                    <td>
                         <a class=\"btn btn-info\" href=\"";
-            // line 71
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("adminmodif", ["id" => twig_get_attribute($this->env, $this->source, $context["class"], "id", [], "any", false, false, false, 71)]), "html", null, true);
+            // line 72
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("adminmodif", ["id" => twig_get_attribute($this->env, $this->source, $context["class"], "id", [], "any", false, false, false, 72)]), "html", null, true);
             echo "\">Modifier</a>
                         <a class=\"btn btn-warning\"  href=\"";
-            // line 72
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("adminsupp", ["id" => twig_get_attribute($this->env, $this->source, $context["class"], "id", [], "any", false, false, false, 72)]), "html", null, true);
+            // line 73
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("adminsupp", ["id" => twig_get_attribute($this->env, $this->source, $context["class"], "id", [], "any", false, false, false, 73)]), "html", null, true);
             echo "\">Supprimer</a>
-                        <hr>
                          
-                    </td>                  </tr>
+                    </td>                  
+                  </tr>
                   ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['class'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 77
+        // line 78
         echo "                  </tbody>
                 </table>
               </div>
@@ -214,7 +217,7 @@ class __TwigTemplate_ed78fd28857d0625cd3f5f324dc85751fb7412c3f82cd2838a94a4b2661
 
     }
 
-    // line 95
+    // line 96
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -224,57 +227,57 @@ class __TwigTemplate_ed78fd28857d0625cd3f5f324dc85751fb7412c3f82cd2838a94a4b2661
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 96
+        // line 97
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
 
 <!-- DataTables  & Plugins -->
 <script src=\"";
-        // line 99
+        // line 100
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables/jquery.dataTables.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 100
+        // line 101
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 101
+        // line 102
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-responsive/js/dataTables.responsive.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 102
+        // line 103
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-responsive/js/responsive.bootstrap4.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 103
+        // line 104
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/dataTables.buttons.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 104
+        // line 105
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.bootstrap4.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 105
+        // line 106
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jszip/jszip.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 106
+        // line 107
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/pdfmake/pdfmake.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 107
+        // line 108
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/pdfmake/vfs_fonts.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 108
+        // line 109
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.html5.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 109
+        // line 110
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.print.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 110
+        // line 111
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.colVis.min.js"), "html", null, true);
         echo "\"></script>
 
@@ -317,7 +320,7 @@ class __TwigTemplate_ed78fd28857d0625cd3f5f324dc85751fb7412c3f82cd2838a94a4b2661
 
     public function getDebugInfo()
     {
-        return array (  278 => 110,  274 => 109,  270 => 108,  266 => 107,  262 => 106,  258 => 105,  254 => 104,  250 => 103,  246 => 102,  242 => 101,  238 => 100,  234 => 99,  228 => 96,  218 => 95,  192 => 77,  181 => 72,  177 => 71,  174 => 70,  170 => 68,  166 => 66,  163 => 65,  159 => 63,  155 => 61,  153 => 60,  149 => 59,  145 => 58,  141 => 57,  137 => 56,  133 => 55,  129 => 54,  125 => 53,  122 => 52,  118 => 51,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  281 => 111,  277 => 110,  273 => 109,  269 => 108,  265 => 107,  261 => 106,  257 => 105,  253 => 104,  249 => 103,  245 => 102,  241 => 101,  237 => 100,  231 => 97,  221 => 96,  195 => 78,  184 => 73,  180 => 72,  177 => 71,  173 => 69,  169 => 67,  166 => 66,  162 => 64,  159 => 63,  155 => 61,  153 => 60,  149 => 59,  145 => 58,  141 => 57,  137 => 56,  133 => 55,  129 => 54,  125 => 53,  122 => 52,  118 => 51,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -383,7 +386,8 @@ class __TwigTemplate_ed78fd28857d0625cd3f5f324dc85751fb7412c3f82cd2838a94a4b2661
                     <td>{{ class.dateCommande | date(\"d/m/Y\")}}</td>
                     {% if class.etatcommande == 0 %}
                     <td>Non livré </td>
-                    {% else %}
+                    {% endif %}
+                    {% if class.etatcommande == 1 %}
                     <td> livré </td>
                     {% endif %}
                     {% if class.modePaiemenet == 0 %}
@@ -394,9 +398,9 @@ class __TwigTemplate_ed78fd28857d0625cd3f5f324dc85751fb7412c3f82cd2838a94a4b2661
                     <td>
                         <a class=\"btn btn-info\" href=\"{{path('adminmodif',{id : class.id })}}\">Modifier</a>
                         <a class=\"btn btn-warning\"  href=\"{{path('adminsupp',{id : class.id })}}\">Supprimer</a>
-                        <hr>
                          
-                    </td>                  </tr>
+                    </td>                  
+                  </tr>
                   {% endfor %}
                   </tbody>
                 </table>

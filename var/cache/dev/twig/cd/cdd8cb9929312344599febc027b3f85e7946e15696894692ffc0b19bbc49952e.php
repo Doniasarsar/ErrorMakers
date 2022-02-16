@@ -81,7 +81,7 @@ class __TwigTemplate_ecd1282aa4675ca4260c61259eef0017808f4162f7a1138f57366104496
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+            
                 ";
         // line 21
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 21, $this->source); })()), 'form_start');
@@ -132,12 +132,27 @@ class __TwigTemplate_ecd1282aa4675ca4260c61259eef0017808f4162f7a1138f57366104496
                   </div>
                   <div class=\"form-group\">
                     <label for=\"exampleInputPassword1\">Date Commande </label>
+                    ";
+        // line 50
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 50, $this->source); })()), "dateCommande", [], "any", false, false, false, 50), 'widget', ["attr" => ["class" => "form-control"]]);
+        echo "
+
                   </div>
                   <div class=\"form-group\">
                     <label for=\"exampleInputPassword1\">Etat Commande </label>
+                    ";
+        // line 55
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 55, $this->source); })()), "etatCommande", [], "any", false, false, false, 55), 'widget');
+        echo "
+
                   </div>
                   <div class=\"form-group\">
                     <label for=\"exampleInputPassword1\">Mode Paiement </label>
+                    ";
+        // line 60
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 60, $this->source); })()), "modePaiemenet", [], "any", false, false, false, 60), 'widget', ["attr" => ["class" => "form-control"]]);
+        echo "
+
                   </div>
                   
                   
@@ -148,10 +163,10 @@ class __TwigTemplate_ecd1282aa4675ca4260c61259eef0017808f4162f7a1138f57366104496
                   <button type=\"submit\" class=\"btn btn-primary\">Submit</button>
                 </div>
              ";
-        // line 65
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 65, $this->source); })()), 'form_end');
+        // line 71
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 71, $this->source); })()), 'form_end');
         echo "
-              </form>
+           
             </div>
             <!-- /.card -->
 
@@ -187,7 +202,7 @@ class __TwigTemplate_ecd1282aa4675ca4260c61259eef0017808f4162f7a1138f57366104496
 
     public function getDebugInfo()
     {
-        return array (  152 => 65,  130 => 46,  123 => 42,  116 => 38,  109 => 34,  102 => 30,  95 => 26,  87 => 21,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  167 => 71,  153 => 60,  145 => 55,  137 => 50,  130 => 46,  123 => 42,  116 => 38,  109 => 34,  102 => 30,  95 => 26,  87 => 21,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -211,7 +226,7 @@ class __TwigTemplate_ecd1282aa4675ca4260c61259eef0017808f4162f7a1138f57366104496
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+            
                 {{ form_start(form) }}
 
                 <div class=\"card-body\">
@@ -241,12 +256,18 @@ class __TwigTemplate_ecd1282aa4675ca4260c61259eef0017808f4162f7a1138f57366104496
                   </div>
                   <div class=\"form-group\">
                     <label for=\"exampleInputPassword1\">Date Commande </label>
+                    {{ form_widget(form.dateCommande, {'attr': {'class': 'form-control'}}) }}
+
                   </div>
                   <div class=\"form-group\">
                     <label for=\"exampleInputPassword1\">Etat Commande </label>
+                    {{form_widget(form.etatCommande )}}
+
                   </div>
                   <div class=\"form-group\">
                     <label for=\"exampleInputPassword1\">Mode Paiement </label>
+                    {{ form_widget(form.modePaiemenet, {'attr': {'class': 'form-control'}}) }}
+
                   </div>
                   
                   
@@ -257,7 +278,7 @@ class __TwigTemplate_ecd1282aa4675ca4260c61259eef0017808f4162f7a1138f57366104496
                   <button type=\"submit\" class=\"btn btn-primary\">Submit</button>
                 </div>
              {{ form_end(form) }}
-              </form>
+           
             </div>
             <!-- /.card -->
 

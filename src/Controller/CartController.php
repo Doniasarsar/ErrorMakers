@@ -40,11 +40,18 @@ class CartController extends AbstractController
             $totalItem = $item['produit']->getPrix() * $item['quantite'];
             $total += $totalItem ;
         }
+        $quantitetotale = 0; 
+        foreach($dataPanier as $item)
+        {
+            $qtlItem = $item['quantite'];
+            $quantitetotale += $qtlItem ;
+        }
 
 
         return $this->render('cart/index.html.twig', [
             'elements' => $dataPanier,
-            'total' => $total
+            'total' => $total,
+            'quantitetotale' => $quantitetotale
         ]);
     }
     /**
@@ -111,6 +118,8 @@ class CartController extends AbstractController
     
     return $this->redirecttoRoute("cart_index");
     }
+
+    
 
     /**
      * @Route("/deleteall", name="deleteall")

@@ -59,7 +59,8 @@
                     <td>{{ class.dateCommande | date("d/m/Y")}}</td>
                     {% if class.etatcommande == 0 %}
                     <td>Non livré </td>
-                    {% else %}
+                    {% endif %}
+                    {% if class.etatcommande == 1 %}
                     <td> livré </td>
                     {% endif %}
                     {% if class.modePaiemenet == 0 %}
@@ -70,9 +71,9 @@
                     <td>
                         <a class="btn btn-info" href="{{path('adminmodif',{id : class.id })}}">Modifier</a>
                         <a class="btn btn-warning"  href="{{path('adminsupp',{id : class.id })}}">Supprimer</a>
-                        <hr>
                          
-                    </td>                  </tr>
+                    </td>                  
+                  </tr>
                   {% endfor %}
                   </tbody>
                 </table>

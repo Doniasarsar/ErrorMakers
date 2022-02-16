@@ -52,7 +52,8 @@
             <div class="col-lg-6 col-12">
               
                     <div class="checkbox-form">
-                        {{ form_start(formA) }}
+                        {{ form_start(formA,{'attr': {'novalidate': 'novalidate'}} ) }}
+
 
                         <h3>Billing Details</h3>
                         <div class="row">
@@ -60,6 +61,7 @@
                                 <div class="checkout-form-list">
                                     <label>First Name <span class="required">*</span></label>
                                     {{ form_widget(formA.nomClient, {attr: { value : uti.nom ,readonly:true }}) }} 
+                                    {{ form_errors(formA.nomClient, {attr: { value : uti.nom ,readonly:true }}) }} 
                                     
 
                                 </div>
@@ -67,7 +69,8 @@
                             <div class="col-md-6">
                                 <div class="checkout-form-list">
                                     <label>Last Name <span class="required">*</span></label>
-                                    {{ form_widget(formA.prenomClient, {attr: { value : uti.prenom ,readonly:true }}) }} 
+                                    {{ form_widget(formA.prenomClient, {attr: { value : uti.prenom ,readonly:true }}) }}
+                                    {{ form_errors(formA.prenomClient, {attr: { value : uti.prenom ,readonly:true }}) }}
 
                                 </div>
                             </div>
@@ -75,30 +78,42 @@
                                 <div class="checkout-form-list">
                                     <label>Adress<span class="required">*</span></label>
                                     {{ form_widget(formA.adresse) }}
+                                    {{ form_errors(formA.adresse) }}
+
+                                    
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="checkout-form-list">
                                     <label>Post Code <span class="required">*</span></label>
                                     {{ form_widget(formA.postcode) }}
+                                    {{ form_errors(formA.postcode) }}
+
+                                    
                                 </div>
                             </div>
                              <div class="col-md-6">
                                 <div class="checkout-form-list">
                                     <label>Phone  <span class="required">*</span></label>
                                     {{ form_widget(formA.phone) }}
+                                    {{ form_errors(formA.phone) }}
+
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="checkout-form-list">
                                     <label>Montant <span class="required">*</span></label>
                                     {{ form_widget(formA.montant, {attr: { value : total ,readonly:true }}) }} 
+                                    {{ form_errors(formA.montant, {attr: { value : total ,readonly:true }}) }} 
+
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="checkout-form-list">
                                     <label>Date Commande <span class="required">*</span></label>
                                     {{ form_widget(formA.dateCommande) }}
+                                    {{ form_errors(formA.dateCommande) }}
+
                                 </div>
                             </div>  
                             <div class="col-md-12">
@@ -106,8 +121,11 @@
                                    
                                     <label>Mode Paiement <span class="required">*</span></label>
                                     {{ form_widget(formA.modePaiemenet) }}
+                                    {{ form_errors  (formA.modePaiemenet) }}
+
                                 </div>
                             </div>
+                            {{form_widget(formA.etatCommande , {'value':0 ,'type':'hidden'})}}
                             {{ form_end(formA) }}
                             <div class="col-md-12">
                                 <div class="checkout-form-list create-acc">

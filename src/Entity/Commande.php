@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\CommandeRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
@@ -20,46 +21,57 @@ class Commande
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
      */
     private $nomClient;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank 
      */
     private $prenomClient;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
      */
     private $adresse;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank 
      */
     private $postcode;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank 
      */
     private $phone;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank 
      */
     private $montant;
 
     /**
      * @ORM\Column(type="date")
+     * @Assert\NotBlank 
+     * @Assert\Date
+     * @var string A "Y-m-d" formatted value 
      */
     private $dateCommande;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank 
      */
     private $etatCommande;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank 
      */
     private $modePaiemenet;
 

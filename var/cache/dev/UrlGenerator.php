@@ -21,10 +21,11 @@ return [
     'cart_remove' => [['id'], ['_controller' => 'App\\Controller\\CartController::remove'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/cart/remove']], [], []],
     'cart_delete' => [['id'], ['_controller' => 'App\\Controller\\CartController::delete'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/cart/delete']], [], []],
     'cart_deleteall' => [[], ['_controller' => 'App\\Controller\\CartController::deleteall'], [], [['text', '/cart/deleteall']], [], []],
-    'commande' => [['id'], ['_controller' => 'App\\Controller\\CommandeController::index'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/commande']], [], []],
+    'commande' => [['id'], ['_controller' => 'App\\Controller\\CommandeController::ajoutercommande'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/commande']], [], []],
     'admincommande' => [[], ['_controller' => 'App\\Controller\\CommandeController::afficher'], [], [['text', '/admin/affcommande']], [], []],
     'adminsupp' => [['id'], ['_controller' => 'App\\Controller\\CommandeController::supprimercommande'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/suppcommande']], [], []],
     'adminmodif' => [['id'], ['_controller' => 'App\\Controller\\CommandeController::modifiercommande'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/modifcommande']], [], []],
     'front' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/front']], [], []],
     'produit' => [[], ['_controller' => 'App\\Controller\\ProduitController::afficher'], [], [['text', '/produit']], [], []],
+    'delete1' => [['id'], ['_controller' => 'App\\Controller\\ProduitController::delete1'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/delete1']], [], []],
 ];

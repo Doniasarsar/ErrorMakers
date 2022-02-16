@@ -23,17 +23,14 @@ class CommandeType extends AbstractType
             ->add('phone')
             ->add('montant')
             ->add('dateCommande',DateType::class)
-            ->add('etatCommande', HiddenType::class, [
-                'data' => 0,
-            ])
+            ->add('etatCommande')
             ->add('modePaiemenet',ChoiceType::class,[
                 'choices' => [
                     "Par Carte" => 0,
                     "Par Cash"  => 1,
                 ]
             ])
-            ->add('valider',SubmitType::class)
-            ->add('Modifier',SubmitType::class)
+            
         ;
     }
 

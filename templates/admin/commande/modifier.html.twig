@@ -17,7 +17,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+            
                 {{ form_start(form) }}
 
                 <div class="card-body">
@@ -47,12 +47,18 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Date Commande </label>
+                    {{ form_widget(form.dateCommande, {'attr': {'class': 'form-control'}}) }}
+
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Etat Commande </label>
+                    {{form_widget(form.etatCommande )}}
+
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Mode Paiement </label>
+                    {{ form_widget(form.modePaiemenet, {'attr': {'class': 'form-control'}}) }}
+
                   </div>
                   
                   
@@ -63,7 +69,7 @@
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
              {{ form_end(form) }}
-              </form>
+           
             </div>
             <!-- /.card -->
 

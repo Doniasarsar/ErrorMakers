@@ -20,7 +20,7 @@ class CommandeController extends AbstractController
     /**
      * @Route("/commande/{id}", name="commande")
      */
-    public function index(Request $request,SessionInterface $session, ProduitRepository $produitrep,Utilisateur $utilisateur ,UtilisateurRepository $rep): Response
+    public function ajoutercommande(Request $request,SessionInterface $session, ProduitRepository $produitrep,Utilisateur $utilisateur ,UtilisateurRepository $rep): Response
     {   $panier = $session->get("panier",[]);
         $client = $session->get("client", $utilisateur->getId());
 
