@@ -5303,7 +5303,7 @@
         <argument key="session" type="service_closure" id="session"/>
       </argument>
     </service>
-    <service id=".service_locator.TkNLclH" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.u6U.4ga" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\CartController::add" type="service_closure" id=".service_locator.qjLVb2I"/>
@@ -5313,7 +5313,7 @@
         <argument key="App\Controller\CartController::remove" type="service_closure" id=".service_locator.qjLVb2I"/>
         <argument key="App\Controller\CommandeController::afficher" type="service_closure" id=".service_locator.p26ou2t"/>
         <argument key="App\Controller\CommandeController::ajoutercommande" type="service_closure" id=".service_locator.I3wdEgN"/>
-        <argument key="App\Controller\CommandeController::ajoutercommande3" type="service_closure" id=".service_locator.7ZCsHvA"/>
+        <argument key="App\Controller\CommandeController::ajoutercommande4" type="service_closure" id=".service_locator.7ZCsHvA"/>
         <argument key="App\Controller\CommandeController::modifiercommande" type="service_closure" id=".service_locator.p26ou2t"/>
         <argument key="App\Controller\CommandeController::supprimercommande" type="service_closure" id=".service_locator.p26ou2t"/>
         <argument key="App\Controller\LigneCommandeController::index" type="service_closure" id=".service_locator.fSKtku3"/>
@@ -5327,7 +5327,7 @@
         <argument key="App\Controller\CartController:remove" type="service_closure" id=".service_locator.qjLVb2I"/>
         <argument key="App\Controller\CommandeController:afficher" type="service_closure" id=".service_locator.p26ou2t"/>
         <argument key="App\Controller\CommandeController:ajoutercommande" type="service_closure" id=".service_locator.I3wdEgN"/>
-        <argument key="App\Controller\CommandeController:ajoutercommande3" type="service_closure" id=".service_locator.7ZCsHvA"/>
+        <argument key="App\Controller\CommandeController:ajoutercommande4" type="service_closure" id=".service_locator.7ZCsHvA"/>
         <argument key="App\Controller\CommandeController:modifiercommande" type="service_closure" id=".service_locator.p26ou2t"/>
         <argument key="App\Controller\CommandeController:supprimercommande" type="service_closure" id=".service_locator.p26ou2t"/>
         <argument key="App\Controller\LigneCommandeController:index" type="service_closure" id=".service_locator.fSKtku3"/>
@@ -5813,12 +5813,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.TkNLclH"/>
+      <argument type="service" id=".service_locator.u6U.4ga"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.TkNLclH"/>
+      <argument type="service" id=".service_locator.u6U.4ga"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -6221,7 +6221,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.TkNLclH"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.u6U.4ga"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

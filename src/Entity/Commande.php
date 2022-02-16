@@ -46,6 +46,10 @@ class Commande
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank 
+     * @Assert\Length(
+     *      min = 8,
+     *      max = 8,
+     * )
      */
     private $phone;
 

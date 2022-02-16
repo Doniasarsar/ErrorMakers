@@ -25,7 +25,7 @@ return [
     'admincommande' => [[], ['_controller' => 'App\\Controller\\CommandeController::afficher'], [], [['text', '/admin/affcommande']], [], []],
     'adminsupp' => [['id'], ['_controller' => 'App\\Controller\\CommandeController::supprimercommande'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/suppcommande']], [], []],
     'adminmodif' => [['id'], ['_controller' => 'App\\Controller\\CommandeController::modifiercommande'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/modifcommande']], [], []],
-    'commande3' => [['id'], ['_controller' => 'App\\Controller\\CommandeController::ajoutercommande3'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/commande3']], [], []],
+    'commande4' => [['id'], ['_controller' => 'App\\Controller\\CommandeController::ajoutercommande4'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/commande4']], [], []],
     'front' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/front']], [], []],
     'ligne_commande' => [[], ['_controller' => 'App\\Controller\\LigneCommandeController::index'], [], [['text', '/ligne/commande']], [], []],
     'adminlignesupp' => [['id'], ['_controller' => 'App\\Controller\\LigneCommandeController::supprimercommande'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/suppligne']], [], []],

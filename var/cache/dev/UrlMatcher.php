@@ -46,7 +46,7 @@ return [
                     .')'
                     .'|ommande(?'
                         .'|/([^/]++)(*:267)'
-                        .'|3/([^/]++)(*:285)'
+                        .'|4/([^/]++)(*:285)'
                     .')'
                 .')'
                 .'|/admin/(?'
@@ -71,7 +71,7 @@ return [
         216 => [[['_route' => 'cart_remove', '_controller' => 'App\\Controller\\CartController::remove'], ['id'], null, null, false, true, null]],
         239 => [[['_route' => 'cart_delete', '_controller' => 'App\\Controller\\CartController::delete'], ['id'], null, null, false, true, null]],
         267 => [[['_route' => 'commande', '_controller' => 'App\\Controller\\CommandeController::ajoutercommande'], ['id'], null, null, false, true, null]],
-        285 => [[['_route' => 'commande3', '_controller' => 'App\\Controller\\CommandeController::ajoutercommande3'], ['id'], null, null, false, true, null]],
+        285 => [[['_route' => 'commande4', '_controller' => 'App\\Controller\\CommandeController::ajoutercommande4'], ['id'], null, null, false, true, null]],
         329 => [[['_route' => 'adminsupp', '_controller' => 'App\\Controller\\CommandeController::supprimercommande'], ['id'], null, null, false, true, null]],
         351 => [[['_route' => 'adminlignesupp', '_controller' => 'App\\Controller\\LigneCommandeController::supprimercommande'], ['id'], null, null, false, true, null]],
         382 => [[['_route' => 'adminmodif', '_controller' => 'App\\Controller\\CommandeController::modifiercommande'], ['id'], null, null, false, true, null]],
