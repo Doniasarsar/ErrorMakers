@@ -413,6 +413,6 @@ class __TwigTemplate_e9bcb75165d5440986ba0915714ecedff9b4f6fbbedab997867bb74cbf8
         </div>
     {% endfor %}
 {% endblock %}
-", "@Debug/Profiler/dump.html.twig", "C:\\Users\\PCS\\Desktop\\PIDEV\\ErrorMakers-3A45-main\\vendor\\symfony\\debug-bundle\\Resources\\views\\Profiler\\dump.html.twig");
+", "@Debug/Profiler/dump.html.twig", "C:\\Users\\PCS\\Desktop\\symf\\wadie PPI\\ErrorMakers-3A45\\vendor\\symfony\\debug-bundle\\Resources\\views\\Profiler\\dump.html.twig");
     }
 }

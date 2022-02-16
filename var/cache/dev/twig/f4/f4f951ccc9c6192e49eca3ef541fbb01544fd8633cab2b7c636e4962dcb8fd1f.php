@@ -3801,6 +3801,6 @@ class __TwigTemplate_76772fb0b09307f148fe0c5fe27c02158dd29d11b9bce14f6da8684a294
             </div>
             <!-- Group Featured Product Area End Here -->
            <!-- jQuery-V1.12.4 -->
-{% endblock %}", "front/index.html.twig", "C:\\Users\\PCS\\Desktop\\PIDEV\\ErrorMakers-3A45-main\\templates\\front\\index.html.twig");
+{% endblock %}", "front/index.html.twig", "C:\\Users\\PCS\\Desktop\\symf\\wadie PPI\\ErrorMakers-3A45\\templates\\front\\index.html.twig");
     }
 }

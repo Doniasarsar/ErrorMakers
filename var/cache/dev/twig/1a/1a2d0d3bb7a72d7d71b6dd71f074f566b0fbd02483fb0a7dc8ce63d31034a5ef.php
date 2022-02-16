@@ -99,6 +99,6 @@ class __TwigTemplate_c63e139bc3a355f737bd8a56e639207c248c6a291bad82f8ccb394f4e53
             </trace>
 {% endfor %}
         </traces>
-", "@Twig/Exception/traces.xml.twig", "C:\\Users\\PCS\\Desktop\\PIDEV\\ErrorMakers-3A45-main\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\traces.xml.twig");
+", "@Twig/Exception/traces.xml.twig", "C:\\Users\\PCS\\Desktop\\symf\\wadie PPI\\ErrorMakers-3A45\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\traces.xml.twig");
     }
 }

@@ -1042,6 +1042,6 @@ class __TwigTemplate_7ed8b5b9f2d02591233859e0623d38c4045a52afe06173ccb025d511533
 <script src=\"{{asset('dist/js/pages/dashboard.js')}}\"></script>
 {% endblock %}
 
-", "admin/index.html.twig", "C:\\Users\\PCS\\Desktop\\PIDEV\\ErrorMakers-3A45-main\\templates\\admin\\index.html.twig");
+", "admin/index.html.twig", "C:\\Users\\PCS\\Desktop\\symf\\wadie PPI\\ErrorMakers-3A45\\templates\\admin\\index.html.twig");
     }
 }

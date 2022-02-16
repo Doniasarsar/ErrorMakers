@@ -486,6 +486,6 @@ header .container { display: flex; justify-content: space-between; }
     .hidden-xs-down { display: initial; }
     .help-link { margin-left: 30px; }
 }
-", "@Twig/exception.css.twig", "C:\\Users\\PCS\\Desktop\\PIDEV\\ErrorMakers-3A45-main\\vendor\\symfony\\twig-bundle\\Resources\\views\\exception.css.twig");
+", "@Twig/exception.css.twig", "C:\\Users\\PCS\\Desktop\\symf\\wadie PPI\\ErrorMakers-3A45\\vendor\\symfony\\twig-bundle\\Resources\\views\\exception.css.twig");
     }
 }

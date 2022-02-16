@@ -18,8 +18,9 @@ return [
     'admin' => [[], ['_controller' => 'App\\Controller\\AdminController::index'], [], [['text', '/admin']], [], []],
     'evenement1' => [[], ['_controller' => 'App\\Controller\\EvenementController::index'], [], [['text', '/evenement1']], [], []],
     'event_add' => [[], ['_controller' => 'App\\Controller\\EvenementController::Add'], [], [['text', '/evenement/add']], [], []],
-    'ev_aff' => [[], ['_controller' => 'App\\Controller\\EvenementController::afficher'], [], [['text', '/evenement2']], [], []],
+    'ev_aff' => [[], ['_controller' => 'App\\Controller\\EvenementController::afficher'], [], [['text', '/evenement/aff']], [], []],
     'ev_delete' => [['id'], ['_controller' => 'App\\Controller\\EvenementController::Supprimer'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/evenement/delete']], [], []],
     'ev_update' => [['id'], ['_controller' => 'App\\Controller\\EvenementController::Update'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/evenement/update']], [], []],
     'front' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/front']], [], []],
+    'ev_front_aff' => [[], ['_controller' => 'App\\Controller\\FrontController::afficher'], [], [['text', '/eventfront']], [], []],
 ];

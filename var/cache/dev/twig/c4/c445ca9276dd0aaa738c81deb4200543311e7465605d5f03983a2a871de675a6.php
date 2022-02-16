@@ -856,6 +856,6 @@ class __TwigTemplate_d9877dd0e39f1521ed25d99cd653a789ad8ce762d5b34cf60fe62d78287
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src=\"{{asset('dist/js/pages/dashboard.js')}}\"></script>
 
-{% endblock %}", "base.html.twig", "C:\\Users\\PCS\\Desktop\\PIDEV\\ErrorMakers-3A45-main\\templates\\base.html.twig");
+{% endblock %}", "base.html.twig", "C:\\Users\\PCS\\Desktop\\symf\\wadie PPI\\ErrorMakers-3A45\\templates\\base.html.twig");
     }
 }

@@ -281,6 +281,6 @@ class __TwigTemplate_ad3f3175678210b55215b2f8591f08637cd747d3c7197886660496e7868
                 </div>
             </div>
             <!-- Login Content Area End Here -->
-         {% endblock %}", "front/login-register.html.twig", "C:\\Users\\PCS\\Desktop\\PIDEV\\ErrorMakers-3A45-main\\templates\\front\\login-register.html.twig");
+         {% endblock %}", "front/login-register.html.twig", "C:\\Users\\PCS\\Desktop\\symf\\wadie PPI\\ErrorMakers-3A45\\templates\\front\\login-register.html.twig");
     }
 }

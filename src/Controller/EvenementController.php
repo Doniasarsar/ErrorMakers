@@ -11,6 +11,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+
+
+
 
 
 class EvenementController extends AbstractController
@@ -20,7 +24,7 @@ class EvenementController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('evenement/index.html.twig', [
+        return $this->render('front/Evenementsfront.html.twig', [
             'controller_name' => 'EvenementController',
         ]);
     }
@@ -30,7 +34,8 @@ class EvenementController extends AbstractController
      * @Route("/evenement/add",name="event_add")
      */
 
-    public function Add(Request $request){
+    public function Add(Request $request)
+     {
         $evenement=new evenement();
         $form=$this->createform(EvenementFormType::class,$evenement);
         $form->add('ajouter',SubmitType::class);
@@ -39,23 +44,31 @@ class EvenementController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
-        $em=$this->getDoctrine()->getManager();
+        
+          $file = $form->get('affiche')->getData();
+             $filename = md5(uniqid()).'.'.$file->guessExtension();
+            $file->move($this->getParameter('uploads_directory'),$filename);
+            $evenement->setaffiche($filename); 
+        
+            $em=$this->getDoctrine()->getManager();
         $em->persist($evenement);
         $em->flush();
             return $this->redirectToRoute('event_add');
 
-        }return $this->render("evenement/evenementAJOUT.html.twig", [
+         }
+        return $this->render("evenement/evenementAJOUT.html.twig", [
             'form_evenement'=>$form->createView(),
         ]);
      }
 
      
      /**
-     * @Route("/evenement2", name="ev_aff")
+     * @Route("/evenement/aff", name="ev_aff")
      */
 
     function afficher(EvenementRepository $rep)
     {
+
          $evenement = $rep->findall();
          return $this->render('evenement/evenementAFFICHAGE.html.twig', [
              'tab' => $evenement

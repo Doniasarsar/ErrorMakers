@@ -135,6 +135,6 @@ class __TwigTemplate_7d65bab0ddd3d0fb944529119420ff52b00543c548ee97ee5775325a0b3
         </div>
     </body>
 </html>
-", "@Twig/Exception/error.html.twig", "C:\\Users\\PCS\\Desktop\\PIDEV\\ErrorMakers-3A45-main\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\error.html.twig");
+", "@Twig/Exception/error.html.twig", "C:\\Users\\PCS\\Desktop\\symf\\wadie PPI\\ErrorMakers-3A45\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\error.html.twig");
     }
 }

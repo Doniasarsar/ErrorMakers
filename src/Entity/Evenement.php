@@ -6,6 +6,8 @@ use App\Repository\EvenementRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+
 /**
  * @ORM\Entity(repositoryClass=EvenementRepository::class)
  */
@@ -60,6 +62,13 @@ class Evenement
 
      */
     private $description;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Ajouter une image jpg")
+     * @Assert\File(mimeTypes={ "image/jpeg" })
+     */
+    private $affiche;
 
     public function getId(): ?int
     {
@@ -136,6 +145,18 @@ class Evenement
     public function setDescription(?string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getAffiche(): ?string
+    {
+        return $this->affiche;
+    }
+
+    public function setAffiche(string $affiche): self
+    {
+        $this->affiche = $affiche;
 
         return $this;
     }

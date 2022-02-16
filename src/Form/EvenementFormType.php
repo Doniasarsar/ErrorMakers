@@ -7,6 +7,8 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+
 
 class EvenementFormType extends AbstractType
 {
@@ -19,7 +21,10 @@ class EvenementFormType extends AbstractType
             ->add('datefin')
             ->add('prix')
             ->add('description')
-        ;
+            ->add('affiche',FileType::class,[
+                'mapped' => false,
+               'label' => 'Telecharger une image ' ])
+             ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void
