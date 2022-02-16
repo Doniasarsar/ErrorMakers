@@ -297,6 +297,17 @@ class __TwigTemplate_9716f898f1a779a7665bf470ee73bc5fe8cba2ece439bf4976fddcdb77a
               </p>
             </a>
           </li>
+          <li class=\"nav-item menu-open\">
+            <a href=\"";
+        // line 254
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ligne_commande");
+        echo "\" class=\"nav-link \">
+              <i class=\"nav-icon fas fa-tachometer-alt\"></i>
+              <p>
+                Ligne De Commande
+              </p>
+            </a>
+          </li>
     
         </ul>
       </nav>
@@ -305,9 +316,9 @@ class __TwigTemplate_9716f898f1a779a7665bf470ee73bc5fe8cba2ece439bf4976fddcdb77a
     <!-- /.sidebar -->
   </aside>
   ";
-        // line 260
+        // line 268
         $this->displayBlock('body', $context, $blocks);
-        // line 262
+        // line 270
         echo " 
   <footer class=\"main-footer\">
     <strong>Copyright &copy; 2021-2022 <a href=\"https://adminlte.io\">ProTECH.io</a>.</strong>
@@ -329,9 +340,9 @@ class __TwigTemplate_9716f898f1a779a7665bf470ee73bc5fe8cba2ece439bf4976fddcdb77a
 </html>
 
 ";
-        // line 282
+        // line 290
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 319
+        // line 327
         echo "
 ";
         
@@ -407,7 +418,7 @@ class __TwigTemplate_9716f898f1a779a7665bf470ee73bc5fe8cba2ece439bf4976fddcdb77a
 
     }
 
-    // line 260
+    // line 268
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -417,7 +428,7 @@ class __TwigTemplate_9716f898f1a779a7665bf470ee73bc5fe8cba2ece439bf4976fddcdb77a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 261
+        // line 269
         echo "  ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -427,7 +438,7 @@ class __TwigTemplate_9716f898f1a779a7665bf470ee73bc5fe8cba2ece439bf4976fddcdb77a
 
     }
 
-    // line 282
+    // line 290
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -437,15 +448,15 @@ class __TwigTemplate_9716f898f1a779a7665bf470ee73bc5fe8cba2ece439bf4976fddcdb77a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 283
+        // line 291
         echo "<!-- jQuery -->
 <script src=\"";
-        // line 284
+        // line 292
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jquery/jquery.min.js"), "html", null, true);
         echo "\"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src=\"";
-        // line 286
+        // line 294
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jquery-ui/jquery-ui.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -454,70 +465,70 @@ class __TwigTemplate_9716f898f1a779a7665bf470ee73bc5fe8cba2ece439bf4976fddcdb77a
 </script>
 <!-- Bootstrap 4 -->
 <script src=\"";
-        // line 292
+        // line 300
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/bootstrap/js/bootstrap.bundle.min.js"), "html", null, true);
         echo "\"></script>
 <!-- ChartJS -->
 <script src=\"";
-        // line 294
+        // line 302
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chart.js/Chart.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Sparkline -->
 <script src=\"";
-        // line 296
+        // line 304
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/sparklines/sparkline.js"), "html", null, true);
         echo "\"></script>
 <!-- JQVMap -->
 <script src=\"";
-        // line 298
+        // line 306
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("lugins/jqvmap/jquery.vmap.min.js"), "html", null, true);
         echo "p\"></script>
 <script src=\"";
-        // line 299
+        // line 307
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jqvmap/maps/jquery.vmap.usa.js"), "html", null, true);
         echo "\"></script>
 <!-- jQuery Knob Chart -->
 <script src=\"";
-        // line 301
+        // line 309
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jquery-knob/jquery.knob.min.js"), "html", null, true);
         echo "\"></script>
 <!-- daterangepicker -->
 <script src=\"";
-        // line 303
+        // line 311
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/moment/moment.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 304
+        // line 312
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/daterangepicker/daterangepicker.js"), "html", null, true);
         echo "\"></script>
 <!-- Tempusdominus Bootstrap 4 -->
 <script src=\"";
-        // line 306
+        // line 314
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Summernote -->
 <script src=\"";
-        // line 308
+        // line 316
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/summernote/summernote-bs4.min.js"), "html", null, true);
         echo "\"></script>
 <!-- overlayScrollbars -->
 <script src=\"";
-        // line 310
+        // line 318
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"), "html", null, true);
         echo "\"></script>
 <!-- AdminLTE App -->
 <script src=\"";
-        // line 312
+        // line 320
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("dist/js/adminlte.js"), "html", null, true);
         echo "\"></script>
 <!-- AdminLTE for demo purposes -->
 <script src=\"";
-        // line 314
+        // line 322
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("dist/js/demo.js"), "html", null, true);
         echo "\"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src=\"";
-        // line 316
+        // line 324
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("dist/js/pages/dashboard.js"), "html", null, true);
         echo "\"></script>
 
@@ -542,7 +553,7 @@ class __TwigTemplate_9716f898f1a779a7665bf470ee73bc5fe8cba2ece439bf4976fddcdb77a
 
     public function getDebugInfo()
     {
-        return array (  521 => 316,  516 => 314,  511 => 312,  506 => 310,  501 => 308,  496 => 306,  491 => 304,  487 => 303,  482 => 301,  477 => 299,  473 => 298,  468 => 296,  463 => 294,  458 => 292,  449 => 286,  444 => 284,  441 => 283,  431 => 282,  421 => 261,  411 => 260,  398 => 28,  393 => 26,  388 => 24,  383 => 22,  378 => 20,  373 => 18,  368 => 16,  361 => 12,  356 => 9,  346 => 8,  335 => 319,  333 => 282,  311 => 262,  309 => 260,  292 => 246,  235 => 192,  223 => 183,  159 => 122,  140 => 106,  121 => 90,  66 => 38,  57 => 31,  55 => 8,  46 => 1,);
+        return array (  532 => 324,  527 => 322,  522 => 320,  517 => 318,  512 => 316,  507 => 314,  502 => 312,  498 => 311,  493 => 309,  488 => 307,  484 => 306,  479 => 304,  474 => 302,  469 => 300,  460 => 294,  455 => 292,  452 => 291,  442 => 290,  432 => 269,  422 => 268,  409 => 28,  404 => 26,  399 => 24,  394 => 22,  389 => 20,  384 => 18,  379 => 16,  372 => 12,  367 => 9,  357 => 8,  346 => 327,  344 => 290,  322 => 270,  320 => 268,  303 => 254,  292 => 246,  235 => 192,  223 => 183,  159 => 122,  140 => 106,  121 => 90,  66 => 38,  57 => 31,  55 => 8,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -796,6 +807,14 @@ class __TwigTemplate_9716f898f1a779a7665bf470ee73bc5fe8cba2ece439bf4976fddcdb77a
               <i class=\"nav-icon fas fa-tachometer-alt\"></i>
               <p>
                 Commande
+              </p>
+            </a>
+          </li>
+          <li class=\"nav-item menu-open\">
+            <a href=\"{{path('ligne_commande')}}\" class=\"nav-link \">
+              <i class=\"nav-icon fas fa-tachometer-alt\"></i>
+              <p>
+                Ligne De Commande
               </p>
             </a>
           </li>

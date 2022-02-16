@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Commande;
 use App\Form\CommandeType;
 use App\Entity\Utilisateur;
+use App\Entity\LigneCommande;
 use App\Repository\ProduitRepository;
 use App\Repository\CommandeRepository;
 use App\Repository\UtilisateurRepository;
@@ -44,7 +45,9 @@ class CommandeController extends AbstractController
             $totalItem = $item['produit']->getPrix() * $item['quantite'];
             $total += $totalItem ;
         }
-        $uti =$rep ->find($client);
+        $uti =$rep->find($client);
+
+       
 
         $commande = new Commande();
         $form = $this->createForm(CommandeType::class,$commande);
@@ -55,7 +58,7 @@ class CommandeController extends AbstractController
             $em = $this->getDoctrine()->getManager();
             $em->persist($commande);
             $em->flush();
-            return $this->redirectToRoute('commande');
+            return $this->redirectToRoute('produit');
         }
        
 
@@ -120,17 +123,94 @@ class CommandeController extends AbstractController
     ]);
     }
 
+     
+
+     /**
+     * @Route("/commande3/{id}", name="commande3")
+     */
+    public function ajoutercommande3(CommandeRepository $repCommande,Request $request,SessionInterface $session, ProduitRepository $produitrep,Utilisateur $utilisateur ,UtilisateurRepository $rep): Response
+    {   
+       
+ 
+        
+        $panier = $session->get("panier",[]);
+        foreach ($panier as $id => $quantite){
+            $produit = $produitrep->find($id);
+            $dataPanier[] = [
+                "produit" => $produit,
+                "quantite" => $quantite  
+            ];
+
+        }
+
+        $ligneCommande = new LigneCommande();
+
+        foreach ($panier as $id => $id  ){
+            print "$id \n";
+            
+          
+            $cd = $ligneCommande->setIdProduit($id);
+            $cd = $ligneCommande->setIdCommande(1);
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($cd);
+            $em->flush();
+
+
+        }
+
+
+
+        
+        $client = $session->get("client", $utilisateur->getId());
+
+        
+        // on fabrique les données 
+        $total = 0; 
+        
+
+      
+
+       
+        
+        foreach($dataPanier as $item)
+        {
+            $totalItem = $item['produit']->getPrix() * $item['quantite'];
+            $total += $totalItem ;
+        }
+        $uti =$rep->find($client);
+
+
+        $commande = new Commande();
+        $form = $this->createForm(CommandeType::class,$commande);
+        $form->add('Ajouter',SubmitType::class) ; 
+        $form->handleRequest($request); 
+        if ($form->isSubmitted() && $form->isValid()){
+            $commande = $form->getData();
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($commande);
+            $em->flush();
+            $theId= $produit->getId();
+        
+        
+            return $this->redirectToRoute('commande');
+        }
+       
+
+
+        return $this->render('commande/ajouter.html.twig', [
+                    'formA' => $form->createView(),
+                    'total' => $total,
+                    'elements' => $dataPanier,
+                    'uti' => $uti
+        ]);    
+    }
+
+
+
+
     
+       
 
-
-
-   
-
-    
-
-
-    
-
+}
 
  
-}
