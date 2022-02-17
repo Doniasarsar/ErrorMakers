@@ -126,13 +126,13 @@ class CommandeController extends AbstractController
     /**
      * @Route("/commande4/{id}", name="commande4")
      */
-    public function ajoutercommande4(CommandeRepository $repCommande,Request $request,SessionInterface $session, ProduitRepository $produitrep,Utilisateur $utilisateur ,UtilisateurRepository $rep): Response
+    public function ajoutercommande4(CommandeRepository $repCommande,Request $request,SessionInterface $session, ProduitRepository $produitrep,
+    Utilisateur $utilisateur ,UtilisateurRepository $rep): Response
     {   $panier = $session->get("panier",[]);
+        $pan2 = $panier;
         $client = $session->get("client", $utilisateur->getId());
 
-        
         // on fabrique les données 
-
         $dataPanier = []; 
         $total = 0; 
         
@@ -146,42 +146,36 @@ class CommandeController extends AbstractController
            
         }
         
+        $tab = [];
+        $ligneCommande = new ligneCommande();
+        foreach ($pan2 as $id => $key){
+            $tab[] = $id;
+        }
+     
         foreach($dataPanier as $item)
         {
             $totalItem = $item['produit']->getPrix() * $item['quantite'];
             $total += $totalItem ;
         }
         $uti =$rep->find($client);
-        
-        $data = [];
-        foreach ($panier as $id ){
-            $produit = $produitrep->find($id);
-            $data[] = $produit->getId();
-
-            dd($produit);
-        }
-
-        $ligneCommande = new ligneCommande();
-        for($i=0; $i<sizeof($data);$i++)
-        {
-            $cd = $ligneCommande->setIdProduit($data[$i]);
-            $commande = $repCommande->findOneBy([], ['id' => 'desc']);
-            $lastId = $commande->getId();
-            $cd = $ligneCommande->setIdCommande($lastId);
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($cd);
-            $em->flush(); 
-            
-        }
-
-
        
-
+        
         $commande = new Commande();
         $form = $this->createForm(CommandeType::class,$commande);
         $form->add('Ajouter',SubmitType::class) ; 
         $form->handleRequest($request); 
         if ($form->isSubmitted() && $form->isValid()){
+            foreach ($tab as $key => $value) {
+                $ligneCommande = new ligneCommande();
+                $ligneCommande = $ligneCommande->setIdProduit($value);
+                $commande = $repCommande->findOneBy([], ['id' => 'desc']);
+                $lastId = $commande->getId();
+                $ligneCommande = $ligneCommande->setIdCommande($lastId);
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($ligneCommande);
+                $em->flush();
+                        
+                }
             $commande = $form->getData();
             $em = $this->getDoctrine()->getManager();
             $em->persist($commande);
