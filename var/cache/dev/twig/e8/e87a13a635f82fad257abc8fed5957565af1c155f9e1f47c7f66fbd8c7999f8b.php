@@ -120,29 +120,13 @@ class __TwigTemplate_5cd546731af9af6143428b40cf600c7fa886acd2f9078a4137ad902b144
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 22
-        echo "        ";
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 22, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 22));
-        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-            // line 23
-            echo "        <div class=\"alert alert-success\">
-            ";
-            // line 24
-            echo twig_escape_filter($this->env, $context["message"], "html", null, true);
-            echo "
-        </div>
-    ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 27
-        echo "            <div class=\"breadcrumb-area\">
+        echo "       
+            <div class=\"breadcrumb-area\">
                 <div class=\"container\">
                     <div class=\"breadcrumb-content\">
                         <ul>
                             <li><a href=\"";
-        // line 31
+        // line 27
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\">Home</a></li>
                             <li class=\"active\">Account</li>
@@ -198,7 +182,7 @@ class __TwigTemplate_5cd546731af9af6143428b40cf600c7fa886acd2f9078a4137ad902b144
 
     public function getDebugInfo()
     {
-        return array (  146 => 31,  140 => 27,  131 => 24,  128 => 23,  123 => 22,  114 => 19,  111 => 18,  107 => 17,  92 => 4,  82 => 3,  59 => 2,  36 => 1,);
+        return array (  130 => 27,  123 => 22,  114 => 19,  111 => 18,  107 => 17,  92 => 4,  82 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -224,11 +208,7 @@ class __TwigTemplate_5cd546731af9af6143428b40cf600c7fa886acd2f9078a4137ad902b144
                 {{ message }}
             </div>
         {% endfor %}
-        {% for message in app.flashes('success') %}
-        <div class=\"alert alert-success\">
-            {{ message }}
-        </div>
-    {% endfor %}
+       
             <div class=\"breadcrumb-area\">
                 <div class=\"container\">
                     <div class=\"breadcrumb-content\">

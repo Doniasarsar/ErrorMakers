@@ -4913,8 +4913,8 @@
       <call method="setOptions">
         <argument type="collection">
           <argument key="login_path">login</argument>
+          <argument key="default_target_path">home</argument>
           <argument key="always_use_default_target_path">false</argument>
-          <argument key="default_target_path">/</argument>
           <argument key="target_path_parameter">_target_path</argument>
           <argument key="use_referer">false</argument>
         </argument>

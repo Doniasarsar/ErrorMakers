@@ -409,7 +409,7 @@
                                            <li><a href="{{path('login')}}">Login</a></li>
                                           {% else %}
                                           
-                                                <li><a href="{{path("usercompte",{'id':app.user.id}) }}">Account</a></li>
+                                                <li><a href="{{path("usercompte",{'id':app.user.id}) }}">{{app.user.Nom}},{{app.user.Prenom}}</a></li>
                                                 <li><a href="{{path('logout')}}">Logout</a></li>
                                               </a>
                                        
@@ -437,6 +437,16 @@
                 <!-- Mobile Menu Area End Here -->
             </header>
             <!-- Header Area End Here -->
+            {% for message in app.flashes('error') %}
+            <div class="alert alert-danger">
+                {{ message }}
+            </div>
+        {% endfor %}
+        {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
 
             {% block body %} {% endblock %}
 

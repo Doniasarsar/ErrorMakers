@@ -102,7 +102,8 @@ class UtilisateursController extends AbstractController
 
         $em=$this->getDoctrine()->getManager();
         $em->flush();
-        return $this->redirectToRoute('home');
+        $this->addFlash('success','Info changed');
+        return $this->redirectToRoute('usercompte');
 
         }return $this->render("utilisateurs/update.html.twig", [
             'userForm'=>$form->createView(),
@@ -132,6 +133,7 @@ class UtilisateursController extends AbstractController
                 $user->setPassword($encoder->encodePassword($user,$request->request->get('pass')));
                 $em->flush();
                 $this->addFlash('success','Password changed');
+                return $this->redirectToRoute('usercompte');
                
             }else
             $this->addFlash('error','Password does not match');

@@ -48,4 +48,15 @@ class AdminController extends AbstractController
 
         return $this->redirectToRoute('userlist');
     }
+     /**
+     * @Route("/login", name="loginadmin")
+     */
+    public function login(): Response
+    {
+        return $this->render('dashboard/loginadmin.html.twig');
+    }
+     /**
+     * @Route("/logout", name="logoutadmin")
+     */
+    public function logout(){}
 }
