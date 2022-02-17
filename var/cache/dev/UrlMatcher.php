@@ -17,7 +17,14 @@ return [
         '/admin/dashboard/listU' => [[['_route' => 'admin_userlist', '_controller' => 'App\\Controller\\AdminController::afficher'], null, null, null, false, false, null]],
         '/admin/loginadmin' => [[['_route' => 'admin_loginadmin', '_controller' => 'App\\Controller\\AdminController::login'], null, null, null, false, false, null]],
         '/admin/logout' => [[['_route' => 'admin_logoutadmin', '_controller' => 'App\\Controller\\AdminController::logout'], null, null, null, false, false, null]],
+        '/cart' => [[['_route' => 'cart_index', '_controller' => 'App\\Controller\\CartController::index'], null, null, null, true, false, null]],
+        '/cart/deleteall' => [[['_route' => 'cart_deleteall', '_controller' => 'App\\Controller\\CartController::deleteall'], null, null, null, false, false, null]],
+        '/commande' => [[['_route' => 'commande', '_controller' => 'App\\Controller\\CommandeController::ajoutercommande'], null, null, null, false, false, null]],
+        '/admin/affcommande' => [[['_route' => 'admincommande', '_controller' => 'App\\Controller\\CommandeController::afficher'], null, null, null, false, false, null]],
+        '/commande4' => [[['_route' => 'commande4', '_controller' => 'App\\Controller\\CommandeController::ajoutercommande4'], null, null, null, false, false, null]],
         '/home' => [[['_route' => 'home', '_controller' => 'App\\Controller\\FrontController::index'], null, null, null, false, false, null]],
+        '/produit' => [[['_route' => 'produit', '_controller' => 'App\\Controller\\FrontController::afficher'], null, null, null, false, false, null]],
+        '/ligne/commande' => [[['_route' => 'ligne_commande', '_controller' => 'App\\Controller\\LigneCommandeController::index'], null, null, null, false, false, null]],
         '/utilisateurs' => [[['_route' => 'utilisateurs', '_controller' => 'App\\Controller\\UtilisateursController::index'], null, null, null, false, false, null]],
         '/utilisateurs/add' => [[['_route' => 'userAdd', '_controller' => 'App\\Controller\\UtilisateursController::AddUser'], null, null, null, false, false, null]],
         '/utilisateurs/addActeur' => [[['_route' => 'acteurSAdd', '_controller' => 'App\\Controller\\UtilisateursController::AddActeurS'], null, null, null, false, false, null]],
@@ -45,10 +52,23 @@ return [
                     .')'
                 .')'
                 .'|/a(?'
-                    .'|dmin/dashboard/listU/delete/([^/]++)(*:210)'
-                    .'|ctivation/([^/]++)(*:236)'
+                    .'|dmin/(?'
+                        .'|dashboard/listU/delete/([^/]++)(*:213)'
+                        .'|supp(?'
+                            .'|commande/([^/]++)(*:245)'
+                            .'|ligne/([^/]++)(*:267)'
+                        .')'
+                        .'|modifcommande/([^/]++)(*:298)'
+                    .')'
+                    .'|ctivation/([^/]++)(*:325)'
                 .')'
-                .'|/utilisateurs/update/([^/]++)(*:274)'
+                .'|/cart/(?'
+                    .'|add/([^/]++)(*:355)'
+                    .'|remove/([^/]++)(*:378)'
+                    .'|delete/([^/]++)(*:401)'
+                .')'
+                .'|/delete1/([^/]++)(*:427)'
+                .'|/utilisateurs/update/([^/]++)(*:464)'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -59,9 +79,16 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        210 => [[['_route' => 'admin_userdelete', '_controller' => 'App\\Controller\\AdminController::Delete'], ['id'], null, null, false, true, null]],
-        236 => [[['_route' => 'activation', '_controller' => 'App\\Controller\\UtilisateursController::activation'], ['token'], null, null, false, true, null]],
-        274 => [
+        213 => [[['_route' => 'admin_userdelete', '_controller' => 'App\\Controller\\AdminController::Delete'], ['id'], null, null, false, true, null]],
+        245 => [[['_route' => 'adminsupp', '_controller' => 'App\\Controller\\CommandeController::supprimercommande'], ['id'], null, null, false, true, null]],
+        267 => [[['_route' => 'adminlignesupp', '_controller' => 'App\\Controller\\LigneCommandeController::supprimercommande'], ['id'], null, null, false, true, null]],
+        298 => [[['_route' => 'adminmodif', '_controller' => 'App\\Controller\\CommandeController::modifiercommande'], ['id'], null, null, false, true, null]],
+        325 => [[['_route' => 'activation', '_controller' => 'App\\Controller\\UtilisateursController::activation'], ['token'], null, null, false, true, null]],
+        355 => [[['_route' => 'cart_add', '_controller' => 'App\\Controller\\CartController::add'], ['id'], null, null, false, true, null]],
+        378 => [[['_route' => 'cart_remove', '_controller' => 'App\\Controller\\CartController::remove'], ['id'], null, null, false, true, null]],
+        401 => [[['_route' => 'cart_delete', '_controller' => 'App\\Controller\\CartController::delete'], ['id'], null, null, false, true, null]],
+        427 => [[['_route' => 'delete1', '_controller' => 'App\\Controller\\FrontController::delete1'], ['id'], null, null, false, true, null]],
+        464 => [
             [['_route' => 'userupdate', '_controller' => 'App\\Controller\\UtilisateursController::Update'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

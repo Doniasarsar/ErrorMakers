@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).'/vendor/autoload.php';
-require __DIR__.'/ContainerZjno7hF/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerGx5uR6z/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -34,13 +34,20 @@ $classes[] = 'Symfony\Bundle\FrameworkBundle\EventListener\ResolveControllerName
 $classes[] = 'Symfony\Component\HttpFoundation\RequestMatcher';
 $classes[] = 'Symfony\Component\DependencyInjection\ServiceLocator';
 $classes[] = 'App\Controller\AdminController';
+$classes[] = 'App\Controller\CartController';
+$classes[] = 'App\Controller\CommandeController';
 $classes[] = 'App\Controller\FrontController';
+$classes[] = 'App\Controller\LigneCommandeController';
 $classes[] = 'App\Controller\UtilisateursController';
 $classes[] = 'App\Form\ActeurSType';
+$classes[] = 'App\Form\CommandeType';
 $classes[] = 'App\Form\EditUtilisateursType';
 $classes[] = 'App\Form\UtilisateursType';
 $classes[] = 'App\Repository\BoutiquesRepository';
+$classes[] = 'App\Repository\CommandeRepository';
+$classes[] = 'App\Repository\LigneCommandeRepository';
 $classes[] = 'App\Repository\LivraisonsRepository';
+$classes[] = 'App\Repository\ProduitRepository';
 $classes[] = 'App\Repository\UtilisateursRepository';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Dbal\ManagerRegistryAwareConnectionProvider';
