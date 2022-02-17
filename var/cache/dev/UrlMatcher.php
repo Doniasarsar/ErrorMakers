@@ -13,14 +13,17 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
-        '/dashboard' => [[['_route' => 'dashboard', '_controller' => 'App\\Controller\\AdminController::index'], null, null, null, false, false, null]],
-        '/dashboard/listU' => [[['_route' => 'userlist', '_controller' => 'App\\Controller\\AdminController::afficher'], null, null, null, false, false, null]],
+        '/admin/dashboard' => [[['_route' => 'dashboard', '_controller' => 'App\\Controller\\AdminController::index'], null, null, null, false, false, null]],
+        '/admin/dashboard/listU' => [[['_route' => 'userlist', '_controller' => 'App\\Controller\\AdminController::afficher'], null, null, null, false, false, null]],
         '/home' => [[['_route' => 'home', '_controller' => 'App\\Controller\\FrontController::index'], null, null, null, false, false, null]],
         '/utilisateurs' => [[['_route' => 'utilisateurs', '_controller' => 'App\\Controller\\UtilisateursController::index'], null, null, null, false, false, null]],
         '/utilisateurs/add' => [[['_route' => 'userAdd', '_controller' => 'App\\Controller\\UtilisateursController::AddUser'], null, null, null, false, false, null]],
         '/utilisateurs/addActeur' => [[['_route' => 'acteurSAdd', '_controller' => 'App\\Controller\\UtilisateursController::AddActeurS'], null, null, null, false, false, null]],
+        '/utilisateurs/compte' => [[['_route' => 'usercompte', '_controller' => 'App\\Controller\\UtilisateursController::Compte'], null, null, null, false, false, null]],
+        '/utilisateurs/updatepass' => [[['_route' => 'passupdate', '_controller' => 'App\\Controller\\UtilisateursController::EditPassword'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\UtilisateursController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'logout', '_controller' => 'App\\Controller\\UtilisateursController::logout'], null, null, null, false, false, null]],
+        '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\FrontController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -39,9 +42,11 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/dashboard/listU/delete/([^/]++)(*:201)'
-                .'|/utilisateurs/update/([^/]++)(*:238)'
-                .'|/activation/([^/]++)(*:266)'
+                .'|/a(?'
+                    .'|dmin/dashboard/listU/delete/([^/]++)(*:210)'
+                    .'|ctivation/([^/]++)(*:236)'
+                .')'
+                .'|/utilisateurs/update/([^/]++)(*:274)'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -52,10 +57,10 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        201 => [[['_route' => 'userdelete', '_controller' => 'App\\Controller\\AdminController::Delete'], ['id'], null, null, false, true, null]],
-        238 => [[['_route' => 'userupdate', '_controller' => 'App\\Controller\\UtilisateursController::Update'], ['id'], null, null, false, true, null]],
-        266 => [
-            [['_route' => 'activation', '_controller' => 'App\\Controller\\UtilisateursController::activation'], ['token'], null, null, false, true, null],
+        210 => [[['_route' => 'userdelete', '_controller' => 'App\\Controller\\AdminController::Delete'], ['id'], null, null, false, true, null]],
+        236 => [[['_route' => 'activation', '_controller' => 'App\\Controller\\UtilisateursController::activation'], ['token'], null, null, false, true, null]],
+        274 => [
+            [['_route' => 'userupdate', '_controller' => 'App\\Controller\\UtilisateursController::Update'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

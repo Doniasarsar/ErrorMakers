@@ -112,6 +112,6 @@ class __TwigTemplate_058922c10e6555cb32899583fb1f4438bf601c6a886e7ec3f57b75dd953
     </exception>
 {% endfor %}
 </error>
-", "@Twig/Exception/exception.xml.twig", "/Users/skanderzouaoui/Documents/ProTECH/vendor/symfony/twig-bundle/Resources/views/Exception/exception.xml.twig");
+", "@Twig/Exception/exception.xml.twig", "/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/twig-bundle/Resources/views/Exception/exception.xml.twig");
     }
 }

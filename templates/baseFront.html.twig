@@ -214,17 +214,16 @@
                                         <!-- Begin Header Middle Wishlist Area -->
                                          {% if not app.user %}
                                          <li class="hm-wishlist">
-                                            <a href="{{path('userAdd')}}">    
+                                            <a href="{{path('login')}}">    
                                                 <i class="fa fa-user-o"></i>
                                             </a>
                                         </li>
                                         {% else %}
-                                        
-                                            <a href="{{path('logout')}}">    
-                                                logout
+                                        <li class="hm-wishlist">
+                                            <a href="{{path('usercompte') }}">    
+                                                <i class="fa fa-user-o"></i>
                                             </a>
-                                     
-                                            
+                                        </li>     
                                         {% endif %}
                                         
                                         <!-- Header Middle Wishlist Area End Here -->
@@ -410,7 +409,8 @@
                                            <li><a href="{{path('login')}}">Login</a></li>
                                           {% else %}
                                           
-                                                <li><a href="{{path("userupdate",{'id':app.user.id}) }}">Account</a></li>
+                                                <li><a href="{{path("usercompte",{'id':app.user.id}) }}">Account</a></li>
+                                                <li><a href="{{path('logout')}}">Logout</a></li>
                                               </a>
                                        
                                               

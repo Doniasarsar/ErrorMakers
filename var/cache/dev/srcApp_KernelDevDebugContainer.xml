@@ -374,6 +374,9 @@
     <service id="App\Form\ActeurSType" class="App\Form\ActeurSType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Form\EditUtilisateursType" class="App\Form\EditUtilisateursType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\UtilisateursType" class="App\Form\UtilisateursType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -808,6 +811,7 @@
       </argument>
       <argument type="collection">
         <argument>App\Form\ActeurSType</argument>
+        <argument>App\Form\EditUtilisateursType</argument>
         <argument>App\Form\UtilisateursType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
@@ -1142,7 +1146,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.FTL1uwY"/>
+      <argument type="service" id=".service_locator.Rh4YACD"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4495,7 +4499,15 @@
       <argument type="service" id="security.authentication.retry_entry_point"/>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
     </service>
-    <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap" public="false"/>
+    <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap" public="false">
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.5dJADCx"/>
+        <argument type="collection">
+          <argument>ROLE_ADMIN</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+    </service>
     <service id="security.context_listener" class="Symfony\Component\Security\Http\Firewall\ContextListener" public="false">
       <tag name="monolog.logger" channel="security"/>
       <argument type="service" id="security.untracked_token_storage"/>
@@ -4993,6 +5005,9 @@
         <argument key="security.firewall.map.context.main" type="service_closure" id="security.firewall.map.context.main"/>
       </argument>
     </service>
+    <service id=".security.request_matcher.5dJADCx" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+      <argument>^/admin</argument>
+    </service>
     <service id="security.command.user_password_encoder" class="Symfony\Bundle\SecurityBundle\Command\UserPasswordEncoderCommand" public="false">
       <tag name="console.command" command="security:encode-password"/>
       <argument type="service" id="security.encoder_factory.generic"/>
@@ -5047,6 +5062,8 @@
     <service id=".abstract.instanceof.App\Controller\UtilisateursController" class="App\Controller\UtilisateursController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ActeurSType" class="App\Form\ActeurSType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ActeurSType" class="App\Form\ActeurSType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\EditUtilisateursType" class="App\Form\EditUtilisateursType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\EditUtilisateursType" class="App\Form\EditUtilisateursType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UtilisateursType" class="App\Form\UtilisateursType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\UtilisateursType" class="App\Form\UtilisateursType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\BoutiquesRepository" class="App\Repository\BoutiquesRepository" autowire="true" abstract="true"/>
@@ -5355,7 +5372,7 @@
         <argument key="rep" type="service_closure" id="App\Repository\UtilisateursRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.CcERF2q" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.nsKS6di" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AdminController::Delete" type="service_closure" id=".service_locator.N9H1lzz"/>
@@ -5363,14 +5380,16 @@
         <argument key="App\Controller\FrontController::Update" type="service_closure" id=".service_locator.N9H1lzz"/>
         <argument key="App\Controller\UtilisateursController::AddActeurS" type="service_closure" id=".service_locator.jmvbEvf"/>
         <argument key="App\Controller\UtilisateursController::AddUser" type="service_closure" id=".service_locator.jmvbEvf"/>
-        <argument key="App\Controller\UtilisateursController::Update" type="service_closure" id=".service_locator.saRDzaS"/>
+        <argument key="App\Controller\UtilisateursController::EditPassword" type="service_closure" id=".service_locator.saRDzaS"/>
+        <argument key="App\Controller\UtilisateursController::Update" type="service_closure" id=".service_locator.N9H1lzz"/>
         <argument key="App\Controller\UtilisateursController::activation" type="service_closure" id=".service_locator.N9H1lzz"/>
         <argument key="App\Controller\AdminController:Delete" type="service_closure" id=".service_locator.N9H1lzz"/>
         <argument key="App\Controller\AdminController:afficher" type="service_closure" id=".service_locator.N9H1lzz"/>
         <argument key="App\Controller\FrontController:Update" type="service_closure" id=".service_locator.N9H1lzz"/>
         <argument key="App\Controller\UtilisateursController:AddActeurS" type="service_closure" id=".service_locator.jmvbEvf"/>
         <argument key="App\Controller\UtilisateursController:AddUser" type="service_closure" id=".service_locator.jmvbEvf"/>
-        <argument key="App\Controller\UtilisateursController:Update" type="service_closure" id=".service_locator.saRDzaS"/>
+        <argument key="App\Controller\UtilisateursController:EditPassword" type="service_closure" id=".service_locator.saRDzaS"/>
+        <argument key="App\Controller\UtilisateursController:Update" type="service_closure" id=".service_locator.N9H1lzz"/>
         <argument key="App\Controller\UtilisateursController:activation" type="service_closure" id=".service_locator.N9H1lzz"/>
       </argument>
     </service>
@@ -5433,10 +5452,11 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.FTL1uwY" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.Rh4YACD" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\ActeurSType" type="service_closure" id="App\Form\ActeurSType"/>
+        <argument key="App\Form\EditUtilisateursType" type="service_closure" id="App\Form\EditUtilisateursType"/>
         <argument key="App\Form\UtilisateursType" type="service_closure" id="App\Form\UtilisateursType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service_closure" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service_closure" id="form.type.choice"/>
@@ -5832,12 +5852,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.CcERF2q"/>
+      <argument type="service" id=".service_locator.nsKS6di"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.CcERF2q"/>
+      <argument type="service" id=".service_locator.nsKS6di"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -6236,7 +6256,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.CcERF2q"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.nsKS6di"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

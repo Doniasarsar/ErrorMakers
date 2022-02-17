@@ -5,12 +5,14 @@ namespace App\Controller;
 use App\Form\ActeurSType;
 use App\Entity\Utilisateurs;
 use App\Form\UtilisateursType;
+use App\Form\EditUtilisateursType;
 use App\Repository\UtilisateursRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Security\Core\Encoder\MessageDigestPasswordEncoder;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class UtilisateursController extends AbstractController
@@ -36,7 +38,7 @@ class UtilisateursController extends AbstractController
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid())
         {
-            $user->setToken(md5(uniqid()));
+           
 
             $hash = $encoder->encodePassword($user, $user->getPassword());
             $user->setPassword($hash);
@@ -88,30 +90,55 @@ class UtilisateursController extends AbstractController
      /**
      * @Route("/utilisateurs/update/{id}",name="userupdate")
      */
-    public function Update($id,UtilisateursRepository $rep,Request $request , UserPasswordEncoderInterface $encoder){
+    public function Update($id,UtilisateursRepository $rep,Request $request){
         
         $user=$rep->find($id);
 
-        $form=$this->createform(UtilisateursType::class,$user);
+        $form=$this->createform(EditUtilisateursType::class,$user);
         $form->add('Update',SubmitType::class);
-
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
 
-            $user->setToken(md5(uniqid()));
-
-            $hash = $encoder->encodePassword($user, $user->getPassword());
-            $user->setPassword($hash);
-
         $em=$this->getDoctrine()->getManager();
         $em->flush();
-            return $this->redirectToRoute('home');
+        return $this->redirectToRoute('home');
 
         }return $this->render("utilisateurs/update.html.twig", [
             'userForm'=>$form->createView(),
             'user'=>$user,
+          
         ]);
+
+     }
+     /**
+     * @Route("/utilisateurs/compte",name="usercompte")
+     */
+    public function Compte(){
+        
+      
+        return $this->render("utilisateurs/compte.html.twig");
+
+     }
+     /**
+     * @Route("/utilisateurs/updatepass",name="passupdate")
+     */
+    public function EditPassword(UtilisateursRepository $rep ,Request $request , UserPasswordEncoderInterface $encoder ){
+        
+        if($request->isMethod('POST')){
+            $em= $this->getDoctrine()->getManager();
+            $user=$this->getUser();
+            if($request->request->get('pass') == $request->request->get('pass2')){
+                $user->setPassword($encoder->encodePassword($user,$request->request->get('pass')));
+                $em->flush();
+                $this->addFlash('success','Password changed');
+               
+            }else
+            $this->addFlash('error','Password does not match');
+
+
+        }
+        return $this->render("utilisateurs/updatepass.html.twig");
 
      }
      /**
@@ -142,6 +169,8 @@ class UtilisateursController extends AbstractController
      * @Route("/logout", name="logout")
      */
     public function logout(){}
+
+  
 
      
 }

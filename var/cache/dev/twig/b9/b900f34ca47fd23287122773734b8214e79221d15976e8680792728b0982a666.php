@@ -244,7 +244,7 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
             echo "                                         <li class=\"hm-wishlist\">
                                             <a href=\"";
             // line 217
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("userAdd");
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
             echo "\">    
                                                 <i class=\"fa fa-user-o\"></i>
                                             </a>
@@ -252,18 +252,17 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
                                         ";
         } else {
             // line 222
-            echo "                                        
+            echo "                                        <li class=\"hm-wishlist\">
                                             <a href=\"";
             // line 223
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("usercompte");
             echo "\">    
-                                                logout
+                                                <i class=\"fa fa-user-o\"></i>
                                             </a>
-                                     
-                                            
+                                        </li>     
                                         ";
         }
-        // line 229
+        // line 228
         echo "                                        
                                         <!-- Header Middle Wishlist Area End Here -->
                                         <!-- Begin Header Mini Cart Area -->
@@ -280,7 +279,7 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
                                                     <li>
                                                         <a href=\"single-product.html\" class=\"minicart-product-image\">
                                                             <img src=\"";
-        // line 244
+        // line 243
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/small-size/1.jpg"), "html", null, true);
         echo "\" alt=\"cart products\">
                                                         </a>
@@ -295,7 +294,7 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
                                                     <li>
                                                         <a href=\"single-product.html\" class=\"minicart-product-image\">
                                                             <img src=\"";
-        // line 256
+        // line 255
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/small-size/2.jpg"), "html", null, true);
         echo "\" alt=\"cart products\">
                                                         </a>
@@ -339,7 +338,7 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
                                    <nav>
                                        <ul>
                                         <li><a href=\"";
-        // line 297
+        // line 296
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\">Home</a></li>     
                                            <li class=\"megamenu-holder\"><a href=\"shop-left-sidebar.html\">Shop</a>
@@ -454,20 +453,24 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
                                            <li><a href=\"shop-left-sidebar.html\">Smartwatch</a></li>
                                            <li><a href=\"shop-left-sidebar.html\">Accessories</a></li>
                                            ";
-        // line 409
-        if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 409, $this->source); })()), "user", [], "any", false, false, false, 409)) {
-            // line 410
+        // line 408
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 408, $this->source); })()), "user", [], "any", false, false, false, 408)) {
+            // line 409
             echo "                                           <li><a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
             echo "\">Login</a></li>
                                           ";
         } else {
-            // line 412
+            // line 411
             echo "                                          
                                                 <li><a href=\"";
-            // line 413
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("userupdate", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 413, $this->source); })()), "user", [], "any", false, false, false, 413), "id", [], "any", false, false, false, 413)]), "html", null, true);
+            // line 412
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("usercompte", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 412, $this->source); })()), "user", [], "any", false, false, false, 412), "id", [], "any", false, false, false, 412)]), "html", null, true);
             echo "\">Account</a></li>
+                                                <li><a href=\"";
+            // line 413
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
+            echo "\">Logout</a></li>
                                               </a>
                                        
                                               
@@ -1195,7 +1198,7 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
 
     public function getDebugInfo()
     {
-        return array (  1175 => 827,  1170 => 825,  1165 => 823,  1160 => 821,  1155 => 819,  1150 => 817,  1145 => 815,  1140 => 813,  1135 => 811,  1130 => 809,  1125 => 807,  1120 => 805,  1115 => 803,  1110 => 801,  1105 => 799,  1100 => 797,  1095 => 795,  1090 => 793,  1085 => 791,  1080 => 789,  1074 => 787,  1064 => 786,  1045 => 441,  1032 => 45,  1027 => 43,  1022 => 41,  1017 => 39,  1012 => 37,  1007 => 35,  1002 => 33,  997 => 31,  992 => 29,  987 => 27,  982 => 25,  977 => 23,  972 => 21,  967 => 19,  962 => 17,  957 => 15,  952 => 13,  949 => 12,  939 => 11,  920 => 8,  906 => 829,  904 => 786,  823 => 708,  819 => 707,  815 => 706,  811 => 705,  807 => 704,  803 => 703,  796 => 699,  790 => 696,  784 => 693,  778 => 690,  772 => 687,  766 => 684,  733 => 654,  593 => 517,  567 => 494,  551 => 481,  535 => 468,  519 => 455,  504 => 442,  502 => 441,  477 => 418,  469 => 413,  466 => 412,  460 => 410,  458 => 409,  343 => 297,  299 => 256,  284 => 244,  267 => 229,  258 => 223,  255 => 222,  247 => 217,  244 => 216,  242 => 215,  149 => 125,  125 => 104,  121 => 103,  64 => 48,  62 => 11,  58 => 9,  56 => 8,  47 => 1,);
+        return array (  1178 => 827,  1173 => 825,  1168 => 823,  1163 => 821,  1158 => 819,  1153 => 817,  1148 => 815,  1143 => 813,  1138 => 811,  1133 => 809,  1128 => 807,  1123 => 805,  1118 => 803,  1113 => 801,  1108 => 799,  1103 => 797,  1098 => 795,  1093 => 793,  1088 => 791,  1083 => 789,  1077 => 787,  1067 => 786,  1048 => 441,  1035 => 45,  1030 => 43,  1025 => 41,  1020 => 39,  1015 => 37,  1010 => 35,  1005 => 33,  1000 => 31,  995 => 29,  990 => 27,  985 => 25,  980 => 23,  975 => 21,  970 => 19,  965 => 17,  960 => 15,  955 => 13,  952 => 12,  942 => 11,  923 => 8,  909 => 829,  907 => 786,  826 => 708,  822 => 707,  818 => 706,  814 => 705,  810 => 704,  806 => 703,  799 => 699,  793 => 696,  787 => 693,  781 => 690,  775 => 687,  769 => 684,  736 => 654,  596 => 517,  570 => 494,  554 => 481,  538 => 468,  522 => 455,  507 => 442,  505 => 441,  480 => 418,  472 => 413,  468 => 412,  465 => 411,  459 => 409,  457 => 408,  342 => 296,  298 => 255,  283 => 243,  266 => 228,  258 => 223,  255 => 222,  247 => 217,  244 => 216,  242 => 215,  149 => 125,  125 => 104,  121 => 103,  64 => 48,  62 => 11,  58 => 9,  56 => 8,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -1416,17 +1419,16 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
                                         <!-- Begin Header Middle Wishlist Area -->
                                          {% if not app.user %}
                                          <li class=\"hm-wishlist\">
-                                            <a href=\"{{path('userAdd')}}\">    
+                                            <a href=\"{{path('login')}}\">    
                                                 <i class=\"fa fa-user-o\"></i>
                                             </a>
                                         </li>
                                         {% else %}
-                                        
-                                            <a href=\"{{path('logout')}}\">    
-                                                logout
+                                        <li class=\"hm-wishlist\">
+                                            <a href=\"{{path('usercompte') }}\">    
+                                                <i class=\"fa fa-user-o\"></i>
                                             </a>
-                                     
-                                            
+                                        </li>     
                                         {% endif %}
                                         
                                         <!-- Header Middle Wishlist Area End Here -->
@@ -1612,7 +1614,8 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
                                            <li><a href=\"{{path('login')}}\">Login</a></li>
                                           {% else %}
                                           
-                                                <li><a href=\"{{path(\"userupdate\",{'id':app.user.id}) }}\">Account</a></li>
+                                                <li><a href=\"{{path(\"usercompte\",{'id':app.user.id}) }}\">Account</a></li>
+                                                <li><a href=\"{{path('logout')}}\">Logout</a></li>
                                               </a>
                                        
                                               

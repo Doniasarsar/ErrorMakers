@@ -26,6 +26,7 @@ class __TwigTemplate_88be26f14a393c1fd77e75ed6a5bf4a4019ffb52369a3723be2014f7d31
 
         $this->blocks = [
             'body' => [$this, 'block_body'],
+            'javascripts' => [$this, 'block_javascripts'],
         ];
     }
 
@@ -165,13 +166,9 @@ $context["role"], "ROLE_LIV"))) {
             $context = array_intersect_key($context, $_parent) + $_parent;
             // line 59
             echo "</td>
-<td><a class=\"btn btn-info\" href=\"";
-            // line 60
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("userupdate", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 60)]), "html", null, true);
-            echo "\">Update</a>
 <td><a class=\"btn btn-danger\" href=\"";
-            // line 61
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("userdelete", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 61)]), "html", null, true);
+            // line 60
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("userdelete", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 60)]), "html", null, true);
             echo "\">Delete</a>
 
 </tr>
@@ -179,7 +176,7 @@ $context["role"], "ROLE_LIV"))) {
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 65
+            // line 64
             echo "<td colspan=\"6\">Il n'y a aucun utilisateur inscrit!</td>
 
 </tbody>
@@ -188,7 +185,7 @@ $context["role"], "ROLE_LIV"))) {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 69
+        // line 68
         echo "</table>               
     
 
@@ -199,6 +196,97 @@ $context["role"], "ROLE_LIV"))) {
   <!-- Control sidebar content goes here -->
 </aside>
 <!-- /.control-sidebar -->
+
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 80
+    public function block_javascripts($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 81
+        $this->displayParentBlock("javascripts", $context, $blocks);
+        echo "
+
+<!-- DataTables  & Plugins -->
+<script src=\"";
+        // line 84
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables/jquery.dataTables.min.js"), "html", null, true);
+        echo "\"></script>
+<script src=\"";
+        // line 85
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"), "html", null, true);
+        echo "\"></script>
+<script src=\"";
+        // line 86
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-responsive/js/dataTables.responsive.min.js"), "html", null, true);
+        echo "\"></script>
+<script src=\"";
+        // line 87
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-responsive/js/responsive.bootstrap4.min.js"), "html", null, true);
+        echo "\"></script>
+<script src=\"";
+        // line 88
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/dataTables.buttons.min.js"), "html", null, true);
+        echo "\"></script>
+<script src=\"";
+        // line 89
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.bootstrap4.min.js"), "html", null, true);
+        echo "\"></script>
+<script src=\"";
+        // line 90
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jszip/jszip.min.js"), "html", null, true);
+        echo "\"></script>
+<script src=\"";
+        // line 91
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/pdfmake/pdfmake.min.js"), "html", null, true);
+        echo "\"></script>
+<script src=\"";
+        // line 92
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/pdfmake/vfs_fonts.js"), "html", null, true);
+        echo "\"></script>
+<script src=\"";
+        // line 93
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.html5.min.js"), "html", null, true);
+        echo "\"></script>
+<script src=\"";
+        // line 94
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.print.min.js"), "html", null, true);
+        echo "\"></script>
+<script src=\"";
+        // line 95
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.colVis.min.js"), "html", null, true);
+        echo "\"></script>
+
+<script>
+  \$(function () {
+    \$(\"#example1\").DataTable({
+      \"responsive\": true, \"lengthChange\": false, \"autoWidth\": false,
+      \"buttons\": [\"copy\", \"csv\", \"excel\", \"pdf\", \"print\", \"colvis\"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    \$('#example2').DataTable({
+      \"paging\": true,
+      \"lengthChange\": false,
+      \"searching\": false,
+      \"ordering\": true,
+      \"info\": true,
+      \"autoWidth\": false,
+      \"responsive\": true,
+    });
+  });
+</script>
 
 ";
         
@@ -221,7 +309,7 @@ $context["role"], "ROLE_LIV"))) {
 
     public function getDebugInfo()
     {
-        return array (  192 => 69,  183 => 65,  174 => 61,  170 => 60,  167 => 59,  158 => 56,  156 => 55,  153 => 54,  151 => 53,  148 => 52,  146 => 51,  141 => 49,  137 => 48,  133 => 47,  129 => 46,  125 => 45,  121 => 44,  117 => 43,  113 => 41,  108 => 40,  81 => 16,  68 => 5,  58 => 4,  35 => 1,);
+        return array (  270 => 95,  266 => 94,  262 => 93,  258 => 92,  254 => 91,  250 => 90,  246 => 89,  242 => 88,  238 => 87,  234 => 86,  230 => 85,  226 => 84,  220 => 81,  210 => 80,  189 => 68,  180 => 64,  171 => 60,  168 => 59,  159 => 56,  157 => 55,  154 => 54,  152 => 53,  149 => 52,  147 => 51,  142 => 49,  138 => 48,  134 => 47,  130 => 46,  126 => 45,  122 => 44,  118 => 43,  114 => 41,  109 => 40,  82 => 16,  69 => 5,  59 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -285,7 +373,6 @@ $context["role"], "ROLE_LIV"))) {
 
 {% endif %}
 {% endfor %}</td>
-<td><a class=\"btn btn-info\" href=\"{{path(\"userupdate\",{'id':user.id}) }}\">Update</a>
 <td><a class=\"btn btn-danger\" href=\"{{path(\"userdelete\",{'id':user.id}) }}\">Delete</a>
 
 </tr>
@@ -304,6 +391,42 @@ $context["role"], "ROLE_LIV"))) {
   <!-- Control sidebar content goes here -->
 </aside>
 <!-- /.control-sidebar -->
+
+{% endblock %}
+{% block javascripts %}
+{{parent()}}
+
+<!-- DataTables  & Plugins -->
+<script src=\"{{asset('plugins/datatables/jquery.dataTables.min.js')}}\"></script>
+<script src=\"{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}\"></script>
+<script src=\"{{asset('plugins/datatables-responsive/js/dataTables.responsive.min.js')}}\"></script>
+<script src=\"{{asset('plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}\"></script>
+<script src=\"{{asset('plugins/datatables-buttons/js/dataTables.buttons.min.js')}}\"></script>
+<script src=\"{{asset('plugins/datatables-buttons/js/buttons.bootstrap4.min.js')}}\"></script>
+<script src=\"{{asset('plugins/jszip/jszip.min.js')}}\"></script>
+<script src=\"{{asset('plugins/pdfmake/pdfmake.min.js')}}\"></script>
+<script src=\"{{asset('plugins/pdfmake/vfs_fonts.js')}}\"></script>
+<script src=\"{{asset('plugins/datatables-buttons/js/buttons.html5.min.js')}}\"></script>
+<script src=\"{{asset('plugins/datatables-buttons/js/buttons.print.min.js')}}\"></script>
+<script src=\"{{asset('plugins/datatables-buttons/js/buttons.colVis.min.js')}}\"></script>
+
+<script>
+  \$(function () {
+    \$(\"#example1\").DataTable({
+      \"responsive\": true, \"lengthChange\": false, \"autoWidth\": false,
+      \"buttons\": [\"copy\", \"csv\", \"excel\", \"pdf\", \"print\", \"colvis\"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    \$('#example2').DataTable({
+      \"paging\": true,
+      \"lengthChange\": false,
+      \"searching\": false,
+      \"ordering\": true,
+      \"info\": true,
+      \"autoWidth\": false,
+      \"responsive\": true,
+    });
+  });
+</script>
 
 {% endblock %}
 ", "/dashboard/listusers.html.twig", "/Users/skanderzouaoui/Documents/ErrorMakers-3A45/templates/dashboard/listusers.html.twig");
