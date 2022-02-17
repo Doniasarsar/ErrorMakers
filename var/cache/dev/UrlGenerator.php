@@ -18,7 +18,7 @@ return [
     'dashboard' => [[], ['_controller' => 'App\\Controller\\AdminController::index'], [], [['text', '/admin/dashboard']], [], []],
     'userlist' => [[], ['_controller' => 'App\\Controller\\AdminController::afficher'], [], [['text', '/admin/dashboard/listU']], [], []],
     'userdelete' => [['id'], ['_controller' => 'App\\Controller\\AdminController::Delete'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/dashboard/listU/delete']], [], []],
-    'loginadmin' => [[], ['_controller' => 'App\\Controller\\AdminController::login'], [], [['text', '/admin/login']], [], []],
+    'loginadmin' => [[], ['_controller' => 'App\\Controller\\AdminController::login'], [], [['text', '/admin/loginadmin']], [], []],
     'logoutadmin' => [[], ['_controller' => 'App\\Controller\\AdminController::logout'], [], [['text', '/admin/logout']], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/home']], [], []],
     'utilisateurs' => [[], ['_controller' => 'App\\Controller\\UtilisateursController::index'], [], [['text', '/utilisateurs']], [], []],
@@ -30,4 +30,5 @@ return [
     'activation' => [['token'], ['_controller' => 'App\\Controller\\UtilisateursController::activation'], [], [['variable', '/', '[^/]++', 'token'], ['text', '/activation']], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\UtilisateursController::login'], [], [['text', '/login']], [], []],
     'logout' => [[], ['_controller' => 'App\\Controller\\UtilisateursController::logout'], [], [['text', '/logout']], [], []],
+    'index' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/']], [], []],
 ];

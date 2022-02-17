@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).'/vendor/autoload.php';
-require __DIR__.'/ContainerVk7XxO0/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerZjno7hF/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -360,6 +360,7 @@ $classes[] = 'Symfony\Component\Security\Core\Encoder\EncoderFactory';
 $classes[] = 'Symfony\Bundle\SecurityBundle\Security\FirewallMap';
 $classes[] = 'Symfony\Bundle\SecurityBundle\Security\FirewallContext';
 $classes[] = 'Symfony\Bundle\SecurityBundle\Security\FirewallConfig';
+$classes[] = 'Symfony\Bundle\SecurityBundle\Security\LazyFirewallContext';
 $classes[] = 'Symfony\Component\Security\Http\Firewall\ExceptionListener';
 $classes[] = 'Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint';
 $classes[] = 'Symfony\Component\Security\Http\Firewall\LogoutListener';

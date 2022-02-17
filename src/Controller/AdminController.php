@@ -49,7 +49,7 @@ class AdminController extends AbstractController
         return $this->redirectToRoute('userlist');
     }
      /**
-     * @Route("/login", name="loginadmin")
+     * @Route("/loginadmin", name="loginadmin")
      */
     public function login(): Response
     {

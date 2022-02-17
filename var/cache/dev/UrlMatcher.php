@@ -15,7 +15,7 @@ return [
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/admin/dashboard' => [[['_route' => 'dashboard', '_controller' => 'App\\Controller\\AdminController::index'], null, null, null, false, false, null]],
         '/admin/dashboard/listU' => [[['_route' => 'userlist', '_controller' => 'App\\Controller\\AdminController::afficher'], null, null, null, false, false, null]],
-        '/admin/login' => [[['_route' => 'loginadmin', '_controller' => 'App\\Controller\\AdminController::login'], null, null, null, false, false, null]],
+        '/admin/loginadmin' => [[['_route' => 'loginadmin', '_controller' => 'App\\Controller\\AdminController::login'], null, null, null, false, false, null]],
         '/admin/logout' => [[['_route' => 'logoutadmin', '_controller' => 'App\\Controller\\AdminController::logout'], null, null, null, false, false, null]],
         '/home' => [[['_route' => 'home', '_controller' => 'App\\Controller\\FrontController::index'], null, null, null, false, false, null]],
         '/utilisateurs' => [[['_route' => 'utilisateurs', '_controller' => 'App\\Controller\\UtilisateursController::index'], null, null, null, false, false, null]],
@@ -25,6 +25,7 @@ return [
         '/utilisateurs/updatepass' => [[['_route' => 'passupdate', '_controller' => 'App\\Controller\\UtilisateursController::EditPassword'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\UtilisateursController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'logout', '_controller' => 'App\\Controller\\UtilisateursController::logout'], null, null, null, false, false, null]],
+        '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\FrontController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
