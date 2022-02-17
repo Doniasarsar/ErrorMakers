@@ -25,6 +25,9 @@ return [
         '/home' => [[['_route' => 'home', '_controller' => 'App\\Controller\\FrontController::index'], null, null, null, false, false, null]],
         '/produit' => [[['_route' => 'produit', '_controller' => 'App\\Controller\\FrontController::afficher'], null, null, null, false, false, null]],
         '/ligne/commande' => [[['_route' => 'ligne_commande', '_controller' => 'App\\Controller\\LigneCommandeController::index'], null, null, null, false, false, null]],
+        '/livraison/controlleur' => [[['_route' => 'livraison_controlleur', '_controller' => 'App\\Controller\\LivraisonControlleur::index'], null, null, null, false, false, null]],
+        '/livraison/list' => [[['_route' => 'r_list', '_controller' => 'App\\Controller\\LivraisonControlleur::afficher'], null, null, null, false, false, null]],
+        '/livraison/add' => [[['_route' => 'r_add', '_controller' => 'App\\Controller\\LivraisonControlleur::Add'], null, null, null, false, false, null]],
         '/utilisateurs' => [[['_route' => 'utilisateurs', '_controller' => 'App\\Controller\\UtilisateursController::index'], null, null, null, false, false, null]],
         '/utilisateurs/add' => [[['_route' => 'userAdd', '_controller' => 'App\\Controller\\UtilisateursController::AddUser'], null, null, null, false, false, null]],
         '/utilisateurs/addActeur' => [[['_route' => 'acteurSAdd', '_controller' => 'App\\Controller\\UtilisateursController::AddActeurS'], null, null, null, false, false, null]],
@@ -68,7 +71,11 @@ return [
                     .'|delete/([^/]++)(*:401)'
                 .')'
                 .'|/delete1/([^/]++)(*:427)'
-                .'|/utilisateurs/update/([^/]++)(*:464)'
+                .'|/livraison/(?'
+                    .'|delete/([^/]++)(*:464)'
+                    .'|update/([^/]++)(*:487)'
+                .')'
+                .'|/utilisateurs/update/([^/]++)(*:525)'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -88,7 +95,9 @@ return [
         378 => [[['_route' => 'cart_remove', '_controller' => 'App\\Controller\\CartController::remove'], ['id'], null, null, false, true, null]],
         401 => [[['_route' => 'cart_delete', '_controller' => 'App\\Controller\\CartController::delete'], ['id'], null, null, false, true, null]],
         427 => [[['_route' => 'delete1', '_controller' => 'App\\Controller\\FrontController::delete1'], ['id'], null, null, false, true, null]],
-        464 => [
+        464 => [[['_route' => 'r_delete', '_controller' => 'App\\Controller\\LivraisonControlleur::Supprimer'], ['id'], null, null, false, true, null]],
+        487 => [[['_route' => 'r_update', '_controller' => 'App\\Controller\\LivraisonControlleur::Update'], ['id'], null, null, false, true, null]],
+        525 => [
             [['_route' => 'userupdate', '_controller' => 'App\\Controller\\UtilisateursController::Update'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
