@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\BoutiquesRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -36,6 +38,16 @@ class Boutiques
      * @ORM\Column(type="string", length=255)
      */
     private $adresseBoutique;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Utilisateurs::class, mappedBy="Boutique")
+     */
+    private $utilisateurs;
+
+    public function __construct()
+    {
+        $this->utilisateurs = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -86,6 +98,36 @@ class Boutiques
     public function setAdresseBoutique(string $adresseBoutique): self
     {
         $this->adresseBoutique = $adresseBoutique;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Utilisateurs[]
+     */
+    public function getUtilisateurs(): Collection
+    {
+        return $this->utilisateurs;
+    }
+
+    public function addUtilisateur(Utilisateurs $utilisateur): self
+    {
+        if (!$this->utilisateurs->contains($utilisateur)) {
+            $this->utilisateurs[] = $utilisateur;
+            $utilisateur->setBoutique($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUtilisateur(Utilisateurs $utilisateur): self
+    {
+        if ($this->utilisateurs->removeElement($utilisateur)) {
+            // set the owning side to null (unless already changed)
+            if ($utilisateur->getBoutique() === $this) {
+                $utilisateur->setBoutique(null);
+            }
+        }
 
         return $this;
     }

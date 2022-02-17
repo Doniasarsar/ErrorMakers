@@ -11,9 +11,8 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
- * @Route("/admin")
+ * @Route("admin" , name="admin_")
  */
-
 class AdminController extends AbstractController
 {
     /**

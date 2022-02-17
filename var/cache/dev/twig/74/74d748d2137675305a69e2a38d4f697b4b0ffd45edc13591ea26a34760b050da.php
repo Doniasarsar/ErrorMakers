@@ -288,7 +288,7 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
           <li class=\"nav-item menu-open\">
             <a href=\"";
         // line 245
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("userlist");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_userlist");
         echo "\" class=\"nav-link \">
               <i class=\"nav-icon fas fa-tachometer-alt\"></i>
               <p>
@@ -788,7 +788,7 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
             </ul>
           </li>
           <li class=\"nav-item menu-open\">
-            <a href=\"{{path('userlist')}}\" class=\"nav-link \">
+            <a href=\"{{path('admin_userlist')}}\" class=\"nav-link \">
               <i class=\"nav-icon fas fa-tachometer-alt\"></i>
               <p>
                 Utilisateurs

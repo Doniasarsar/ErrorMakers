@@ -68,15 +68,7 @@ class Utilisateurs implements UserInterface
      */
     private $ConfirmPassword;
 
-    /**
-     * @ORM\OneToOne(targetEntity=Boutiques::class, cascade={"persist", "remove"})
-     */
-    private $Boutique;
-
-    /**
-     * @ORM\OneToMany(targetEntity=Livraisons::class, mappedBy="utilisateurs")
-     */
-    private $Livraison;
+    
 
     /**
      * @ORM\Column(type="json")
@@ -87,6 +79,11 @@ class Utilisateurs implements UserInterface
      * @ORM\Column(type="string", length=50, nullable=true)
      */
     private $Token;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Boutiques::class, inversedBy="utilisateurs")
+     */
+    private $Boutique;
 
     
 
@@ -170,51 +167,7 @@ class Utilisateurs implements UserInterface
 
         return $this;
     }
-
-    public function getBoutique(): ?Boutiques
-    {
-        return $this->Boutique;
-    }
-
-    public function setBoutique(?Boutiques $Boutique): self
-    {
-        $this->Boutique = $Boutique;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Livraisons[]
-     */
-    public function getLivraison(): Collection
-    {
-        return $this->Livraison;
-    }
-
-    public function addLivraison(Livraisons $livraison): self
-    {
-        if (!$this->Livraison->contains($livraison)) {
-            $this->Livraison[] = $livraison;
-            $livraison->setUtilisateurs($this);
-        }
-
-        return $this;
-    }
-
-    public function removeLivraison(Livraisons $livraison): self
-    {
-        if ($this->Livraison->removeElement($livraison)) {
-            // set the owning side to null (unless already changed)
-            if ($livraison->getUtilisateurs() === $this) {
-                $livraison->setUtilisateurs(null);
-            }
-        }
-
-        return $this;
-    }
-
   
-    
     public function getRole(): array
     {
         $roles = $this->Role;
@@ -257,6 +210,18 @@ class Utilisateurs implements UserInterface
     }
     public function eraseCredentials(){}
     public function getSalt(){}
+
+    public function getBoutique(): ?Boutiques
+    {
+        return $this->Boutique;
+    }
+
+    public function setBoutique(?Boutiques $Boutique): self
+    {
+        $this->Boutique = $Boutique;
+
+        return $this;
+    }
    
    
 }

@@ -67,10 +67,10 @@ class Boutiques extends \App\Entity\Boutiques implements \Doctrine\ORM\Proxy\Pro
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Boutiques' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Boutiques' . "\0" . 'nomBoutique', '' . "\0" . 'App\\Entity\\Boutiques' . "\0" . 'typeBoutique', '' . "\0" . 'App\\Entity\\Boutiques' . "\0" . 'descriptionBoutique', '' . "\0" . 'App\\Entity\\Boutiques' . "\0" . 'adresseBoutique'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Boutiques' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Boutiques' . "\0" . 'nomBoutique', '' . "\0" . 'App\\Entity\\Boutiques' . "\0" . 'typeBoutique', '' . "\0" . 'App\\Entity\\Boutiques' . "\0" . 'descriptionBoutique', '' . "\0" . 'App\\Entity\\Boutiques' . "\0" . 'adresseBoutique', '' . "\0" . 'App\\Entity\\Boutiques' . "\0" . 'utilisateurs'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Boutiques' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Boutiques' . "\0" . 'nomBoutique', '' . "\0" . 'App\\Entity\\Boutiques' . "\0" . 'typeBoutique', '' . "\0" . 'App\\Entity\\Boutiques' . "\0" . 'descriptionBoutique', '' . "\0" . 'App\\Entity\\Boutiques' . "\0" . 'adresseBoutique'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Boutiques' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Boutiques' . "\0" . 'nomBoutique', '' . "\0" . 'App\\Entity\\Boutiques' . "\0" . 'typeBoutique', '' . "\0" . 'App\\Entity\\Boutiques' . "\0" . 'descriptionBoutique', '' . "\0" . 'App\\Entity\\Boutiques' . "\0" . 'adresseBoutique', '' . "\0" . 'App\\Entity\\Boutiques' . "\0" . 'utilisateurs'];
     }
 
     /**
@@ -278,6 +278,39 @@ class Boutiques extends \App\Entity\Boutiques implements \Doctrine\ORM\Proxy\Pro
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setAdresseBoutique', [$adresseBoutique]);
 
         return parent::setAdresseBoutique($adresseBoutique);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getUtilisateurs(): \Doctrine\Common\Collections\Collection
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUtilisateurs', []);
+
+        return parent::getUtilisateurs();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addUtilisateur(\App\Entity\Utilisateurs $utilisateur): \App\Entity\Boutiques
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addUtilisateur', [$utilisateur]);
+
+        return parent::addUtilisateur($utilisateur);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeUtilisateur(\App\Entity\Utilisateurs $utilisateur): \App\Entity\Boutiques
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeUtilisateur', [$utilisateur]);
+
+        return parent::removeUtilisateur($utilisateur);
     }
 
 }
