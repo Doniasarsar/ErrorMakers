@@ -36,23 +36,43 @@
                   <thead>
                   <tr>
                     <th>ID</th>
-                    <th>numLivraison</th>
+                   
                     <th>etatLivraison</th>
                     <th>dateLivraison</th>
-                    <th>idLivreur</th>
                     <th>idCommande</th>
+                     <th>PrixLivraison</th>
+                      <th>Livreur</th>
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
                       {% for class in tab %}
-     <tr>
-     <td>{{class.id}}</td>
-      <td>{{class.numLivraison}}</td>
-        <td>{{class.etatLivraison}}</td>
-          <td>{{class.dateLivraison|date('Y-m-d H:i:s')}}</td>
-            <td>{{class.idLivreur}}</td>
+                  <tr>
+                  <td>{{class.id}}</td>
+      
+       
+                  {% if class.etatLivraison == 0 %}
+                    <td>Livrée </td>
+                    {% else %}
+                    <td>Non Livrée </td>
+                    {% endif %}
+               <td>{{class.dateLivraison|date('Y-m-d H:i:s')}}</td>
+           
                <td>{{class.idLivraison}}</td>
+                <td>{{class.PrixLivraison}}</td>
+                 
+                     <td>
+                     {% for class in  class.livreur %}
+                     
+                    <td>{{class.livreur}} </td>
+                   
+                   
+                    
+                              
+                      {% endfor %}
+                     </td>
+                   
+               
                 <td><a  class="btn btn-warning" href="{{path("r_delete",{'id':class.id}) }}">Delete</a>
                 <a class="btn btn-info" href="{{path("r_update",{'id':class.id}) }}">Update</a></td>
     

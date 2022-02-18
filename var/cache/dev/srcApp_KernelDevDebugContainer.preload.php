@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).''.\DIRECTORY_SEPARATOR.'vendor/autoload.php';
-require __DIR__.'/ContainerUxCasOL/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/Container20MIyDG/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -33,9 +33,18 @@ $classes[] = 'Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\EventListener\ResolveControllerNameSubscriber';
 $classes[] = 'Symfony\Component\HttpFoundation\RequestMatcher';
 $classes[] = 'Symfony\Component\DependencyInjection\ServiceLocator';
+$classes[] = 'App\Controller\AdminController';
+$classes[] = 'App\Controller\FrontController';
 $classes[] = 'App\Controller\LivraisonControlleur';
+$classes[] = 'App\Controller\VehiculeController';
+$classes[] = 'App\Form\CamionType';
 $classes[] = 'App\Form\LivraisonType';
+$classes[] = 'App\Form\MotoType';
+$classes[] = 'App\Form\VoitureType';
+$classes[] = 'App\Repository\CommandeRepository';
 $classes[] = 'App\Repository\LivraisonRepository';
+$classes[] = 'App\Repository\UtilisateursRepository';
+$classes[] = 'App\Repository\VehiculeRepository';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Dbal\ManagerRegistryAwareConnectionProvider';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Registry';
