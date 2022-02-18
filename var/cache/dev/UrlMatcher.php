@@ -17,6 +17,7 @@ return [
         '/cart' => [[['_route' => 'cart_index', '_controller' => 'App\\Controller\\CartController::index'], null, null, null, true, false, null]],
         '/cart/deleteall' => [[['_route' => 'cart_deleteall', '_controller' => 'App\\Controller\\CartController::deleteall'], null, null, null, false, false, null]],
         '/admin/affcommande' => [[['_route' => 'admincommande', '_controller' => 'App\\Controller\\CommandeController::afficher'], null, null, null, false, false, null]],
+        '/commande4' => [[['_route' => 'commande4', '_controller' => 'App\\Controller\\CommandeController::ajoutercommande4'], null, null, null, false, false, null]],
         '/front' => [[['_route' => 'front', '_controller' => 'App\\Controller\\FrontController::index'], null, null, null, false, false, null]],
         '/ligne/commande' => [[['_route' => 'ligne_commande', '_controller' => 'App\\Controller\\LigneCommandeController::index'], null, null, null, false, false, null]],
         '/produit' => [[['_route' => 'produit', '_controller' => 'App\\Controller\\ProduitController::afficher'], null, null, null, false, false, null]],
@@ -44,19 +45,16 @@ return [
                         .'|remove/([^/]++)(*:216)'
                         .'|delete/([^/]++)(*:239)'
                     .')'
-                    .'|ommande(?'
-                        .'|/([^/]++)(*:267)'
-                        .'|4/([^/]++)(*:285)'
-                    .')'
+                    .'|ommande/([^/]++)(*:264)'
                 .')'
                 .'|/admin/(?'
                     .'|supp(?'
-                        .'|commande/([^/]++)(*:329)'
-                        .'|ligne/([^/]++)(*:351)'
+                        .'|commande/([^/]++)(*:307)'
+                        .'|ligne/([^/]++)(*:329)'
                     .')'
-                    .'|modifcommande/([^/]++)(*:382)'
+                    .'|modifcommande/([^/]++)(*:360)'
                 .')'
-                .'|/delete1/([^/]++)(*:408)'
+                .'|/delete1/([^/]++)(*:386)'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -70,12 +68,11 @@ return [
         193 => [[['_route' => 'cart_add', '_controller' => 'App\\Controller\\CartController::add'], ['id'], null, null, false, true, null]],
         216 => [[['_route' => 'cart_remove', '_controller' => 'App\\Controller\\CartController::remove'], ['id'], null, null, false, true, null]],
         239 => [[['_route' => 'cart_delete', '_controller' => 'App\\Controller\\CartController::delete'], ['id'], null, null, false, true, null]],
-        267 => [[['_route' => 'commande', '_controller' => 'App\\Controller\\CommandeController::ajoutercommande'], ['id'], null, null, false, true, null]],
-        285 => [[['_route' => 'commande4', '_controller' => 'App\\Controller\\CommandeController::ajoutercommande4'], ['id'], null, null, false, true, null]],
-        329 => [[['_route' => 'adminsupp', '_controller' => 'App\\Controller\\CommandeController::supprimercommande'], ['id'], null, null, false, true, null]],
-        351 => [[['_route' => 'adminlignesupp', '_controller' => 'App\\Controller\\LigneCommandeController::supprimercommande'], ['id'], null, null, false, true, null]],
-        382 => [[['_route' => 'adminmodif', '_controller' => 'App\\Controller\\CommandeController::modifiercommande'], ['id'], null, null, false, true, null]],
-        408 => [
+        264 => [[['_route' => 'commande', '_controller' => 'App\\Controller\\CommandeController::ajoutercommande'], ['id'], null, null, false, true, null]],
+        307 => [[['_route' => 'adminsupp', '_controller' => 'App\\Controller\\CommandeController::supprimercommande'], ['id'], null, null, false, true, null]],
+        329 => [[['_route' => 'adminlignesupp', '_controller' => 'App\\Controller\\LigneCommandeController::supprimercommande'], ['id'], null, null, false, true, null]],
+        360 => [[['_route' => 'adminmodif', '_controller' => 'App\\Controller\\CommandeController::modifiercommande'], ['id'], null, null, false, true, null]],
+        386 => [
             [['_route' => 'delete1', '_controller' => 'App\\Controller\\ProduitController::delete1'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

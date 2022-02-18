@@ -40,6 +40,7 @@
                     <th>Adresse</th>
                     <th>Code Postal</th>
                     <th>Phone</th>
+                    <th>Les produits achetés</th>
                     <th>Montant</th>
                     <th>Date commande</th>
                     <th>Etat Commande</th>
@@ -55,6 +56,7 @@
                     <td>{{ class.adresse}}</td>
                     <td>{{ class.postcode}}</td>
                     <td>{{ class.phone}}</td>
+                    <td>{{ class.produit}}</td>
                     <td>{{ class.montant}}</td>
                     <td>{{ class.dateCommande | date("d/m/Y")}}</td>
                     {% if class.etatcommande == 0 %}

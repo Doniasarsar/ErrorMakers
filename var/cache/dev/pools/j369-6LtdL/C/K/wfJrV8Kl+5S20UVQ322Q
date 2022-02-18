@@ -1,0 +1,27 @@
+<?php //App%255CEntity%255CUtilisateurs%2524ConfirmPassword
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Validator\\Constraints\\EqualTo'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\EqualTo')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'message' => [
+                'Password and confirm password doesn\'t match',
+            ],
+            'propertyPath' => [
+                'Password',
+            ],
+            'groups' => [
+                [
+                    'Default',
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+    ],
+    []
+); }];

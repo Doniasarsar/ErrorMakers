@@ -105,6 +105,7 @@ class __TwigTemplate_ed78fd28857d0625cd3f5f324dc85751fb7412c3f82cd2838a94a4b2661
                     <th>Adresse</th>
                     <th>Code Postal</th>
                     <th>Phone</th>
+                    <th>Les produits achetés</th>
                     <th>Montant</th>
                     <th>Date commande</th>
                     <th>Etat Commande</th>
@@ -114,74 +115,78 @@ class __TwigTemplate_ed78fd28857d0625cd3f5f324dc85751fb7412c3f82cd2838a94a4b2661
                   </thead>
                   <tbody>
                       ";
-        // line 51
+        // line 52
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["tab"]) || array_key_exists("tab", $context) ? $context["tab"] : (function () { throw new RuntimeError('Variable "tab" does not exist.', 51, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["tab"]) || array_key_exists("tab", $context) ? $context["tab"] : (function () { throw new RuntimeError('Variable "tab" does not exist.', 52, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["class"]) {
-            // line 52
+            // line 53
             echo "                  <tr>
                     <td>";
-            // line 53
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "nomClient", [], "any", false, false, false, 53), "html", null, true);
-            echo "</td>
-                    <td>";
             // line 54
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "prenomClient", [], "any", false, false, false, 54), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "nomClient", [], "any", false, false, false, 54), "html", null, true);
             echo "</td>
                     <td>";
             // line 55
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "adresse", [], "any", false, false, false, 55), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "prenomClient", [], "any", false, false, false, 55), "html", null, true);
             echo "</td>
                     <td>";
             // line 56
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "postcode", [], "any", false, false, false, 56), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "adresse", [], "any", false, false, false, 56), "html", null, true);
             echo "</td>
                     <td>";
             // line 57
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "phone", [], "any", false, false, false, 57), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "postcode", [], "any", false, false, false, 57), "html", null, true);
             echo "</td>
                     <td>";
             // line 58
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "montant", [], "any", false, false, false, 58), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "phone", [], "any", false, false, false, 58), "html", null, true);
             echo "</td>
                     <td>";
             // line 59
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "dateCommande", [], "any", false, false, false, 59), "d/m/Y"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "produit", [], "any", false, false, false, 59), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 60
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "montant", [], "any", false, false, false, 60), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 61
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "dateCommande", [], "any", false, false, false, 61), "d/m/Y"), "html", null, true);
             echo "</td>
                     ";
-            // line 60
-            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["class"], "etatcommande", [], "any", false, false, false, 60), 0))) {
-                // line 61
+            // line 62
+            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["class"], "etatcommande", [], "any", false, false, false, 62), 0))) {
+                // line 63
                 echo "                    <td>Non livré </td>
                     ";
             }
-            // line 63
+            // line 65
             echo "                    ";
-            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["class"], "etatcommande", [], "any", false, false, false, 63), 1))) {
-                // line 64
+            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["class"], "etatcommande", [], "any", false, false, false, 65), 1))) {
+                // line 66
                 echo "                    <td> livré </td>
                     ";
             }
-            // line 66
+            // line 68
             echo "                    ";
-            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["class"], "modePaiemenet", [], "any", false, false, false, 66), 0))) {
-                // line 67
+            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["class"], "modePaiemenet", [], "any", false, false, false, 68), 0))) {
+                // line 69
                 echo "                    <td>Par Carte Bancaire </td>
                     ";
             } else {
-                // line 69
+                // line 71
                 echo "                    <td>Par Cash </td>
                     ";
             }
-            // line 71
+            // line 73
             echo "                    <td>
                         <a class=\"btn btn-info\" href=\"";
-            // line 72
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("adminmodif", ["id" => twig_get_attribute($this->env, $this->source, $context["class"], "id", [], "any", false, false, false, 72)]), "html", null, true);
+            // line 74
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("adminmodif", ["id" => twig_get_attribute($this->env, $this->source, $context["class"], "id", [], "any", false, false, false, 74)]), "html", null, true);
             echo "\">Modifier</a>
                         <a class=\"btn btn-warning\"  href=\"";
-            // line 73
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("adminsupp", ["id" => twig_get_attribute($this->env, $this->source, $context["class"], "id", [], "any", false, false, false, 73)]), "html", null, true);
+            // line 75
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("adminsupp", ["id" => twig_get_attribute($this->env, $this->source, $context["class"], "id", [], "any", false, false, false, 75)]), "html", null, true);
             echo "\">Supprimer</a>
                          
                     </td>                  
@@ -191,7 +196,7 @@ class __TwigTemplate_ed78fd28857d0625cd3f5f324dc85751fb7412c3f82cd2838a94a4b2661
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['class'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 78
+        // line 80
         echo "                  </tbody>
                 </table>
               </div>
@@ -217,7 +222,7 @@ class __TwigTemplate_ed78fd28857d0625cd3f5f324dc85751fb7412c3f82cd2838a94a4b2661
 
     }
 
-    // line 96
+    // line 98
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -227,57 +232,57 @@ class __TwigTemplate_ed78fd28857d0625cd3f5f324dc85751fb7412c3f82cd2838a94a4b2661
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 97
+        // line 99
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
 
 <!-- DataTables  & Plugins -->
 <script src=\"";
-        // line 100
+        // line 102
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables/jquery.dataTables.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 101
+        // line 103
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 102
+        // line 104
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-responsive/js/dataTables.responsive.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 103
+        // line 105
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-responsive/js/responsive.bootstrap4.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 104
+        // line 106
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/dataTables.buttons.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 105
+        // line 107
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.bootstrap4.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 106
+        // line 108
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jszip/jszip.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 107
+        // line 109
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/pdfmake/pdfmake.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 108
+        // line 110
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/pdfmake/vfs_fonts.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 109
+        // line 111
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.html5.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 110
+        // line 112
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.print.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 111
+        // line 113
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.colVis.min.js"), "html", null, true);
         echo "\"></script>
 
@@ -320,7 +325,7 @@ class __TwigTemplate_ed78fd28857d0625cd3f5f324dc85751fb7412c3f82cd2838a94a4b2661
 
     public function getDebugInfo()
     {
-        return array (  281 => 111,  277 => 110,  273 => 109,  269 => 108,  265 => 107,  261 => 106,  257 => 105,  253 => 104,  249 => 103,  245 => 102,  241 => 101,  237 => 100,  231 => 97,  221 => 96,  195 => 78,  184 => 73,  180 => 72,  177 => 71,  173 => 69,  169 => 67,  166 => 66,  162 => 64,  159 => 63,  155 => 61,  153 => 60,  149 => 59,  145 => 58,  141 => 57,  137 => 56,  133 => 55,  129 => 54,  125 => 53,  122 => 52,  118 => 51,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  286 => 113,  282 => 112,  278 => 111,  274 => 110,  270 => 109,  266 => 108,  262 => 107,  258 => 106,  254 => 105,  250 => 104,  246 => 103,  242 => 102,  236 => 99,  226 => 98,  200 => 80,  189 => 75,  185 => 74,  182 => 73,  178 => 71,  174 => 69,  171 => 68,  167 => 66,  164 => 65,  160 => 63,  158 => 62,  154 => 61,  150 => 60,  146 => 59,  142 => 58,  138 => 57,  134 => 56,  130 => 55,  126 => 54,  123 => 53,  119 => 52,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -367,6 +372,7 @@ class __TwigTemplate_ed78fd28857d0625cd3f5f324dc85751fb7412c3f82cd2838a94a4b2661
                     <th>Adresse</th>
                     <th>Code Postal</th>
                     <th>Phone</th>
+                    <th>Les produits achetés</th>
                     <th>Montant</th>
                     <th>Date commande</th>
                     <th>Etat Commande</th>
@@ -382,6 +388,7 @@ class __TwigTemplate_ed78fd28857d0625cd3f5f324dc85751fb7412c3f82cd2838a94a4b2661
                     <td>{{ class.adresse}}</td>
                     <td>{{ class.postcode}}</td>
                     <td>{{ class.phone}}</td>
+                    <td>{{ class.produit}}</td>
                     <td>{{ class.montant}}</td>
                     <td>{{ class.dateCommande | date(\"d/m/Y\")}}</td>
                     {% if class.etatcommande == 0 %}

@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Produit;
 use App\Entity\Commande;
 use App\Form\CommandeType;
 use App\Entity\Utilisateur;
@@ -21,13 +22,9 @@ class CommandeController extends AbstractController
     /**
      * @Route("/commande/{id}", name="commande")
      */
-    public function ajoutercommande(Request $request,SessionInterface $session, ProduitRepository $produitrep,Utilisateur $utilisateur ,UtilisateurRepository $rep): Response
+    public function ajoutercommande(Request $request,SessionInterface $session, ProduitRepository $produitrep): Response
     {   $panier = $session->get("panier",[]);
-        $client = $session->get("client", $utilisateur->getId());
-
-        
         // on fabrique les données 
-
         $dataPanier = []; 
         $total = 0; 
         
@@ -44,10 +41,7 @@ class CommandeController extends AbstractController
         {
             $totalItem = $item['produit']->getPrix() * $item['quantite'];
             $total += $totalItem ;
-        }
-        $uti =$rep->find($client);
-
-       
+        }       
 
         $commande = new Commande();
         $form = $this->createForm(CommandeType::class,$commande);
@@ -66,8 +60,7 @@ class CommandeController extends AbstractController
         return $this->render('commande/ajouter.html.twig', [
                     'formA' => $form->createView(),
                     'total' => $total,
-                    'elements' => $dataPanier,
-                    'uti' => $uti
+                    'elements' => $dataPanier
         ]);    
     }
 
@@ -124,13 +117,11 @@ class CommandeController extends AbstractController
     }
  
     /**
-     * @Route("/commande4/{id}", name="commande4")
+     * @Route("/commande4", name="commande4")
      */
-    public function ajoutercommande4(CommandeRepository $repCommande,Request $request,SessionInterface $session, ProduitRepository $produitrep,
-    Utilisateur $utilisateur ,UtilisateurRepository $rep): Response
+    public function ajoutercommande4(CommandeRepository $repCommande,Request $request,SessionInterface $session, ProduitRepository $produitrep): Response
     {   $panier = $session->get("panier",[]);
         $pan2 = $panier;
-        $client = $session->get("client", $utilisateur->getId());
 
         // on fabrique les données 
         $dataPanier = []; 
@@ -146,28 +137,40 @@ class CommandeController extends AbstractController
            
         }
         
-        $tab = [];
-        $ligneCommande = new ligneCommande();
-        foreach ($pan2 as $id => $key){
-            $tab[] = $id;
+
+        foreach ($pan2 as $id => $quantite){
+            $produit = $produitrep->find($id);
+            $ddata[] = 
+               $produit->getDescription();
+               
+            ;
+           
         }
+        $desc ="";
+        foreach ($ddata as $id => $description){
+          
+            $desc  .= '| ' . $description .' |' ;
+        
+        }
+      
      
         foreach($dataPanier as $item)
         {
             $totalItem = $item['produit']->getPrix() * $item['quantite'];
             $total += $totalItem ;
-        }
-        $uti =$rep->find($client);
-       
+        }    
+
         
         $commande = new Commande();
+    
         $form = $this->createForm(CommandeType::class,$commande);
         $form->add('Ajouter',SubmitType::class) ; 
         $form->handleRequest($request); 
         if ($form->isSubmitted() && $form->isValid()){
-            foreach ($tab as $key => $value) {
+            foreach ($pan2 as $id => $quantite) {
                 $ligneCommande = new ligneCommande();
-                $ligneCommande = $ligneCommande->setIdProduit($value);
+                $ligneCommande = $ligneCommande->setIdProduit($id);
+                $ligneCommande = $ligneCommande->setQuantite($quantite);
                 $commande = $repCommande->findOneBy([], ['id' => 'desc']);
                 $lastId = $commande->getId();
                 $ligneCommande = $ligneCommande->setIdCommande($lastId);
@@ -189,7 +192,7 @@ class CommandeController extends AbstractController
                     'formA' => $form->createView(),
                     'total' => $total,
                     'elements' => $dataPanier,
-                    'uti' => $uti
+                    'desc' => $desc
         ]);    
     }
 

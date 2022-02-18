@@ -1077,7 +1077,7 @@ class __TwigTemplate_c751b60a8f748fb14a3da19a08be4f223373fcd59907fcf838927e4d051
                                                         <h5 class=\"manufacturer\">
                                                             <a href=\"product-details.html\">";
             // line 939
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "description", [], "any", false, false, false, 939), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "quantite", [], "any", false, false, false, 939), "html", null, true);
             echo "</a>
                                                         </h5>
                                                         <div class=\"rating-box\">
@@ -2731,7 +2731,7 @@ class __TwigTemplate_c751b60a8f748fb14a3da19a08be4f223373fcd59907fcf838927e4d051
                                                 <div class=\"product_desc_info\">
                                                     <div class=\"product-review\">
                                                         <h5 class=\"manufacturer\">
-                                                            <a href=\"product-details.html\">{{ class.description }}</a>
+                                                            <a href=\"product-details.html\">{{ class.quantite }}</a>
                                                         </h5>
                                                         <div class=\"rating-box\">
                                                             <ul class=\"rating\">

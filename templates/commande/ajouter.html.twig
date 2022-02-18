@@ -60,17 +60,20 @@
                             <div class="col-md-6">
                                 <div class="checkout-form-list">
                                     <label>First Name <span class="required">*</span></label>
-                                    {{ form_widget(formA.nomClient, {attr: { value : uti.nom ,readonly:true }}) }} 
-                                    {{ form_errors(formA.nomClient, {attr: { value : uti.nom ,readonly:true }}) }} 
-                                    
+                                 {#   {{ form_widget(formA.nomClient, {attr: { value : uti.nom ,readonly:true }}) }} 
+                                    {{ form_errors(formA.nomClient, {attr: { value : uti.nom ,readonly:true }}) }} #}
+                                    {{ form_widget(formA.nomClient) }} 
+                                    {{ form_errors(formA.nomClient)}} 
 
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="checkout-form-list">
                                     <label>Last Name <span class="required">*</span></label>
-                                    {{ form_widget(formA.prenomClient, {attr: { value : uti.prenom ,readonly:true }}) }}
-                                    {{ form_errors(formA.prenomClient, {attr: { value : uti.prenom ,readonly:true }}) }}
+                                  {#  {{ form_widget(formA.prenomClient, {attr: { value : uti.prenom ,readonly:true }}) }}
+                                    {{ form_errors(formA.prenomClient, {attr: { value : uti.prenom ,readonly:true }}) }} #}
+                                    {{ form_widget(formA.prenomClient) }}
+                                    {{ form_errors(formA.prenomClient) }}
 
                                 </div>
                             </div>
@@ -126,6 +129,8 @@
                                 </div>
                             </div>
                             {{form_widget(formA.etatCommande , {'value':0 ,'type':'hidden'})}}
+                            {{ form_widget(formA.produit, {attr: { value : desc ,readonly:true }}) }} 
+
                             {{ form_end(formA) }}
                             <div class="col-md-12">
                                 <div class="checkout-form-list create-acc">

@@ -36,8 +36,9 @@
                   <thead>
                   <tr>
                     <th>Id Ligne Commande</th>
-                    <th>Id  Produit</th>
                     <th>Id Commande</th>
+                    <th>Id  Produit</th>
+                    <th>Quantite Produit</th>
                     <th>Action</th>
                   </tr>
                   </thead>
@@ -45,8 +46,9 @@
                       {% for class in tab %}
                   <tr>
                     <td>{{ class.id}}</td>
-                    <td>{{ class.idProduit}}</td>
                     <td>{{ class.idCommande}}</td>
+                    <td>{{ class.idProduit}}</td>
+                    <td>{{ class.quantite}}</td>
                     <td>
                         <a class="btn btn-warning"  href="{{path('adminlignesupp',{id : class.id })}}">Supprimer</a>
                          

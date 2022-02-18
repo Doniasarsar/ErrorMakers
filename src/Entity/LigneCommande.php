@@ -27,6 +27,13 @@ class LigneCommande
      */
     private $idProduit;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $quantite;
+
+   
+
     public function getId(): ?int
     {
         return $this->id;
@@ -55,4 +62,18 @@ class LigneCommande
 
         return $this;
     }
+
+    public function getQuantite(): ?int
+    {
+        return $this->quantite;
+    }
+
+    public function setQuantite(int $quantite): self
+    {
+        $this->quantite = $quantite;
+
+        return $this;
+    }
+
+   
 }
