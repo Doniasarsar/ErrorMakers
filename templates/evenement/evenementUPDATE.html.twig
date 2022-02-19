@@ -16,7 +16,7 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">ajouter evenement</h3>
+                <h3 class="card-title">Ajouter evenement</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -47,6 +47,11 @@
                   <div class="form-group">
                     <label for="exampleInputPassword1">Description </label>
                     {{ form_widget(form_evenement.description, {'attr': {'class': 'form-control'}}) }}
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Affiche</label>
+                    {{ form_widget(form_evenement.affiche, {'attr': {'class': 'form-control'}}) }}
+                     {{ form_errors(form_evenement.affiche,{'attr':{"class":"mb-0"}}) }}
                   </div>
                   
                 </div>

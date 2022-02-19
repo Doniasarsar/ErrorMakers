@@ -16,7 +16,7 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">ajouter evenement</h3>
+                <h3 class="card-title">Ajouter un Evenement</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -41,18 +41,23 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Date debut </label>
-                    {{ form_widget(form_evenement.date, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_widget(form_evenement.date) }}
                      {{ form_errors(form_evenement.date,{'attr':{"class":"mb-0"}}) }}
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Date fin </label>
-                    {{ form_widget(form_evenement.datefin, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_widget(form_evenement.datefin) }}
                      {{ form_errors(form_evenement.datefin,{'attr':{"class":"mb-0"}}) }}
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Description </label>
                     {{ form_widget(form_evenement.description, {'attr': {'class': 'form-control'}}) }}
                      {{ form_errors(form_evenement.description,{'attr':{"class":"mb-0"}}) }}
+                  </div>
+                   <div class="form-group">
+                    <label for="exampleInputPassword1">Affiche</label>
+                    {{ form_widget(form_evenement.affiche, {'attr': {'class': 'form-control'}}) }}
+                     {{ form_errors(form_evenement.affiche,{'attr':{"class":"mb-0"}}) }}
                   </div>
                   
                 </div>

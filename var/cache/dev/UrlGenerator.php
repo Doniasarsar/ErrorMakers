@@ -17,10 +17,11 @@ return [
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     'admin' => [[], ['_controller' => 'App\\Controller\\AdminController::index'], [], [['text', '/admin']], [], []],
     'evenement1' => [[], ['_controller' => 'App\\Controller\\EvenementController::index'], [], [['text', '/evenement1']], [], []],
-    'event_add' => [[], ['_controller' => 'App\\Controller\\EvenementController::Add'], [], [['text', '/evenement/add']], [], []],
     'ev_aff' => [[], ['_controller' => 'App\\Controller\\EvenementController::afficher'], [], [['text', '/evenement/aff']], [], []],
+    'event_add' => [[], ['_controller' => 'App\\Controller\\EvenementController::Add'], [], [['text', '/evenement/add']], [], []],
     'ev_delete' => [['id'], ['_controller' => 'App\\Controller\\EvenementController::Supprimer'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/evenement/delete']], [], []],
     'ev_update' => [['id'], ['_controller' => 'App\\Controller\\EvenementController::Update'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/evenement/update']], [], []],
+    'ev_front_detail' => [['id'], ['_controller' => 'App\\Controller\\EvenementController::detail'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/detail']], [], []],
     'front' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/front']], [], []],
     'ev_front_aff' => [[], ['_controller' => 'App\\Controller\\FrontController::afficher'], [], [['text', '/eventfront']], [], []],
 ];

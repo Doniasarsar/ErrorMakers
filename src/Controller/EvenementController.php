@@ -10,7 +10,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 
@@ -28,7 +27,19 @@ class EvenementController extends AbstractController
             'controller_name' => 'EvenementController',
         ]);
     }
-  
+  /**
+     * @Route("/evenement/aff", name="ev_aff")
+     */
+
+    function afficher(EvenementRepository $rep)
+    {
+
+         $evenement = $rep->findall();
+         return $this->render('evenement/evenementAFFICHAGE.html.twig', [
+             'tab' => $evenement
+         ]);
+
+    }
 
     /**
      * @Route("/evenement/add",name="event_add")
@@ -53,7 +64,7 @@ class EvenementController extends AbstractController
             $em=$this->getDoctrine()->getManager();
         $em->persist($evenement);
         $em->flush();
-            return $this->redirectToRoute('event_add');
+            return $this->redirectToRoute('ev_aff');
 
          }
         return $this->render("evenement/evenementAJOUT.html.twig", [
@@ -62,19 +73,7 @@ class EvenementController extends AbstractController
      }
 
      
-     /**
-     * @Route("/evenement/aff", name="ev_aff")
-     */
-
-    function afficher(EvenementRepository $rep)
-    {
-
-         $evenement = $rep->findall();
-         return $this->render('evenement/evenementAFFICHAGE.html.twig', [
-             'tab' => $evenement
-         ]);
-
-    }
+     
 
      /**
      * @Route("/evenement/delete/{id}", name="ev_delete")
@@ -102,7 +101,12 @@ class EvenementController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
+        $file = $form->get('affiche')->getData();
+        $filename = md5(uniqid()).'.'.$file->guessExtension();
+        $file->move($this->getParameter('uploads_directory'),$filename);
+        $evenement->setaffiche($filename); 
         $em=$this->getDoctrine()->getManager();
+        $em->persist($evenement);
         $em->flush();
             return $this->redirectToRoute('ev_aff');
 
@@ -111,4 +115,19 @@ class EvenementController extends AbstractController
         ]);
 
      }
+
+     
+     /**
+     * @Route("/detail/{id}", name="ev_front_detail")
+     */
+    function detail($id,EvenementRepository $rep)
+    {   
+         $evenement = $rep->find($id);
+         return $this->render('front/evenementsfrontdetail.html.twig', [
+            'tab' => $evenement
+        ]);
+
+    }
+     
+   
 }

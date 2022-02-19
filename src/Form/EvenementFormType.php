@@ -23,8 +23,8 @@ class EvenementFormType extends AbstractType
             ->add('description')
             ->add('affiche',FileType::class,[
                 'mapped' => false,
-               'label' => 'Telecharger une image ' ])
-             ;
+               'label' => 'Telecharger une image ' ]);
+             
     }
 
     public function configureOptions(OptionsResolver $resolver): void

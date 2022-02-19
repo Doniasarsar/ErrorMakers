@@ -22,7 +22,8 @@ class FrontController extends AbstractController
             'controller_name' => 'FrontController',
         ]);
     }
-   /**
+
+    /**
      * @Route("/eventfront", name="ev_front_aff")
      */
 
@@ -34,4 +35,5 @@ class FrontController extends AbstractController
          ]);
 
     }
+   
 }

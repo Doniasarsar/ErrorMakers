@@ -65,8 +65,6 @@ class Evenement
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="Ajouter une image jpg")
-     * @Assert\File(mimeTypes={ "image/jpeg" })
      */
     private $affiche;
 

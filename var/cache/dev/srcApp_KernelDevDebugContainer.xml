@@ -76,6 +76,7 @@
     <parameter key="kernel.container_class">srcApp_KernelDevDebugContainer</parameter>
     <parameter key="container.dumper.inline_class_loader">true</parameter>
     <parameter key="container.dumper.inline_factories">true</parameter>
+    <parameter key="uploads_directory">C:\Users\PCS\Desktop\symf\wadie PPI\ErrorMakers-3A45/public/uploads</parameter>
     <parameter key="event_dispatcher.event_aliases" type="collection">
       <parameter key="Symfony\Component\Console\Event\ConsoleCommandEvent">console.command</parameter>
       <parameter key="Symfony\Component\Console\Event\ConsoleErrorEvent">console.error</parameter>
@@ -5197,16 +5198,18 @@
         <argument key="rep" type="service_closure" id="App\Repository\EvenementRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.g1SJ6jw" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.x5ZhdgO" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\EvenementController::Supprimer" type="service_closure" id=".service_locator.p5lFTbi"/>
         <argument key="App\Controller\EvenementController::Update" type="service_closure" id=".service_locator.p5lFTbi"/>
         <argument key="App\Controller\EvenementController::afficher" type="service_closure" id=".service_locator.p5lFTbi"/>
+        <argument key="App\Controller\EvenementController::detail" type="service_closure" id=".service_locator.p5lFTbi"/>
         <argument key="App\Controller\FrontController::afficher" type="service_closure" id=".service_locator.p5lFTbi"/>
         <argument key="App\Controller\EvenementController:Supprimer" type="service_closure" id=".service_locator.p5lFTbi"/>
         <argument key="App\Controller\EvenementController:Update" type="service_closure" id=".service_locator.p5lFTbi"/>
         <argument key="App\Controller\EvenementController:afficher" type="service_closure" id=".service_locator.p5lFTbi"/>
+        <argument key="App\Controller\EvenementController:detail" type="service_closure" id=".service_locator.p5lFTbi"/>
         <argument key="App\Controller\FrontController:afficher" type="service_closure" id=".service_locator.p5lFTbi"/>
       </argument>
     </service>
@@ -5665,12 +5668,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.g1SJ6jw"/>
+      <argument type="service" id=".service_locator.x5ZhdgO"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.g1SJ6jw"/>
+      <argument type="service" id=".service_locator.x5ZhdgO"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -6070,7 +6073,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.g1SJ6jw"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.x5ZhdgO"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>
