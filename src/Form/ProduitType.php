@@ -3,11 +3,13 @@
 namespace App\Form;
 
 use App\Entity\Produit;
+use App\Entity\Boutique;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class ProduitType extends AbstractType
 {
@@ -24,7 +26,18 @@ class ProduitType extends AbstractType
                 'label' => 'Telecharger une image '
 
             ])
+            ->add('boutique', EntityType::class, [
+           
+                'class' => Boutique::class,
+                'choice_label' => 'nomBoutique',
+               
+            
+                // used to render a select box, check boxes or radios
+                // 'multiple' => true,
+                // 'expanded' => true,
+            ])
         ;
+        
     }
 
     public function configureOptions(OptionsResolver $resolver): void

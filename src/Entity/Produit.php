@@ -40,7 +40,6 @@ class Produit
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="Image Produit is required")
      */
     private $image;
 
@@ -49,6 +48,11 @@ class Produit
      * @Assert\NotBlank(message="Nom Produit is required")
      */
     private $nomProduit;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Boutique::class, inversedBy="produit")
+     */
+    private $boutique;
 
     public function getId(): ?int
     {
@@ -111,6 +115,18 @@ class Produit
     public function setNomProduit(string $nomProduit): self
     {
         $this->nomProduit = $nomProduit;
+
+        return $this;
+    }
+
+    public function getBoutique(): ?Boutique
+    {
+        return $this->boutique;
+    }
+
+    public function setBoutique(?Boutique $boutique): self
+    {
+        $this->boutique = $boutique;
 
         return $this;
     }

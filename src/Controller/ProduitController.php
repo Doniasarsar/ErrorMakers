@@ -1,17 +1,16 @@
 <?php
 
 namespace App\Controller;
-
 use App\Entity\Produit;
 use App\Form\ProduitType;
 use App\Repository\ProduitRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ProduitController extends AbstractController
 {
@@ -48,14 +47,10 @@ class ProduitController extends AbstractController
  
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-
             $file = $form->get('image')->getData();
-            
-           
             $filename = md5(uniqid()).'.'.$file->guessExtension();
             $file->move($this->getParameter('uploads_directory'),$filename);
             $produit->setImage($filename);
-           
 
              $entityManager = $this->getDoctrine()->getManager();
              $entityManager->persist($produit);
