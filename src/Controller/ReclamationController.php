@@ -4,13 +4,15 @@ namespace App\Controller;
 
 
 use App\Entity\Reclamation;
+use App\Entity\Reponse;
 use App\Form\ReclamationType;
+use App\Repository\ReponseRepository;
 use App\Repository\ReclamationRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ReclamationController extends AbstractController
 {
@@ -32,6 +34,8 @@ class ReclamationController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
         $reclamations= new Reclamation();
+        #$reclamations->setCreatedAt(new \DateTimeImmutable());
+        $reclamations->setEtat("En cours");
         $form=$this ->createForm(ReclamationType::class,$reclamations);
         $form->add('Ajouter', SubmitType::class);
         $form->handleRequest($req);
@@ -61,6 +65,23 @@ class ReclamationController extends AbstractController
             'tab' => $reclamations,
         ]);
     }
+
+    
+    /** 
+     * @Route("reclamation/etat/{id}", name="etat_rec")
+     */
+    public function afficheReponse($id, ReclamationRepository $rep): Response
+    {
+        
+       $message=$rep->find($id);
+
+        return $this->render('reclamation/reponse.html.twig', [
+            'tab' => $message,
+        ]);
+    }
+
+
+
 
 }
 

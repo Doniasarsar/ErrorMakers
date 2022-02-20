@@ -13,11 +13,10 @@ class ReponseType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('object')
-            ->add('reponse', TextareaType::class)
-            ->add('idCommand')
-            ->add('time')
-            ->add('date')
+            ->add('subject')
+            ->add('message', TextareaType::class)
+            ->add('idCommande')
+            
         ;
     }
 

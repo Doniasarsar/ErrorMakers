@@ -18,15 +18,15 @@
     <div class="form-group mt-20">
     <table class="table table-striped">
         <tr>
-            <th>ID</th>
+            <th>ID Reclamation</th>
             <th>ID Command</th>
             <th>Your Name</th>
             <th>Email</th>
             <th>Reclamation Subject</th>
             <th>Message</th>
             <th>Reclamation Type</th>
-            <th>Reclamation Date</th>
-            <th>Reclamation Time</th>
+            {#<th>CreatedAt</th>#}
+            <th>Reclamation Status</th>
         </tr>
         {% for r in tab %}
             <tr>
@@ -37,8 +37,8 @@
                 <td>{{ r.subject}}</td>
                 <td>{{ r.message }}</td>
                 <td>{{ r.type }}</td>
-                <td>{{ r.date|date('d-m-Y') }}</td>
-                <td>{{ r.time|date('H:i:s') }}</td>
+                {#<td>{{ r.createdAt|date('Y-m-d H:i:s') }}</td>#}
+                <td><a href="{{path('etat_rec')}}">{{ r.etat }}</a></td>
             </tr>
         {% endfor %}
     </table>

@@ -35,15 +35,13 @@
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
-                        <th>ID</th>
+                        <th>ID Reclamation</th>
                         <th>ID Command</th>
                         <th>Your Name</th>
                         <th>Email</th>
                         <th>Reclamation Subject</th>
                         <th>Message</th>
                         <th>Reclamation Type</th>
-                        <th>Reclamation Date</th>
-                        <th>Reclamation Time</th>
                         <th>ACTION</th>
                     </tr>
                   </thead>
@@ -57,8 +55,6 @@
                 <td>{{ r.subject}}</td>
                 <td>{{ r.message }}</td>
                 <td>{{ r.type }}</td>
-                <td>{{ r.date|date('d-m-Y') }}</td>
-                <td>{{ r.time|date('H:i:s') }}</td>
                 <td>
                   <a class="btn btn-info" href="{{path('rep_add',{id:r.id},{idCommnde:r.idCommande})}}">Reply</a>
                        

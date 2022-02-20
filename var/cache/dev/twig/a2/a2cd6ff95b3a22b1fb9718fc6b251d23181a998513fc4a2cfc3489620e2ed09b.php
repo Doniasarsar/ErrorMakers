@@ -102,15 +102,16 @@ class __TwigTemplate_8d3cbf7fdf7d9f300e2448d7a0c65297fe2ac111f0317525421b61b1ee6
     <div class=\"form-group mt-20\">
     <table class=\"table table-striped\">
         <tr>
-            <th>ID</th>
+            <th>ID Reclamation</th>
             <th>ID Command</th>
             <th>Your Name</th>
             <th>Email</th>
             <th>Reclamation Subject</th>
             <th>Message</th>
             <th>Reclamation Type</th>
-            <th>Reclamation Date</th>
-            <th>Reclamation Time</th>
+            ";
+        // line 29
+        echo "            <th>Reclamation Status</th>
         </tr>
         ";
         // line 31
@@ -147,14 +148,13 @@ class __TwigTemplate_8d3cbf7fdf7d9f300e2448d7a0c65297fe2ac111f0317525421b61b1ee6
             // line 39
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "type", [], "any", false, false, false, 39), "html", null, true);
             echo "</td>
-                <td>";
-            // line 40
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "date", [], "any", false, false, false, 40), "d-m-Y"), "html", null, true);
-            echo "</td>
-                <td>";
+                ";
             // line 41
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "time", [], "any", false, false, false, 41), "H:i:s"), "html", null, true);
-            echo "</td>
+            echo "                <td><a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("etat_rec");
+            echo "\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "etat", [], "any", false, false, false, 41), "html", null, true);
+            echo "</a></td>
             </tr>
         ";
         }
@@ -186,7 +186,7 @@ class __TwigTemplate_8d3cbf7fdf7d9f300e2448d7a0c65297fe2ac111f0317525421b61b1ee6
 
     public function getDebugInfo()
     {
-        return array (  165 => 44,  156 => 41,  152 => 40,  148 => 39,  144 => 38,  140 => 37,  136 => 36,  132 => 35,  128 => 34,  124 => 33,  121 => 32,  117 => 31,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
+        return array (  165 => 44,  153 => 41,  149 => 39,  145 => 38,  141 => 37,  137 => 36,  133 => 35,  129 => 34,  125 => 33,  122 => 32,  118 => 31,  114 => 29,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -211,15 +211,15 @@ class __TwigTemplate_8d3cbf7fdf7d9f300e2448d7a0c65297fe2ac111f0317525421b61b1ee6
     <div class=\"form-group mt-20\">
     <table class=\"table table-striped\">
         <tr>
-            <th>ID</th>
+            <th>ID Reclamation</th>
             <th>ID Command</th>
             <th>Your Name</th>
             <th>Email</th>
             <th>Reclamation Subject</th>
             <th>Message</th>
             <th>Reclamation Type</th>
-            <th>Reclamation Date</th>
-            <th>Reclamation Time</th>
+            {#<th>CreatedAt</th>#}
+            <th>Reclamation Status</th>
         </tr>
         {% for r in tab %}
             <tr>
@@ -230,8 +230,8 @@ class __TwigTemplate_8d3cbf7fdf7d9f300e2448d7a0c65297fe2ac111f0317525421b61b1ee6
                 <td>{{ r.subject}}</td>
                 <td>{{ r.message }}</td>
                 <td>{{ r.type }}</td>
-                <td>{{ r.date|date('d-m-Y') }}</td>
-                <td>{{ r.time|date('H:i:s') }}</td>
+                {#<td>{{ r.createdAt|date('Y-m-d H:i:s') }}</td>#}
+                <td><a href=\"{{path('etat_rec')}}\">{{ r.etat }}</a></td>
             </tr>
         {% endfor %}
     </table>

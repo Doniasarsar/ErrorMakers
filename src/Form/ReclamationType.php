@@ -30,8 +30,7 @@ class ReclamationType extends AbstractType
                 'expanded' => false
             ])
             ->add('idCommande')
-            ->add('date')
-            ->add('time')
+        
 
         ;
     }

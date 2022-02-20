@@ -10,6 +10,7 @@ use App\Repository\ReclamationRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Validator\Constraints\DateTime;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -25,6 +26,9 @@ class ReponseController extends AbstractController
             'controller_name' => 'ReponseController',
         ]);
     }
+
+
+
 
       /**
      * @param ReclamationRepository $rep
@@ -52,6 +56,8 @@ class ReponseController extends AbstractController
 
         $idReclamation=$rep->find($id); 
         $reponses= new Reponse();
+        $reponses->setCreatedAt(new \DateTimeImmutable());
+        $recl->setEtat('Résolue');
         $form=$this ->createForm(ReponseType::class,$reponses);
         $form->add('Add', SubmitType::class);
         $form->handleRequest($req);
@@ -86,11 +92,11 @@ class ReponseController extends AbstractController
 
      /**
      * @return Reponse
-     * @Route("/response/delete/{idReponse}", name="response_delete")
+     * @Route("/response/delete/{id}", name="response_delete")
      */
 
-    public function Delete($idReponse, ReponseRepository $rep){
-        $response=$rep->find($idReponse);
+    public function Delete_reponse($id, ReponseRepository $rep){
+        $response=$rep->find($id);
         $em=$this->getDoctrine()->getManager();
         $em->remove($response);
         $em->flush();
@@ -98,4 +104,32 @@ class ReponseController extends AbstractController
         return $this->redirectToRoute('reponse_list');
     }
 
+
+    /**
+     * @Route("reponse/update/{id}", name="reponse_update")
+     */
+    public function update_reponse(Request $request, $id, ReponseRepository $rep)
+    {
+       
+        $reponse=$rep->find($id);
+
+        $form=$this->createForm(ReponseType::class,$reponse);
+       
+        $form->add('update', SubmitType::class);
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid())
+        {
+            $em=$this->getDoctrine()->getManager();
+            $em->flush();
+            return $this->redirectToRoute('reponse_list');
+        }
+        return $this->render('reponse/update.html.twig', [
+            'formA'=>$form->createView(),
+        ]);
+    }
+
 }
+
+    
+

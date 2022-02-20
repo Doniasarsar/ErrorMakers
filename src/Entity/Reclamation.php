@@ -54,29 +54,31 @@ class Reclamation
      */
     private $type;
 
-    /**
-     * @ORM\Column(type="date")
-     * @Assert\NotBlank
-     */
-    private $date;
-
-    /**
-     * @ORM\Column(type="time")
-     * @Assert\NotBlank
-     */
-    private $time;
-
-    #/**
-     #* @ORM\Column(type="string", length=255)
-     #* @var etat|Null_
-     #*/
-    #private $etat;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank
      */
     private $idCommande;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
+     * @Assert\Choice({"En cours", "Résolue"})
+     */
+    private $etat;
+
+
+    /**
+     * @ORM\OneToOne(targetEntity=Reponse::class, mappedBy="reclamation", cascade={"persist", "remove"})
+     */
+    private $reponse;
+
+    #/**
+    # * @ORM\Column(type="datetime_immutable")
+    # */
+    #private $createdAt;
+
 
     public function getId(): ?int
     {
@@ -143,41 +145,21 @@ class Reclamation
         return $this;
     }
 
-    public function getDate(): ?\DateTimeInterface
+    public function getEtat(): ?string
     {
-        return $this->date;
+        return $this->etat;
     }
 
-    public function setDate(\DateTimeInterface $date): self
+    public function setEtat(string $etat): self
     {
-        $this->date = $date;
+        $this->etat = $etat;
 
         return $this;
     }
 
-    public function getTime(): ?\DateTimeInterface
-    {
-        return $this->time;
-    }
+    
 
-    public function setTime(\DateTimeInterface $time): self
-    {
-        $this->time = $time;
 
-        return $this;
-    }
-
-    #public function getEtat(): ?string
-    #{
-     #   return $this->etat;
-    #}
-
-    #public function setEtat(string $etat): self
-    #{
-     #   $this->etat = $etat;
-
-      #  return $this;
-    #}*/
 
     public function getIdCommande(): ?string
     {
@@ -190,4 +172,43 @@ class Reclamation
 
         return $this;
     }
+
+    public function getReponse(): ?Reponse
+    {
+        return $this->reponse;
+    }
+
+    public function setReponse(?Reponse $reponse): self
+    {
+        // unset the owning side of the relation if necessary
+        if ($reponse === null && $this->reponse !== null) {
+            $this->reponse->setReclamation(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($reponse !== null && $reponse->getReclamation() !== $this) {
+            $reponse->setReclamation($this);
+        }
+
+        $this->reponse = $reponse;
+
+        return $this;
+    }
+    public function __toString() 
+{
+    return (string) $this->name; 
+}
+
+    /**public function getCreatedAt(): ?\DateTimeImmutable
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeImmutable $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }*/
+
 }

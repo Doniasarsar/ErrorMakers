@@ -15,95 +15,96 @@ class Reponse
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $idReponse;
+    private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $object;
+    private $subject;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $reponse;
+    private $message;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $idCommand;
+    private $idCommande;
 
     /**
-     * @ORM\Column(type="time")
+     * @ORM\Column(type="datetime_immutable")
      */
-    private $time;
+    private $createdAt;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\OneToOne(targetEntity=Reclamation::class, inversedBy="reponse", cascade={"persist", "remove"})
      */
-    private $date;
+    private $reclamation;
 
-    public function getIdReponse(): ?int
+    public function getId(): ?int
     {
-        return $this->idReponse;
+        return $this->id;
     }
 
-    public function getObject(): ?string
+    public function getSubject(): ?string
     {
-        return $this->object;
+        return $this->subject;
     }
 
-    public function setObject(string $object): self
+    public function setSubject(string $subject): self
     {
-        $this->object = $object;
+        $this->subject = $subject;
 
         return $this;
     }
 
-    public function getReponse(): ?string
+    public function getMessage(): ?string
     {
-        return $this->reponse;
+        return $this->message;
     }
 
-    public function setReponse(string $reponse): self
+    public function setMessage(string $message): self
     {
-        $this->reponse = $reponse;
+        $this->message = $message;
 
         return $this;
     }
 
-    public function getIdCommand(): ?string
+    public function getIdCommande(): ?string
     {
-        return $this->idCommand;
+        return $this->idCommande;
     }
 
-    public function setIdCommand(string $idCommand): self
+    public function setIdCommande(string $idCommande): self
     {
-        $this->idCommand = $idCommand;
+        $this->idCommande = $idCommande;
 
         return $this;
     }
 
-    public function getTime(): ?\DateTimeInterface
+    public function getCreatedAt(): ?\DateTimeImmutable
     {
-        return $this->time;
+        return $this->createdAt;
     }
 
-    public function setTime(\DateTimeInterface $time): self
+    public function setCreatedAt(\DateTimeImmutable $createdAt): self
     {
-        $this->time = $time;
+        $this->createdAt = $createdAt;
 
         return $this;
     }
 
-    public function getDate(): ?\DateTimeInterface
+    public function getReclamation(): ?Reclamation
     {
-        return $this->date;
+        return $this->reclamation;
     }
 
-    public function setDate(\DateTimeInterface $date): self
+    public function setReclamation(?Reclamation $reclamation): self
     {
-        $this->date = $date;
+        $this->reclamation = $reclamation;
 
         return $this;
     }
+
 }

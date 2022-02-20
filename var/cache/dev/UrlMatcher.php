@@ -40,8 +40,12 @@ return [
                     .')'
                 .')'
                 .'|/re(?'
-                    .'|ponse/add/([^/]++)(*:193)'
-                    .'|sponse/delete/([^/]++)(*:223)'
+                    .'|clamation/etat/([^/]++)(*:198)'
+                    .'|ponse/(?'
+                        .'|add/([^/]++)(*:227)'
+                        .'|update/([^/]++)(*:250)'
+                    .')'
+                    .'|sponse/delete/([^/]++)(*:281)'
                 .')'
             .')/?$}sD',
     ],
@@ -53,9 +57,11 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        193 => [[['_route' => 'rep_add', '_controller' => 'App\\Controller\\ReponseController::addResponse'], ['id'], null, null, false, true, null]],
-        223 => [
-            [['_route' => 'response_delete', '_controller' => 'App\\Controller\\ReponseController::Delete'], ['idReponse'], null, null, false, true, null],
+        198 => [[['_route' => 'etat_rec', '_controller' => 'App\\Controller\\ReclamationController::afficheReponse'], ['id'], null, null, false, true, null]],
+        227 => [[['_route' => 'rep_add', '_controller' => 'App\\Controller\\ReponseController::addResponse'], ['id'], null, null, false, true, null]],
+        250 => [[['_route' => 'reponse_update', '_controller' => 'App\\Controller\\ReponseController::update_reponse'], ['id'], null, null, false, true, null]],
+        281 => [
+            [['_route' => 'response_delete', '_controller' => 'App\\Controller\\ReponseController::Delete_reponse'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],
