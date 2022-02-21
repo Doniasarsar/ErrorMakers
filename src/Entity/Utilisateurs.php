@@ -75,15 +75,30 @@ class Utilisateurs implements UserInterface
      */
     private $Role = [];
 
-    /**
-     * @ORM\Column(type="string", length=50, nullable=true)
-     */
-    private $Token;
-
+   
     /**
      * @ORM\ManyToOne(targetEntity=Boutiques::class, inversedBy="utilisateurs")
      */
     private $Boutique;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Question 1 is required")
+     */
+    private $QuestionSecurite1;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Question 2 is required")
+     */
+    private $QuestionSecurite2;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Etat;
+
+    
 
     
 
@@ -184,18 +199,7 @@ class Utilisateurs implements UserInterface
         return $this;
     }
 
-    public function getToken(): ?string
-    {
-        return $this->Token;
-    }
-
-    public function setToken(?string $Token): self
-    {
-        $this->Token = $Token;
-
-        return $this;
-    }
-
+   
     public function getRoles(): array
     {
         $roles = $this->Role;
@@ -222,6 +226,44 @@ class Utilisateurs implements UserInterface
 
         return $this;
     }
+
+    public function getQuestionSecurite1(): ?string
+    {
+        return $this->QuestionSecurite1;
+    }
+
+    public function setQuestionSecurite1(string $QuestionSecurite1): self
+    {
+        $this->QuestionSecurite1 = $QuestionSecurite1;
+
+        return $this;
+    }
+
+    public function getQuestionSecurite2(): ?string
+    {
+        return $this->QuestionSecurite2;
+    }
+
+    public function setQuestionSecurite2(string $QuestionSecurite2): self
+    {
+        $this->QuestionSecurite2 = $QuestionSecurite2;
+
+        return $this;
+    }
+
+    public function getEtat(): ?string
+    {
+        return $this->Etat;
+    }
+
+    public function setEtat(string $Etat): self
+    {
+        $this->Etat = $Etat;
+
+        return $this;
+    }
+
+    
    
    
 }

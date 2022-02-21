@@ -257,7 +257,10 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class=\"nav-item menu-open\">
-            <a href=\"#\" class=\"nav-link active\">
+            <a href=\"";
+        // line 216
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_dashboard");
+        echo "\" class=\"nav-link active\">
               <i class=\"nav-icon fas fa-tachometer-alt\"></i>
               <p>
                 Dashboard
@@ -266,13 +269,19 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
             </a>
             <ul class=\"nav nav-treeview\">
               <li class=\"nav-item\">
-                <a href=\"./index.html\" class=\"nav-link active\">
+                <a href=\"";
+        // line 225
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_dashboard");
+        echo "\" class=\"nav-link active\">
                   <i class=\"far fa-circle nav-icon\"></i>
                   <p>Dashboard v1</p>
                 </a>
               </li>
               <li class=\"nav-item\">
-                <a href=\"#\" class=\"nav-link\">
+                <a href=\"";
+        // line 231
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_dashboard");
+        echo "\" class=\"nav-link\">
                   <i class=\"far fa-circle nav-icon\"></i>
                   <p>Dashboard v2</p>
                 </a>
@@ -290,9 +299,20 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
         // line 245
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_userlist");
         echo "\" class=\"nav-link \">
-              <i class=\"nav-icon fas fa-tachometer-alt\"></i>
+              <i class=\"fa fa-user\"></i>
               <p>
                 Utilisateurs
+              </p>
+            </a>
+          </li>
+          <li class=\"nav-item menu-open\">
+            <a href=\"";
+        // line 253
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_demandelist");
+        echo "\" class=\"nav-link \">
+              <i class=\"fa fa-user\"></i>
+              <p>
+                Demandes
               </p>
             </a>
           </li>
@@ -305,9 +325,9 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
     <!-- /.sidebar -->
   </aside>
   ";
-        // line 260
+        // line 268
         $this->displayBlock('body', $context, $blocks);
-        // line 262
+        // line 270
         echo " 
   <footer class=\"main-footer\">
     <strong>Copyright &copy; 2021-2022 <a href=\"https://adminlte.io\">ProTECH.io</a>.</strong>
@@ -329,7 +349,7 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
 </html>
 
 ";
-        // line 282
+        // line 290
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -404,7 +424,7 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
 
     }
 
-    // line 260
+    // line 268
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -414,7 +434,7 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 261
+        // line 269
         echo "  ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -424,7 +444,7 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
 
     }
 
-    // line 282
+    // line 290
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -434,15 +454,15 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 283
+        // line 291
         echo "<!-- jQuery -->
 <script src=\"";
-        // line 284
+        // line 292
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jquery/jquery.min.js"), "html", null, true);
         echo "\"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src=\"";
-        // line 286
+        // line 294
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jquery-ui/jquery-ui.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -451,70 +471,70 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
 </script>
 <!-- Bootstrap 4 -->
 <script src=\"";
-        // line 292
+        // line 300
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/bootstrap/js/bootstrap.bundle.min.js"), "html", null, true);
         echo "\"></script>
 <!-- ChartJS -->
 <script src=\"";
-        // line 294
+        // line 302
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chart.js/Chart.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Sparkline -->
 <script src=\"";
-        // line 296
+        // line 304
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/sparklines/sparkline.js"), "html", null, true);
         echo "\"></script>
 <!-- JQVMap -->
 <script src=\"";
-        // line 298
+        // line 306
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("lugins/jqvmap/jquery.vmap.min.js"), "html", null, true);
         echo "p\"></script>
 <script src=\"";
-        // line 299
+        // line 307
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jqvmap/maps/jquery.vmap.usa.js"), "html", null, true);
         echo "\"></script>
 <!-- jQuery Knob Chart -->
 <script src=\"";
-        // line 301
+        // line 309
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jquery-knob/jquery.knob.min.js"), "html", null, true);
         echo "\"></script>
 <!-- daterangepicker -->
 <script src=\"";
-        // line 303
+        // line 311
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/moment/moment.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 304
+        // line 312
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/daterangepicker/daterangepicker.js"), "html", null, true);
         echo "\"></script>
 <!-- Tempusdominus Bootstrap 4 -->
 <script src=\"";
-        // line 306
+        // line 314
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Summernote -->
 <script src=\"";
-        // line 308
+        // line 316
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/summernote/summernote-bs4.min.js"), "html", null, true);
         echo "\"></script>
 <!-- overlayScrollbars -->
 <script src=\"";
-        // line 310
+        // line 318
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"), "html", null, true);
         echo "\"></script>
 <!-- AdminLTE App -->
 <script src=\"";
-        // line 312
+        // line 320
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("dist/js/adminlte.js"), "html", null, true);
         echo "\"></script>
 <!-- AdminLTE for demo purposes -->
 <script src=\"";
-        // line 314
+        // line 322
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("dist/js/demo.js"), "html", null, true);
         echo "\"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src=\"";
-        // line 316
+        // line 324
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("dist/js/pages/dashboard.js"), "html", null, true);
         echo "\"></script>
 
@@ -539,7 +559,7 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
 
     public function getDebugInfo()
     {
-        return array (  518 => 316,  513 => 314,  508 => 312,  503 => 310,  498 => 308,  493 => 306,  488 => 304,  484 => 303,  479 => 301,  474 => 299,  470 => 298,  465 => 296,  460 => 294,  455 => 292,  446 => 286,  441 => 284,  438 => 283,  428 => 282,  418 => 261,  408 => 260,  395 => 27,  390 => 25,  385 => 23,  380 => 21,  375 => 19,  370 => 17,  365 => 15,  358 => 11,  353 => 8,  343 => 7,  333 => 282,  311 => 262,  309 => 260,  291 => 245,  234 => 191,  222 => 182,  158 => 121,  139 => 105,  120 => 89,  65 => 37,  56 => 30,  54 => 7,  46 => 1,);
+        return array (  538 => 324,  533 => 322,  528 => 320,  523 => 318,  518 => 316,  513 => 314,  508 => 312,  504 => 311,  499 => 309,  494 => 307,  490 => 306,  485 => 304,  480 => 302,  475 => 300,  466 => 294,  461 => 292,  458 => 291,  448 => 290,  438 => 269,  428 => 268,  415 => 27,  410 => 25,  405 => 23,  400 => 21,  395 => 19,  390 => 17,  385 => 15,  378 => 11,  373 => 8,  363 => 7,  353 => 290,  331 => 270,  329 => 268,  311 => 253,  300 => 245,  283 => 231,  274 => 225,  262 => 216,  234 => 191,  222 => 182,  158 => 121,  139 => 105,  120 => 89,  65 => 37,  56 => 30,  54 => 7,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -759,7 +779,7 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class=\"nav-item menu-open\">
-            <a href=\"#\" class=\"nav-link active\">
+            <a href=\"{{path('admin_dashboard')}}\" class=\"nav-link active\">
               <i class=\"nav-icon fas fa-tachometer-alt\"></i>
               <p>
                 Dashboard
@@ -768,13 +788,13 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
             </a>
             <ul class=\"nav nav-treeview\">
               <li class=\"nav-item\">
-                <a href=\"./index.html\" class=\"nav-link active\">
+                <a href=\"{{path('admin_dashboard')}}\" class=\"nav-link active\">
                   <i class=\"far fa-circle nav-icon\"></i>
                   <p>Dashboard v1</p>
                 </a>
               </li>
               <li class=\"nav-item\">
-                <a href=\"#\" class=\"nav-link\">
+                <a href=\"{{path('admin_dashboard')}}\" class=\"nav-link\">
                   <i class=\"far fa-circle nav-icon\"></i>
                   <p>Dashboard v2</p>
                 </a>
@@ -789,9 +809,17 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
           </li>
           <li class=\"nav-item menu-open\">
             <a href=\"{{path('admin_userlist')}}\" class=\"nav-link \">
-              <i class=\"nav-icon fas fa-tachometer-alt\"></i>
+              <i class=\"fa fa-user\"></i>
               <p>
                 Utilisateurs
+              </p>
+            </a>
+          </li>
+          <li class=\"nav-item menu-open\">
+            <a href=\"{{path('admin_demandelist')}}\" class=\"nav-link \">
+              <i class=\"fa fa-user\"></i>
+              <p>
+                Demandes
               </p>
             </a>
           </li>

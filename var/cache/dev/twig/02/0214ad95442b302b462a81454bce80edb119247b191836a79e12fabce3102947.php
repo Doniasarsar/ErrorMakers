@@ -192,16 +192,41 @@ class __TwigTemplate_471f9c68e9dd8483fd9820ac12b4d67a567b226756eca7e1aa382a7ea3d
         echo "
                                             
                                          </div>
+                                    </div>
+                                    <div> <h4>Password Recovety Questions</h4></div><br>
+                                    <div class=\"row\">
+                                         <div class=\"col-md-6 mb-20\">
+                                            ";
+        // line 70
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["userForm"]) || array_key_exists("userForm", $context) ? $context["userForm"] : (function () { throw new RuntimeError('Variable "userForm" does not exist.', 70, $this->source); })()), "QuestionSecurite1", [], "any", false, false, false, 70), 'label', ["label" => "What is the name of the town where you were born?"]);
+        echo "
+                                            ";
+        // line 71
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["userForm"]) || array_key_exists("userForm", $context) ? $context["userForm"] : (function () { throw new RuntimeError('Variable "userForm" does not exist.', 71, $this->source); })()), "QuestionSecurite1", [], "any", false, false, false, 71), 'widget', ["attr" => ["class" => "mb-0"]]);
+        echo "
+                                            
+                                         </div>
+                                         <div class=\"col-md-6 mb-20\">
+                                            ";
+        // line 75
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["userForm"]) || array_key_exists("userForm", $context) ? $context["userForm"] : (function () { throw new RuntimeError('Variable "userForm" does not exist.', 75, $this->source); })()), "QuestionSecurite2", [], "any", false, false, false, 75), 'label', ["label" => "Where was your best family vacation as a kid?"]);
+        echo "
+                                            ";
+        // line 76
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["userForm"]) || array_key_exists("userForm", $context) ? $context["userForm"] : (function () { throw new RuntimeError('Variable "userForm" does not exist.', 76, $this->source); })()), "QuestionSecurite2", [], "any", false, false, false, 76), 'widget', ["attr" => ["class" => "mb-0"]]);
+        echo "
+                                            
+                                         </div>
                                        <div class=\"col-12\">
                                             ";
-        // line 67
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["userForm"]) || array_key_exists("userForm", $context) ? $context["userForm"] : (function () { throw new RuntimeError('Variable "userForm" does not exist.', 67, $this->source); })()), "Register", [], "any", false, false, false, 67), 'row', ["attr" => ["label" => "Register", "class" => "register-button mt-0"]]);
+        // line 80
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["userForm"]) || array_key_exists("userForm", $context) ? $context["userForm"] : (function () { throw new RuntimeError('Variable "userForm" does not exist.', 80, $this->source); })()), "Register", [], "any", false, false, false, 80), 'row', ["attr" => ["label" => "Register", "class" => "register-button mt-0"]]);
         echo "
                                           
                                         </div>
                                         ";
-        // line 70
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["userForm"]) || array_key_exists("userForm", $context) ? $context["userForm"] : (function () { throw new RuntimeError('Variable "userForm" does not exist.', 70, $this->source); })()), 'form_end');
+        // line 83
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["userForm"]) || array_key_exists("userForm", $context) ? $context["userForm"] : (function () { throw new RuntimeError('Variable "userForm" does not exist.', 83, $this->source); })()), 'form_end');
         echo "
                                     </div>
                                 </div>
@@ -232,7 +257,7 @@ class __TwigTemplate_471f9c68e9dd8483fd9820ac12b4d67a567b226756eca7e1aa382a7ea3d
 
     public function getDebugInfo()
     {
-        return array (  204 => 70,  198 => 67,  191 => 63,  187 => 62,  180 => 58,  176 => 57,  170 => 54,  166 => 53,  159 => 49,  155 => 48,  148 => 44,  144 => 43,  137 => 39,  133 => 38,  126 => 34,  122 => 33,  107 => 21,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
+        return array (  229 => 83,  223 => 80,  216 => 76,  212 => 75,  205 => 71,  201 => 70,  191 => 63,  187 => 62,  180 => 58,  176 => 57,  170 => 54,  166 => 53,  159 => 49,  155 => 48,  148 => 44,  144 => 43,  137 => 39,  133 => 38,  126 => 34,  122 => 33,  107 => 21,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -300,6 +325,19 @@ class __TwigTemplate_471f9c68e9dd8483fd9820ac12b4d67a567b226756eca7e1aa382a7ea3d
                                         <div class=\"col-md-6 mb-20\">
                                             {{ form_label(userForm.ConfirmPassword,\"Confirm Password\") }}
                                             {{ form_widget(userForm.ConfirmPassword,{'attr':{\"class\":\"mb-0\"}}) }}
+                                            
+                                         </div>
+                                    </div>
+                                    <div> <h4>Password Recovety Questions</h4></div><br>
+                                    <div class=\"row\">
+                                         <div class=\"col-md-6 mb-20\">
+                                            {{ form_label(userForm.QuestionSecurite1,\"What is the name of the town where you were born?\") }}
+                                            {{ form_widget(userForm.QuestionSecurite1,{'attr':{\"class\":\"mb-0\"}}) }}
+                                            
+                                         </div>
+                                         <div class=\"col-md-6 mb-20\">
+                                            {{ form_label(userForm.QuestionSecurite2,\"Where was your best family vacation as a kid?\") }}
+                                            {{ form_widget(userForm.QuestionSecurite2,{'attr':{\"class\":\"mb-0\"}}) }}
                                             
                                          </div>
                                        <div class=\"col-12\">

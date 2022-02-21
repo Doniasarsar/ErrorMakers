@@ -42,6 +42,8 @@ class UtilisateursController extends AbstractController
 
             $hash = $encoder->encodePassword($user, $user->getPassword());
             $user->setPassword($hash);
+            
+            $user->setEtat("Disponible");
 
 
             $em=$this->getDoctrine()->getManager();
@@ -55,37 +57,6 @@ class UtilisateursController extends AbstractController
             'userForm'=>$form->createView(),
         ]);
     }
-
-    /**
-     * @Route("/utilisateurs/addActeur",name="acteurSAdd")
-     */
-
-    public function AddActeurS(Request $request , UserPasswordEncoderInterface $encoder){
-        $em = $this->getDoctrine()->getManager();
-        $user= new Utilisateurs();
-        $form=$this ->createForm(ActeurSType::class,$user);
-        $form->add('Register', SubmitType::class);
-        $form->handleRequest($request);
-        if($form->isSubmitted() && $form->isValid())
-        {
-            $user->setToken(md5(uniqid()));
-
-            $hash = $encoder->encodePassword($user, $user->getPassword());
-            $user->setPassword($hash);
-
-            $em=$this->getDoctrine()->getManager();
-            $em->persist($user);
-            $em->flush();
-            return $this->redirectToRoute('home');
-
-        }
-
-        return $this->render('utilisateurs/addActeurS.html.twig', [
-            'ActeurSForm'=>$form->createView(),
-        ]);
-    }
-
-  
 
      /**
      * @Route("/utilisateurs/update/{id}",name="userupdate")
@@ -143,23 +114,29 @@ class UtilisateursController extends AbstractController
         return $this->render("utilisateurs/updatepass.html.twig");
 
      }
-     /**
-     * @Route("/activation/{token}",name="activation")
+      /**
+     * @Route("/utilisateurs/confirmuser",name="confirmuser")
      */
-     public function activation($token, UtilisateursRepository $rep){
-            $user=$rep->findOneBy(['Token'=>$token]);
+    public function ConfirmUser(UtilisateursRepository $rep ,Request $request ){
+        
+        if($request->isMethod('POST')){
 
-            if(!$user){
-                throw $this->createNotFoundException("Cet utilisateur n'existe pas");
-            }
-            $user->setToken(null);
-            $em=$this->getDoctrine()->getManager();
-            $em->persist($user);
-            $em->flush();
+            $em= $this->getDoctrine()->getManager();
+            $user=$this->getUser();
+            if(($request->request->get('question1') == $user->getQuestionSecurite1()) &&
+            ($request->request->get('question2') == $user->getQuestionSecurite2())) {
+              
+                return $this->redirectToRoute('passupdate');
+               
+            }else
+            $this->addFlash('error','Reply does not match');
 
-            $this->addFlash('message','Compte activé');
-            return $this->redirectToRoute('login');
+
+        }
+        return $this->render("utilisateurs/confirmuser.html.twig");
+
      }
+    
      /**
      * @Route("/login", name="login")
      */

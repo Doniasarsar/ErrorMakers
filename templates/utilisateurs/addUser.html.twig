@@ -63,6 +63,19 @@
                                             {{ form_widget(userForm.ConfirmPassword,{'attr':{"class":"mb-0"}}) }}
                                             
                                          </div>
+                                    </div>
+                                    <div> <h4>Password Recovety Questions</h4></div><br>
+                                    <div class="row">
+                                         <div class="col-md-6 mb-20">
+                                            {{ form_label(userForm.QuestionSecurite1,"What is the name of the town where you were born?") }}
+                                            {{ form_widget(userForm.QuestionSecurite1,{'attr':{"class":"mb-0"}}) }}
+                                            
+                                         </div>
+                                         <div class="col-md-6 mb-20">
+                                            {{ form_label(userForm.QuestionSecurite2,"Where was your best family vacation as a kid?") }}
+                                            {{ form_widget(userForm.QuestionSecurite2,{'attr':{"class":"mb-0"}}) }}
+                                            
+                                         </div>
                                        <div class="col-12">
                                             {{ form_row(userForm.Register,{'attr':{ "label":"Register" ,"class":"register-button mt-0"}}) }}
                                           

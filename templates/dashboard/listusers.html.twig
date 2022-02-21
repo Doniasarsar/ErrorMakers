@@ -38,8 +38,9 @@
                     <th>EMAIL</th>
                     <th>TELEPHONE</th>
                     <th>ROLE</th>
-                    <th>BOUTIQUE</th>
+                    <th>ETAT</th>
                     <th>OPTION</th>
+                    
                   </tr>
                   </thead>
                   <tbody>
@@ -62,14 +63,9 @@
 
                           {% endif %}
                           {% endfor %}</td>
-                          {% if user.Boutique.nomBoutique == Null %}
-                          <td>Null</td>
+                          <td>{{user.Etat}}</td>
                          
-                          {% else %}
-                          <td>{{user.Boutique.nomBoutique}}</td>
-                          {% endif %}
-                        
-                          <td><a class="btn btn-danger" href="{{path("userdelete",{'id':user.id}) }}">Delete</a>
+                          <td><a class="btn btn-danger" href="{{path("admin_userdelete",{'id':user.id}) }}">Delete</a>
 
                           </tr>
                           {% else %}

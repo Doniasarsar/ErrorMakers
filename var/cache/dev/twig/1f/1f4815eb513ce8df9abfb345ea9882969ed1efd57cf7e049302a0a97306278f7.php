@@ -103,93 +103,83 @@ class __TwigTemplate_88be26f14a393c1fd77e75ed6a5bf4a4019ffb52369a3723be2014f7d31
                     <th>EMAIL</th>
                     <th>TELEPHONE</th>
                     <th>ROLE</th>
-                    <th>BOUTIQUE</th>
+                    <th>ETAT</th>
                     <th>OPTION</th>
+                    
                   </tr>
                   </thead>
                   <tbody>
                     ";
-        // line 46
+        // line 47
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 46, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 47, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 47
+            // line 48
             echo "                          <tr>
                           <td>";
-            // line 48
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 48), "html", null, true);
-            echo "</td>
-                          <td>";
             // line 49
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "Nom", [], "any", false, false, false, 49), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 49), "html", null, true);
             echo "</td>
                           <td>";
             // line 50
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "Prenom", [], "any", false, false, false, 50), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "Nom", [], "any", false, false, false, 50), "html", null, true);
             echo "</td>
                           <td>";
             // line 51
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "Email", [], "any", false, false, false, 51), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "Prenom", [], "any", false, false, false, 51), "html", null, true);
             echo "</td>
                           <td>";
             // line 52
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "Telephone", [], "any", false, false, false, 52), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "Email", [], "any", false, false, false, 52), "html", null, true);
             echo "</td>
                           <td>";
             // line 53
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "Telephone", [], "any", false, false, false, 53), "html", null, true);
+            echo "</td>
+                          <td>";
+            // line 54
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["user"], "Role", [], "any", false, false, false, 53));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["user"], "Role", [], "any", false, false, false, 54));
             foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
-                // line 54
+                // line 55
                 echo "                          ";
                 if ((0 === twig_compare($context["role"], "ROLE_USER"))) {
                     echo " 
                               Utilisateur
                           ";
-                } elseif ((0 === twig_compare(                // line 56
+                } elseif ((0 === twig_compare(                // line 57
 $context["role"], "ROLE_ADMIN"))) {
-                    // line 57
+                    // line 58
                     echo "                              Administrateur
                           ";
-                } elseif ((0 === twig_compare(                // line 58
+                } elseif ((0 === twig_compare(                // line 59
 $context["role"], "ROLE_COMM"))) {
-                    // line 59
+                    // line 60
                     echo "                              Commercant
                           ";
-                } elseif ((0 === twig_compare(                // line 60
+                } elseif ((0 === twig_compare(                // line 61
 $context["role"], "ROLE_LIV"))) {
-                    // line 61
+                    // line 62
                     echo "                              Livreur
 
                           ";
                 }
-                // line 64
+                // line 65
                 echo "                          ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
             echo "</td>
-                          ";
-            // line 65
-            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["user"], "Boutique", [], "any", false, false, false, 65), "nomBoutique", [], "any", false, false, false, 65), (isset($context["Null"]) || array_key_exists("Null", $context) ? $context["Null"] : (function () { throw new RuntimeError('Variable "Null" does not exist.', 65, $this->source); })())))) {
-                // line 66
-                echo "                          <td>Null</td>
+                          <td>";
+            // line 66
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "Etat", [], "any", false, false, false, 66), "html", null, true);
+            echo "</td>
                          
-                          ";
-            } else {
-                // line 69
-                echo "                          <td>";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["user"], "Boutique", [], "any", false, false, false, 69), "nomBoutique", [], "any", false, false, false, 69), "html", null, true);
-                echo "</td>
-                          ";
-            }
-            // line 71
-            echo "                        
                           <td><a class=\"btn btn-danger\" href=\"";
-            // line 72
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("userdelete", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 72)]), "html", null, true);
+            // line 68
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_userdelete", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 68)]), "html", null, true);
             echo "\">Delete</a>
 
                           </tr>
@@ -197,7 +187,7 @@ $context["role"], "ROLE_LIV"))) {
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 76
+            // line 72
             echo "                          <td colspan=\"6\">Il n'y a aucun utilisateur inscrit!</td>
 
                           </tbody>
@@ -206,7 +196,7 @@ $context["role"], "ROLE_LIV"))) {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 80
+        // line 76
         echo "                </table>
               </div>
               <!-- /.card-body -->
@@ -231,7 +221,7 @@ $context["role"], "ROLE_LIV"))) {
 
     }
 
-    // line 97
+    // line 93
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -241,57 +231,57 @@ $context["role"], "ROLE_LIV"))) {
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 98
+        // line 94
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
 
 <!-- DataTables  & Plugins -->
 <script src=\"";
-        // line 101
+        // line 97
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables/jquery.dataTables.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 102
+        // line 98
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 103
+        // line 99
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-responsive/js/dataTables.responsive.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 104
+        // line 100
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-responsive/js/responsive.bootstrap4.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 105
+        // line 101
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/dataTables.buttons.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 106
+        // line 102
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.bootstrap4.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 107
+        // line 103
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jszip/jszip.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 108
+        // line 104
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/pdfmake/pdfmake.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 109
+        // line 105
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/pdfmake/vfs_fonts.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 110
+        // line 106
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.html5.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 111
+        // line 107
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.print.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 112
+        // line 108
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.colVis.min.js"), "html", null, true);
         echo "\"></script>
 
@@ -334,7 +324,7 @@ $context["role"], "ROLE_LIV"))) {
 
     public function getDebugInfo()
     {
-        return array (  295 => 112,  291 => 111,  287 => 110,  283 => 109,  279 => 108,  275 => 107,  271 => 106,  267 => 105,  263 => 104,  259 => 103,  255 => 102,  251 => 101,  245 => 98,  235 => 97,  210 => 80,  201 => 76,  192 => 72,  189 => 71,  183 => 69,  178 => 66,  176 => 65,  168 => 64,  163 => 61,  161 => 60,  158 => 59,  156 => 58,  153 => 57,  151 => 56,  145 => 54,  141 => 53,  137 => 52,  133 => 51,  129 => 50,  125 => 49,  121 => 48,  118 => 47,  113 => 46,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  285 => 108,  281 => 107,  277 => 106,  273 => 105,  269 => 104,  265 => 103,  261 => 102,  257 => 101,  253 => 100,  249 => 99,  245 => 98,  241 => 97,  235 => 94,  225 => 93,  200 => 76,  191 => 72,  182 => 68,  177 => 66,  169 => 65,  164 => 62,  162 => 61,  159 => 60,  157 => 59,  154 => 58,  152 => 57,  146 => 55,  142 => 54,  138 => 53,  134 => 52,  130 => 51,  126 => 50,  122 => 49,  119 => 48,  114 => 47,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -379,8 +369,9 @@ $context["role"], "ROLE_LIV"))) {
                     <th>EMAIL</th>
                     <th>TELEPHONE</th>
                     <th>ROLE</th>
-                    <th>BOUTIQUE</th>
+                    <th>ETAT</th>
                     <th>OPTION</th>
+                    
                   </tr>
                   </thead>
                   <tbody>
@@ -403,14 +394,9 @@ $context["role"], "ROLE_LIV"))) {
 
                           {% endif %}
                           {% endfor %}</td>
-                          {% if user.Boutique.nomBoutique == Null %}
-                          <td>Null</td>
+                          <td>{{user.Etat}}</td>
                          
-                          {% else %}
-                          <td>{{user.Boutique.nomBoutique}}</td>
-                          {% endif %}
-                        
-                          <td><a class=\"btn btn-danger\" href=\"{{path(\"userdelete\",{'id':user.id}) }}\">Delete</a>
+                          <td><a class=\"btn btn-danger\" href=\"{{path(\"admin_userdelete\",{'id':user.id}) }}\">Delete</a>
 
                           </tr>
                           {% else %}
