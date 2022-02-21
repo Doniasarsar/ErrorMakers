@@ -4911,3 +4911,6 @@ ce8bc2,127.0.0.1,GET,http://127.0.0.1:8000/produit,1645458443,,200
 2ccdf6,127.0.0.1,GET,http://127.0.0.1:8000/admin/affcommande,1645458445,,200
 0094d9,127.0.0.1,GET,http://127.0.0.1:8000/lugins/jqvmap/jquery.vmap.min.jsp,1645458446,31bec8,404
 31bec8,127.0.0.1,GET,http://127.0.0.1:8000/lugins/jqvmap/jquery.vmap.min.jsp,1645458446,,404
+cd8b1f,127.0.0.1,GET,http://127.0.0.1:8000/ligne/commande,1645458474,,200
+4dfce9,127.0.0.1,GET,http://127.0.0.1:8000/lugins/jqvmap/jquery.vmap.min.jsp,1645458475,94b239,404
+94b239,127.0.0.1,GET,http://127.0.0.1:8000/lugins/jqvmap/jquery.vmap.min.jsp,1645458475,,404
