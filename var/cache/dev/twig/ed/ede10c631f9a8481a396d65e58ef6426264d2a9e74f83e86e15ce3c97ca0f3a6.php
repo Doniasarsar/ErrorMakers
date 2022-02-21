@@ -65,7 +65,7 @@ class __TwigTemplate_5c1328a79567148cb2e1e61ce421172e385b9b04efd43ecee0744633c31
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Hello ReclamationController!";
+        echo "ReclamationController!";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -91,22 +91,9 @@ class __TwigTemplate_5c1328a79567148cb2e1e61ce421172e385b9b04efd43ecee0744633c31
 </style>
 
 <div class=\"example-wrapper\">
-    <h1>Hello ";
-        // line 12
-        echo twig_escape_filter($this->env, (isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 12, $this->source); })()), "html", null, true);
-        echo "! ✅</h1>
+    <h1>Reclamation Added successfully ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"";
-        // line 16
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("C:/Users/mariem/Documents/piDEV/ErrorMakers-3A45/src/Controller/ReclamationController.php", 0), "html", null, true);
-        echo "\">src/Controller/ReclamationController.php</a></code></li>
-        <li>Your template at <code><a href=\"";
-        // line 17
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("C:/Users/mariem/Documents/piDEV/ErrorMakers-3A45/templates/reclamation/index.html.twig", 0), "html", null, true);
-        echo "\">templates/reclamation/index.html.twig</a></code></li>
-    </ul>
+    
 </div>
 ";
         
@@ -129,14 +116,14 @@ class __TwigTemplate_5c1328a79567148cb2e1e61ce421172e385b9b04efd43ecee0744633c31
 
     public function getDebugInfo()
     {
-        return array (  107 => 17,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Hello ReclamationController!{% endblock %}
+{% block title %}ReclamationController!{% endblock %}
 
 {% block body %}
 <style>
@@ -145,13 +132,9 @@ class __TwigTemplate_5c1328a79567148cb2e1e61ce421172e385b9b04efd43ecee0744633c31
 </style>
 
 <div class=\"example-wrapper\">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1>Reclamation Added successfully ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"{{ 'C:/Users/mariem/Documents/piDEV/ErrorMakers-3A45/src/Controller/ReclamationController.php'|file_link(0) }}\">src/Controller/ReclamationController.php</a></code></li>
-        <li>Your template at <code><a href=\"{{ 'C:/Users/mariem/Documents/piDEV/ErrorMakers-3A45/templates/reclamation/index.html.twig'|file_link(0) }}\">templates/reclamation/index.html.twig</a></code></li>
-    </ul>
+    
 </div>
 {% endblock %}
 ", "reclamation/index.html.twig", "C:\\Users\\mariem\\Documents\\piDEV\\ErrorMakers-3A45\\templates\\reclamation\\index.html.twig");

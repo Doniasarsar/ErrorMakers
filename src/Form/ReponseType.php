@@ -18,9 +18,7 @@ class ReponseType extends AbstractType
             ->add('subject')
             ->add('message', TextareaType::class)
             ->add('idCommande')
-            ->add('reclamation',EntityType::class, [
-               'class' => Reclamation::class 
-            ])
+            
             
         ;
     }

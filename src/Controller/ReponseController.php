@@ -55,6 +55,7 @@ class ReponseController extends AbstractController
 
 
         $idReclamation=$rep->find($id); 
+        
         $reponses= new Reponse();
         $reponses->setCreatedAt(new \DateTimeImmutable());
         $recl->setEtat('Résolue');
@@ -62,7 +63,9 @@ class ReponseController extends AbstractController
         $form->add('Add', SubmitType::class);
         $form->handleRequest($req);
         if($form->isSubmitted() && $form->isValid())
-        {$em=$this->getDoctrine()->getManager();
+        { 
+            $reponses = $reponses->setReclamation($idReclamation);
+            $em=$this->getDoctrine()->getManager();
             $em->persist($reponses);
             $em->flush();
             return $this->redirectToRoute('reponse_list');

@@ -77,7 +77,7 @@ class __TwigTemplate_f89e43b37576e5d93efc9379a0578c7dbc2ea686c4410fcb1f6b220aec1
             <!-- general form elements -->
             <div class=\"card card-primary\">
               <div class=\"card-header\">
-                <h3 class=\"card-title\">Modifier Commande</h3>
+                <h3 class=\"card-title\">Ajouter Reponse</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -109,19 +109,20 @@ class __TwigTemplate_f89e43b37576e5d93efc9379a0578c7dbc2ea686c4410fcb1f6b220aec1
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 34, $this->source); })()), "message", [], "any", false, false, false, 34), 'widget');
         echo "
                   </div>
+                  
                 </div>
                 <!-- /.card-body -->
 
                 <div class=\"card-footer\">
                 ";
-        // line 40
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 40, $this->source); })()), "Add", [], "any", false, false, false, 40), 'widget', ["attr" => ["class" => "btn btn-primary "]]);
+        // line 41
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 41, $this->source); })()), "Add", [], "any", false, false, false, 41), 'widget', ["attr" => ["class" => "btn btn-primary "]]);
         echo "
 
                 </div>
              ";
-        // line 43
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 43, $this->source); })()), 'form_end');
+        // line 44
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 44, $this->source); })()), 'form_end');
         echo "
               
             </div>
@@ -159,7 +160,7 @@ class __TwigTemplate_f89e43b37576e5d93efc9379a0578c7dbc2ea686c4410fcb1f6b220aec1
 
     public function getDebugInfo()
     {
-        return array (  124 => 43,  118 => 40,  109 => 34,  102 => 30,  95 => 26,  87 => 21,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  125 => 44,  119 => 41,  109 => 34,  102 => 30,  95 => 26,  87 => 21,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -179,7 +180,7 @@ class __TwigTemplate_f89e43b37576e5d93efc9379a0578c7dbc2ea686c4410fcb1f6b220aec1
             <!-- general form elements -->
             <div class=\"card card-primary\">
               <div class=\"card-header\">
-                <h3 class=\"card-title\">Modifier Commande</h3>
+                <h3 class=\"card-title\">Ajouter Reponse</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -199,6 +200,7 @@ class __TwigTemplate_f89e43b37576e5d93efc9379a0578c7dbc2ea686c4410fcb1f6b220aec1
                     <label for=\"exampleInputPassword1\">Reponse </label>
                     {{ form_widget(formA.message) }}
                   </div>
+                  
                 </div>
                 <!-- /.card-body -->
 
