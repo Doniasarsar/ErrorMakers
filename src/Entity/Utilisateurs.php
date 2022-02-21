@@ -80,6 +80,11 @@ class Utilisateurs implements UserInterface
      */
     private $Token;
 
+    /**
+     * @ORM\OneToOne(targetEntity=Boutique::class, cascade={"persist", "remove"})
+     */
+    private $boutique;
+
     
 
    
@@ -208,6 +213,20 @@ class Utilisateurs implements UserInterface
     }
     public function eraseCredentials(){}
     public function getSalt(){}
+
+    public function getBoutique(): ?Boutique
+    {
+        return $this->boutique;
+    }
+
+    public function setBoutique(?Boutique $boutique): self
+    {
+        $this->boutique = $boutique;
+
+        return $this;
+    }
+   
+
 
    
   

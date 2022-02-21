@@ -77,6 +77,7 @@
     <parameter key="container.dumper.inline_class_loader">true</parameter>
     <parameter key="container.dumper.inline_factories">true</parameter>
     <parameter key="uploads_directory">C:\Users\HP\Desktop\ErrorMakers-3A45/public/uploads</parameter>
+    <parameter key="images_directory">C:\Users\HP\Desktop\ErrorMakers-3A45/public/uploads/boutique</parameter>
     <parameter key="event_dispatcher.event_aliases" type="collection">
       <parameter key="Symfony\Component\Console\Event\ConsoleCommandEvent">console.command</parameter>
       <parameter key="Symfony\Component\Console\Event\ConsoleErrorEvent">console.error</parameter>
@@ -369,6 +370,10 @@
       <tag name="form.type"/>
     </service>
     <service id="App\Repository\BoutiqueRepository" class="App\Repository\BoutiqueRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\ImagesRepository" class="App\Repository\ImagesRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -4643,7 +4648,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.lTJr6EB"/>
+      <argument type="service" id=".service_locator.MaIyHqp"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -4970,6 +4975,8 @@
     <service id=".abstract.instanceof.App\Form\ProduitType" class="App\Form\ProduitType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\BoutiqueRepository" class="App\Repository\BoutiqueRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\BoutiqueRepository" class="App\Repository\BoutiqueRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ImagesRepository" class="App\Repository\ImagesRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ImagesRepository" class="App\Repository\ImagesRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ProduitRepository" class="App\Repository\ProduitRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ProduitRepository" class="App\Repository\ProduitRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UtilisateursRepository" class="App\Repository\UtilisateursRepository" autowire="true" abstract="true"/>
@@ -5268,18 +5275,20 @@
         <argument key="rep" type="service_closure" id="App\Repository\ProduitRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.gxJeA2t" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.z6xYSiI" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\BoutiqueController::Supprimer" type="service_closure" id=".service_locator.eTYQhjN"/>
         <argument key="App\Controller\BoutiqueController::afficher" type="service_closure" id=".service_locator.eTYQhjN"/>
         <argument key="App\Controller\BoutiqueController::afficherProduit" type="service_closure" id=".service_locator.plab2C_"/>
+        <argument key="App\Controller\FrontController::detail" type="service_closure" id=".service_locator.plab2C_"/>
         <argument key="App\Controller\FrontController::index" type="service_closure" id=".service_locator.plab2C_"/>
         <argument key="App\Controller\ProduitController::Supprimer" type="service_closure" id=".service_locator.plab2C_"/>
         <argument key="App\Controller\ProduitController::afficher" type="service_closure" id=".service_locator.plab2C_"/>
         <argument key="App\Controller\BoutiqueController:Supprimer" type="service_closure" id=".service_locator.eTYQhjN"/>
         <argument key="App\Controller\BoutiqueController:afficher" type="service_closure" id=".service_locator.eTYQhjN"/>
         <argument key="App\Controller\BoutiqueController:afficherProduit" type="service_closure" id=".service_locator.plab2C_"/>
+        <argument key="App\Controller\FrontController:detail" type="service_closure" id=".service_locator.plab2C_"/>
         <argument key="App\Controller\FrontController:index" type="service_closure" id=".service_locator.plab2C_"/>
         <argument key="App\Controller\ProduitController:Supprimer" type="service_closure" id=".service_locator.plab2C_"/>
         <argument key="App\Controller\ProduitController:afficher" type="service_closure" id=".service_locator.plab2C_"/>
@@ -5390,10 +5399,11 @@
       <argument type="service" id="cache.doctrine.orm.default.result"/>
       <factory class="Doctrine\Common\Cache\Psr6\DoctrineProvider" method="wrap"/>
     </service>
-    <service id=".service_locator.lTJr6EB" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.MaIyHqp" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\BoutiqueRepository" type="service_closure" id="App\Repository\BoutiqueRepository"/>
+        <argument key="App\Repository\ImagesRepository" type="service_closure" id="App\Repository\ImagesRepository"/>
         <argument key="App\Repository\ProduitRepository" type="service_closure" id="App\Repository\ProduitRepository"/>
         <argument key="App\Repository\UtilisateursRepository" type="service_closure" id="App\Repository\UtilisateursRepository"/>
       </argument>
@@ -5743,12 +5753,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.gxJeA2t"/>
+      <argument type="service" id=".service_locator.z6xYSiI"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.gxJeA2t"/>
+      <argument type="service" id=".service_locator.z6xYSiI"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -6152,7 +6162,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.gxJeA2t"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.z6xYSiI"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>
@@ -6167,7 +6177,7 @@
     <service id="Psr\Log\LoggerInterface $securityLogger" alias="monolog.logger.security"/>
     <service id="Psr\Log\LoggerInterface $doctrineLogger" alias="monolog.logger.doctrine"/>
     <service id=".service_locator.0GV1BZZ" alias=".service_locator.gSv9zYw"/>
-    <service id=".service_locator.S7gHQqE" alias=".service_locator.gxJeA2t"/>
+    <service id=".service_locator.gHn1ik1" alias=".service_locator.z6xYSiI"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.l6ELYLY"/>
     <service id=".service_locator.ZBXzXhO" alias=".service_locator.znzE2QI"/>
     <service id=".service_locator.O24_MAy" alias=".service_locator.yY.p4P7"/>

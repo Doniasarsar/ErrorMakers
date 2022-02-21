@@ -18,26 +18,38 @@ class UtilisateursRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Utilisateurs::class);
     }
+    public function findCommercant($value)
+    {
+        return $this->createQueryBuilder('b')
+            ->andWhere('b.boutique = :val')
+            ->setParameter('val', $value)
+            ->orderBy('b.id', 'ASC')
+        
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+    
 
     // /**
     //  * @return Utilisateurs[] Returns an array of Utilisateurs objects
     //  */
-    /*
-    public function findByExampleField($value)
+   
+   /* public function findByBoutiqueid($null)
     {
         return $this->createQueryBuilder('u')
-            ->andWhere('u.exampleField = :val')
-            ->setParameter('val', $value)
+            ->andWhere('u.boutique = :val')
+            ->setParameter('val', $null)
             ->orderBy('u.id', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()
         ;
     }
-    */
+*/
 
-    /*
-    public function findOneBySomeField($value): ?Utilisateurs
+    
+   /* public function findOneBySomeField($value): ?Utilisateurs
     {
         return $this->createQueryBuilder('u')
             ->andWhere('u.exampleField = :val')
@@ -45,6 +57,8 @@ class UtilisateursRepository extends ServiceEntityRepository
             ->getQuery()
             ->getOneOrNullResult()
         ;
-    }
-    */
+    }*/
+
+ 
+    
 }

@@ -51,7 +51,6 @@ class ProduitController extends AbstractController
             $filename = md5(uniqid()).'.'.$file->guessExtension();
             $file->move($this->getParameter('uploads_directory'),$filename);
             $produit->setImage($filename);
-
              $entityManager = $this->getDoctrine()->getManager();
              $entityManager->persist($produit);
              $entityManager->flush();

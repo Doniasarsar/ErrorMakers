@@ -22,19 +22,19 @@ class BoutiqueRepository extends ServiceEntityRepository
     // /**
     //  * @return Boutique[] Returns an array of Boutique objects
     //  */
-    /*
-    public function findByExampleField($value)
+  
+    public function findCommercant($value)
     {
         return $this->createQueryBuilder('b')
-            ->andWhere('b.exampleField = :val')
+            ->andWhere('b.Commercant = :val')
             ->setParameter('val', $value)
             ->orderBy('b.id', 'ASC')
-            ->setMaxResults(10)
+        
             ->getQuery()
             ->getResult()
         ;
     }
-    */
+    
 
     /*
     public function findOneBySomeField($value): ?Boutique

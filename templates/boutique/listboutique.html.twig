@@ -38,27 +38,42 @@
                     <th>Description Boutique</th>
                     <th>Adresse Boutique</th>
                      <th>Nom Commercant</th>
+                     <th>Photo de Profil</th>
                      <th>Produits</th>
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
+                  
                       {% for bout in tab %}
                   <tr>
                   <td>{{ bout.nomBoutique}}</td>
                     <td>{{ bout.descBoutique}}</td>
                     <td>{{ bout.adresseBoutique}}</td>
                     <td>{{ bout.Commercant.getEmail()}}</td>
+
+                
                     <td>
                      <a class="btn btn-warning"  href="{{path('boutique_listProduit',{val : bout.id })}}">Afficher Produits</a>
                      </td>  
                        <td>
                         <a class="btn btn-info" href="{{path('update_boutique',{id : bout.id })}}">Modifier</a>
-                       <a class="btn btn-warning"  href="{{path('boutique_delete',{id : bout.id })}}">Supprimer</a>
+                        <a class="btn btn-warning"  href="{{path('boutique_delete',{id : bout.id })}}">Supprimer</a>
                         <hr>
                     </td>                 
                    </tr>
+                   {# Si la route est "annonces_edit on affiche les images #}
+	{% if app.request.attributes.get('_route') == 'update_boutique' %} 
+        <h2>Images</h2>
+        {% for image in bout.images %}
+            <div>
+                <img src="{{ asset('/uploads/'~ image.name) }}" alt="" width="150">
+
+              </div>
+        {% endfor %}
+         {% endif %}
                   {% endfor %}
+                  
                   </tbody>
                 </table>
                 <a class="btn btn-info" href="{{path('boutique_add')}}">Ajouter</a>

@@ -21,5 +21,16 @@ class FrontController extends AbstractController
             'tabprod' => $produits,
         ]);
     }
+    /**
+     * @Route("/detail/{id}", name="detail")
+     */
+    public function detail($id,ProduitRepository $rep)
+    {
+        $produits=$rep->find($id);
+        return $this->render('front/detail.html.twig', [
+            
+            'prod' => $produits,
+        ]);
+    }
 
 }

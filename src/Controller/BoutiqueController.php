@@ -1,13 +1,16 @@
 <?php
 
 namespace App\Controller;
+use App\Entity\Images;
 use App\Entity\Boutique;
 use App\Form\BoutiqueType;
+use App\Entity\Utilisateurs;
 use App\Repository\ProduitRepository;
 use App\Repository\BoutiqueRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -36,6 +39,8 @@ class BoutiqueController extends AbstractController
         ]);
     }
 
+     
+
     /**
      * @param ProduitRepository $rep
      * @return Reponse
@@ -60,7 +65,26 @@ class BoutiqueController extends AbstractController
  
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-
+            // On récupère les images transmises
+    $images = $form->get('images')->getData();
+    
+    // On boucle sur les images
+    foreach($images as $image){
+        // On génère un nouveau nom de fichier
+        $fichier = md5(uniqid()).'.'.$image->guessExtension();
+        
+        // On copie le fichier dans le dossier uploads
+        $image->move(
+            $this->getParameter('images_directory'),
+            $fichier
+        );
+        
+        // On crée l'image dans la base de données
+        $img = new Images();
+        $img->setName($fichier);
+        $boutique->addImage($img);
+    }
+            
             $entityManager = $this->getDoctrine()->getManager();
              $entityManager->persist($boutique);
              $entityManager->flush();
@@ -89,13 +113,43 @@ class BoutiqueController extends AbstractController
         ->add('nomBoutique',TextType::class)
         ->add('descBoutique',TextType::class)
         ->add('adresseBoutique',TextType::class)
-        ->add('idCommenrcant',TextType::class)
+        ->add('Commercant', EntityType::class, [
+           
+            'class' => Utilisateurs::class,
+            'choice_label' => 'Email',
+           
+        
+            // used to render a select box, check boxes or radios
+            // 'multiple' => true,
+            // 'expanded' => true,
+        ])
         ->add('Edit',SubmitType::class)
 
         ->getForm();
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-             $entityManager = $this->getDoctrine()->getManager();
+             // On récupère les images transmises
+    $images = $form->get('images')->getData();
+    
+    // On boucle sur les images
+    foreach($images as $image){
+        // On génère un nouveau nom de fichier
+        $fichier = md5(uniqid()).'.'.$image->guessExtension();
+        
+        // On copie le fichier dans le dossier uploads
+        $image->move(
+            $this->getParameter('images_directory'),
+            $fichier
+        );
+        
+        // On crée l'image dans la base de données
+        $img = new Images();
+        $img->setName($fichier);
+        $boutique->addImage($img);
+    }
+            
+          
+            $entityManager = $this->getDoctrine()->getManager();
              $entityManager->flush();
              return $this->redirectToRoute('boutique_list');
          }
