@@ -35,8 +35,7 @@
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
-                        <th>ID Response</th>
-                        <th>ID Command</th>
+                        <th>User Name</th>
                         <th>Subject</th>
                         <th>Response</th>
                         <th>CreatedAt</th>
@@ -47,22 +46,20 @@
                   <tbody>
             {% for r in tab1 %}
             <tr>
-                <td>{{ r.id }}</td>
-                <td>{{ r.idCommande }}</td>
+                
+                <td>{{ r.reclamation.name }}
                 <td>{{ r.subject }}</td>
                 <td>{{ r.message }}</td>
                 <td>{{ r.createdAt|date }}</td>
-                
-
                 <td>
                   <a class="btn btn-info" href="{{path('reponse_update',{id:r.id})}}">update</a>
-                  <a class="btn btn-warning" href="{{path('response_delete',{id:r.id})}}">delete</a>
-
-                       
+                  <a class="btn btn-warning" href="{{path('response_delete',{id:r.id})}}">delete</a>    
                 </td>
             </tr>
             
         {% endfor %}
+
+        
                   </tbody>
                 </table>
               </div>

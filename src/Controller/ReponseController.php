@@ -85,11 +85,13 @@ class ReponseController extends AbstractController
      * @return Response
      * @Route("reponse/list", name="reponse_list")
      */
-    public function afficher_reponses(ReponseRepository $rep): Response
+    public function afficher_reponses(ReponseRepository $rep, ReclamationRepository $rep0): Response
     {
         $reponses=$rep->findAll();
+        $reclamations=$rep0->findAll();
         return $this->render('reponse/listReponses.html.twig', [
             'tab1' => $reponses,
+            'tab2' => $reclamations,
         ]);
     }
 

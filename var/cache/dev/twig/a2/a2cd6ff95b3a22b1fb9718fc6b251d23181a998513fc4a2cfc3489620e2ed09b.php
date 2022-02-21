@@ -65,7 +65,7 @@ class __TwigTemplate_8d3cbf7fdf7d9f300e2448d7a0c65297fe2ac111f0317525421b61b1ee6
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "<title>Liste des Reclamation</title> ";
+        echo "<title>History</title> ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -98,77 +98,69 @@ class __TwigTemplate_8d3cbf7fdf7d9f300e2448d7a0c65297fe2ac111f0317525421b61b1ee6
     </div>
     <!-- Li's Breadcrumb Area End Here -->
     <div class=\"container align-content-center mt-50\">
-    <h1 align=\"center\">Reclamations List</h1>
+    <h1 align=\"center\">Reclamations History</h1>
     <div class=\"form-group mt-20\">
     <table class=\"table table-striped\">
         <tr>
-        <th>client</th>
-            <th>ID Command</th>
+        
             <th>Your Name</th>
             <th>Email</th>
             <th>Reclamation Subject</th>
             <th>Message</th>
             <th>Reclamation Type</th>
             ";
-        // line 29
+        // line 28
         echo "            <th>Reclamation Status</th>
         </tr>
         ";
-        // line 31
+        // line 30
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["tab"]) || array_key_exists("tab", $context) ? $context["tab"] : (function () { throw new RuntimeError('Variable "tab" does not exist.', 31, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["tab"]) || array_key_exists("tab", $context) ? $context["tab"] : (function () { throw new RuntimeError('Variable "tab" does not exist.', 30, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["r"]) {
-            // line 32
+            // line 31
             echo "            <tr>
-            <td> ";
+            
+                <td>";
             // line 33
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["r"], "client", [], "any", false, false, false, 33), "id", [], "any", false, false, false, 33), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "name", [], "any", false, false, false, 33), "html", null, true);
             echo "</td>
                 <td>";
             // line 34
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "idCommande", [], "any", false, false, false, 34), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "email", [], "any", false, false, false, 34), "html", null, true);
             echo "</td>
                 <td>";
             // line 35
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "name", [], "any", false, false, false, 35), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "subject", [], "any", false, false, false, 35), "html", null, true);
             echo "</td>
                 <td>";
             // line 36
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "email", [], "any", false, false, false, 36), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "message", [], "any", false, false, false, 36), "html", null, true);
             echo "</td>
                 <td>";
             // line 37
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "subject", [], "any", false, false, false, 37), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 38
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "message", [], "any", false, false, false, 38), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 39
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "type", [], "any", false, false, false, 39), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "type", [], "any", false, false, false, 37), "html", null, true);
             echo "</td>
                ";
-            // line 40
-            if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["r"], "reponse", [], "any", false, false, false, 40), null))) {
-                // line 41
+            // line 38
+            if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["r"], "reponse", [], "any", false, false, false, 38), null))) {
+                // line 39
                 echo "                <td><a href=\"";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("etat_rec", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["r"], "reponse", [], "any", false, false, false, 41), "id", [], "any", false, false, false, 41)]), "html", null, true);
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("etat_rec", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["r"], "reponse", [], "any", false, false, false, 39), "id", [], "any", false, false, false, 39)]), "html", null, true);
                 echo "\"    onclick=\"return confirm('Do You want to see The Response to Your reclamation?')\">";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "etat", [], "any", false, false, false, 41), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "etat", [], "any", false, false, false, 39), "html", null, true);
                 echo "</a></td>
                 ";
             } else {
-                // line 43
+                // line 41
                 echo "                ";
-                // line 44
+                // line 42
                 echo "                <td><a href=\"#\">";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "etat", [], "any", false, false, false, 44), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "etat", [], "any", false, false, false, 42), "html", null, true);
                 echo "</a></td>
 
                 ";
             }
-            // line 46
+            // line 44
             echo " 
             </tr>
         ";
@@ -176,7 +168,7 @@ class __TwigTemplate_8d3cbf7fdf7d9f300e2448d7a0c65297fe2ac111f0317525421b61b1ee6
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['r'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 49
+        // line 47
         echo "    </table>
     </div>
     </div>
@@ -201,13 +193,13 @@ class __TwigTemplate_8d3cbf7fdf7d9f300e2448d7a0c65297fe2ac111f0317525421b61b1ee6
 
     public function getDebugInfo()
     {
-        return array (  180 => 49,  172 => 46,  165 => 44,  163 => 43,  155 => 41,  153 => 40,  149 => 39,  145 => 38,  141 => 37,  137 => 36,  133 => 35,  129 => 34,  125 => 33,  122 => 32,  118 => 31,  114 => 29,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
+        return array (  172 => 47,  164 => 44,  157 => 42,  155 => 41,  147 => 39,  145 => 38,  141 => 37,  137 => 36,  133 => 35,  129 => 34,  125 => 33,  121 => 31,  117 => 30,  113 => 28,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'baseFront.twig'%}
-{% block title %}<title>Liste des Reclamation</title> {% endblock %}
+{% block title %}<title>History</title> {% endblock %}
 {% block body %}
     <!-- Begin Li's Breadcrumb Area -->
     <div class=\"breadcrumb-area\">
@@ -222,12 +214,11 @@ class __TwigTemplate_8d3cbf7fdf7d9f300e2448d7a0c65297fe2ac111f0317525421b61b1ee6
     </div>
     <!-- Li's Breadcrumb Area End Here -->
     <div class=\"container align-content-center mt-50\">
-    <h1 align=\"center\">Reclamations List</h1>
+    <h1 align=\"center\">Reclamations History</h1>
     <div class=\"form-group mt-20\">
     <table class=\"table table-striped\">
         <tr>
-        <th>client</th>
-            <th>ID Command</th>
+        
             <th>Your Name</th>
             <th>Email</th>
             <th>Reclamation Subject</th>
@@ -238,8 +229,7 @@ class __TwigTemplate_8d3cbf7fdf7d9f300e2448d7a0c65297fe2ac111f0317525421b61b1ee6
         </tr>
         {% for r in tab %}
             <tr>
-            <td> {{ r.client.id }}</td>
-                <td>{{ r.idCommande }}</td>
+            
                 <td>{{ r.name }}</td>
                 <td>{{ r.email }}</td>
                 <td>{{ r.subject}}</td>
