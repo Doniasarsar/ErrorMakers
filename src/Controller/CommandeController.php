@@ -10,6 +10,7 @@ use App\Entity\LigneCommande;
 use App\Repository\ProduitRepository;
 use App\Repository\CommandeRepository;
 use App\Repository\UtilisateurRepository;
+use App\Repository\LigneCommandeRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -69,11 +70,14 @@ class CommandeController extends AbstractController
      * @Route("/admin/affcommande", name="admincommande")
      */
 
-     function afficher(CommandeRepository $rep)
+     function afficher(CommandeRepository $rep,LigneCommandeRepository $ligneCommande)
     {
          $commande = $rep->findall();
+         $ligneCommande = $ligneCommande->findall();
          return $this->render('admin/commande/index.html.twig', [
-             'tab' => $commande
+             'tab' => $commande,
+             'tab1' => $ligneCommande
+
          ]);
 
     }
@@ -136,22 +140,6 @@ class CommandeController extends AbstractController
             ];
            
         }
-        
-
-        foreach ($pan2 as $id => $quantite){
-            $produit = $produitrep->find($id);
-            $ddata[] = 
-               $produit->getDescription();
-               
-            ;
-           
-        }
-        $desc ="";
-        foreach ($ddata as $id => $description){
-          
-            $desc  .= '| ' . $description .' |' ;
-        
-        }
       
      
         foreach($dataPanier as $item)
@@ -168,11 +156,13 @@ class CommandeController extends AbstractController
         $form->handleRequest($request); 
         if ($form->isSubmitted() && $form->isValid()){
             foreach ($pan2 as $id => $quantite) {
+               
                 $ligneCommande = new ligneCommande();
-                $ligneCommande = $ligneCommande->setIdProduit($id);
+                $prod = $produitrep->find($id);
+                $ligneCommande = $ligneCommande->setProduit($prod);
                 $ligneCommande = $ligneCommande->setQuantite($quantite);
                 $commande = $repCommande->findOneBy([], ['id' => 'desc']);
-                $lastId = $commande->getId();
+                $lastId = $commande->getId(); 
                 $ligneCommande = $ligneCommande->setIdCommande($lastId);
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($ligneCommande);
@@ -191,8 +181,7 @@ class CommandeController extends AbstractController
         return $this->render('commande/ajouter.html.twig', [
                     'formA' => $form->createView(),
                     'total' => $total,
-                    'elements' => $dataPanier,
-                    'desc' => $desc
+                    'elements' => $dataPanier
         ]);    
     }
 

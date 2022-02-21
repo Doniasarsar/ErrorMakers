@@ -30,9 +30,8 @@ class CommandeType extends AbstractType
                     "Par Cash"  => 1,
                 ]
             ])
-            ->add('produit', HiddenType::class)
-
             
+           
         ;
     }
 

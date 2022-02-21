@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Produit;
+use App\Entity\Lcommande;
 use App\Repository\ProduitRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -57,12 +58,13 @@ class CartController extends AbstractController
     /**
      * @Route("/add/{id}", name="add")
      */
-    public function add(Produit $produit, SessionInterface $session)
+    public function add(Produit $produit,ProduitRepository $rep, SessionInterface $session)
     {
 
     // On récupère le panier actuel
     $panier = $session->get("panier", []);
     $id= $produit->getId();
+   
 
     if(!empty($panier[$id])){
         $panier[$id]++;
@@ -71,6 +73,7 @@ class CartController extends AbstractController
     }
 
     $session->set("panier", $panier);
+
     
     return $this->redirecttoRoute("cart_index");
 
@@ -102,7 +105,7 @@ class CartController extends AbstractController
      /**
      * @Route("/delete/{id}", name="delete")
      */
-    public function delete(Produit $produit, SessionInterface $session)
+    public function delete(Produit $produit,ProduitRepository $rep , SessionInterface $session)
     {
        // On récupère le panier actuel
     $panier = $session->get("panier", []);
@@ -115,6 +118,8 @@ class CartController extends AbstractController
     
     // on sauvgarde dans la session
     $session->set("panier", $panier);
+
+    
     
     return $this->redirecttoRoute("cart_index");
     }

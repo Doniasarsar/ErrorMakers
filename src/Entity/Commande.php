@@ -81,11 +81,9 @@ class Commande
      */
     private $modePaiemenet;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $produit;
+  
 
+   
    
 
     
@@ -203,17 +201,8 @@ class Commande
         return $this;
     }
 
-    public function getProduit(): ?string
-    {
-        return $this->produit;
-    }
+   
 
-    public function setProduit(string $produit): self
-    {
-        $this->produit = $produit;
-
-        return $this;
-    }
 
    
   

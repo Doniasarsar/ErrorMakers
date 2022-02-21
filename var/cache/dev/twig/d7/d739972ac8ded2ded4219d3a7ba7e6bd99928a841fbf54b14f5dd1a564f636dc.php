@@ -246,14 +246,10 @@ class __TwigTemplate_bf4b8ec6dde0d82ea59c4f4ae4985c446b0fcfb212be00b36dd35c34fab
         // line 131
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 131, $this->source); })()), "etatCommande", [], "any", false, false, false, 131), 'widget', ["value" => 0, "type" => "hidden"]);
         echo "
-                            ";
-        // line 132
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 132, $this->source); })()), "produit", [], "any", false, false, false, 132), 'widget', ["attr" => ["value" => (isset($context["desc"]) || array_key_exists("desc", $context) ? $context["desc"] : (function () { throw new RuntimeError('Variable "desc" does not exist.', 132, $this->source); })()), "readonly" => true]]);
-        echo " 
 
                             ";
-        // line 134
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 134, $this->source); })()), 'form_end');
+        // line 133
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formA"]) || array_key_exists("formA", $context) ? $context["formA"] : (function () { throw new RuntimeError('Variable "formA" does not exist.', 133, $this->source); })()), 'form_end');
         echo "
                             <div class=\"col-md-12\">
                                 <div class=\"checkout-form-list create-acc\">
@@ -298,19 +294,19 @@ class __TwigTemplate_bf4b8ec6dde0d82ea59c4f4ae4985c446b0fcfb212be00b36dd35c34fab
                             </thead>
                             <tbody>
                                 ";
-        // line 177
+        // line 176
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["elements"]) || array_key_exists("elements", $context) ? $context["elements"] : (function () { throw new RuntimeError('Variable "elements" does not exist.', 177, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["elements"]) || array_key_exists("elements", $context) ? $context["elements"] : (function () { throw new RuntimeError('Variable "elements" does not exist.', 176, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["element"]) {
-            // line 178
+            // line 177
             echo "                                <tr class=\"cart_item\">
                                   <td class=\"cart-product-name\"> <strong class=\"product-quantity\">";
-            // line 179
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["element"], "produit", [], "any", false, false, false, 179), "description", [], "any", false, false, false, 179), "html", null, true);
+            // line 178
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["element"], "produit", [], "any", false, false, false, 178), "description", [], "any", false, false, false, 178), "html", null, true);
             echo " </strong></td>
                                   <td class=\"cart-product-total\"><span class=\"amount\">";
-            // line 180
-            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, $context["element"], "quantite", [], "any", false, false, false, 180) * twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["element"], "produit", [], "any", false, false, false, 180), "prix", [], "any", false, false, false, 180)), "html", null, true);
+            // line 179
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, $context["element"], "quantite", [], "any", false, false, false, 179) * twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["element"], "produit", [], "any", false, false, false, 179), "prix", [], "any", false, false, false, 179)), "html", null, true);
             echo "\$</span></td>  
                                 </tr>
                                
@@ -319,7 +315,7 @@ class __TwigTemplate_bf4b8ec6dde0d82ea59c4f4ae4985c446b0fcfb212be00b36dd35c34fab
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['element'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 184
+        // line 183
         echo "                            </tbody>
                             <tfoot>
                                 
@@ -380,7 +376,7 @@ class __TwigTemplate_bf4b8ec6dde0d82ea59c4f4ae4985c446b0fcfb212be00b36dd35c34fab
                                 <input value=\"Place order\" type=\"submit\">
 
                               ";
-        // line 244
+        // line 243
         echo "
 
                             </div>
@@ -413,7 +409,7 @@ class __TwigTemplate_bf4b8ec6dde0d82ea59c4f4ae4985c446b0fcfb212be00b36dd35c34fab
 
     public function getDebugInfo()
     {
-        return array (  384 => 244,  323 => 184,  313 => 180,  309 => 179,  306 => 178,  302 => 177,  256 => 134,  251 => 132,  247 => 131,  240 => 127,  236 => 126,  225 => 118,  221 => 117,  211 => 110,  207 => 109,  197 => 102,  193 => 101,  182 => 93,  178 => 92,  167 => 84,  163 => 83,  153 => 76,  148 => 75,  138 => 66,  133 => 65,  122 => 55,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  380 => 243,  319 => 183,  309 => 179,  305 => 178,  302 => 177,  298 => 176,  252 => 133,  247 => 131,  240 => 127,  236 => 126,  225 => 118,  221 => 117,  211 => 110,  207 => 109,  197 => 102,  193 => 101,  182 => 93,  178 => 92,  167 => 84,  163 => 83,  153 => 76,  148 => 75,  138 => 66,  133 => 65,  122 => 55,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -549,7 +545,6 @@ class __TwigTemplate_bf4b8ec6dde0d82ea59c4f4ae4985c446b0fcfb212be00b36dd35c34fab
                                 </div>
                             </div>
                             {{form_widget(formA.etatCommande , {'value':0 ,'type':'hidden'})}}
-                            {{ form_widget(formA.produit, {attr: { value : desc ,readonly:true }}) }} 
 
                             {{ form_end(formA) }}
                             <div class=\"col-md-12\">

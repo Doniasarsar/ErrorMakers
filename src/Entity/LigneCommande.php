@@ -22,15 +22,17 @@ class LigneCommande
      */
     private $idCommande;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $idProduit;
+  
 
     /**
      * @ORM\Column(type="integer")
      */
     private $quantite;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Produit::class, inversedBy="ligneCommandes")
+     */
+    private $produit;
 
    
 
@@ -71,6 +73,18 @@ class LigneCommande
     public function setQuantite(int $quantite): self
     {
         $this->quantite = $quantite;
+
+        return $this;
+    }
+
+    public function getProduit(): ?Produit
+    {
+        return $this->produit;
+    }
+
+    public function setProduit(?Produit $produit): self
+    {
+        $this->produit = $produit;
 
         return $this;
     }

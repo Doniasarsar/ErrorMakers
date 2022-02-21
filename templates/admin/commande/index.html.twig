@@ -40,23 +40,23 @@
                     <th>Adresse</th>
                     <th>Code Postal</th>
                     <th>Phone</th>
-                    <th>Les produits achetés</th>
                     <th>Montant</th>
                     <th>Date commande</th>
                     <th>Etat Commande</th>
                     <th>Mode Paiement</th>
+                    <th>Les produits achetés </th>
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
                       {% for class in tab %}
+                    
                   <tr>
                     <td>{{ class.nomClient}}</td>
                     <td>{{ class.prenomClient}}</td>
                     <td>{{ class.adresse}}</td>
                     <td>{{ class.postcode}}</td>
                     <td>{{ class.phone}}</td>
-                    <td>{{ class.produit}}</td>
                     <td>{{ class.montant}}</td>
                     <td>{{ class.dateCommande | date("d/m/Y")}}</td>
                     {% if class.etatcommande == 0 %}
@@ -71,12 +71,21 @@
                     <td>Par Cash </td>
                     {% endif %}
                     <td>
+                      {% for des in tab1 %}
+                      {% if des.idCommande == class.id %}
+                      *{{ des.produit.description  }} <br>
+                      {% endif %}
+                      {% endfor %}
+
+                    </td>  
+                    <td>
                         <a class="btn btn-info" href="{{path('adminmodif',{id : class.id })}}">Modifier</a>
                         <a class="btn btn-warning"  href="{{path('adminsupp',{id : class.id })}}">Supprimer</a>
                          
-                    </td>                  
+                    </td>     
                   </tr>
                   {% endfor %}
+             
                   </tbody>
                 </table>
               </div>

@@ -39,10 +39,18 @@ class Produit
      */
     private $image;
 
+    /**
+     * @ORM\OneToMany(targetEntity=LigneCommande::class, mappedBy="produit")
+     */
+    private $ligneCommandes;
+
+  
+    public function __construct()
+    {
+        $this->ligneCommandes = new ArrayCollection();
+    }
+
    
-
-
-
     public function getId(): ?int
     {
         return $this->id;
@@ -100,6 +108,36 @@ class Produit
     public function setImage(string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|LigneCommande[]
+     */
+    public function getLigneCommandes(): Collection
+    {
+        return $this->ligneCommandes;
+    }
+
+    public function addLigneCommande(LigneCommande $ligneCommande): self
+    {
+        if (!$this->ligneCommandes->contains($ligneCommande)) {
+            $this->ligneCommandes[] = $ligneCommande;
+            $ligneCommande->setProduit($this);
+        }
+
+        return $this;
+    }
+
+    public function removeLigneCommande(LigneCommande $ligneCommande): self
+    {
+        if ($this->ligneCommandes->removeElement($ligneCommande)) {
+            // set the owning side to null (unless already changed)
+            if ($ligneCommande->getProduit() === $this) {
+                $ligneCommande->setProduit(null);
+            }
+        }
 
         return $this;
     }
