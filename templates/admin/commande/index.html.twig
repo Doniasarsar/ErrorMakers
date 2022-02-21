@@ -72,17 +72,21 @@
                     {% endif %}
                     <td>
                       {% for des in tab1 %}
-                      {% if des.idCommande == class.id %}
+                      {% if des.commande.id == class.id %}
                       *{{ des.produit.description  }} <br>
                       {% endif %}
                       {% endfor %}
 
-                    </td>  
+                    </td> 
                     <td>
                         <a class="btn btn-info" href="{{path('adminmodif',{id : class.id })}}">Modifier</a>
                         <a class="btn btn-warning"  href="{{path('adminsupp',{id : class.id })}}">Supprimer</a>
                          
-                    </td>     
+                    </td> 
+      
+                 
+                      
+                             
                   </tr>
                   {% endfor %}
              

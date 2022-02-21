@@ -18,13 +18,6 @@ class LigneCommande
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $idCommande;
-
-  
-
-    /**
      * @ORM\Column(type="integer")
      */
     private $quantite;
@@ -34,23 +27,16 @@ class LigneCommande
      */
     private $produit;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Commande::class, inversedBy="ligneCommandes")
+     */
+    private $commande;
+
    
 
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getIdCommande(): ?string
-    {
-        return $this->idCommande;
-    }
-
-    public function setIdCommande(string $idCommande): self
-    {
-        $this->idCommande = $idCommande;
-
-        return $this;
     }
 
     public function getIdProduit(): ?string
@@ -85,6 +71,18 @@ class LigneCommande
     public function setProduit(?Produit $produit): self
     {
         $this->produit = $produit;
+
+        return $this;
+    }
+
+    public function getCommande(): ?Commande
+    {
+        return $this->commande;
+    }
+
+    public function setCommande(?Commande $commande): self
+    {
+        $this->commande = $commande;
 
         return $this;
     }

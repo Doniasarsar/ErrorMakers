@@ -122,7 +122,7 @@ class __TwigTemplate_85678c9ff40935ff9ef2adc16504adafe906cc315e0c0dd7219539bfe49
             echo "</td>
                     <td>";
             // line 50
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "idCommande", [], "any", false, false, false, 50), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["class"], "commande", [], "any", false, false, false, 50), "id", [], "any", false, false, false, 50), "html", null, true);
             echo "</td>
                     <td>";
             // line 51
@@ -332,7 +332,7 @@ class __TwigTemplate_85678c9ff40935ff9ef2adc16504adafe906cc315e0c0dd7219539bfe49
                       {% for class in tab %}
                   <tr>
                     <td>{{ class.id }}</td>
-                    <td>{{ class.idCommande}}</td>
+                    <td>{{ class.commande.id }}</td>
                     <td>{{ class.produit.id}}</td>
                     <td>{{ class.quantite}}</td>
                     <td>{{ class.produit.description}}</td>

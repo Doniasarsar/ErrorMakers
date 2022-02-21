@@ -146,7 +146,8 @@ class CommandeController extends AbstractController
         {
             $totalItem = $item['produit']->getPrix() * $item['quantite'];
             $total += $totalItem ;
-        }    
+        }  
+          
 
         
         $commande = new Commande();
@@ -155,25 +156,35 @@ class CommandeController extends AbstractController
         $form->add('Ajouter',SubmitType::class) ; 
         $form->handleRequest($request); 
         if ($form->isSubmitted() && $form->isValid()){
+            
+            $commande = $form->getData();
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($commande);
+            $em->flush();
+           
+
             foreach ($pan2 as $id => $quantite) {
                
                 $ligneCommande = new ligneCommande();
                 $prod = $produitrep->find($id);
                 $ligneCommande = $ligneCommande->setProduit($prod);
                 $ligneCommande = $ligneCommande->setQuantite($quantite);
+                
+               
                 $commande = $repCommande->findOneBy([], ['id' => 'desc']);
                 $lastId = $commande->getId(); 
-                $ligneCommande = $ligneCommande->setIdCommande($lastId);
+                $test = $repCommande->find($lastId);
+                $ligneCommande = $ligneCommande->setCommande($test);
+
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($ligneCommande);
                 $em->flush();
+
+                
                         
                 }
-            $commande = $form->getData();
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($commande);
-            $em->flush();
-            return $this->redirectToRoute('produit');
+
+                return $this->redirectToRoute('produit');
         }
        
 
