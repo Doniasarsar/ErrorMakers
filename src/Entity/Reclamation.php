@@ -74,6 +74,11 @@ class Reclamation
      */
     private $reponse;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Utilisateurs::class, inversedBy="reclamations")
+     */
+    private $client;
+
     #/**
     # * @ORM\Column(type="datetime_immutable")
     # */
@@ -210,5 +215,17 @@ class Reclamation
 
         return $this;
     }*/
+
+    public function getClient(): ?Utilisateurs
+    {
+        return $this->client;
+    }
+
+    public function setClient(?Utilisateurs $client): self
+    {
+        $this->client = $client;
+
+        return $this;
+    }
 
 }

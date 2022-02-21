@@ -19,7 +19,7 @@ return [
     'front' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/front']], [], []],
     'reclamation' => [[], ['_controller' => 'App\\Controller\\ReclamationController::index'], [], [['text', '/reclamation']], [], []],
     'r_add' => [[], ['_controller' => 'App\\Controller\\ReclamationController::add'], [], [['text', '/reclamation/add']], [], []],
-    'r_list' => [[], ['_controller' => 'App\\Controller\\ReclamationController::afficher'], [], [['text', '/reclamation/list']], [], []],
+    'r_list' => [['value'], ['_controller' => 'App\\Controller\\ReclamationController::afficher'], [], [['variable', '/', '[^/]++', 'value'], ['text', '/reclamation/list']], [], []],
     'etat_rec' => [['id'], ['_controller' => 'App\\Controller\\ReclamationController::afficheReponse'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/reclamation/etat']], [], []],
     'reponse' => [[], ['_controller' => 'App\\Controller\\ReponseController::index'], [], [['text', '/reponse']], [], []],
     'list_reclamation' => [[], ['_controller' => 'App\\Controller\\ReponseController::afficher'], [], [['text', '/reponse/recList']], [], []],

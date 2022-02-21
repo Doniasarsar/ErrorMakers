@@ -22,11 +22,11 @@ class ReclamationRepository extends ServiceEntityRepository
     // /**
     //  * @return Reclamation[] Returns an array of Reclamation objects
     //  */
-    /*
-    public function findByExampleField($value)
+    
+    public function findById($value)
     {
         return $this->createQueryBuilder('r')
-            ->andWhere('r.exampleField = :val')
+            ->andWhere('r.client = :val')
             ->setParameter('val', $value)
             ->orderBy('r.id', 'ASC')
             ->setMaxResults(10)
@@ -34,7 +34,7 @@ class ReclamationRepository extends ServiceEntityRepository
             ->getResult()
         ;
     }
-    */
+    
 
     /*
     public function findOneBySomeField($value): ?Reclamation

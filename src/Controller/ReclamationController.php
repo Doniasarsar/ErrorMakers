@@ -43,7 +43,7 @@ class ReclamationController extends AbstractController
         {$em=$this->getDoctrine()->getManager();
             $em->persist($reclamations);
             $em->flush();
-            return $this->redirectToRoute('r_list');
+            return $this->redirectToRoute('reclamation');
 
         }
 
@@ -56,11 +56,11 @@ class ReclamationController extends AbstractController
     /**
      * @param ReclamationRepository $rep
      * @return Response
-     * @Route("reclamation/list", name="r_list")
+     * @Route("reclamation/list/{value}", name="r_list")
      */
-    public function afficher(ReclamationRepository $rep): Response
+    public function afficher($value, ReclamationRepository $rep): Response
     {
-        $reclamations=$rep->findAll();
+        $reclamations=$rep->findById($value);
         return $this->render('reclamation/listReclamation.html.twig', [
             'tab' => $reclamations,
         ]);
@@ -70,15 +70,18 @@ class ReclamationController extends AbstractController
     /** 
      * @Route("reclamation/etat/{id}", name="etat_rec")
      */
-    public function afficheReponse($id, ReclamationRepository $rep): Response
+    public function afficheReponse($id, ReponseRepository $rep): Response
     {
         
-       $message=$rep->find($id);
+       $reponse=$rep->find($id);
+       #$reponseMessage=$reclamation->getReclamation();
 
         return $this->render('reclamation/reponse.html.twig', [
-            'tab' => $message,
+            'tab' => $reponse,
         ]);
     }
+
+    
 
 
 

@@ -102,7 +102,7 @@ class __TwigTemplate_8d3cbf7fdf7d9f300e2448d7a0c65297fe2ac111f0317525421b61b1ee6
     <div class=\"form-group mt-20\">
     <table class=\"table table-striped\">
         <tr>
-            <th>ID Reclamation</th>
+        <th>client</th>
             <th>ID Command</th>
             <th>Your Name</th>
             <th>Email</th>
@@ -120,9 +120,9 @@ class __TwigTemplate_8d3cbf7fdf7d9f300e2448d7a0c65297fe2ac111f0317525421b61b1ee6
         foreach ($context['_seq'] as $context["_key"] => $context["r"]) {
             // line 32
             echo "            <tr>
-                <td>";
+            <td> ";
             // line 33
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "id", [], "any", false, false, false, 33), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["r"], "client", [], "any", false, false, false, 33), "id", [], "any", false, false, false, 33), "html", null, true);
             echo "</td>
                 <td>";
             // line 34
@@ -148,20 +148,35 @@ class __TwigTemplate_8d3cbf7fdf7d9f300e2448d7a0c65297fe2ac111f0317525421b61b1ee6
             // line 39
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "type", [], "any", false, false, false, 39), "html", null, true);
             echo "</td>
+               ";
+            // line 40
+            if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["r"], "reponse", [], "any", false, false, false, 40), null))) {
+                // line 41
+                echo "                <td><a href=\"";
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("etat_rec", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["r"], "reponse", [], "any", false, false, false, 41), "id", [], "any", false, false, false, 41)]), "html", null, true);
+                echo "\"    onclick=\"return confirm('Do You want to see The Response to Your reclamation?')\">";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "etat", [], "any", false, false, false, 41), "html", null, true);
+                echo "</a></td>
                 ";
-            // line 41
-            echo "                <td><a href=\"";
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("etat_rec");
-            echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "etat", [], "any", false, false, false, 41), "html", null, true);
-            echo "</a></td>
+            } else {
+                // line 43
+                echo "                ";
+                // line 44
+                echo "                <td><a href=\"#\">";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "etat", [], "any", false, false, false, 44), "html", null, true);
+                echo "</a></td>
+
+                ";
+            }
+            // line 46
+            echo " 
             </tr>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['r'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 44
+        // line 49
         echo "    </table>
     </div>
     </div>
@@ -186,7 +201,7 @@ class __TwigTemplate_8d3cbf7fdf7d9f300e2448d7a0c65297fe2ac111f0317525421b61b1ee6
 
     public function getDebugInfo()
     {
-        return array (  165 => 44,  153 => 41,  149 => 39,  145 => 38,  141 => 37,  137 => 36,  133 => 35,  129 => 34,  125 => 33,  122 => 32,  118 => 31,  114 => 29,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
+        return array (  180 => 49,  172 => 46,  165 => 44,  163 => 43,  155 => 41,  153 => 40,  149 => 39,  145 => 38,  141 => 37,  137 => 36,  133 => 35,  129 => 34,  125 => 33,  122 => 32,  118 => 31,  114 => 29,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -211,7 +226,7 @@ class __TwigTemplate_8d3cbf7fdf7d9f300e2448d7a0c65297fe2ac111f0317525421b61b1ee6
     <div class=\"form-group mt-20\">
     <table class=\"table table-striped\">
         <tr>
-            <th>ID Reclamation</th>
+        <th>client</th>
             <th>ID Command</th>
             <th>Your Name</th>
             <th>Email</th>
@@ -223,15 +238,20 @@ class __TwigTemplate_8d3cbf7fdf7d9f300e2448d7a0c65297fe2ac111f0317525421b61b1ee6
         </tr>
         {% for r in tab %}
             <tr>
-                <td>{{ r.id }}</td>
+            <td> {{ r.client.id }}</td>
                 <td>{{ r.idCommande }}</td>
                 <td>{{ r.name }}</td>
                 <td>{{ r.email }}</td>
                 <td>{{ r.subject}}</td>
                 <td>{{ r.message }}</td>
                 <td>{{ r.type }}</td>
-                {#<td>{{ r.createdAt|date('Y-m-d H:i:s') }}</td>#}
-                <td><a href=\"{{path('etat_rec')}}\">{{ r.etat }}</a></td>
+               {% if r.reponse != null %}
+                <td><a href=\"{{path('etat_rec', {id:r.reponse.id})}}\"    onclick=\"return confirm('Do You want to see The Response to Your reclamation?')\">{{ r.etat }}</a></td>
+                {% else %}
+                {#<td>{{ r.createdAt|date('Y-m-d H:i:s') }}</td> #}
+                <td><a href=\"#\">{{ r.etat }}</a></td>
+
+                {% endif %} 
             </tr>
         {% endfor %}
     </table>

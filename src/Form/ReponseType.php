@@ -3,10 +3,12 @@
 namespace App\Form;
 
 use App\Entity\Reponse;
+use App\Entity\Reclamation;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class ReponseType extends AbstractType
 {
@@ -16,6 +18,9 @@ class ReponseType extends AbstractType
             ->add('subject')
             ->add('message', TextareaType::class)
             ->add('idCommande')
+            ->add('reclamation',EntityType::class, [
+               'class' => Reclamation::class 
+            ])
             
         ;
     }

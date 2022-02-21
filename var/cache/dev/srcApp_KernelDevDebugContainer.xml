@@ -382,6 +382,10 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
+    <service id="App\Repository\UtilisateursRepository" class="App\Repository\UtilisateursRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id=".legacy_controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
       <argument type="service" id="kernel"/>
@@ -3932,7 +3936,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id=".service_locator.rcBYX5w"/>
+      <argument type="service" id=".service_locator.g06RGsx"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -4932,6 +4936,8 @@
     <service id=".abstract.instanceof.App\Repository\ReclamationRepository" class="App\Repository\ReclamationRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ReponseRepository" class="App\Repository\ReponseRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ReponseRepository" class="App\Repository\ReponseRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UtilisateursRepository" class="App\Repository\UtilisateursRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\UtilisateursRepository" class="App\Repository\UtilisateursRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.CmORmuK" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5219,6 +5225,12 @@
         <argument key="rep" type="service_closure" id="App\Repository\ReclamationRepository"/>
       </argument>
     </service>
+    <service id=".service_locator.XkRG9bV" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="rep" type="service_closure" id="App\Repository\ReponseRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.gRE0vgk" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5228,23 +5240,17 @@
         <argument key="subj" type="service_closure" id=".errored..service_locator.gRE0vgk.App\Entity\Reclamation"/>
       </argument>
     </service>
-    <service id=".service_locator.XkRG9bV" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.kwh1_7j" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="rep" type="service_closure" id="App\Repository\ReponseRepository"/>
-      </argument>
-    </service>
-    <service id=".service_locator..jh8vYw" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="App\Controller\ReclamationController::afficheReponse" type="service_closure" id=".service_locator.9haQGQi"/>
+        <argument key="App\Controller\ReclamationController::afficheReponse" type="service_closure" id=".service_locator.XkRG9bV"/>
         <argument key="App\Controller\ReclamationController::afficher" type="service_closure" id=".service_locator.9haQGQi"/>
         <argument key="App\Controller\ReponseController::Delete_reponse" type="service_closure" id=".service_locator.XkRG9bV"/>
         <argument key="App\Controller\ReponseController::addResponse" type="service_closure" id=".service_locator.gRE0vgk"/>
         <argument key="App\Controller\ReponseController::afficher" type="service_closure" id=".service_locator.9haQGQi"/>
         <argument key="App\Controller\ReponseController::afficher_reponses" type="service_closure" id=".service_locator.XkRG9bV"/>
         <argument key="App\Controller\ReponseController::update_reponse" type="service_closure" id=".service_locator.XkRG9bV"/>
-        <argument key="App\Controller\ReclamationController:afficheReponse" type="service_closure" id=".service_locator.9haQGQi"/>
+        <argument key="App\Controller\ReclamationController:afficheReponse" type="service_closure" id=".service_locator.XkRG9bV"/>
         <argument key="App\Controller\ReclamationController:afficher" type="service_closure" id=".service_locator.9haQGQi"/>
         <argument key="App\Controller\ReponseController:Delete_reponse" type="service_closure" id=".service_locator.XkRG9bV"/>
         <argument key="App\Controller\ReponseController:addResponse" type="service_closure" id=".service_locator.gRE0vgk"/>
@@ -5491,11 +5497,12 @@
       <argument type="service" id="cache.doctrine.orm.default.result"/>
       <factory class="Doctrine\Common\Cache\Psr6\DoctrineProvider" method="wrap"/>
     </service>
-    <service id=".service_locator.rcBYX5w" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.g06RGsx" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\ReclamationRepository" type="service_closure" id="App\Repository\ReclamationRepository"/>
         <argument key="App\Repository\ReponseRepository" type="service_closure" id="App\Repository\ReponseRepository"/>
+        <argument key="App\Repository\UtilisateursRepository" type="service_closure" id="App\Repository\UtilisateursRepository"/>
       </argument>
     </service>
     <service id="debug.security.voter.security.access.authenticated_voter" class="Symfony\Component\Security\Core\Authorization\Voter\TraceableVoter">
@@ -5716,12 +5723,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator..jh8vYw"/>
+      <argument type="service" id=".service_locator.kwh1_7j"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator..jh8vYw"/>
+      <argument type="service" id=".service_locator.kwh1_7j"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -6122,7 +6129,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator..jh8vYw"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.kwh1_7j"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

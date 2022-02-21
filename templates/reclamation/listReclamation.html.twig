@@ -18,7 +18,7 @@
     <div class="form-group mt-20">
     <table class="table table-striped">
         <tr>
-            <th>ID Reclamation</th>
+        <th>client</th>
             <th>ID Command</th>
             <th>Your Name</th>
             <th>Email</th>
@@ -30,15 +30,20 @@
         </tr>
         {% for r in tab %}
             <tr>
-                <td>{{ r.id }}</td>
+            <td> {{ r.client.id }}</td>
                 <td>{{ r.idCommande }}</td>
                 <td>{{ r.name }}</td>
                 <td>{{ r.email }}</td>
                 <td>{{ r.subject}}</td>
                 <td>{{ r.message }}</td>
                 <td>{{ r.type }}</td>
-                {#<td>{{ r.createdAt|date('Y-m-d H:i:s') }}</td>#}
-                <td><a href="{{path('etat_rec')}}">{{ r.etat }}</a></td>
+               {% if r.reponse != null %}
+                <td><a href="{{path('etat_rec', {id:r.reponse.id})}}"    onclick="return confirm('Do You want to see The Response to Your reclamation?')">{{ r.etat }}</a></td>
+                {% else %}
+                {#<td>{{ r.createdAt|date('Y-m-d H:i:s') }}</td> #}
+                <td><a href="#">{{ r.etat }}</a></td>
+
+                {% endif %} 
             </tr>
         {% endfor %}
     </table>

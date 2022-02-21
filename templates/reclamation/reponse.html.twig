@@ -1,3 +1,32 @@
-{% for m in tab %}
-<td>{{ m.message }}</td>
-{% endfor %}
+{% extends 'baseFront.twig' %}
+
+{% block body %}
+
+ <!-- about wrapper start -->
+            <div class="about-us-wrapper pt-60 pb-40">
+                <div class="container">
+                    <div class="row">
+                        <!-- About Text Start -->
+                        <div class="col-lg-6 order-last order-lg-first">
+                            <div class="about-text-wrap">
+                                <h2><span>The Response:</span>{{tab.message}}</h2>
+                            </div>
+                        </div>
+                        <!-- About Text End -->
+                        <!-- About Image Start -->
+                        <div class="col-lg-5 col-md-10">
+                            <div class="about-image-wrap">
+                                <img class="img-full" src="{{asset('images/blog-banner/Response-Time.jpg')}}" alt="About Us" />
+                            </div>
+                        </div>
+                        <!-- About Image End -->
+                    </div>
+                </div>
+            </div>
+            <!-- about wrapper end -->
+
+
+
+
+           
+{% endblock %}
