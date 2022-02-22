@@ -189,69 +189,57 @@ class __TwigTemplate_9729c691783e1d43adf3a4bcdd065dfcfae0f82390fa6ba2612e38a11fb
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurForm"]) || array_key_exists("ActeurForm", $context) ? $context["ActeurForm"] : (function () { throw new RuntimeError('Variable "ActeurForm" does not exist.', 64, $this->source); })()), "ConfirmPassword", [], "any", false, false, false, 64), 'widget', ["attr" => ["class" => "mb-0"]]);
         echo "
                                          
-                                         </div>
-                                        <div class=\"col-md-6 mb-20\">
-                                            ";
-        // line 68
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurForm"]) || array_key_exists("ActeurForm", $context) ? $context["ActeurForm"] : (function () { throw new RuntimeError('Variable "ActeurForm" does not exist.', 68, $this->source); })()), "Boutique", [], "any", false, false, false, 68), 'label', ["label" => "Boutique"]);
-        echo "
-                                            ";
-        // line 69
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurForm"]) || array_key_exists("ActeurForm", $context) ? $context["ActeurForm"] : (function () { throw new RuntimeError('Variable "ActeurForm" does not exist.', 69, $this->source); })()), "Boutique", [], "any", false, false, false, 69), 'widget', ["attr" => ["class" => "mb-0"]]);
-        echo "
-                                            ";
-        // line 70
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurForm"]) || array_key_exists("ActeurForm", $context) ? $context["ActeurForm"] : (function () { throw new RuntimeError('Variable "ActeurForm" does not exist.', 70, $this->source); })()), "Boutique", [], "any", false, false, false, 70), 'errors', ["attr" => ["class" => "mb-0"]]);
-        echo "
-                                         </div>
-                                         <div class=\"col-md-6 mb-20\">
-                                            ";
+                                         </div>   
+                                    </div>    
+
+                                    
+                                        <h4 class=\"login-title\">Security Questions</h4>
+                                        <div class=\"row\">
+                                              <div class=\"col-md-6 mb-20\">
+                                                 ";
         // line 73
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurForm"]) || array_key_exists("ActeurForm", $context) ? $context["ActeurForm"] : (function () { throw new RuntimeError('Variable "ActeurForm" does not exist.', 73, $this->source); })()), "Role", [], "any", false, false, false, 73), 'label', ["label" => "Rôles"]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurForm"]) || array_key_exists("ActeurForm", $context) ? $context["ActeurForm"] : (function () { throw new RuntimeError('Variable "ActeurForm" does not exist.', 73, $this->source); })()), "QuestionSecurite1", [], "any", false, false, false, 73), 'label', ["label" => "What is the name of the town where you were born?"]);
         echo "
-                                            ";
+                                                 ";
         // line 74
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurForm"]) || array_key_exists("ActeurForm", $context) ? $context["ActeurForm"] : (function () { throw new RuntimeError('Variable "ActeurForm" does not exist.', 74, $this->source); })()), "Role", [], "any", false, false, false, 74), 'widget', ["attr" => ["class" => "mb-0"]]);
-        echo "
-                                            ";
-        // line 75
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurForm"]) || array_key_exists("ActeurForm", $context) ? $context["ActeurForm"] : (function () { throw new RuntimeError('Variable "ActeurForm" does not exist.', 75, $this->source); })()), "Role", [], "any", false, false, false, 75), 'errors', ["attr" => ["class" => "mb-0"]]);
-        echo "
-                                         </div>
-                                       
-                                         <div> <h4>Password Recovety Questions</h4></div><br>
-                                         <div class=\"row\">
-                                              <div class=\"col-md-6 mb-20\">
-                                                 ";
-        // line 81
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurForm"]) || array_key_exists("ActeurForm", $context) ? $context["ActeurForm"] : (function () { throw new RuntimeError('Variable "ActeurForm" does not exist.', 81, $this->source); })()), "QuestionSecurite1", [], "any", false, false, false, 81), 'label', ["label" => "What is the name of the town where you were born?"]);
-        echo "
-                                                 ";
-        // line 82
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurForm"]) || array_key_exists("ActeurForm", $context) ? $context["ActeurForm"] : (function () { throw new RuntimeError('Variable "ActeurForm" does not exist.', 82, $this->source); })()), "QuestionSecurite1", [], "any", false, false, false, 82), 'widget', ["attr" => ["class" => "mb-0"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurForm"]) || array_key_exists("ActeurForm", $context) ? $context["ActeurForm"] : (function () { throw new RuntimeError('Variable "ActeurForm" does not exist.', 74, $this->source); })()), "QuestionSecurite1", [], "any", false, false, false, 74), 'widget', ["attr" => ["class" => "mb-0"]]);
         echo "
                                                  
                                               </div>
                                               <div class=\"col-md-6 mb-20\">
                                                  ";
-        // line 86
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurForm"]) || array_key_exists("ActeurForm", $context) ? $context["ActeurForm"] : (function () { throw new RuntimeError('Variable "ActeurForm" does not exist.', 86, $this->source); })()), "QuestionSecurite2", [], "any", false, false, false, 86), 'label', ["label" => "Where was your best family vacation as a kid?"]);
+        // line 78
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurForm"]) || array_key_exists("ActeurForm", $context) ? $context["ActeurForm"] : (function () { throw new RuntimeError('Variable "ActeurForm" does not exist.', 78, $this->source); })()), "QuestionSecurite2", [], "any", false, false, false, 78), 'label', ["label" => "Where was your best family vacation as a kid?"]);
         echo "
                                                  ";
-        // line 87
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurForm"]) || array_key_exists("ActeurForm", $context) ? $context["ActeurForm"] : (function () { throw new RuntimeError('Variable "ActeurForm" does not exist.', 87, $this->source); })()), "QuestionSecurite2", [], "any", false, false, false, 87), 'widget', ["attr" => ["class" => "mb-0"]]);
+        // line 79
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurForm"]) || array_key_exists("ActeurForm", $context) ? $context["ActeurForm"] : (function () { throw new RuntimeError('Variable "ActeurForm" does not exist.', 79, $this->source); })()), "QuestionSecurite2", [], "any", false, false, false, 79), 'widget', ["attr" => ["class" => "mb-0"]]);
         echo "
                                                  
                                               </div>
+                                              <div class=\"col-md-6 mb-20\">
+                                                ";
+        // line 83
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurForm"]) || array_key_exists("ActeurForm", $context) ? $context["ActeurForm"] : (function () { throw new RuntimeError('Variable "ActeurForm" does not exist.', 83, $this->source); })()), "Role", [], "any", false, false, false, 83), 'label', ["label" => "Rôles"]);
+        echo "
+                                                ";
+        // line 84
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurForm"]) || array_key_exists("ActeurForm", $context) ? $context["ActeurForm"] : (function () { throw new RuntimeError('Variable "ActeurForm" does not exist.', 84, $this->source); })()), "Role", [], "any", false, false, false, 84), 'widget', ["attr" => ["class" => "mb-0"]]);
+        echo "
+                                                ";
+        // line 85
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurForm"]) || array_key_exists("ActeurForm", $context) ? $context["ActeurForm"] : (function () { throw new RuntimeError('Variable "ActeurForm" does not exist.', 85, $this->source); })()), "Role", [], "any", false, false, false, 85), 'errors', ["attr" => ["class" => "mb-0"]]);
+        echo "
+                                             </div>
                                         <div class=\"col-12\">
                                             ";
-        // line 91
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurForm"]) || array_key_exists("ActeurForm", $context) ? $context["ActeurForm"] : (function () { throw new RuntimeError('Variable "ActeurForm" does not exist.', 91, $this->source); })()), "Register", [], "any", false, false, false, 91), 'row', ["attr" => ["label" => "Register", "class" => "register-button mt-0"]]);
+        // line 88
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ActeurForm"]) || array_key_exists("ActeurForm", $context) ? $context["ActeurForm"] : (function () { throw new RuntimeError('Variable "ActeurForm" does not exist.', 88, $this->source); })()), "Register", [], "any", false, false, false, 88), 'row', ["attr" => ["label" => "Register", "class" => "register-button mt-0"]]);
         echo "
                                         </div>
                                         ";
-        // line 93
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["ActeurForm"]) || array_key_exists("ActeurForm", $context) ? $context["ActeurForm"] : (function () { throw new RuntimeError('Variable "ActeurForm" does not exist.', 93, $this->source); })()), 'form_end');
+        // line 90
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["ActeurForm"]) || array_key_exists("ActeurForm", $context) ? $context["ActeurForm"] : (function () { throw new RuntimeError('Variable "ActeurForm" does not exist.', 90, $this->source); })()), 'form_end');
         echo "
                                     </div>
                                 </div>
@@ -282,7 +270,7 @@ class __TwigTemplate_9729c691783e1d43adf3a4bcdd065dfcfae0f82390fa6ba2612e38a11fb
 
     public function getDebugInfo()
     {
-        return array (  254 => 93,  249 => 91,  242 => 87,  238 => 86,  231 => 82,  227 => 81,  218 => 75,  214 => 74,  210 => 73,  204 => 70,  200 => 69,  196 => 68,  189 => 64,  185 => 63,  178 => 59,  174 => 58,  168 => 55,  164 => 54,  157 => 50,  153 => 49,  147 => 46,  143 => 45,  136 => 41,  132 => 40,  125 => 36,  107 => 21,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
+        return array (  242 => 90,  237 => 88,  231 => 85,  227 => 84,  223 => 83,  216 => 79,  212 => 78,  205 => 74,  201 => 73,  189 => 64,  185 => 63,  178 => 59,  174 => 58,  168 => 55,  164 => 54,  157 => 50,  153 => 49,  147 => 46,  143 => 45,  136 => 41,  132 => 40,  125 => 36,  107 => 21,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -352,20 +340,12 @@ class __TwigTemplate_9729c691783e1d43adf3a4bcdd065dfcfae0f82390fa6ba2612e38a11fb
                                             {{ form_label(ActeurForm.ConfirmPassword,\"Confirm Password\") }}
                                             {{ form_widget(ActeurForm.ConfirmPassword,{'attr':{\"class\":\"mb-0\"}}) }}
                                          
-                                         </div>
-                                        <div class=\"col-md-6 mb-20\">
-                                            {{ form_label(ActeurForm.Boutique,\"Boutique\") }}
-                                            {{ form_widget(ActeurForm.Boutique,{'attr':{\"class\":\"mb-0\"}}) }}
-                                            {{ form_errors(ActeurForm.Boutique,{'attr':{\"class\":\"mb-0\"}}) }}
-                                         </div>
-                                         <div class=\"col-md-6 mb-20\">
-                                            {{ form_label(ActeurForm.Role,\"Rôles\") }}
-                                            {{ form_widget(ActeurForm.Role,{'attr':{\"class\":\"mb-0\"}}) }}
-                                            {{ form_errors(ActeurForm.Role,{'attr':{\"class\":\"mb-0\"}}) }}
-                                         </div>
-                                       
-                                         <div> <h4>Password Recovety Questions</h4></div><br>
-                                         <div class=\"row\">
+                                         </div>   
+                                    </div>    
+
+                                    
+                                        <h4 class=\"login-title\">Security Questions</h4>
+                                        <div class=\"row\">
                                               <div class=\"col-md-6 mb-20\">
                                                  {{ form_label(ActeurForm.QuestionSecurite1,\"What is the name of the town where you were born?\") }}
                                                  {{ form_widget(ActeurForm.QuestionSecurite1,{'attr':{\"class\":\"mb-0\"}}) }}
@@ -376,6 +356,11 @@ class __TwigTemplate_9729c691783e1d43adf3a4bcdd065dfcfae0f82390fa6ba2612e38a11fb
                                                  {{ form_widget(ActeurForm.QuestionSecurite2,{'attr':{\"class\":\"mb-0\"}}) }}
                                                  
                                               </div>
+                                              <div class=\"col-md-6 mb-20\">
+                                                {{ form_label(ActeurForm.Role,\"Rôles\") }}
+                                                {{ form_widget(ActeurForm.Role,{'attr':{\"class\":\"mb-0\"}}) }}
+                                                {{ form_errors(ActeurForm.Role,{'attr':{\"class\":\"mb-0\"}}) }}
+                                             </div>
                                         <div class=\"col-12\">
                                             {{ form_row(ActeurForm.Register,{'attr':{ \"label\":\"Register\" ,\"class\":\"register-button mt-0\"}}) }}
                                         </div>

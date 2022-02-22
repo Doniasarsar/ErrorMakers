@@ -103,7 +103,7 @@ class __TwigTemplate_2be343b71758a5c06736092aa3b543930f403498e346a33247bdc2b6548
                    <th>EMAIL</th>
                    <th>TELEPHONE</th>
                    <th>ROLE</th>
-                   <th>BOUTIQUE</th>
+                  
                    <th colspan=\"2\">OPTION</th>
                  </tr>
                  </thead>
@@ -171,10 +171,7 @@ $context["role"], "ROLE_LIV"))) {
             $context = array_intersect_key($context, $_parent) + $_parent;
             echo "</td>
                         
-                         <td>";
-            // line 65
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["demande"], "Boutique", [], "any", false, false, false, 65), "nomBoutique", [], "any", false, false, false, 65), "html", null, true);
-            echo "</td>
+                       
                        
                          <td><a class=\"btn btn-danger\" href=\"";
             // line 67
@@ -327,7 +324,7 @@ $context["role"], "ROLE_LIV"))) {
 
     public function getDebugInfo()
     {
-        return array (  288 => 108,  284 => 107,  280 => 106,  276 => 105,  272 => 104,  268 => 103,  264 => 102,  260 => 101,  256 => 100,  252 => 99,  248 => 98,  244 => 97,  238 => 94,  228 => 93,  203 => 76,  194 => 72,  185 => 68,  181 => 67,  176 => 65,  167 => 63,  163 => 61,  161 => 60,  158 => 59,  156 => 58,  153 => 57,  151 => 56,  145 => 54,  141 => 53,  137 => 52,  133 => 51,  129 => 50,  125 => 49,  121 => 48,  118 => 47,  113 => 46,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  285 => 108,  281 => 107,  277 => 106,  273 => 105,  269 => 104,  265 => 103,  261 => 102,  257 => 101,  253 => 100,  249 => 99,  245 => 98,  241 => 97,  235 => 94,  225 => 93,  200 => 76,  191 => 72,  182 => 68,  178 => 67,  167 => 63,  163 => 61,  161 => 60,  158 => 59,  156 => 58,  153 => 57,  151 => 56,  145 => 54,  141 => 53,  137 => 52,  133 => 51,  129 => 50,  125 => 49,  121 => 48,  118 => 47,  113 => 46,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -372,7 +369,7 @@ $context["role"], "ROLE_LIV"))) {
                    <th>EMAIL</th>
                    <th>TELEPHONE</th>
                    <th>ROLE</th>
-                   <th>BOUTIQUE</th>
+                  
                    <th colspan=\"2\">OPTION</th>
                  </tr>
                  </thead>
@@ -396,7 +393,7 @@ $context["role"], "ROLE_LIV"))) {
                          {% endif %}
                          {% endfor %}</td>
                         
-                         <td>{{demande.Boutique.nomBoutique}}</td>
+                       
                        
                          <td><a class=\"btn btn-danger\" href=\"{{path(\"admin_demdelete\",{'id':demande.id}) }}\">Delete</a>
                          <td><a class=\"btn btn-success\" href=\"{{path(\"admin_demaccept\",{'id':demande.id}) }}\">Accepter</a>   

@@ -18,7 +18,7 @@ return [
     'admin_dashboard' => [[], ['_controller' => 'App\\Controller\\AdminController::index'], [], [['text', '/admin/dashboard']], [], []],
     'admin_userlist' => [[], ['_controller' => 'App\\Controller\\AdminController::afficherUser'], [], [['text', '/admin/dashboard/listU']], [], []],
     'admin_demandelist' => [[], ['_controller' => 'App\\Controller\\AdminController::afficherDemande'], [], [['text', '/admin/dashboard/listD']], [], []],
-    'admin_userdelete' => [['id'], ['_controller' => 'App\\Controller\\AdminController::Delete'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/dashboard/listU/delete']], [], []],
+    'admin_userdelete' => [['id'], ['_controller' => 'App\\Controller\\AdminController::DeleteUser'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/dashboard/listU/delete']], [], []],
     'admin_demdelete' => [['id'], ['_controller' => 'App\\Controller\\AdminController::DeleteDem'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/dashboard/listD/delete']], [], []],
     'admin_demaccept' => [['id'], ['_controller' => 'App\\Controller\\AdminController::AcceptDem'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/dashboard/listD/accept']], [], []],
     'admin_loginadmin' => [[], ['_controller' => 'App\\Controller\\AdminController::login'], [], [['text', '/admin/loginadmin']], [], []],

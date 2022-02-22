@@ -76,10 +76,10 @@ class Utilisateurs implements UserInterface
     private $Role = [];
 
    
-    /**
-     * @ORM\ManyToOne(targetEntity=Boutiques::class, inversedBy="utilisateurs")
+   /**
+     * @ORM\OneToOne(targetEntity=Boutique::class, cascade={"persist", "remove"})
      */
-    private $Boutique;
+    private $boutique;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -215,14 +215,14 @@ class Utilisateurs implements UserInterface
     public function eraseCredentials(){}
     public function getSalt(){}
 
-    public function getBoutique(): ?Boutiques
+    public function getBoutique(): ?Boutique
     {
-        return $this->Boutique;
+        return $this->boutique;
     }
 
-    public function setBoutique(?Boutiques $Boutique): self
+    public function setBoutique(?Boutique $boutique): self
     {
-        $this->Boutique = $Boutique;
+        $this->boutique = $boutique;
 
         return $this;
     }

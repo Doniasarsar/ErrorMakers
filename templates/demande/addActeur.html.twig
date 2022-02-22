@@ -63,20 +63,12 @@
                                             {{ form_label(ActeurForm.ConfirmPassword,"Confirm Password") }}
                                             {{ form_widget(ActeurForm.ConfirmPassword,{'attr':{"class":"mb-0"}}) }}
                                          
-                                         </div>
-                                        <div class="col-md-6 mb-20">
-                                            {{ form_label(ActeurForm.Boutique,"Boutique") }}
-                                            {{ form_widget(ActeurForm.Boutique,{'attr':{"class":"mb-0"}}) }}
-                                            {{ form_errors(ActeurForm.Boutique,{'attr':{"class":"mb-0"}}) }}
-                                         </div>
-                                         <div class="col-md-6 mb-20">
-                                            {{ form_label(ActeurForm.Role,"Rôles") }}
-                                            {{ form_widget(ActeurForm.Role,{'attr':{"class":"mb-0"}}) }}
-                                            {{ form_errors(ActeurForm.Role,{'attr':{"class":"mb-0"}}) }}
-                                         </div>
-                                       
-                                         <div> <h4>Password Recovety Questions</h4></div><br>
-                                         <div class="row">
+                                         </div>   
+                                    </div>    
+
+                                    
+                                        <h4 class="login-title">Security Questions</h4>
+                                        <div class="row">
                                               <div class="col-md-6 mb-20">
                                                  {{ form_label(ActeurForm.QuestionSecurite1,"What is the name of the town where you were born?") }}
                                                  {{ form_widget(ActeurForm.QuestionSecurite1,{'attr':{"class":"mb-0"}}) }}
@@ -87,6 +79,11 @@
                                                  {{ form_widget(ActeurForm.QuestionSecurite2,{'attr':{"class":"mb-0"}}) }}
                                                  
                                               </div>
+                                              <div class="col-md-6 mb-20">
+                                                {{ form_label(ActeurForm.Role,"Rôles") }}
+                                                {{ form_widget(ActeurForm.Role,{'attr':{"class":"mb-0"}}) }}
+                                                {{ form_errors(ActeurForm.Role,{'attr':{"class":"mb-0"}}) }}
+                                             </div>
                                         <div class="col-12">
                                             {{ form_row(ActeurForm.Register,{'attr':{ "label":"Register" ,"class":"register-button mt-0"}}) }}
                                         </div>

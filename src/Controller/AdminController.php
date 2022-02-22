@@ -33,7 +33,7 @@ class AdminController extends AbstractController
      */
     public function afficherUser(UtilisateursRepository $rep){
         $users=$rep->findAll();
-        return $this->render('/dashboard/listusers.html.twig', [
+        return $this->render('/dashboard/userslist.html.twig', [
             'users' => $users,
         ]);
     }
@@ -52,7 +52,7 @@ class AdminController extends AbstractController
      * @Route("/dashboard/listU/delete/{id}", name="userdelete")
      */
 
-    public function Delete($id,UtilisateursRepository $rep){
+    public function DeleteUser($id,UtilisateursRepository $rep){
         $user=$rep->find($id);
         $em=$this->getDoctrine()->getManager();
         $em->remove($user);
@@ -72,7 +72,7 @@ class AdminController extends AbstractController
         $em->remove($dem);
         $em->flush();
 
-        return $this->redirectToRoute('admin_acceptdem');
+        return $this->redirectToRoute('admin_demandelist');
     }
 
     /**

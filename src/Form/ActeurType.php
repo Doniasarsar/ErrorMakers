@@ -25,15 +25,7 @@ class ActeurType extends AbstractType
         ->add('Telephone',NumberType::class)
         ->add('Password', PasswordType::class)
          ->add('ConfirmPassword', PasswordType::class)
-         ->add('Boutique', EntityType::class, [
-           
-            'class' => Boutiques::class,
-            'choice_label' => 'nomBoutique',
         
-            // used to render a select box, check boxes or radios
-            // 'multiple' => true,
-            // 'expanded' => true,
-        ])
         ->add('Role', ChoiceType::class, [
             'choices' => [
                 'Livreur' => 'ROLE_LIV',

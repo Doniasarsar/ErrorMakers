@@ -129,7 +129,7 @@ class __TwigTemplate_e2749cc550c88168b1c72c665dfc48115b08d920c179186041e4e3aee71
         echo "\">Update Info</a></h5>
                                     <h5 class=\"login-title\"><a href=\"";
         // line 36
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("passupdate", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 36, $this->source); })()), "user", [], "any", false, false, false, 36), "id", [], "any", false, false, false, 36)]), "html", null, true);
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("confirmuser");
         echo "\">Or Update Password</a></h5>
                                     
                                     <div class=\"row\">
@@ -239,7 +239,7 @@ class __TwigTemplate_e2749cc550c88168b1c72c665dfc48115b08d920c179186041e4e3aee71
                                 <div class=\"login-form\">
 
                                     <h5 class=\"login-title\"><a href=\"{{path(\"userupdate\",{'id':app.user.id}) }}\">Update Info</a></h5>
-                                    <h5 class=\"login-title\"><a href=\"{{path(\"passupdate\",{'id':app.user.id}) }}\">Or Update Password</a></h5>
+                                    <h5 class=\"login-title\"><a href=\"{{path('confirmuser') }}\">Or Update Password</a></h5>
                                     
                                     <div class=\"row\">
                                         <div class=\"col-md-8 col-12 mb-10\">

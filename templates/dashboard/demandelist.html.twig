@@ -38,7 +38,7 @@
                    <th>EMAIL</th>
                    <th>TELEPHONE</th>
                    <th>ROLE</th>
-                   <th>BOUTIQUE</th>
+                  
                    <th colspan="2">OPTION</th>
                  </tr>
                  </thead>
@@ -62,7 +62,7 @@
                          {% endif %}
                          {% endfor %}</td>
                         
-                         <td>{{demande.Boutique.nomBoutique}}</td>
+                       
                        
                          <td><a class="btn btn-danger" href="{{path("admin_demdelete",{'id':demande.id}) }}">Delete</a>
                          <td><a class="btn btn-success" href="{{path("admin_demaccept",{'id':demande.id}) }}">Accepter</a>   
