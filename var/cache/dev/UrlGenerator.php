@@ -16,6 +16,8 @@ return [
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     'admin' => [[], ['_controller' => 'App\\Controller\\AdminController::index'], [], [['text', '/admin']], [], []],
+    'commentaires' => [['id'], ['_controller' => 'App\\Controller\\CommentairesController::index'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/commentaires']], [], []],
+    'com_delete' => [['id'], ['_controller' => 'App\\Controller\\CommentairesController::Supprimer'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/commentaires/delete']], [], []],
     'evenement1' => [[], ['_controller' => 'App\\Controller\\EvenementController::index'], [], [['text', '/evenement1']], [], []],
     'ev_aff' => [[], ['_controller' => 'App\\Controller\\EvenementController::afficher'], [], [['text', '/evenement/aff']], [], []],
     'event_add' => [[], ['_controller' => 'App\\Controller\\EvenementController::Add'], [], [['text', '/evenement/add']], [], []],

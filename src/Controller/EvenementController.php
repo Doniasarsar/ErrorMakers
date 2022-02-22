@@ -2,15 +2,20 @@
 
 namespace App\Controller;
 
+use DateTime;
+use DateTimeImmutable;
 use App\Entity\Evenement;
+use App\Entity\Commentaires;
+use App\Form\CommentairesType;
 use App\Form\EvenementFormType;
 use App\Repository\EvenementRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
+use App\Repository\CommentairesRepository;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
 
@@ -120,14 +125,45 @@ class EvenementController extends AbstractController
      /**
      * @Route("/detail/{id}", name="ev_front_detail")
      */
-    function detail($id,EvenementRepository $rep)
+    function detail($id,EvenementRepository $rep,Request $request,CommentairesRepository $repp)
     {   
-         $evenement = $rep->find($id);
-         return $this->render('front/evenementsfrontdetail.html.twig', [
-            'tab' => $evenement
-        ]);
+        
+        $evenement = $rep->find($id);
+        $comments = $repp->findByEeven($id);
+            
+       
+        $Commentaires = new Commentaires;
+        $CommentairesForm=$this ->createForm(CommentairesType::class, $Commentaires);
+        $CommentairesForm->handleRequest($request);
+        if($CommentairesForm->isSubmitted() && $CommentairesForm->isValid()){
+            $Commentaires->setCreatedAt(new DateTimeImmutable());
+            $Commentaires->setAnnonces($evenement);
+            $parent = $CommentairesForm->get("parent_id")->getData();
+              // On va chercher le commentaire correspondant
+              $em = $this->getDoctrine()->getManager();
 
+              if($parent != null){
+                  $parent = $em->getRepository(Commentaires::class)->find($parent);
+              }
+  
+              // On définit le parent
+              $Commentaires->setParent($parent ?? null);
+  
+              $em->persist($Commentaires);
+              $em->flush();
+  
+              $this->addFlash('message', 'Votre Commentaire a bien été envoyé');
+              return $this->redirectToRoute('ev_front_detail', ['id' => $evenement->getId()]);
+          }
+         
+          return $this->render('front/evenementsfrontdetail.html.twig', [
+                'tab' => $evenement,
+              'Commentaires_Form' => $CommentairesForm->createView(),
+              'comments'=>$comments
+          ]);
+    
     }
      
    
 }
+

@@ -81,7 +81,7 @@ class __TwigTemplate_45e151ede68e5c79948fe9bd7f7e2d86fab2da31703c36f6ff979e46c47
                                             <a href=\"blog-details.html\"><img class=\"img-full\" src=\"";
         // line 17
         echo twig_escape_filter($this->env, ($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/") . twig_get_attribute($this->env, $this->source, (isset($context["tab"]) || array_key_exists("tab", $context) ? $context["tab"] : (function () { throw new RuntimeError('Variable "tab" does not exist.', 17, $this->source); })()), "affiche", [], "any", false, false, false, 17)), "html", null, true);
-        echo "\"  alt=\"\"></a>
+        echo "\"  height=\"350\"></a>
                                         </div>
                                         <div class=\"li-blog-content\">
                                             <div class=\"li-blog-details\">
@@ -90,8 +90,11 @@ class __TwigTemplate_45e151ede68e5c79948fe9bd7f7e2d86fab2da31703c36f6ff979e46c47
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["tab"]) || array_key_exists("tab", $context) ? $context["tab"] : (function () { throw new RuntimeError('Variable "tab" does not exist.', 21, $this->source); })()), "nom", [], "any", false, false, false, 21), "html", null, true);
         echo "</a></h3>
                                                 <div class=\"li-blog-meta\">
-                                                    <a class=\"author\" href=\"#\"><i class=\"fa fa-user\"></i>Admin</a>
-                                                    <a class=\"comment\" href=\"#\"><i class=\"fa fa-comment-o\"></i> 3 comment</a>
+                                                    <a class=\"author\" href=\"#\"><i class=\"fa fa-user\"></i></a>
+                                                    <a class=\"comment\" href=\"#\"><i class=\"fa fa-comment-o\"></i> ";
+        // line 24
+        echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["comments"]) || array_key_exists("comments", $context) ? $context["comments"] : (function () { throw new RuntimeError('Variable "comments" does not exist.', 24, $this->source); })())), "html", null, true);
+        echo " Commentaires</a>
                                                     <a class=\"post-time\" href=\"#\"><i class=\"fa fa-calendar\"></i>  ";
         // line 25
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["tab"]) || array_key_exists("tab", $context) ? $context["tab"] : (function () { throw new RuntimeError('Variable "tab" does not exist.', 25, $this->source); })()), "date", [], "any", false, false, false, 25), "Y-m-d H:i:s"), "html", null, true);
@@ -104,104 +107,137 @@ class __TwigTemplate_45e151ede68e5c79948fe9bd7f7e2d86fab2da31703c36f6ff979e46c47
                                                 <!-- Begin Blog Blockquote Area -->
                                                 <div class=\"li-blog-blockquote\">
                                                     <blockquote>
-                                                        <p>Quisque semper nunc vitae erat pellentesque, ac placerat arcu consectetur. In venenatis elit ac ultrices convallis. Duis est nisi, tincidunt ac urna sed, cursus blandit lectus. In ullamcorper sit amet ligula ut eleifend. Proin dictum tempor ligula, ac feugiat metus. Sed finibus tortor eu scelerisque scelerisque.</p>
+                                                        <p>";
+        // line 31
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["tab"]) || array_key_exists("tab", $context) ? $context["tab"] : (function () { throw new RuntimeError('Variable "tab" does not exist.', 31, $this->source); })()), "longdesc", [], "any", false, false, false, 31), "html", null, true);
+        echo "</p>
                                                     </blockquote>
                                                 </div>
                                                 <!-- Blog Blockquote Area End Here -->
-                                                <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus. Cras pretium arcu ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laborum in labore Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus. Cras pretium arcu ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laborum in labore rerum Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus. Cras pretium arcu ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laborum in labore rerum </p>
-                                                <div class=\"li-tag-line\">
-                                                    <h4>tag:</h4>
-                                                    <a href=\"#\">Headphones</a>,
-                                                    <a href=\"#\">Video Games</a>,
-                                                    <a href=\"#\">Wireless Speakers</a>
-                                                </div>
-                                                <div class=\"li-blog-sharing text-center pt-30\">
-                                                    <h4>share this post:</h4>
-                                                    <a href=\"#\"><i class=\"fa fa-facebook\"></i></a>
-                                                    <a href=\"#\"><i class=\"fa fa-twitter\"></i></a>
-                                                    <a href=\"#\"><i class=\"fa fa-pinterest\"></i></a>
-                                                    <a href=\"#\"><i class=\"fa fa-google-plus\"></i></a>
-                                                </div>
+                                                
+                                               
                                             </div>
                                         </div>
                                     </div>
                                     <!-- Begin Li's Blog Comment Section -->
                                     <div class=\"li-comment-section\">
-                                        <h3>03 comment</h3>
-                                        <ul>
+                                       
+                                        <h3>";
+        // line 43
+        echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["comments"]) || array_key_exists("comments", $context) ? $context["comments"] : (function () { throw new RuntimeError('Variable "comments" does not exist.', 43, $this->source); })())), "html", null, true);
+        echo " Commentaires</h3>
+                                         ";
+        // line 44
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["comments"]) || array_key_exists("comments", $context) ? $context["comments"] : (function () { throw new RuntimeError('Variable "comments" does not exist.', 44, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["comment"]) {
+            // line 45
+            echo "                                        <ul>
                                             <li>
                                                 <div class=\"author-avatar pt-15\">
-                                                    <img src=\"images/product-details/user.png\" alt=\"User\">
+                                                    <img src=\"";
+            // line 48
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product-details/user.png"), "html", null, true);
+            echo "\" alt=\"User\">
                                                 </div>
                                                 <div class=\"comment-body pl-15\">
                                                         <span class=\"reply-btn pt-15 pt-xs-5\"><a href=\"#\">reply</a></span>
-                                                    <h5 class=\"comment-author pt-15\">admin</h5>
+                                                    <h5 class=\"comment-author pt-15\">";
+            // line 52
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "pseudo", [], "any", false, false, false, 52), "html", null, true);
+            echo "</h5>
                                                     <div class=\"comment-post-date\">
-                                                        20 nov, 2018 at 9:30pm
+                                                        ";
+            // line 54
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "createdAt", [], "any", false, false, false, 54), "y-m-d-h:m:s"), "html", null, true);
+            echo "
                                                     </div>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim maiores adipisci optio ex, laboriosam facilis non pariatur itaque illo sunt?</p>
+                                                    <p>";
+            // line 56
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "contenu", [], "any", false, false, false, 56), "html", null, true);
+            echo "</p>
                                                 </div>
                                             </li>
-                                            <li class=\"comment-children\">
-                                                <div class=\"author-avatar pt-15\">
-                                                    <img src=\"images/product-details/admin.png\" alt=\"Admin\">
-                                                </div>
-                                                <div class=\"comment-body pl-15\">
-                                                        <span class=\"reply-btn pt-15 pt-xs-5\"><a href=\"#\">reply</a></span>
-                                                    <h5 class=\"comment-author pt-15\">admin</h5>
-                                                    <div class=\"comment-post-date\">
-                                                        20 nov, 2018 at 9:30pm
-                                                    </div>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim maiores adipisci optio ex, laboriosam facilis non pariatur itaque illo sunt?</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class=\"author-avatar pt-15\">
-                                                    <img src=\"images/product-details/admin.png\" alt=\"Admin\">
-                                                </div>
-                                                <div class=\"comment-body pl-15\">
-                                                    <span class=\"reply-btn pt-15 pt-xs-5\"><a href=\"#\">reply</a></span>
-                                                    <h5 class=\"comment-author pt-15\">admin</h5>
-                                                    <div class=\"comment-post-date\">
-                                                        20 nov, 2018 at 9:30pm
-                                                    </div>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim maiores adipisci optio ex, laboriosam facilis non pariatur itaque illo sunt?</p>
-                                                </div>
-                                            </li>
+                                           
                                         </ul>
-                                    </div>
+                                        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comment'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 62
+        echo "                                    </div>
                                     <!-- Li's Blog Comment Section End Here -->
                                     <!-- Begin Blog comment Box Area -->
                                     <div class=\"li-blog-comment-wrapper\">
-                                        <h3>leave a reply</h3>
-                                        <p>Your email address will not be published. Required fields are marked *</p>
-                                        <form action=\"#\">
+                                        <h3>Laisse un commentaire</h3>
+                                        <p>Votre adresse email ne sera pas publiée. les champs requis sont indiqués *</p>
+                                        ";
+        // line 68
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Commentaires_Form"]) || array_key_exists("Commentaires_Form", $context) ? $context["Commentaires_Form"] : (function () { throw new RuntimeError('Variable "Commentaires_Form" does not exist.', 68, $this->source); })()), 'form_start', ["attr" => ["novalidate" => "novalidate"]]);
+        echo "
+                                        
                                             <div class=\"comment-post-box\">
                                                 <div class=\"row\">
                                                     <div class=\"col-lg-12\">
-                                                        <label>comment</label>
-                                                        <textarea name=\"commnet\" placeholder=\"Write a comment\"></textarea>
+                                                        <label>Commentaire</label>
+                                                       
+                                                        ";
+        // line 75
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Commentaires_Form"]) || array_key_exists("Commentaires_Form", $context) ? $context["Commentaires_Form"] : (function () { throw new RuntimeError('Variable "Commentaires_Form" does not exist.', 75, $this->source); })()), "contenu", [], "any", false, false, false, 75), 'widget', ["attr" => ["class" => "form-control"]]);
+        echo "
+                                                        ";
+        // line 76
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Commentaires_Form"]) || array_key_exists("Commentaires_Form", $context) ? $context["Commentaires_Form"] : (function () { throw new RuntimeError('Variable "Commentaires_Form" does not exist.', 76, $this->source); })()), "contenu", [], "any", false, false, false, 76), 'errors', ["attr" => ["class" => "mb-0"]]);
+        echo "
                                                     </div>
-                                                    <div class=\"col-lg-4 col-md-4 col-sm-4 mt-5 mb-sm-20 mb-xs-20\">
-                                                        <label>Name</label>
-                                                        <input type=\"text\" class=\"coment-field\" placeholder=\"Name\">
+                                                     <div class=\"col-lg-4 col-md-4 col-sm-4 mt-5 mb-sm-20 mb-xs-20\">
+                                                        <label>Pseudo</label>
+                                                        
+                                                         ";
+        // line 81
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Commentaires_Form"]) || array_key_exists("Commentaires_Form", $context) ? $context["Commentaires_Form"] : (function () { throw new RuntimeError('Variable "Commentaires_Form" does not exist.', 81, $this->source); })()), "Pseudo", [], "any", false, false, false, 81), 'widget', ["attr" => ["class" => "coment-field"]]);
+        echo "
+                                                         ";
+        // line 82
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Commentaires_Form"]) || array_key_exists("Commentaires_Form", $context) ? $context["Commentaires_Form"] : (function () { throw new RuntimeError('Variable "Commentaires_Form" does not exist.', 82, $this->source); })()), "Pseudo", [], "any", false, false, false, 82), 'errors', ["attr" => ["class" => "mb-0"]]);
+        echo "
                                                     </div>
+                                                    
                                                     <div class=\"col-lg-4 col-md-4 col-sm-4 mt-5 mb-sm-20 mb-xs-20\">
                                                         <label>Email</label>
-                                                        <input type=\"text\" class=\"coment-field\" placeholder=\"Email\">
+                                                        
+                                                         ";
+        // line 88
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Commentaires_Form"]) || array_key_exists("Commentaires_Form", $context) ? $context["Commentaires_Form"] : (function () { throw new RuntimeError('Variable "Commentaires_Form" does not exist.', 88, $this->source); })()), "email", [], "any", false, false, false, 88), 'widget', ["attr" => ["class" => "coment-field"]]);
+        echo "
                                                     </div>
-                                                    <div class=\"col-lg-4 col-md-4 col-sm-4 mt-5 mb-sm-20\">
-                                                        <label>Website</label>
-                                                        <input type=\"text\" class=\"coment-field\" placeholder=\"Website\">
+                                                     <div class=\"col-lg-4 col-md-4 col-sm-4 mt-5 mb-sm-20 mb-xs-20\">
+                                                        <label>RGPD</label>
+                                                        
+                                                         ";
+        // line 93
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Commentaires_Form"]) || array_key_exists("Commentaires_Form", $context) ? $context["Commentaires_Form"] : (function () { throw new RuntimeError('Variable "Commentaires_Form" does not exist.', 93, $this->source); })()), "rgpd", [], "any", false, false, false, 93), 'widget', ["attr" => ["class" => "coment-field"]]);
+        echo "
                                                     </div>
+    
                                                     <div class=\"col-lg-12\">
                                                         <div class=\"coment-btn pt-30 pb-sm-30 pb-xs-30 f-left\">
-                                                            <input class=\"li-btn-2\" type=\"submit\" name=\"submit\" value=\"post comment\">
+                                                            
+                                                            ";
+        // line 99
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Commentaires_Form"]) || array_key_exists("Commentaires_Form", $context) ? $context["Commentaires_Form"] : (function () { throw new RuntimeError('Variable "Commentaires_Form" does not exist.', 99, $this->source); })()), "Envoyer", [], "any", false, false, false, 99), 'widget', ["attr" => ["class" => "li-btn-2"]]);
+        echo "
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </form>
+                                        ";
+        // line 104
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Commentaires_Form"]) || array_key_exists("Commentaires_Form", $context) ? $context["Commentaires_Form"] : (function () { throw new RuntimeError('Variable "Commentaires_Form" does not exist.', 104, $this->source); })()), 'form_end');
+        echo "    
+                                        
+                                        
                                     </div>
                                     <!-- Blog comment Box Area End Here -->
                                 </div>
@@ -236,7 +272,7 @@ class __TwigTemplate_45e151ede68e5c79948fe9bd7f7e2d86fab2da31703c36f6ff979e46c47
 
     public function getDebugInfo()
     {
-        return array (  102 => 27,  97 => 25,  90 => 21,  83 => 17,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  237 => 104,  229 => 99,  220 => 93,  212 => 88,  203 => 82,  199 => 81,  191 => 76,  187 => 75,  177 => 68,  169 => 62,  157 => 56,  152 => 54,  147 => 52,  140 => 48,  135 => 45,  131 => 44,  127 => 43,  112 => 31,  105 => 27,  100 => 25,  96 => 24,  90 => 21,  83 => 17,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -257,118 +293,96 @@ class __TwigTemplate_45e151ede68e5c79948fe9bd7f7e2d86fab2da31703c36f6ff979e46c47
                                 <div class=\"col-lg-12\">
                                     <div class=\"li-blog-single-item pb-30\">
                                         <div class=\"li-blog-banner\">
-                                            <a href=\"blog-details.html\"><img class=\"img-full\" src=\"{{asset('uploads/') ~ tab.affiche}}\"  alt=\"\"></a>
+                                            <a href=\"blog-details.html\"><img class=\"img-full\" src=\"{{asset('uploads/') ~ tab.affiche}}\"  height=\"350\"></a>
                                         </div>
                                         <div class=\"li-blog-content\">
                                             <div class=\"li-blog-details\">
                                                 <h3 class=\"li-blog-heading pt-25\"><a href=\"#\">{{tab.nom}}</a></h3>
                                                 <div class=\"li-blog-meta\">
-                                                    <a class=\"author\" href=\"#\"><i class=\"fa fa-user\"></i>Admin</a>
-                                                    <a class=\"comment\" href=\"#\"><i class=\"fa fa-comment-o\"></i> 3 comment</a>
+                                                    <a class=\"author\" href=\"#\"><i class=\"fa fa-user\"></i></a>
+                                                    <a class=\"comment\" href=\"#\"><i class=\"fa fa-comment-o\"></i> {{comments | length}} Commentaires</a>
                                                     <a class=\"post-time\" href=\"#\"><i class=\"fa fa-calendar\"></i>  {{tab.date|date('Y-m-d H:i:s')}}</a>
                                                 </div>
                                                 <p>{{tab.description}}</p>
                                                 <!-- Begin Blog Blockquote Area -->
                                                 <div class=\"li-blog-blockquote\">
                                                     <blockquote>
-                                                        <p>Quisque semper nunc vitae erat pellentesque, ac placerat arcu consectetur. In venenatis elit ac ultrices convallis. Duis est nisi, tincidunt ac urna sed, cursus blandit lectus. In ullamcorper sit amet ligula ut eleifend. Proin dictum tempor ligula, ac feugiat metus. Sed finibus tortor eu scelerisque scelerisque.</p>
+                                                        <p>{{tab.longdesc}}</p>
                                                     </blockquote>
                                                 </div>
                                                 <!-- Blog Blockquote Area End Here -->
-                                                <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus. Cras pretium arcu ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laborum in labore Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus. Cras pretium arcu ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laborum in labore rerum Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus. Cras pretium arcu ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laborum in labore rerum </p>
-                                                <div class=\"li-tag-line\">
-                                                    <h4>tag:</h4>
-                                                    <a href=\"#\">Headphones</a>,
-                                                    <a href=\"#\">Video Games</a>,
-                                                    <a href=\"#\">Wireless Speakers</a>
-                                                </div>
-                                                <div class=\"li-blog-sharing text-center pt-30\">
-                                                    <h4>share this post:</h4>
-                                                    <a href=\"#\"><i class=\"fa fa-facebook\"></i></a>
-                                                    <a href=\"#\"><i class=\"fa fa-twitter\"></i></a>
-                                                    <a href=\"#\"><i class=\"fa fa-pinterest\"></i></a>
-                                                    <a href=\"#\"><i class=\"fa fa-google-plus\"></i></a>
-                                                </div>
+                                                
+                                               
                                             </div>
                                         </div>
                                     </div>
                                     <!-- Begin Li's Blog Comment Section -->
                                     <div class=\"li-comment-section\">
-                                        <h3>03 comment</h3>
+                                       
+                                        <h3>{{comments | length}} Commentaires</h3>
+                                         {% for comment in comments %}
                                         <ul>
                                             <li>
                                                 <div class=\"author-avatar pt-15\">
-                                                    <img src=\"images/product-details/user.png\" alt=\"User\">
+                                                    <img src=\"{{asset('images/product-details/user.png')}}\" alt=\"User\">
                                                 </div>
                                                 <div class=\"comment-body pl-15\">
                                                         <span class=\"reply-btn pt-15 pt-xs-5\"><a href=\"#\">reply</a></span>
-                                                    <h5 class=\"comment-author pt-15\">admin</h5>
+                                                    <h5 class=\"comment-author pt-15\">{{comment.pseudo}}</h5>
                                                     <div class=\"comment-post-date\">
-                                                        20 nov, 2018 at 9:30pm
+                                                        {{comment.createdAt | date('y-m-d-h:m:s')}}
                                                     </div>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim maiores adipisci optio ex, laboriosam facilis non pariatur itaque illo sunt?</p>
+                                                    <p>{{comment.contenu}}</p>
                                                 </div>
                                             </li>
-                                            <li class=\"comment-children\">
-                                                <div class=\"author-avatar pt-15\">
-                                                    <img src=\"images/product-details/admin.png\" alt=\"Admin\">
-                                                </div>
-                                                <div class=\"comment-body pl-15\">
-                                                        <span class=\"reply-btn pt-15 pt-xs-5\"><a href=\"#\">reply</a></span>
-                                                    <h5 class=\"comment-author pt-15\">admin</h5>
-                                                    <div class=\"comment-post-date\">
-                                                        20 nov, 2018 at 9:30pm
-                                                    </div>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim maiores adipisci optio ex, laboriosam facilis non pariatur itaque illo sunt?</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class=\"author-avatar pt-15\">
-                                                    <img src=\"images/product-details/admin.png\" alt=\"Admin\">
-                                                </div>
-                                                <div class=\"comment-body pl-15\">
-                                                    <span class=\"reply-btn pt-15 pt-xs-5\"><a href=\"#\">reply</a></span>
-                                                    <h5 class=\"comment-author pt-15\">admin</h5>
-                                                    <div class=\"comment-post-date\">
-                                                        20 nov, 2018 at 9:30pm
-                                                    </div>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim maiores adipisci optio ex, laboriosam facilis non pariatur itaque illo sunt?</p>
-                                                </div>
-                                            </li>
+                                           
                                         </ul>
+                                        {% endfor %}
                                     </div>
                                     <!-- Li's Blog Comment Section End Here -->
                                     <!-- Begin Blog comment Box Area -->
                                     <div class=\"li-blog-comment-wrapper\">
-                                        <h3>leave a reply</h3>
-                                        <p>Your email address will not be published. Required fields are marked *</p>
-                                        <form action=\"#\">
+                                        <h3>Laisse un commentaire</h3>
+                                        <p>Votre adresse email ne sera pas publiée. les champs requis sont indiqués *</p>
+                                        {{ form_start(Commentaires_Form,{'attr': {'novalidate': 'novalidate'}} ) }}
+                                        
                                             <div class=\"comment-post-box\">
                                                 <div class=\"row\">
                                                     <div class=\"col-lg-12\">
-                                                        <label>comment</label>
-                                                        <textarea name=\"commnet\" placeholder=\"Write a comment\"></textarea>
+                                                        <label>Commentaire</label>
+                                                       
+                                                        {{ form_widget(Commentaires_Form.contenu, {'attr': {'class': 'form-control'}}) }}
+                                                        {{ form_errors(Commentaires_Form.contenu,{'attr':{\"class\":\"mb-0\"}}) }}
                                                     </div>
-                                                    <div class=\"col-lg-4 col-md-4 col-sm-4 mt-5 mb-sm-20 mb-xs-20\">
-                                                        <label>Name</label>
-                                                        <input type=\"text\" class=\"coment-field\" placeholder=\"Name\">
+                                                     <div class=\"col-lg-4 col-md-4 col-sm-4 mt-5 mb-sm-20 mb-xs-20\">
+                                                        <label>Pseudo</label>
+                                                        
+                                                         {{ form_widget(Commentaires_Form.Pseudo, {'attr': {'class': 'coment-field'}}) }}
+                                                         {{ form_errors(Commentaires_Form.Pseudo,{'attr':{\"class\":\"mb-0\"}}) }}
                                                     </div>
+                                                    
                                                     <div class=\"col-lg-4 col-md-4 col-sm-4 mt-5 mb-sm-20 mb-xs-20\">
                                                         <label>Email</label>
-                                                        <input type=\"text\" class=\"coment-field\" placeholder=\"Email\">
+                                                        
+                                                         {{ form_widget(Commentaires_Form.email, {'attr': {'class': 'coment-field'}}) }}
                                                     </div>
-                                                    <div class=\"col-lg-4 col-md-4 col-sm-4 mt-5 mb-sm-20\">
-                                                        <label>Website</label>
-                                                        <input type=\"text\" class=\"coment-field\" placeholder=\"Website\">
+                                                     <div class=\"col-lg-4 col-md-4 col-sm-4 mt-5 mb-sm-20 mb-xs-20\">
+                                                        <label>RGPD</label>
+                                                        
+                                                         {{ form_widget(Commentaires_Form.rgpd, {'attr': {'class': 'coment-field'}}) }}
                                                     </div>
+    
                                                     <div class=\"col-lg-12\">
                                                         <div class=\"coment-btn pt-30 pb-sm-30 pb-xs-30 f-left\">
-                                                            <input class=\"li-btn-2\" type=\"submit\" name=\"submit\" value=\"post comment\">
+                                                            
+                                                            {{ form_widget(Commentaires_Form.Envoyer, {'attr': {'class': 'li-btn-2'} }) }}
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </form>
+                                        {{ form_end(Commentaires_Form) }}    
+                                        
+                                        
                                     </div>
                                     <!-- Blog comment Box Area End Here -->
                                 </div>

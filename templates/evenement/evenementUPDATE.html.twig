@@ -20,7 +20,6 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              
                 {{ form_start(form_evenement) }}
 
                 <div class="card-body">
@@ -35,18 +34,27 @@
                   <div class="form-group">
                     <label for="exampleInputPassword1">Adresse </label>
                     {{ form_widget(form_evenement.adresse, {'attr': {'class': 'form-control'}}) }}
+                     {{ form_errors(form_evenement.adresse,{'attr':{"class":"mb-0"}}) }}
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Date debut </label>
                     {{ form_widget(form_evenement.date, {'attr': {'class': 'form-control'}}) }}
+                     {{ form_errors(form_evenement.date,{'attr':{"class":"mb-0"}}) }}
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Date fin </label>
                     {{ form_widget(form_evenement.datefin, {'attr': {'class': 'form-control'}}) }}
+                     {{ form_errors(form_evenement.datefin,{'attr':{"class":"mb-0"}}) }}
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Description </label>
                     {{ form_widget(form_evenement.description, {'attr': {'class': 'form-control'}}) }}
+                     {{ form_errors(form_evenement.description,{'attr':{"class":"mb-0"}}) }}
+                  </div>
+                   <div class="form-group">
+                    <label for="exampleInputPassword1"> Long Description </label>
+                    {{ form_widget(form_evenement.longdesc, {'attr': {'class': 'form-control'}}) }}
+                     {{ form_errors(form_evenement.longdesc,{'attr':{"class":"mb-0"}}) }}
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Affiche</label>

@@ -37,11 +37,15 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/evenement/(?'
-                    .'|delete/([^/]++)(*:198)'
-                    .'|update/([^/]++)(*:221)'
+                .'|/commentaires/(?'
+                    .'|([^/]++)(*:194)'
+                    .'|delete/([^/]++)(*:217)'
                 .')'
-                .'|/detail/([^/]++)(*:246)'
+                .'|/evenement/(?'
+                    .'|delete/([^/]++)(*:255)'
+                    .'|update/([^/]++)(*:278)'
+                .')'
+                .'|/detail/([^/]++)(*:303)'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -52,9 +56,11 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        198 => [[['_route' => 'ev_delete', '_controller' => 'App\\Controller\\EvenementController::Supprimer'], ['id'], null, null, false, true, null]],
-        221 => [[['_route' => 'ev_update', '_controller' => 'App\\Controller\\EvenementController::Update'], ['id'], null, null, false, true, null]],
-        246 => [
+        194 => [[['_route' => 'commentaires', '_controller' => 'App\\Controller\\CommentairesController::index'], ['id'], null, null, false, true, null]],
+        217 => [[['_route' => 'com_delete', '_controller' => 'App\\Controller\\CommentairesController::Supprimer'], ['id'], null, null, false, true, null]],
+        255 => [[['_route' => 'ev_delete', '_controller' => 'App\\Controller\\EvenementController::Supprimer'], ['id'], null, null, false, true, null]],
+        278 => [[['_route' => 'ev_update', '_controller' => 'App\\Controller\\EvenementController::Update'], ['id'], null, null, false, true, null]],
+        303 => [
             [['_route' => 'ev_front_detail', '_controller' => 'App\\Controller\\EvenementController::detail'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

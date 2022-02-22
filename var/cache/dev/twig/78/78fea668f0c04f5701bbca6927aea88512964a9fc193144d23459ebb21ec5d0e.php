@@ -93,13 +93,15 @@ class __TwigTemplate_4eca5fa5ed266baf6fd753274a80f823f190362a16463da29f137aafa59
                                         </div>
                                         <div class=\"li-blog-content\">
                                             <div class=\"li-blog-details\">
-                                                <h3 class=\"li-blog-heading pt-25\"><a href=\"blog-details-left-sidebar.html\">";
+                                                <h3 class=\"li-blog-heading pt-25\"><a href=\"";
             // line 22
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ev_front_detail", ["id" => twig_get_attribute($this->env, $this->source, $context["evenement"], "id", [], "any", false, false, false, 22)]), "html", null, true);
+            echo "\">";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evenement"], "nom", [], "any", false, false, false, 22), "html", null, true);
             echo "</a></h3>
                                                 <div class=\"li-blog-meta\">
-                                                    <a class=\"author\" href=\"#\"><i class=\"fa fa-user\"></i>Admin</a>
-                                                    <a class=\"comment\" href=\"#\"><i class=\"fa fa-comment-o\"></i> 3 comment</a>
+                                                    
+                                                    <a class=\"comment\" href=\"#\"><i class=\"fa fa-comment-o\"></i> Commentaires</a>
                                                     <a class=\"post-time\" href=\"#\"><i class=\"fa fa-calendar\"></i>  ";
             // line 26
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evenement"], "date", [], "any", false, false, false, 26), "Y-m-d H:i:s"), "html", null, true);
@@ -109,7 +111,10 @@ class __TwigTemplate_4eca5fa5ed266baf6fd753274a80f823f190362a16463da29f137aafa59
             // line 28
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evenement"], "description", [], "any", false, false, false, 28), "html", null, true);
             echo "</p>
-                                                <a class=\"read-more\" href=\"blog-details-left-sidebar.html\">Read More...</a>
+                                                <a class=\"read-more\" href=\"";
+            // line 29
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ev_front_detail", ["id" => twig_get_attribute($this->env, $this->source, $context["evenement"], "id", [], "any", false, false, false, 29)]), "html", null, true);
+            echo "\">Read More...</a>
                                             </div>
                                         </div>
                                     </div>
@@ -169,7 +174,7 @@ class __TwigTemplate_4eca5fa5ed266baf6fd753274a80f823f190362a16463da29f137aafa59
 
     public function getDebugInfo()
     {
-        return array (  123 => 35,  110 => 28,  105 => 26,  98 => 22,  89 => 18,  84 => 15,  80 => 14,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  128 => 35,  116 => 29,  112 => 28,  107 => 26,  98 => 22,  89 => 18,  84 => 15,  80 => 14,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -195,14 +200,14 @@ class __TwigTemplate_4eca5fa5ed266baf6fd753274a80f823f190362a16463da29f137aafa59
                                         </div>
                                         <div class=\"li-blog-content\">
                                             <div class=\"li-blog-details\">
-                                                <h3 class=\"li-blog-heading pt-25\"><a href=\"blog-details-left-sidebar.html\">{{evenement.nom}}</a></h3>
+                                                <h3 class=\"li-blog-heading pt-25\"><a href=\"{{path('ev_front_detail',{id : evenement.id })}}\">{{evenement.nom}}</a></h3>
                                                 <div class=\"li-blog-meta\">
-                                                    <a class=\"author\" href=\"#\"><i class=\"fa fa-user\"></i>Admin</a>
-                                                    <a class=\"comment\" href=\"#\"><i class=\"fa fa-comment-o\"></i> 3 comment</a>
+                                                    
+                                                    <a class=\"comment\" href=\"#\"><i class=\"fa fa-comment-o\"></i> Commentaires</a>
                                                     <a class=\"post-time\" href=\"#\"><i class=\"fa fa-calendar\"></i>  {{evenement.date|date('Y-m-d H:i:s')}}</a>
                                                 </div>
                                                 <p>{{evenement.description}}</p>
-                                                <a class=\"read-more\" href=\"blog-details-left-sidebar.html\">Read More...</a>
+                                                <a class=\"read-more\" href=\"{{path('ev_front_detail',{id : evenement.id })}}\">Read More...</a>
                                             </div>
                                         </div>
                                     </div>

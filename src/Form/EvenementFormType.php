@@ -21,6 +21,7 @@ class EvenementFormType extends AbstractType
             ->add('datefin')
             ->add('prix')
             ->add('description')
+            ->add('longdesc')
             ->add('affiche',FileType::class,[
                 'mapped' => false,
                'label' => 'Telecharger une image ' ]);
