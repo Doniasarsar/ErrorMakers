@@ -39,7 +39,7 @@ class Produit
     private $descProduit;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255 )
      */
     private $image;
 
@@ -50,7 +50,7 @@ class Produit
     private $nomProduit;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Boutique::class, inversedBy="produit")
+     * @ORM\ManyToOne(targetEntity=Boutique::class, inversedBy="produit" )
      */
     private $boutique;
 

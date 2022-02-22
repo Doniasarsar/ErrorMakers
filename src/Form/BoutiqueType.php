@@ -25,7 +25,8 @@ class BoutiqueType extends AbstractType
                 'class' => Utilisateurs::class,
         
                 'choice_label' => function ($Utilisateurs) {
-                    return $Utilisateurs->getEmail();
+                    if($Utilisateurs->getBoutique() == NULL){return $Utilisateurs->getEmail();}
+                    
                
                 }
                 // used to render a select box, check boxes or radios

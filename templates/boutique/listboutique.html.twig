@@ -51,6 +51,23 @@
                     <td>{{ bout.descBoutique}}</td>
                     <td>{{ bout.adresseBoutique}}</td>
                     <td>{{ bout.Commercant.getEmail()}}</td>
+                   <td> {% for image in bout.images %}
+                    <img src="{{ asset('/uploads/' ~ image.name) }}" alt="" width="200">
+                   
+                     {% endfor %} </td>
+      {# Si la route est "update_boutique on affiche les images #}
+ {#	{% if app.request.attributes.get('_route') == 'update_boutique' %} 
+        <h2>Images</h2>
+       {% for image in bout.images %}
+            <div>
+                <img src="{{ asset('/uploads/'~ image.name) }}" alt="" width="150">
+
+              </div>
+        {% endfor %}
+         {% endif %}
+                #}
+
+                    
 
                 
                     <td>
@@ -62,17 +79,7 @@
                         <hr>
                     </td>                 
                    </tr>
-                   {# Si la route est "annonces_edit on affiche les images #}
-	{% if app.request.attributes.get('_route') == 'update_boutique' %} 
-        <h2>Images</h2>
-        {% for image in bout.images %}
-            <div>
-                <img src="{{ asset('/uploads/'~ image.name) }}" alt="" width="150">
-
-              </div>
-        {% endfor %}
-         {% endif %}
-                  {% endfor %}
+                   {% endfor %}
                   
                   </tbody>
                 </table>

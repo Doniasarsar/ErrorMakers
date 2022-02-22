@@ -23,31 +23,37 @@ class Boutique
 
     /**
      * @ORM\Column(type="string", length=255)
+     *  @Assert\NotBlank(message="Nom Boutique is required")
      */
     private $nomBoutique;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="description is required")
+
      */
     private $descBoutique;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="adresse is required")
      */
     private $adresseBoutique;
 
     /**
-     * @ORM\OneToMany(targetEntity=Produit::class, mappedBy="boutique")
+     * @ORM\OneToMany(targetEntity=Produit::class, mappedBy="boutique" , cascade={"persist", "remove"})
      */
     private $produit;
 
     /**
-     * @ORM\OneToOne(targetEntity=Utilisateurs::class, cascade={"persist", "remove"})
+     * @ORM\OneToOne(targetEntity=Utilisateurs::class)
+    
      */
     private $Commercant;
 
     /**
-     * @ORM\OneToMany(targetEntity=Images::class, mappedBy="boutique", cascade={"persist"})
+     * @ORM\OneToMany(targetEntity=Images::class, mappedBy="boutique", cascade={"persist", "remove"})
+     
      */
     private $images;
 

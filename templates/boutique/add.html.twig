@@ -44,11 +44,15 @@
                     {{ form_widget(Fbout.Commercant, {'attr': {'class': 'form-control'}}) }}
                      {{ form_errors(Fbout.Commercant,{'attr':{"class":"mb-0"}}) }}
                   </div>
-                 
 
-                  
-
-                  {{ form_widget(Fbout.Ajouter, {'attr': {'class': 'btn btn-info'}}) }}
+                   <div class="form-group">
+                    <label for="exampleInputPassword1">Photo de Profil </label>
+                    {% for image in Fbout.images %}
+                    {{ form_widget(image.name, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(image.name,{'attr':{"class":"mb-0"}}) }}
+                     {% endfor %}
+                   </div>
+              
                 </div>
                 <!-- /.card-body -->
 

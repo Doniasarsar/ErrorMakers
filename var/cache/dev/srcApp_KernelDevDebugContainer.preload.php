@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).''.\DIRECTORY_SEPARATOR.'vendor/autoload.php';
-(require __DIR__.'/srcApp_KernelDevDebugContainer.php')->set(\ContainerNNsn4GC\srcApp_KernelDevDebugContainer::class, null);
+(require __DIR__.'/srcApp_KernelDevDebugContainer.php')->set(\ContainerK95CKsx\srcApp_KernelDevDebugContainer::class, null);
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';

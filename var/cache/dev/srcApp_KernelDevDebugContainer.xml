@@ -77,7 +77,7 @@
     <parameter key="container.dumper.inline_class_loader">true</parameter>
     <parameter key="container.dumper.inline_factories">true</parameter>
     <parameter key="uploads_directory">C:\Users\HP\Desktop\ErrorMakers-3A45/public/uploads</parameter>
-    <parameter key="images_directory">C:\Users\HP\Desktop\ErrorMakers-3A45/public/uploads/boutique</parameter>
+    <parameter key="images_directory">C:\Users\HP\Desktop\ErrorMakers-3A45/public/uploads</parameter>
     <parameter key="event_dispatcher.event_aliases" type="collection">
       <parameter key="Symfony\Component\Console\Event\ConsoleCommandEvent">console.command</parameter>
       <parameter key="Symfony\Component\Console\Event\ConsoleErrorEvent">console.error</parameter>
@@ -5275,21 +5275,30 @@
         <argument key="rep" type="service_closure" id="App\Repository\ProduitRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.z6xYSiI" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.UqUoz.4" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="rep" type="service_closure" id="App\Repository\ProduitRepository"/>
+        <argument key="repp" type="service_closure" id="App\Repository\BoutiqueRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.4SdotFe" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\BoutiqueController::Supprimer" type="service_closure" id=".service_locator.eTYQhjN"/>
         <argument key="App\Controller\BoutiqueController::afficher" type="service_closure" id=".service_locator.eTYQhjN"/>
         <argument key="App\Controller\BoutiqueController::afficherProduit" type="service_closure" id=".service_locator.plab2C_"/>
         <argument key="App\Controller\FrontController::detail" type="service_closure" id=".service_locator.plab2C_"/>
-        <argument key="App\Controller\FrontController::index" type="service_closure" id=".service_locator.plab2C_"/>
+        <argument key="App\Controller\FrontController::details" type="service_closure" id=".service_locator.UqUoz.4"/>
+        <argument key="App\Controller\FrontController::index" type="service_closure" id=".service_locator.UqUoz.4"/>
         <argument key="App\Controller\ProduitController::Supprimer" type="service_closure" id=".service_locator.plab2C_"/>
         <argument key="App\Controller\ProduitController::afficher" type="service_closure" id=".service_locator.plab2C_"/>
         <argument key="App\Controller\BoutiqueController:Supprimer" type="service_closure" id=".service_locator.eTYQhjN"/>
         <argument key="App\Controller\BoutiqueController:afficher" type="service_closure" id=".service_locator.eTYQhjN"/>
         <argument key="App\Controller\BoutiqueController:afficherProduit" type="service_closure" id=".service_locator.plab2C_"/>
         <argument key="App\Controller\FrontController:detail" type="service_closure" id=".service_locator.plab2C_"/>
-        <argument key="App\Controller\FrontController:index" type="service_closure" id=".service_locator.plab2C_"/>
+        <argument key="App\Controller\FrontController:details" type="service_closure" id=".service_locator.UqUoz.4"/>
+        <argument key="App\Controller\FrontController:index" type="service_closure" id=".service_locator.UqUoz.4"/>
         <argument key="App\Controller\ProduitController:Supprimer" type="service_closure" id=".service_locator.plab2C_"/>
         <argument key="App\Controller\ProduitController:afficher" type="service_closure" id=".service_locator.plab2C_"/>
       </argument>
@@ -5753,12 +5762,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.z6xYSiI"/>
+      <argument type="service" id=".service_locator.4SdotFe"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.z6xYSiI"/>
+      <argument type="service" id=".service_locator.4SdotFe"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -6162,7 +6171,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.z6xYSiI"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.4SdotFe"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>
@@ -6177,7 +6186,7 @@
     <service id="Psr\Log\LoggerInterface $securityLogger" alias="monolog.logger.security"/>
     <service id="Psr\Log\LoggerInterface $doctrineLogger" alias="monolog.logger.doctrine"/>
     <service id=".service_locator.0GV1BZZ" alias=".service_locator.gSv9zYw"/>
-    <service id=".service_locator.gHn1ik1" alias=".service_locator.z6xYSiI"/>
+    <service id=".service_locator.ze2PBA2" alias=".service_locator.4SdotFe"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.l6ELYLY"/>
     <service id=".service_locator.ZBXzXhO" alias=".service_locator.znzE2QI"/>
     <service id=".service_locator.O24_MAy" alias=".service_locator.yY.p4P7"/>
@@ -6202,6 +6211,7 @@
     <service id="http_client" alias=".debug.http_client"/>
     <service id=".service_locator.V.0UeQn" alias=".service_locator.eTYQhjN"/>
     <service id=".service_locator.6m6V4aP" alias=".service_locator.plab2C_"/>
+    <service id=".service_locator.PVn8yOD" alias=".service_locator.UqUoz.4"/>
     <service id=".service_locator.2_a5sdU" alias=".service_locator.q3f6h3A"/>
     <service id=".service_locator.5QWEYtR" alias=".service_locator.S4hE9mt"/>
     <service id=".service_locator.aa1PbBb" alias=".service_locator.nLgZj7R"/>

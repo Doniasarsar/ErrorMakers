@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -122,6 +123,12 @@ class BoutiqueController extends AbstractController
             // used to render a select box, check boxes or radios
             // 'multiple' => true,
             // 'expanded' => true,
+        ])
+        ->add('images', FileType::class,[
+            'label' => false,
+            'multiple' => true,
+            'mapped' => false,
+            'required' => false
         ])
         ->add('Edit',SubmitType::class)
 
