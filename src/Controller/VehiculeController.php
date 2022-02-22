@@ -8,6 +8,7 @@ use App\Form\CamionType;
 use App\Form\VoitureType;
 use App\Form\VehiculeType;
 use App\Repository\VehiculeRepository;
+use App\Repository\UtilisateursRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -57,7 +58,7 @@ class VehiculeController extends AbstractController
   * @Route("/voiture/add",name="voi_add")
   */
 
- public function AddVoiture(Request $request){
+ public function AddVoiture(Request $request, UtilisateursRepository $rep){
      $vehicule=new Vehicule();
      $form=$this->createform(VoitureType::class,$vehicule);
      $form->add('Ajouter',SubmitType::class);
@@ -65,6 +66,8 @@ class VehiculeController extends AbstractController
      $form->handleRequest($request);
 
      if($form->isSubmitted() && $form->isValid()){
+       
+        $vehicule->setEtatVehicule("Disponible");
      $em=$this->getDoctrine()->getManager();
      $em->persist($vehicule);
      $em->flush();
@@ -100,7 +103,7 @@ class VehiculeController extends AbstractController
   * @Route("/moto/add",name="mot_add")
   */
 
- public function AddMoto(Request $request){
+ public function AddMoto(Request $request, UtilisateursRepository $rep){
     $vehicule=new Vehicule();
     $form=$this->createform(MotoType::class,$vehicule);
     $form->add('Ajouter',SubmitType::class);
@@ -108,6 +111,8 @@ class VehiculeController extends AbstractController
     $form->handleRequest($request);
 
     if($form->isSubmitted() && $form->isValid()){
+       
+        $vehicule->setEtatVehicule("Disponible");
     $em=$this->getDoctrine()->getManager();
     $em->persist($vehicule);
     $em->flush();
@@ -142,7 +147,7 @@ public function UpdateMoto($id,VehiculeRepository $rep,Request $request){
  /**
   * @Route("/camion/add",name="cam_add")
   */
- public function AddCamion(Request $request){
+ public function AddCamion(Request $request, UtilisateursRepository $rep){
     $vehicule=new Vehicule();
     $form=$this->createform(CamionType::class,$vehicule);
     $form->add('Ajouter',SubmitType::class);
@@ -150,6 +155,8 @@ public function UpdateMoto($id,VehiculeRepository $rep,Request $request){
     $form->handleRequest($request);
 
     if($form->isSubmitted() && $form->isValid()){
+       
+        $vehicule->setEtatVehicule("Disponible");
     $em=$this->getDoctrine()->getManager();
     $em->persist($vehicule);
     $em->flush();

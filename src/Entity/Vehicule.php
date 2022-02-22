@@ -3,12 +3,13 @@
 namespace App\Entity;
 
 use DateTimeInterface;
-use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+use App\Entity\Utilisateurs;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\VehiculeRepository;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
 /**
  * @ORM\Entity(repositoryClass=VehiculeRepository::class)
@@ -26,6 +27,7 @@ class Vehicule
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="matricule is required")
      */
     private $matricule;
 
@@ -49,6 +51,23 @@ class Vehicule
      */
     private $DateEntretient;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Livraison::class, mappedBy="vehicule")
+     */
+    private $livraisons;
+
+    /**
+     * @ORM\OneToOne(targetEntity=Utilisateurs::class, cascade={"persist"})
+     */
+    private $livreur;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $EtatVehicule;
+
+  
+
   
 
     
@@ -56,7 +75,8 @@ class Vehicule
     public function __construct()
     {
         $this->livreurId = new ArrayCollection();
-        $this->livreur = new ArrayCollection();
+        $this->livraisons = new ArrayCollection();
+        $this->DateEntretient = new \DateTime('now');
     }
 
     public function getId(): ?int
@@ -125,6 +145,70 @@ class Vehicule
 
         return $this;
     }
+    public function getVehicule(): ?string
+    {
+        
+        $vehicule = " typeVehicule: "  . $this->typeVehicule . " -- Marque :" . $this->marque . " -- Matricule: " .  $this->matricule;
+        return $vehicule;
+    }
+
+    
+
+    /**
+     * @return Collection|Livraison[]
+     */
+    public function getLivraisons(): Collection
+    {
+        return $this->livraisons;
+    }
+
+    public function addLivraison(Livraison $livraison): self
+    {
+        if (!$this->livraisons->contains($livraison)) {
+            $this->livraisons[] = $livraison;
+            $livraison->setVehicule($this);
+        }
+
+        return $this;
+    }
+
+    public function removeLivraison(Livraison $livraison): self
+    {
+        if ($this->livraisons->removeElement($livraison)) {
+            // set the owning side to null (unless already changed)
+            if ($livraison->getVehicule() === $this) {
+                $livraison->setVehicule(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getLivreur(): ?Utilisateurs
+    {
+        return $this->livreur;
+    }
+
+    public function setLivreur(?Utilisateurs $livreur): self
+    {
+        $this->livreur = $livreur;
+
+        return $this;
+    }
+
+    public function getEtatVehicule(): ?string
+    {
+        return $this->EtatVehicule;
+    }
+
+    public function setEtatVehicule(string $EtatVehicule): self
+    {
+        $this->EtatVehicule = $EtatVehicule;
+
+        return $this;
+    }
+
+    
 
     
     

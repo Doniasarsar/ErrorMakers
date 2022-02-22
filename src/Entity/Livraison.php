@@ -53,15 +53,26 @@ class Livraison
     private $livreur;
 
     /**
-     * @ORM\OneToOne(targetEntity=Commande::class, cascade={"persist", "remove"})
+     * @ORM\OneToOne(targetEntity=Commande::class, cascade={"persist"})
      */
     private $Commande;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Vehicule::class, inversedBy="livraisons")
+     */
+    private $vehicule;
+
+ 
+
+  
+
+    
     
 
     public function __construct()
     {
         $this->livraisonId = new ArrayCollection();
+        $this->dateLivraison = new \DateTime('now');
     }
 
     public function getId(): ?int
@@ -133,6 +144,22 @@ class Livraison
 
         return $this;
     }
+
+    public function getVehicule(): ?Vehicule
+    {
+        return $this->vehicule;
+    }
+
+    public function setVehicule(?Vehicule $vehicule): self
+    {
+        $this->vehicule = $vehicule;
+
+        return $this;
+    }
+
+    
+
+   
 
   
 }

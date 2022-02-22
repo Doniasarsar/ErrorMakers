@@ -4,13 +4,16 @@ namespace App\Controller;
 
 use App\Entity\Livraison;
 use App\Form\LivraisonType;
+use App\Repository\CommandeRepository;
+use App\Repository\VehiculeRepository;
 use App\Repository\LivraisonRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
+use App\Repository\UtilisateursRepository;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class LivraisonControlleur extends AbstractController
 {
@@ -41,26 +44,55 @@ class LivraisonControlleur extends AbstractController
      * @Route("/livraison/delete/{id}", name="r_delete")
      */
 
-    public function Supprimer($id,LivraisonRepository $rep){
+    public function Supprimer($id,LivraisonRepository $rep,UtilisateursRepository $repp,VehiculeRepository $reppp){
         $livraison=$rep->find($id);
+        
         $em=$this->getDoctrine()->getManager();
         $em->remove($livraison);
+        $user=$repp->findByEmail($livraison->getLivreur()->getEmail());
+        $user->setEtat("Disponible");
+        $vehicule=$reppp->find($livraison->getVehicule()->getId());
+        $vehicule->setEtatVehicule("Disponible");
         $em->flush();
+       
 
         return $this->redirectToRoute('r_list');
     }
     /**
-     * @Route("/livraison/add",name="r_add")
+     * @Route("/livraison/add/{id}",name="liv_add")
      */
 
-    public function Add(Request $request){
+    public function Add($id,Request $request ,UtilisateursRepository $rep,CommandeRepository $repp,VehiculeRepository $reppp){
         $livraison=new Livraison();
+        $commande=$repp->find($id);
+
+        
+        
+        $livraison->setEtatLivraison(1);
+        $livraison->setPrixLivraison($commande->getMontant());
+       
+
         $form=$this->createform(LivraisonType::class,$livraison);
         $form->add('Ajouter',SubmitType::class);
 
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
+            
+            $vehicule=$reppp->find($livraison->getVehicule()->getId());
+            $vehicule->setEtatVehicule("Non Disponible");
+        $user=$rep->findByEmail($livraison->getLivreur()->getEmail());
+        $user->setEtat("Non Disponible");
+        $commande->setEtatCommande(1);
+       
+     
+        
+       
+        $livraison->setCommande($commande);
+       
+        
+        
+
         $em=$this->getDoctrine()->getManager();
         $em->persist($livraison);
         $em->flush();

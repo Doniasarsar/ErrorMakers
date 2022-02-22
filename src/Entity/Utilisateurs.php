@@ -69,37 +69,41 @@ class Utilisateurs implements UserInterface
     private $ConfirmPassword;
 
     
-    /**
-     * @ORM\OneToMany(targetEntity=Livraison::class, mappedBy="utilisateurs")
-     */
-    private $Livraison;
 
     /**
      * @ORM\Column(type="json")
      */
     private $Role = [];
 
-    /**
-     * @ORM\Column(type="string", length=50, nullable=true)
-     */
-    private $Token;
+   
+   
 
     /**
-     * @ORM\OneToMany(targetEntity=Livraison::class, mappedBy="livreur")
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Question 1 is required")
      */
-    private $livraison;
+    private $QuestionSecurite1;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Question 2 is required")
+     */
+    private $QuestionSecurite2;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Etat;
 
   
-
-   
+    
 
     
 
     public function __construct()
     {
         $this->Livraison = new ArrayCollection();
-        $this->livraisons = new ArrayCollection();
-        $this->VehiculeId = new ArrayCollection();
+        $this->vehicules = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -177,18 +181,7 @@ class Utilisateurs implements UserInterface
 
         return $this;
     }
-
-    /**
-     * @return Collection|Livraisons[]
-     */
-    public function getLivraison(): Collection
-    {
-        return $this->Livraison;
-    }
-
-   
   
-    
     public function getRole(): array
     {
         $roles = $this->Role;
@@ -205,18 +198,7 @@ class Utilisateurs implements UserInterface
         return $this;
     }
 
-    public function getToken(): ?string
-    {
-        return $this->Token;
-    }
-
-    public function setToken(?string $Token): self
-    {
-        $this->Token = $Token;
-
-        return $this;
-    }
-
+   
     public function getRoles(): array
     {
         $roles = $this->Role;
@@ -232,15 +214,47 @@ class Utilisateurs implements UserInterface
     public function eraseCredentials(){}
     public function getSalt(){}
 
-    /**
-     * @return Collection|Livraison[]
-     */
-    public function getLivraisons(): Collection
+  
+
+    public function getQuestionSecurite1(): ?string
     {
-        return $this->livraisons;
+        return $this->QuestionSecurite1;
     }
 
-   
+    public function setQuestionSecurite1(string $QuestionSecurite1): self
+    {
+        $this->QuestionSecurite1 = $QuestionSecurite1;
+
+        return $this;
+    }
+
+    public function getQuestionSecurite2(): ?string
+    {
+        return $this->QuestionSecurite2;
+    }
+
+    public function setQuestionSecurite2(string $QuestionSecurite2): self
+    {
+        $this->QuestionSecurite2 = $QuestionSecurite2;
+
+        return $this;
+    }
+
+    public function getEtat(): ?string
+    {
+        return $this->Etat;
+    }
+
+    public function setEtat(string $Etat): self
+    {
+        $this->Etat = $Etat;
+
+        return $this;
+    }
+
     
+
+    
+   
    
 }

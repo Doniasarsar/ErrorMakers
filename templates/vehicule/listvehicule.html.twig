@@ -28,7 +28,7 @@
 
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable with default features</h3>
+                <h3 class="card-title"></h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -42,6 +42,7 @@
                     <th>type Vehicule</th>
                     <th>marque</th>
                     <th>DateEntretient</th>
+                     <th>EtatVehicule</th>
                     <th>Action</th>
                   </tr>
                   </thead>
@@ -55,6 +56,7 @@
                <td>{{voiture.typeVehicule}}</td>
                <td>{{voiture.marque}}</td>
                   <td>{{voiture.DateEntretient|date('Y-m-d')}}</td>
+                  <td>{{voiture.EtatVehicule}}</td>
              
                 <td><a class="btn btn-warning" href="{{path("veh_delete",{'id':voiture.id}) }}">Delete</a>
                 <a class="btn btn-info" href="{{path("voi_update",{'id':voiture.id}) }}">Update</a></td>

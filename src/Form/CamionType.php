@@ -3,8 +3,10 @@
 namespace App\Form;
 
 use App\Entity\Vehicule;
+use App\Entity\Utilisateurs;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -39,6 +41,7 @@ class CamionType extends AbstractType
             ]
         ])
         ->add('DateEntretient',DateType::class)
+        
     ; 
         
     }

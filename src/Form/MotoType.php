@@ -3,8 +3,10 @@
 namespace App\Form;
 
 use App\Entity\Vehicule;
+use App\Entity\Utilisateurs;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -14,7 +16,7 @@ class MotoType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-        ->add('idLivreur')
+        
         ->add('matricule')
         ->add('couleur',ChoiceType::class,[
             'choices' => [
@@ -39,6 +41,7 @@ class MotoType extends AbstractType
             ]
         ])
         ->add('DateEntretient',DateType::class)
+        
     ;
 }
 

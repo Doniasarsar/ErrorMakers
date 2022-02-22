@@ -12,7 +12,7 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Ajouter Livraison</h3>
+                <h3 class="card-title">Ajouter vehicule</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -21,11 +21,7 @@
 
                 <div class="card-body">
                   
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">ID Livreur</label>
-                    {{ form_widget(FVoiture.idLivreur, {'attr': {'class': 'form-control'}}) }}
-                    {{ form_errors(FVoiture.idLivreur, {'attr': {"class":"mb-0"}}) }}
-                  </div>
+                 
                   <div class="form-group">
                     <label for="exampleInputPassword1">Matricule </label>
                     {{ form_widget(FVoiture.matricule, {'attr': {'class': 'form-control'}}) }}
@@ -51,6 +47,7 @@
                     {{ form_widget(FVoiture.DateEntretient, {'attr': {'class': 'form-control'}}) }}
                     {{ form_errors(FVoiture.DateEntretient, {'attr': {"class":"mb-0"}}) }}
                   </div>
+                  
                 </div>
                 <!-- /.card-body -->
 

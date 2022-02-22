@@ -28,7 +28,7 @@
 
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable with default features</h3>
+                <h3 class="card-title">Livraison</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -39,9 +39,11 @@
                    
                     <th>etatLivraison</th>
                     <th>dateLivraison</th>
-                    <th>idCommande</th>
+                  <th>adresseCommande</th>
                      <th>PrixLivraison</th>
                       <th>Livreur</th>
+                      <th>Vehicule</th>
+                      
                     <th>Action</th>
                   </tr>
                   </thead>
@@ -51,26 +53,28 @@
                   <td>{{class.id}}</td>
       
        
-                  {% if class.etatLivraison == 0 %}
+                  {% if class.etatLivraison == 1 %}
                     <td>Livrée </td>
                     {% else %}
                     <td>Non Livrée </td>
                     {% endif %}
-               <td>{{class.dateLivraison|date('Y-m-d H:i:s')}}</td>
+               <td>{{class.dateLivraison|date('Y-m-d')}}</td>
+                  <td>{{class.Commande.adresse}}</td>
+               
+
            
-               <td>{{class.idLivraison}}</td>
+               
                 <td>{{class.PrixLivraison}}</td>
+              
                  
-                     <td>
-                     {% for class in  class.livreur %}
                      
-                    <td>{{class.livreur}} </td>
-                   
-                   
+                     
+                    <td>{{class.livreur.Email }} </td>
+                     <td>{{class.Vehicule.getVehicule() }} </td>
+           
+
+                     
                     
-                              
-                      {% endfor %}
-                     </td>
                    
                
                 <td><a  class="btn btn-warning" href="{{path("r_delete",{'id':class.id}) }}">Delete</a>
