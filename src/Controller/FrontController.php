@@ -34,36 +34,7 @@ class FrontController extends AbstractController
         ]);
     }
     
-    /**
-     * @Route("/utilisateurs/update/{id}",name="userupdate")
-     */
-    public function Update(CartService $cartService,$id,UtilisateursRepository $rep,Request $request){
-        
-        $dataPanier = $cartService->getFullCart();  
-        $total = $cartService->getTotal();
-
-        $user=$rep->find($id);
-
-        $form=$this->createform(UtilisateursType::class,$user);
-        $form->add('Update',SubmitType::class);
-
-        $form->handleRequest($request);
-
-        if($form->isSubmitted() && $form->isValid()){
-        $em=$this->getDoctrine()->getManager();
-        $em->flush();
-            return $this->redirectToRoute('home');
-
-        }return $this->render("utilisateurs/update.html.twig", [
-            'userForm'=>$form->createView(),
-            'user'=>$user,
-            'elements' => $dataPanier,
-            'total' => $total
-        ]);
-
-     }
     
-
      /**
      * @Route("/delete1/{id}", name="delete1")
      */

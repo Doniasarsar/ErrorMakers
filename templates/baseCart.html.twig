@@ -212,39 +212,33 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
-                               <!-- Begin Header Bottom Menu Area -->
-                               <div class="hb-menu">
-                                <nav>
-                                    <ul>
-                                     <li><a href="{{path('home')}}">Home</a></li> 
-                                     {% if  app.user %}    
+                                <!-- Begin Header Bottom Menu Area -->
+                                <div class="hb-menu">
+                                    <nav>
+                                        <ul>
+                                         <li><a href="{{path('home')}}">Home</a></li> 
+                                         <li><a href="#">Boutique</a></li> 
+                                         {% if  app.user %}    
                                         <li class="dropdown-holder"><a href="#">Reclamation</a>
-                                         <ul class="hb-dropdown">
-                                             <li class="sub-dropdown-holder"><a href="{{ path('r_add', {id:app.user.id}) }}">Add Reclamation</a>
-                                             </li>
-                                             <li class="sub-dropdown-holder"><a href="{{path('r_list', {value:app.user.id}) }}">Historique</a>                                                    
-                                             </li>
-                                         </ul>
-                                     </li>
-                                     {% endif %}      
-                                     <li><a href="#">Boutiques</a></li>   
-                                        
-                                   
-                                       
+                                             <ul class="hb-dropdown">
+                                                 <li class="sub-dropdown-holder"><a href="{{ path('r_add', {id:app.user.id}) }}">Add Reclamation</a>
+                                                 </li>
+                                                 <li class="sub-dropdown-holder"><a href="{{path('r_list', {value:app.user.id}) }}">Historique</a>                                                                                               
+                                                 </li>
+                                             </ul>
+                                         </li>
+                                         {% endif %}       
                                         {% if not app.user %}
-                                        <li><a href="{{path('login')}}">Login</a></li>
-                                       {% else %}
-                                       
-                                             <li><a href="{{path("usercompte",{'id':app.user.id}) }}">{{app.user.Nom}},{{app.user.Prenom}}</a></li>
-                                             <li><a href="{{path('logout')}}">Logout</a></li>
-                                           </a>
-                                       {% endif %}
-
-                                    </ul>
-                                </nav>
-                            </div>
-                            <!-- Header Bottom Menu Area End Here -->
-                            </div>
+                                          <li><a href="{{path('login')}}">Login</a></li>
+                                        {% else %}         
+                                                 <li><a href="{{path("usercompte",{'id':app.user.id}) }}">{{app.user.Nom}},{{app.user.Prenom}}</a></li>
+                                                 <li><a href="{{path('logout')}}">logout</a></li>
+                                        {% endif %}
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <!-- Header Bottom Menu Area End Here -->
+                             </div>
                         </div>
                     </div>
                 </div>
