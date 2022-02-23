@@ -23,6 +23,7 @@ return [
     'etat_rec' => [['id'], ['_controller' => 'App\\Controller\\ReclamationController::afficheReponse'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/reclamation/etat']], [], []],
     'reponse' => [[], ['_controller' => 'App\\Controller\\ReponseController::index'], [], [['text', '/reponse']], [], []],
     'list_reclamation' => [[], ['_controller' => 'App\\Controller\\ReponseController::afficher'], [], [['text', '/reponse/recList']], [], []],
+    'reclam_delete' => [['id'], ['_controller' => 'App\\Controller\\ReponseController::Delete_reclamation'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/response/deleteRec']], [], []],
     'rep_add' => [['id'], ['_controller' => 'App\\Controller\\ReponseController::addResponse'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/reponse/add']], [], []],
     'reponse_list' => [[], ['_controller' => 'App\\Controller\\ReponseController::afficher_reponses'], [], [['text', '/reponse/list']], [], []],
     'response_delete' => [['id'], ['_controller' => 'App\\Controller\\ReponseController::Delete_reponse'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/response/delete']], [], []],

@@ -43,11 +43,14 @@ return [
                         .'|list/([^/]++)(*:201)'
                         .'|etat/([^/]++)(*:222)'
                     .')'
-                    .'|ponse/(?'
-                        .'|add/([^/]++)(*:252)'
-                        .'|update/([^/]++)(*:275)'
+                    .'|sponse/delete(?'
+                        .'|Rec/([^/]++)(*:259)'
+                        .'|/([^/]++)(*:276)'
                     .')'
-                    .'|sponse/delete/([^/]++)(*:306)'
+                    .'|ponse/(?'
+                        .'|add/([^/]++)(*:306)'
+                        .'|update/([^/]++)(*:329)'
+                    .')'
                 .')'
             .')/?$}sD',
     ],
@@ -61,10 +64,11 @@ return [
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
         201 => [[['_route' => 'r_list', '_controller' => 'App\\Controller\\ReclamationController::afficher'], ['value'], null, null, false, true, null]],
         222 => [[['_route' => 'etat_rec', '_controller' => 'App\\Controller\\ReclamationController::afficheReponse'], ['id'], null, null, false, true, null]],
-        252 => [[['_route' => 'rep_add', '_controller' => 'App\\Controller\\ReponseController::addResponse'], ['id'], null, null, false, true, null]],
-        275 => [[['_route' => 'reponse_update', '_controller' => 'App\\Controller\\ReponseController::update_reponse'], ['id'], null, null, false, true, null]],
-        306 => [
-            [['_route' => 'response_delete', '_controller' => 'App\\Controller\\ReponseController::Delete_reponse'], ['id'], null, null, false, true, null],
+        259 => [[['_route' => 'reclam_delete', '_controller' => 'App\\Controller\\ReponseController::Delete_reclamation'], ['id'], null, null, false, true, null]],
+        276 => [[['_route' => 'response_delete', '_controller' => 'App\\Controller\\ReponseController::Delete_reponse'], ['id'], null, null, false, true, null]],
+        306 => [[['_route' => 'rep_add', '_controller' => 'App\\Controller\\ReponseController::addResponse'], ['id'], null, null, false, true, null]],
+        329 => [
+            [['_route' => 'reponse_update', '_controller' => 'App\\Controller\\ReponseController::update_reponse'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

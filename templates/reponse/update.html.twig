@@ -16,6 +16,9 @@
                 <h3 class="card-title">Modifier Commande</h3>
               </div>
               <!-- /.card-header -->
+              
+
+
               <!-- form start -->
         
                 {{ form_start(formA,{'attr': {'novalidate': 'novalidate'}} ) }}
@@ -32,6 +35,7 @@
                   <div class="form-group">
                     <label for="exampleInputPassword1">Reponse </label>
                     {{ form_widget(formA.message) }}
+                    {{ form_errors(formA.message) }}
                   </div>
                 </div>
                 <!-- /.card-body -->

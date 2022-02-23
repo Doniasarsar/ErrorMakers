@@ -66,34 +66,19 @@ class __TwigTemplate_a967a83c03297d3708ec267eda6a69a79d8d728bbaa2ae403c021456650
 
         // line 4
         echo "
- <!-- about wrapper start -->
-            <div class=\"about-us-wrapper pt-60 pb-40\">
-                <div class=\"container\">
-                    <div class=\"row\">
-                        <!-- About Text Start -->
-                        <div class=\"col-lg-6 order-last order-lg-first\">
-                            <div class=\"about-text-wrap\">
-                                <h2><span>The Response:</span>";
-        // line 12
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["tab"]) || array_key_exists("tab", $context) ? $context["tab"] : (function () { throw new RuntimeError('Variable "tab" does not exist.', 12, $this->source); })()), "message", [], "any", false, false, false, 12), "html", null, true);
-        echo "</h2>
-                            </div>
-                        </div>
-                        <!-- About Text End -->
-                        <!-- About Image Start -->
-                        <div class=\"col-lg-5 col-md-10\">
-                            <div class=\"about-image-wrap\">
-                                <img class=\"img-full\" src=\"";
-        // line 19
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/blog-banner/Response-Time.jpg"), "html", null, true);
-        echo "\" alt=\"About Us\" />
-                            </div>
-                        </div>
-                        <!-- About Image End -->
-                    </div>
+
+
+            <!-- Begin Blog Blockquote Area -->
+                <div class=\"li-blog-blockquote\">
+                    <h3 class=\"li-blog-heading pt-25\"><a href=\"#\">The Response</a></h3>
+                    <blockquote>
+                        <p><h4>";
+        // line 11
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["tab"]) || array_key_exists("tab", $context) ? $context["tab"] : (function () { throw new RuntimeError('Variable "tab" does not exist.', 11, $this->source); })()), "message", [], "any", false, false, false, 11), "html", null, true);
+        echo "</h4></p>
+                    </blockquote>
                 </div>
-            </div>
-            <!-- about wrapper end -->
+            <!-- Blog Blockquote Area End Here -->
 
 
 
@@ -120,7 +105,7 @@ class __TwigTemplate_a967a83c03297d3708ec267eda6a69a79d8d728bbaa2ae403c021456650
 
     public function getDebugInfo()
     {
-        return array (  88 => 19,  78 => 12,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  77 => 11,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -129,28 +114,16 @@ class __TwigTemplate_a967a83c03297d3708ec267eda6a69a79d8d728bbaa2ae403c021456650
 
 {% block body %}
 
- <!-- about wrapper start -->
-            <div class=\"about-us-wrapper pt-60 pb-40\">
-                <div class=\"container\">
-                    <div class=\"row\">
-                        <!-- About Text Start -->
-                        <div class=\"col-lg-6 order-last order-lg-first\">
-                            <div class=\"about-text-wrap\">
-                                <h2><span>The Response:</span>{{tab.message}}</h2>
-                            </div>
-                        </div>
-                        <!-- About Text End -->
-                        <!-- About Image Start -->
-                        <div class=\"col-lg-5 col-md-10\">
-                            <div class=\"about-image-wrap\">
-                                <img class=\"img-full\" src=\"{{asset('images/blog-banner/Response-Time.jpg')}}\" alt=\"About Us\" />
-                            </div>
-                        </div>
-                        <!-- About Image End -->
-                    </div>
+
+
+            <!-- Begin Blog Blockquote Area -->
+                <div class=\"li-blog-blockquote\">
+                    <h3 class=\"li-blog-heading pt-25\"><a href=\"#\">The Response</a></h3>
+                    <blockquote>
+                        <p><h4>{{tab.message}}</h4></p>
+                    </blockquote>
                 </div>
-            </div>
-            <!-- about wrapper end -->
+            <!-- Blog Blockquote Area End Here -->
 
 
 

@@ -43,9 +43,11 @@ class ReclamationController extends AbstractController
         {$em=$this->getDoctrine()->getManager();
             $em->persist($reclamations);
             $em->flush();
-            return $this->redirectToRoute('reclamation');
+            $this->addFlash('success','Reclamation Added Successfully !');
+            return $this->redirectToRoute('r_add');
 
-        }
+        }else
+        $this->addFlash('error','Something is missing');
 
         return $this->render('reclamation/add.html.twig', [
             'formA'=>$form->createView(),

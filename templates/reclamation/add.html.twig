@@ -12,6 +12,12 @@
             </div>
         </div>
     </div>
+    {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+    {% endfor %}
+
     <!-- Li's Breadcrumb Area End Here -->
     <!-- Begin Contact Main Page Area -->
    

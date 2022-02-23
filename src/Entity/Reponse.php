@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Repository\ReponseRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * @ORM\Entity(repositoryClass=ReponseRepository::class)
@@ -19,26 +21,35 @@ class Reponse
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(max=100)
+     * @Assert\NotBlank()
      */
     private $subject;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\Length(min=10)
      */
     private $message;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
      */
     private $idCommande;
 
     /**
      * @ORM\Column(type="datetime_immutable")
+     * @Assert\Date
+     * @Assert\NotBlank()
+
      */
     private $createdAt;
 
     /**
      * @ORM\OneToOne(targetEntity=Reclamation::class, inversedBy="reponse", cascade={"persist", "remove"})
+     * @Assert\NotBlank()
      */
     private $reclamation;
 

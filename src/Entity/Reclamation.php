@@ -35,7 +35,7 @@ class Reclamation
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
+     * @Assert\NotBlank()
      * @Assert\Length(max=100)
      */
     private $subject;

@@ -43,6 +43,19 @@ class ReponseController extends AbstractController
         ]);
     }
 
+     /**
+     * @Route("/response/deleteRec/{id}", name="reclam_delete")
+     */
+
+    public function Delete_reclamation($id, ReclamationRepository $rep){
+        $response=$rep->find($id);
+        $em=$this->getDoctrine()->getManager();
+        $em->remove($response);
+        $em->flush();
+
+        return $this->redirectToRoute('list_reclamation');
+    }
+
 
 
     /**
@@ -68,6 +81,7 @@ class ReponseController extends AbstractController
             $em=$this->getDoctrine()->getManager();
             $em->persist($reponses);
             $em->flush();
+            $this->addFlash('success', 'Your Response is added successfully');
             return $this->redirectToRoute('reponse_list');
 
         }
@@ -85,13 +99,11 @@ class ReponseController extends AbstractController
      * @return Response
      * @Route("reponse/list", name="reponse_list")
      */
-    public function afficher_reponses(ReponseRepository $rep, ReclamationRepository $rep0): Response
+    public function afficher_reponses(ReponseRepository $rep): Response
     {
         $reponses=$rep->findAll();
-        $reclamations=$rep0->findAll();
         return $this->render('reponse/listReponses.html.twig', [
             'tab1' => $reponses,
-            'tab2' => $reclamations,
         ]);
     }
 
@@ -127,6 +139,8 @@ class ReponseController extends AbstractController
         {
             $em=$this->getDoctrine()->getManager();
             $em->flush();
+            $this->addFlash('success', 'Your Response is added successfully');
+
             return $this->redirectToRoute('reponse_list');
         }
         return $this->render('reponse/update.html.twig', [
