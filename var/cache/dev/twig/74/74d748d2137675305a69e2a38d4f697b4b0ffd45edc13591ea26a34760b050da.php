@@ -266,36 +266,101 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
             </a>
             <ul class=\"nav nav-treeview\">
               <li class=\"nav-item\">
+<<<<<<< Updated upstream
                 <a href=\"./index.html\" class=\"nav-link active\">
+=======
+                <a href=\"";
+        // line 225
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_dashboard");
+        echo "\" class=\"nav-link \">
+>>>>>>> Stashed changes
                   <i class=\"far fa-circle nav-icon\"></i>
                   <p>Dashboard v1</p>
                 </a>
               </li>
+             
               <li class=\"nav-item\">
                 <a href=\"#\" class=\"nav-link\">
                   <i class=\"far fa-circle nav-icon\"></i>
                   <p>Dashboard v2</p>
                 </a>
               </li>
+            </ul>
+          </li>
+          <li class=\"nav-item menu\">
+            <a href=\"#\" class=\"nav-link \">
+              <i class=\"nav-icon fas fa-user\"></i>
+              <p>
+                Gestion Utilisateurs
+                <i class=\"right fas fa-angle-left\"></i>
+              </p>
+            </a>
+            <ul class=\"nav nav-treeview\">
               <li class=\"nav-item\">
-                <a href=\"#\" class=\"nav-link\">
+                <a href=\"";
+        // line 249
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_userlist");
+        echo "\" class=\"nav-link \">
                   <i class=\"far fa-circle nav-icon\"></i>
-                  <p>Dashboard v3</p>
+                  <p>Liste Utilisateurs</p>
+                </a>
+              </li>
+              <li class=\"nav-item\">
+                <a href=\"";
+        // line 255
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_demandelist");
+        echo "\" class=\"nav-link\">
+                  <i class=\"far fa-circle nav-icon\"></i>
+                  <p>Liste Demandes</p>
                 </a>
               </li>
             </ul>
           </li>
+<<<<<<< Updated upstream
           <li class=\"nav-item menu-open\">
             <a href=\"";
         // line 245
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_userlist");
         echo "\" class=\"nav-link \">
               <i class=\"nav-icon fas fa-tachometer-alt\"></i>
+=======
+          <li class=\"nav-item menu\">
+            <a href=\"#\" class=\"nav-link \">
+              <i class=\"nav-icon fas fa-shopping-cart\"></i>
+>>>>>>> Stashed changes
               <p>
-                Utilisateurs
+                Gestion Commandes
+                <i class=\"right fas fa-angle-left\"></i>
               </p>
             </a>
+<<<<<<< Updated upstream
           </li>
+=======
+            <ul class=\"nav nav-treeview\">
+              <li class=\"nav-item\">
+                <a href=\"";
+        // line 272
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admincommande");
+        echo "\" class=\"nav-link \">
+                  <i class=\"far fa-circle nav-icon\"></i>
+                  <p>Liste Commandes</p>
+                </a>
+              </li>
+              <li class=\"nav-item\">
+                <a href=\"";
+        // line 278
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ligne_commande");
+        echo "\" class=\"nav-link\">
+                  <i class=\"far fa-circle nav-icon\"></i>
+                  <p>Ligne de Commandes</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+             
+         
+         
+>>>>>>> Stashed changes
           
     
         </ul>
@@ -305,9 +370,15 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
     <!-- /.sidebar -->
   </aside>
   ";
+<<<<<<< Updated upstream
         // line 260
         $this->displayBlock('body', $context, $blocks);
         // line 262
+=======
+        // line 296
+        $this->displayBlock('body', $context, $blocks);
+        // line 298
+>>>>>>> Stashed changes
         echo " 
   <footer class=\"main-footer\">
     <strong>Copyright &copy; 2021-2022 <a href=\"https://adminlte.io\">ProTECH.io</a>.</strong>
@@ -329,7 +400,11 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
 </html>
 
 ";
+<<<<<<< Updated upstream
         // line 282
+=======
+        // line 318
+>>>>>>> Stashed changes
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -404,7 +479,11 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
 
     }
 
+<<<<<<< Updated upstream
     // line 260
+=======
+    // line 296
+>>>>>>> Stashed changes
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -414,7 +493,11 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
+<<<<<<< Updated upstream
         // line 261
+=======
+        // line 297
+>>>>>>> Stashed changes
         echo "  ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -424,7 +507,11 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
 
     }
 
+<<<<<<< Updated upstream
     // line 282
+=======
+    // line 318
+>>>>>>> Stashed changes
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -434,15 +521,26 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
+<<<<<<< Updated upstream
         // line 283
         echo "<!-- jQuery -->
 <script src=\"";
         // line 284
+=======
+        // line 319
+        echo "<!-- jQuery -->
+<script src=\"";
+        // line 320
+>>>>>>> Stashed changes
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jquery/jquery.min.js"), "html", null, true);
         echo "\"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src=\"";
+<<<<<<< Updated upstream
         // line 286
+=======
+        // line 322
+>>>>>>> Stashed changes
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jquery-ui/jquery-ui.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -451,70 +549,126 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
 </script>
 <!-- Bootstrap 4 -->
 <script src=\"";
+<<<<<<< Updated upstream
         // line 292
+=======
+        // line 328
+>>>>>>> Stashed changes
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/bootstrap/js/bootstrap.bundle.min.js"), "html", null, true);
         echo "\"></script>
 <!-- ChartJS -->
 <script src=\"";
+<<<<<<< Updated upstream
         // line 294
+=======
+        // line 330
+>>>>>>> Stashed changes
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chart.js/Chart.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Sparkline -->
 <script src=\"";
+<<<<<<< Updated upstream
         // line 296
+=======
+        // line 332
+>>>>>>> Stashed changes
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/sparklines/sparkline.js"), "html", null, true);
         echo "\"></script>
 <!-- JQVMap -->
 <script src=\"";
+<<<<<<< Updated upstream
         // line 298
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("lugins/jqvmap/jquery.vmap.min.js"), "html", null, true);
         echo "p\"></script>
 <script src=\"";
         // line 299
+=======
+        // line 334
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("lugins/jqvmap/jquery.vmap.min.js"), "html", null, true);
+        echo "p\"></script>
+<script src=\"";
+        // line 335
+>>>>>>> Stashed changes
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jqvmap/maps/jquery.vmap.usa.js"), "html", null, true);
         echo "\"></script>
 <!-- jQuery Knob Chart -->
 <script src=\"";
+<<<<<<< Updated upstream
         // line 301
+=======
+        // line 337
+>>>>>>> Stashed changes
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jquery-knob/jquery.knob.min.js"), "html", null, true);
         echo "\"></script>
 <!-- daterangepicker -->
 <script src=\"";
+<<<<<<< Updated upstream
         // line 303
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/moment/moment.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
         // line 304
+=======
+        // line 339
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/moment/moment.min.js"), "html", null, true);
+        echo "\"></script>
+<script src=\"";
+        // line 340
+>>>>>>> Stashed changes
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/daterangepicker/daterangepicker.js"), "html", null, true);
         echo "\"></script>
 <!-- Tempusdominus Bootstrap 4 -->
 <script src=\"";
+<<<<<<< Updated upstream
         // line 306
+=======
+        // line 342
+>>>>>>> Stashed changes
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Summernote -->
 <script src=\"";
+<<<<<<< Updated upstream
         // line 308
+=======
+        // line 344
+>>>>>>> Stashed changes
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/summernote/summernote-bs4.min.js"), "html", null, true);
         echo "\"></script>
 <!-- overlayScrollbars -->
 <script src=\"";
+<<<<<<< Updated upstream
         // line 310
+=======
+        // line 346
+>>>>>>> Stashed changes
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"), "html", null, true);
         echo "\"></script>
 <!-- AdminLTE App -->
 <script src=\"";
+<<<<<<< Updated upstream
         // line 312
+=======
+        // line 348
+>>>>>>> Stashed changes
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("dist/js/adminlte.js"), "html", null, true);
         echo "\"></script>
 <!-- AdminLTE for demo purposes -->
 <script src=\"";
+<<<<<<< Updated upstream
         // line 314
+=======
+        // line 350
+>>>>>>> Stashed changes
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("dist/js/demo.js"), "html", null, true);
         echo "\"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src=\"";
+<<<<<<< Updated upstream
         // line 316
+=======
+        // line 352
+>>>>>>> Stashed changes
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("dist/js/pages/dashboard.js"), "html", null, true);
         echo "\"></script>
 
@@ -539,7 +693,11 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
 
     public function getDebugInfo()
     {
+<<<<<<< Updated upstream
         return array (  518 => 316,  513 => 314,  508 => 312,  503 => 310,  498 => 308,  493 => 306,  488 => 304,  484 => 303,  479 => 301,  474 => 299,  470 => 298,  465 => 296,  460 => 294,  455 => 292,  446 => 286,  441 => 284,  438 => 283,  428 => 282,  418 => 261,  408 => 260,  395 => 27,  390 => 25,  385 => 23,  380 => 21,  375 => 19,  370 => 17,  365 => 15,  358 => 11,  353 => 8,  343 => 7,  333 => 282,  311 => 262,  309 => 260,  291 => 245,  234 => 191,  222 => 182,  158 => 121,  139 => 105,  120 => 89,  65 => 37,  56 => 30,  54 => 7,  46 => 1,);
+=======
+        return array (  569 => 352,  564 => 350,  559 => 348,  554 => 346,  549 => 344,  544 => 342,  539 => 340,  535 => 339,  530 => 337,  525 => 335,  521 => 334,  516 => 332,  511 => 330,  506 => 328,  497 => 322,  492 => 320,  489 => 319,  479 => 318,  469 => 297,  459 => 296,  446 => 27,  441 => 25,  436 => 23,  431 => 21,  426 => 19,  421 => 17,  416 => 15,  409 => 11,  404 => 8,  394 => 7,  384 => 318,  362 => 298,  360 => 296,  339 => 278,  330 => 272,  310 => 255,  301 => 249,  274 => 225,  262 => 216,  234 => 191,  222 => 182,  158 => 121,  139 => 105,  120 => 89,  65 => 37,  56 => 30,  54 => 7,  46 => 1,);
+>>>>>>> Stashed changes
     }
 
     public function getSourceContext()
@@ -768,33 +926,91 @@ class __TwigTemplate_c31ae6fb43db7af17c28275bec1a95a1122f1dc8790494c2838b569ef76
             </a>
             <ul class=\"nav nav-treeview\">
               <li class=\"nav-item\">
+<<<<<<< Updated upstream
                 <a href=\"./index.html\" class=\"nav-link active\">
+=======
+                <a href=\"{{path('admin_dashboard')}}\" class=\"nav-link \">
+>>>>>>> Stashed changes
                   <i class=\"far fa-circle nav-icon\"></i>
                   <p>Dashboard v1</p>
                 </a>
               </li>
+<<<<<<< Updated upstream
               <li class=\"nav-item\">
                 <a href=\"#\" class=\"nav-link\">
                   <i class=\"far fa-circle nav-icon\"></i>
                   <p>Dashboard v2</p>
                 </a>
               </li>
+=======
+             
+>>>>>>> Stashed changes
               <li class=\"nav-item\">
                 <a href=\"#\" class=\"nav-link\">
                   <i class=\"far fa-circle nav-icon\"></i>
-                  <p>Dashboard v3</p>
+                  <p>Dashboard v2</p>
                 </a>
               </li>
             </ul>
           </li>
+<<<<<<< Updated upstream
           <li class=\"nav-item menu-open\">
             <a href=\"{{path('admin_userlist')}}\" class=\"nav-link \">
               <i class=\"nav-icon fas fa-tachometer-alt\"></i>
+=======
+          <li class=\"nav-item menu\">
+            <a href=\"#\" class=\"nav-link \">
+              <i class=\"nav-icon fas fa-user\"></i>
+>>>>>>> Stashed changes
               <p>
-                Utilisateurs
+                Gestion Utilisateurs
+                <i class=\"right fas fa-angle-left\"></i>
               </p>
             </a>
+            <ul class=\"nav nav-treeview\">
+              <li class=\"nav-item\">
+                <a href=\"{{path('admin_userlist')}}\" class=\"nav-link \">
+                  <i class=\"far fa-circle nav-icon\"></i>
+                  <p>Liste Utilisateurs</p>
+                </a>
+              </li>
+              <li class=\"nav-item\">
+                <a href=\"{{path('admin_demandelist')}}\" class=\"nav-link\">
+                  <i class=\"far fa-circle nav-icon\"></i>
+                  <p>Liste Demandes</p>
+                </a>
+              </li>
+            </ul>
           </li>
+<<<<<<< Updated upstream
+=======
+          <li class=\"nav-item menu\">
+            <a href=\"#\" class=\"nav-link \">
+              <i class=\"nav-icon fas fa-shopping-cart\"></i>
+              <p>
+                Gestion Commandes
+                <i class=\"right fas fa-angle-left\"></i>
+              </p>
+            </a>
+            <ul class=\"nav nav-treeview\">
+              <li class=\"nav-item\">
+                <a href=\"{{path('admincommande')}}\" class=\"nav-link \">
+                  <i class=\"far fa-circle nav-icon\"></i>
+                  <p>Liste Commandes</p>
+                </a>
+              </li>
+              <li class=\"nav-item\">
+                <a href=\"{{path('ligne_commande')}}\" class=\"nav-link\">
+                  <i class=\"far fa-circle nav-icon\"></i>
+                  <p>Ligne de Commandes</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+             
+         
+         
+>>>>>>> Stashed changes
           
     
         </ul>

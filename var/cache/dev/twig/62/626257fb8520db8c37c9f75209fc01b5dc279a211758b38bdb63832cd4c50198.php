@@ -191,7 +191,10 @@ class __TwigTemplate_8c65080c38c3281c9b223ade91842c594df4c09f8fc2ceba35c45c4c096
         echo twig_escape_filter($this->env, (isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new RuntimeError('Variable "total" does not exist.', 84, $this->source); })()), "html", null, true);
         echo "\$ <span></span></li>
                                 </ul>
-                                <a href=\"#\">Proceed to checkout</a>
+                                <a href=\"";
+        // line 86
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("commande");
+        echo "\">Proceed to checkout</a>
                             </div>
                         </div>
                     </div>
@@ -223,7 +226,7 @@ class __TwigTemplate_8c65080c38c3281c9b223ade91842c594df4c09f8fc2ceba35c45c4c096
 
     public function getDebugInfo()
     {
-        return array (  191 => 84,  175 => 71,  161 => 59,  154 => 57,  146 => 54,  137 => 48,  131 => 45,  127 => 44,  122 => 42,  118 => 41,  114 => 40,  110 => 39,  107 => 38,  102 => 37,  68 => 5,  58 => 4,  35 => 1,);
+        return array (  196 => 86,  191 => 84,  175 => 71,  161 => 59,  154 => 57,  146 => 54,  137 => 48,  131 => 45,  127 => 44,  122 => 42,  118 => 41,  114 => 40,  110 => 39,  107 => 38,  102 => 37,  68 => 5,  58 => 4,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -313,7 +316,7 @@ class __TwigTemplate_8c65080c38c3281c9b223ade91842c594df4c09f8fc2ceba35c45c4c096
                                    
                                     <li>{{ total }}\$ <span></span></li>
                                 </ul>
-                                <a href=\"#\">Proceed to checkout</a>
+                                <a href=\"{{path('commande')}}\">Proceed to checkout</a>
                             </div>
                         </div>
                     </div>

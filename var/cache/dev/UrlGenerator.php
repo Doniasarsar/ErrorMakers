@@ -29,7 +29,12 @@ return [
     'admincommande' => [[], ['_controller' => 'App\\Controller\\CommandeController::afficher'], [], [['text', '/admin/affcommande']], [], []],
     'adminsupp' => [['id'], ['_controller' => 'App\\Controller\\CommandeController::supprimercommande'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/suppcommande']], [], []],
     'adminmodif' => [['id'], ['_controller' => 'App\\Controller\\CommandeController::modifiercommande'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/modifcommande']], [], []],
+<<<<<<< Updated upstream
     'commande4' => [[], ['_controller' => 'App\\Controller\\CommandeController::ajoutercommande4'], [], [['text', '/commande4']], [], []],
+=======
+    'demande' => [[], ['_controller' => 'App\\Controller\\DemandeController::index'], [], [['text', '/demande']], [], []],
+    'acteurSAdd' => [[], ['_controller' => 'App\\Controller\\DemandeController::AddActeur'], [], [['text', '/demande/addActeur']], [], []],
+>>>>>>> Stashed changes
     'home' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/home']], [], []],
     'produit' => [[], ['_controller' => 'App\\Controller\\FrontController::afficher'], [], [['text', '/produit']], [], []],
     'delete1' => [['id'], ['_controller' => 'App\\Controller\\FrontController::delete1'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/delete1']], [], []],

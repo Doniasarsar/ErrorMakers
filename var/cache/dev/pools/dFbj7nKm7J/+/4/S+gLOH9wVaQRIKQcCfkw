@@ -1,3 +1,7 @@
 <?php //%5BC%5DApp%255CEntity%255CCommande%2523setPhone
 
+<<<<<<< Updated upstream
 return [PHP_INT_MAX, 1645140345];
+=======
+return [PHP_INT_MAX, 1645612372];
+>>>>>>> Stashed changes

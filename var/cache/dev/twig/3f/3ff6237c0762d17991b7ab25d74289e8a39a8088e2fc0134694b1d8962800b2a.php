@@ -101,35 +101,45 @@ class __TwigTemplate_10c063538db719a0879223f6b1e942ed908789f4d34f01a5c65d3c2cd9f
                   <thead>
                   <tr>
                     <th>Id Ligne Commande</th>
-                    <th>Id  Produit</th>
                     <th>Id Commande</th>
+                    <th>Id  Produit</th>
+                    <th>Quantite Produit</th>
+                    <th>Nom Produit</th>
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
                       ";
-        // line 45
+        // line 47
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["tab"]) || array_key_exists("tab", $context) ? $context["tab"] : (function () { throw new RuntimeError('Variable "tab" does not exist.', 45, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["tab"]) || array_key_exists("tab", $context) ? $context["tab"] : (function () { throw new RuntimeError('Variable "tab" does not exist.', 47, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["class"]) {
-            // line 46
+            // line 48
             echo "                  <tr>
                     <td>";
-            // line 47
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "id", [], "any", false, false, false, 47), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 48
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "idProduit", [], "any", false, false, false, 48), "html", null, true);
-            echo "</td>
-                    <td>";
             // line 49
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "idCommande", [], "any", false, false, false, 49), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "id", [], "any", false, false, false, 49), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 50
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["class"], "commande", [], "any", false, false, false, 50), "id", [], "any", false, false, false, 50), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 51
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["class"], "produit", [], "any", false, false, false, 51), "id", [], "any", false, false, false, 51), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 52
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "quantite", [], "any", false, false, false, 52), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 53
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["class"], "produit", [], "any", false, false, false, 53), "descProduit", [], "any", false, false, false, 53), "html", null, true);
             echo "</td>
                     <td>
                         <a class=\"btn btn-warning\"  href=\"";
-            // line 51
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("adminlignesupp", ["id" => twig_get_attribute($this->env, $this->source, $context["class"], "id", [], "any", false, false, false, 51)]), "html", null, true);
+            // line 55
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("adminlignesupp", ["id" => twig_get_attribute($this->env, $this->source, $context["class"], "id", [], "any", false, false, false, 55)]), "html", null, true);
             echo "\">Supprimer</a>
                          
                     </td>                  
@@ -139,7 +149,7 @@ class __TwigTemplate_10c063538db719a0879223f6b1e942ed908789f4d34f01a5c65d3c2cd9f
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['class'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 56
+        // line 60
         echo "                  </tbody>
                 </table>
               </div>
@@ -165,7 +175,7 @@ class __TwigTemplate_10c063538db719a0879223f6b1e942ed908789f4d34f01a5c65d3c2cd9f
 
     }
 
-    // line 74
+    // line 78
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -175,57 +185,57 @@ class __TwigTemplate_10c063538db719a0879223f6b1e942ed908789f4d34f01a5c65d3c2cd9f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 75
+        // line 79
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
 
 <!-- DataTables  & Plugins -->
 <script src=\"";
-        // line 78
+        // line 82
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables/jquery.dataTables.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 79
+        // line 83
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 80
+        // line 84
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-responsive/js/dataTables.responsive.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 81
+        // line 85
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-responsive/js/responsive.bootstrap4.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 82
+        // line 86
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/dataTables.buttons.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 83
+        // line 87
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.bootstrap4.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 84
+        // line 88
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jszip/jszip.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 85
+        // line 89
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/pdfmake/pdfmake.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 86
+        // line 90
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/pdfmake/vfs_fonts.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 87
+        // line 91
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.html5.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 88
+        // line 92
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.print.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 89
+        // line 93
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.colVis.min.js"), "html", null, true);
         echo "\"></script>
 
@@ -268,7 +278,7 @@ class __TwigTemplate_10c063538db719a0879223f6b1e942ed908789f4d34f01a5c65d3c2cd9f
 
     public function getDebugInfo()
     {
-        return array (  229 => 89,  225 => 88,  221 => 87,  217 => 86,  213 => 85,  209 => 84,  205 => 83,  201 => 82,  197 => 81,  193 => 80,  189 => 79,  185 => 78,  179 => 75,  169 => 74,  143 => 56,  132 => 51,  127 => 49,  123 => 48,  119 => 47,  116 => 46,  112 => 45,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  239 => 93,  235 => 92,  231 => 91,  227 => 90,  223 => 89,  219 => 88,  215 => 87,  211 => 86,  207 => 85,  203 => 84,  199 => 83,  195 => 82,  189 => 79,  179 => 78,  153 => 60,  142 => 55,  137 => 53,  133 => 52,  129 => 51,  125 => 50,  121 => 49,  118 => 48,  114 => 47,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -311,17 +321,21 @@ class __TwigTemplate_10c063538db719a0879223f6b1e942ed908789f4d34f01a5c65d3c2cd9f
                   <thead>
                   <tr>
                     <th>Id Ligne Commande</th>
-                    <th>Id  Produit</th>
                     <th>Id Commande</th>
+                    <th>Id  Produit</th>
+                    <th>Quantite Produit</th>
+                    <th>Nom Produit</th>
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
                       {% for class in tab %}
                   <tr>
-                    <td>{{ class.id}}</td>
-                    <td>{{ class.idProduit}}</td>
-                    <td>{{ class.idCommande}}</td>
+                    <td>{{ class.id }}</td>
+                    <td>{{ class.commande.id }}</td>
+                    <td>{{ class.produit.id}}</td>
+                    <td>{{ class.quantite}}</td>
+                    <td>{{ class.produit.descProduit}}</td>
                     <td>
                         <a class=\"btn btn-warning\"  href=\"{{path('adminlignesupp',{id : class.id })}}\">Supprimer</a>
                          
