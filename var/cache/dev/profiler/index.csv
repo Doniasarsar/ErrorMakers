@@ -664,3 +664,13 @@ b3f1dc,127.0.0.1,GET,http://127.0.0.1:8000/s/vendor/modernizr-2.8.3.min.jsj,1645
 49653b,127.0.0.1,GET,http://127.0.0.1:8000/home,1645618265,,200
 3ebc55,127.0.0.1,GET,http://127.0.0.1:8000/s/vendor/modernizr-2.8.3.min.jsj,1645618266,a26be8,404
 a26be8,127.0.0.1,GET,http://127.0.0.1:8000/s/vendor/modernizr-2.8.3.min.jsj,1645618266,,404
+bb2e48,127.0.0.1,GET,http://127.0.0.1:8000/cart/add/1,1645618297,,302
+b24214,127.0.0.1,GET,http://127.0.0.1:8000/home,1645618297,,200
+52737e,127.0.0.1,GET,http://127.0.0.1:8000/s/vendor/modernizr-2.8.3.min.jsj,1645618297,0fc3dc,404
+0fc3dc,127.0.0.1,GET,http://127.0.0.1:8000/s/vendor/modernizr-2.8.3.min.jsj,1645618297,,404
+780120,127.0.0.1,GET,http://127.0.0.1:8000/cart/,1645618301,,200
+bc9780,127.0.0.1,GET,http://127.0.0.1:8000/s/vendor/modernizr-2.8.3.min.jsj,1645618301,ea3c97,404
+ea3c97,127.0.0.1,GET,http://127.0.0.1:8000/s/vendor/modernizr-2.8.3.min.jsj,1645618301,,404
+d28ed0,127.0.0.1,GET,http://127.0.0.1:8000/commande,1645618324,,200
+358173,127.0.0.1,GET,http://127.0.0.1:8000/s/vendor/modernizr-2.8.3.min.jsj,1645618324,437f2f,404
+437f2f,127.0.0.1,GET,http://127.0.0.1:8000/s/vendor/modernizr-2.8.3.min.jsj,1645618324,,404
