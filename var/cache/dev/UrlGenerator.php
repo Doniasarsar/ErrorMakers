@@ -30,8 +30,11 @@ return [
     'adminsupp' => [['id'], ['_controller' => 'App\\Controller\\CommandeController::supprimercommande'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/suppcommande']], [], []],
     'adminmodif' => [['id'], ['_controller' => 'App\\Controller\\CommandeController::modifiercommande'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/modifcommande']], [], []],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     'commande4' => [[], ['_controller' => 'App\\Controller\\CommandeController::ajoutercommande4'], [], [['text', '/commande4']], [], []],
 =======
+=======
+>>>>>>> Stashed changes
     'demande' => [[], ['_controller' => 'App\\Controller\\DemandeController::index'], [], [['text', '/demande']], [], []],
     'acteurSAdd' => [[], ['_controller' => 'App\\Controller\\DemandeController::AddActeur'], [], [['text', '/demande/addActeur']], [], []],
 >>>>>>> Stashed changes

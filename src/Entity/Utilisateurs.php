@@ -184,7 +184,29 @@ class Utilisateurs implements UserInterface
         return $this;
     }
 
+<<<<<<< Updated upstream
     public function getToken(): ?string
+=======
+   
+    public function getRoles(): array
+    {
+        $roles = $this->Role;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = 'ROLE_USER';
+
+        return array_unique($roles);
+    }
+    public function getUsername(): ?string
+    {
+        return $this->Email;
+    }
+    
+    public function eraseCredentials(){}
+
+    public function getSalt(){}
+
+    public function getBoutique(): ?Boutique
+>>>>>>> Stashed changes
     {
         return $this->Token;
     }

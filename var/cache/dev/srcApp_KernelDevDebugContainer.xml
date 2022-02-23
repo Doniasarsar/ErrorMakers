@@ -5457,11 +5457,27 @@
       </argument>
     </service>
     <service id=".service_locator.gCuTZrZ" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+<<<<<<< Updated upstream
+=======
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="produitrep" type="service_closure" id="App\Repository\ProduitRepository"/>
         <argument key="repCommande" type="service_closure" id="App\Repository\CommandeRepository"/>
         <argument key="session" type="service_closure" id="session"/>
+      </argument>
+    </service>
+    <service id=".service_locator.OoeDy.C" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="ligneCommande" type="service_closure" id="App\Repository\LigneCommandeRepository"/>
+        <argument key="rep" type="service_closure" id="App\Repository\CommandeRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.p26ou2t" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+>>>>>>> Stashed changes
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="rep" type="service_closure" id="App\Repository\CommandeRepository"/>
       </argument>
     </service>
     <service id=".service_locator.OoeDy.C" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5510,7 +5526,11 @@
       </argument>
     </service>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <service id=".service_locator.zM7nc1_" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+=======
+    <service id=".service_locator.jLuI5zf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+>>>>>>> Stashed changes
 =======
     <service id=".service_locator.jLuI5zf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
 >>>>>>> Stashed changes
@@ -6056,7 +6076,11 @@
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <argument type="service" id=".service_locator.zM7nc1_"/>
+=======
+      <argument type="service" id=".service_locator.jLuI5zf"/>
+>>>>>>> Stashed changes
 =======
       <argument type="service" id=".service_locator.jLuI5zf"/>
 >>>>>>> Stashed changes
@@ -6065,7 +6089,11 @@
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <argument type="service" id=".service_locator.zM7nc1_"/>
+=======
+      <argument type="service" id=".service_locator.jLuI5zf"/>
+>>>>>>> Stashed changes
 =======
       <argument type="service" id=".service_locator.jLuI5zf"/>
 >>>>>>> Stashed changes
@@ -6469,7 +6497,11 @@
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <service id="argument_resolver.controller_locator" alias=".service_locator.zM7nc1_"/>
+=======
+    <service id="argument_resolver.controller_locator" alias=".service_locator.jLuI5zf"/>
+>>>>>>> Stashed changes
 =======
     <service id="argument_resolver.controller_locator" alias=".service_locator.jLuI5zf"/>
 >>>>>>> Stashed changes
