@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Produit;
+use App\Services\cart\CartService;
 use App\Repository\ProduitRepository;
 use App\Repository\UtilisateursRepository;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,41 +18,19 @@ class FrontController extends AbstractController
     /**
      * @Route("/home", name="home")
      */
-    public function index(SessionInterface $session, ProduitRepository $produitrep): Response
+    public function index(CartService $cartService,ProduitRepository $produitrep): Response
     {
-        $panier = $session->get("panier",[]);
         
-        // on fabrique les données 
+        $dataPanier = $cartService->getFullCart();  
+        $total = $cartService->getTotal();
 
-        $dataPanier = []; 
-        $total = 0; 
-
-        foreach ($panier as $id => $quantite){
-            $produit = $produitrep->find($id);
-            $dataPanier[] = [
-                "produit" => $produit,
-                "quantite" => $quantite 
-            ];
-        }
-
-        foreach($dataPanier as $item)
-        {
-            $totalItem = $item['produit']->getPrixProduit() * $item['quantite'];
-            $total += $totalItem ;
-        }
-        $quantitetotale = 0; 
-        foreach($dataPanier as $item)
-        {
-            $qtlItem = $item['quantite'];
-            $quantitetotale += $qtlItem ;
-        }
+       
 
         $produit=$produitrep->findall(); 
         return $this->render('front/home.html.twig', [
             'tab' => $produit,
             'elements' => $dataPanier,
-            'total' => $total,
-            'quantitetotale' => $quantitetotale
+            'total' => $total
         ]);
     }
     

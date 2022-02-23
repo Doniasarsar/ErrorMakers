@@ -7,6 +7,7 @@ use App\Entity\Commande;
 use App\Form\CommandeType;
 use App\Entity\Utilisateur;
 use App\Entity\LigneCommande;
+use App\Services\cart\CartService;
 use App\Repository\ProduitRepository;
 use App\Repository\CommandeRepository;
 use App\Repository\UtilisateurRepository;
@@ -23,32 +24,12 @@ class CommandeController extends AbstractController
      /**
      * @Route("/commande", name="commande")
      */
-    public function ajoutercommande(CommandeRepository $repCommande,Request $request,SessionInterface $session, ProduitRepository $produitrep): Response
+    public function ajoutercommande(CartService $cartService,CommandeRepository $repCommande,Request $request,SessionInterface $session, ProduitRepository $produitrep): Response
     {   $panier = $session->get("panier",[]);
         $pan2 = $panier;
 
-        // on fabrique les données 
-        $dataPanier = []; 
-        $total = 0; 
-        
-
-        foreach ($panier as $id => $quantite){
-            $produit = $produitrep->find($id);
-            $dataPanier[] = [
-                "produit" => $produit,
-                "quantite" => $quantite  
-            ];
-           
-        }
-      
-     
-        foreach($dataPanier as $item)
-        {
-            $totalItem = $item['produit']->getPrixProduit() * $item['quantite'];
-            $total += $totalItem ;
-        }  
-          
-
+        $dataPanier = $cartService->getFullCart();  
+        $total = $cartService->getTotal();
         
         $commande = new Commande();
     
@@ -61,6 +42,8 @@ class CommandeController extends AbstractController
             $em = $this->getDoctrine()->getManager();
             $em->persist($commande);
             $em->flush();
+            $this->addFlash('Success','Commande delivred');
+
            
 
             foreach ($pan2 as $id => $quantite) {
