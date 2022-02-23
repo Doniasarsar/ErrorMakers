@@ -26,7 +26,7 @@ class ProduitController extends AbstractController
     /**
      * @param ProduitRepository $rep
      * @return Reponse
-     * @Route("/produit/list", name="r_list")
+     * @Route("/produit/list", name="produit_list")
      */
     public function afficher(ProduitRepository $rep){
         $produits=$rep->findAll();
@@ -34,8 +34,11 @@ class ProduitController extends AbstractController
             'tab' => $produits,
         ]);
     }
+
+       
+    
      /**
-     * @Route("/produit/add",name="r_add")
+     * @Route("/produit/add",name="produit_add")
      */
 
     public function add(Request $request): Response
@@ -54,7 +57,7 @@ class ProduitController extends AbstractController
              $entityManager = $this->getDoctrine()->getManager();
              $entityManager->persist($produit);
              $entityManager->flush();
-             return $this->redirectToRoute('r_list');
+             return $this->redirectToRoute('boutique_listProduit' ,[ 'val' =>$produit->getBoutique()->getId() ]);
         }
 
         return $this->render('produit/add.html.twig', [
@@ -96,7 +99,7 @@ class ProduitController extends AbstractController
             $produit->setImage($filename);
              $entityManager = $this->getDoctrine()->getManager();
              $entityManager->flush();
-             return $this->redirectToRoute('r_list');
+             return $this->redirectToRoute('boutique_listProduit' ,[ 'val' =>$produit->getBoutique()->getId() ]);
          }
          return $this->render('produit/update.html.twig', [
              'Fprod' => $form->createView(),
@@ -108,7 +111,7 @@ class ProduitController extends AbstractController
     }
 
      /**
-     *@Route("/produit/delete/{id}", name="r_delete")
+     *@Route("/produit/delete/{id}", name="produit_delete")
      */
 
     public function Supprimer($id,ProduitRepository $rep){
@@ -117,6 +120,6 @@ class ProduitController extends AbstractController
         $em->remove($produit);
         $em->flush();
 
-        return $this->redirectToRoute('r_list');
+        return $this->redirectToRoute('produit_list');
     }
 }

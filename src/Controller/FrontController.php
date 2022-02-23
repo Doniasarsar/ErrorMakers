@@ -33,23 +33,30 @@ class FrontController extends AbstractController
         $produits=$rep->findByBoutique($id);
         $boutiques=$repp->find($id);
         return $this->render('front/details.html.twig', [
-            
+             'prod' => $produits,
             'bout' => $boutiques,
-            'prod' => $produits,
+           
         ]);
     }
+
+
+    
 
 
     
     /**
      * @Route("/detail/{id}", name="detail")
      */
-    public function detail($id,ProduitRepository $rep)
+    public function detail($id,ProduitRepository $rep,BoutiqueRepository $repp)
     {
         $produits=$rep->find($id);
+        $boutiques=$repp->find($id);
+
         return $this->render('front/detail.html.twig', [
             
             'prod' => $produits,
+            'bout' => $boutiques,
+
         ]);
     }
 

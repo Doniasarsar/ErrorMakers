@@ -55,7 +55,7 @@
                     
                     <td>
                         <a class="btn btn-info" href="{{path('update_produit',{id : prod.id })}}">Modifier</a>
-                        <a class="btn btn-warning"  href="{{path('r_delete',{id : prod.id })}}">Supprimer</a>
+                        <a class="btn btn-warning"  href="{{path('produit_delete',{id : prod.id })}}">Supprimer</a>
                         <hr>
                          
                     </td>                  
@@ -63,7 +63,7 @@
                   {% endfor %}
                   </tbody>
                 </table>
-                <a class="btn btn-info" href="{{path('r_add')}}">Ajouter</a>
+                <a class="btn btn-info" href="{{path('produit_add')}}">Ajouter</a>
               </div>
               <!-- /.card-body -->
             </div>

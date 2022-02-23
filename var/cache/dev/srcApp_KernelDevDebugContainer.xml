@@ -5282,13 +5282,13 @@
         <argument key="repp" type="service_closure" id="App\Repository\BoutiqueRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.4SdotFe" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.hc11LJz" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\BoutiqueController::Supprimer" type="service_closure" id=".service_locator.eTYQhjN"/>
         <argument key="App\Controller\BoutiqueController::afficher" type="service_closure" id=".service_locator.eTYQhjN"/>
         <argument key="App\Controller\BoutiqueController::afficherProduit" type="service_closure" id=".service_locator.plab2C_"/>
-        <argument key="App\Controller\FrontController::detail" type="service_closure" id=".service_locator.plab2C_"/>
+        <argument key="App\Controller\FrontController::detail" type="service_closure" id=".service_locator.UqUoz.4"/>
         <argument key="App\Controller\FrontController::details" type="service_closure" id=".service_locator.UqUoz.4"/>
         <argument key="App\Controller\FrontController::index" type="service_closure" id=".service_locator.UqUoz.4"/>
         <argument key="App\Controller\ProduitController::Supprimer" type="service_closure" id=".service_locator.plab2C_"/>
@@ -5296,7 +5296,7 @@
         <argument key="App\Controller\BoutiqueController:Supprimer" type="service_closure" id=".service_locator.eTYQhjN"/>
         <argument key="App\Controller\BoutiqueController:afficher" type="service_closure" id=".service_locator.eTYQhjN"/>
         <argument key="App\Controller\BoutiqueController:afficherProduit" type="service_closure" id=".service_locator.plab2C_"/>
-        <argument key="App\Controller\FrontController:detail" type="service_closure" id=".service_locator.plab2C_"/>
+        <argument key="App\Controller\FrontController:detail" type="service_closure" id=".service_locator.UqUoz.4"/>
         <argument key="App\Controller\FrontController:details" type="service_closure" id=".service_locator.UqUoz.4"/>
         <argument key="App\Controller\FrontController:index" type="service_closure" id=".service_locator.UqUoz.4"/>
         <argument key="App\Controller\ProduitController:Supprimer" type="service_closure" id=".service_locator.plab2C_"/>
@@ -5762,12 +5762,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.4SdotFe"/>
+      <argument type="service" id=".service_locator.hc11LJz"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.4SdotFe"/>
+      <argument type="service" id=".service_locator.hc11LJz"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -6171,7 +6171,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.4SdotFe"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.hc11LJz"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>
@@ -6186,7 +6186,7 @@
     <service id="Psr\Log\LoggerInterface $securityLogger" alias="monolog.logger.security"/>
     <service id="Psr\Log\LoggerInterface $doctrineLogger" alias="monolog.logger.doctrine"/>
     <service id=".service_locator.0GV1BZZ" alias=".service_locator.gSv9zYw"/>
-    <service id=".service_locator.ze2PBA2" alias=".service_locator.4SdotFe"/>
+    <service id=".service_locator.8dS2VxZ" alias=".service_locator.hc11LJz"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.l6ELYLY"/>
     <service id=".service_locator.ZBXzXhO" alias=".service_locator.znzE2QI"/>
     <service id=".service_locator.O24_MAy" alias=".service_locator.yY.p4P7"/>

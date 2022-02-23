@@ -89,7 +89,7 @@ class BoutiqueController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
              $entityManager->persist($boutique);
              $entityManager->flush();
-             return $this->redirectToRoute('r_add');
+             return $this->redirectToRoute('produit_add');
         }
 
         return $this->render('boutique/add.html.twig', [
