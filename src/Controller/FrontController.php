@@ -37,8 +37,11 @@ class FrontController extends AbstractController
     /**
      * @Route("/utilisateurs/update/{id}",name="userupdate")
      */
-    public function Update($id,UtilisateursRepository $rep,Request $request){
+    public function Update(CartService $cartService,$id,UtilisateursRepository $rep,Request $request){
         
+        $dataPanier = $cartService->getFullCart();  
+        $total = $cartService->getTotal();
+
         $user=$rep->find($id);
 
         $form=$this->createform(UtilisateursType::class,$user);
@@ -54,6 +57,8 @@ class FrontController extends AbstractController
         }return $this->render("utilisateurs/update.html.twig", [
             'userForm'=>$form->createView(),
             'user'=>$user,
+            'elements' => $dataPanier,
+            'total' => $total
         ]);
 
      }

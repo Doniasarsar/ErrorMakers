@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Demandes;
 use App\Form\ActeurType;
+use App\Services\cart\CartService;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -16,17 +17,26 @@ class DemandeController extends AbstractController
     /**
      * @Route("/demande", name="demande")
      */
-    public function index(): Response
+    public function index(CartService $cartService): Response
     {
+        $dataPanier = $cartService->getFullCart();  
+        $total = $cartService->getTotal();
+
         return $this->render('demande/index.html.twig', [
             'controller_name' => 'DemandeController',
+            'total' => $total,
+            'elements' => $dataPanier
+            
         ]);
     }
     /**
      * @Route("/demande/addActeur",name="acteurSAdd")
      */
 
-    public function AddActeur(Request $request , UserPasswordEncoderInterface $encoder){
+    public function AddActeur(CartService $cartService,Request $request , UserPasswordEncoderInterface $encoder){
+        $dataPanier = $cartService->getFullCart();  
+        $total = $cartService->getTotal();
+
         $em = $this->getDoctrine()->getManager();
         $acteur= new Demandes();
         $form=$this ->createForm(ActeurType::class,$acteur);
@@ -49,6 +59,8 @@ class DemandeController extends AbstractController
 
         return $this->render('demande/addActeur.html.twig', [
             'ActeurForm'=>$form->createView(),
+            'total' => $total,
+            'elements' => $dataPanier
         ]);
     }
 

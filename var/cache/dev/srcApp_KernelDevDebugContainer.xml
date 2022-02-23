@@ -505,6 +505,10 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
+    <service id="App\Services\cart\CartService" class="App\Services\cart\CartService" autowire="true" autoconfigure="true">
+      <argument type="service" id="session"/>
+      <argument type="service" id="App\Repository\ProduitRepository"/>
+    </service>
     <service id=".legacy_controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
       <argument type="service" id="kernel"/>
@@ -5600,9 +5604,10 @@
         <argument key="rep" type="service_closure" id="App\Repository\CommandeRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.jmvbEvf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.ykTLCfZ" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="cartService" type="service_closure" id="App\Services\cart\CartService"/>
         <argument key="encoder" type="service_closure" id="security.user_password_encoder.generic"/>
       </argument>
     </service>
@@ -5611,6 +5616,13 @@
       <argument type="collection">
         <argument key="cartService" type="service_closure" id="App\Services\cart\CartService"/>
         <argument key="produitrep" type="service_closure" id="App\Repository\ProduitRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.cTCCVEY" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="cartService" type="service_closure" id="App\Services\cart\CartService"/>
+        <argument key="rep" type="service_closure" id="App\Repository\UtilisateursRepository"/>
       </argument>
     </service>
     <service id=".service_locator.fSKtku3" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5641,16 +5653,24 @@
         <argument key="reppp" type="service_closure" id="App\Repository\VehiculeRepository"/>
       </argument>
     </service>
+    <service id=".service_locator.J4hpEny" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="cartService" type="service_closure" id="App\Services\cart\CartService"/>
+        <argument key="rep" type="service_closure" id="App\Repository\ReclamationRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.2zXwowr" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="cartService" type="service_closure" id="App\Services\cart\CartService"/>
+        <argument key="rep" type="service_closure" id="App\Repository\ReponseRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.9haQGQi" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="rep" type="service_closure" id="App\Repository\ReclamationRepository"/>
-      </argument>
-    </service>
-    <service id=".service_locator.XkRG9bV" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="rep" type="service_closure" id="App\Repository\ReponseRepository"/>
       </argument>
     </service>
     <service id=".service_locator.gRE0vgk" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5662,9 +5682,16 @@
         <argument key="subj" type="service_closure" id=".errored..service_locator.gRE0vgk.App\Entity\Reclamation"/>
       </argument>
     </service>
-    <service id=".service_locator.saRDzaS" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.XkRG9bV" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="rep" type="service_closure" id="App\Repository\ReponseRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.sxGJU_z" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="cartService" type="service_closure" id="App\Services\cart\CartService"/>
         <argument key="encoder" type="service_closure" id="security.user_password_encoder.generic"/>
         <argument key="rep" type="service_closure" id="App\Repository\UtilisateursRepository"/>
       </argument>
@@ -5675,7 +5702,7 @@
         <argument key="rep" type="service_closure" id="App\Repository\VehiculeRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.Vas_Gve" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator..L3fE4L" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AdminController::AcceptDem" type="service_closure" id=".service_locator.9dW19ZD"/>
@@ -5694,8 +5721,9 @@
         <argument key="App\Controller\CommandeController::ajoutercommande" type="service_closure" id=".service_locator.klL5FJS"/>
         <argument key="App\Controller\CommandeController::modifiercommande" type="service_closure" id=".service_locator.p26ou2t"/>
         <argument key="App\Controller\CommandeController::supprimercommande" type="service_closure" id=".service_locator.p26ou2t"/>
-        <argument key="App\Controller\DemandeController::AddActeur" type="service_closure" id=".service_locator.jmvbEvf"/>
-        <argument key="App\Controller\FrontController::Update" type="service_closure" id=".service_locator.N9H1lzz"/>
+        <argument key="App\Controller\DemandeController::AddActeur" type="service_closure" id=".service_locator.ykTLCfZ"/>
+        <argument key="App\Controller\DemandeController::index" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\FrontController::Update" type="service_closure" id=".service_locator.cTCCVEY"/>
         <argument key="App\Controller\FrontController::delete1" type="service_closure" id=".service_locator.qjLVb2I"/>
         <argument key="App\Controller\FrontController::index" type="service_closure" id=".service_locator.2X0wiTy"/>
         <argument key="App\Controller\LigneCommandeController::index" type="service_closure" id=".service_locator.fSKtku3"/>
@@ -5704,19 +5732,22 @@
         <argument key="App\Controller\LivraisonControlleur::Supprimer" type="service_closure" id=".service_locator.W._dOeO"/>
         <argument key="App\Controller\LivraisonControlleur::Update" type="service_closure" id=".service_locator.Dr.h0HE"/>
         <argument key="App\Controller\LivraisonControlleur::afficher" type="service_closure" id=".service_locator.Dr.h0HE"/>
-        <argument key="App\Controller\ReclamationController::add" type="service_closure" id=".service_locator.N9H1lzz"/>
-        <argument key="App\Controller\ReclamationController::afficheReponse" type="service_closure" id=".service_locator.XkRG9bV"/>
-        <argument key="App\Controller\ReclamationController::afficher" type="service_closure" id=".service_locator.9haQGQi"/>
+        <argument key="App\Controller\ReclamationController::add" type="service_closure" id=".service_locator.cTCCVEY"/>
+        <argument key="App\Controller\ReclamationController::afficheReponse" type="service_closure" id=".service_locator.2zXwowr"/>
+        <argument key="App\Controller\ReclamationController::afficher" type="service_closure" id=".service_locator.J4hpEny"/>
+        <argument key="App\Controller\ReclamationController::index" type="service_closure" id=".service_locator.8GkP9wQ"/>
         <argument key="App\Controller\ReponseController::Delete_reclamation" type="service_closure" id=".service_locator.9haQGQi"/>
         <argument key="App\Controller\ReponseController::Delete_reponse" type="service_closure" id=".service_locator.XkRG9bV"/>
         <argument key="App\Controller\ReponseController::addResponse" type="service_closure" id=".service_locator.gRE0vgk"/>
         <argument key="App\Controller\ReponseController::afficher" type="service_closure" id=".service_locator.9haQGQi"/>
         <argument key="App\Controller\ReponseController::afficher_reponses" type="service_closure" id=".service_locator.XkRG9bV"/>
         <argument key="App\Controller\ReponseController::update_reponse" type="service_closure" id=".service_locator.XkRG9bV"/>
-        <argument key="App\Controller\UtilisateursController::AddUser" type="service_closure" id=".service_locator.jmvbEvf"/>
-        <argument key="App\Controller\UtilisateursController::ConfirmUser" type="service_closure" id=".service_locator.N9H1lzz"/>
-        <argument key="App\Controller\UtilisateursController::EditPassword" type="service_closure" id=".service_locator.saRDzaS"/>
-        <argument key="App\Controller\UtilisateursController::Update" type="service_closure" id=".service_locator.N9H1lzz"/>
+        <argument key="App\Controller\UtilisateursController::AddUser" type="service_closure" id=".service_locator.ykTLCfZ"/>
+        <argument key="App\Controller\UtilisateursController::Compte" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\UtilisateursController::ConfirmUser" type="service_closure" id=".service_locator.cTCCVEY"/>
+        <argument key="App\Controller\UtilisateursController::EditPassword" type="service_closure" id=".service_locator.sxGJU_z"/>
+        <argument key="App\Controller\UtilisateursController::Update" type="service_closure" id=".service_locator.cTCCVEY"/>
+        <argument key="App\Controller\UtilisateursController::login" type="service_closure" id=".service_locator.8GkP9wQ"/>
         <argument key="App\Controller\VehiculeController::AddCamion" type="service_closure" id=".service_locator.N9H1lzz"/>
         <argument key="App\Controller\VehiculeController::AddMoto" type="service_closure" id=".service_locator.N9H1lzz"/>
         <argument key="App\Controller\VehiculeController::AddVoiture" type="service_closure" id=".service_locator.N9H1lzz"/>
@@ -5745,8 +5776,9 @@
         <argument key="App\Controller\CommandeController:ajoutercommande" type="service_closure" id=".service_locator.klL5FJS"/>
         <argument key="App\Controller\CommandeController:modifiercommande" type="service_closure" id=".service_locator.p26ou2t"/>
         <argument key="App\Controller\CommandeController:supprimercommande" type="service_closure" id=".service_locator.p26ou2t"/>
-        <argument key="App\Controller\DemandeController:AddActeur" type="service_closure" id=".service_locator.jmvbEvf"/>
-        <argument key="App\Controller\FrontController:Update" type="service_closure" id=".service_locator.N9H1lzz"/>
+        <argument key="App\Controller\DemandeController:AddActeur" type="service_closure" id=".service_locator.ykTLCfZ"/>
+        <argument key="App\Controller\DemandeController:index" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\FrontController:Update" type="service_closure" id=".service_locator.cTCCVEY"/>
         <argument key="App\Controller\FrontController:delete1" type="service_closure" id=".service_locator.qjLVb2I"/>
         <argument key="App\Controller\FrontController:index" type="service_closure" id=".service_locator.2X0wiTy"/>
         <argument key="App\Controller\LigneCommandeController:index" type="service_closure" id=".service_locator.fSKtku3"/>
@@ -5755,19 +5787,22 @@
         <argument key="App\Controller\LivraisonControlleur:Supprimer" type="service_closure" id=".service_locator.W._dOeO"/>
         <argument key="App\Controller\LivraisonControlleur:Update" type="service_closure" id=".service_locator.Dr.h0HE"/>
         <argument key="App\Controller\LivraisonControlleur:afficher" type="service_closure" id=".service_locator.Dr.h0HE"/>
-        <argument key="App\Controller\ReclamationController:add" type="service_closure" id=".service_locator.N9H1lzz"/>
-        <argument key="App\Controller\ReclamationController:afficheReponse" type="service_closure" id=".service_locator.XkRG9bV"/>
-        <argument key="App\Controller\ReclamationController:afficher" type="service_closure" id=".service_locator.9haQGQi"/>
+        <argument key="App\Controller\ReclamationController:add" type="service_closure" id=".service_locator.cTCCVEY"/>
+        <argument key="App\Controller\ReclamationController:afficheReponse" type="service_closure" id=".service_locator.2zXwowr"/>
+        <argument key="App\Controller\ReclamationController:afficher" type="service_closure" id=".service_locator.J4hpEny"/>
+        <argument key="App\Controller\ReclamationController:index" type="service_closure" id=".service_locator.8GkP9wQ"/>
         <argument key="App\Controller\ReponseController:Delete_reclamation" type="service_closure" id=".service_locator.9haQGQi"/>
         <argument key="App\Controller\ReponseController:Delete_reponse" type="service_closure" id=".service_locator.XkRG9bV"/>
         <argument key="App\Controller\ReponseController:addResponse" type="service_closure" id=".service_locator.gRE0vgk"/>
         <argument key="App\Controller\ReponseController:afficher" type="service_closure" id=".service_locator.9haQGQi"/>
         <argument key="App\Controller\ReponseController:afficher_reponses" type="service_closure" id=".service_locator.XkRG9bV"/>
         <argument key="App\Controller\ReponseController:update_reponse" type="service_closure" id=".service_locator.XkRG9bV"/>
-        <argument key="App\Controller\UtilisateursController:AddUser" type="service_closure" id=".service_locator.jmvbEvf"/>
-        <argument key="App\Controller\UtilisateursController:ConfirmUser" type="service_closure" id=".service_locator.N9H1lzz"/>
-        <argument key="App\Controller\UtilisateursController:EditPassword" type="service_closure" id=".service_locator.saRDzaS"/>
-        <argument key="App\Controller\UtilisateursController:Update" type="service_closure" id=".service_locator.N9H1lzz"/>
+        <argument key="App\Controller\UtilisateursController:AddUser" type="service_closure" id=".service_locator.ykTLCfZ"/>
+        <argument key="App\Controller\UtilisateursController:Compte" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\UtilisateursController:ConfirmUser" type="service_closure" id=".service_locator.cTCCVEY"/>
+        <argument key="App\Controller\UtilisateursController:EditPassword" type="service_closure" id=".service_locator.sxGJU_z"/>
+        <argument key="App\Controller\UtilisateursController:Update" type="service_closure" id=".service_locator.cTCCVEY"/>
+        <argument key="App\Controller\UtilisateursController:login" type="service_closure" id=".service_locator.8GkP9wQ"/>
         <argument key="App\Controller\VehiculeController:AddCamion" type="service_closure" id=".service_locator.N9H1lzz"/>
         <argument key="App\Controller\VehiculeController:AddMoto" type="service_closure" id=".service_locator.N9H1lzz"/>
         <argument key="App\Controller\VehiculeController:AddVoiture" type="service_closure" id=".service_locator.N9H1lzz"/>
@@ -6305,12 +6340,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.Vas_Gve"/>
+      <argument type="service" id=".service_locator..L3fE4L"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.Vas_Gve"/>
+      <argument type="service" id=".service_locator..L3fE4L"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -6711,7 +6746,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.Vas_Gve"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator..L3fE4L"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

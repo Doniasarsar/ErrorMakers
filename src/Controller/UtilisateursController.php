@@ -6,6 +6,7 @@ use App\Form\ActeurSType;
 use App\Entity\Utilisateurs;
 use App\Form\UtilisateursType;
 use App\Form\EditUtilisateursType;
+use App\Services\cart\CartService;
 use App\Repository\UtilisateursRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,7 +21,7 @@ class UtilisateursController extends AbstractController
     /**
      * @Route("/utilisateurs", name="utilisateurs")
      */
-    public function index(): Response
+    public function index( ): Response
     {
         
         return $this->render('utilisateurs/index.html.twig', [
@@ -31,7 +32,8 @@ class UtilisateursController extends AbstractController
      * @Route("/utilisateurs/add",name="userAdd")
      */
 
-    public function AddUser(Request $request , UserPasswordEncoderInterface $encoder){
+    public function AddUser(Request $request , UserPasswordEncoderInterface $encoder,CartService $cartService){
+
         $em = $this->getDoctrine()->getManager();
         $user= new Utilisateurs();
         $form=$this ->createForm(UtilisateursType::class,$user);
@@ -56,14 +58,19 @@ class UtilisateursController extends AbstractController
 
         return $this->render('utilisateurs/addUser.html.twig', [
             'userForm'=>$form->createView(),
+            'elements' => $dataPanier,
+            'total' => $total,
         ]);
     }
 
      /**
      * @Route("/utilisateurs/update/{id}",name="userupdate")
      */
-    public function Update($id,UtilisateursRepository $rep,Request $request){
-        
+    public function Update($id,UtilisateursRepository $rep,Request $request,CartService $cartService){
+        $dataPanier = $cartService->getFullCart();  
+        $total = $cartService->getTotal();
+
+
         $user=$rep->find($id);
 
         $form=$this->createform(EditUtilisateursType::class,$user);
@@ -80,6 +87,8 @@ class UtilisateursController extends AbstractController
         }return $this->render("utilisateurs/update.html.twig", [
             'userForm'=>$form->createView(),
             'user'=>$user,
+            'elements' => $dataPanier,
+            'total' => $total
           
         ]);
 
@@ -87,17 +96,26 @@ class UtilisateursController extends AbstractController
      /**
      * @Route("/utilisateurs/compte",name="usercompte")
      */
-    public function Compte(){
+    public function Compte(CartService $cartService ){
         
-      
-        return $this->render("utilisateurs/compte.html.twig");
+        $dataPanier = $cartService->getFullCart();  
+        $total = $cartService->getTotal();
+
+        return $this->render("utilisateurs/compte.html.twig", [
+            'elements' => $dataPanier,
+            'total' => $total,
+        ]);
+
 
      }
      /**
      * @Route("/utilisateurs/updatepass",name="passupdate")
      */
-    public function EditPassword(UtilisateursRepository $rep ,Request $request , UserPasswordEncoderInterface $encoder ){
+    public function EditPassword(UtilisateursRepository $rep ,Request $request , UserPasswordEncoderInterface $encoder,CartService $cartService ){
         
+        $dataPanier = $cartService->getFullCart();  
+        $total = $cartService->getTotal();
+
         if($request->isMethod('POST')){
             $em= $this->getDoctrine()->getManager();
             $user=$this->getUser();
@@ -112,14 +130,21 @@ class UtilisateursController extends AbstractController
 
 
         }
-        return $this->render("utilisateurs/updatepass.html.twig");
+        return $this->render("utilisateurs/updatepass.html.twig", [
+            'elements' => $dataPanier,
+            'total' => $total,
+        ]);
+
 
      }
       /**
      * @Route("/utilisateurs/confirmuser",name="confirmuser")
      */
-    public function ConfirmUser(UtilisateursRepository $rep ,Request $request ){
+    public function ConfirmUser(UtilisateursRepository $rep ,Request $request ,CartService $cartService){
         
+        $dataPanier = $cartService->getFullCart();  
+        $total = $cartService->getTotal();
+
         if($request->isMethod('POST')){
 
             $em= $this->getDoctrine()->getManager();
@@ -134,16 +159,25 @@ class UtilisateursController extends AbstractController
 
 
         }
-        return $this->render("utilisateurs/confirmuser.html.twig");
+        return $this->render("utilisateurs/confirmuser.html.twig", [
+            'elements' => $dataPanier,
+            'total' => $total,
+        ]);
 
      }
     
      /**
      * @Route("/login", name="login")
      */
-    public function login(): Response
+    public function login(CartService $cartService): Response
     {
-        return $this->render('security/login.html.twig');
+        $dataPanier = $cartService->getFullCart();  
+        $total = $cartService->getTotal();
+
+        return $this->render('security/login.html.twig', [
+            'elements' => $dataPanier,
+            'total' => $total,
+        ]);
     }
      /**
      * @Route("/logout", name="logout")
