@@ -18,11 +18,14 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+
 
 class CommandeController extends AbstractController
 {
      /**
      * @Route("/commande", name="commande")
+     * @IsGranted("ROLE_USER")
      */
     public function ajoutercommande(CartService $cartService,CommandeRepository $repCommande,Request $request,SessionInterface $session, ProduitRepository $produitrep): Response
     {   $panier = $session->get("panier",[]);

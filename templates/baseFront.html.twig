@@ -231,22 +231,16 @@
                                             <ul class="hb-dropdown">
                                                 <li class="sub-dropdown-holder"><a href="{{ path('r_add', {id:app.user.id}) }}">Add Reclamation</a>
                                                 </li>
-                                                
-                                                <li class="sub-dropdown-holder"><a href="{{path('r_list', {value:app.user.id}) }}">Historique</a>  
-                                                                                             
+                                                <li class="sub-dropdown-holder"><a href="{{path('r_list', {value:app.user.id}) }}">Historique</a>                                                                                               
                                                 </li>
                                             </ul>
                                         </li>
-                                        {% endif %}      
-                                        
-                                          
-                                           {% if not app.user %}
-                                           <li><a href="{{path('login')}}">Login</a></li>
-                                          {% else %}
-                                          
+                                        {% endif %}       
+                                       {% if not app.user %}
+                                         <li><a href="{{path('login')}}">Login</a></li>
+                                       {% else %}         
                                                 <li><a href="{{path("usercompte",{'id':app.user.id}) }}">{{app.user.Nom}},{{app.user.Prenom}}</a></li>
                                                 <li><a href="{{path('logout')}}">Logout</a></li>
-                                              </a>
                                           {% endif %}
 
                                        </ul>
