@@ -82,13 +82,14 @@ class Commande
     private $modePaiemenet;
 
     /**
-     * @ORM\OneToMany(targetEntity=LigneCommande::class, mappedBy="commande")
+     * @ORM\OneToMany(targetEntity=LigneCommande::class, mappedBy="commande", cascade={"persist", "remove"})
      */
     private $ligneCommandes;
 
     public function __construct()
     {
         $this->ligneCommandes = new ArrayCollection();
+        $this->dateCommande = new \DateTime('now');
     }
 
   

@@ -22,7 +22,7 @@ class CommandeType extends AbstractType
             ->add('postcode')
             ->add('phone')
             ->add('montant')
-            ->add('dateCommande',DateType::class)
+           
             ->add('etatCommande')
             ->add('modePaiemenet',ChoiceType::class,[
                 'choices' => [

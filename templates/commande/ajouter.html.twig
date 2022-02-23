@@ -62,7 +62,7 @@
                                     <label>First Name <span class="required">*</span></label>
                                  {#   {{ form_widget(formA.nomClient, {attr: { value : uti.nom ,readonly:true }}) }} 
                                     {{ form_errors(formA.nomClient, {attr: { value : uti.nom ,readonly:true }}) }} #}
-                                    {{ form_widget(formA.nomClient) }} 
+                                    {{ form_widget(formA.nomClient,{'attr':{"value":app.user.Nom }}) }} 
                                     {{ form_errors(formA.nomClient)}} 
 
                                 </div>
@@ -72,7 +72,7 @@
                                     <label>Last Name <span class="required">*</span></label>
                                   {#  {{ form_widget(formA.prenomClient, {attr: { value : uti.prenom ,readonly:true }}) }}
                                     {{ form_errors(formA.prenomClient, {attr: { value : uti.prenom ,readonly:true }}) }} #}
-                                    {{ form_widget(formA.prenomClient) }}
+                                    {{ form_widget(formA.prenomClient,{'attr':{"value":app.user.Prenom }} ) }}
                                     {{ form_errors(formA.prenomClient) }}
 
                                 </div>
@@ -98,7 +98,7 @@
                              <div class="col-md-6">
                                 <div class="checkout-form-list">
                                     <label>Phone  <span class="required">*</span></label>
-                                    {{ form_widget(formA.phone) }}
+                                    {{ form_widget(formA.phone ,{'attr':{"value":app.user.Telephone }}) }}
                                     {{ form_errors(formA.phone) }}
 
                                 </div>
@@ -111,14 +111,7 @@
 
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                <div class="checkout-form-list">
-                                    <label>Date Commande <span class="required">*</span></label>
-                                    {{ form_widget(formA.dateCommande) }}
-                                    {{ form_errors(formA.dateCommande) }}
-
-                                </div>
-                            </div>  
+                           
                             <div class="col-md-12">
                                 <div class="country-select clearfix">
                                    
