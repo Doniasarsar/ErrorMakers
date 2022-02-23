@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Produit;
 use App\Services\cart\CartService;
 use App\Repository\ProduitRepository;
+use App\Repository\EvenementRepository;
 use App\Repository\UtilisateursRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -83,6 +84,23 @@ class FrontController extends AbstractController
     
     return $this->redirecttoRoute("home");
     }
+
+     /**
+     * @Route("/eventfront", name="ev_front_aff")
+     */
+
+    function afficherevenement(EvenementRepository $rep)
+    {
+         $evenement = $rep->findall();
+         return $this->render('blog/evenementsfront.html.twig', [
+             'tab' => $evenement
+         ]);
+
+    }
+
+   
+
+   
 
     
 }

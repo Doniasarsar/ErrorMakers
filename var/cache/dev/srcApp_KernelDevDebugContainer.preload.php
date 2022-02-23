@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).''.\DIRECTORY_SEPARATOR.'vendor/autoload.php';
-require __DIR__.'/ContainerNIyOe72/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerBSX7K5m/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -36,7 +36,9 @@ $classes[] = 'Symfony\Component\DependencyInjection\ServiceLocator';
 $classes[] = 'App\Controller\AdminController';
 $classes[] = 'App\Controller\CartController';
 $classes[] = 'App\Controller\CommandeController';
+$classes[] = 'App\Controller\CommentairesController';
 $classes[] = 'App\Controller\DemandeController';
+$classes[] = 'App\Controller\EvenementController';
 $classes[] = 'App\Controller\FrontController';
 $classes[] = 'App\Controller\LigneCommandeController';
 $classes[] = 'App\Controller\LivraisonControlleur';
@@ -47,7 +49,9 @@ $classes[] = 'App\Controller\VehiculeController';
 $classes[] = 'App\Form\ActeurType';
 $classes[] = 'App\Form\CamionType';
 $classes[] = 'App\Form\CommandeType';
+$classes[] = 'App\Form\CommentairesType';
 $classes[] = 'App\Form\EditUtilisateursType';
+$classes[] = 'App\Form\EvenementFormType';
 $classes[] = 'App\Form\LivraisonType';
 $classes[] = 'App\Form\MotoType';
 $classes[] = 'App\Form\ReclamationType';
@@ -56,7 +60,9 @@ $classes[] = 'App\Form\UtilisateursType';
 $classes[] = 'App\Form\VoitureType';
 $classes[] = 'App\Repository\BoutiquesRepository';
 $classes[] = 'App\Repository\CommandeRepository';
+$classes[] = 'App\Repository\CommentairesRepository';
 $classes[] = 'App\Repository\DemandesRepository';
+$classes[] = 'App\Repository\EvenementRepository';
 $classes[] = 'App\Repository\ImagesRepository';
 $classes[] = 'App\Repository\LigneCommandeRepository';
 $classes[] = 'App\Repository\LivraisonRepository';

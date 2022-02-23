@@ -34,6 +34,9 @@ class UtilisateursController extends AbstractController
 
     public function AddUser(Request $request , UserPasswordEncoderInterface $encoder,CartService $cartService){
 
+        $dataPanier = $cartService->getFullCart();  
+        $total = $cartService->getTotal();
+        
         $em = $this->getDoctrine()->getManager();
         $user= new Utilisateurs();
         $form=$this ->createForm(UtilisateursType::class,$user);
