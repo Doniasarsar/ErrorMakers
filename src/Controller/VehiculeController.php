@@ -19,7 +19,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class VehiculeController extends AbstractController
 {
     /**
-     * @Route("/vehicule", name="vehicule")
+     * @Route("admin/vehicule", name="vehicule")
      */
     public function index(): Response
     {
@@ -30,7 +30,7 @@ class VehiculeController extends AbstractController
      /**
     * @param VehiculeRepository $rep
     * @return Reponse
-    * @Route("/voiture/list", name="voi_list")
+    * @Route("admin/voiture/list", name="voi_list")
     */
    public function afficherVoiture(VehiculeRepository $rep){
     $voiture=$rep->findByType("voiture");
@@ -41,7 +41,7 @@ class VehiculeController extends AbstractController
   /**
     * @param VehiculeRepository $rep
     * @return Reponse
-    * @Route("/moto/list", name="mot_list")
+    * @Route("admin/moto/list", name="mot_list")
     */
     public function afficherMoto(VehiculeRepository $rep){
         $moto=$rep->findByType("moto");
@@ -52,7 +52,7 @@ class VehiculeController extends AbstractController
     /**
     * @param VehiculeRepository $rep
     * @return Reponse
-    * @Route("/camion/list", name="cam_list")
+    * @Route("admin/camion/list", name="cam_list")
     */
     public function afficherCamion(VehiculeRepository $rep){
         $moto=$rep->findByType("camion");
@@ -64,7 +64,7 @@ class VehiculeController extends AbstractController
   * @param $id
   * @param VehiculeRepository $rep
   * @return Reponse
-  * @Route("/voiture/delete/{id}", name="voi_delete")
+  * @Route("admin/voiture/delete/{id}", name="voi_delete")
   */
 
  public function SupprimerVoiture($id,VehiculeRepository $rep){
@@ -79,7 +79,7 @@ class VehiculeController extends AbstractController
   * @param $id
   * @param VehiculeRepository $rep
   * @return Reponse
-  * @Route("/moto/delete/{id}", name="mot_delete")
+  * @Route("admin/moto/delete/{id}", name="mot_delete")
   */
 
   public function SupprimerMoto($id,VehiculeRepository $rep){
@@ -94,7 +94,7 @@ class VehiculeController extends AbstractController
   * @param $id
   * @param VehiculeRepository $rep
   * @return Reponse
-  * @Route("/camion/delete/{id}", name="cam_delete")
+  * @Route("admin/camion/delete/{id}", name="cam_delete")
   */
 
   public function SupprimerCamion($id,VehiculeRepository $rep){
@@ -107,7 +107,7 @@ class VehiculeController extends AbstractController
 }
 
  /**
-  * @Route("/voiture/add",name="voi_add")
+  * @Route("admin/voiture/add",name="voi_add")
   */
 
  public function AddVoiture(Request $request, UtilisateursRepository $rep){
@@ -130,7 +130,7 @@ class VehiculeController extends AbstractController
      ]);
   }
    /**
-  * @Route("/voiture/update/{id}",name="voi_update")
+  * @Route("admin/voiture/update/{id}",name="voi_update")
   */
  public function Update($id,VehiculeRepository $rep,Request $request){
      
@@ -152,7 +152,7 @@ class VehiculeController extends AbstractController
 
   }
   /**
-  * @Route("/moto/add",name="mot_add")
+  * @Route("admin/moto/add",name="mot_add")
   */
 
  public function AddMoto(Request $request, UtilisateursRepository $rep){
@@ -175,7 +175,7 @@ class VehiculeController extends AbstractController
     ]);
  }
   /**
- * @Route("/moto/update/{id}",name="mot_update")
+ * @Route("admin/moto/update/{id}",name="mot_update")
  */
 public function UpdateMoto($id,VehiculeRepository $rep,Request $request){
     
@@ -197,7 +197,7 @@ public function UpdateMoto($id,VehiculeRepository $rep,Request $request){
 
  }
  /**
-  * @Route("/camion/add",name="cam_add")
+  * @Route("admin/camion/add",name="cam_add")
   */
  public function AddCamion(Request $request, UtilisateursRepository $rep){
     $vehicule=new Vehicule();
@@ -219,7 +219,7 @@ public function UpdateMoto($id,VehiculeRepository $rep,Request $request){
     ]);
  }
   /**
- * @Route("/camion/update/{id}",name="cam_update")
+ * @Route("admin/camion/update/{id}",name="cam_update")
  */
 public function UpdateCamion($id,VehiculeRepository $rep,Request $request){
     

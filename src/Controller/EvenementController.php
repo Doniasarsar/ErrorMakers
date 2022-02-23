@@ -28,7 +28,7 @@ class EvenementController extends AbstractController
 {
    
   /**
-     * @Route("/evenement/aff", name="ev_aff")
+     * @Route("admin/evenement/aff", name="ev_aff")
      */
 
     function afficher(EvenementRepository $rep)
@@ -42,7 +42,7 @@ class EvenementController extends AbstractController
     }
 
     /**
-     * @Route("/evenement/add",name="event_add")
+     * @Route("admin/evenement/add",name="event_add")
      */
 
     public function Add(Request $request)
@@ -76,7 +76,7 @@ class EvenementController extends AbstractController
      
 
      /**
-     * @Route("/evenement/delete/{id}", name="ev_delete")
+     * @Route("admin/evenement/delete/{id}", name="ev_delete")
      */
 
     public function Supprimer($id,EvenementRepository $rep){
@@ -89,7 +89,7 @@ class EvenementController extends AbstractController
     }
 
      /**
-     * @Route("/evenement/update/{id}",name="ev_update")
+     * @Route("admin/evenement/update/{id}",name="ev_update")
      */
     public function Update($id,EvenementRepository $rep,Request $request){
         

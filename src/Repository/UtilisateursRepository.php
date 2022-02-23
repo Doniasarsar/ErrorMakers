@@ -23,6 +23,7 @@ class UtilisateursRepository extends ServiceEntityRepository
     //  * @return Utilisateurs[] Returns an array of Utilisateurs objects
     //  */
     /*
+   
     public function findByExampleField($value)
     {
         return $this->createQueryBuilder('u')
@@ -35,6 +36,15 @@ class UtilisateursRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function findByEmail($Email)
+    {
+        return $this->createQueryBuilder('u')
+            ->andWhere('u.Email = :val')
+            ->setParameter('val', $Email) 
+            ->getQuery()
+            ->getSingleResult()
+        ;
+    }
 
     /*
     public function findOneBySomeField($value): ?Utilisateurs

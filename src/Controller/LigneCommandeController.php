@@ -10,7 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class LigneCommandeController extends AbstractController
 {
     /**
-     * @Route("/ligne/commande", name="ligne_commande")
+     * @Route("admin/ligne/commande", name="ligne_commande")
      */
     public function index(LigneCommandeRepository $rep ): Response
     {

@@ -33,7 +33,7 @@ class ReponseController extends AbstractController
       /**
      * @param ReclamationRepository $rep
      * @return Response
-     * @Route("reponse/recList", name="list_reclamation")
+     * @Route("admin/reponse/recList", name="list_reclamation")
      */
     public function afficher(ReclamationRepository $rep): Response
     {
@@ -97,7 +97,7 @@ class ReponseController extends AbstractController
       /**
      * @param ReponseRepository $rep
      * @return Response
-     * @Route("reponse/list", name="reponse_list")
+     * @Route("admin/reponse/list", name="reponse_list")
      */
     public function afficher_reponses(ReponseRepository $rep): Response
     {

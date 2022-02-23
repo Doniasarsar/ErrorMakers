@@ -18,7 +18,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class LivraisonControlleur extends AbstractController
 {
     /**
-     * @Route("/livraison/controlleur", name="livraison_controlleur")
+     * @Route("admin/livraison/controlleur", name="livraison_controlleur")
      */
     public function index(): Response
     {
@@ -29,11 +29,11 @@ class LivraisonControlleur extends AbstractController
      /**
     * @param LivraisonRepository $rep
     * @return Reponse
-    * @Route("/livraison/list", name="r_list")
+    * @Route("admin/livraison/list", name="livraison_list")
     */
    public function afficher(LivraisonRepository $rep){
        $livraisons=$rep->findAll();
-       return $this->render('livraison/listlivraison.html.twig', [
+       return $this->render('dashboard/livraison/listlivraison.html.twig', [
            'tab' => $livraisons,
        ]);
    }
@@ -41,7 +41,7 @@ class LivraisonControlleur extends AbstractController
      * @param $id
      * @param LivraisonRepository $rep
      * @return Reponse
-     * @Route("/livraison/delete/{id}", name="r_delete")
+     * @Route("admin/livraison/delete/{id}", name="r_delete")
      */
 
     public function Supprimer($id,LivraisonRepository $rep,UtilisateursRepository $repp,VehiculeRepository $reppp){
@@ -56,10 +56,10 @@ class LivraisonControlleur extends AbstractController
         $em->flush();
        
 
-        return $this->redirectToRoute('r_list');
+        return $this->redirectToRoute('livraison_list');
     }
     /**
-     * @Route("/livraison/add/{id}",name="liv_add")
+     * @Route("admin/livraison/add/{id}",name="liv_add")
      */
 
     public function Add($id,Request $request ,UtilisateursRepository $rep,CommandeRepository $repp,VehiculeRepository $reppp){
@@ -98,12 +98,12 @@ class LivraisonControlleur extends AbstractController
         $em->flush();
             return $this->redirectToRoute('r_list');
 
-        }return $this->render("livraison/add.html.twig", [
+        }return $this->render("dashboard/livraison/add.html.twig", [
             'Fclass'=>$form->createView(),
         ]);
      }
       /**
-     * @Route("/livraison/update/{id}",name="r_update")
+     * @Route("admin/livraison/update/{id}",name="r_update")
      */
     public function Update($id,LivraisonRepository $rep,Request $request){
         
@@ -117,9 +117,9 @@ class LivraisonControlleur extends AbstractController
         if($form->isSubmitted() && $form->isValid()){
         $em=$this->getDoctrine()->getManager();
         $em->flush();
-            return $this->redirectToRoute('r_list');
+            return $this->redirectToRoute('livraison_list');
 
-        }return $this->render("livraison/update.html.twig", [
+        }return $this->render("dashboard/livraison/update.html.twig", [
             'Fclass'=>$form->createView(),
         ]);
 
