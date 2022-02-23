@@ -77,6 +77,7 @@
     <parameter key="container.dumper.inline_class_loader">true</parameter>
     <parameter key="container.dumper.inline_factories">true</parameter>
     <parameter key="uploads_directory">C:\Users\doghm\Desktop\PiDev\ErrorMakers-3A45/public/uploads</parameter>
+    <parameter key="images_directory">C:\Users\doghm\Desktop\PiDev\ErrorMakers-3A45/public/uploads</parameter>
     <parameter key="event_dispatcher.event_aliases" type="collection">
       <parameter key="Symfony\Component\Console\Event\ConsoleCommandEvent">console.command</parameter>
       <parameter key="Symfony\Component\Console\Event\ConsoleErrorEvent">console.error</parameter>
@@ -358,6 +359,13 @@
         <argument type="service" id=".service_locator.vdmMuyE.App\Controller\AdminController"/>
       </call>
     </service>
+    <service id="App\Controller\BoutiqueController" class="App\Controller\BoutiqueController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\BoutiqueController"/>
+      </call>
+    </service>
     <service id="App\Controller\CartController" class="App\Controller\CartController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -414,6 +422,13 @@
         <argument type="service" id=".service_locator.vdmMuyE.App\Controller\LivraisonControlleur"/>
       </call>
     </service>
+    <service id="App\Controller\ProduitController" class="App\Controller\ProduitController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\ProduitController"/>
+      </call>
+    </service>
     <service id="App\Controller\ReclamationController" class="App\Controller\ReclamationController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -445,6 +460,9 @@
     <service id="App\Form\ActeurType" class="App\Form\ActeurType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Form\BoutiqueType" class="App\Form\BoutiqueType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\CamionType" class="App\Form\CamionType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -466,6 +484,9 @@
     <service id="App\Form\MotoType" class="App\Form\MotoType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Form\ProduitType" class="App\Form\ProduitType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\ReclamationType" class="App\Form\ReclamationType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -477,6 +498,10 @@
     </service>
     <service id="App\Form\VoitureType" class="App\Form\VoitureType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
+    </service>
+    <service id="App\Repository\BoutiqueRepository" class="App\Repository\BoutiqueRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
     </service>
     <service id="App\Repository\BoutiquesRepository" class="App\Repository\BoutiquesRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
@@ -957,6 +982,7 @@
       </argument>
       <argument type="collection">
         <argument>App\Form\ActeurType</argument>
+        <argument>App\Form\BoutiqueType</argument>
         <argument>App\Form\CamionType</argument>
         <argument>App\Form\CommandeType</argument>
         <argument>App\Form\CommentairesType</argument>
@@ -964,6 +990,7 @@
         <argument>App\Form\EvenementFormType</argument>
         <argument>App\Form\LivraisonType</argument>
         <argument>App\Form\MotoType</argument>
+        <argument>App\Form\ProduitType</argument>
         <argument>App\Form\ReclamationType</argument>
         <argument>App\Form\ReponseType</argument>
         <argument>App\Form\UtilisateursType</argument>
@@ -1301,7 +1328,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.u3HacrK"/>
+      <argument type="service" id=".service_locator.shFma5G"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4098,7 +4125,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id=".service_locator.bOiBAFj"/>
+      <argument type="service" id=".service_locator.6ilC..T"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -5220,6 +5247,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AdminController" class="App\Controller\AdminController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AdminController" class="App\Controller\AdminController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\AdminController" class="App\Controller\AdminController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\BoutiqueController" class="App\Controller\BoutiqueController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\BoutiqueController" class="App\Controller\BoutiqueController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\BoutiqueController" class="App\Controller\BoutiqueController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CartController" class="App\Controller\CartController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CartController" class="App\Controller\CartController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\CartController" class="App\Controller\CartController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5244,6 +5274,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\LivraisonControlleur" class="App\Controller\LivraisonControlleur" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\LivraisonControlleur" class="App\Controller\LivraisonControlleur" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\LivraisonControlleur" class="App\Controller\LivraisonControlleur" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ProduitController" class="App\Controller\ProduitController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ProduitController" class="App\Controller\ProduitController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ProduitController" class="App\Controller\ProduitController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ReclamationController" class="App\Controller\ReclamationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ReclamationController" class="App\Controller\ReclamationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ReclamationController" class="App\Controller\ReclamationController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5258,6 +5291,8 @@
     <service id=".abstract.instanceof.App\Controller\VehiculeController" class="App\Controller\VehiculeController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ActeurType" class="App\Form\ActeurType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ActeurType" class="App\Form\ActeurType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\BoutiqueType" class="App\Form\BoutiqueType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\BoutiqueType" class="App\Form\BoutiqueType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CamionType" class="App\Form\CamionType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\CamionType" class="App\Form\CamionType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CommandeType" class="App\Form\CommandeType" autowire="true" abstract="true"/>
@@ -5272,6 +5307,8 @@
     <service id=".abstract.instanceof.App\Form\LivraisonType" class="App\Form\LivraisonType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\MotoType" class="App\Form\MotoType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\MotoType" class="App\Form\MotoType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ProduitType" class="App\Form\ProduitType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\ProduitType" class="App\Form\ProduitType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ReclamationType" class="App\Form\ReclamationType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ReclamationType" class="App\Form\ReclamationType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ReponseType" class="App\Form\ReponseType" autowire="true" abstract="true"/>
@@ -5280,6 +5317,8 @@
     <service id=".abstract.instanceof.App\Form\UtilisateursType" class="App\Form\UtilisateursType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\VoitureType" class="App\Form\VoitureType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\VoitureType" class="App\Form\VoitureType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\BoutiqueRepository" class="App\Repository\BoutiqueRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\BoutiqueRepository" class="App\Repository\BoutiqueRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\BoutiquesRepository" class="App\Repository\BoutiquesRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\BoutiquesRepository" class="App\Repository\BoutiquesRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CommandeRepository" class="App\Repository\CommandeRepository" autowire="true" abstract="true"/>
@@ -5608,6 +5647,18 @@
         <argument key="rep" type="service_closure" id="App\Repository\DemandesRepository"/>
       </argument>
     </service>
+    <service id=".service_locator.iyp5ci2" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="rep" type="service_closure" id="App\Repository\BoutiqueRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.dCtSWL8" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="rep" type="service_closure" id="App\Repository\ProduitRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.8GkP9wQ" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5683,11 +5734,12 @@
         <argument key="repp" type="service_closure" id="App\Repository\CommentairesRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.2X0wiTy" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.g8vn46o" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="cartService" type="service_closure" id="App\Services\cart\CartService"/>
-        <argument key="produitrep" type="service_closure" id="App\Repository\ProduitRepository"/>
+        <argument key="rep" type="service_closure" id="App\Repository\ProduitRepository"/>
+        <argument key="repp" type="service_closure" id="App\Repository\BoutiqueRepository"/>
       </argument>
     </service>
     <service id=".service_locator.iL5tyiY" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5781,7 +5833,7 @@
         <argument key="rep" type="service_closure" id="App\Repository\VehiculeRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.0LiGk1G" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.afXJhbq" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AdminController::AcceptDem" type="service_closure" id=".service_locator.9dW19ZD"/>
@@ -5789,6 +5841,9 @@
         <argument key="App\Controller\AdminController::DeleteUser" type="service_closure" id=".service_locator.N9H1lzz"/>
         <argument key="App\Controller\AdminController::afficherDemande" type="service_closure" id=".service_locator.RZBlnd0"/>
         <argument key="App\Controller\AdminController::afficherUser" type="service_closure" id=".service_locator.N9H1lzz"/>
+        <argument key="App\Controller\BoutiqueController::Supprimer" type="service_closure" id=".service_locator.iyp5ci2"/>
+        <argument key="App\Controller\BoutiqueController::afficher" type="service_closure" id=".service_locator.iyp5ci2"/>
+        <argument key="App\Controller\BoutiqueController::afficherProduit" type="service_closure" id=".service_locator.dCtSWL8"/>
         <argument key="App\Controller\CartController::add" type="service_closure" id=".service_locator.8GkP9wQ"/>
         <argument key="App\Controller\CartController::add1" type="service_closure" id=".service_locator.8GkP9wQ"/>
         <argument key="App\Controller\CartController::delete" type="service_closure" id=".service_locator.8GkP9wQ"/>
@@ -5810,13 +5865,17 @@
         <argument key="App\Controller\EvenementController::detail" type="service_closure" id=".service_locator.xYyBPzn"/>
         <argument key="App\Controller\FrontController::afficherevenement" type="service_closure" id=".service_locator.iL5tyiY"/>
         <argument key="App\Controller\FrontController::delete1" type="service_closure" id=".service_locator.qjLVb2I"/>
-        <argument key="App\Controller\FrontController::index" type="service_closure" id=".service_locator.2X0wiTy"/>
+        <argument key="App\Controller\FrontController::detail" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\FrontController::details" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\FrontController::index" type="service_closure" id=".service_locator.g8vn46o"/>
         <argument key="App\Controller\LigneCommandeController::index" type="service_closure" id=".service_locator.fSKtku3"/>
         <argument key="App\Controller\LigneCommandeController::supprimercommande" type="service_closure" id=".service_locator.fSKtku3"/>
         <argument key="App\Controller\LivraisonControlleur::Add" type="service_closure" id=".service_locator.T0PTIZp"/>
         <argument key="App\Controller\LivraisonControlleur::Supprimer" type="service_closure" id=".service_locator.W._dOeO"/>
         <argument key="App\Controller\LivraisonControlleur::Update" type="service_closure" id=".service_locator.Dr.h0HE"/>
         <argument key="App\Controller\LivraisonControlleur::afficher" type="service_closure" id=".service_locator.Dr.h0HE"/>
+        <argument key="App\Controller\ProduitController::Supprimer" type="service_closure" id=".service_locator.dCtSWL8"/>
+        <argument key="App\Controller\ProduitController::afficher" type="service_closure" id=".service_locator.dCtSWL8"/>
         <argument key="App\Controller\ReclamationController::add" type="service_closure" id=".service_locator.cTCCVEY"/>
         <argument key="App\Controller\ReclamationController::afficheReponse" type="service_closure" id=".service_locator.2zXwowr"/>
         <argument key="App\Controller\ReclamationController::afficher" type="service_closure" id=".service_locator.J4hpEny"/>
@@ -5850,6 +5909,9 @@
         <argument key="App\Controller\AdminController:DeleteUser" type="service_closure" id=".service_locator.N9H1lzz"/>
         <argument key="App\Controller\AdminController:afficherDemande" type="service_closure" id=".service_locator.RZBlnd0"/>
         <argument key="App\Controller\AdminController:afficherUser" type="service_closure" id=".service_locator.N9H1lzz"/>
+        <argument key="App\Controller\BoutiqueController:Supprimer" type="service_closure" id=".service_locator.iyp5ci2"/>
+        <argument key="App\Controller\BoutiqueController:afficher" type="service_closure" id=".service_locator.iyp5ci2"/>
+        <argument key="App\Controller\BoutiqueController:afficherProduit" type="service_closure" id=".service_locator.dCtSWL8"/>
         <argument key="App\Controller\CartController:add" type="service_closure" id=".service_locator.8GkP9wQ"/>
         <argument key="App\Controller\CartController:add1" type="service_closure" id=".service_locator.8GkP9wQ"/>
         <argument key="App\Controller\CartController:delete" type="service_closure" id=".service_locator.8GkP9wQ"/>
@@ -5871,13 +5933,17 @@
         <argument key="App\Controller\EvenementController:detail" type="service_closure" id=".service_locator.xYyBPzn"/>
         <argument key="App\Controller\FrontController:afficherevenement" type="service_closure" id=".service_locator.iL5tyiY"/>
         <argument key="App\Controller\FrontController:delete1" type="service_closure" id=".service_locator.qjLVb2I"/>
-        <argument key="App\Controller\FrontController:index" type="service_closure" id=".service_locator.2X0wiTy"/>
+        <argument key="App\Controller\FrontController:detail" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\FrontController:details" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\FrontController:index" type="service_closure" id=".service_locator.g8vn46o"/>
         <argument key="App\Controller\LigneCommandeController:index" type="service_closure" id=".service_locator.fSKtku3"/>
         <argument key="App\Controller\LigneCommandeController:supprimercommande" type="service_closure" id=".service_locator.fSKtku3"/>
         <argument key="App\Controller\LivraisonControlleur:Add" type="service_closure" id=".service_locator.T0PTIZp"/>
         <argument key="App\Controller\LivraisonControlleur:Supprimer" type="service_closure" id=".service_locator.W._dOeO"/>
         <argument key="App\Controller\LivraisonControlleur:Update" type="service_closure" id=".service_locator.Dr.h0HE"/>
         <argument key="App\Controller\LivraisonControlleur:afficher" type="service_closure" id=".service_locator.Dr.h0HE"/>
+        <argument key="App\Controller\ProduitController:Supprimer" type="service_closure" id=".service_locator.dCtSWL8"/>
+        <argument key="App\Controller\ProduitController:afficher" type="service_closure" id=".service_locator.dCtSWL8"/>
         <argument key="App\Controller\ReclamationController:add" type="service_closure" id=".service_locator.cTCCVEY"/>
         <argument key="App\Controller\ReclamationController:afficheReponse" type="service_closure" id=".service_locator.2zXwowr"/>
         <argument key="App\Controller\ReclamationController:afficher" type="service_closure" id=".service_locator.J4hpEny"/>
@@ -5967,10 +6033,11 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.u3HacrK" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.shFma5G" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\ActeurType" type="service_closure" id="App\Form\ActeurType"/>
+        <argument key="App\Form\BoutiqueType" type="service_closure" id="App\Form\BoutiqueType"/>
         <argument key="App\Form\CamionType" type="service_closure" id="App\Form\CamionType"/>
         <argument key="App\Form\CommandeType" type="service_closure" id="App\Form\CommandeType"/>
         <argument key="App\Form\CommentairesType" type="service_closure" id="App\Form\CommentairesType"/>
@@ -5978,6 +6045,7 @@
         <argument key="App\Form\EvenementFormType" type="service_closure" id="App\Form\EvenementFormType"/>
         <argument key="App\Form\LivraisonType" type="service_closure" id="App\Form\LivraisonType"/>
         <argument key="App\Form\MotoType" type="service_closure" id="App\Form\MotoType"/>
+        <argument key="App\Form\ProduitType" type="service_closure" id="App\Form\ProduitType"/>
         <argument key="App\Form\ReclamationType" type="service_closure" id="App\Form\ReclamationType"/>
         <argument key="App\Form\ReponseType" type="service_closure" id="App\Form\ReponseType"/>
         <argument key="App\Form\UtilisateursType" type="service_closure" id="App\Form\UtilisateursType"/>
@@ -6156,9 +6224,10 @@
       <argument type="service" id="cache.doctrine.orm.default.result"/>
       <factory class="Doctrine\Common\Cache\Psr6\DoctrineProvider" method="wrap"/>
     </service>
-    <service id=".service_locator.bOiBAFj" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.6ilC..T" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Repository\BoutiqueRepository" type="service_closure" id="App\Repository\BoutiqueRepository"/>
         <argument key="App\Repository\BoutiquesRepository" type="service_closure" id="App\Repository\BoutiquesRepository"/>
         <argument key="App\Repository\CommandeRepository" type="service_closure" id="App\Repository\CommandeRepository"/>
         <argument key="App\Repository\CommentairesRepository" type="service_closure" id="App\Repository\CommentairesRepository"/>
@@ -6229,6 +6298,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.vdmMuyE" method="withContext"/>
     </service>
+    <service id=".service_locator.vdmMuyE.App\Controller\BoutiqueController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\BoutiqueController"/>
+      <argument>App\Controller\BoutiqueController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.vdmMuyE" method="withContext"/>
+    </service>
     <service id=".service_locator.vdmMuyE.App\Controller\CartController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\CartController"/>
       <argument>App\Controller\CartController</argument>
@@ -6274,6 +6349,12 @@
     <service id=".service_locator.vdmMuyE.App\Controller\LivraisonControlleur" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\LivraisonControlleur"/>
       <argument>App\Controller\LivraisonControlleur</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.vdmMuyE" method="withContext"/>
+    </service>
+    <service id=".service_locator.vdmMuyE.App\Controller\ProduitController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\ProduitController"/>
+      <argument>App\Controller\ProduitController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.vdmMuyE" method="withContext"/>
     </service>
@@ -6447,12 +6528,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.0LiGk1G"/>
+      <argument type="service" id=".service_locator.afXJhbq"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.0LiGk1G"/>
+      <argument type="service" id=".service_locator.afXJhbq"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -6853,7 +6934,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.0LiGk1G"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.afXJhbq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

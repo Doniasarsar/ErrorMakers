@@ -81,6 +81,7 @@ class Utilisateurs implements UserInterface
      */
     private $boutique;
 
+
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message="Question 1 is required")

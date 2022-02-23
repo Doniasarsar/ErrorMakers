@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).''.\DIRECTORY_SEPARATOR.'vendor/autoload.php';
-require __DIR__.'/ContainerBBOSAOP/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/Container3NOgIzt/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -34,6 +34,7 @@ $classes[] = 'Symfony\Bundle\FrameworkBundle\EventListener\ResolveControllerName
 $classes[] = 'Symfony\Component\HttpFoundation\RequestMatcher';
 $classes[] = 'Symfony\Component\DependencyInjection\ServiceLocator';
 $classes[] = 'App\Controller\AdminController';
+$classes[] = 'App\Controller\BoutiqueController';
 $classes[] = 'App\Controller\CartController';
 $classes[] = 'App\Controller\CommandeController';
 $classes[] = 'App\Controller\CommentairesController';
@@ -42,11 +43,13 @@ $classes[] = 'App\Controller\EvenementController';
 $classes[] = 'App\Controller\FrontController';
 $classes[] = 'App\Controller\LigneCommandeController';
 $classes[] = 'App\Controller\LivraisonControlleur';
+$classes[] = 'App\Controller\ProduitController';
 $classes[] = 'App\Controller\ReclamationController';
 $classes[] = 'App\Controller\ReponseController';
 $classes[] = 'App\Controller\UtilisateursController';
 $classes[] = 'App\Controller\VehiculeController';
 $classes[] = 'App\Form\ActeurType';
+$classes[] = 'App\Form\BoutiqueType';
 $classes[] = 'App\Form\CamionType';
 $classes[] = 'App\Form\CommandeType';
 $classes[] = 'App\Form\CommentairesType';
@@ -54,10 +57,12 @@ $classes[] = 'App\Form\EditUtilisateursType';
 $classes[] = 'App\Form\EvenementFormType';
 $classes[] = 'App\Form\LivraisonType';
 $classes[] = 'App\Form\MotoType';
+$classes[] = 'App\Form\ProduitType';
 $classes[] = 'App\Form\ReclamationType';
 $classes[] = 'App\Form\ReponseType';
 $classes[] = 'App\Form\UtilisateursType';
 $classes[] = 'App\Form\VoitureType';
+$classes[] = 'App\Repository\BoutiqueRepository';
 $classes[] = 'App\Repository\BoutiquesRepository';
 $classes[] = 'App\Repository\CommandeRepository';
 $classes[] = 'App\Repository\CommentairesRepository';

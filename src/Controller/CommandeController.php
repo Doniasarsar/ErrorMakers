@@ -45,7 +45,6 @@ class CommandeController extends AbstractController
             $em = $this->getDoctrine()->getManager();
             $em->persist($commande);
             $em->flush();
-            $this->addFlash('Success','Commande delivred');
 
            
 
@@ -65,6 +64,7 @@ class CommandeController extends AbstractController
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($ligneCommande);
                 $em->flush();
+
 
                 }
 

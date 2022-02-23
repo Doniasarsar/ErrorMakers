@@ -351,16 +351,33 @@
                 </li>
               </ul>
             </li>
+          </li>
+          <li class="nav-item menu">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fas fa-shopping-bag"></i>
+              <p>
+                Gestion Boutiques
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{path('boutique_list')}}" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Liste Boutiques</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{path('produit_list')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Liste Produits</p>
+                </a>
+              </li>
+            </ul>
+          </li>
            
-            <li class="nav-item menu">
-              <a href="{{path('livraison_list')}}" class="nav-link ">
-                <i class="nav-icon fas fa-truck"></i>
-                <p>
-                 Liste Livraisons
-                  <i class=""></i>
-                </p>
-              </a>
-            </li>
+             
+          </ul>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
