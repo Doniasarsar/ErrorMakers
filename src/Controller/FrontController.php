@@ -60,15 +60,21 @@ class FrontController extends AbstractController
      * @Route("/eventfront", name="ev_front_aff")
      */
 
-    function afficherevenement(EvenementRepository $rep)
+    function afficherevenement(EvenementRepository $rep,CartService $cartService)
     {
+        $dataPanier = $cartService->getFullCart();  
+        $total = $cartService->getTotal();
+
          $evenement = $rep->findall();
          return $this->render('blog/evenementsfront.html.twig', [
-             'tab' => $evenement
+             'tab' => $evenement,
+             'elements' => $dataPanier,
+              'total' => $total
          ]);
 
     }
 
+ 
    
 
    

@@ -38,7 +38,6 @@ return [
     'com_delete' => [['id'], ['_controller' => 'App\\Controller\\CommentairesController::Supprimer'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/commentaires/delete']], [], []],
     'demande' => [[], ['_controller' => 'App\\Controller\\DemandeController::index'], [], [['text', '/demande']], [], []],
     'acteurSAdd' => [[], ['_controller' => 'App\\Controller\\DemandeController::AddActeur'], [], [['text', '/demande/addActeur']], [], []],
-    'evenement1' => [[], ['_controller' => 'App\\Controller\\EvenementController::index'], [], [['text', '/evenement1']], [], []],
     'ev_aff' => [[], ['_controller' => 'App\\Controller\\EvenementController::afficher'], [], [['text', '/evenement/aff']], [], []],
     'event_add' => [[], ['_controller' => 'App\\Controller\\EvenementController::Add'], [], [['text', '/evenement/add']], [], []],
     'ev_delete' => [['id'], ['_controller' => 'App\\Controller\\EvenementController::Supprimer'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/evenement/delete']], [], []],

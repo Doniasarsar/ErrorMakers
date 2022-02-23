@@ -8,6 +8,7 @@ use App\Entity\Evenement;
 use App\Entity\Commentaires;
 use App\Form\CommentairesType;
 use App\Form\EvenementFormType;
+use App\Services\cart\CartService;
 use App\Repository\EvenementRepository;
 use App\Repository\CommentairesRepository;
 use Symfony\Component\HttpFoundation\Request;
@@ -16,6 +17,8 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+
 
 
 
@@ -23,15 +26,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class EvenementController extends AbstractController
 {
-    /**
-     * @Route("/evenement1", name="evenement1")
-     */
-    public function index(): Response
-    {
-        return $this->render('front/Evenementsfront.html.twig', [
-            'controller_name' => 'EvenementController',
-        ]);
-    }
+   
   /**
      * @Route("/evenement/aff", name="ev_aff")
      */
@@ -125,13 +120,17 @@ class EvenementController extends AbstractController
      /**
      * @Route("/detail/{id}", name="ev_front_detail")
      */
-    function detail($id,EvenementRepository $rep,Request $request,CommentairesRepository $repp)
+    function detail($id,EvenementRepository $rep,Request $request,CommentairesRepository $repp,CartService $cartService)
     {   
+        $dataPanier = $cartService->getFullCart();  
+        $total = $cartService->getTotal();
         
         $evenement = $rep->find($id);
+
         $comments = $repp->findByEeven($id);
             
-       
+    
+
         $Commentaires = new Commentaires;
         $CommentairesForm=$this ->createForm(CommentairesType::class, $Commentaires);
         $CommentairesForm->handleRequest($request);
@@ -155,11 +154,14 @@ class EvenementController extends AbstractController
               $this->addFlash('message', 'Votre Commentaire a bien été envoyé');
               return $this->redirectToRoute('ev_front_detail', ['id' => $evenement->getId()]);
           }
+        
          
           return $this->render('blog/evenementsfrontdetail.html.twig', [
                 'tab' => $evenement,
               'Commentaires_Form' => $CommentairesForm->createView(),
-              'comments'=>$comments
+              'comments'=>$comments,
+              'elements' => $dataPanier,
+              'total' => $total
           ]);
     
     }

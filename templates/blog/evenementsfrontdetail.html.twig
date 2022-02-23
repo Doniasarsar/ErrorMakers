@@ -1,4 +1,4 @@
-{% extends "baseFront.html.twig" %}
+{% extends "baseCart.html.twig" %}
 
 {% block body %}
   <!-- Begin Body Wrapper -->
@@ -78,16 +78,25 @@
                                                     </div>
                                                      <div class="col-lg-4 col-md-4 col-sm-4 mt-5 mb-sm-20 mb-xs-20">
                                                         <label>Pseudo</label>
-                                                        
+                                                        {% if not app.user %} 
                                                          {{ form_widget(Commentaires_Form.Pseudo, {'attr': {'class': 'coment-field'}}) }}
                                                          {{ form_errors(Commentaires_Form.Pseudo,{'attr':{"class":"mb-0"}}) }}
+                                                         {% else %}
+                                                         {{ form_widget(Commentaires_Form.Pseudo, {'attr': {'value': app.user.Nom ,readonly:true} } ) }}
+                                                         {{ form_errors(Commentaires_Form.Pseudo,{'attr':{"class":"mb-0"}}) }}
+                                                         {% endif %}
+
                                                     </div>
                                                     
                                                     <div class="col-lg-4 col-md-4 col-sm-4 mt-5 mb-sm-20 mb-xs-20">
                                                         <label>Email</label>
-                                                        
+                                                        {% if not app.user %}                                                        
                                                          {{ form_widget(Commentaires_Form.email, {'attr': {'class': 'coment-field'}}) }}
                                                          {{ form_errors(Commentaires_Form.email,{'attr':{"class":"mb-0"}}) }}
+                                                         {% else %}
+                                                         {{ form_widget(Commentaires_Form.email, {'attr': {'value': app.user.Email,readonly:true}}) }}
+                                                         {{ form_errors(Commentaires_Form.email,{'attr':{"class":"mb-0"}}) }}
+                                                         {% endif %}
                                                     </div>
                                                    
     
