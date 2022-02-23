@@ -23,8 +23,11 @@ return [
         '/admin/affcommande' => [[['_route' => 'admincommande', '_controller' => 'App\\Controller\\CommandeController::afficher'], null, null, null, false, false, null]],
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         '/commande4' => [[['_route' => 'commande4', '_controller' => 'App\\Controller\\CommandeController::ajoutercommande4'], null, null, null, false, false, null]],
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
         '/demande' => [[['_route' => 'demande', '_controller' => 'App\\Controller\\DemandeController::index'], null, null, null, false, false, null]],
