@@ -115,7 +115,7 @@ class __TwigTemplate_8c65080c38c3281c9b223ade91842c594df4c09f8fc2ceba35c45c4c096
             echo "\" alt=\"Li's Product Image\"></a></td>
                                     <td class=\"li-product-name\"><a href=\"#\">";
             // line 41
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["element"], "produit", [], "any", false, false, false, 41), "descProduit", [], "any", false, false, false, 41), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["element"], "produit", [], "any", false, false, false, 41), "nomProduit", [], "any", false, false, false, 41), "html", null, true);
             echo "</a></td>
                                     <td class=\"li-product-price\"><span class=\"amount\">";
             // line 42
@@ -271,7 +271,7 @@ class __TwigTemplate_8c65080c38c3281c9b223ade91842c594df4c09f8fc2ceba35c45c4c096
                                 <tr>
                                     <td class=\"li-product-remove\"><a href=\"{{path(\"cart_delete\",{id: element.produit.id})}}\"><i class=\"fa fa-times\"></i></a></td>
                                     <td class=\"li-product-thumbnail\"><a href=\"#\"><img src=\"{{asset('images/product/small-size/5.jpg')}}\" alt=\"Li's Product Image\"></a></td>
-                                    <td class=\"li-product-name\"><a href=\"#\">{{ element.produit.descProduit}}</a></td>
+                                    <td class=\"li-product-name\"><a href=\"#\">{{ element.produit.nomProduit}}</a></td>
                                     <td class=\"li-product-price\"><span class=\"amount\">{{ element.produit.prixProduit}}\$</span></td>
                                     <td class=\"quantity\">
                                         <a href=\"{{path(\"cart_remove\",{id: element.produit.id})}}\"><i class=\"fa fa-angle-down\" style=\"font-size:28px\"></i></a>

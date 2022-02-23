@@ -187,7 +187,7 @@ class __TwigTemplate_0f8166f6ce3297ce06d774dda45d4739e0d6a2ddc42cc1b36692200ac90
                 if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["des"], "commande", [], "any", false, false, false, 75), "id", [], "any", false, false, false, 75), twig_get_attribute($this->env, $this->source, $context["class"], "id", [], "any", false, false, false, 75)))) {
                     // line 76
                     echo "                      *";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["des"], "produit", [], "any", false, false, false, 76), "descProduit", [], "any", false, false, false, 76), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["des"], "produit", [], "any", false, false, false, 76), "nomProduit", [], "any", false, false, false, 76), "html", null, true);
                     echo " <br>
                       ";
                 }
@@ -431,7 +431,7 @@ class __TwigTemplate_0f8166f6ce3297ce06d774dda45d4739e0d6a2ddc42cc1b36692200ac90
                     <td>
                       {% for des in tab1 %}
                       {% if des.commande.id == class.id %}
-                      *{{ des.produit.descProduit  }} <br>
+                      *{{ des.produit.nomProduit  }} <br>
                       {% endif %}
                       {% endfor %}
 

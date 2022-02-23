@@ -134,7 +134,7 @@ class __TwigTemplate_10c063538db719a0879223f6b1e942ed908789f4d34f01a5c65d3c2cd9f
             echo "</td>
                     <td>";
             // line 53
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["class"], "produit", [], "any", false, false, false, 53), "descProduit", [], "any", false, false, false, 53), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["class"], "produit", [], "any", false, false, false, 53), "nomProduit", [], "any", false, false, false, 53), "html", null, true);
             echo "</td>
                     <td>
                         <a class=\"btn btn-warning\"  href=\"";
@@ -335,7 +335,7 @@ class __TwigTemplate_10c063538db719a0879223f6b1e942ed908789f4d34f01a5c65d3c2cd9f
                     <td>{{ class.commande.id }}</td>
                     <td>{{ class.produit.id}}</td>
                     <td>{{ class.quantite}}</td>
-                    <td>{{ class.produit.descProduit}}</td>
+                    <td>{{ class.produit.nomProduit}}</td>
                     <td>
                         <a class=\"btn btn-warning\"  href=\"{{path('adminlignesupp',{id : class.id })}}\">Supprimer</a>
                          

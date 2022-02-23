@@ -35,7 +35,6 @@ return [
     'demande' => [[], ['_controller' => 'App\\Controller\\DemandeController::index'], [], [['text', '/demande']], [], []],
     'acteurSAdd' => [[], ['_controller' => 'App\\Controller\\DemandeController::AddActeur'], [], [['text', '/demande/addActeur']], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/home']], [], []],
-    'produit' => [[], ['_controller' => 'App\\Controller\\FrontController::afficher'], [], [['text', '/produit']], [], []],
     'delete1' => [['id'], ['_controller' => 'App\\Controller\\FrontController::delete1'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/delete1']], [], []],
     'ligne_commande' => [[], ['_controller' => 'App\\Controller\\LigneCommandeController::index'], [], [['text', '/ligne/commande']], [], []],
     'adminlignesupp' => [['id'], ['_controller' => 'App\\Controller\\LigneCommandeController::supprimercommande'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/suppligne']], [], []],

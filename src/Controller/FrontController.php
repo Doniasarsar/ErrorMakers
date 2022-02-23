@@ -17,12 +17,44 @@ class FrontController extends AbstractController
     /**
      * @Route("/home", name="home")
      */
-    public function index(): Response
+    public function index(SessionInterface $session, ProduitRepository $produitrep): Response
     {
+        $panier = $session->get("panier",[]);
+        
+        // on fabrique les données 
+
+        $dataPanier = []; 
+        $total = 0; 
+
+        foreach ($panier as $id => $quantite){
+            $produit = $produitrep->find($id);
+            $dataPanier[] = [
+                "produit" => $produit,
+                "quantite" => $quantite 
+            ];
+        }
+
+        foreach($dataPanier as $item)
+        {
+            $totalItem = $item['produit']->getPrixProduit() * $item['quantite'];
+            $total += $totalItem ;
+        }
+        $quantitetotale = 0; 
+        foreach($dataPanier as $item)
+        {
+            $qtlItem = $item['quantite'];
+            $quantitetotale += $qtlItem ;
+        }
+
+        $produit=$produitrep->findall(); 
         return $this->render('front/home.html.twig', [
-            'controller_name' => 'FrontController',
+            'tab' => $produit,
+            'elements' => $dataPanier,
+            'total' => $total,
+            'quantitetotale' => $quantitetotale
         ]);
     }
+    
     /**
      * @Route("/utilisateurs/update/{id}",name="userupdate")
      */
@@ -46,51 +78,7 @@ class FrontController extends AbstractController
         ]);
 
      }
-     /**
-     * @Route("/produit", name="produit")
-     */
-    public function afficher(ProduitRepository $rep, SessionInterface $session)
-    {
-
-    $panier = $session->get("panier",[]);
-     // on fabrique les données 
-
-     $dataPanier = []; 
-     $total = 0; 
-     $quantitetotale = 0; 
-
-     foreach ($panier as $id => $quantiteProduit){
-         $produit = $rep->find($id);
-         $dataPanier[] = [
-             "produit" => $produit,
-             "quantiteProduit" => $quantiteProduit  
-         ];
-     }
-
-     foreach($dataPanier as $item)
-     {
-         $totalItem = $item['produit']->getPrixProduit() * $item['quantiteProduit'];
-         $total += $totalItem ;
-     }
-
-     foreach($dataPanier as $item)
-     {
-         $qtlItem = $item['quantiteProduit'];
-         $quantitetotale += $qtlItem ;
-     }
-
-
-
-    $produit=$rep->findall(); 
-    return $this->render('shop.html.twig', [
-        'tab' => $produit,
-        'elements' => $dataPanier,
-         'total' => $total,
-         'quantitetotale' => $quantitetotale
-    ]);
-
-
-    }
+    
 
      /**
      * @Route("/delete1/{id}", name="delete1")
@@ -111,5 +99,6 @@ class FrontController extends AbstractController
     
     return $this->redirecttoRoute("produit");
     }
+
     
 }

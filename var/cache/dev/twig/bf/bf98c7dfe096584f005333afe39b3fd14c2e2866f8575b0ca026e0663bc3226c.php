@@ -1073,16 +1073,21 @@ class __TwigTemplate_4e48d8dd4d555f212b93ebfa2d93d1f7db33bef5af2008c8c91d249c5e1
                                 </ul>
                             </div>
                             <div class=\"row\">
-                                <div class=\"product-active owl-carousel\">
-                                    <div class=\"col-lg-12\">
+                               ";
+        // line 926
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["tab"]) || array_key_exists("tab", $context) ? $context["tab"] : (function () { throw new RuntimeError('Variable "tab" does not exist.', 926, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["class"]) {
+            // line 927
+            echo "                                  
                                         <!-- single-product-wrap start -->
                                         <div class=\"single-product-wrap\">
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 932
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/1.jpg"), "html", null, true);
-        echo "\" alt=\"Li's Product Image\">
+            // line 932
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/1.jpg"), "html", null, true);
+            echo "\" alt=\"Li's Product Image\">
                                                 </a>
                                                 <span class=\"sticker\">New</span>
                                             </div>
@@ -1090,7 +1095,10 @@ class __TwigTemplate_4e48d8dd4d555f212b93ebfa2d93d1f7db33bef5af2008c8c91d249c5e1
                                                 <div class=\"product_desc_info\">
                                                     <div class=\"product-review\">
                                                         <h5 class=\"manufacturer\">
-                                                            <a href=\"product-details.html\">Graphic Corner</a>
+                                                            <a href=\"product-details.html\">";
+            // line 940
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "descProduit", [], "any", false, false, false, 940), "html", null, true);
+            echo "</a>
                                                         </h5>
                                                         <div class=\"rating-box\">
                                                             <ul class=\"rating\">
@@ -1102,14 +1110,23 @@ class __TwigTemplate_4e48d8dd4d555f212b93ebfa2d93d1f7db33bef5af2008c8c91d249c5e1
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                    <h4><a class=\"product_name\" href=\"single-product.html\">Accusantium dolorem1</a></h4>
+                                                    <h4><a class=\"product_name\" href=\"single-product.html\">";
+            // line 952
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "nomProduit", [], "any", false, false, false, 952), "html", null, true);
+            echo "</a></h4>
                                                     <div class=\"price-box\">
-                                                        <span class=\"new-price\">\$46.80</span>
+                                                        <span class=\"new-price\">";
+            // line 954
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["class"], "prixProduit", [], "any", false, false, false, 954), "html", null, true);
+            echo "</span>
                                                     </div>
                                                 </div>
                                                 <div class=\"add-actions\">
                                                     <ul class=\"add-actions-link\">
-                                                        <li class=\"add-cart active\"><a href=\"#\">Add to cart</a></li>
+                                                        <li class=\"add-cart active\"><a href=\"";
+            // line 959
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cart_add", ["id" => twig_get_attribute($this->env, $this->source, $context["class"], "id", [], "any", false, false, false, 959)]), "html", null, true);
+            echo "\">Add to cart</a></li>
                                                         <li><a class=\"links-details\" href=\"single-product.html\"><i class=\"fa fa-heart-o\"></i></a></li>
                                                         <li><a class=\"quick-view\" data-toggle=\"modal\" data-target=\"#exampleModalCenter\" href=\"#\"><i class=\"fa fa-eye\"></i></a></li>
                                                     </ul>
@@ -1117,235 +1134,15 @@ class __TwigTemplate_4e48d8dd4d555f212b93ebfa2d93d1f7db33bef5af2008c8c91d249c5e1
                                             </div>
                                         </div>
                                         <!-- single-product-wrap end -->
-                                    </div>
-                                    <div class=\"col-lg-12\">
-                                        <!-- single-product-wrap start -->
-                                        <div class=\"single-product-wrap\">
-                                            <div class=\"product-image\">
-                                                <a href=\"single-product.html\">
-                                                    <img src=\"";
-        // line 973
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/2.jpg"), "html", null, true);
-        echo "\" alt=\"Li's Product Image\">
-                                                </a>
-                                                <span class=\"sticker\">New</span>
-                                            </div>
-                                            <div class=\"product_desc\">
-                                                <div class=\"product_desc_info\">
-                                                    <div class=\"product-review\">
-                                                        <h5 class=\"manufacturer\">
-                                                            <a href=\"product-details.html\">Studio Design</a>
-                                                        </h5>
-                                                        <div class=\"rating-box\">
-                                                            <ul class=\"rating\">
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li class=\"no-star\"><i class=\"fa fa-star-o\"></i></li>
-                                                                <li class=\"no-star\"><i class=\"fa fa-star-o\"></i></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <h4><a class=\"product_name\" href=\"single-product.html\">Mug Today is a good day</a></h4>
-                                                    <div class=\"price-box\">
-                                                        <span class=\"new-price new-price-2\">\$71.80</span>
-                                                        <span class=\"old-price\">\$77.22</span>
-                                                        <span class=\"discount-percentage\">-7%</span>
-                                                    </div>
-                                                </div>
-                                                <div class=\"add-actions\">
-                                                    <ul class=\"add-actions-link\">
-                                                        <li class=\"add-cart active\"><a href=\"#\">Add to cart</a></li>
-                                                        <li><a class=\"links-details\" href=\"single-product.html\"><i class=\"fa fa-heart-o\"></i></a></li>
-                                                        <li><a class=\"quick-view\" data-toggle=\"modal\" data-target=\"#exampleModalCenter\" href=\"#\"><i class=\"fa fa-eye\"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- single-product-wrap end -->
-                                    </div>
-                                    <div class=\"col-lg-12\">
-                                        <!-- single-product-wrap start -->
-                                        <div class=\"single-product-wrap\">
-                                            <div class=\"product-image\">
-                                                <a href=\"single-product.html\">
-                                                    <img src=\"";
-        // line 1016
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/3.jpg"), "html", null, true);
-        echo "\" alt=\"Li's Product Image\">
-                                                </a>
-                                                <span class=\"sticker\">New</span>
-                                            </div>
-                                            <div class=\"product_desc\">
-                                                <div class=\"product_desc_info\">
-                                                    <div class=\"product-review\">
-                                                        <h5 class=\"manufacturer\">
-                                                            <a href=\"product-details.html\">Graphic Corner</a>
-                                                        </h5>
-                                                        <div class=\"rating-box\">
-                                                            <ul class=\"rating\">
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li class=\"no-star\"><i class=\"fa fa-star-o\"></i></li>
-                                                                <li class=\"no-star\"><i class=\"fa fa-star-o\"></i></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <h4><a class=\"product_name\" href=\"single-product.html\">Accusantium dolorem1</a></h4>
-                                                    <div class=\"price-box\">
-                                                        <span class=\"new-price\">\$46.80</span>
-                                                    </div>
-                                                </div>
-                                                <div class=\"add-actions\">
-                                                    <ul class=\"add-actions-link\">
-                                                        <li class=\"add-cart active\"><a href=\"#\">Add to cart</a></li>
-                                                        <li><a class=\"links-details\" href=\"single-product.html\"><i class=\"fa fa-heart-o\"></i></a></li>
-                                                        <li><a class=\"quick-view\" data-toggle=\"modal\" data-target=\"#exampleModalCenter\" href=\"#\"><i class=\"fa fa-eye\"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- single-product-wrap end -->
-                                    </div>
-                                    <div class=\"col-lg-12\">
-                                        <!-- single-product-wrap start -->
-                                        <div class=\"single-product-wrap\">
-                                            <div class=\"product-image\">
-                                                <a href=\"single-product.html\">
-                                                    <img src=\"";
-        // line 1057
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/4.jpg"), "html", null, true);
-        echo "\" alt=\"Li's Product Image\">
-                                                </a>
-                                                <span class=\"sticker\">New</span>
-                                            </div>
-                                            <div class=\"product_desc\">
-                                                <div class=\"product_desc_info\">
-                                                    <div class=\"product-review\">
-                                                        <h5 class=\"manufacturer\">
-                                                            <a href=\"product-details.html\">Studio Design</a>
-                                                        </h5>
-                                                        <div class=\"rating-box\">
-                                                            <ul class=\"rating\">
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li class=\"no-star\"><i class=\"fa fa-star-o\"></i></li>
-                                                                <li class=\"no-star\"><i class=\"fa fa-star-o\"></i></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <h4><a class=\"product_name\" href=\"single-product.html\">Mug Today is a good day</a></h4>
-                                                    <div class=\"price-box\">
-                                                        <span class=\"new-price new-price-2\">\$71.80</span>
-                                                        <span class=\"old-price\">\$77.22</span>
-                                                        <span class=\"discount-percentage\">-7%</span>
-                                                    </div>
-                                                </div>
-                                                <div class=\"add-actions\">
-                                                    <ul class=\"add-actions-link\">
-                                                        <li class=\"add-cart active\"><a href=\"#\">Add to cart</a></li>
-                                                        <li><a class=\"links-details\" href=\"single-product.html\"><i class=\"fa fa-heart-o\"></i></a></li>
-                                                        <li><a class=\"quick-view\" data-toggle=\"modal\" data-target=\"#exampleModalCenter\" href=\"#\"><i class=\"fa fa-eye\"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- single-product-wrap end -->
-                                    </div>
-                                    <div class=\"col-lg-12\">
-                                        <!-- single-product-wrap start -->
-                                        <div class=\"single-product-wrap\">
-                                            <div class=\"product-image\">
-                                                <a href=\"single-product.html\">
-                                                    <img src=\"";
-        // line 1100
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/5.jpg"), "html", null, true);
-        echo "\" alt=\"Li's Product Image\">
-                                                </a>
-                                                <span class=\"sticker\">New</span>
-                                            </div>
-                                            <div class=\"product_desc\">
-                                                <div class=\"product_desc_info\">
-                                                    <div class=\"product-review\">
-                                                        <h5 class=\"manufacturer\">
-                                                            <a href=\"product-details.html\">Graphic Corner</a>
-                                                        </h5>
-                                                        <div class=\"rating-box\">
-                                                            <ul class=\"rating\">
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li class=\"no-star\"><i class=\"fa fa-star-o\"></i></li>
-                                                                <li class=\"no-star\"><i class=\"fa fa-star-o\"></i></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <h4><a class=\"product_name\" href=\"single-product.html\">Accusantium dolorem1</a></h4>
-                                                    <div class=\"price-box\">
-                                                        <span class=\"new-price\">\$46.80</span>
-                                                    </div>
-                                                </div>
-                                                <div class=\"add-actions\">
-                                                    <ul class=\"add-actions-link\">
-                                                        <li class=\"add-cart active\"><a href=\"#\">Add to cart</a></li>
-                                                        <li><a class=\"links-details\" href=\"single-product.html\"><i class=\"fa fa-heart-o\"></i></a></li>
-                                                        <li><a class=\"quick-view\" data-toggle=\"modal\" data-target=\"#exampleModalCenter\" href=\"#\"><i class=\"fa fa-eye\"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- single-product-wrap end -->
-                                    </div>
-                                    <div class=\"col-lg-12\">
-                                        <!-- single-product-wrap start -->
-                                        <div class=\"single-product-wrap\">
-                                            <div class=\"product-image\">
-                                                <a href=\"single-product.html\">
-                                                    <img src=\"";
-        // line 1141
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/6.jpg"), "html", null, true);
-        echo "\" alt=\"Li's Product Image\">
-                                                </a>
-                                                <span class=\"sticker\">New</span>
-                                            </div>
-                                            <div class=\"product_desc\">
-                                                <div class=\"product_desc_info\">
-                                                    <div class=\"product-review\">
-                                                        <h5 class=\"manufacturer\">
-                                                            <a href=\"product-details.html\">Studio Design</a>
-                                                        </h5>
-                                                        <div class=\"rating-box\">
-                                                            <ul class=\"rating\">
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li class=\"no-star\"><i class=\"fa fa-star-o\"></i></li>
-                                                                <li class=\"no-star\"><i class=\"fa fa-star-o\"></i></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <h4><a class=\"product_name\" href=\"single-product.html\">Mug Today is a good day</a></h4>
-                                                    <div class=\"price-box\">
-                                                        <span class=\"new-price new-price-2\">\$71.80</span>
-                                                        <span class=\"old-price\">\$77.22</span>
-                                                        <span class=\"discount-percentage\">-7%</span>
-                                                    </div>
-                                                </div>
-                                                <div class=\"add-actions\">
-                                                    <ul class=\"add-actions-link\">
-                                                        <li class=\"add-cart active\"><a href=\"#\">Add to cart</a></li>
-                                                        <li><a class=\"links-details\" href=\"single-product.html\"><i class=\"fa fa-heart-o\"></i></a></li>
-                                                        <li><a class=\"quick-view\" data-toggle=\"modal\" data-target=\"#exampleModalCenter\" href=\"#\"><i class=\"fa fa-eye\"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- single-product-wrap end -->
-                                    </div>
-                                </div>
-                            </div>
+                                   
+                                   
+                            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['class'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 970
+        echo "                            </div>
                         </div>
                         <!-- Li's Section Area End Here -->
                     </div>
@@ -1376,7 +1173,7 @@ class __TwigTemplate_4e48d8dd4d555f212b93ebfa2d93d1f7db33bef5af2008c8c91d249c5e1
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 1210
+        // line 1000
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/3.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -1420,7 +1217,7 @@ class __TwigTemplate_4e48d8dd4d555f212b93ebfa2d93d1f7db33bef5af2008c8c91d249c5e1
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 1251
+        // line 1041
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/5.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -1466,7 +1263,7 @@ class __TwigTemplate_4e48d8dd4d555f212b93ebfa2d93d1f7db33bef5af2008c8c91d249c5e1
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 1294
+        // line 1084
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/7.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -1510,7 +1307,7 @@ class __TwigTemplate_4e48d8dd4d555f212b93ebfa2d93d1f7db33bef5af2008c8c91d249c5e1
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 1335
+        // line 1125
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/9.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -1556,7 +1353,7 @@ class __TwigTemplate_4e48d8dd4d555f212b93ebfa2d93d1f7db33bef5af2008c8c91d249c5e1
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 1378
+        // line 1168
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/11.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -1600,7 +1397,7 @@ class __TwigTemplate_4e48d8dd4d555f212b93ebfa2d93d1f7db33bef5af2008c8c91d249c5e1
                                             <div class=\"product-image\">
                                                 <a href=\"single-product.html\">
                                                     <img src=\"";
-        // line 1419
+        // line 1209
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/11.jpg"), "html", null, true);
         echo "\" alt=\"Li's Product Image\">
                                                 </a>
@@ -2011,7 +1808,7 @@ class __TwigTemplate_4e48d8dd4d555f212b93ebfa2d93d1f7db33bef5af2008c8c91d249c5e1
 
     public function getDebugInfo()
     {
-        return array (  1604 => 1419,  1560 => 1378,  1514 => 1335,  1470 => 1294,  1424 => 1251,  1380 => 1210,  1308 => 1141,  1264 => 1100,  1218 => 1057,  1174 => 1016,  1128 => 973,  1084 => 932,  1049 => 900,  1037 => 891,  981 => 838,  937 => 797,  891 => 754,  847 => 713,  801 => 670,  757 => 629,  705 => 580,  661 => 539,  615 => 496,  571 => 455,  525 => 412,  481 => 371,  429 => 322,  385 => 281,  339 => 238,  295 => 197,  249 => 154,  205 => 113,  155 => 66,  147 => 61,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
+        return array (  1401 => 1209,  1357 => 1168,  1311 => 1125,  1267 => 1084,  1221 => 1041,  1177 => 1000,  1145 => 970,  1128 => 959,  1120 => 954,  1115 => 952,  1100 => 940,  1089 => 932,  1082 => 927,  1078 => 926,  1049 => 900,  1037 => 891,  981 => 838,  937 => 797,  891 => 754,  847 => 713,  801 => 670,  757 => 629,  705 => 580,  661 => 539,  615 => 496,  571 => 455,  525 => 412,  481 => 371,  429 => 322,  385 => 281,  339 => 238,  295 => 197,  249 => 154,  205 => 113,  155 => 66,  147 => 61,  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -2941,8 +2738,8 @@ class __TwigTemplate_4e48d8dd4d555f212b93ebfa2d93d1f7db33bef5af2008c8c91d249c5e1
                                 </ul>
                             </div>
                             <div class=\"row\">
-                                <div class=\"product-active owl-carousel\">
-                                    <div class=\"col-lg-12\">
+                               {% for class  in tab %}
+                                  
                                         <!-- single-product-wrap start -->
                                         <div class=\"single-product-wrap\">
                                             <div class=\"product-image\">
@@ -2955,7 +2752,7 @@ class __TwigTemplate_4e48d8dd4d555f212b93ebfa2d93d1f7db33bef5af2008c8c91d249c5e1
                                                 <div class=\"product_desc_info\">
                                                     <div class=\"product-review\">
                                                         <h5 class=\"manufacturer\">
-                                                            <a href=\"product-details.html\">Graphic Corner</a>
+                                                            <a href=\"product-details.html\">{{ class.descProduit }}</a>
                                                         </h5>
                                                         <div class=\"rating-box\">
                                                             <ul class=\"rating\">
@@ -2967,14 +2764,14 @@ class __TwigTemplate_4e48d8dd4d555f212b93ebfa2d93d1f7db33bef5af2008c8c91d249c5e1
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                    <h4><a class=\"product_name\" href=\"single-product.html\">Accusantium dolorem1</a></h4>
+                                                    <h4><a class=\"product_name\" href=\"single-product.html\">{{ class.nomProduit }}</a></h4>
                                                     <div class=\"price-box\">
-                                                        <span class=\"new-price\">\$46.80</span>
+                                                        <span class=\"new-price\">{{ class.prixProduit }}</span>
                                                     </div>
                                                 </div>
                                                 <div class=\"add-actions\">
                                                     <ul class=\"add-actions-link\">
-                                                        <li class=\"add-cart active\"><a href=\"#\">Add to cart</a></li>
+                                                        <li class=\"add-cart active\"><a href=\"{{path(\"cart_add\",{id:class.id})}}\">Add to cart</a></li>
                                                         <li><a class=\"links-details\" href=\"single-product.html\"><i class=\"fa fa-heart-o\"></i></a></li>
                                                         <li><a class=\"quick-view\" data-toggle=\"modal\" data-target=\"#exampleModalCenter\" href=\"#\"><i class=\"fa fa-eye\"></i></a></li>
                                                     </ul>
@@ -2982,219 +2779,9 @@ class __TwigTemplate_4e48d8dd4d555f212b93ebfa2d93d1f7db33bef5af2008c8c91d249c5e1
                                             </div>
                                         </div>
                                         <!-- single-product-wrap end -->
-                                    </div>
-                                    <div class=\"col-lg-12\">
-                                        <!-- single-product-wrap start -->
-                                        <div class=\"single-product-wrap\">
-                                            <div class=\"product-image\">
-                                                <a href=\"single-product.html\">
-                                                    <img src=\"{{asset('images/product/large-size/2.jpg')}}\" alt=\"Li's Product Image\">
-                                                </a>
-                                                <span class=\"sticker\">New</span>
-                                            </div>
-                                            <div class=\"product_desc\">
-                                                <div class=\"product_desc_info\">
-                                                    <div class=\"product-review\">
-                                                        <h5 class=\"manufacturer\">
-                                                            <a href=\"product-details.html\">Studio Design</a>
-                                                        </h5>
-                                                        <div class=\"rating-box\">
-                                                            <ul class=\"rating\">
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li class=\"no-star\"><i class=\"fa fa-star-o\"></i></li>
-                                                                <li class=\"no-star\"><i class=\"fa fa-star-o\"></i></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <h4><a class=\"product_name\" href=\"single-product.html\">Mug Today is a good day</a></h4>
-                                                    <div class=\"price-box\">
-                                                        <span class=\"new-price new-price-2\">\$71.80</span>
-                                                        <span class=\"old-price\">\$77.22</span>
-                                                        <span class=\"discount-percentage\">-7%</span>
-                                                    </div>
-                                                </div>
-                                                <div class=\"add-actions\">
-                                                    <ul class=\"add-actions-link\">
-                                                        <li class=\"add-cart active\"><a href=\"#\">Add to cart</a></li>
-                                                        <li><a class=\"links-details\" href=\"single-product.html\"><i class=\"fa fa-heart-o\"></i></a></li>
-                                                        <li><a class=\"quick-view\" data-toggle=\"modal\" data-target=\"#exampleModalCenter\" href=\"#\"><i class=\"fa fa-eye\"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- single-product-wrap end -->
-                                    </div>
-                                    <div class=\"col-lg-12\">
-                                        <!-- single-product-wrap start -->
-                                        <div class=\"single-product-wrap\">
-                                            <div class=\"product-image\">
-                                                <a href=\"single-product.html\">
-                                                    <img src=\"{{asset('images/product/large-size/3.jpg')}}\" alt=\"Li's Product Image\">
-                                                </a>
-                                                <span class=\"sticker\">New</span>
-                                            </div>
-                                            <div class=\"product_desc\">
-                                                <div class=\"product_desc_info\">
-                                                    <div class=\"product-review\">
-                                                        <h5 class=\"manufacturer\">
-                                                            <a href=\"product-details.html\">Graphic Corner</a>
-                                                        </h5>
-                                                        <div class=\"rating-box\">
-                                                            <ul class=\"rating\">
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li class=\"no-star\"><i class=\"fa fa-star-o\"></i></li>
-                                                                <li class=\"no-star\"><i class=\"fa fa-star-o\"></i></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <h4><a class=\"product_name\" href=\"single-product.html\">Accusantium dolorem1</a></h4>
-                                                    <div class=\"price-box\">
-                                                        <span class=\"new-price\">\$46.80</span>
-                                                    </div>
-                                                </div>
-                                                <div class=\"add-actions\">
-                                                    <ul class=\"add-actions-link\">
-                                                        <li class=\"add-cart active\"><a href=\"#\">Add to cart</a></li>
-                                                        <li><a class=\"links-details\" href=\"single-product.html\"><i class=\"fa fa-heart-o\"></i></a></li>
-                                                        <li><a class=\"quick-view\" data-toggle=\"modal\" data-target=\"#exampleModalCenter\" href=\"#\"><i class=\"fa fa-eye\"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- single-product-wrap end -->
-                                    </div>
-                                    <div class=\"col-lg-12\">
-                                        <!-- single-product-wrap start -->
-                                        <div class=\"single-product-wrap\">
-                                            <div class=\"product-image\">
-                                                <a href=\"single-product.html\">
-                                                    <img src=\"{{asset('images/product/large-size/4.jpg')}}\" alt=\"Li's Product Image\">
-                                                </a>
-                                                <span class=\"sticker\">New</span>
-                                            </div>
-                                            <div class=\"product_desc\">
-                                                <div class=\"product_desc_info\">
-                                                    <div class=\"product-review\">
-                                                        <h5 class=\"manufacturer\">
-                                                            <a href=\"product-details.html\">Studio Design</a>
-                                                        </h5>
-                                                        <div class=\"rating-box\">
-                                                            <ul class=\"rating\">
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li class=\"no-star\"><i class=\"fa fa-star-o\"></i></li>
-                                                                <li class=\"no-star\"><i class=\"fa fa-star-o\"></i></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <h4><a class=\"product_name\" href=\"single-product.html\">Mug Today is a good day</a></h4>
-                                                    <div class=\"price-box\">
-                                                        <span class=\"new-price new-price-2\">\$71.80</span>
-                                                        <span class=\"old-price\">\$77.22</span>
-                                                        <span class=\"discount-percentage\">-7%</span>
-                                                    </div>
-                                                </div>
-                                                <div class=\"add-actions\">
-                                                    <ul class=\"add-actions-link\">
-                                                        <li class=\"add-cart active\"><a href=\"#\">Add to cart</a></li>
-                                                        <li><a class=\"links-details\" href=\"single-product.html\"><i class=\"fa fa-heart-o\"></i></a></li>
-                                                        <li><a class=\"quick-view\" data-toggle=\"modal\" data-target=\"#exampleModalCenter\" href=\"#\"><i class=\"fa fa-eye\"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- single-product-wrap end -->
-                                    </div>
-                                    <div class=\"col-lg-12\">
-                                        <!-- single-product-wrap start -->
-                                        <div class=\"single-product-wrap\">
-                                            <div class=\"product-image\">
-                                                <a href=\"single-product.html\">
-                                                    <img src=\"{{asset('images/product/large-size/5.jpg')}}\" alt=\"Li's Product Image\">
-                                                </a>
-                                                <span class=\"sticker\">New</span>
-                                            </div>
-                                            <div class=\"product_desc\">
-                                                <div class=\"product_desc_info\">
-                                                    <div class=\"product-review\">
-                                                        <h5 class=\"manufacturer\">
-                                                            <a href=\"product-details.html\">Graphic Corner</a>
-                                                        </h5>
-                                                        <div class=\"rating-box\">
-                                                            <ul class=\"rating\">
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li class=\"no-star\"><i class=\"fa fa-star-o\"></i></li>
-                                                                <li class=\"no-star\"><i class=\"fa fa-star-o\"></i></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <h4><a class=\"product_name\" href=\"single-product.html\">Accusantium dolorem1</a></h4>
-                                                    <div class=\"price-box\">
-                                                        <span class=\"new-price\">\$46.80</span>
-                                                    </div>
-                                                </div>
-                                                <div class=\"add-actions\">
-                                                    <ul class=\"add-actions-link\">
-                                                        <li class=\"add-cart active\"><a href=\"#\">Add to cart</a></li>
-                                                        <li><a class=\"links-details\" href=\"single-product.html\"><i class=\"fa fa-heart-o\"></i></a></li>
-                                                        <li><a class=\"quick-view\" data-toggle=\"modal\" data-target=\"#exampleModalCenter\" href=\"#\"><i class=\"fa fa-eye\"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- single-product-wrap end -->
-                                    </div>
-                                    <div class=\"col-lg-12\">
-                                        <!-- single-product-wrap start -->
-                                        <div class=\"single-product-wrap\">
-                                            <div class=\"product-image\">
-                                                <a href=\"single-product.html\">
-                                                    <img src=\"{{asset('images/product/large-size/6.jpg')}}\" alt=\"Li's Product Image\">
-                                                </a>
-                                                <span class=\"sticker\">New</span>
-                                            </div>
-                                            <div class=\"product_desc\">
-                                                <div class=\"product_desc_info\">
-                                                    <div class=\"product-review\">
-                                                        <h5 class=\"manufacturer\">
-                                                            <a href=\"product-details.html\">Studio Design</a>
-                                                        </h5>
-                                                        <div class=\"rating-box\">
-                                                            <ul class=\"rating\">
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li><i class=\"fa fa-star-o\"></i></li>
-                                                                <li class=\"no-star\"><i class=\"fa fa-star-o\"></i></li>
-                                                                <li class=\"no-star\"><i class=\"fa fa-star-o\"></i></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <h4><a class=\"product_name\" href=\"single-product.html\">Mug Today is a good day</a></h4>
-                                                    <div class=\"price-box\">
-                                                        <span class=\"new-price new-price-2\">\$71.80</span>
-                                                        <span class=\"old-price\">\$77.22</span>
-                                                        <span class=\"discount-percentage\">-7%</span>
-                                                    </div>
-                                                </div>
-                                                <div class=\"add-actions\">
-                                                    <ul class=\"add-actions-link\">
-                                                        <li class=\"add-cart active\"><a href=\"#\">Add to cart</a></li>
-                                                        <li><a class=\"links-details\" href=\"single-product.html\"><i class=\"fa fa-heart-o\"></i></a></li>
-                                                        <li><a class=\"quick-view\" data-toggle=\"modal\" data-target=\"#exampleModalCenter\" href=\"#\"><i class=\"fa fa-eye\"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- single-product-wrap end -->
-                                    </div>
-                                </div>
+                                   
+                                   
+                            {% endfor %}
                             </div>
                         </div>
                         <!-- Li's Section Area End Here -->
