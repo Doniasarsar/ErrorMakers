@@ -97,7 +97,7 @@ class FrontController extends AbstractController
     // on sauvgarde dans la session
     $session->set("panier", $panier);
     
-    return $this->redirecttoRoute("produit");
+    return $this->redirecttoRoute("home");
     }
 
     

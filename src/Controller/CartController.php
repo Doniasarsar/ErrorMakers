@@ -27,23 +27,23 @@ class CartController extends AbstractController
         $dataPanier = []; 
         $total = 0; 
 
-        foreach ($panier as $id => $quantiteProduit){
+        foreach ($panier as $id => $quantite){
             $produit = $produitrep->find($id);
             $dataPanier[] = [
                 "produit" => $produit,
-                "quantiteProduit" => $quantiteProduit  
+                "quantite" => $quantite  
             ];
         }
 
         foreach($dataPanier as $item)
         {
-            $totalItem = $item['produit']->getPrixProduit() * $item['quantiteProduit'];
+            $totalItem = $item['produit']->getPrixProduit() * $item['quantite'];
             $total += $totalItem ;
         }
         $quantitetotale = 0; 
         foreach($dataPanier as $item)
         {
-            $qtlItem = $item['quantiteProduit'];
+            $qtlItem = $item['quantite'];
             $quantitetotale += $qtlItem ;
         }
 
@@ -72,7 +72,7 @@ class CartController extends AbstractController
 
     $session->set("panier", $panier);
     
-    return $this->redirecttoRoute("cart_index");
+    return $this->redirecttoRoute("home");
 
     }
 

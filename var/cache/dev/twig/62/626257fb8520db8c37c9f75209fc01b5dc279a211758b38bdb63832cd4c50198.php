@@ -134,7 +134,7 @@ class __TwigTemplate_8c65080c38c3281c9b223ade91842c594df4c09f8fc2ceba35c45c4c096
                                             
                                             <span >";
             // line 48
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["element"], "quantiteProduit", [], "any", false, false, false, 48), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["element"], "quantite", [], "any", false, false, false, 48), "html", null, true);
             echo "</span>
                                         
                                             </div>
@@ -143,7 +143,7 @@ class __TwigTemplate_8c65080c38c3281c9b223ade91842c594df4c09f8fc2ceba35c45c4c096
                                     </td>
                                     <td class=\"product-subtotal\"><span class=\"amount\">";
             // line 54
-            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, $context["element"], "quantiteProduit", [], "any", false, false, false, 54) * twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["element"], "produit", [], "any", false, false, false, 54), "prixProduit", [], "any", false, false, false, 54)), "html", null, true);
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, $context["element"], "quantite", [], "any", false, false, false, 54) * twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["element"], "produit", [], "any", false, false, false, 54), "prixProduit", [], "any", false, false, false, 54)), "html", null, true);
             echo "\$</span></td>
                                 </tr>
                                 ";
@@ -278,13 +278,13 @@ class __TwigTemplate_8c65080c38c3281c9b223ade91842c594df4c09f8fc2ceba35c45c4c096
                                         <a href=\"{{path(\"cart_add\",{id: element.produit.id})}}\"><i class=\"fa fa-angle-up\" style=\"font-size:28px\"></i></a>
                                         <div>
                                             
-                                            <span >{{ element.quantiteProduit}}</span>
+                                            <span >{{ element.quantite}}</span>
                                         
                                             </div>
                                            
                                         </div>
                                     </td>
-                                    <td class=\"product-subtotal\"><span class=\"amount\">{{ element.quantiteProduit * element.produit.prixProduit }}\$</span></td>
+                                    <td class=\"product-subtotal\"><span class=\"amount\">{{ element.quantite * element.produit.prixProduit }}\$</span></td>
                                 </tr>
                                 {% else %}
                                 <td colspan=\"5\" class=\"text-center\">Votre Panier est vide</td>
