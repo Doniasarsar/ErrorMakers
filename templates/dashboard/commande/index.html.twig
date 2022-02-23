@@ -44,11 +44,13 @@
                     <th>Date commande</th>
                     <th>Etat Commande</th>
                     <th>Mode Paiement</th>
+                    <th>Les produits achetés </th>
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
                       {% for class in tab %}
+                    
                   <tr>
                     <td>{{ class.nomClient}}</td>
                     <td>{{ class.prenomClient}}</td>
@@ -69,12 +71,25 @@
                     <td>Par Cash </td>
                     {% endif %}
                     <td>
+                      {% for des in tab1 %}
+                      {% if des.commande.id == class.id %}
+                      *{{ des.produit.descProduit  }} <br>
+                      {% endif %}
+                      {% endfor %}
+
+                    </td> 
+                    <td>
                         <a class="btn btn-info" href="{{path('adminmodif',{id : class.id })}}">Modifier</a>
                         <a class="btn btn-warning"  href="{{path('adminsupp',{id : class.id })}}">Supprimer</a>
                          
-                    </td>                  
+                    </td> 
+      
+                 
+                      
+                             
                   </tr>
                   {% endfor %}
+             
                   </tbody>
                 </table>
               </div>

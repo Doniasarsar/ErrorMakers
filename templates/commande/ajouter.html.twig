@@ -60,17 +60,20 @@
                             <div class="col-md-6">
                                 <div class="checkout-form-list">
                                     <label>First Name <span class="required">*</span></label>
-                                    {{ form_widget(formA.nomClient, {attr: { value : app.user.Nom ,readonly:true }}) }} 
-                                    {{ form_errors(formA.nomClient, {attr: { value : app.user.Nom ,readonly:true }}) }} 
-                                    
+                                 {#   {{ form_widget(formA.nomClient, {attr: { value : uti.nom ,readonly:true }}) }} 
+                                    {{ form_errors(formA.nomClient, {attr: { value : uti.nom ,readonly:true }}) }} #}
+                                    {{ form_widget(formA.nomClient) }} 
+                                    {{ form_errors(formA.nomClient)}} 
 
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="checkout-form-list">
                                     <label>Last Name <span class="required">*</span></label>
-                                    {{ form_widget(formA.prenomClient, {attr: { value : app.user.Prenom ,readonly:true }}) }}
-                                    {{ form_errors(formA.prenomClient, {attr: { value : app.user.Prenom ,readonly:true }}) }}
+                                  {#  {{ form_widget(formA.prenomClient, {attr: { value : uti.prenom ,readonly:true }}) }}
+                                    {{ form_errors(formA.prenomClient, {attr: { value : uti.prenom ,readonly:true }}) }} #}
+                                    {{ form_widget(formA.prenomClient) }}
+                                    {{ form_errors(formA.prenomClient) }}
 
                                 </div>
                             </div>
@@ -126,6 +129,7 @@
                                 </div>
                             </div>
                             {{form_widget(formA.etatCommande , {'value':0 ,'type':'hidden'})}}
+
                             {{ form_end(formA) }}
                             <div class="col-md-12">
                                 <div class="checkout-form-list create-acc">
@@ -171,8 +175,8 @@
                             <tbody>
                                 {% for element in elements %}
                                 <tr class="cart_item">
-                                  <td class="cart-product-name"> <strong class="product-quantity">{{ element.produit.nomProduit }} </strong></td>
-                                  <td class="cart-product-total"><span class="amount">{{ element.quantiteProduit * element.produit.prixProduit }}$</span></td>  
+                                  <td class="cart-product-name"> <strong class="product-quantity">{{ element.produit.descProduit }} </strong></td>
+                                  <td class="cart-product-total"><span class="amount">{{ element.quantite * element.produit.prixProduit }}$</span></td>  
                                 </tr>
                                
                                 {% endfor %}
@@ -248,5 +252,3 @@
 </div>
 <!--Checkout Area End-->
 {% endblock %}
- 
-

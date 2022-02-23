@@ -212,9 +212,12 @@ class Utilisateurs implements UserInterface
     {
         return $this->Email;
     }
+    
     public function eraseCredentials(){}
+
     public function getSalt(){}
 
+   
     public function getBoutique(): ?Boutique
     {
         return $this->boutique;

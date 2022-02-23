@@ -1,3 +1,7 @@
 <?php //%5BC%5DApp%255CEntity%255CProduit
 
+<<<<<<< HEAD
 return [PHP_INT_MAX, 1645525476];
+=======
+return [PHP_INT_MAX, 1645140345];
+>>>>>>> main

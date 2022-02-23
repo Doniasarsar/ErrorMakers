@@ -1,3 +1,19 @@
 <?php //%5BC%5DApp%255CEntity%255CCommande%2524id
 
+<<<<<<< HEAD
 return [PHP_INT_MAX, 1645525710];
+=======
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+return [PHP_INT_MAX, 1645140345];
+=======
+return [PHP_INT_MAX, 1645612116];
+>>>>>>> Stashed changes
+=======
+return [PHP_INT_MAX, 1645612116];
+>>>>>>> Stashed changes
+=======
+return [PHP_INT_MAX, 1645612116];
+>>>>>>> Stashed changes
+>>>>>>> main

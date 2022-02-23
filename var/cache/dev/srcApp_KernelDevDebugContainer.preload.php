@@ -10,7 +10,23 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).'/vendor/autoload.php';
+<<<<<<< HEAD
 require __DIR__.'/ContainerNQ18nAJ/srcApp_KernelDevDebugContainer.php';
+=======
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+require __DIR__.'/ContainerC732Tjx/srcApp_KernelDevDebugContainer.php';
+=======
+require __DIR__.'/ContainerQDAdCkc/srcApp_KernelDevDebugContainer.php';
+>>>>>>> Stashed changes
+=======
+require __DIR__.'/ContainerQDAdCkc/srcApp_KernelDevDebugContainer.php';
+>>>>>>> Stashed changes
+=======
+require __DIR__.'/ContainerQDAdCkc/srcApp_KernelDevDebugContainer.php';
+>>>>>>> Stashed changes
+>>>>>>> main
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -39,16 +55,19 @@ $classes[] = 'App\Controller\CommandeController';
 $classes[] = 'App\Controller\DemandeController';
 $classes[] = 'App\Controller\FrontController';
 $classes[] = 'App\Controller\LigneCommandeController';
+$classes[] = 'App\Controller\LivraisonControlleur';
 $classes[] = 'App\Controller\UtilisateursController';
 $classes[] = 'App\Form\ActeurType';
 $classes[] = 'App\Form\CommandeType';
 $classes[] = 'App\Form\EditUtilisateursType';
+$classes[] = 'App\Form\LivraisonType';
 $classes[] = 'App\Form\UtilisateursType';
 $classes[] = 'App\Repository\BoutiquesRepository';
 $classes[] = 'App\Repository\CommandeRepository';
 $classes[] = 'App\Repository\DemandesRepository';
 $classes[] = 'App\Repository\ImagesRepository';
 $classes[] = 'App\Repository\LigneCommandeRepository';
+$classes[] = 'App\Repository\LivraisonRepository';
 $classes[] = 'App\Repository\LivraisonsRepository';
 $classes[] = 'App\Repository\ProduitRepository';
 $classes[] = 'App\Repository\UtilisateursRepository';

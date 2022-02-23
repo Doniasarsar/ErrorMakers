@@ -32,14 +32,33 @@ return [
     'admincommande' => [[], ['_controller' => 'App\\Controller\\CommandeController::afficher'], [], [['text', '/admin/affcommande']], [], []],
     'adminsupp' => [['id'], ['_controller' => 'App\\Controller\\CommandeController::supprimercommande'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/suppcommande']], [], []],
     'adminmodif' => [['id'], ['_controller' => 'App\\Controller\\CommandeController::modifiercommande'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/modifcommande']], [], []],
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     'commande4' => [[], ['_controller' => 'App\\Controller\\CommandeController::ajoutercommande4'], [], [['text', '/commande4']], [], []],
+<<<<<<< HEAD
     'demande' => [[], ['_controller' => 'App\\Controller\\DemandeController::index'], [], [['text', '/demande']], [], []],
     'acteurSAdd' => [[], ['_controller' => 'App\\Controller\\DemandeController::AddActeur'], [], [['text', '/demande/addActeur']], [], []],
+=======
+=======
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+    'demande' => [[], ['_controller' => 'App\\Controller\\DemandeController::index'], [], [['text', '/demande']], [], []],
+    'acteurSAdd' => [[], ['_controller' => 'App\\Controller\\DemandeController::AddActeur'], [], [['text', '/demande/addActeur']], [], []],
+>>>>>>> Stashed changes
+>>>>>>> main
     'home' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/home']], [], []],
     'produit' => [[], ['_controller' => 'App\\Controller\\FrontController::afficher'], [], [['text', '/produit']], [], []],
     'delete1' => [['id'], ['_controller' => 'App\\Controller\\FrontController::delete1'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/delete1']], [], []],
     'ligne_commande' => [[], ['_controller' => 'App\\Controller\\LigneCommandeController::index'], [], [['text', '/ligne/commande']], [], []],
     'adminlignesupp' => [['id'], ['_controller' => 'App\\Controller\\LigneCommandeController::supprimercommande'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/suppligne']], [], []],
+    'livraison_controlleur' => [[], ['_controller' => 'App\\Controller\\LivraisonControlleur::index'], [], [['text', '/livraison/controlleur']], [], []],
+    'r_list' => [[], ['_controller' => 'App\\Controller\\LivraisonControlleur::afficher'], [], [['text', '/livraison/list']], [], []],
+    'r_delete' => [['id'], ['_controller' => 'App\\Controller\\LivraisonControlleur::Supprimer'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/livraison/delete']], [], []],
+    'r_add' => [[], ['_controller' => 'App\\Controller\\LivraisonControlleur::Add'], [], [['text', '/livraison/add']], [], []],
+    'r_update' => [['id'], ['_controller' => 'App\\Controller\\LivraisonControlleur::Update'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/livraison/update']], [], []],
     'utilisateurs' => [[], ['_controller' => 'App\\Controller\\UtilisateursController::index'], [], [['text', '/utilisateurs']], [], []],
     'userAdd' => [[], ['_controller' => 'App\\Controller\\UtilisateursController::AddUser'], [], [['text', '/utilisateurs/add']], [], []],
     'userupdate' => [['id'], ['_controller' => 'App\\Controller\\UtilisateursController::Update'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/utilisateurs/update']], [], []],

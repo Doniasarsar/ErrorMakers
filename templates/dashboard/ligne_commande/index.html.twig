@@ -36,17 +36,21 @@
                   <thead>
                   <tr>
                     <th>Id Ligne Commande</th>
-                    <th>Id  Produit</th>
                     <th>Id Commande</th>
+                    <th>Id  Produit</th>
+                    <th>Quantite Produit</th>
+                    <th>Nom Produit</th>
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
                       {% for class in tab %}
                   <tr>
-                    <td>{{ class.id}}</td>
-                    <td>{{ class.idProduit}}</td>
-                    <td>{{ class.idCommande}}</td>
+                    <td>{{ class.id }}</td>
+                    <td>{{ class.commande.id }}</td>
+                    <td>{{ class.produit.id}}</td>
+                    <td>{{ class.quantite}}</td>
+                    <td>{{ class.produit.descProduit}}</td>
                     <td>
                         <a class="btn btn-warning"  href="{{path('adminlignesupp',{id : class.id })}}">Supprimer</a>
                          

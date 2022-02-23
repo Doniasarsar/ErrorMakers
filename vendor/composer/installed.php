@@ -1,7 +1,7 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,8 +11,8 @@
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -74,12 +74,12 @@
             'dev_requirement' => false,
         ),
         'doctrine/doctrine-bundle' => array(
-            'pretty_version' => '2.5.5',
-            'version' => '2.5.5.0',
+            'pretty_version' => '2.5.6',
+            'version' => '2.5.6.0',
             'type' => 'symfony-bundle',
             'install_path' => __DIR__ . '/../doctrine/doctrine-bundle',
             'aliases' => array(),
-            'reference' => '5c086cbbe5327937dd6f90da075f7d421b0f28bc',
+            'reference' => 'f1423b2a640b6ac545b6e0c02575427a4dc1e9dc',
             'dev_requirement' => false,
         ),
         'doctrine/doctrine-migrations-bundle' => array(
@@ -786,12 +786,12 @@
             'dev_requirement' => false,
         ),
         'symfony/flex' => array(
-            'pretty_version' => 'v1.18.3',
-            'version' => '1.18.3.0',
+            'pretty_version' => 'v1.18.4',
+            'version' => '1.18.4.0',
             'type' => 'composer-plugin',
             'install_path' => __DIR__ . '/../symfony/flex',
             'aliases' => array(),
-            'reference' => 'd40a6b176b70ea323af2b08507319d1c417520fd',
+            'reference' => '910a5c5ac35b58c9faddc992f56ad7a931d1e064',
             'dev_requirement' => false,
         ),
         'symfony/form' => array(
