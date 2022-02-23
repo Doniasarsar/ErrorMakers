@@ -68,7 +68,7 @@ class ReponseController extends AbstractController
 
 
         $idReclamation=$rep->find($id); 
-        
+        $em=$this->getDoctrine()->getManager();
         $reponses= new Reponse();
         $reponses->setCreatedAt(new \DateTimeImmutable());
         $recl->setEtat('Résolue');

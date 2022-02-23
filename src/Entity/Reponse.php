@@ -21,7 +21,6 @@ class Reponse
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\Length(max=100)
      * @Assert\NotBlank()
      */
     private $subject;
@@ -29,7 +28,6 @@ class Reponse
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank()
-     * @Assert\Length(min=10)
      */
     private $message;
 
@@ -41,15 +39,11 @@ class Reponse
 
     /**
      * @ORM\Column(type="datetime_immutable")
-     * @Assert\Date
-     * @Assert\NotBlank()
-
      */
     private $createdAt;
 
     /**
      * @ORM\OneToOne(targetEntity=Reclamation::class, inversedBy="reponse", cascade={"persist", "remove"})
-     * @Assert\NotBlank()
      */
     private $reclamation;
 

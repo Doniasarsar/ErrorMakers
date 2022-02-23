@@ -72,10 +72,10 @@ class __TwigTemplate_a967a83c03297d3708ec267eda6a69a79d8d728bbaa2ae403c021456650
                 <div class=\"li-blog-blockquote\">
                     <h3 class=\"li-blog-heading pt-25\"><a href=\"#\">The Response</a></h3>
                     <blockquote>
-                        <p><h4>";
+                        <p><h6>";
         // line 11
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["tab"]) || array_key_exists("tab", $context) ? $context["tab"] : (function () { throw new RuntimeError('Variable "tab" does not exist.', 11, $this->source); })()), "message", [], "any", false, false, false, 11), "html", null, true);
-        echo "</h4></p>
+        echo "</h6></p>
                     </blockquote>
                 </div>
             <!-- Blog Blockquote Area End Here -->
@@ -120,7 +120,7 @@ class __TwigTemplate_a967a83c03297d3708ec267eda6a69a79d8d728bbaa2ae403c021456650
                 <div class=\"li-blog-blockquote\">
                     <h3 class=\"li-blog-heading pt-25\"><a href=\"#\">The Response</a></h3>
                     <blockquote>
-                        <p><h4>{{tab.message}}</h4></p>
+                        <p><h6>{{tab.message}}</h6></p>
                     </blockquote>
                 </div>
             <!-- Blog Blockquote Area End Here -->
