@@ -64,7 +64,7 @@ class VehiculeController extends AbstractController
   * @param $id
   * @param VehiculeRepository $rep
   * @return Reponse
-  * @Route("/vehicule/delete/{id}", name="voi_delete")
+  * @Route("/voiture/delete/{id}", name="voi_delete")
   */
 
  public function SupprimerVoiture($id,VehiculeRepository $rep){
@@ -79,7 +79,7 @@ class VehiculeController extends AbstractController
   * @param $id
   * @param VehiculeRepository $rep
   * @return Reponse
-  * @Route("/vehicule/delete/{id}", name="mot_delete")
+  * @Route("/moto/delete/{id}", name="mot_delete")
   */
 
   public function SupprimerMoto($id,VehiculeRepository $rep){
@@ -94,7 +94,7 @@ class VehiculeController extends AbstractController
   * @param $id
   * @param VehiculeRepository $rep
   * @return Reponse
-  * @Route("/vehicule/delete/{id}", name="cam_delete")
+  * @Route("/camion/delete/{id}", name="cam_delete")
   */
 
   public function SupprimerCamion($id,VehiculeRepository $rep){

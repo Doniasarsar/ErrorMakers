@@ -33,7 +33,7 @@ class __TwigTemplate_4e48d8dd4d555f212b93ebfa2d93d1f7db33bef5af2008c8c91d249c5e1
     protected function doGetParent(array $context)
     {
         // line 1
-        return "baseFront.html.twig";
+        return "baseCart.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -45,7 +45,7 @@ class __TwigTemplate_4e48d8dd4d555f212b93ebfa2d93d1f7db33bef5af2008c8c91d249c5e1
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "front/home.html.twig"));
 
-        $this->parent = $this->loadTemplate("baseFront.html.twig", "front/home.html.twig", 1);
+        $this->parent = $this->loadTemplate("baseCart.html.twig", "front/home.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -1125,7 +1125,7 @@ class __TwigTemplate_4e48d8dd4d555f212b93ebfa2d93d1f7db33bef5af2008c8c91d249c5e1
                                                     <ul class=\"add-actions-link\">
                                                         <li class=\"add-cart active\"><a href=\"";
             // line 959
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cart_add", ["id" => twig_get_attribute($this->env, $this->source, $context["class"], "id", [], "any", false, false, false, 959)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cart_add1", ["id" => twig_get_attribute($this->env, $this->source, $context["class"], "id", [], "any", false, false, false, 959)]), "html", null, true);
             echo "\">Add to cart</a></li>
                                                         <li><a class=\"links-details\" href=\"single-product.html\"><i class=\"fa fa-heart-o\"></i></a></li>
                                                         <li><a class=\"quick-view\" data-toggle=\"modal\" data-target=\"#exampleModalCenter\" href=\"#\"><i class=\"fa fa-eye\"></i></a></li>
@@ -1813,7 +1813,7 @@ class __TwigTemplate_4e48d8dd4d555f212b93ebfa2d93d1f7db33bef5af2008c8c91d249c5e1
 
     public function getSourceContext()
     {
-        return new Source("{% extends \"baseFront.html.twig\" %}
+        return new Source("{% extends \"baseCart.html.twig\" %}
 {% block title %}<title>ProTECH|Home</title>{% endblock %}
     {% block body %}
     <body>
@@ -2771,7 +2771,7 @@ class __TwigTemplate_4e48d8dd4d555f212b93ebfa2d93d1f7db33bef5af2008c8c91d249c5e1
                                                 </div>
                                                 <div class=\"add-actions\">
                                                     <ul class=\"add-actions-link\">
-                                                        <li class=\"add-cart active\"><a href=\"{{path(\"cart_add\",{id:class.id})}}\">Add to cart</a></li>
+                                                        <li class=\"add-cart active\"><a href=\"{{path(\"cart_add1\",{id:class.id})}}\">Add to cart</a></li>
                                                         <li><a class=\"links-details\" href=\"single-product.html\"><i class=\"fa fa-heart-o\"></i></a></li>
                                                         <li><a class=\"quick-view\" data-toggle=\"modal\" data-target=\"#exampleModalCenter\" href=\"#\"><i class=\"fa fa-eye\"></i></a></li>
                                                     </ul>

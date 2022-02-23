@@ -22,7 +22,7 @@ class ReclamationType extends AbstractType
             ->add('message', TextareaType::class)
             ->add('type', choiceType::class, [
                 'choices' => [
-                    "" =>"",
+                   
                     "Hardware" => "Hardware",
                     "Software" => "Software",
                     "Reparation" => "Reparation"
