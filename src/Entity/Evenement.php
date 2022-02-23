@@ -45,15 +45,22 @@ class Evenement
     private $adresse;
 
     /**
+     
+     
      * @ORM\Column(type="datetime")
      * @Assert\NotBlank(message="date is required")
+     * @var string A "Y-m-d H:i:s" formatted value
+     * @Assert\GreaterThanOrEqual("today")
 
      */
     private $date;
 
     /**
+ 
      * @ORM\Column(type="datetime")
      * @Assert\NotBlank(message="datefin is required")
+     * @var string A "Y-m-d H:i:s" formatted value
+     * @Assert\GreaterThanOrEqual(propertyPath="date", message="La date du fin doit être supérieure à la date début")
 
      */
     private $datefin;

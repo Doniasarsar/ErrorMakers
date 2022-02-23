@@ -77,7 +77,10 @@ class __TwigTemplate_2311cedc065196a3fd58ab6598078f972770a05b8559831f5bc747581cd
           </div>
           <div class=\"col-sm-6\">
             <ol class=\"breadcrumb float-sm-right\">
-              <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>
+              <li class=\"breadcrumb-item\"><a href=\"";
+        // line 15
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
+        echo "\">Home</a></li>
               <li class=\"breadcrumb-item active\">Liste des Evenements</li>
             </ol>
           </div>
@@ -305,7 +308,7 @@ class __TwigTemplate_2311cedc065196a3fd58ab6598078f972770a05b8559831f5bc747581cd
 
     public function getDebugInfo()
     {
-        return array (  266 => 105,  262 => 104,  258 => 103,  254 => 102,  250 => 101,  246 => 100,  242 => 99,  238 => 98,  234 => 97,  230 => 96,  226 => 95,  222 => 94,  216 => 91,  206 => 90,  179 => 71,  166 => 64,  162 => 63,  158 => 62,  153 => 60,  149 => 59,  145 => 58,  141 => 57,  137 => 56,  133 => 55,  129 => 54,  126 => 53,  122 => 52,  102 => 35,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  269 => 105,  265 => 104,  261 => 103,  257 => 102,  253 => 101,  249 => 100,  245 => 99,  241 => 98,  237 => 97,  233 => 96,  229 => 95,  225 => 94,  219 => 91,  209 => 90,  182 => 71,  169 => 64,  165 => 63,  161 => 62,  156 => 60,  152 => 59,  148 => 58,  144 => 57,  140 => 56,  136 => 55,  132 => 54,  129 => 53,  125 => 52,  105 => 35,  82 => 15,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -324,7 +327,7 @@ class __TwigTemplate_2311cedc065196a3fd58ab6598078f972770a05b8559831f5bc747581cd
           </div>
           <div class=\"col-sm-6\">
             <ol class=\"breadcrumb float-sm-right\">
-              <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>
+              <li class=\"breadcrumb-item\"><a href=\"{{path('admin')}}\">Home</a></li>
               <li class=\"breadcrumb-item active\">Liste des Evenements</li>
             </ol>
           </div>
