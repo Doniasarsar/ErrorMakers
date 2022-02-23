@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* dashboard/userslist.html.twig */
+/* /dashboard/userslist.html.twig */
 class __TwigTemplate_2850a1a946970ecf47e4c8b2c0cabc86435adf3fd3f555748ec4a4f95c6662be extends Template
 {
     private $source;
@@ -40,12 +40,12 @@ class __TwigTemplate_2850a1a946970ecf47e4c8b2c0cabc86435adf3fd3f555748ec4a4f95c6
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "dashboard/userslist.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/dashboard/userslist.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "dashboard/userslist.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/dashboard/userslist.html.twig"));
 
-        $this->parent = $this->loadTemplate("baseBack.html.twig", "dashboard/userslist.html.twig", 1);
+        $this->parent = $this->loadTemplate("baseBack.html.twig", "/dashboard/userslist.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -314,7 +314,7 @@ $context["role"], "ROLE_LIV"))) {
 
     public function getTemplateName()
     {
-        return "dashboard/userslist.html.twig";
+        return "/dashboard/userslist.html.twig";
     }
 
     public function isTraitable()
@@ -456,6 +456,6 @@ $context["role"], "ROLE_LIV"))) {
   });
 </script>
 
-{% endblock %}", "dashboard/userslist.html.twig", "/Users/skanderzouaoui/Documents/ErrorMakers-3A45/templates/dashboard/userslist.html.twig");
+{% endblock %}", "/dashboard/userslist.html.twig", "/Users/skanderzouaoui/Documents/ErrorMakers-3A45/templates/dashboard/userslist.html.twig");
     }
 }

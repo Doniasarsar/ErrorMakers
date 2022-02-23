@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).'/vendor/autoload.php';
-require __DIR__.'/Container8GpsqD1/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerVIwbzIl/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -40,12 +40,20 @@ $classes[] = 'App\Controller\DemandeController';
 $classes[] = 'App\Controller\FrontController';
 $classes[] = 'App\Controller\LigneCommandeController';
 $classes[] = 'App\Controller\LivraisonControlleur';
+$classes[] = 'App\Controller\ReclamationController';
+$classes[] = 'App\Controller\ReponseController';
 $classes[] = 'App\Controller\UtilisateursController';
+$classes[] = 'App\Controller\VehiculeController';
 $classes[] = 'App\Form\ActeurType';
+$classes[] = 'App\Form\CamionType';
 $classes[] = 'App\Form\CommandeType';
 $classes[] = 'App\Form\EditUtilisateursType';
 $classes[] = 'App\Form\LivraisonType';
+$classes[] = 'App\Form\MotoType';
+$classes[] = 'App\Form\ReclamationType';
+$classes[] = 'App\Form\ReponseType';
 $classes[] = 'App\Form\UtilisateursType';
+$classes[] = 'App\Form\VoitureType';
 $classes[] = 'App\Repository\BoutiquesRepository';
 $classes[] = 'App\Repository\CommandeRepository';
 $classes[] = 'App\Repository\DemandesRepository';
@@ -54,7 +62,10 @@ $classes[] = 'App\Repository\LigneCommandeRepository';
 $classes[] = 'App\Repository\LivraisonRepository';
 $classes[] = 'App\Repository\LivraisonsRepository';
 $classes[] = 'App\Repository\ProduitRepository';
+$classes[] = 'App\Repository\ReclamationRepository';
+$classes[] = 'App\Repository\ReponseRepository';
 $classes[] = 'App\Repository\UtilisateursRepository';
+$classes[] = 'App\Repository\VehiculeRepository';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Dbal\ManagerRegistryAwareConnectionProvider';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Registry';

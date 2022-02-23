@@ -28,7 +28,7 @@
 
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable with default features</h3>
+                <h3 class="card-title">Livraison</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -36,23 +36,47 @@
                   <thead>
                   <tr>
                     <th>ID</th>
-                    <th>numLivraison</th>
+                   
                     <th>etatLivraison</th>
                     <th>dateLivraison</th>
-                    <th>idLivreur</th>
-                    <th>idCommande</th>
+                  <th>adresseCommande</th>
+                     <th>PrixLivraison</th>
+                      <th>Livreur</th>
+                      <th>Vehicule</th>
+                      
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
                       {% for class in tab %}
-     <tr>
-     <td>{{class.id}}</td>
-      <td>{{class.numLivraison}}</td>
-        <td>{{class.etatLivraison}}</td>
-          <td>{{class.dateLivraison|date('Y-m-d H:i:s')}}</td>
-            <td>{{class.idLivreur}}</td>
-               <td>{{class.idLivraison}}</td>
+                  <tr>
+                  <td>{{class.id}}</td>
+      
+       
+                  {% if class.etatLivraison == 1 %}
+                    <td>Livrée </td>
+                    {% else %}
+                    <td>Non Livrée </td>
+                    {% endif %}
+               <td>{{class.dateLivraison|date('Y-m-d')}}</td>
+                  <td>{{class.Commande.adresse}}</td>
+               
+
+           
+               
+                <td>{{class.PrixLivraison}}</td>
+              
+                 
+                     
+                     
+                    <td>{{class.livreur.Email }} </td>
+                     <td>{{class.Vehicule.getVehicule() }} </td>
+           
+
+                     
+                    
+                   
+               
                 <td><a  class="btn btn-warning" href="{{path("r_delete",{'id':class.id}) }}">Delete</a>
                 <a class="btn btn-info" href="{{path("r_update",{'id':class.id}) }}">Update</a></td>
     

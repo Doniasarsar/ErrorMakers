@@ -253,147 +253,60 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
                                         <li><a href=\"";
         // line 228
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
-        echo "\">Home</a></li>     
-                                           <li class=\"megamenu-holder\"><a href=\"shop-left-sidebar.html\">Shop</a>
-                                               <ul class=\"megamenu hb-megamenu\">
-                                                   <li><a href=\"shop-left-sidebar.html\">Shop Page Layout</a>
-                                                       <ul>
-                                                           <li><a href=\"shop-3-column.html\">Shop 3 Column</a></li>
-                                                           <li><a href=\"shop-4-column.html\">Shop 4 Column</a></li>
-                                                           <li><a href=\"shop-left-sidebar.html\">Shop Left Sidebar</a></li>
-                                                           <li><a href=\"shop-right-sidebar.html\">Shop Right Sidebar</a></li>
-                                                           <li><a href=\"shop-list.html\">Shop List</a></li>
-                                                           <li><a href=\"shop-list-left-sidebar.html\">Shop List Left Sidebar</a></li>
-                                                           <li><a href=\"shop-list-right-sidebar.html\">Shop List Right Sidebar</a></li>
-                                                       </ul>
-                                                   </li>
-                                                   <li><a href=\"single-product-gallery-left.html\">Single Product Style</a>
-                                                       <ul>
-                                                           <li><a href=\"single-product-carousel.html\">Single Product Carousel</a></li>
-                                                           <li><a href=\"single-product-gallery-left.html\">Single Product Gallery Left</a></li>
-                                                           <li><a href=\"single-product-gallery-right.html\">Single Product Gallery Right</a></li>
-                                                           <li><a href=\"single-product-tab-style-top.html\">Single Product Tab Style Top</a></li>
-                                                           <li><a href=\"single-product-tab-style-left.html\">Single Product Tab Style Left</a></li>
-                                                           <li><a href=\"single-product-tab-style-right.html\">Single Product Tab Style Right</a></li>
-                                                       </ul>
-                                                   </li>
-                                                   <li><a href=\"single-product.html\">Single Products</a>
-                                                       <ul>
-                                                           <li><a href=\"single-product.html\">Single Product</a></li>
-                                                           <li><a href=\"single-product-sale.html\">Single Product Sale</a></li>
-                                                           <li><a href=\"single-product-group.html\">Single Product Group</a></li>
-                                                           <li><a href=\"single-product-normal.html\">Single Product Normal</a></li>
-                                                           <li><a href=\"single-product-affiliate.html\">Single Product Affiliate</a></li>
-                                                       </ul>
-                                                   </li>
-                                               </ul>
-                                           </li>
-                                           <li class=\"dropdown-holder\"><a href=\"blog-left-sidebar.html\">Blog</a>
-                                               <ul class=\"hb-dropdown\">
-                                                   <li class=\"sub-dropdown-holder\"><a href=\"blog-left-sidebar.html\">Blog Grid View</a>
-                                                       <ul class=\"hb-dropdown hb-sub-dropdown\">
-                                                           <li><a href=\"blog-2-column.html\">Blog 2 Column</a></li>
-                                                           <li><a href=\"blog-3-column.html\">Blog 3 Column</a></li>
-                                                           <li><a href=\"blog-left-sidebar.html\">Grid Left Sidebar</a></li>
-                                                           <li><a href=\"blog-right-sidebar.html\">Grid Right Sidebar</a></li>
-                                                       </ul>
-                                                   </li>
-                                                   <li class=\"sub-dropdown-holder\"><a href=\"blog-list-left-sidebar.html\">Blog List View</a>
-                                                       <ul class=\"hb-dropdown hb-sub-dropdown\">
-                                                           <li><a href=\"blog-list.html\">Blog List</a></li>
-                                                           <li><a href=\"blog-list-left-sidebar.html\">List Left Sidebar</a></li>
-                                                           <li><a href=\"blog-list-right-sidebar.html\">List Right Sidebar</a></li>
-                                                       </ul>
-                                                   </li>
-                                                   <li class=\"sub-dropdown-holder\"><a href=\"blog-details-left-sidebar.html\">Blog Details</a>
-                                                       <ul class=\"hb-dropdown hb-sub-dropdown\">
-                                                           <li><a href=\"blog-details-left-sidebar.html\">Left Sidebar</a></li>
-                                                           <li><a href=\"blog-details-right-sidebar.html\">Right Sidebar</a></li>
-                                                       </ul>
-                                                   </li>
-                                                   <li class=\"sub-dropdown-holder\"><a href=\"blog-gallery-format.html\">Blog Format</a>
-                                                       <ul class=\"hb-dropdown hb-sub-dropdown\">
-                                                           <li><a href=\"blog-audio-format.html\">Blog Audio Format</a></li>
-                                                           <li><a href=\"blog-video-format.html\">Blog Video Format</a></li>
-                                                           <li><a href=\"blog-gallery-format.html\">Blog Gallery Format</a></li>
-                                                       </ul>
-                                                   </li>
-                                               </ul>
-                                           </li>
-                                           <li class=\"megamenu-static-holder\"><a href=\"index.html\">Pages</a>
-                                               <ul class=\"megamenu hb-megamenu\">
-                                                   <li><a href=\"blog-left-sidebar.html\">Blog Layouts</a>
-                                                       <ul>
-                                                           <li><a href=\"blog-2-column.html\">Blog 2 Column</a></li>
-                                                           <li><a href=\"blog-3-column.html\">Blog 3 Column</a></li>
-                                                           <li><a href=\"blog-left-sidebar.html\">Grid Left Sidebar</a></li>
-                                                           <li><a href=\"blog-right-sidebar.html\">Grid Right Sidebar</a></li>
-                                                           <li><a href=\"blog-list.html\">Blog List</a></li>
-                                                           <li><a href=\"blog-list-left-sidebar.html\">List Left Sidebar</a></li>
-                                                           <li><a href=\"blog-list-right-sidebar.html\">List Right Sidebar</a></li>
-                                                       </ul>
-                                                   </li>
-                                                   <li><a href=\"blog-details-left-sidebar.html\">Blog Details Pages</a>
-                                                       <ul>
-                                                           <li><a href=\"blog-details-left-sidebar.html\">Left Sidebar</a></li>
-                                                           <li><a href=\"blog-details-right-sidebar.html\">Right Sidebar</a></li>
-                                                           <li><a href=\"blog-audio-format.html\">Blog Audio Format</a></li>
-                                                           <li><a href=\"blog-video-format.html\">Blog Video Format</a></li>
-                                                           <li><a href=\"blog-gallery-format.html\">Blog Gallery Format</a></li>
-                                                       </ul>
-                                                   </li>
-                                                   <li><a href=\"index.html\">Other Pages</a>
-                                                       <ul>
-                                                           <li><a href=\"login-register.html\">My Account</a></li>
-                                                           <li><a href=\"checkout.html\">Checkout</a></li>
-                                                           <li><a href=\"compare.html\">Compare</a></li>
-                                                           <li><a href=\"wishlist.html\">Wishlist</a></li>
-                                                           <li><a href=\"shopping-cart.html\">Shopping Cart</a></li>
-                                                       </ul>
-                                                   </li>
-                                                   <li><a href=\"index.html\">Other Pages 2</a>
-                                                       <ul>
-                                                           <li><a href=\"contact.html\">Contact</a></li>
-                                                           <li><a href=\"about-us.html\">About Us</a></li>
-                                                           <li><a href=\"faq.html\">FAQ</a></li>
-                                                           <li><a href=\"404.html\">404 Error</a></li>
-                                                       </ul>
-                                                   </li>
-                                               </ul>
-                                           </li>
-                                           <li><a href=\"about-us.html\">About Us</a></li>
-                                           <li><a href=\"contact.html\">Contact</a></li>
-                                           <li><a href=\"shop-left-sidebar.html\">Smartwatch</a></li>
-                                           <li><a href=\"shop-left-sidebar.html\">Accessories</a></li>
+        echo "\">Home</a></li> 
+                                        ";
+        // line 229
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 229, $this->source); })()), "user", [], "any", false, false, false, 229)) {
+            echo "    
+                                           <li class=\"dropdown-holder\"><a href=\"#\">Reclamation</a>
+                                            <ul class=\"hb-dropdown\">
+                                                <li class=\"sub-dropdown-holder\"><a href=\"";
+            // line 232
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("r_add", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 232, $this->source); })()), "user", [], "any", false, false, false, 232), "id", [], "any", false, false, false, 232)]), "html", null, true);
+            echo "\">Add Reclamation</a>
+                                                </li>
+                                                
+                                                <li class=\"sub-dropdown-holder\"><a href=\"";
+            // line 235
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("r_list", ["value" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 235, $this->source); })()), "user", [], "any", false, false, false, 235), "id", [], "any", false, false, false, 235)]), "html", null, true);
+            echo "\">Historique</a>  
+                                                                                             
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        ";
+        }
+        // line 240
+        echo "      
+                                        
+                                          
                                            ";
-        // line 340
-        if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 340, $this->source); })()), "user", [], "any", false, false, false, 340)) {
-            // line 341
+        // line 243
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 243, $this->source); })()), "user", [], "any", false, false, false, 243)) {
+            // line 244
             echo "                                           <li><a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
             echo "\">Login</a></li>
                                           ";
         } else {
-            // line 343
+            // line 246
             echo "                                          
                                                 <li><a href=\"";
-            // line 344
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("usercompte", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 344, $this->source); })()), "user", [], "any", false, false, false, 344), "id", [], "any", false, false, false, 344)]), "html", null, true);
+            // line 247
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("usercompte", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 247, $this->source); })()), "user", [], "any", false, false, false, 247), "id", [], "any", false, false, false, 247)]), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 344, $this->source); })()), "user", [], "any", false, false, false, 344), "Nom", [], "any", false, false, false, 344), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 247, $this->source); })()), "user", [], "any", false, false, false, 247), "Nom", [], "any", false, false, false, 247), "html", null, true);
             echo ",";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 344, $this->source); })()), "user", [], "any", false, false, false, 344), "Prenom", [], "any", false, false, false, 344), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 247, $this->source); })()), "user", [], "any", false, false, false, 247), "Prenom", [], "any", false, false, false, 247), "html", null, true);
             echo "</a></li>
                                                 <li><a href=\"";
-            // line 345
+            // line 248
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
             echo "\">Logout</a></li>
                                               </a>
-                                       
-                                              
                                           ";
         }
-        // line 350
+        // line 251
         echo "
                                        </ul>
                                    </nav>
@@ -417,14 +330,14 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
             </header>
             <!-- Header Area End Here -->
             ";
-        // line 372
+        // line 273
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 372, $this->source); })()), "flashes", [0 => "error"], "method", false, false, false, 372));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 273, $this->source); })()), "flashes", [0 => "error"], "method", false, false, false, 273));
         foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-            // line 373
+            // line 274
             echo "            <div class=\"alert alert-danger\">
                 ";
-            // line 374
+            // line 275
             echo twig_escape_filter($this->env, $context["message"], "html", null, true);
             echo "
             </div>
@@ -433,15 +346,15 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 377
+        // line 278
         echo "        ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 377, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 377));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 278, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 278));
         foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-            // line 378
+            // line 279
             echo "        <div class=\"alert alert-success\">
             ";
-            // line 379
+            // line 280
             echo twig_escape_filter($this->env, $context["message"], "html", null, true);
             echo "
         </div>
@@ -450,12 +363,12 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 382
+        // line 283
         echo "
             ";
-        // line 383
+        // line 284
         $this->displayBlock('body', $context, $blocks);
-        // line 384
+        // line 285
         echo "
        <!-- Begin Footer Area -->
        <div class=\"footer\">
@@ -470,7 +383,7 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
                             <div class=\"li-shipping-inner-box\">
                                 <div class=\"shipping-icon\">
                                     <img src=\"";
-        // line 397
+        // line 298
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/shipping-icon/1.png"), "html", null, true);
         echo "\" alt=\"Shipping Icon\">
                                 </div>
@@ -486,7 +399,7 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
                             <div class=\"li-shipping-inner-box\">
                                 <div class=\"shipping-icon\">
                                     <img src=\"";
-        // line 410
+        // line 311
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/shipping-icon/2.png"), "html", null, true);
         echo "\" alt=\"Shipping Icon\">
                                 </div>
@@ -502,7 +415,7 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
                             <div class=\"li-shipping-inner-box\">
                                 <div class=\"shipping-icon\">
                                     <img src=\"";
-        // line 423
+        // line 324
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/shipping-icon/3.png"), "html", null, true);
         echo "\" alt=\"Shipping Icon\">
                                 </div>
@@ -518,7 +431,7 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
                             <div class=\"li-shipping-inner-box\">
                                 <div class=\"shipping-icon\">
                                     <img src=\"";
-        // line 436
+        // line 337
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/shipping-icon/4.png"), "html", null, true);
         echo "\" alt=\"Shipping Icon\">
                                 </div>
@@ -544,7 +457,7 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
                         <div class=\"col-lg-4 col-md-6\">
                             <div class=\"footer-logo\">
                                 <img src=\"";
-        // line 459
+        // line 360
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/menu/logo/1.jpg"), "html", null, true);
         echo "\" alt=\"Footer Logo\">
                                 <p class=\"info\">
@@ -684,7 +597,7 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
                         <div class=\"copyright text-center\">
                             <a href=\"#\">
                                 <img src=\"";
-        // line 596
+        // line 497
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/payment/1.png"), "html", null, true);
         echo "\" alt=\"\">
                             </a>
@@ -717,64 +630,64 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
                                 <div class=\"product-details-images slider-navigation-1\">
                                     <div class=\"lg-image\">
                                         <img src=\"";
-        // line 626
+        // line 527
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/1.jpg"), "html", null, true);
         echo "\" alt=\"product image\">
                                     </div>
                                     <div class=\"lg-image\">
                                         <img src=\"";
-        // line 629
+        // line 530
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/2.jpg"), "html", null, true);
         echo "\" alt=\"product image\">
                                     </div>
                                     <div class=\"lg-image\">
                                         <img src=\"";
-        // line 632
+        // line 533
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/3.jpg"), "html", null, true);
         echo "\" alt=\"product image\">
                                     </div>
                                     <div class=\"lg-image\">
                                         <img src=\"";
-        // line 635
+        // line 536
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/4.jpg"), "html", null, true);
         echo "\" alt=\"product image\">
                                     </div>
                                     <div class=\"lg-image\">
                                         <img src=\"";
-        // line 638
+        // line 539
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/5.jpg"), "html", null, true);
         echo "\" alt=\"product image\">
                                     </div>
                                     <div class=\"lg-image\">
                                         <img src=\"";
-        // line 641
+        // line 542
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/large-size/6.jpg"), "html", null, true);
         echo "\" alt=\"product image\">
                                     </div>
                                 </div>
                                 <div class=\"product-details-thumbs slider-thumbs-1\">                                        
                                     <div class=\"sm-image\"><img src=\"";
-        // line 645
+        // line 546
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/small-size/1.jpg"), "html", null, true);
         echo "\" alt=\"product image thumb\"></div>
                                     <div class=\"sm-image\"><img src=\"";
-        // line 646
+        // line 547
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/small-size/2.jpg"), "html", null, true);
         echo "\" alt=\"product image thumb\"></div>
                                     <div class=\"sm-image\"><img src=\"";
-        // line 647
+        // line 548
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/small-size/3.jpg"), "html", null, true);
         echo "\" alt=\"product image thumb\"></div>
                                     <div class=\"sm-image\"><img src=\"";
-        // line 648
+        // line 549
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/small-size/4.jpg"), "html", null, true);
         echo "\" alt=\"product image thumb\"></div>
                                     <div class=\"sm-image\"><img src=\"";
-        // line 649
+        // line 550
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/small-size/5.jpg"), "html", null, true);
         echo "\" alt=\"product image thumb\"></div>
                                     <div class=\"sm-image\"><img src=\"";
-        // line 650
+        // line 551
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/product/small-size/6.jpg"), "html", null, true);
         echo "\" alt=\"product image thumb\"></div>
                                 </div>
@@ -855,9 +768,9 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
 
 
 ";
-        // line 728
+        // line 629
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 771
+        // line 672
         echo "</body>
 
 <!-- index-431:47-->
@@ -996,7 +909,7 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
 
     }
 
-    // line 383
+    // line 284
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1015,7 +928,7 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
 
     }
 
-    // line 728
+    // line 629
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1025,108 +938,108 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 729
+        // line 630
         echo "<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/vendor/jquery-1.12.4.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Popper js -->
 <script src=\"";
-        // line 731
+        // line 632
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/vendor/popper.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Bootstrap V4.1.3 Fremwork js -->
 <script src=\"";
-        // line 733
+        // line 634
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Ajax Mail js -->
 <script src=\"";
-        // line 735
+        // line 636
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/ajax-mail.js"), "html", null, true);
         echo "\"></script>
 <!-- Meanmenu js -->
 <script src=\"";
-        // line 737
+        // line 638
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.meanmenu.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Wow.min js -->
 <script src=\"";
-        // line 739
+        // line 640
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/wow.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Slick Carousel js -->
 <script src=\"";
-        // line 741
+        // line 642
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/slick.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Owl Carousel-2 js -->
 <script src=\"";
-        // line 743
+        // line 644
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/owl.carousel.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Magnific popup js -->
 <script src=\"";
-        // line 745
+        // line 646
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.magnific-popup.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Isotope js -->
 <script src=\"";
-        // line 747
+        // line 648
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/isotope.pkgd.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Imagesloaded js -->
 <script src=\"";
-        // line 749
+        // line 650
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/imagesloaded.pkgd.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Mixitup js -->
 <script src=\"";
-        // line 751
+        // line 652
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.mixitup.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Countdown -->
 <script src=\"";
-        // line 753
+        // line 654
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.countdown.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Counterup -->
 <script src=\"";
-        // line 755
+        // line 656
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.counterup.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Waypoints -->
 <script src=\"";
-        // line 757
+        // line 658
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/waypoints.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Barrating -->
 <script src=\"";
-        // line 759
+        // line 660
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.barrating.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Jquery-ui -->
 <script src=\"";
-        // line 761
+        // line 662
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-ui.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Venobox -->
 <script src=\"";
-        // line 763
+        // line 664
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/venobox.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Nice Select js -->
 <script src=\"";
-        // line 765
+        // line 666
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.nice-select.min.js"), "html", null, true);
         echo "\"></script>
 <!-- ScrollUp js -->
 <script src=\"";
-        // line 767
+        // line 668
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/scrollUp.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Main/Activator js -->
 <script src=\"";
-        // line 769
+        // line 670
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/main.js"), "html", null, true);
         echo "\"></script>
 ";
@@ -1150,7 +1063,7 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
 
     public function getDebugInfo()
     {
-        return array (  1130 => 769,  1125 => 767,  1120 => 765,  1115 => 763,  1110 => 761,  1105 => 759,  1100 => 757,  1095 => 755,  1090 => 753,  1085 => 751,  1080 => 749,  1075 => 747,  1070 => 745,  1065 => 743,  1060 => 741,  1055 => 739,  1050 => 737,  1045 => 735,  1040 => 733,  1035 => 731,  1029 => 729,  1019 => 728,  1000 => 383,  987 => 45,  982 => 43,  977 => 41,  972 => 39,  967 => 37,  962 => 35,  957 => 33,  952 => 31,  947 => 29,  942 => 27,  937 => 25,  932 => 23,  927 => 21,  922 => 19,  917 => 17,  912 => 15,  907 => 13,  904 => 12,  894 => 11,  875 => 8,  861 => 771,  859 => 728,  778 => 650,  774 => 649,  770 => 648,  766 => 647,  762 => 646,  758 => 645,  751 => 641,  745 => 638,  739 => 635,  733 => 632,  727 => 629,  721 => 626,  688 => 596,  548 => 459,  522 => 436,  506 => 423,  490 => 410,  474 => 397,  459 => 384,  457 => 383,  454 => 382,  445 => 379,  442 => 378,  437 => 377,  428 => 374,  425 => 373,  421 => 372,  397 => 350,  389 => 345,  381 => 344,  378 => 343,  372 => 341,  370 => 340,  255 => 228,  149 => 125,  125 => 104,  121 => 103,  64 => 48,  62 => 11,  58 => 9,  56 => 8,  47 => 1,);
+        return array (  1043 => 670,  1038 => 668,  1033 => 666,  1028 => 664,  1023 => 662,  1018 => 660,  1013 => 658,  1008 => 656,  1003 => 654,  998 => 652,  993 => 650,  988 => 648,  983 => 646,  978 => 644,  973 => 642,  968 => 640,  963 => 638,  958 => 636,  953 => 634,  948 => 632,  942 => 630,  932 => 629,  913 => 284,  900 => 45,  895 => 43,  890 => 41,  885 => 39,  880 => 37,  875 => 35,  870 => 33,  865 => 31,  860 => 29,  855 => 27,  850 => 25,  845 => 23,  840 => 21,  835 => 19,  830 => 17,  825 => 15,  820 => 13,  817 => 12,  807 => 11,  788 => 8,  774 => 672,  772 => 629,  691 => 551,  687 => 550,  683 => 549,  679 => 548,  675 => 547,  671 => 546,  664 => 542,  658 => 539,  652 => 536,  646 => 533,  640 => 530,  634 => 527,  601 => 497,  461 => 360,  435 => 337,  419 => 324,  403 => 311,  387 => 298,  372 => 285,  370 => 284,  367 => 283,  358 => 280,  355 => 279,  350 => 278,  341 => 275,  338 => 274,  334 => 273,  310 => 251,  304 => 248,  296 => 247,  293 => 246,  287 => 244,  285 => 243,  280 => 240,  271 => 235,  265 => 232,  259 => 229,  255 => 228,  149 => 125,  125 => 104,  121 => 103,  64 => 48,  62 => 11,  58 => 9,  56 => 8,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -1382,118 +1295,21 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
                                <div class=\"hb-menu\">
                                    <nav>
                                        <ul>
-                                        <li><a href=\"{{path('home')}}\">Home</a></li>     
-                                           <li class=\"megamenu-holder\"><a href=\"shop-left-sidebar.html\">Shop</a>
-                                               <ul class=\"megamenu hb-megamenu\">
-                                                   <li><a href=\"shop-left-sidebar.html\">Shop Page Layout</a>
-                                                       <ul>
-                                                           <li><a href=\"shop-3-column.html\">Shop 3 Column</a></li>
-                                                           <li><a href=\"shop-4-column.html\">Shop 4 Column</a></li>
-                                                           <li><a href=\"shop-left-sidebar.html\">Shop Left Sidebar</a></li>
-                                                           <li><a href=\"shop-right-sidebar.html\">Shop Right Sidebar</a></li>
-                                                           <li><a href=\"shop-list.html\">Shop List</a></li>
-                                                           <li><a href=\"shop-list-left-sidebar.html\">Shop List Left Sidebar</a></li>
-                                                           <li><a href=\"shop-list-right-sidebar.html\">Shop List Right Sidebar</a></li>
-                                                       </ul>
-                                                   </li>
-                                                   <li><a href=\"single-product-gallery-left.html\">Single Product Style</a>
-                                                       <ul>
-                                                           <li><a href=\"single-product-carousel.html\">Single Product Carousel</a></li>
-                                                           <li><a href=\"single-product-gallery-left.html\">Single Product Gallery Left</a></li>
-                                                           <li><a href=\"single-product-gallery-right.html\">Single Product Gallery Right</a></li>
-                                                           <li><a href=\"single-product-tab-style-top.html\">Single Product Tab Style Top</a></li>
-                                                           <li><a href=\"single-product-tab-style-left.html\">Single Product Tab Style Left</a></li>
-                                                           <li><a href=\"single-product-tab-style-right.html\">Single Product Tab Style Right</a></li>
-                                                       </ul>
-                                                   </li>
-                                                   <li><a href=\"single-product.html\">Single Products</a>
-                                                       <ul>
-                                                           <li><a href=\"single-product.html\">Single Product</a></li>
-                                                           <li><a href=\"single-product-sale.html\">Single Product Sale</a></li>
-                                                           <li><a href=\"single-product-group.html\">Single Product Group</a></li>
-                                                           <li><a href=\"single-product-normal.html\">Single Product Normal</a></li>
-                                                           <li><a href=\"single-product-affiliate.html\">Single Product Affiliate</a></li>
-                                                       </ul>
-                                                   </li>
-                                               </ul>
-                                           </li>
-                                           <li class=\"dropdown-holder\"><a href=\"blog-left-sidebar.html\">Blog</a>
-                                               <ul class=\"hb-dropdown\">
-                                                   <li class=\"sub-dropdown-holder\"><a href=\"blog-left-sidebar.html\">Blog Grid View</a>
-                                                       <ul class=\"hb-dropdown hb-sub-dropdown\">
-                                                           <li><a href=\"blog-2-column.html\">Blog 2 Column</a></li>
-                                                           <li><a href=\"blog-3-column.html\">Blog 3 Column</a></li>
-                                                           <li><a href=\"blog-left-sidebar.html\">Grid Left Sidebar</a></li>
-                                                           <li><a href=\"blog-right-sidebar.html\">Grid Right Sidebar</a></li>
-                                                       </ul>
-                                                   </li>
-                                                   <li class=\"sub-dropdown-holder\"><a href=\"blog-list-left-sidebar.html\">Blog List View</a>
-                                                       <ul class=\"hb-dropdown hb-sub-dropdown\">
-                                                           <li><a href=\"blog-list.html\">Blog List</a></li>
-                                                           <li><a href=\"blog-list-left-sidebar.html\">List Left Sidebar</a></li>
-                                                           <li><a href=\"blog-list-right-sidebar.html\">List Right Sidebar</a></li>
-                                                       </ul>
-                                                   </li>
-                                                   <li class=\"sub-dropdown-holder\"><a href=\"blog-details-left-sidebar.html\">Blog Details</a>
-                                                       <ul class=\"hb-dropdown hb-sub-dropdown\">
-                                                           <li><a href=\"blog-details-left-sidebar.html\">Left Sidebar</a></li>
-                                                           <li><a href=\"blog-details-right-sidebar.html\">Right Sidebar</a></li>
-                                                       </ul>
-                                                   </li>
-                                                   <li class=\"sub-dropdown-holder\"><a href=\"blog-gallery-format.html\">Blog Format</a>
-                                                       <ul class=\"hb-dropdown hb-sub-dropdown\">
-                                                           <li><a href=\"blog-audio-format.html\">Blog Audio Format</a></li>
-                                                           <li><a href=\"blog-video-format.html\">Blog Video Format</a></li>
-                                                           <li><a href=\"blog-gallery-format.html\">Blog Gallery Format</a></li>
-                                                       </ul>
-                                                   </li>
-                                               </ul>
-                                           </li>
-                                           <li class=\"megamenu-static-holder\"><a href=\"index.html\">Pages</a>
-                                               <ul class=\"megamenu hb-megamenu\">
-                                                   <li><a href=\"blog-left-sidebar.html\">Blog Layouts</a>
-                                                       <ul>
-                                                           <li><a href=\"blog-2-column.html\">Blog 2 Column</a></li>
-                                                           <li><a href=\"blog-3-column.html\">Blog 3 Column</a></li>
-                                                           <li><a href=\"blog-left-sidebar.html\">Grid Left Sidebar</a></li>
-                                                           <li><a href=\"blog-right-sidebar.html\">Grid Right Sidebar</a></li>
-                                                           <li><a href=\"blog-list.html\">Blog List</a></li>
-                                                           <li><a href=\"blog-list-left-sidebar.html\">List Left Sidebar</a></li>
-                                                           <li><a href=\"blog-list-right-sidebar.html\">List Right Sidebar</a></li>
-                                                       </ul>
-                                                   </li>
-                                                   <li><a href=\"blog-details-left-sidebar.html\">Blog Details Pages</a>
-                                                       <ul>
-                                                           <li><a href=\"blog-details-left-sidebar.html\">Left Sidebar</a></li>
-                                                           <li><a href=\"blog-details-right-sidebar.html\">Right Sidebar</a></li>
-                                                           <li><a href=\"blog-audio-format.html\">Blog Audio Format</a></li>
-                                                           <li><a href=\"blog-video-format.html\">Blog Video Format</a></li>
-                                                           <li><a href=\"blog-gallery-format.html\">Blog Gallery Format</a></li>
-                                                       </ul>
-                                                   </li>
-                                                   <li><a href=\"index.html\">Other Pages</a>
-                                                       <ul>
-                                                           <li><a href=\"login-register.html\">My Account</a></li>
-                                                           <li><a href=\"checkout.html\">Checkout</a></li>
-                                                           <li><a href=\"compare.html\">Compare</a></li>
-                                                           <li><a href=\"wishlist.html\">Wishlist</a></li>
-                                                           <li><a href=\"shopping-cart.html\">Shopping Cart</a></li>
-                                                       </ul>
-                                                   </li>
-                                                   <li><a href=\"index.html\">Other Pages 2</a>
-                                                       <ul>
-                                                           <li><a href=\"contact.html\">Contact</a></li>
-                                                           <li><a href=\"about-us.html\">About Us</a></li>
-                                                           <li><a href=\"faq.html\">FAQ</a></li>
-                                                           <li><a href=\"404.html\">404 Error</a></li>
-                                                       </ul>
-                                                   </li>
-                                               </ul>
-                                           </li>
-                                           <li><a href=\"about-us.html\">About Us</a></li>
-                                           <li><a href=\"contact.html\">Contact</a></li>
-                                           <li><a href=\"shop-left-sidebar.html\">Smartwatch</a></li>
-                                           <li><a href=\"shop-left-sidebar.html\">Accessories</a></li>
+                                        <li><a href=\"{{path('home')}}\">Home</a></li> 
+                                        {% if  app.user %}    
+                                           <li class=\"dropdown-holder\"><a href=\"#\">Reclamation</a>
+                                            <ul class=\"hb-dropdown\">
+                                                <li class=\"sub-dropdown-holder\"><a href=\"{{ path('r_add', {id:app.user.id}) }}\">Add Reclamation</a>
+                                                </li>
+                                                
+                                                <li class=\"sub-dropdown-holder\"><a href=\"{{path('r_list', {value:app.user.id}) }}\">Historique</a>  
+                                                                                             
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        {% endif %}      
+                                        
+                                          
                                            {% if not app.user %}
                                            <li><a href=\"{{path('login')}}\">Login</a></li>
                                           {% else %}
@@ -1501,8 +1317,6 @@ class __TwigTemplate_a0dd45e74b8fed0bfc365757d40369eb3a6df467007920a08013bec1fb8
                                                 <li><a href=\"{{path(\"usercompte\",{'id':app.user.id}) }}\">{{app.user.Nom}},{{app.user.Prenom}}</a></li>
                                                 <li><a href=\"{{path('logout')}}\">Logout</a></li>
                                               </a>
-                                       
-                                              
                                           {% endif %}
 
                                        </ul>
