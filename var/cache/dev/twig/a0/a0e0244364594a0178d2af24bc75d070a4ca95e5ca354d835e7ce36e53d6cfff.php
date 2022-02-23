@@ -94,7 +94,7 @@ class __TwigTemplate_45e151ede68e5c79948fe9bd7f7e2d86fab2da31703c36f6ff979e46c47
         // line 23
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["tab"]) || array_key_exists("tab", $context) ? $context["tab"] : (function () { throw new RuntimeError('Variable "tab" does not exist.', 23, $this->source); })()), "adresse", [], "any", false, false, false, 23), "html", null, true);
         echo "</a>
-                                                    <a class=\"comment\" href=\"#\"><i class=\"fa fa-comment-o\"></i> ";
+                                                    <a class=\"comment\" href=\"#desc_bas\"><i class=\"fa fa-comment-o\"></i> ";
         // line 24
         echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["comments"]) || array_key_exists("comments", $context) ? $context["comments"] : (function () { throw new RuntimeError('Variable "comments" does not exist.', 24, $this->source); })())), "html", null, true);
         echo " Commentaires</a>
@@ -127,7 +127,7 @@ class __TwigTemplate_45e151ede68e5c79948fe9bd7f7e2d86fab2da31703c36f6ff979e46c47
                                         </div>
                                     </div>
                                     <!-- Begin Li's Blog Comment Section -->
-                                    <div class=\"li-comment-section\">
+                                    <div class=\"li-comment-section\" id=\"desc_bas\">
                                        
                                         <h3>";
         // line 44
@@ -176,9 +176,9 @@ class __TwigTemplate_45e151ede68e5c79948fe9bd7f7e2d86fab2da31703c36f6ff979e46c47
         echo "                                    </div>
                                     <!-- Li's Blog Comment Section End Here -->
                                     <!-- Begin Blog comment Box Area -->
-                                    <div class=\"li-blog-comment-wrapper\">
+                                    <div class=\"li-blog-comment-wrapper\" >
                                         <h3>Laisse un commentaire</h3>
-                                        <p>Votre adresse email ne sera pas publiée. les champs requis sont indiqués *</p>
+                                        <p>Votre adresse email ne sera pas publiée. Tous les champs sont requis </p>
                                         ";
         // line 69
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Commentaires_Form"]) || array_key_exists("Commentaires_Form", $context) ? $context["Commentaires_Form"] : (function () { throw new RuntimeError('Variable "Commentaires_Form" does not exist.', 69, $this->source); })()), 'form_start', ["attr" => ["novalidate" => "novalidate"]]);
@@ -304,7 +304,7 @@ class __TwigTemplate_45e151ede68e5c79948fe9bd7f7e2d86fab2da31703c36f6ff979e46c47
                                                 <h3 class=\"li-blog-heading pt-25\"><a href=\"#\">{{tab.nom}}</a></h3>
                                                 <div class=\"li-blog-meta\">
                                                     <a class=\"author\" href=\"#\"><i class=\"fa fa-map-marker\"></i>{{tab.adresse}}</a>
-                                                    <a class=\"comment\" href=\"#\"><i class=\"fa fa-comment-o\"></i> {{comments | length}} Commentaires</a>
+                                                    <a class=\"comment\" href=\"#desc_bas\"><i class=\"fa fa-comment-o\"></i> {{comments | length}} Commentaires</a>
                                                     <a class=\"post-time\" href=\"#\"><i class=\"fa fa-calendar\"></i>DateDebut {{tab.date|date('Y-m-d H:i:s')}}</a>
                                                     <a class=\"post-time\" href=\"#\"><i class=\"fa fa-calendar\"></i>DateFin {{tab.Datefin|date('Y-m-d H:i:s')}}</a>
                                                 </div>
@@ -322,7 +322,7 @@ class __TwigTemplate_45e151ede68e5c79948fe9bd7f7e2d86fab2da31703c36f6ff979e46c47
                                         </div>
                                     </div>
                                     <!-- Begin Li's Blog Comment Section -->
-                                    <div class=\"li-comment-section\">
+                                    <div class=\"li-comment-section\" id=\"desc_bas\">
                                        
                                         <h3>{{comments | length}} Commentaires</h3>
                                          {% for comment in comments %}
@@ -346,9 +346,9 @@ class __TwigTemplate_45e151ede68e5c79948fe9bd7f7e2d86fab2da31703c36f6ff979e46c47
                                     </div>
                                     <!-- Li's Blog Comment Section End Here -->
                                     <!-- Begin Blog comment Box Area -->
-                                    <div class=\"li-blog-comment-wrapper\">
+                                    <div class=\"li-blog-comment-wrapper\" >
                                         <h3>Laisse un commentaire</h3>
-                                        <p>Votre adresse email ne sera pas publiée. les champs requis sont indiqués *</p>
+                                        <p>Votre adresse email ne sera pas publiée. Tous les champs sont requis </p>
                                         {{ form_start(Commentaires_Form,{'attr': {'novalidate': 'novalidate'}} ) }}
                                         
                                             <div class=\"comment-post-box\">
