@@ -1,7 +1,3 @@
 <?php //%5BC%5DApp%255CController%255CCartController%2523remove
 
-<<<<<<< HEAD
-return [PHP_INT_MAX, 1645440408];
-=======
-return [PHP_INT_MAX, 1645140310];
->>>>>>> main
+return [PHP_INT_MAX, 1645614986];

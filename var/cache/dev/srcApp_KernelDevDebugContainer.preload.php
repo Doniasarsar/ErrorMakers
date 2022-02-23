@@ -10,23 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).'/vendor/autoload.php';
-<<<<<<< HEAD
-require __DIR__.'/ContainerNQ18nAJ/srcApp_KernelDevDebugContainer.php';
-=======
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-require __DIR__.'/ContainerC732Tjx/srcApp_KernelDevDebugContainer.php';
-=======
-require __DIR__.'/ContainerQDAdCkc/srcApp_KernelDevDebugContainer.php';
->>>>>>> Stashed changes
-=======
-require __DIR__.'/ContainerQDAdCkc/srcApp_KernelDevDebugContainer.php';
->>>>>>> Stashed changes
-=======
-require __DIR__.'/ContainerQDAdCkc/srcApp_KernelDevDebugContainer.php';
->>>>>>> Stashed changes
->>>>>>> main
+require __DIR__.'/ContainerM1TU8Dl/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';

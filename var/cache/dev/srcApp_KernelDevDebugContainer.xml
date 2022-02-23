@@ -1213,11 +1213,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-<<<<<<< HEAD
-      <argument type="service" id=".service_locator.ecb.yVB"/>
-=======
-      <argument type="service" id=".service_locator.rhETfSG"/>
->>>>>>> main
+      <argument type="service" id=".service_locator.SmdDmAy"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4014,11 +4010,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-<<<<<<< HEAD
-      <argument type="service" id=".service_locator.vMzOO63"/>
-=======
-      <argument type="service" id=".service_locator.e2RsKn6"/>
->>>>>>> main
+      <argument type="service" id=".service_locator.SkrkvT_"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -5109,7 +5101,7 @@
       <tag name="console.command" command="server:run"/>
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/public</argument>
       <argument>dev</argument>
-      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache</argument>
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45</argument>
       <call method="setName">
         <argument>server:run</argument>
       </call>
@@ -5118,21 +5110,21 @@
       <tag name="console.command" command="server:start"/>
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/public</argument>
       <argument>dev</argument>
-      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache</argument>
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45</argument>
       <call method="setName">
         <argument>server:start</argument>
       </call>
     </service>
     <service id="web_server.command.server_stop" class="Symfony\Bundle\WebServerBundle\Command\ServerStopCommand" public="false">
       <tag name="console.command" command="server:stop"/>
-      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache</argument>
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45</argument>
       <call method="setName">
         <argument>server:stop</argument>
       </call>
     </service>
     <service id="web_server.command.server_status" class="Symfony\Bundle\WebServerBundle\Command\ServerStatusCommand" public="false">
       <tag name="console.command" command="server:status"/>
-      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache</argument>
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45</argument>
       <call method="setName">
         <argument>server:status</argument>
       </call>
@@ -5510,8 +5502,6 @@
       </argument>
     </service>
     <service id=".service_locator.gCuTZrZ" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-<<<<<<< Updated upstream
-=======
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="produitrep" type="service_closure" id="App\Repository\ProduitRepository"/>
@@ -5526,50 +5516,16 @@
         <argument key="rep" type="service_closure" id="App\Repository\CommandeRepository"/>
       </argument>
     </service>
-<<<<<<< Updated upstream
     <service id=".service_locator.p26ou2t" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
->>>>>>> Stashed changes
-=======
-    <service id=".service_locator.gCuTZrZ" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
->>>>>>> Stashed changes
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="produitrep" type="service_closure" id="App\Repository\ProduitRepository"/>
-        <argument key="repCommande" type="service_closure" id="App\Repository\CommandeRepository"/>
-        <argument key="session" type="service_closure" id="session"/>
+        <argument key="rep" type="service_closure" id="App\Repository\CommandeRepository"/>
       </argument>
     </service>
-<<<<<<< HEAD
     <service id=".service_locator.jmvbEvf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="encoder" type="service_closure" id="security.user_password_encoder.generic"/>
-=======
-    <service id=".service_locator.OoeDy.C" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="ligneCommande" type="service_closure" id="App\Repository\LigneCommandeRepository"/>
-        <argument key="rep" type="service_closure" id="App\Repository\CommandeRepository"/>
-      </argument>
-    </service>
-<<<<<<< Updated upstream
-    <service id=".service_locator.OoeDy.C" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="ligneCommande" type="service_closure" id="App\Repository\LigneCommandeRepository"/>
-=======
-    <service id=".service_locator.p26ou2t" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
->>>>>>> Stashed changes
-        <argument key="rep" type="service_closure" id="App\Repository\CommandeRepository"/>
-      </argument>
-    </service>
-    <service id=".service_locator.p26ou2t" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="rep" type="service_closure" id="App\Repository\CommandeRepository"/>
->>>>>>> main
       </argument>
     </service>
     <service id=".service_locator.3DMZHri" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5585,21 +5541,12 @@
         <argument key="rep" type="service_closure" id="App\Repository\LigneCommandeRepository"/>
       </argument>
     </service>
-<<<<<<< HEAD
-=======
     <service id=".service_locator.Dr.h0HE" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="rep" type="service_closure" id="App\Repository\LivraisonRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.jmvbEvf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="encoder" type="service_closure" id="security.user_password_encoder.generic"/>
-      </argument>
-    </service>
->>>>>>> main
     <service id=".service_locator.saRDzaS" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5607,23 +5554,7 @@
         <argument key="rep" type="service_closure" id="App\Repository\UtilisateursRepository"/>
       </argument>
     </service>
-<<<<<<< HEAD
-    <service id=".service_locator.PgANq2p" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-=======
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    <service id=".service_locator.zM7nc1_" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-=======
-    <service id=".service_locator.jLuI5zf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
->>>>>>> Stashed changes
-=======
-    <service id=".service_locator.jLuI5zf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
->>>>>>> Stashed changes
-=======
-    <service id=".service_locator.jLuI5zf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
->>>>>>> Stashed changes
->>>>>>> main
+    <service id=".service_locator.gzd_Voh" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AdminController::AcceptDem" type="service_closure" id=".service_locator.9dW19ZD"/>
@@ -5646,13 +5577,9 @@
         <argument key="App\Controller\FrontController::delete1" type="service_closure" id=".service_locator.qjLVb2I"/>
         <argument key="App\Controller\LigneCommandeController::index" type="service_closure" id=".service_locator.fSKtku3"/>
         <argument key="App\Controller\LigneCommandeController::supprimercommande" type="service_closure" id=".service_locator.fSKtku3"/>
-<<<<<<< HEAD
-=======
         <argument key="App\Controller\LivraisonControlleur::Supprimer" type="service_closure" id=".service_locator.Dr.h0HE"/>
         <argument key="App\Controller\LivraisonControlleur::Update" type="service_closure" id=".service_locator.Dr.h0HE"/>
         <argument key="App\Controller\LivraisonControlleur::afficher" type="service_closure" id=".service_locator.Dr.h0HE"/>
-        <argument key="App\Controller\UtilisateursController::AddActeurS" type="service_closure" id=".service_locator.jmvbEvf"/>
->>>>>>> main
         <argument key="App\Controller\UtilisateursController::AddUser" type="service_closure" id=".service_locator.jmvbEvf"/>
         <argument key="App\Controller\UtilisateursController::ConfirmUser" type="service_closure" id=".service_locator.N9H1lzz"/>
         <argument key="App\Controller\UtilisateursController::EditPassword" type="service_closure" id=".service_locator.saRDzaS"/>
@@ -5677,13 +5604,9 @@
         <argument key="App\Controller\FrontController:delete1" type="service_closure" id=".service_locator.qjLVb2I"/>
         <argument key="App\Controller\LigneCommandeController:index" type="service_closure" id=".service_locator.fSKtku3"/>
         <argument key="App\Controller\LigneCommandeController:supprimercommande" type="service_closure" id=".service_locator.fSKtku3"/>
-<<<<<<< HEAD
-=======
         <argument key="App\Controller\LivraisonControlleur:Supprimer" type="service_closure" id=".service_locator.Dr.h0HE"/>
         <argument key="App\Controller\LivraisonControlleur:Update" type="service_closure" id=".service_locator.Dr.h0HE"/>
         <argument key="App\Controller\LivraisonControlleur:afficher" type="service_closure" id=".service_locator.Dr.h0HE"/>
-        <argument key="App\Controller\UtilisateursController:AddActeurS" type="service_closure" id=".service_locator.jmvbEvf"/>
->>>>>>> main
         <argument key="App\Controller\UtilisateursController:AddUser" type="service_closure" id=".service_locator.jmvbEvf"/>
         <argument key="App\Controller\UtilisateursController:ConfirmUser" type="service_closure" id=".service_locator.N9H1lzz"/>
         <argument key="App\Controller\UtilisateursController:EditPassword" type="service_closure" id=".service_locator.saRDzaS"/>
@@ -5749,11 +5672,7 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-<<<<<<< HEAD
-    <service id=".service_locator.ecb.yVB" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-=======
-    <service id=".service_locator.rhETfSG" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
->>>>>>> main
+    <service id=".service_locator.SmdDmAy" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\ActeurType" type="service_closure" id="App\Form\ActeurType"/>
@@ -5935,11 +5854,7 @@
       <argument type="service" id="cache.doctrine.orm.default.result"/>
       <factory class="Doctrine\Common\Cache\Psr6\DoctrineProvider" method="wrap"/>
     </service>
-<<<<<<< HEAD
-    <service id=".service_locator.vMzOO63" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-=======
-    <service id=".service_locator.e2RsKn6" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
->>>>>>> main
+    <service id=".service_locator.SkrkvT_" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\BoutiquesRepository" type="service_closure" id="App\Repository\BoutiquesRepository"/>
@@ -6195,44 +6110,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-<<<<<<< HEAD
-      <argument type="service" id=".service_locator.PgANq2p"/>
-=======
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      <argument type="service" id=".service_locator.zM7nc1_"/>
-=======
-      <argument type="service" id=".service_locator.jLuI5zf"/>
->>>>>>> Stashed changes
-=======
-      <argument type="service" id=".service_locator.jLuI5zf"/>
->>>>>>> Stashed changes
-=======
-      <argument type="service" id=".service_locator.jLuI5zf"/>
->>>>>>> Stashed changes
->>>>>>> main
+      <argument type="service" id=".service_locator.gzd_Voh"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-<<<<<<< HEAD
-      <argument type="service" id=".service_locator.PgANq2p"/>
-=======
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      <argument type="service" id=".service_locator.zM7nc1_"/>
-=======
-      <argument type="service" id=".service_locator.jLuI5zf"/>
->>>>>>> Stashed changes
-=======
-      <argument type="service" id=".service_locator.jLuI5zf"/>
->>>>>>> Stashed changes
-=======
-      <argument type="service" id=".service_locator.jLuI5zf"/>
->>>>>>> Stashed changes
->>>>>>> main
+      <argument type="service" id=".service_locator.gzd_Voh"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -6632,23 +6515,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-<<<<<<< HEAD
-    <service id="argument_resolver.controller_locator" alias=".service_locator.PgANq2p"/>
-=======
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    <service id="argument_resolver.controller_locator" alias=".service_locator.zM7nc1_"/>
-=======
-    <service id="argument_resolver.controller_locator" alias=".service_locator.jLuI5zf"/>
->>>>>>> Stashed changes
-=======
-    <service id="argument_resolver.controller_locator" alias=".service_locator.jLuI5zf"/>
->>>>>>> Stashed changes
-=======
-    <service id="argument_resolver.controller_locator" alias=".service_locator.jLuI5zf"/>
->>>>>>> Stashed changes
->>>>>>> main
+    <service id="argument_resolver.controller_locator" alias=".service_locator.gzd_Voh"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>
