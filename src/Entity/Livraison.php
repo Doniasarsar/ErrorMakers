@@ -4,7 +4,7 @@ namespace App\Entity;
 use DateTimeInterface;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Doctrine\ORM\Mapping as ORM;
-use App\Repository\ClassroomRepository;
+use App\Repository\LivraisonRepository;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -21,11 +21,7 @@ class Livraison
      */
     private $id;
 
-    /**
-     * @ORM\Column(type="integer")
-     * @Assert\NotBlank(message="num is required")
-     */
-    private $numLivraison;
+   
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -34,42 +30,58 @@ class Livraison
     private $etatLivraison;
 
     /**
-     * @ORM\Column(type="datetime")
-     
-
+     * @ORM\Column(type="datetime", nullable=false)
+     * @Assert\NotBlank(message="etat is required")
      */
 
     private $dateLivraison;
 
-    /**
-     * @ORM\Column(type="integer")
-     * @Assert\NotBlank(message="idlivreur is required")
+  
 
-     */
-    private $idLivreur;
+  
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="float")
      * @Assert\NotBlank(message="idlivraison is required")
+     
      */
-    private $idLivraison;
+    private $prixLivraison;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Utilisateurs::class, inversedBy="livraisons")
+     */
+    private $livreur;
+
+    /**
+     * @ORM\OneToOne(targetEntity=Commande::class, cascade={"persist"})
+     */
+    private $Commande;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Vehicule::class, inversedBy="livraisons")
+     */
+    private $vehicule;
+
+ 
+
+  
+
+    
+    
+
+    public function __construct()
+    {
+        $this->livraisonId = new ArrayCollection();
+        $this->dateLivraison = new \DateTime('now');
+    }
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getNumLivraison(): ?int
-    {
-        return $this->numLivraison;
-    }
+ 
 
-    public function setNumLivraison(int $numLivraison): self
-    {
-        $this->numLivraison = $numLivraison;
-
-        return $this;
-    }
 
     public function getEtatLivraison(): ?string
     {
@@ -95,27 +107,59 @@ class Livraison
         return $this;
     }
 
-    public function getIdLivreur(): ?int
+    
+
+    public function getPrixLivraison(): ?float
     {
-        return $this->idLivreur;
+        return $this->prixLivraison;
     }
 
-    public function setIdLivreur(int $idLivreur): self
+    public function setPrixLivraison(float $prixLivraison): self
     {
-        $this->idLivreur = $idLivreur;
+        $this->prixLivraison = $prixLivraison;
 
         return $this;
     }
 
-    public function getIdLivraison(): ?int
+    public function getLivreur(): ?Utilisateurs
     {
-        return $this->idLivraison;
+        return $this->livreur;
     }
 
-    public function setIdLivraison(int $idLivraison): self
+    public function setLivreur(?Utilisateurs $livreur): self
     {
-        $this->idLivraison = $idLivraison;
+        $this->livreur = $livreur;
 
         return $this;
     }
+
+    public function getCommande(): ?Commande
+    {
+        return $this->Commande;
+    }
+
+    public function setCommande(?Commande $Commande): self
+    {
+        $this->Commande = $Commande;
+
+        return $this;
+    }
+
+    public function getVehicule(): ?Vehicule
+    {
+        return $this->vehicule;
+    }
+
+    public function setVehicule(?Vehicule $vehicule): self
+    {
+        $this->vehicule = $vehicule;
+
+        return $this;
+    }
+
+    
+
+   
+
+  
 }

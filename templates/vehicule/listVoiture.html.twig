@@ -1,4 +1,4 @@
-{% extends 'footerheader-barre.html.twig' %}
+{% extends 'baseBack.html.twig' %}
 
 {% block body %}
   <!-- Content Wrapper. Contains page content -->
@@ -28,7 +28,7 @@
 
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable with default features</h3>
+                <h3 class="card-title"></h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -36,25 +36,30 @@
                   <thead>
                   <tr>
                     <th>ID</th>
-                    <th>numLivraison</th>
-                    <th>etatLivraison</th>
-                    <th>dateLivraison</th>
-                    <th>idLivreur</th>
-                    <th>idCommande</th>
+       
+                    <th>Matricule</th>
+                    <th>Couleur</th>
+                    <th>type Vehicule</th>
+                    <th>marque</th>
+                    <th>DateEntretient</th>
+                     <th>EtatVehicule</th>
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
-                      {% for class in tab %}
+                      {% for voiture in tab %}
      <tr>
-     <td>{{class.id}}</td>
-      <td>{{class.numLivraison}}</td>
-        <td>{{class.etatLivraison}}</td>
-          <td>{{class.dateLivraison|date('Y-m-d H:i:s')}}</td>
-            <td>{{class.idLivreur}}</td>
-               <td>{{class.idLivraison}}</td>
-                <td><a  class="btn btn-warning" href="{{path("r_delete",{'id':class.id}) }}">Delete</a>
-                <a class="btn btn-info" href="{{path("r_update",{'id':class.id}) }}">Update</a></td>
+     <td>{{voiture.id}}</td>
+     
+        <td>{{voiture.matricule}}</td>
+            <td>{{voiture.couleur}}</td>
+               <td>{{voiture.typeVehicule}}</td>
+               <td>{{voiture.marque}}</td>
+                  <td>{{voiture.DateEntretient|date('Y-m-d')}}</td>
+                  <td>{{voiture.EtatVehicule}}</td>
+             
+                <td><a class="btn btn-warning" href="{{path("voi_delete",{'id':voiture.id}) }}">Delete</a>
+                <a class="btn btn-info" href="{{path("voi_update",{'id':voiture.id}) }}">Update</a></td>
     
       </tr>
       {% endfor %}
