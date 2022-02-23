@@ -39,7 +39,9 @@ return [
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\UtilisateursController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'logout', '_controller' => 'App\\Controller\\UtilisateursController::logout'], null, null, null, false, false, null]],
         '/vehicule' => [[['_route' => 'vehicule', '_controller' => 'App\\Controller\\VehiculeController::index'], null, null, null, false, false, null]],
-        '/vehicule/list' => [[['_route' => 'veh_list', '_controller' => 'App\\Controller\\VehiculeController::afficher'], null, null, null, false, false, null]],
+        '/voiture/list' => [[['_route' => 'voi_list', '_controller' => 'App\\Controller\\VehiculeController::afficherVoiture'], null, null, null, false, false, null]],
+        '/moto/list' => [[['_route' => 'mot_list', '_controller' => 'App\\Controller\\VehiculeController::afficherMoto'], null, null, null, false, false, null]],
+        '/camion/list' => [[['_route' => 'cam_list', '_controller' => 'App\\Controller\\VehiculeController::afficherCamion'], null, null, null, false, false, null]],
         '/voiture/add' => [[['_route' => 'voi_add', '_controller' => 'App\\Controller\\VehiculeController::AddVoiture'], null, null, null, false, false, null]],
         '/moto/add' => [[['_route' => 'mot_add', '_controller' => 'App\\Controller\\VehiculeController::AddMoto'], null, null, null, false, false, null]],
         '/camion/add' => [[['_route' => 'cam_add', '_controller' => 'App\\Controller\\VehiculeController::AddCamion'], null, null, null, false, false, null]],
@@ -107,10 +109,12 @@ return [
                 .')'
                 .'|/utilisateurs/update/([^/]++)(*:793)'
                 .'|/v(?'
-                    .'|ehicule/delete/([^/]++)(*:829)'
-                    .'|oiture/update/([^/]++)(*:859)'
+                    .'|ehicule/delete/([^/]++)(?'
+                        .'|(*:832)'
+                    .')'
+                    .'|oiture/update/([^/]++)(*:863)'
                 .')'
-                .'|/moto/update/([^/]++)(*:889)'
+                .'|/moto/update/([^/]++)(*:893)'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -143,9 +147,13 @@ return [
         731 => [[['_route' => 'rep_add', '_controller' => 'App\\Controller\\ReponseController::addResponse'], ['id'], null, null, false, true, null]],
         754 => [[['_route' => 'reponse_update', '_controller' => 'App\\Controller\\ReponseController::update_reponse'], ['id'], null, null, false, true, null]],
         793 => [[['_route' => 'userupdate', '_controller' => 'App\\Controller\\UtilisateursController::Update'], ['id'], null, null, false, true, null]],
-        829 => [[['_route' => 'veh_delete', '_controller' => 'App\\Controller\\VehiculeController::Supprimer'], ['id'], null, null, false, true, null]],
-        859 => [[['_route' => 'voi_update', '_controller' => 'App\\Controller\\VehiculeController::Update'], ['id'], null, null, false, true, null]],
-        889 => [
+        832 => [
+            [['_route' => 'voi_delete', '_controller' => 'App\\Controller\\VehiculeController::SupprimerVoiture'], ['id'], null, null, false, true, null],
+            [['_route' => 'mot_delete', '_controller' => 'App\\Controller\\VehiculeController::SupprimerMoto'], ['id'], null, null, false, true, null],
+            [['_route' => 'cam_delete', '_controller' => 'App\\Controller\\VehiculeController::SupprimerCamion'], ['id'], null, null, false, true, null],
+        ],
+        863 => [[['_route' => 'voi_update', '_controller' => 'App\\Controller\\VehiculeController::Update'], ['id'], null, null, false, true, null]],
+        893 => [
             [['_route' => 'mot_update', '_controller' => 'App\\Controller\\VehiculeController::UpdateMoto'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
