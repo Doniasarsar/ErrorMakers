@@ -22,7 +22,7 @@ class CommentairesType extends AbstractType
             ])
             ->add('contenu')
             ->add('Pseudo')
-            ->add('rgpd', CheckboxType::class)
+           
             ->add('parent_id', HiddenType::class,[
                 'mapped' => false
             ])

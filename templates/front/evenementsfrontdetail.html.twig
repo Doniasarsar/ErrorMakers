@@ -20,9 +20,10 @@
                                             <div class="li-blog-details">
                                                 <h3 class="li-blog-heading pt-25"><a href="#">{{tab.nom}}</a></h3>
                                                 <div class="li-blog-meta">
-                                                    <a class="author" href="#"><i class="fa fa-user"></i></a>
+                                                    <a class="author" href="#"><i class="fa fa-map-marker"></i>{{tab.adresse}}</a>
                                                     <a class="comment" href="#"><i class="fa fa-comment-o"></i> {{comments | length}} Commentaires</a>
-                                                    <a class="post-time" href="#"><i class="fa fa-calendar"></i>  {{tab.date|date('Y-m-d H:i:s')}}</a>
+                                                    <a class="post-time" href="#"><i class="fa fa-calendar"></i>DateDebut {{tab.date|date('Y-m-d H:i:s')}}</a>
+                                                    <a class="post-time" href="#"><i class="fa fa-calendar"></i>DateFin {{tab.Datefin|date('Y-m-d H:i:s')}}</a>
                                                 </div>
                                                 <p>{{tab.description}}</p>
                                                 <!-- Begin Blog Blockquote Area -->
@@ -86,12 +87,9 @@
                                                         <label>Email</label>
                                                         
                                                          {{ form_widget(Commentaires_Form.email, {'attr': {'class': 'coment-field'}}) }}
+                                                         {{ form_errors(Commentaires_Form.email,{'attr':{"class":"mb-0"}}) }}
                                                     </div>
-                                                     <div class="col-lg-4 col-md-4 col-sm-4 mt-5 mb-sm-20 mb-xs-20">
-                                                        <label>RGPD</label>
-                                                        
-                                                         {{ form_widget(Commentaires_Form.rgpd, {'attr': {'class': 'coment-field'}}) }}
-                                                    </div>
+                                                   
     
                                                     <div class="col-lg-12">
                                                         <div class="coment-btn pt-30 pb-sm-30 pb-xs-30 f-left">

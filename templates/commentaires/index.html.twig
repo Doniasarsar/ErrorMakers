@@ -9,12 +9,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Liste des Evenements</h1>
+            <h1>{{evenement.nom}}</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Liste des Evenements</li>
+              <li class="breadcrumb-item"><a href="{{path('admin')}}">Home</a></li>
+              <li class="breadcrumb-item active"><a  href="{{path('ev_aff')}}">Liste des evenement</a></li>
             </ol>
           </div>
         </div>
@@ -29,11 +29,9 @@
                
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title" > Liste des evenements </h3>
-
-                
-              </div>
-              <a class="btn btn-info" href="{{path('event_add')}}" >Ajouter</a>
+                <h3 class="card-title" > Liste des Commentaires </h3>
+                </div>
+              
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">

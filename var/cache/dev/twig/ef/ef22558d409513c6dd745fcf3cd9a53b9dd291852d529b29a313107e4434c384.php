@@ -92,7 +92,7 @@ class __TwigTemplate_bf9f07741f46bacf078ee906fe7adc626ff29514d656f19514bcbedfd68
                                         <!-- Begin Currency Area -->
                                         <li>
                                             <span class=\"currency-selector-wrapper\">Currency :</span>
-                                            <div class=\"ht-currency-trigger\"><span>USD \$</span></div>
+                                            <div class=\"ht-currency-trigger\"><span>DINAR TN</span></div>
                                             <div class=\"currency ht-currency\">
                                                 <ul class=\"ht-setting-list\">
                                                     <li><a href=\"#\">EUR €</a></li>
@@ -1225,7 +1225,7 @@ class __TwigTemplate_bf9f07741f46bacf078ee906fe7adc626ff29514d656f19514bcbedfd68
                                         <!-- Begin Currency Area -->
                                         <li>
                                             <span class=\"currency-selector-wrapper\">Currency :</span>
-                                            <div class=\"ht-currency-trigger\"><span>USD \$</span></div>
+                                            <div class=\"ht-currency-trigger\"><span>DINAR TN</span></div>
                                             <div class=\"currency ht-currency\">
                                                 <ul class=\"ht-setting-list\">
                                                     <li><a href=\"#\">EUR €</a></li>

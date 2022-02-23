@@ -58,12 +58,12 @@ class __TwigTemplate_7ed8b5b9f2d02591233859e0623d38c4045a52afe06173ccb025d511533
 ";
         // line 32
         $this->displayBlock('body', $context, $blocks);
-        // line 374
+        // line 346
         echo "
 ";
-        // line 375
+        // line 347
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 411
+        // line 383
         echo "
 ";
         
@@ -351,37 +351,12 @@ class __TwigTemplate_7ed8b5b9f2d02591233859e0623d38c4045a52afe06173ccb025d511533
         <ul class=\"nav nav-pills nav-sidebar flex-column\" data-widget=\"treeview\" role=\"menu\" data-accordion=\"false\">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+        
           <li class=\"nav-item menu-open\">
-            <a href=\"#\" class=\"nav-link active\">
-              <i class=\"nav-icon fas fa-tachometer-alt\"></i>
-              <p>
-                Dashboard
-                <i class=\"right fas fa-angle-left\"></i>
-              </p>
-            </a>
-            <ul class=\"nav nav-treeview\">
-              <li class=\"nav-item\">
-                <a href=\"./index.html\" class=\"nav-link active\">
-                  <i class=\"far fa-circle nav-icon\"></i>
-                  <p>Dashboard v1</p>
-                </a>
-              </li>
-              <li class=\"nav-item\">
-                <a href=\"#\" class=\"nav-link\">
-                  <i class=\"far fa-circle nav-icon\"></i>
-                  <p>Dashboard v2</p>
-                </a>
-              </li>
-              <li class=\"nav-item\">
-                <a href=\"#\" class=\"nav-link\">
-                  <i class=\"far fa-circle nav-icon\"></i>
-                  <p>Dashboard v3</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class=\"nav-item menu-open\">
-            <a href=\"#\" class=\"nav-link \">
+            <a href=\"";
+        // line 218
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ev_aff");
+        echo "\" class=\"nav-link \">
               <i class=\"nav-icon fas fa-tachometer-alt\"></i>
               <p>
                 evenement
@@ -517,7 +492,7 @@ class __TwigTemplate_7ed8b5b9f2d02591233859e0623d38c4045a52afe06173ccb025d511533
 
     }
 
-    // line 375
+    // line 347
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -527,15 +502,15 @@ class __TwigTemplate_7ed8b5b9f2d02591233859e0623d38c4045a52afe06173ccb025d511533
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 376
+        // line 348
         echo "<!-- jQuery -->
 <script src=\"";
-        // line 377
+        // line 349
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jquery/jquery.min.js"), "html", null, true);
         echo "\"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src=\"";
-        // line 379
+        // line 351
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jquery-ui/jquery-ui.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -544,70 +519,70 @@ class __TwigTemplate_7ed8b5b9f2d02591233859e0623d38c4045a52afe06173ccb025d511533
 </script>
 <!-- Bootstrap 4 -->
 <script src=\"";
-        // line 385
+        // line 357
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/bootstrap/js/bootstrap.bundle.min.js"), "html", null, true);
         echo "\"></script>
 <!-- ChartJS -->
 <script src=\"";
-        // line 387
+        // line 359
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chart.js/Chart.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Sparkline -->
 <script src=\"";
-        // line 389
+        // line 361
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/sparklines/sparkline.js"), "html", null, true);
         echo "\"></script>
 <!-- JQVMap -->
 <script src=\"";
-        // line 391
+        // line 363
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("lugins/jqvmap/jquery.vmap.min.js"), "html", null, true);
         echo "p\"></script>
 <script src=\"";
-        // line 392
+        // line 364
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jqvmap/maps/jquery.vmap.usa.js"), "html", null, true);
         echo "\"></script>
 <!-- jQuery Knob Chart -->
 <script src=\"";
-        // line 394
+        // line 366
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jquery-knob/jquery.knob.min.js"), "html", null, true);
         echo "\"></script>
 <!-- daterangepicker -->
 <script src=\"";
-        // line 396
+        // line 368
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/moment/moment.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 397
+        // line 369
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/daterangepicker/daterangepicker.js"), "html", null, true);
         echo "\"></script>
 <!-- Tempusdominus Bootstrap 4 -->
 <script src=\"";
-        // line 399
+        // line 371
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"), "html", null, true);
         echo "\"></script>
 <!-- Summernote -->
 <script src=\"";
-        // line 401
+        // line 373
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/summernote/summernote-bs4.min.js"), "html", null, true);
         echo "\"></script>
 <!-- overlayScrollbars -->
 <script src=\"";
-        // line 403
+        // line 375
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"), "html", null, true);
         echo "\"></script>
 <!-- AdminLTE App -->
 <script src=\"";
-        // line 405
+        // line 377
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("dist/js/adminlte.js"), "html", null, true);
         echo "\"></script>
 <!-- AdminLTE for demo purposes -->
 <script src=\"";
-        // line 407
+        // line 379
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("dist/js/demo.js"), "html", null, true);
         echo "\"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src=\"";
-        // line 409
+        // line 381
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("dist/js/pages/dashboard.js"), "html", null, true);
         echo "\"></script>
 ";
@@ -626,7 +601,7 @@ class __TwigTemplate_7ed8b5b9f2d02591233859e0623d38c4045a52afe06173ccb025d511533
 
     public function getDebugInfo()
     {
-        return array (  611 => 409,  606 => 407,  601 => 405,  596 => 403,  591 => 401,  586 => 399,  581 => 397,  577 => 396,  572 => 394,  567 => 392,  563 => 391,  558 => 389,  553 => 387,  548 => 385,  539 => 379,  534 => 377,  531 => 376,  521 => 375,  329 => 192,  317 => 183,  253 => 122,  234 => 106,  215 => 90,  160 => 38,  153 => 33,  143 => 32,  130 => 28,  125 => 26,  120 => 24,  115 => 22,  110 => 20,  105 => 18,  100 => 16,  93 => 12,  88 => 9,  78 => 8,  67 => 411,  65 => 375,  62 => 374,  60 => 32,  57 => 31,  55 => 8,  46 => 1,);
+        return array (  586 => 381,  581 => 379,  576 => 377,  571 => 375,  566 => 373,  561 => 371,  556 => 369,  552 => 368,  547 => 366,  542 => 364,  538 => 363,  533 => 361,  528 => 359,  523 => 357,  514 => 351,  509 => 349,  506 => 348,  496 => 347,  358 => 218,  329 => 192,  317 => 183,  253 => 122,  234 => 106,  215 => 90,  160 => 38,  153 => 33,  143 => 32,  130 => 28,  125 => 26,  120 => 24,  115 => 22,  110 => 20,  105 => 18,  100 => 16,  93 => 12,  88 => 9,  78 => 8,  67 => 383,  65 => 347,  62 => 346,  60 => 32,  57 => 31,  55 => 8,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -846,37 +821,9 @@ class __TwigTemplate_7ed8b5b9f2d02591233859e0623d38c4045a52afe06173ccb025d511533
         <ul class=\"nav nav-pills nav-sidebar flex-column\" data-widget=\"treeview\" role=\"menu\" data-accordion=\"false\">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+        
           <li class=\"nav-item menu-open\">
-            <a href=\"#\" class=\"nav-link active\">
-              <i class=\"nav-icon fas fa-tachometer-alt\"></i>
-              <p>
-                Dashboard
-                <i class=\"right fas fa-angle-left\"></i>
-              </p>
-            </a>
-            <ul class=\"nav nav-treeview\">
-              <li class=\"nav-item\">
-                <a href=\"./index.html\" class=\"nav-link active\">
-                  <i class=\"far fa-circle nav-icon\"></i>
-                  <p>Dashboard v1</p>
-                </a>
-              </li>
-              <li class=\"nav-item\">
-                <a href=\"#\" class=\"nav-link\">
-                  <i class=\"far fa-circle nav-icon\"></i>
-                  <p>Dashboard v2</p>
-                </a>
-              </li>
-              <li class=\"nav-item\">
-                <a href=\"#\" class=\"nav-link\">
-                  <i class=\"far fa-circle nav-icon\"></i>
-                  <p>Dashboard v3</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class=\"nav-item menu-open\">
-            <a href=\"#\" class=\"nav-link \">
+            <a href=\"{{path('ev_aff')}}\" class=\"nav-link \">
               <i class=\"nav-icon fas fa-tachometer-alt\"></i>
               <p>
                 evenement

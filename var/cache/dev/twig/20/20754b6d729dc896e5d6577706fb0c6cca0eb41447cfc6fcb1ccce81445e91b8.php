@@ -73,12 +73,21 @@ class __TwigTemplate_6e6a5e2bf1d195eeaf1574599cb735371363384362d570b1884827abc10
       <div class=\"container-fluid\">
         <div class=\"row mb-2\">
           <div class=\"col-sm-6\">
-            <h1>Liste des Evenements</h1>
+            <h1>";
+        // line 12
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["evenement"]) || array_key_exists("evenement", $context) ? $context["evenement"] : (function () { throw new RuntimeError('Variable "evenement" does not exist.', 12, $this->source); })()), "nom", [], "any", false, false, false, 12), "html", null, true);
+        echo "</h1>
           </div>
           <div class=\"col-sm-6\">
             <ol class=\"breadcrumb float-sm-right\">
-              <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>
-              <li class=\"breadcrumb-item active\">Liste des Evenements</li>
+              <li class=\"breadcrumb-item\"><a href=\"";
+        // line 16
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
+        echo "\">Home</a></li>
+              <li class=\"breadcrumb-item active\"><a  href=\"";
+        // line 17
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ev_aff");
+        echo "\">Liste des evenement</a></li>
             </ol>
           </div>
         </div>
@@ -93,14 +102,9 @@ class __TwigTemplate_6e6a5e2bf1d195eeaf1574599cb735371363384362d570b1884827abc10
                
             <div class=\"card\">
               <div class=\"card-header\">
-                <h3 class=\"card-title\" > Liste des evenements </h3>
-
-                
-              </div>
-              <a class=\"btn btn-info\" href=\"";
-        // line 36
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("event_add");
-        echo "\" >Ajouter</a>
+                <h3 class=\"card-title\" > Liste des Commentaires </h3>
+                </div>
+              
               <!-- /.card-header -->
               <div class=\"card-body\">
                 <table id=\"example1\" class=\"table table-bordered table-striped\">
@@ -115,31 +119,31 @@ class __TwigTemplate_6e6a5e2bf1d195eeaf1574599cb735371363384362d570b1884827abc10
                   </thead>
                   <tbody>
                     ";
-        // line 50
+        // line 48
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["comments"]) || array_key_exists("comments", $context) ? $context["comments"] : (function () { throw new RuntimeError('Variable "comments" does not exist.', 50, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["comments"]) || array_key_exists("comments", $context) ? $context["comments"] : (function () { throw new RuntimeError('Variable "comments" does not exist.', 48, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["comment"]) {
-            // line 51
+            // line 49
             echo "                  <tr>
                     <td>";
+            // line 50
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "pseudo", [], "any", false, false, false, 50), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 51
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "email", [], "any", false, false, false, 51), "html", null, true);
+            echo "</td>
+                    <td>";
             // line 52
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "pseudo", [], "any", false, false, false, 52), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "contenu", [], "any", false, false, false, 52), "html", null, true);
             echo "</td>
                     <td>";
             // line 53
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "email", [], "any", false, false, false, 53), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 54
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "contenu", [], "any", false, false, false, 54), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 55
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "createdAt", [], "any", false, false, false, 55), "Y-m-d H:i:s"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "createdAt", [], "any", false, false, false, 53), "Y-m-d H:i:s"), "html", null, true);
             echo "</td>
                     <td><a class=\"btn btn-warning\"  href=\"";
-            // line 56
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("com_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["comment"], "id", [], "any", false, false, false, 56)]), "html", null, true);
+            // line 54
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("com_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["comment"], "id", [], "any", false, false, false, 54)]), "html", null, true);
             echo "\">Supprimer</a></td>
     
                      </tr>
@@ -149,7 +153,7 @@ class __TwigTemplate_6e6a5e2bf1d195eeaf1574599cb735371363384362d570b1884827abc10
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comment'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 61
+        // line 59
         echo "                </table>
               </div>
               <!-- /.card-body -->
@@ -174,7 +178,7 @@ class __TwigTemplate_6e6a5e2bf1d195eeaf1574599cb735371363384362d570b1884827abc10
 
     }
 
-    // line 78
+    // line 76
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -184,57 +188,57 @@ class __TwigTemplate_6e6a5e2bf1d195eeaf1574599cb735371363384362d570b1884827abc10
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 79
+        // line 77
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
 
 <!-- DataTables  & Plugins -->
 <script src=\"";
-        // line 82
+        // line 80
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables/jquery.dataTables.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 83
+        // line 81
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 84
+        // line 82
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-responsive/js/dataTables.responsive.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 85
+        // line 83
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-responsive/js/responsive.bootstrap4.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 86
+        // line 84
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/dataTables.buttons.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 87
+        // line 85
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.bootstrap4.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 88
+        // line 86
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/jszip/jszip.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 89
+        // line 87
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/pdfmake/pdfmake.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 90
+        // line 88
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/pdfmake/vfs_fonts.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 91
+        // line 89
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.html5.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 92
+        // line 90
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.print.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 93
+        // line 91
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datatables-buttons/js/buttons.colVis.min.js"), "html", null, true);
         echo "\"></script>
 
@@ -277,7 +281,7 @@ class __TwigTemplate_6e6a5e2bf1d195eeaf1574599cb735371363384362d570b1884827abc10
 
     public function getDebugInfo()
     {
-        return array (  238 => 93,  234 => 92,  230 => 91,  226 => 90,  222 => 89,  218 => 88,  214 => 87,  210 => 86,  206 => 85,  202 => 84,  198 => 83,  194 => 82,  188 => 79,  178 => 78,  153 => 61,  142 => 56,  138 => 55,  134 => 54,  130 => 53,  126 => 52,  123 => 51,  119 => 50,  102 => 36,  69 => 5,  59 => 4,  36 => 1,);
+        return array (  242 => 91,  238 => 90,  234 => 89,  230 => 88,  226 => 87,  222 => 86,  218 => 85,  214 => 84,  210 => 83,  206 => 82,  202 => 81,  198 => 80,  192 => 77,  182 => 76,  157 => 59,  146 => 54,  142 => 53,  138 => 52,  134 => 51,  130 => 50,  127 => 49,  123 => 48,  89 => 17,  85 => 16,  78 => 12,  69 => 5,  59 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -293,12 +297,12 @@ class __TwigTemplate_6e6a5e2bf1d195eeaf1574599cb735371363384362d570b1884827abc10
       <div class=\"container-fluid\">
         <div class=\"row mb-2\">
           <div class=\"col-sm-6\">
-            <h1>Liste des Evenements</h1>
+            <h1>{{evenement.nom}}</h1>
           </div>
           <div class=\"col-sm-6\">
             <ol class=\"breadcrumb float-sm-right\">
-              <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>
-              <li class=\"breadcrumb-item active\">Liste des Evenements</li>
+              <li class=\"breadcrumb-item\"><a href=\"{{path('admin')}}\">Home</a></li>
+              <li class=\"breadcrumb-item active\"><a  href=\"{{path('ev_aff')}}\">Liste des evenement</a></li>
             </ol>
           </div>
         </div>
@@ -313,11 +317,9 @@ class __TwigTemplate_6e6a5e2bf1d195eeaf1574599cb735371363384362d570b1884827abc10
                
             <div class=\"card\">
               <div class=\"card-header\">
-                <h3 class=\"card-title\" > Liste des evenements </h3>
-
-                
-              </div>
-              <a class=\"btn btn-info\" href=\"{{path('event_add')}}\" >Ajouter</a>
+                <h3 class=\"card-title\" > Liste des Commentaires </h3>
+                </div>
+              
               <!-- /.card-header -->
               <div class=\"card-body\">
                 <table id=\"example1\" class=\"table table-bordered table-striped\">

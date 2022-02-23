@@ -44,7 +44,6 @@
                     <th>Date</th>
                     <th>Datefin</th>
                     <th>description</th>
-                    <th>longdesc</th>
                     <th>affiche</th>
                     <th>Action</th>       
               </tr>
@@ -58,12 +57,11 @@
                     <td>{{ evenement.date  | date("d/m/Y")}}</td>
                     <td>{{ evenement.datefin  | date("d/m/Y")}}</td>
                     <td>{{ evenement.description}}</td>
-                    <td>{{ evenement.longdesc}}</td>
                     <td><img src="{{asset('uploads/') ~ evenement.affiche}}"  width="100" height="100"></td>
                      <td>
                         <a class="btn btn-info" href="{{path('ev_update',{id : evenement.id })}}">Modifier</a>
                         <a class="btn btn-warning"  href="{{path('ev_delete',{id : evenement.id })}}">Supprimer</a>
-                         <a class="btn btn-warning"  href="{{path('commentaires',{id : evenement.id })}}">Commentaires</a>
+                         <a class="btn btn-success"  href="{{path('commentaires',{id : evenement.id })}}">Commentaires</a>
                        
                          
                     </td> 
