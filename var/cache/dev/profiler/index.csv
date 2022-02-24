@@ -1532,8 +1532,11 @@ b63217,127.0.0.1,GET,http://127.0.0.1:8000/home,1645660942,,200
 ac2683,127.0.0.1,GET,http://127.0.0.1:8000/s/vendor/modernizr-2.8.3.min.jsj,1645660942,73567d,404
 73567d,127.0.0.1,GET,http://127.0.0.1:8000/s/vendor/modernizr-2.8.3.min.jsj,1645660942,,404
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 >>>>>>> 2b4da514c94443b83beb2e5edb3ba7238cab436b
 =======
+=======
+>>>>>>> Stashed changes
 7c8fca,127.0.0.1,GET,http://127.0.0.1:8000/,1645697214,f06868,500
 f06868,127.0.0.1,GET,http://127.0.0.1:8000/,1645697214,,500
 8aa976,127.0.0.1,GET,http://127.0.0.1:8000/,1645697242,46cb62,500
@@ -2164,4 +2167,7 @@ ab22fe,127.0.0.1,GET,http://127.0.0.1:8000/lugins/jqvmap/jquery.vmap.min.jsp,164
 477db7,127.0.0.1,GET,http://127.0.0.1:8000/admin/moto/list,1645700287,,200
 94929c,127.0.0.1,GET,http://127.0.0.1:8000/lugins/jqvmap/jquery.vmap.min.jsp,1645700287,f16973,404
 f16973,127.0.0.1,GET,http://127.0.0.1:8000/lugins/jqvmap/jquery.vmap.min.jsp,1645700287,,404
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
