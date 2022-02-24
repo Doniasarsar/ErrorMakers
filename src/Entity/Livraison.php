@@ -30,8 +30,11 @@ class Livraison
     private $etatLivraison;
 
     /**
+     * @var \Datetime
      * @ORM\Column(type="datetime", nullable=false)
      * @Assert\NotBlank(message="etat is required")
+     * @Assert\Date
+     * @Assert\GreaterThanOrEqual("today")
      */
 
     private $dateLivraison;
@@ -41,8 +44,9 @@ class Livraison
   
 
     /**
+     * 
      * @ORM\Column(type="float")
-     * @Assert\NotBlank(message="idlivraison is required")
+     * @Assert\NotBlank(message="prix is required")
      
      */
     private $prixLivraison;

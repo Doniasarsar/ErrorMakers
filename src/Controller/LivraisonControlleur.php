@@ -41,7 +41,7 @@ class LivraisonControlleur extends AbstractController
      * @param $id
      * @param LivraisonRepository $rep
      * @return Reponse
-     * @Route("admin/livraison/delete/{id}", name="r_delete")
+     * @Route("admin/livraison/delete/{id}", name="livraison_delete")
      */
 
     public function Supprimer($id,LivraisonRepository $rep,UtilisateursRepository $repp,VehiculeRepository $reppp){
@@ -96,14 +96,14 @@ class LivraisonControlleur extends AbstractController
         $em=$this->getDoctrine()->getManager();
         $em->persist($livraison);
         $em->flush();
-            return $this->redirectToRoute('r_list');
+            return $this->redirectToRoute('livraison_list');
 
         }return $this->render("dashboard/livraison/add.html.twig", [
             'Fclass'=>$form->createView(),
         ]);
      }
       /**
-     * @Route("admin/livraison/update/{id}",name="r_update")
+     * @Route("admin/livraison/update/{id}",name="livraison_update")
      */
     public function Update($id,LivraisonRepository $rep,Request $request){
         

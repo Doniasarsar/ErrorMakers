@@ -37,7 +37,7 @@ class LivraisonType extends AbstractType
            
                 'class' => Vehicule::class,
                 'choice_label' => function ($Vehicule) {
-                    return $Vehicule->getVehicule();
+                    if($Vehicule->getEtatVehicule() == "Disponible"){return $Vehicule->getVehicule();}
 
                 }
                 // used to render a select box, check boxes or radios
