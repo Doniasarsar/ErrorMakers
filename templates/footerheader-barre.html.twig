@@ -221,21 +221,41 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{path('vehicule')}}" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ajouter vehicule</p>
+              <li class="nav-item menu">
+                <a href="#" class="nav-link ">
+                  <i class="nav-icon fas fa-truck"></i>
+                  <p>
+                    Gestion Vehicule
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
                 </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{path('veh_list')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>list vehicule</p>
-                </a>
-              </li>
-              
-            </ul>
-          </li>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{path('vehicule')}}" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Ajouter Vehicule</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{path('voi_list')}}" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Liste Voitures</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{path('cam_list')}}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Liste Camions</p>
+                    </a>
+                  </li>
+                </li>
+                <li class="nav-item">
+                  <a href="{{path('mot_list')}}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Liste Motos</p>
+                  </a>
+                </li>
+              </ul>
          
            <li class="nav-item menu-open">
             <a href="{{path('Commandes')}}" class="nav-link ">

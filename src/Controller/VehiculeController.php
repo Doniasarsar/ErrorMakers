@@ -30,29 +30,81 @@ class VehiculeController extends AbstractController
      /**
     * @param VehiculeRepository $rep
     * @return Reponse
-    * @Route("/vehicule/list", name="veh_list")
+    * @Route("/voiture/list", name="voi_list")
     */
-   public function afficher(VehiculeRepository $rep){
-    $vehicules=$rep->findAll();
-    return $this->render('vehicule/listvehicule.html.twig', [
-        'tab' => $vehicules,
+   public function afficherVoiture(VehiculeRepository $rep){
+    $voiture=$rep->findByType("voiture");
+    return $this->render('vehicule/listVoiture.html.twig', [
+        'tab' => $voiture,
     ]);
 }
+  /**
+    * @param VehiculeRepository $rep
+    * @return Reponse
+    * @Route("/moto/list", name="mot_list")
+    */
+    public function afficherMoto(VehiculeRepository $rep){
+        $moto=$rep->findByType("moto");
+        return $this->render('vehicule/listMoto.html.twig', [
+            'tab1' => $moto,
+        ]);
+    }
+    /**
+    * @param VehiculeRepository $rep
+    * @return Reponse
+    * @Route("/camion/list", name="cam_list")
+    */
+    public function afficherCamion(VehiculeRepository $rep){
+        $camion=$rep->findByType("camion");
+        return $this->render('vehicule/listCamion.html.twig', [
+            'tab2' => $camion,
+        ]);
+    }
   /**
   * @param $id
   * @param VehiculeRepository $rep
   * @return Reponse
-  * @Route("/vehicule/delete/{id}", name="veh_delete")
+  * @Route("/vehicule/delete/{id}", name="voi_delete")
   */
 
- public function Supprimer($id,VehiculeRepository $rep){
+ public function SupprimerVoiture($id,VehiculeRepository $rep){
      $vehicule=$rep->find($id);
      $em=$this->getDoctrine()->getManager();
      $em->remove($vehicule);
      $em->flush();
 
-     return $this->redirectToRoute('veh_list');
+     return $this->redirectToRoute('voi_list');
  }
+/**
+  * @param $id
+  * @param VehiculeRepository $rep
+  * @return Reponse
+  * @Route("/vehicule/delete/{id}", name="mot_delete")
+  */
+
+  public function SupprimerMoto($id,VehiculeRepository $rep){
+    $vehicule=$rep->find($id);
+    $em=$this->getDoctrine()->getManager();
+    $em->remove($vehicule);
+    $em->flush();
+
+    return $this->redirectToRoute('mot_list');
+}
+/**
+  * @param $id
+  * @param VehiculeRepository $rep
+  * @return Reponse
+  * @Route("/vehicule/delete/{id}", name="cam_delete")
+  */
+
+  public function SupprimerCamion($id,VehiculeRepository $rep){
+    $vehicule=$rep->find($id);
+    $em=$this->getDoctrine()->getManager();
+    $em->remove($vehicule);
+    $em->flush();
+
+    return $this->redirectToRoute('cam_list');
+}
 
  /**
   * @Route("/voiture/add",name="voi_add")
@@ -71,7 +123,7 @@ class VehiculeController extends AbstractController
      $em=$this->getDoctrine()->getManager();
      $em->persist($vehicule);
      $em->flush();
-         return $this->redirectToRoute('veh_list');
+         return $this->redirectToRoute('voi_list');
 
      }return $this->render("vehicule/addVoiture.html.twig", [
          'FVoiture'=>$form->createView(),
@@ -92,7 +144,7 @@ class VehiculeController extends AbstractController
      if($form->isSubmitted() && $form->isValid()){
      $em=$this->getDoctrine()->getManager();
      $em->flush();
-         return $this->redirectToRoute('veh_list');
+         return $this->redirectToRoute('voi_list');
 
      }return $this->render("vehicule/updateVoiture.html.twig", [
          'FVoiture'=>$form->createView(),
@@ -116,8 +168,7 @@ class VehiculeController extends AbstractController
     $em=$this->getDoctrine()->getManager();
     $em->persist($vehicule);
     $em->flush();
-        return $this->redirectToRoute('veh_list');
-
+    return $this->redirectToRoute('mot_list');
     }return $this->render("vehicule/addMoto.html.twig", [
         'FMoto'=>$form->createView(),
     ]);
@@ -137,7 +188,7 @@ public function UpdateMoto($id,VehiculeRepository $rep,Request $request){
     if($form->isSubmitted() && $form->isValid()){
     $em=$this->getDoctrine()->getManager();
     $em->flush();
-        return $this->redirectToRoute('veh_list');
+        return $this->redirectToRoute('mot_list');
 
     }return $this->render("vehicule/updateMoto.html.twig", [
         'FMoto'=>$form->createView(),
@@ -160,7 +211,7 @@ public function UpdateMoto($id,VehiculeRepository $rep,Request $request){
     $em=$this->getDoctrine()->getManager();
     $em->persist($vehicule);
     $em->flush();
-        return $this->redirectToRoute('veh_list');
+        return $this->redirectToRoute('cam_list');
 
     }return $this->render("vehicule/addCamion.html.twig", [
         'FCamion'=>$form->createView(),
@@ -181,7 +232,7 @@ public function UpdateCamion($id,VehiculeRepository $rep,Request $request){
     if($form->isSubmitted() && $form->isValid()){
     $em=$this->getDoctrine()->getManager();
     $em->flush();
-        return $this->redirectToRoute('veh_list');
+        return $this->redirectToRoute('cam_list');
 
     }return $this->render("vehicule/updateCamion.html.twig", [
         'FCamion'=>$form->createView(),

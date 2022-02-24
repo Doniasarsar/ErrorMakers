@@ -1,5 +1,4 @@
 {% extends 'footerheader-barre.html.twig' %}
-
 {% block body %}
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -47,19 +46,19 @@
                   </tr>
                   </thead>
                   <tbody>
-                      {% for voiture in tab %}
+                      {% for moto in tab1 %}
      <tr>
-     <td>{{voiture.id}}</td>
+     <td>{{moto.id}}</td>
      
-        <td>{{voiture.matricule}}</td>
-            <td>{{voiture.couleur}}</td>
-               <td>{{voiture.typeVehicule}}</td>
-               <td>{{voiture.marque}}</td>
-                  <td>{{voiture.DateEntretient|date('Y-m-d')}}</td>
-                  <td>{{voiture.EtatVehicule}}</td>
+        <td>{{moto.matricule}}</td>
+            <td>{{moto.couleur}}</td>
+               <td>{{moto.typeVehicule}}</td>
+               <td>{{moto.marque}}</td>
+                  <td>{{moto.DateEntretient|date('Y-m-d')}}</td>
+                  <td>{{moto.EtatVehicule}}</td>
              
-                <td><a class="btn btn-warning" href="{{path("veh_delete",{'id':voiture.id}) }}">Delete</a>
-                <a class="btn btn-info" href="{{path("voi_update",{'id':voiture.id}) }}">Update</a></td>
+                <td><a class="btn btn-warning" href="{{path("mot_delete",{'id':moto.id}) }}">Delete</a>
+                <a class="btn btn-info" href="{{path("mot_update",{'id':moto.id}) }}">Update</a></td>
     
       </tr>
       {% endfor %}
@@ -117,4 +116,3 @@
 </script>
 
 {% endblock %}
-   

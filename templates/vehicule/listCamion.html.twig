@@ -1,5 +1,4 @@
 {% extends 'footerheader-barre.html.twig' %}
-
 {% block body %}
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -28,7 +27,7 @@
 
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Livraison</h3>
+                <h3 class="card-title"></h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -36,49 +35,30 @@
                   <thead>
                   <tr>
                     <th>ID</th>
-                   
-                    <th>etatLivraison</th>
-                    <th>dateLivraison</th>
-                  <th>adresseCommande</th>
-                     <th>PrixLivraison</th>
-                      <th>Livreur</th>
-                      <th>Vehicule</th>
-                      
+       
+                    <th>Matricule</th>
+                    <th>Couleur</th>
+                    <th>type Vehicule</th>
+                    <th>marque</th>
+                    <th>DateEntretient</th>
+                     <th>EtatVehicule</th>
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
-                      {% for class in tab %}
-                  <tr>
-                  <td>{{class.id}}</td>
-      
-       
-                  {% if class.etatLivraison == 1 %}
-                    <td>Livrée </td>
-                    {% else %}
-                    <td>Non Livrée </td>
-                    {% endif %}
-               <td>{{class.dateLivraison|date('Y-m-d')}}</td>
-                  <td>{{class.Commande.adresse}}</td>
-               
-
-           
-               
-                <td>{{class.PrixLivraison}}</td>
-              
-                 
-                     
-                     
-                    <td>{{class.livreur.Email }} </td>
-                     <td>{{class.Vehicule.getVehicule() }} </td>
-           
-
-                     
-                    
-                   
-               
-                <td><a  class="btn btn-danger" href="{{path("r_delete",{'id':class.id}) }}">Delete</a>
-                <a class="btn btn-info" href="{{path("r_update",{'id':class.id}) }}">Update</a></td>
+                      {% for camion in tab2 %}
+     <tr>
+     <td>{{camion.id}}</td>
+     
+        <td>{{camion.matricule}}</td>
+            <td>{{camion.couleur}}</td>
+               <td>{{camion.typeVehicule}}</td>
+               <td>{{camion.marque}}</td>
+                  <td>{{camion.DateEntretient|date('Y-m-d')}}</td>
+                  <td>{{camion.EtatVehicule}}</td>
+             
+                <td><a class="btn btn-warning" href="{{path("cam_delete",{'id':camion.id}) }}">Delete</a>
+                <a class="btn btn-info" href="{{path("cam_update",{'id':camion.id}) }}">Update</a></td>
     
       </tr>
       {% endfor %}
