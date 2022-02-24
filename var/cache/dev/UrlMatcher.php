@@ -132,35 +132,38 @@ return [
                             .'|1/([^/]++)(*:926)'
                         .')'
                     .')'
-                    .'|ommentaires/(?'
-                        .'|([^/]++)(*:959)'
-                        .'|delete/([^/]++)(*:982)'
+                    .'|omm(?'
+                        .'|ande/list/([^/]++)(*:960)'
+                        .'|entaires/(?'
+                            .'|([^/]++)(*:988)'
+                            .'|delete/([^/]++)(*:1011)'
+                        .')'
                     .')'
                 .')'
-                .'|/evenement/detail/([^/]++)(*:1018)'
+                .'|/evenement/detail/([^/]++)(*:1049)'
                 .'|/de(?'
-                    .'|lete1/([^/]++)(*:1047)'
+                    .'|lete1/([^/]++)(*:1078)'
                     .'|tail(?'
-                        .'|s/([^/]++)(*:1073)'
-                        .'|/([^/]++)(*:1091)'
+                        .'|s/([^/]++)(*:1104)'
+                        .'|/([^/]++)(*:1122)'
                     .')'
                 .')'
                 .'|/re(?'
                     .'|clamation/(?'
-                        .'|add/([^/]++)(*:1133)'
-                        .'|list/([^/]++)(*:1155)'
-                        .'|etat/([^/]++)(*:1177)'
+                        .'|add/([^/]++)/([^/]++)(*:1173)'
+                        .'|list/([^/]++)(*:1195)'
+                        .'|etat/([^/]++)(*:1217)'
                     .')'
                     .'|sponse/delete(?'
-                        .'|Rec/([^/]++)(*:1215)'
-                        .'|/([^/]++)(*:1233)'
+                        .'|Rec/([^/]++)(*:1255)'
+                        .'|/([^/]++)(*:1273)'
                     .')'
                     .'|ponse/(?'
-                        .'|add/([^/]++)(*:1264)'
-                        .'|update/([^/]++)(*:1288)'
+                        .'|add/([^/]++)(*:1304)'
+                        .'|update/([^/]++)(*:1328)'
                     .')'
                 .')'
-                .'|/utilisateurs/update/([^/]++)(*:1328)'
+                .'|/utilisateurs/update/([^/]++)(*:1368)'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -198,20 +201,21 @@ return [
         882 => [[['_route' => 'cart_remove', '_controller' => 'App\\Controller\\CartController::remove'], ['id'], null, null, false, true, null]],
         908 => [[['_route' => 'cart_delete', '_controller' => 'App\\Controller\\CartController::delete'], ['id'], null, null, false, true, null]],
         926 => [[['_route' => 'cart_delete1', '_controller' => 'App\\Controller\\CartController::delete1'], ['id'], null, null, false, true, null]],
-        959 => [[['_route' => 'commentaires', '_controller' => 'App\\Controller\\CommentairesController::index'], ['id'], null, null, false, true, null]],
-        982 => [[['_route' => 'com_delete', '_controller' => 'App\\Controller\\CommentairesController::Supprimer'], ['id'], null, null, false, true, null]],
-        1018 => [[['_route' => 'ev_front_detail', '_controller' => 'App\\Controller\\EvenementController::detail'], ['id'], null, null, false, true, null]],
-        1047 => [[['_route' => 'delete1', '_controller' => 'App\\Controller\\FrontController::delete1'], ['id'], null, null, false, true, null]],
-        1073 => [[['_route' => 'details', '_controller' => 'App\\Controller\\FrontController::details'], ['id'], null, null, false, true, null]],
-        1091 => [[['_route' => 'detail', '_controller' => 'App\\Controller\\FrontController::detail'], ['id'], null, null, false, true, null]],
-        1133 => [[['_route' => 'r_add', '_controller' => 'App\\Controller\\ReclamationController::add'], ['id'], null, null, false, true, null]],
-        1155 => [[['_route' => 'r_list', '_controller' => 'App\\Controller\\ReclamationController::afficher'], ['value'], null, null, false, true, null]],
-        1177 => [[['_route' => 'etat_rec', '_controller' => 'App\\Controller\\ReclamationController::afficheReponse'], ['id'], null, null, false, true, null]],
-        1215 => [[['_route' => 'reclam_delete', '_controller' => 'App\\Controller\\ReponseController::Delete_reclamation'], ['id'], null, null, false, true, null]],
-        1233 => [[['_route' => 'response_delete', '_controller' => 'App\\Controller\\ReponseController::Delete_reponse'], ['id'], null, null, false, true, null]],
-        1264 => [[['_route' => 'rep_add', '_controller' => 'App\\Controller\\ReponseController::addResponse'], ['id'], null, null, false, true, null]],
-        1288 => [[['_route' => 'reponse_update', '_controller' => 'App\\Controller\\ReponseController::update_reponse'], ['id'], null, null, false, true, null]],
-        1328 => [
+        960 => [[['_route' => 'listmescommande', '_controller' => 'App\\Controller\\CommandeController::affichermescommandes'], ['value'], null, null, false, true, null]],
+        988 => [[['_route' => 'commentaires', '_controller' => 'App\\Controller\\CommentairesController::index'], ['id'], null, null, false, true, null]],
+        1011 => [[['_route' => 'com_delete', '_controller' => 'App\\Controller\\CommentairesController::Supprimer'], ['id'], null, null, false, true, null]],
+        1049 => [[['_route' => 'ev_front_detail', '_controller' => 'App\\Controller\\EvenementController::detail'], ['id'], null, null, false, true, null]],
+        1078 => [[['_route' => 'delete1', '_controller' => 'App\\Controller\\FrontController::delete1'], ['id'], null, null, false, true, null]],
+        1104 => [[['_route' => 'details', '_controller' => 'App\\Controller\\FrontController::details'], ['id'], null, null, false, true, null]],
+        1122 => [[['_route' => 'detail', '_controller' => 'App\\Controller\\FrontController::detail'], ['id'], null, null, false, true, null]],
+        1173 => [[['_route' => 'r_add', '_controller' => 'App\\Controller\\ReclamationController::add'], ['id', 'cmd'], null, null, false, true, null]],
+        1195 => [[['_route' => 'r_list', '_controller' => 'App\\Controller\\ReclamationController::afficher'], ['value'], null, null, false, true, null]],
+        1217 => [[['_route' => 'etat_rec', '_controller' => 'App\\Controller\\ReclamationController::afficheReponse'], ['id'], null, null, false, true, null]],
+        1255 => [[['_route' => 'reclam_delete', '_controller' => 'App\\Controller\\ReponseController::Delete_reclamation'], ['id'], null, null, false, true, null]],
+        1273 => [[['_route' => 'response_delete', '_controller' => 'App\\Controller\\ReponseController::Delete_reponse'], ['id'], null, null, false, true, null]],
+        1304 => [[['_route' => 'rep_add', '_controller' => 'App\\Controller\\ReponseController::addResponse'], ['id'], null, null, false, true, null]],
+        1328 => [[['_route' => 'reponse_update', '_controller' => 'App\\Controller\\ReponseController::update_reponse'], ['id'], null, null, false, true, null]],
+        1368 => [
             [['_route' => 'userupdate', '_controller' => 'App\\Controller\\UtilisateursController::Update'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

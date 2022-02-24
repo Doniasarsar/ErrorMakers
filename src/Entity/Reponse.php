@@ -31,12 +31,7 @@ class Reponse
      */
     private $message;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank()
-     */
-    private $idCommande;
-
+ 
     /**
      * @ORM\Column(type="datetime_immutable")
      */
@@ -76,17 +71,7 @@ class Reponse
         return $this;
     }
 
-    public function getIdCommande(): ?string
-    {
-        return $this->idCommande;
-    }
-
-    public function setIdCommande(string $idCommande): self
-    {
-        $this->idCommande = $idCommande;
-
-        return $this;
-    }
+  
 
     public function getCreatedAt(): ?\DateTimeImmutable
     {

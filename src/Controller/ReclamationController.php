@@ -8,8 +8,10 @@ use App\Entity\Reclamation;
 use App\Form\ReclamationType;
 use App\Services\cart\CartService;
 use App\Repository\ReponseRepository;
+use App\Repository\CommandeRepository;
 use App\Repository\ReclamationRepository;
 use App\Repository\UtilisateursRepository;
+use App\Repository\LigneCommandeRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -35,9 +37,9 @@ class ReclamationController extends AbstractController
 
 
     /**
-     * @Route("/reclamation/add/{id}", name="r_add")
+     * @Route("/reclamation/add/{id}/{cmd}", name="r_add")
      */
-    public function add ($id,Request $req, UtilisateursRepository $rep,CartService $cartService)
+    public function add ($id,$cmd,Request $req, UtilisateursRepository $rep,CartService $cartService, CommandeRepository $repp)
     {
         $dataPanier = $cartService->getFullCart();  
         $total = $cartService->getTotal();
@@ -53,6 +55,12 @@ class ReclamationController extends AbstractController
         {$em=$this->getDoctrine()->getManager();
             $user=$rep->find($id);
             $reclamations->setClient($user);
+            
+            $commande=$repp->find($cmd);
+
+            $reclamations->setCommande($commande);
+
+
             $em->persist($reclamations);
             $em->flush();
             $this->addFlash('success','Reclamation Added Successfully !');
@@ -75,14 +83,16 @@ class ReclamationController extends AbstractController
      * @return Response
      * @Route("reclamation/list/{value}", name="r_list")
      */
-    public function afficher($value, ReclamationRepository $rep,CartService $cartService): Response
+    public function afficher($value, ReclamationRepository $rep,CartService $cartService,LigneCommandeRepository $ligneCommande): Response
     {    $dataPanier = $cartService->getFullCart();  
         $total = $cartService->getTotal();
 
         $reclamations=$rep->findById($value);
+        $ligneCommande = $ligneCommande->findall();
         return $this->render('reclamation/listReclamation.html.twig', [
             'tab' => $reclamations,
             'elements' => $dataPanier,
+            'tab1' => $ligneCommande,
             'total' => $total
         ]);
     }
@@ -105,6 +115,8 @@ class ReclamationController extends AbstractController
             'total' => $total
         ]);
     }
+
+
 
     
 

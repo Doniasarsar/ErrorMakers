@@ -134,4 +134,22 @@ class CommandeController extends AbstractController
     ]);
     }
 
+     /**
+     * @Route("commande/list/{value}", name="listmescommande")
+     */
+    public function affichermescommandes($value, CommandeRepository $rep,CartService $cartService,LigneCommandeRepository $ligneCommande): Response
+    {    $dataPanier = $cartService->getFullCart();  
+        $total = $cartService->getTotal();
+
+        $commande=$rep->findById($value);
+        $ligneCommande = $ligneCommande->findall();
+        return $this->render('commande/listCommande.html.twig', [
+            'tab' => $commande,
+            'tab1' => $ligneCommande,
+            'elements' => $dataPanier,
+            'total' => $total
+        ]);
+    }
+
+
 }

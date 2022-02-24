@@ -67,10 +67,10 @@ class Commande extends \App\Entity\Commande implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'nomClient', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'prenomClient', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'adresse', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'postcode', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'phone', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'montant', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'dateCommande', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'etatCommande', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'modePaiemenet', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'ligneCommandes'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'nomClient', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'prenomClient', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'adresse', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'postcode', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'phone', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'montant', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'dateCommande', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'etatCommande', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'modePaiemenet', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'ligneCommandes', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'reclamations'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'nomClient', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'prenomClient', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'adresse', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'postcode', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'phone', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'montant', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'dateCommande', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'etatCommande', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'modePaiemenet', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'ligneCommandes'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'nomClient', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'prenomClient', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'adresse', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'postcode', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'phone', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'montant', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'dateCommande', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'etatCommande', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'modePaiemenet', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'ligneCommandes', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'reclamations'];
     }
 
     /**
@@ -421,6 +421,39 @@ class Commande extends \App\Entity\Commande implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeLigneCommande', [$ligneCommande]);
 
         return parent::removeLigneCommande($ligneCommande);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getReclamations(): \Doctrine\Common\Collections\Collection
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getReclamations', []);
+
+        return parent::getReclamations();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addReclamation(\App\Entity\Reclamation $reclamation): \App\Entity\Commande
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addReclamation', [$reclamation]);
+
+        return parent::addReclamation($reclamation);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeReclamation(\App\Entity\Reclamation $reclamation): \App\Entity\Commande
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeReclamation', [$reclamation]);
+
+        return parent::removeReclamation($reclamation);
     }
 
 }

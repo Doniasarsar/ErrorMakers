@@ -86,10 +86,16 @@ class Commande
      */
     private $ligneCommandes;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Reclamation::class, mappedBy="commande")
+     */
+    private $reclamations;
+
     public function __construct()
     {
         $this->ligneCommandes = new ArrayCollection();
         $this->dateCommande = new \DateTime('now');
+        $this->reclamations = new ArrayCollection();
     }
 
   
@@ -236,6 +242,36 @@ class Commande
             // set the owning side to null (unless already changed)
             if ($ligneCommande->getCommande() === $this) {
                 $ligneCommande->setCommande(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Reclamation[]
+     */
+    public function getReclamations(): Collection
+    {
+        return $this->reclamations;
+    }
+
+    public function addReclamation(Reclamation $reclamation): self
+    {
+        if (!$this->reclamations->contains($reclamation)) {
+            $this->reclamations[] = $reclamation;
+            $reclamation->setCommande($this);
+        }
+
+        return $this;
+    }
+
+    public function removeReclamation(Reclamation $reclamation): self
+    {
+        if ($this->reclamations->removeElement($reclamation)) {
+            // set the owning side to null (unless already changed)
+            if ($reclamation->getCommande() === $this) {
+                $reclamation->setCommande(null);
             }
         }
 

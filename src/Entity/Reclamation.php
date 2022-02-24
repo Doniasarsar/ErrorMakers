@@ -55,11 +55,7 @@ class Reclamation
     private $type;
 
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
-     */
-    private $idCommande;
+   
     
     /**
      * @ORM\Column(type="string", length=255)
@@ -78,6 +74,11 @@ class Reclamation
      * @ORM\ManyToOne(targetEntity=Utilisateurs::class, inversedBy="reclamations")
      */
     private $client;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Commande::class, inversedBy="reclamations")
+     */
+    private $commande;
 
  
 
@@ -163,18 +164,7 @@ class Reclamation
 
 
 
-    public function getIdCommande(): ?string
-    {
-        return $this->idCommande;
-    }
-
-    public function setIdCommande(string $idCommande): self
-    {
-        $this->idCommande = $idCommande;
-
-        return $this;
-    }
-
+   
     public function getReponse(): ?Reponse
     {
         return $this->reponse;
@@ -219,6 +209,18 @@ class Reclamation
     public function setClient(?Utilisateurs $client): self
     {
         $this->client = $client;
+
+        return $this;
+    }
+
+    public function getCommande(): ?Commande
+    {
+        return $this->commande;
+    }
+
+    public function setCommande(?Commande $commande): self
+    {
+        $this->commande = $commande;
 
         return $this;
     }

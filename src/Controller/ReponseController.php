@@ -63,7 +63,7 @@ class ReponseController extends AbstractController
      */
     public function addResponse (Reclamation $recl,Reclamation $subj,Request $req, ReclamationRepository $rep, $id,SessionInterface $session)
     {   
-        $reclamation = $session->get("reclamation", $recl->getIdCommande());
+       
         $subject = $session->get("subj", $subj->getSubject());
 
 
@@ -88,7 +88,6 @@ class ReponseController extends AbstractController
 
         return $this->render('reponse/addReponse.html.twig', [
             'formA'=>$form->createView(), 
-            'reclamation' => $reclamation,
             'subject' => $subject
             
         ]);
