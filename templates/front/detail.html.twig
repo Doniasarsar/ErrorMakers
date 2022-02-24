@@ -55,7 +55,15 @@
                                   </form>
                                     </div>
                                   #}
-                                  
+                                  <div class="single-add-to-cart">
+                                    <div class="cart-quantity">
+                                        <a class="add-to-cart"  href="{{path('details',{id :prod.boutique.id })}}" type="submit">View Shop</a>
+                                      <br>
+                                      <br>
+                                        <a class="add-to-cart" href="{{path("cart_add",{id:prod.id})}}" type="submit">Add Tocart</a>
+                                    </div>
+                                </div>
+                              
                                 </div>
                             </div>
                         </div> 

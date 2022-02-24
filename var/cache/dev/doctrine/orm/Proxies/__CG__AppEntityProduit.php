@@ -67,10 +67,10 @@ class Produit extends \App\Entity\Produit implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'prixProduit', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'quantiteProduit', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'descProduit', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'image', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'nomProduit'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'prixProduit', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'quantiteProduit', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'descProduit', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'image', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'nomProduit', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'boutique'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'prixProduit', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'quantiteProduit', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'descProduit', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'image', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'nomProduit'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'prixProduit', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'quantiteProduit', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'descProduit', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'image', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'nomProduit', '' . "\0" . 'App\\Entity\\Produit' . "\0" . 'boutique'];
     }
 
     /**
@@ -300,6 +300,28 @@ class Produit extends \App\Entity\Produit implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setNomProduit', [$nomProduit]);
 
         return parent::setNomProduit($nomProduit);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getBoutique(): ?\App\Entity\Boutique
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getBoutique', []);
+
+        return parent::getBoutique();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setBoutique(?\App\Entity\Boutique $boutique): \App\Entity\Produit
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setBoutique', [$boutique]);
+
+        return parent::setBoutique($boutique);
     }
 
 }

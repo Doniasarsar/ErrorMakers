@@ -48,7 +48,7 @@ return [
     'event_add' => [[], ['_controller' => 'App\\Controller\\EvenementController::Add'], [], [['text', '/admin/evenement/add']], [], []],
     'ev_delete' => [['id'], ['_controller' => 'App\\Controller\\EvenementController::Supprimer'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/evenement/delete']], [], []],
     'ev_update' => [['id'], ['_controller' => 'App\\Controller\\EvenementController::Update'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/evenement/update']], [], []],
-    'ev_front_detail' => [['id'], ['_controller' => 'App\\Controller\\EvenementController::detail'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/detail']], [], []],
+    'ev_front_detail' => [['id'], ['_controller' => 'App\\Controller\\EvenementController::detail'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/evenement/detail']], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/home']], [], []],
     'delete1' => [['id'], ['_controller' => 'App\\Controller\\FrontController::delete1'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/delete1']], [], []],
     'ev_front_aff' => [[], ['_controller' => 'App\\Controller\\FrontController::afficherevenement'], [], [['text', '/eventfront']], [], []],

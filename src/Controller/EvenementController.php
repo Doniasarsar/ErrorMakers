@@ -118,7 +118,7 @@ class EvenementController extends AbstractController
 
      
      /**
-     * @Route("/detail/{id}", name="ev_front_detail")
+     * @Route("evenement/detail/{id}", name="ev_front_detail")
      */
     function detail($id,EvenementRepository $rep,Request $request,CommentairesRepository $repp,CartService $cartService)
     {   
