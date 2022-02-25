@@ -1,6 +1,8 @@
 {% extends 'baseFront.html.twig' %}
 {% block body %}
-
+{% if total == 0 %}
+<h1>veuillez remplir le panier</h1>
+{% else %}
 <!--Checkout Area Strat-->
    <div class="checkout-area pt-60 pb-30">
     <div class="container">
@@ -245,4 +247,5 @@
     </div>
 </div>
 <!--Checkout Area End-->
+{% endif %}
 {% endblock %}
