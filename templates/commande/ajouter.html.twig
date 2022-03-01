@@ -1,6 +1,8 @@
 {% extends 'baseFront.html.twig' %}
 {% block body %}
-
+{% if total == 0 %}
+<h1>veuillez remplir le panier</h1>
+{% else %}
 <!--Checkout Area Strat-->
    <div class="checkout-area pt-60 pb-30">
     <div class="container">
@@ -169,7 +171,7 @@
                             <tbody>
                                 {% for element in elements %}
                                 <tr class="cart_item">
-                                  <td class="cart-product-name"> <strong class="product-quantity">{{ element.produit.descProduit }} </strong></td>
+                                  <td class="cart-product-name"> <strong class="product-quantity">{{ element.produit.nomProduit }} </strong></td>
                                   <td class="cart-product-total"><span class="amount">{{ element.quantite * element.produit.prixProduit }}$</span></td>  
                                 </tr>
                                
@@ -245,4 +247,5 @@
     </div>
 </div>
 <!--Checkout Area End-->
+{% endif %}
 {% endblock %}

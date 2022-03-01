@@ -68,7 +68,15 @@ class CommandeController extends AbstractController
 
                 }
 
-             return $this->redirectToRoute('home');
+                $test = $test->getModePaiemenet();
+                if ( $test == 0 )
+                {
+                    return $this->redirectToRoute('checkout');
+                }else {
+                    return $this->redirectToRoute('home');
+                }
+             
+
         }
        
 

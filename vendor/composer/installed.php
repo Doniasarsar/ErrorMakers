@@ -1,22 +1,22 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '682071f40b50fd4d48b1399e5112582f8039e340',
+        'reference' => 'c4daf657503cd92e945bb86dbd03c3bffb018d86',
         'name' => '__root__',
         'dev' => true,
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '682071f40b50fd4d48b1399e5112582f8039e340',
+            'reference' => 'c4daf657503cd92e945bb86dbd03c3bffb018d86',
             'dev_requirement' => false,
         ),
         'doctrine/annotations' => array(
@@ -582,6 +582,15 @@
             'install_path' => __DIR__ . '/../sensio/framework-extra-bundle',
             'aliases' => array(),
             'reference' => '430d14c01836b77c28092883d195a43ce413ee32',
+            'dev_requirement' => false,
+        ),
+        'stripe/stripe-php' => array(
+            'pretty_version' => 'v7.114.0',
+            'version' => '7.114.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../stripe/stripe-php',
+            'aliases' => array(),
+            'reference' => '63be231686c6874befb5b3a47fb8effb4c30b78b',
             'dev_requirement' => false,
         ),
         'swiftmailer/swiftmailer' => array(
