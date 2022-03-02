@@ -1,0 +1,62 @@
+{% block body %}
+
+
+<table border="5" width="100%" rules="groups" summary="Facture de livres"
+ cellpadding="5">
+<caption><big>Facture de votre commande </big></caption>
+
+<colgroup id="date" width="10%" span="1" align="center" class="date">
+</colgroup>
+
+<colgroup id="titre" span="2" width="25%" align="left" class="gras">
+</colgroup>
+
+<colgroup id="prix" span="3" align="right" class="prix">
+<col width="10%" />
+<col span="2" width="15%" />
+</colgroup>
+
+<thead><tr><th>Date </th><th>Les produits</th> <th>Quantite </th>
+ <th>Prix Unitaire </th> <th>Prix Total </th> </tr> 
+</thead>
+
+<tbody>
+<tr>
+
+<td>{{ tab.dateCommande()|date('d-m-Y H:i:s') }}</td><td>
+    {% for des in tab1 %}
+    {% if des.commande.id == tab.id %}
+    *{{ des.produit.nomProduit  }} <br>
+
+    </td>
+     
+    <td>
+{{ des.quantite  }} <br>
+</td>
+ <td>{{ des.produit.prixProduit}}</td> <td>{{ des.quantite* des.produit.prixProduit}} 
+</td>
+ {% endif %}
+{% endfor %}
+
+<td>
+  {% for des in tab1 %}
+  {% if des.commande.id == tab.id %}
+  *{{ des.produit.nomProduit  }} <br>
+  {% endif %}
+  {% endfor %}
+</tr>
+
+</tbody>
+</table>
+<table border="5" width="100%" rules="groups" 
+cellpadding="5">
+<thead><tr><th>Montant</th> <th>{{ tab.montant }}</th></tr></thead>   
+</table>
+{% endblock %}
+
+                
+                        
+
+ 
+
+

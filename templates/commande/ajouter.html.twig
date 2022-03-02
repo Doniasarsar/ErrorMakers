@@ -101,7 +101,7 @@
                              <div class="col-md-6">
                                 <div class="checkout-form-list">
                                     <label>Phone  <span class="required">*</span></label>
-                                    {{ form_widget(formA.phone ,{'attr':{"value":app.user.Telephone }}) }}
+                                    {{ form_widget(formA.phone ,{'attr':{"value":app.user.Telephone , readonly:true }}) }}
                                     {{ form_errors(formA.phone) }}
 
                                 </div>
@@ -233,7 +233,7 @@
                               </div>
                             </div>
                             <div class="order-button-payment">
-                                <input value="Place order" type="submit">
+                                <a href="{{path('pdf')}}"> PDF</a>
 
                               {#  {{ form_widget(formA.Valider, {'attr': {'class': 'order-button-payment'}}) }}  #}
 

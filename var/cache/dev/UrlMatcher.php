@@ -152,22 +152,23 @@ return [
                         .'|/([^/]++)(*:1122)'
                     .')'
                 .')'
+                .'|/pdf/([^/]++)(*:1146)'
                 .'|/re(?'
                     .'|clamation/(?'
-                        .'|add/([^/]++)/([^/]++)(*:1173)'
-                        .'|list/([^/]++)(*:1195)'
-                        .'|etat/([^/]++)(*:1217)'
+                        .'|add/([^/]++)/([^/]++)(*:1195)'
+                        .'|list/([^/]++)(*:1217)'
+                        .'|etat/([^/]++)(*:1239)'
                     .')'
                     .'|sponse/delete(?'
-                        .'|Rec/([^/]++)(*:1255)'
-                        .'|/([^/]++)(*:1273)'
+                        .'|Rec/([^/]++)(*:1277)'
+                        .'|/([^/]++)(*:1295)'
                     .')'
                     .'|ponse/(?'
-                        .'|add/([^/]++)(*:1304)'
-                        .'|update/([^/]++)(*:1328)'
+                        .'|add/([^/]++)(*:1326)'
+                        .'|update/([^/]++)(*:1350)'
                     .')'
                 .')'
-                .'|/utilisateurs/update/([^/]++)(*:1368)'
+                .'|/utilisateurs/update/([^/]++)(*:1390)'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -212,14 +213,15 @@ return [
         1078 => [[['_route' => 'delete1', '_controller' => 'App\\Controller\\FrontController::delete1'], ['id'], null, null, false, true, null]],
         1104 => [[['_route' => 'details', '_controller' => 'App\\Controller\\FrontController::details'], ['id'], null, null, false, true, null]],
         1122 => [[['_route' => 'detail', '_controller' => 'App\\Controller\\FrontController::detail'], ['id'], null, null, false, true, null]],
-        1173 => [[['_route' => 'r_add', '_controller' => 'App\\Controller\\ReclamationController::add'], ['id', 'cmd'], null, null, false, true, null]],
-        1195 => [[['_route' => 'r_list', '_controller' => 'App\\Controller\\ReclamationController::afficher'], ['value'], null, null, false, true, null]],
-        1217 => [[['_route' => 'etat_rec', '_controller' => 'App\\Controller\\ReclamationController::afficheReponse'], ['id'], null, null, false, true, null]],
-        1255 => [[['_route' => 'reclam_delete', '_controller' => 'App\\Controller\\ReponseController::Delete_reclamation'], ['id'], null, null, false, true, null]],
-        1273 => [[['_route' => 'response_delete', '_controller' => 'App\\Controller\\ReponseController::Delete_reponse'], ['id'], null, null, false, true, null]],
-        1304 => [[['_route' => 'rep_add', '_controller' => 'App\\Controller\\ReponseController::addResponse'], ['id'], null, null, false, true, null]],
-        1328 => [[['_route' => 'reponse_update', '_controller' => 'App\\Controller\\ReponseController::update_reponse'], ['id'], null, null, false, true, null]],
-        1368 => [
+        1146 => [[['_route' => 'pdf', '_controller' => 'App\\Controller\\PdfController::index'], ['id'], null, null, false, true, null]],
+        1195 => [[['_route' => 'r_add', '_controller' => 'App\\Controller\\ReclamationController::add'], ['id', 'cmd'], null, null, false, true, null]],
+        1217 => [[['_route' => 'r_list', '_controller' => 'App\\Controller\\ReclamationController::afficher'], ['value'], null, null, false, true, null]],
+        1239 => [[['_route' => 'etat_rec', '_controller' => 'App\\Controller\\ReclamationController::afficheReponse'], ['id'], null, null, false, true, null]],
+        1277 => [[['_route' => 'reclam_delete', '_controller' => 'App\\Controller\\ReponseController::Delete_reclamation'], ['id'], null, null, false, true, null]],
+        1295 => [[['_route' => 'response_delete', '_controller' => 'App\\Controller\\ReponseController::Delete_reponse'], ['id'], null, null, false, true, null]],
+        1326 => [[['_route' => 'rep_add', '_controller' => 'App\\Controller\\ReponseController::addResponse'], ['id'], null, null, false, true, null]],
+        1350 => [[['_route' => 'reponse_update', '_controller' => 'App\\Controller\\ReponseController::update_reponse'], ['id'], null, null, false, true, null]],
+        1390 => [
             [['_route' => 'userupdate', '_controller' => 'App\\Controller\\UtilisateursController::Update'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

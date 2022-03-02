@@ -28,7 +28,7 @@ class ReclamationRepository extends ServiceEntityRepository
         return $this->createQueryBuilder('r')
             ->andWhere('r.client = :val')
             ->setParameter('val', $value)
-            ->orderBy('r.id', 'ASC')
+            ->orderBy('r.client', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()
