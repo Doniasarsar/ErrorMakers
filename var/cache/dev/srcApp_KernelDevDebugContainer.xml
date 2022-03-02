@@ -5870,7 +5870,7 @@
         <argument key="rep" type="service_closure" id="App\Repository\VehiculeRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.jBQEdLw" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.d20kCr8" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AdminController::AcceptDem" type="service_closure" id=".service_locator.9dW19ZD"/>
@@ -5913,6 +5913,8 @@
         <argument key="App\Controller\LivraisonControlleur::Update" type="service_closure" id=".service_locator.Dr.h0HE"/>
         <argument key="App\Controller\LivraisonControlleur::afficher" type="service_closure" id=".service_locator.Dr.h0HE"/>
         <argument key="App\Controller\PaymentController::chekout" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\PaymentController::error" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\PaymentController::success" type="service_closure" id=".service_locator.g8vn46o"/>
         <argument key="App\Controller\PdfController::index" type="service_closure" id=".service_locator.OoeDy.C"/>
         <argument key="App\Controller\ProduitController::Supprimer" type="service_closure" id=".service_locator.dCtSWL8"/>
         <argument key="App\Controller\ProduitController::afficher" type="service_closure" id=".service_locator.dCtSWL8"/>
@@ -5984,6 +5986,8 @@
         <argument key="App\Controller\LivraisonControlleur:Update" type="service_closure" id=".service_locator.Dr.h0HE"/>
         <argument key="App\Controller\LivraisonControlleur:afficher" type="service_closure" id=".service_locator.Dr.h0HE"/>
         <argument key="App\Controller\PaymentController:chekout" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\PaymentController:error" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\PaymentController:success" type="service_closure" id=".service_locator.g8vn46o"/>
         <argument key="App\Controller\PdfController:index" type="service_closure" id=".service_locator.OoeDy.C"/>
         <argument key="App\Controller\ProduitController:Supprimer" type="service_closure" id=".service_locator.dCtSWL8"/>
         <argument key="App\Controller\ProduitController:afficher" type="service_closure" id=".service_locator.dCtSWL8"/>
@@ -6583,12 +6587,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.jBQEdLw"/>
+      <argument type="service" id=".service_locator.d20kCr8"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.jBQEdLw"/>
+      <argument type="service" id=".service_locator.d20kCr8"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -6989,7 +6993,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.jBQEdLw"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.d20kCr8"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

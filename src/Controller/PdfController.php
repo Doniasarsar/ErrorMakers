@@ -24,10 +24,20 @@ class PdfController extends AbstractController
         // Configure Dompdf according to your needs
         $pdfOptions = new Options();
         $pdfOptions->set('defaultFont', 'Arial');
+        $pdfOptions->setIsRemoteEnabled(true);
+        $pdfOptions->setIsHtml5ParserEnabled(true);
+ 
+    
         
         // Instantiate Dompdf with our options
         $dompdf = new Dompdf($pdfOptions);
+        $dompdf->getOptions()->getChroot(); // something like 'C:\\laragon\\www\\your-local-website\\vendor\\dompdf\\dompdf'
+        
+
+
         $commande=$rep->find($id);
+        $ligneCommande = $ligneCommande->findByidclient($id);
+
         // Retrieve the HTML generated in our twig file
         $html = $this->renderView('commande/pdf.html.twig', [
             'tab' => $commande,
@@ -40,6 +50,8 @@ class PdfController extends AbstractController
         
         // (Optional) Setup the paper size and orientation 'portrait' or 'portrait'
         $dompdf->setPaper('A4', 'portrait');
+
+
 
         // Render the HTML as PDF
         $dompdf->render();

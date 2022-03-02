@@ -23,11 +23,23 @@ class CartController extends AbstractController
     {  
         $dataPanier = $cartService->getFullCart();  
         $total = $cartService->getTotal();
-        
+    
+        if ($total == 0 )
+        {
+            $this->addFlash('error','Veuillez remplir le panier');
+
+            return $this->render('cart/index.html.twig', [
+                'elements' => $dataPanier,
+                'total' => $total,
+            ]);
+        }
+        else
+        {
         return $this->render('cart/index.html.twig', [
             'elements' => $dataPanier,
             'total' => $total,
         ]);
+        }
     }
     /**
      * @Route("/add/{id}", name="add")

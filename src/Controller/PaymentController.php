@@ -4,12 +4,14 @@ namespace App\Controller;
 
 use Stripe\Checkout\Session;
 use App\Services\cart\CartService;
+use App\Repository\ProduitRepository;
+use App\Repository\BoutiqueRepository;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
-use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
 class PaymentController extends AbstractController
@@ -56,17 +58,41 @@ class PaymentController extends AbstractController
      /**
      * @Route("/error", name="error")
      */
-    public function error()
+    public function error(CartService $cartService,ProduitRepository $rep, BoutiqueRepository $repp)
     {
-        return $this->render('payment/Error.html.twig');
+      $dataPanier = $cartService->getFullCart();  
+      $total = $cartService->getTotal();
+
+      $produits=$rep->findAll();
+        $boutiques=$repp->findAll();
+
+      $this->addFlash('error','Failed payment');
+        return $this->render('cart/index.html.twig', [
+          'elements' => $dataPanier,
+          'total' => $total,
+          'tabprod' => $produits,
+          'tabbout' => $boutiques
+      ]);
     }
 
      /**
      * @Route("/success", name="success")
      */
-    public function success()
+    public function success(CartService $cartService,ProduitRepository $rep, BoutiqueRepository $repp)
     {
-        return $this->render('payment/Success.html.twig');
+      $dataPanier = $cartService->getFullCart();  
+      $total = $cartService->getTotal();
+
+      $produits=$rep->findAll();
+        $boutiques=$repp->findAll();
+
+      $this->addFlash('success','Successful payment');
+        return $this->render('front/home.html.twig', [
+            'elements' => $dataPanier,
+            'total' => $total,
+            'tabprod' => $produits,
+            'tabbout' => $boutiques
+        ]);
     }
         
   
