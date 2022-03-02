@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Livraison;
 use App\Form\LivraisonType;
 use App\Repository\CommandeRepository;
+use App\Repository\DemandesRepository;
 use App\Repository\VehiculeRepository;
 use App\Repository\LivraisonRepository;
 use App\Repository\UtilisateursRepository;
@@ -20,10 +21,13 @@ class LivraisonControlleur extends AbstractController
     /**
      * @Route("admin/livraison/controlleur", name="livraison_controlleur")
      */
-    public function index(): Response
+    public function index(DemandesRepository $repp): Response
     {
+        $demandes=$repp->findAll();
+
         return $this->render('livraison/index.html.twig', [
             'controller_name' => 'LivraisonControlleur',
+            'demandes'=>$demandes,
         ]);
     }
      /**
@@ -31,10 +35,13 @@ class LivraisonControlleur extends AbstractController
     * @return Reponse
     * @Route("admin/livraison/list", name="livraison_list")
     */
-   public function afficher(LivraisonRepository $rep){
+   public function afficher(LivraisonRepository $rep,DemandesRepository $repp){
+        $demandes=$repp->findAll();
+
        $livraisons=$rep->findAll();
        return $this->render('dashboard/livraison/listlivraison.html.twig', [
            'tab' => $livraisons,
+           'demandes'=>$demandes,
        ]);
    }
      /**
@@ -62,7 +69,9 @@ class LivraisonControlleur extends AbstractController
      * @Route("admin/livraison/add/{id}",name="liv_add")
      */
 
-    public function Add($id,Request $request ,UtilisateursRepository $rep,CommandeRepository $repp,VehiculeRepository $reppp){
+    public function Add($id,Request $request ,UtilisateursRepository $rep,CommandeRepository $repp,VehiculeRepository $reppp,DemandesRepository $repo){
+        $demandes=$repo->findAll();
+        
         $livraison=new Livraison();
         $commande=$repp->find($id);
 
@@ -100,12 +109,14 @@ class LivraisonControlleur extends AbstractController
 
         }return $this->render("dashboard/livraison/add.html.twig", [
             'Fclass'=>$form->createView(),
+            'demandes'=>$demandes,
         ]);
      }
       /**
      * @Route("admin/livraison/update/{id}",name="livraison_update")
      */
-    public function Update($id,LivraisonRepository $rep,Request $request){
+    public function Update($id,LivraisonRepository $rep,Request $request,DemandesRepository $repo){
+        $demandes=$repo->findAll();
         
         $livraison=$rep->find($id);
 
@@ -121,6 +132,7 @@ class LivraisonControlleur extends AbstractController
 
         }return $this->render("dashboard/livraison/update.html.twig", [
             'Fclass'=>$form->createView(),
+            'demandes'=>$demandes,
         ]);
 
      }
