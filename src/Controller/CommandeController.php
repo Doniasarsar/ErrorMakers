@@ -149,7 +149,7 @@ class CommandeController extends AbstractController
     {    $dataPanier = $cartService->getFullCart();  
         $total = $cartService->getTotal();
 
-        $commande=$rep->findById($value);
+        $commande=$rep->findByNom($value);
         $ligneCommande = $ligneCommande->findall();
         return $this->render('commande/listCommande.html.twig', [
             'tab' => $commande,

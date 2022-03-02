@@ -145,7 +145,7 @@ class ResetPasswordController extends AbstractController
 
         // Do not reveal whether a user account was found or not.
         if (!$user) {
-            $this->addFlash('error',"Email not Found");
+            $this->addFlash('error',"Account not Found");
             return $this->redirectToRoute('app_check_email');
         }
 
@@ -161,7 +161,7 @@ class ResetPasswordController extends AbstractController
             //     $translator->trans(ResetPasswordExceptionInterface::MESSAGE_PROBLEM_HANDLE, [], 'ResetPasswordBundle'),
             //     $translator->trans($e->getReason(), [], 'ResetPasswordBundle')
             // ));
-            $this->addFlash('success',"Email sent");
+            $this->addFlash('error',"Email already sent");
             return $this->redirectToRoute('app_check_email');
         }
 
@@ -179,7 +179,10 @@ class ResetPasswordController extends AbstractController
 
         // Store the token object in session for retrieval in check-email route.
         $this->setTokenObjectInSession($resetToken);
-
+        
+        $this->addFlash('success',"Email sent");
         return $this->redirectToRoute('app_check_email');
+        
+
     }
 }

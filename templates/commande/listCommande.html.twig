@@ -8,14 +8,14 @@
             <div class="breadcrumb-content">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li class="active">Reclamation List</li>
+                    <li class="active">Commandes List</li>
                 </ul>
             </div>
         </div>
     </div>
     <!-- Li's Breadcrumb Area End Here -->
     <div class="container align-content-center mt-50">
-    <h1 align="center">Reclamations History</h1>
+    <h1 align="center">Commandes list</h1>
     <div class="form-group mt-20">
     <table class="table table-striped">
         <tr>
@@ -44,7 +44,7 @@
                   {% endfor %}
 
                 </td> 
-                <td><a href="{{path('r_add', {id:app.user.id , cmd:class.id})}}">Reclamation</a></td>
+                <td><a class="btn btn-info" href="{{path('r_add', {id:app.user.id , cmd:class.id})}}">ADD Reclamation</a></td>
             </tr>
         {% endfor %}
     </table>

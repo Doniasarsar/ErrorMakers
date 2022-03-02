@@ -985,6 +985,7 @@
         <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations</argument>
       </argument>
       <argument type="collection">
+        <argument>public/images</argument>
         <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/twig-bridge/Resources/views/Email</argument>
         <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/twig-bridge/Resources/views/Form</argument>
       </argument>
@@ -1006,6 +1007,7 @@
         <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations</argument>
       </argument>
       <argument type="collection">
+        <argument>public/images</argument>
         <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/twig-bridge/Resources/views/Email</argument>
         <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/twig-bridge/Resources/views/Form</argument>
       </argument>
@@ -3464,6 +3466,7 @@
       <argument type="service" id="kernel"/>
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/src</argument>
       <argument type="collection">
+        <argument key="public/images">images</argument>
         <argument key="/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/twig-bridge/Resources/views/Email">email</argument>
         <argument key="/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/twig-bridge/Resources/views/Form">null</argument>
       </argument>
@@ -3479,6 +3482,10 @@
       <tag name="twig.loader"/>
       <argument type="collection"/>
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45</argument>
+      <call method="addPath">
+        <argument>public/images</argument>
+        <argument>images</argument>
+      </call>
       <call method="addPath">
         <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/framework-bundle/Resources/views</argument>
         <argument>Framework</argument>
