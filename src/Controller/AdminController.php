@@ -22,12 +22,12 @@ class AdminController extends AbstractController
     /**
      * @Route("/dashboard", name="dashboard")
      */
-    public function index(ReclamationRepository $rep , UtilisateursRepository $urp)
+    public function index(ReclamationRepository $rep , UtilisateursRepository $urp, DemandesRepository $repD)
     {
 
         //$nbr = $urp->CountClient();
 
-        
+        $demandes=$repD->findAll();
         $reclamations = $rep->countByType();
 
         $recType = [];
@@ -48,6 +48,7 @@ class AdminController extends AbstractController
             'controller_name' => 'AdminController',
             'recType' => json_encode($recType),
             'recCount' => json_encode($recCount),
+            'demandes' => $demandes,
 
         ]);
     }

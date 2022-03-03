@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'a81d813f2497ffac80d337d8eafda1276fdbbd8d',
+        'reference' => '5e2a7a1bf2afc646d1ea4525d5d44cf0e69de153',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'a81d813f2497ffac80d337d8eafda1276fdbbd8d',
+            'reference' => '5e2a7a1bf2afc646d1ea4525d5d44cf0e69de153',
             'dev_requirement' => false,
         ),
         'doctrine/annotations' => array(
@@ -445,8 +445,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0',
-                1 => '1.0.0',
+                0 => '1.0.0',
+                1 => '1.0|2.0',
             ),
         ),
         'psr/simple-cache-implementation' => array(
