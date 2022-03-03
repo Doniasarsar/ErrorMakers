@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\DemandesRepository;
 use App\Repository\EvenementRepository;
 use App\Repository\CommentairesRepository;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,14 +14,16 @@ class CommentairesController extends AbstractController
     /**
      * @Route("/commentaires/{id}", name="commentaires")
      */
-    public function index($id,CommentairesRepository $repp,EvenementRepository $rep ): Response
+    public function index($id,CommentairesRepository $repp,EvenementRepository $rep,DemandesRepository $reppp ): Response
     {
+        $demandes =$reppp->findAll();
         $comments = $repp->findByEeven($id);
        $evenement=$rep->find($id);     
         return $this->render('dashboard/commentaires/index.html.twig', [
             'controller_name' => 'CommentairesController',
             'comments' =>$comments,
-            'evenement'=>$evenement
+            'evenement'=>$evenement,
+            'demandes'=>$demandes,
         ]);
 
        

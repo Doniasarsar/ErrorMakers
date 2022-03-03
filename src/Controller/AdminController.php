@@ -55,10 +55,12 @@ class AdminController extends AbstractController
      * @return Reponse
      * @Route("/dashboard/listU", name="userlist")
      */
-    public function afficherUser(UtilisateursRepository $rep){
+    public function afficherUser(UtilisateursRepository $rep, DemandesRepository $repp){
         $users=$rep->findAll();
+        $demandes=$repp->findAll();
         return $this->render('/dashboard/userslist.html.twig', [
             'users' => $users,
+            'demandes' => $demandes,
         ]);
     }
      /**

@@ -434,6 +434,13 @@
         <argument type="service" id=".service_locator.vdmMuyE.App\Controller\PaymentController"/>
       </call>
     </service>
+    <service id="App\Controller\PdfController" class="App\Controller\PdfController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\PdfController"/>
+      </call>
+    </service>
     <service id="App\Controller\ProduitController" class="App\Controller\ProduitController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -5382,6 +5389,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PaymentController" class="App\Controller\PaymentController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PaymentController" class="App\Controller\PaymentController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\PaymentController" class="App\Controller\PaymentController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PdfController" class="App\Controller\PdfController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PdfController" class="App\Controller\PdfController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\PdfController" class="App\Controller\PdfController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ProduitController" class="App\Controller\ProduitController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ProduitController" class="App\Controller\ProduitController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ProduitController" class="App\Controller\ProduitController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5759,12 +5769,13 @@
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="rep" type="service_closure" id="App\Repository\UtilisateursRepository"/>
+        <argument key="repp" type="service_closure" id="App\Repository\DemandesRepository"/>
       </argument>
     </service>
     <service id=".service_locator.RZBlnd0" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="rep" type="service_closure" id="App\Repository\DemandesRepository"/>
+        <argument key="rep" type="service_closure" id="App\Repository\UtilisateursRepository"/>
       </argument>
     </service>
     <service id=".service_locator.9dW19ZD" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5778,12 +5789,26 @@
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="rep" type="service_closure" id="App\Repository\BoutiqueRepository"/>
+        <argument key="repp" type="service_closure" id="App\Repository\DemandesRepository"/>
       </argument>
     </service>
     <service id=".service_locator.dCtSWL8" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="rep" type="service_closure" id="App\Repository\ProduitRepository"/>
+        <argument key="repp" type="service_closure" id="App\Repository\DemandesRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.xPplME2" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="repp" type="service_closure" id="App\Repository\DemandesRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.eTYQhjN" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="rep" type="service_closure" id="App\Repository\BoutiqueRepository"/>
       </argument>
     </service>
     <service id=".service_locator.8GkP9wQ" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5819,6 +5844,7 @@
       <argument type="collection">
         <argument key="ligneCommande" type="service_closure" id="App\Repository\LigneCommandeRepository"/>
         <argument key="rep" type="service_closure" id="App\Repository\CommandeRepository"/>
+        <argument key="repp" type="service_closure" id="App\Repository\DemandesRepository"/>
       </argument>
     </service>
     <service id=".service_locator.p26ou2t" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5840,6 +5866,7 @@
       <argument type="collection">
         <argument key="rep" type="service_closure" id="App\Repository\EvenementRepository"/>
         <argument key="repp" type="service_closure" id="App\Repository\CommentairesRepository"/>
+        <argument key="reppp" type="service_closure" id="App\Repository\DemandesRepository"/>
       </argument>
     </service>
     <service id=".service_locator.owUo2kA" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5894,6 +5921,7 @@
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="rep" type="service_closure" id="App\Repository\LivraisonRepository"/>
+        <argument key="repp" type="service_closure" id="App\Repository\DemandesRepository"/>
       </argument>
     </service>
     <service id=".service_locator.W._dOeO" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5908,6 +5936,7 @@
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="rep" type="service_closure" id="App\Repository\UtilisateursRepository"/>
+        <argument key="repo" type="service_closure" id="App\Repository\DemandesRepository"/>
         <argument key="repp" type="service_closure" id="App\Repository\CommandeRepository"/>
         <argument key="reppp" type="service_closure" id="App\Repository\VehiculeRepository"/>
       </argument>
@@ -5946,6 +5975,7 @@
       <argument type="collection">
         <argument key="recl" type="service_closure" id=".errored..service_locator.gRE0vgk.App\Entity\Reclamation"/>
         <argument key="rep" type="service_closure" id="App\Repository\ReclamationRepository"/>
+        <argument key="repp" type="service_closure" id="App\Repository\DemandesRepository"/>
         <argument key="session" type="service_closure" id="session"/>
         <argument key="subj" type="service_closure" id=".errored..service_locator.gRE0vgk.App\Entity\Reclamation"/>
       </argument>

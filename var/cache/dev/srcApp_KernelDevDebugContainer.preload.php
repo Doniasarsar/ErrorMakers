@@ -45,6 +45,7 @@ $classes[] = 'App\Controller\FrontController';
 $classes[] = 'App\Controller\LigneCommandeController';
 $classes[] = 'App\Controller\LivraisonControlleur';
 $classes[] = 'App\Controller\PaymentController';
+$classes[] = 'App\Controller\PdfController';
 $classes[] = 'App\Controller\ProduitController';
 $classes[] = 'App\Controller\ReclamationController';
 $classes[] = 'App\Controller\ReponseController';

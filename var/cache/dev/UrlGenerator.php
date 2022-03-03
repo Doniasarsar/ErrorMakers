@@ -66,6 +66,7 @@ return [
     'checkout' => [[], ['_controller' => 'App\\Controller\\PaymentController::chekout'], [], [['text', '/checkout']], [], []],
     'error' => [[], ['_controller' => 'App\\Controller\\PaymentController::error'], [], [['text', '/error']], [], []],
     'success' => [[], ['_controller' => 'App\\Controller\\PaymentController::success'], [], [['text', '/success']], [], []],
+    'pdf' => [['id'], ['_controller' => 'App\\Controller\\PdfController::index'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/pdf']], [], []],
     'produit' => [[], ['_controller' => 'App\\Controller\\ProduitController::index'], [], [['text', '/admin/produit']], [], []],
     'produit_list' => [[], ['_controller' => 'App\\Controller\\ProduitController::afficher'], [], [['text', '/admin/produit/list']], [], []],
     'produit_add' => [[], ['_controller' => 'App\\Controller\\ProduitController::add'], [], [['text', '/admin/produit/add']], [], []],
