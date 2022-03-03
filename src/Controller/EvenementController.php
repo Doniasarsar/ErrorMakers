@@ -9,6 +9,7 @@ use App\Entity\Commentaires;
 use App\Form\CommentairesType;
 use App\Form\EvenementFormType;
 use App\Services\cart\CartService;
+use App\Repository\DemandesRepository;
 use App\Repository\EvenementRepository;
 use App\Repository\CommentairesRepository;
 use Symfony\Component\HttpFoundation\Request;
@@ -16,8 +17,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
 
@@ -31,12 +32,14 @@ class EvenementController extends AbstractController
      * @Route("admin/evenement/aff", name="ev_aff")
      */
 
-    function afficher(EvenementRepository $rep)
+    function afficher(EvenementRepository $rep,DemandesRepository $repp)
     {
+        $demandes=$repp->findAll();
 
          $evenement = $rep->findall();
          return $this->render('dashboard/evenement/evenementAFFICHAGE.html.twig', [
-             'tab' => $evenement
+             'tab' => $evenement,
+             'demandes'=>$demandes,
          ]);
 
     }
@@ -45,8 +48,10 @@ class EvenementController extends AbstractController
      * @Route("admin/evenement/add",name="event_add")
      */
 
-    public function Add(Request $request)
+    public function Add(Request $request,DemandesRepository $repp)
      {
+        $demandes=$repp->findAll();
+
         $evenement=new evenement();
         $form=$this->createform(EvenementFormType::class,$evenement);
         $form->add('ajouter',SubmitType::class);
@@ -69,6 +74,7 @@ class EvenementController extends AbstractController
          }
         return $this->render("dashboard/evenement/evenementAJOUT.html.twig", [
             'form_evenement'=>$form->createView(),
+            'demandes'=>$evenement,
         ]);
      }
 
@@ -91,7 +97,8 @@ class EvenementController extends AbstractController
      /**
      * @Route("admin/evenement/update/{id}",name="ev_update")
      */
-    public function Update($id,EvenementRepository $rep,Request $request){
+    public function Update($id,EvenementRepository $rep,Request $request,DemandesRepository $repp){
+        $demandes=$repp->findAll();
         
         $evenement=$rep->find($id);
 
@@ -112,6 +119,7 @@ class EvenementController extends AbstractController
 
         }return $this->render("dashboard/evenement/evenementUPDATE.html.twig", [
             'form_evenement'=>$form->createView(),
+            'demandes'=>$evenement,
         ]);
 
      }

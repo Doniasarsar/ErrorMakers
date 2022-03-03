@@ -4,6 +4,7 @@ namespace App\Controller;
 use App\Entity\Produit;
 use App\Form\ProduitType;
 use App\Repository\ProduitRepository;
+use App\Repository\DemandesRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -28,10 +29,12 @@ class ProduitController extends AbstractController
      * @return Reponse
      * @Route("admin/produit/list", name="produit_list")
      */
-    public function afficher(ProduitRepository $rep){
+    public function afficher(ProduitRepository $rep,DemandesRepository $repp){
+        $demandes=$repp->findAll();
         $produits=$rep->findAll();
         return $this->render('dashboard/produit/listproduit.html.twig', [
             'tab' => $produits,
+            'demandes'=>$demandes,
         ]);
     }
 
@@ -41,8 +44,9 @@ class ProduitController extends AbstractController
      * @Route("admin/produit/add",name="produit_add")
      */
 
-    public function add(Request $request): Response
+    public function add(Request $request,DemandesRepository $repp): Response
     {
+        $demandes=$repp->findAll();
         $produit = new Produit();
         $form = $this->createForm(ProduitType::class,$produit);
         $form->add('Ajouter',SubmitType::class);
@@ -62,6 +66,7 @@ class ProduitController extends AbstractController
 
         return $this->render('dashboard/produit/add.html.twig', [
             'Fprod' => $form->createView(),
+            'demandes'=>$demandes,
             
         ]);
     }
@@ -70,8 +75,10 @@ class ProduitController extends AbstractController
      * @Route("admin/produit/edit/{id}",name="update_produit")
      * Method({"GET", "POST"})
      */
-    public function update($id, Request $request)
+    public function update($id, Request $request,DemandesRepository $repp)
     {
+        $demandes=$repp->findAll();
+
         $produit = new produit();
         $produit = $this->getDoctrine()
             ->getRepository(produit::class)
@@ -104,6 +111,7 @@ class ProduitController extends AbstractController
          return $this->render('dashboard/produit/update.html.twig', [
              'Fprod' => $form->createView(),
              'prod' => $produit,
+             'demandes'=>$demandes,
 
 
 

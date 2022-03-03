@@ -10,6 +10,7 @@ use App\Entity\LigneCommande;
 use App\Services\cart\CartService;
 use App\Repository\ProduitRepository;
 use App\Repository\CommandeRepository;
+use App\Repository\DemandesRepository;
 use App\Repository\UtilisateurRepository;
 use App\Repository\LigneCommandeRepository;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,8 +18,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
 class CommandeController extends AbstractController
@@ -92,13 +93,16 @@ class CommandeController extends AbstractController
      * @Route("/admin/affcommande", name="admincommande")
      */
 
-     function afficher(CommandeRepository $rep,LigneCommandeRepository $ligneCommande)
+     function afficher(CommandeRepository $rep,LigneCommandeRepository $ligneCommande,DemandesRepository $repp)
     {
+        $demandes= $repp->findAll();
+
          $commande = $rep->findall();
          $ligneCommande = $ligneCommande->findall();
          return $this->render('dashboard/commande/index.html.twig', [
              'tab' => $commande,
-             'tab1' => $ligneCommande
+             'tab1' => $ligneCommande,
+             'demandes'=>$demandes,
 
          ]);
 
@@ -124,8 +128,10 @@ class CommandeController extends AbstractController
      * @Route("/admin/modifcommande/{id}", name="adminmodif")
      */
 
-    function modifiercommande($id ,CommandeRepository $rep, Request $request)
+    function modifiercommande($id ,CommandeRepository $rep, Request $request,DemandesRepository $repp)
     {
+        $demandes= $repp->findAll();
+
         $commande=$rep->find($id);
         $form = $this->createForm(CommandeType::class, $commande);
         $form->handleRequest($request);
@@ -139,6 +145,7 @@ class CommandeController extends AbstractController
 
        return $this->render('dashboard/commande/modifier.html.twig', [
         'form' => $form->createView(),
+        'demandes'=>$demandes,
     ]);
     }
 

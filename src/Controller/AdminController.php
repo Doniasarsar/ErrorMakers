@@ -21,20 +21,23 @@ class AdminController extends AbstractController
     /**
      * @Route("/dashboard", name="dashboard")
      */
-    public function index(): Response
+    public function index(DemandesRepository $rep): Response
     {
+        $demandes=$rep->findAll();
         return $this->render('dashboard/index.html.twig', [
-            'controller_name' => 'AdminController',
+            'demandes' => $demandes,
         ]);
     }
     /**
      * @return Reponse
      * @Route("/dashboard/listU", name="userlist")
      */
-    public function afficherUser(UtilisateursRepository $rep){
+    public function afficherUser(UtilisateursRepository $rep, DemandesRepository $repp){
         $users=$rep->findAll();
+        $demandes=$repp->findAll();
         return $this->render('/dashboard/userslist.html.twig', [
             'users' => $users,
+            'demandes' => $demandes,
         ]);
     }
      /**

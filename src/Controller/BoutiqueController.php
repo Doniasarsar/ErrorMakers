@@ -7,6 +7,7 @@ use App\Form\BoutiqueType;
 use App\Entity\Utilisateurs;
 use App\Repository\ProduitRepository;
 use App\Repository\BoutiqueRepository;
+use App\Repository\DemandesRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -33,10 +34,12 @@ class BoutiqueController extends AbstractController
      * @return Reponse
      * @Route("admin/boutique/list", name="boutique_list")
      */
-    public function afficher(BoutiqueRepository $rep){
+    public function afficher(BoutiqueRepository $rep,DemandesRepository $repp){
         $boutiques=$rep->findAll();
+        $demandes=$repp->findAll();
         return $this->render('boutique/listboutique.html.twig', [
             'tab' => $boutiques,
+            'demandes'=>$demandes,
         ]);
     }
 
@@ -47,18 +50,23 @@ class BoutiqueController extends AbstractController
      * @return Reponse
      * @Route("admin/boutique/listProduit/{val}", name="boutique_listProduit")
      */
-    public function afficherProduit($val,ProduitRepository $rep){
+    public function afficherProduit($val,ProduitRepository $rep,DemandesRepository $repp){
+        $demandes=$repp->findAll();
+
+
         $boutiques=$rep->findByBoutique($val);
         return $this->render('boutique/produitboutique.html.twig', [
             'tab' => $boutiques,
+            'demandes'=>$demandes,
         ]);
     }
     /**
      * @Route("admin/boutique/add",name="boutique_add")
      */
 
-    public function add(Request $request): Response
+    public function add(Request $request,DemandesRepository $repp): Response
     {
+        $demandes=$repp->findAll();
         $boutique = new Boutique();
         $form = $this->createForm(BoutiqueType::class,$boutique);
         $form->add('Ajouter',SubmitType::class);
@@ -94,6 +102,7 @@ class BoutiqueController extends AbstractController
 
         return $this->render('boutique/add.html.twig', [
             'Fbout' => $form->createView(),
+            'demandes'=>$demandes,
             
         ]) ;
     }
