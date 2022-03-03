@@ -45,6 +45,10 @@ return [
         '/reponse' => [[['_route' => 'reponse', '_controller' => 'App\\Controller\\ReponseController::index'], null, null, null, false, false, null]],
         '/admin/reponse/recList' => [[['_route' => 'list_reclamation', '_controller' => 'App\\Controller\\ReponseController::afficher'], null, null, null, false, false, null]],
         '/admin/reponse/list' => [[['_route' => 'reponse_list', '_controller' => 'App\\Controller\\ReponseController::afficher_reponses'], null, null, null, false, false, null]],
+        '/reset-password' => [[['_route' => 'app_forgot_password_request', '_controller' => 'App\\Controller\\ResetPasswordController::request'], null, null, null, false, false, null]],
+        '/reset-password/check-email' => [[['_route' => 'app_check_email', '_controller' => 'App\\Controller\\ResetPasswordController::checkEmail'], null, null, null, false, false, null]],
+        '/statistic' => [[['_route' => 'app_statistic', '_controller' => 'App\\Controller\\StatisticController::index'], null, null, null, false, false, null]],
+        '/stats' => [[['_route' => 'rec_stat', '_controller' => 'App\\Controller\\StatisticController::statistiques'], null, null, null, false, false, null]],
         '/utilisateurs' => [[['_route' => 'utilisateurs', '_controller' => 'App\\Controller\\UtilisateursController::index'], null, null, null, false, false, null]],
         '/utilisateurs/add' => [[['_route' => 'userAdd', '_controller' => 'App\\Controller\\UtilisateursController::AddUser'], null, null, null, false, false, null]],
         '/utilisateurs/compte' => [[['_route' => 'usercompte', '_controller' => 'App\\Controller\\UtilisateursController::Compte'], null, null, null, false, false, null]],
@@ -158,16 +162,19 @@ return [
                         .'|list/([^/]++)(*:1195)'
                         .'|etat/([^/]++)(*:1217)'
                     .')'
-                    .'|sponse/delete(?'
-                        .'|Rec/([^/]++)(*:1255)'
-                        .'|/([^/]++)(*:1273)'
+                    .'|s(?'
+                        .'|ponse/delete(?'
+                            .'|Rec/([^/]++)(*:1258)'
+                            .'|/([^/]++)(*:1276)'
+                        .')'
+                        .'|et\\-password/reset(?:/([^/]++))?(*:1318)'
                     .')'
                     .'|ponse/(?'
-                        .'|add/([^/]++)(*:1304)'
-                        .'|update/([^/]++)(*:1328)'
+                        .'|add/([^/]++)(*:1349)'
+                        .'|update/([^/]++)(*:1373)'
                     .')'
                 .')'
-                .'|/utilisateurs/update/([^/]++)(*:1368)'
+                .'|/utilisateurs/update/([^/]++)(*:1413)'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -215,11 +222,12 @@ return [
         1173 => [[['_route' => 'r_add', '_controller' => 'App\\Controller\\ReclamationController::add'], ['id', 'cmd'], null, null, false, true, null]],
         1195 => [[['_route' => 'r_list', '_controller' => 'App\\Controller\\ReclamationController::afficher'], ['value'], null, null, false, true, null]],
         1217 => [[['_route' => 'etat_rec', '_controller' => 'App\\Controller\\ReclamationController::afficheReponse'], ['id'], null, null, false, true, null]],
-        1255 => [[['_route' => 'reclam_delete', '_controller' => 'App\\Controller\\ReponseController::Delete_reclamation'], ['id'], null, null, false, true, null]],
-        1273 => [[['_route' => 'response_delete', '_controller' => 'App\\Controller\\ReponseController::Delete_reponse'], ['id'], null, null, false, true, null]],
-        1304 => [[['_route' => 'rep_add', '_controller' => 'App\\Controller\\ReponseController::addResponse'], ['id'], null, null, false, true, null]],
-        1328 => [[['_route' => 'reponse_update', '_controller' => 'App\\Controller\\ReponseController::update_reponse'], ['id'], null, null, false, true, null]],
-        1368 => [
+        1258 => [[['_route' => 'reclam_delete', '_controller' => 'App\\Controller\\ReponseController::Delete_reclamation'], ['id'], null, null, false, true, null]],
+        1276 => [[['_route' => 'response_delete', '_controller' => 'App\\Controller\\ReponseController::Delete_reponse'], ['id'], null, null, false, true, null]],
+        1318 => [[['_route' => 'app_reset_password', 'token' => null, '_controller' => 'App\\Controller\\ResetPasswordController::reset'], ['token'], null, null, false, true, null]],
+        1349 => [[['_route' => 'rep_add', '_controller' => 'App\\Controller\\ReponseController::addResponse'], ['id'], null, null, false, true, null]],
+        1373 => [[['_route' => 'reponse_update', '_controller' => 'App\\Controller\\ReponseController::update_reponse'], ['id'], null, null, false, true, null]],
+        1413 => [
             [['_route' => 'userupdate', '_controller' => 'App\\Controller\\UtilisateursController::Update'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

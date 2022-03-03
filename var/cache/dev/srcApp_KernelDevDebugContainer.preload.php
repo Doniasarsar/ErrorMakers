@@ -9,8 +9,8 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
     return;
 }
 
-require dirname(__DIR__, 3).'/vendor/autoload.php';
-(require __DIR__.'/srcApp_KernelDevDebugContainer.php')->set(\ContainerYt3xsQH\srcApp_KernelDevDebugContainer::class, null);
+require dirname(__DIR__, 3).''.\DIRECTORY_SEPARATOR.'vendor/autoload.php';
+require __DIR__.'/ContainerV6BZxRs/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -52,6 +52,7 @@ $classes[] = 'App\Controller\ResetPasswordController';
 $classes[] = 'SymfonyCasts\Bundle\ResetPassword\ResetPasswordHelper';
 $classes[] = 'SymfonyCasts\Bundle\ResetPassword\Generator\ResetPasswordTokenGenerator';
 $classes[] = 'SymfonyCasts\Bundle\ResetPassword\Generator\ResetPasswordRandomGenerator';
+$classes[] = 'App\Controller\StatisticController';
 $classes[] = 'App\Controller\UtilisateursController';
 $classes[] = 'App\Controller\VehiculeController';
 $classes[] = 'App\Form\ActeurType';
@@ -171,6 +172,7 @@ $classes[] = 'Symfony\Component\HttpKernel\EventListener\DumpListener';
 $classes[] = 'Symfony\Component\VarDumper\Dumper\ContextualizedDumper';
 $classes[] = 'Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider';
 $classes[] = 'Symfony\Component\HttpKernel\Debug\FileLinkFormatter';
+$classes[] = 'string';
 $classes[] = 'Symfony\Bridge\Monolog\Processor\DebugProcessor';
 $classes[] = 'Symfony\Component\Security\Core\Authorization\TraceableAccessDecisionManager';
 $classes[] = 'Symfony\Component\Security\Core\Authorization\AccessDecisionManager';
@@ -212,7 +214,6 @@ $classes[] = 'Doctrine\Migrations\Configuration\Configuration';
 $classes[] = 'Doctrine\Migrations\Metadata\Storage\TableMetadataStorageConfiguration';
 $classes[] = 'Doctrine\Migrations\Configuration\EntityManager\ManagerRegistryEntityManager';
 $classes[] = 'Doctrine\ORM\Mapping\Driver\AnnotationDriver';
-$classes[] = 'Doctrine\ORM\Proxy\Autoloader';
 $classes[] = 'Doctrine\ORM\EntityManager';
 $classes[] = 'Doctrine\ORM\Configuration';
 $classes[] = 'Doctrine\Common\Cache\CacheProvider';
@@ -249,6 +250,7 @@ $classes[] = 'Doctrine\Migrations\Tools\Console\Command\ListCommand';
 $classes[] = 'Symfony\Component\HttpKernel\Controller\ErrorController';
 $classes[] = 'Symfony\Component\ErrorHandler\ErrorRenderer\SerializerErrorRenderer';
 $classes[] = 'Symfony\Bridge\Twig\ErrorRenderer\TwigErrorRenderer';
+$classes[] = 'bool';
 $classes[] = 'Symfony\Component\ErrorHandler\ErrorRenderer\HtmlErrorRenderer';
 $classes[] = 'Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher';
 $classes[] = 'Symfony\Component\EventDispatcher\EventDispatcher';
@@ -566,4 +568,4 @@ $classes[] = 'Symfony\Bundle\WebServerBundle\Command\ServerStartCommand';
 $classes[] = 'Symfony\Bundle\WebServerBundle\Command\ServerStatusCommand';
 $classes[] = 'Symfony\Bundle\WebServerBundle\Command\ServerStopCommand';
 
-$preloaded = Preloader::preload($classes);
+Preloader::preload($classes);

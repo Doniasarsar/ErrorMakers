@@ -34,7 +34,51 @@ class ReclamationRepository extends ServiceEntityRepository
             ->getResult()
         ;
     }
+
+    public function findByTypeHard()
+    {
+        return $this->createQueryBuilder('r')
+            ->andWhere('r.type = :val')
+            ->setParameter('val', "Hardware")
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
+    public function findByTypeSoft()
+    {
+        return $this->createQueryBuilder('r')
+            ->andWhere('r.type = :val')
+            ->setParameter('val', "Software")
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
+    public function findByTypeRep()
+    {
+        return $this->createQueryBuilder('r')
+            ->andWhere('r.type = :val')
+            ->setParameter('val', "Reparation")
+            ->getQuery()
+            ->getResult()
+        ;
+    }
     
+   /**
+    * 
+    */
+    public function countByType(){
+        //$query = $this->createQueryBuilder('c')
+            //->select('SUBSTRING(d.date, 1, 10) as date, COUNT(c) as count')
+            //->groupBy('date')
+        //;
+        //return $query->getQuery()->getResult();
+       $query = $this->getEntityManager()->createQuery("
+           SELECT r.type as type, COUNT(r) as count FROM App\Entity\Reclamation r GROUP BY type
+       ");
+       return $query->getResult();
+   }
 
     /*
     public function findOneBySomeField($value): ?Reclamation
