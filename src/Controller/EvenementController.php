@@ -3,11 +3,14 @@
 namespace App\Controller;
 
 use DateTime;
+use App\Entity\Note;
+use App\Form\NoteType;
 use DateTimeImmutable;
 use App\Entity\Evenement;
 use App\Entity\Commentaires;
 use App\Form\CommentairesType;
 use App\Form\EvenementFormType;
+use App\Repository\NoteRepository;
 use App\Services\cart\CartService;
 use App\Repository\DemandesRepository;
 use App\Repository\EvenementRepository;
@@ -56,7 +59,9 @@ class EvenementController extends AbstractController
         $form=$this->createform(EvenementFormType::class,$evenement);
         $form->add('ajouter',SubmitType::class);
 
-
+        
+      
+        
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
@@ -128,7 +133,7 @@ class EvenementController extends AbstractController
      /**
      * @Route("evenement/detail/{id}", name="ev_front_detail")
      */
-    function detail($id,EvenementRepository $rep,Request $request,CommentairesRepository $repp,CartService $cartService)
+    function detail($id,EvenementRepository $rep,Request $request,CommentairesRepository $repp,CartService $cartService,NoteRepository $noteRepository)
     {   
         $dataPanier = $cartService->getFullCart();  
         $total = $cartService->getTotal();
@@ -137,7 +142,25 @@ class EvenementController extends AbstractController
 
         $comments = $repp->findByEeven($id);
             
-    
+        //// initialisation note    
+        $note = new Note();      
+        $noteform = $this->createForm(NoteType::class,$note);
+        $noteform->add('ajouter',SubmitType::class);
+        $noteform->handleRequest($request);
+
+        if ($noteform->isSubmitted() && $noteform->isValid()) {
+           
+            $note->setEvenement($evenement);
+            $em=$this->getDoctrine()->getManager();
+            
+            $em->persist($note);
+            $em->flush();
+            
+            
+            
+
+            return $this->redirectToRoute('ev_front_detail', ['id' => $evenement->getId()]);
+        }
 
         $Commentaires = new Commentaires;
         $CommentairesForm=$this ->createForm(CommentairesType::class, $Commentaires);
@@ -169,7 +192,10 @@ class EvenementController extends AbstractController
               'Commentaires_Form' => $CommentairesForm->createView(),
               'comments'=>$comments,
               'elements' => $dataPanier,
-              'total' => $total
+              'total' => $total,
+              'noteform' => $noteform->createView(),
+              'Notes'=> $noteRepository->findByNom($evenement->getNom()),
+            
           ]);
     
     }

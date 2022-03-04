@@ -50,7 +50,7 @@ class Produit
     private $nomProduit;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Boutique::class, inversedBy="produit" )
+     * @ORM\ManyToOne(targetEntity=Boutique::class, inversedBy="produit", cascade={"persist"})
      */
     private $boutique;
 

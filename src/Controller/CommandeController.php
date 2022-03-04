@@ -72,8 +72,10 @@ class CommandeController extends AbstractController
                 $test = $test->getModePaiemenet();
                 if ( $test == 0 )
                 {
+                    
                     return $this->redirectToRoute('checkout');
                 }else {
+                    $this->addFlash('success','Successful payment');
                     return $this->redirectToRoute('home');
                 }
              

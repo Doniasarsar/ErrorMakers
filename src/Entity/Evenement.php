@@ -87,9 +87,15 @@ class Evenement
      */
     private $longdesc;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Note::class, mappedBy="evenement")
+     */
+    private $notes;
+
     public function __construct()
     {
         $this->commentaires = new ArrayCollection();
+        $this->notes = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -221,6 +227,36 @@ class Evenement
     public function setLongdesc(string $longdesc): self
     {
         $this->longdesc = $longdesc;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Note>
+     */
+    public function getNotes(): Collection
+    {
+        return $this->notes;
+    }
+
+    public function addNote(Note $note): self
+    {
+        if (!$this->notes->contains($note)) {
+            $this->notes[] = $note;
+            $note->setEvenement($this);
+        }
+
+        return $this;
+    }
+
+    public function removeNote(Note $note): self
+    {
+        if ($this->notes->removeElement($note)) {
+            // set the owning side to null (unless already changed)
+            if ($note->getEvenement() === $this) {
+                $note->setEvenement(null);
+            }
+        }
 
         return $this;
     }

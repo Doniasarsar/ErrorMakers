@@ -1,6 +1,8 @@
 {% extends "baseCart.html.twig" %}
 
 {% block body %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+
   <!-- Begin Body Wrapper -->
         <div class="body-wrapper">
             <!-- Begin Li's Main Blog Page Area -->
@@ -38,6 +40,50 @@
                                             </div>
                                         </div>
                                     </div>
+
+
+                                    <div class="container">
+                                        <div class="row">
+
+                                           {{form_start(noteform)}}
+                                         <div>
+                                              {{form_widget(noteform.nom , {'value':tab.nom ,'type':'hidden'})}}
+
+                                           </div>
+
+                                                  {% set somme = 0 %}
+                                                 {% for eve in Notes %}
+                                                       {% set somme = (eve.note / Notes|length)+ somme %}  
+                                                 {% endfor %}
+                                                     <div class="rateyo" id= "rating"
+                                                        data-rateyo-rating={{somme}}
+                                                        data-rateyo-num-stars="5"
+                                                        data-rateyo-score="3">
+                                                        </div>
+                                                        <br>
+                                                  <style>
+                                                  h3{
+                                                     color:grey;
+                                                  
+                                                  }
+                                                  </style>
+                    
+                                                 <h3>Raiting : {{somme|number_format(1, '.')}} /5</h3>
+                                                 
+                                                 {{form_widget(noteform.note , { 'id': 'rating','type':'hidden'} ) }}
+                                                 <br>
+                                                 {{form_end(noteform)}}
+                    
+                                                   <p>{{ Notes|length}} Avis</p>
+                                                 <br>
+                                                  
+                                           </div>
+                                    </div>       
+                                        
+                                           
+                    
+                                       
+                                        
                                     <!-- Begin Li's Blog Comment Section -->
                                     <div class="li-comment-section" id="desc_bas">
                                        
@@ -61,6 +107,8 @@
                                         </ul>
                                         {% endfor %}
                                     </div>
+                                    
+
                                     <!-- Li's Blog Comment Section End Here -->
                                     <!-- Begin Blog comment Box Area -->
                                     <div class="li-blog-comment-wrapper" >
@@ -124,4 +172,6 @@
             <!-- Li's Main Blog Page Area End Here -->
         </div>
         <!-- Body Wrapper End Here -->
+
+ 
 {% endblock %}

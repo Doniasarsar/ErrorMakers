@@ -23,7 +23,7 @@ class Images
     private $name;
 
     /**
-     * @ORM\ManyToOne(targetEntity=boutique::class, inversedBy="images")
+     * @ORM\ManyToOne(targetEntity=boutique::class, inversedBy="images", cascade={"persist", "remove"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $boutique;
