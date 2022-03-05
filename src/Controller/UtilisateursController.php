@@ -120,6 +120,23 @@ class UtilisateursController extends AbstractController
 
      }
      /**
+      * @Route("/utilisateurs/deleteimg/{id}",name="imgdetele")
+      */
+
+     public function deleteImg($id, UtilisateursRepository $rep){
+         
+         $user=$rep->find($id);
+         $user->setImage(null);
+         $em = $this->getDoctrine()->getManager();
+         $em->flush();
+
+         $this->addFlash('success', 'Image deleted');
+         return $this->redirectToRoute('usercompte');
+
+
+     }
+     
+     /**
      * @Route("/utilisateurs/updatepass",name="passupdate")
      */
     public function EditPassword(UtilisateursRepository $rep ,Request $request , UserPasswordEncoderInterface $encoder,CartService $cartService ){
