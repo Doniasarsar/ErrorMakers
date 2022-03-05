@@ -8,6 +8,7 @@ use App\Entity\Reclamation;
 use App\Repository\ReponseRepository;
 use App\Repository\DemandesRepository;
 use App\Repository\ReclamationRepository;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -36,13 +37,18 @@ class ReponseController extends AbstractController
      * @return Response
      * @Route("admin/reponse/recList", name="list_reclamation")
      */
-    public function afficher(ReclamationRepository $rep,DemandesRepository $repp): Response
+    public function afficher(ReclamationRepository $rep,DemandesRepository $repp, Request $request, PaginatorInterface $paginator): Response
     {
         $demandes=$repp->findAll();
 
         $reclamations=$rep->findAll();
+        $donnees = $paginator->paginate(
+            $reclamations,
+            $request->query->getInt('page', 1), // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
+            4 // Nombre de résultats par page
+        );
         return $this->render('reponse/listReclamationAdmin.html.twig', [
-            'tab' => $reclamations,
+            'tab' => $donnees,
             'demandes'=>$demandes,
         ]);
     }
@@ -104,13 +110,19 @@ class ReponseController extends AbstractController
      * @return Response
      * @Route("admin/reponse/list", name="reponse_list")
      */
-    public function afficher_reponses(ReponseRepository $rep,DemandesRepository $repp): Response
+    public function afficher_reponses(ReponseRepository $rep,DemandesRepository $repp, Request $request, PaginatorInterface $paginator): Response
     {
         $demandes=$repp->findAll();
 
         $reponses=$rep->findAll();
+        $donnees = $paginator->paginate(
+            $reponses,
+            $request->query->getInt('page', 1), // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
+            4 // Nombre de résultats par page
+        );
+
         return $this->render('reponse/listReponses.html.twig', [
-            'tab1' => $reponses,
+            'tab1' => $donnees,
             'demandes'=>$demandes,
         ]);
     }

@@ -13,6 +13,7 @@ use App\Repository\CommandeRepository;
 use App\Repository\DemandesRepository;
 use App\Repository\UtilisateurRepository;
 use App\Repository\LigneCommandeRepository;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -154,14 +155,19 @@ class CommandeController extends AbstractController
      /**
      * @Route("commande/list/{value}", name="listmescommande")
      */
-    public function affichermescommandes($value, CommandeRepository $rep,CartService $cartService,LigneCommandeRepository $ligneCommande): Response
+    public function affichermescommandes($value, CommandeRepository $rep,CartService $cartService,LigneCommandeRepository $ligneCommande, Request $request, PaginatorInterface $paginator): Response
     {    $dataPanier = $cartService->getFullCart();  
         $total = $cartService->getTotal();
 
         $commande=$rep->findByPhone($value);
+        $donnees = $paginator->paginate(
+            $commande,
+            $request->query->getInt('page', 1), // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
+            2 // Nombre de résultats par page
+        );
         $ligneCommande = $ligneCommande->findall();
         return $this->render('commande/listCommande.html.twig', [
-            'tab' => $commande,
+            'tab' => $donnees,
             'tab1' => $ligneCommande,
             'elements' => $dataPanier,
             'total' => $total
