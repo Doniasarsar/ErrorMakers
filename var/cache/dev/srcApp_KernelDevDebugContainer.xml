@@ -6,8 +6,13 @@
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
     <parameter key="kernel.name">src</parameter>
+<<<<<<< HEAD
     <parameter key="kernel.cache_dir">/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev</parameter>
     <parameter key="kernel.logs_dir">/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/log</parameter>
+=======
+    <parameter key="kernel.cache_dir">C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev</parameter>
+    <parameter key="kernel.logs_dir">C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\log</parameter>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
@@ -78,7 +83,11 @@
         <parameter key="namespace">SymfonyCasts\Bundle\ResetPassword</parameter>
       </parameter>
       <parameter key="KnpPaginatorBundle" type="collection">
+<<<<<<< HEAD
         <parameter key="path">/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/knplabs/knp-paginator-bundle</parameter>
+=======
+        <parameter key="path">C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle</parameter>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
         <parameter key="namespace">Knp\Bundle\PaginatorBundle</parameter>
       </parameter>
     </parameter>
@@ -134,21 +143,35 @@
       <parameter key="cookie_samesite">lax</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
+<<<<<<< HEAD
     <parameter key="session.save_path">/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/sessions</parameter>
+=======
+    <parameter key="session.save_path">C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/sessions</parameter>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="form.type_extension.csrf.enabled">true</parameter>
     <parameter key="form.type_extension.csrf.field_name">_token</parameter>
     <parameter key="asset.request_context.base_path"></parameter>
     <parameter key="asset.request_context.secure">false</parameter>
+<<<<<<< HEAD
     <parameter key="validator.mapping.cache.file">/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/validation.php</parameter>
+=======
+    <parameter key="validator.mapping.cache.file">C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/validation.php</parameter>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
     <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="translator.logging">false</parameter>
     <parameter key="translator.default_path">/Users/skanderzouaoui/Documents/ErrorMakers-3A45/translations</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_master_requests">false</parameter>
+<<<<<<< HEAD
     <parameter key="profiler.storage.dsn">file:/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/profiler</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
     <parameter key="debug.container.dump">/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/srcApp_KernelDevDebugContainer.xml</parameter>
+=======
+    <parameter key="profiler.storage.dsn">file:C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/profiler</parameter>
+    <parameter key="debug.error_handler.throw_at">-1</parameter>
+    <parameter key="debug.container.dump">C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/srcApp_KernelDevDebugContainer.xml</parameter>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
@@ -156,7 +179,11 @@
     <parameter key="router.cache_class_prefix">srcApp_KernelDevDebugContainer</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
+<<<<<<< HEAD
     <parameter key="serializer.mapping.cache.file">/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/serialization.php</parameter>
+=======
+    <parameter key="serializer.mapping.cache.file">C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/serialization.php</parameter>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
     <parameter key="twig.exception_listener.controller">null</parameter>
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
@@ -250,7 +277,11 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
+<<<<<<< HEAD
     <parameter key="doctrine.orm.proxy_dir">/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/doctrine/orm/Proxies</parameter>
+=======
+    <parameter key="doctrine.orm.proxy_dir">C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/doctrine/orm/Proxies</parameter>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="doctrine.migrations.preferred_em">null</parameter>
     <parameter key="doctrine.migrations.preferred_connection">null</parameter>
@@ -694,7 +725,11 @@
     <service id="cache_warmer" class="Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate" public="true">
       <argument type="tagged_iterator" tag="kernel.cache_warmer"/>
       <argument>true</argument>
+<<<<<<< HEAD
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/srcApp_KernelDevDebugContainerDeprecations.log</argument>
+=======
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/srcApp_KernelDevDebugContainerDeprecations.log</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer" public="true">
       <argument type="tagged_iterator" tag="kernel.cache_clearer"/>
@@ -1199,7 +1234,11 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
+<<<<<<< HEAD
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/pools</argument>
+=======
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/pools</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -1228,7 +1267,11 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
+<<<<<<< HEAD
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/pools</argument>
+=======
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/pools</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
@@ -1339,8 +1382,13 @@
       <argument>0</argument>
       <argument>false</argument>
     </service>
+<<<<<<< HEAD
     <service id=".1_NativeFileSessionHandler~NlNUMTn" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler">
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/sessions</argument>
+=======
+    <service id=".1_NativeFileSessionHandler~6C6MHuW" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/sessions</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
     </service>
     <service id="session" class="Symfony\Component\HttpFoundation\Session\Session" public="true">
       <argument type="service" id="session.storage.native"/>
@@ -1365,8 +1413,13 @@
       <argument>attributes</argument>
       <factory service="session" method="getBag"/>
     </service>
+<<<<<<< HEAD
     <service id="session.storage.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage">
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/sessions</argument>
+=======
+    <service id="session.storage.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage" public="false">
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/sessions</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
@@ -1416,8 +1469,13 @@
     <service id="form.factory" class="Symfony\Component\Form\FormFactory" public="true">
       <argument type="service" id="form.registry"/>
     </service>
+<<<<<<< HEAD
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
       <argument type="service" id=".service_locator..hIz5jK"/>
+=======
+    <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
+      <argument type="service" id=".service_locator.lwgyrAj"/>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -1639,14 +1697,23 @@
     <service id="validator.mapping.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="validator.builder"/>
+<<<<<<< HEAD
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/validation.php</argument>
+=======
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/validation.php</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
     </service>
     <service id="validator.mapping.cache.symfony" class="Symfony\Component\Validator\Mapping\Cache\Psr6Cache">
       <argument type="service" id="validator.mapping.cache.adapter"/>
       <deprecated package="" version="">The "%service_id%" service is deprecated since Symfony 4.4. Use validator.mapping.cache.adapter instead.</deprecated>
     </service>
+<<<<<<< HEAD
     <service id="validator.mapping.cache.adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/validation.php</argument>
+=======
+    <service id="validator.mapping.cache.adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/validation.php</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <argument type="service" id="cache.validator"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -1717,7 +1784,11 @@
         </argument>
       </argument>
       <argument type="collection">
+<<<<<<< HEAD
         <argument key="cache_dir">/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/translations</argument>
+=======
+        <argument key="cache_dir">C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/translations</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
         <argument key="debug">true</argument>
         <argument key="resource_files" type="collection">
           <argument key="af" type="collection">
@@ -1726,11 +1797,19 @@
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.af.xlf</argument>
           </argument>
           <argument key="ar" type="collection">
+<<<<<<< HEAD
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.ar.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/form/Resources/translations/validators.ar.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.ar.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfonycasts/reset-password-bundle/src/Resources/translations/ResetPasswordBundle.ar.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.ar.xliff</argument>
+=======
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.ar.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.ar.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.ar.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.ar.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ar.xliff</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
           </argument>
           <argument key="az" type="collection">
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.az.xlf</argument>
@@ -1743,10 +1822,17 @@
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.be.xlf</argument>
           </argument>
           <argument key="bg" type="collection">
+<<<<<<< HEAD
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.bg.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/form/Resources/translations/validators.bg.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.bg.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.bg.xliff</argument>
+=======
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.bg.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.bg.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.bg.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.bg.xliff</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
           </argument>
           <argument key="bs" type="collection">
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.bs.xlf</argument>
@@ -1759,16 +1845,25 @@
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.ca.xlf</argument>
           </argument>
           <argument key="cs" type="collection">
+<<<<<<< HEAD
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.cs.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/form/Resources/translations/validators.cs.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.cs.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfonycasts/reset-password-bundle/src/Resources/translations/ResetPasswordBundle.cs.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.cs.xliff</argument>
+=======
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.cs.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.cs.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.cs.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.cs.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.cs.xliff</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
           </argument>
           <argument key="cy" type="collection">
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.cy.xlf</argument>
           </argument>
           <argument key="da" type="collection">
+<<<<<<< HEAD
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.da.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/form/Resources/translations/validators.da.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.da.xlf</argument>
@@ -1780,6 +1875,19 @@
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.de.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfonycasts/reset-password-bundle/src/Resources/translations/ResetPasswordBundle.de.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.de.xliff</argument>
+=======
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.da.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.da.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.da.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.da.xliff</argument>
+          </argument>
+          <argument key="de" type="collection">
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.de.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.de.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.de.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.de.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.de.xliff</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
           </argument>
           <argument key="el" type="collection">
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.el.xlf</argument>
@@ -1787,6 +1895,7 @@
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.el.xlf</argument>
           </argument>
           <argument key="en" type="collection">
+<<<<<<< HEAD
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.en.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/form/Resources/translations/validators.en.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.en.xlf</argument>
@@ -1799,6 +1908,20 @@
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.es.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfonycasts/reset-password-bundle/src/Resources/translations/ResetPasswordBundle.es.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.es.xliff</argument>
+=======
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.en.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.en.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.en.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.en.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.en.xliff</argument>
+          </argument>
+          <argument key="es" type="collection">
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.es.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.es.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.es.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.es.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.es.xliff</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
           </argument>
           <argument key="et" type="collection">
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.et.xlf</argument>
@@ -1806,6 +1929,7 @@
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.et.xlf</argument>
           </argument>
           <argument key="eu" type="collection">
+<<<<<<< HEAD
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.eu.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/form/Resources/translations/validators.eu.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.eu.xlf</argument>
@@ -1830,6 +1954,32 @@
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.fr.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfonycasts/reset-password-bundle/src/Resources/translations/ResetPasswordBundle.fr.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.fr.xliff</argument>
+=======
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.eu.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.eu.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.eu.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.eu.xliff</argument>
+          </argument>
+          <argument key="fa" type="collection">
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.fa.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.fa.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.fa.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.fa.xliff</argument>
+          </argument>
+          <argument key="fi" type="collection">
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.fi.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.fi.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.fi.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.fi.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.fi.xliff</argument>
+          </argument>
+          <argument key="fr" type="collection">
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.fr.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.fr.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.fr.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.fr.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.fr.xliff</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
           </argument>
           <argument key="gl" type="collection">
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.gl.xlf</argument>
@@ -1842,6 +1992,7 @@
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.he.xlf</argument>
           </argument>
           <argument key="hr" type="collection">
+<<<<<<< HEAD
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.hr.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/form/Resources/translations/validators.hr.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.hr.xlf</argument>
@@ -1853,6 +2004,19 @@
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.hu.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfonycasts/reset-password-bundle/src/Resources/translations/ResetPasswordBundle.hu.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.hu.xliff</argument>
+=======
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.hr.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.hr.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.hr.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.hr.xliff</argument>
+          </argument>
+          <argument key="hu" type="collection">
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.hu.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.hu.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.hu.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.hu.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.hu.xliff</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
           </argument>
           <argument key="hy" type="collection">
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.hy.xlf</argument>
@@ -1860,6 +2024,7 @@
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.hy.xlf</argument>
           </argument>
           <argument key="id" type="collection">
+<<<<<<< HEAD
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.id.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/form/Resources/translations/validators.id.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.id.xlf</argument>
@@ -1878,6 +2043,26 @@
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.ja.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfonycasts/reset-password-bundle/src/Resources/translations/ResetPasswordBundle.ja.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.ja.xliff</argument>
+=======
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.id.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.id.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.id.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.id.xliff</argument>
+          </argument>
+          <argument key="it" type="collection">
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.it.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.it.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.it.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.it.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.it.xliff</argument>
+          </argument>
+          <argument key="ja" type="collection">
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.ja.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.ja.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.ja.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.ja.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ja.xliff</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
           </argument>
           <argument key="lb" type="collection">
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.lb.xlf</argument>
@@ -1885,10 +2070,17 @@
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.lb.xlf</argument>
           </argument>
           <argument key="lt" type="collection">
+<<<<<<< HEAD
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.lt.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/form/Resources/translations/validators.lt.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.lt.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.lt.xliff</argument>
+=======
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.lt.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.lt.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.lt.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.lt.xliff</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
           </argument>
           <argument key="lv" type="collection">
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.lv.xlf</argument>
@@ -1911,11 +2103,19 @@
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.nb.xlf</argument>
           </argument>
           <argument key="nl" type="collection">
+<<<<<<< HEAD
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.nl.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/form/Resources/translations/validators.nl.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.nl.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfonycasts/reset-password-bundle/src/Resources/translations/ResetPasswordBundle+intl-icu.nl.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.nl.xliff</argument>
+=======
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.nl.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.nl.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.nl.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle+intl-icu.nl.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.nl.xliff</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
           </argument>
           <argument key="nn" type="collection">
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.nn.xlf</argument>
@@ -1923,6 +2123,7 @@
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.nn.xlf</argument>
           </argument>
           <argument key="no" type="collection">
+<<<<<<< HEAD
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.no.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/form/Resources/translations/validators.no.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.no.xlf</argument>
@@ -1934,6 +2135,19 @@
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.pl.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfonycasts/reset-password-bundle/src/Resources/translations/ResetPasswordBundle.pl.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.pl.xliff</argument>
+=======
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.no.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.no.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.no.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.no.xliff</argument>
+          </argument>
+          <argument key="pl" type="collection">
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.pl.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.pl.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.pl.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.pl.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.pl.xliff</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
           </argument>
           <argument key="pt" type="collection">
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.pt.xlf</argument>
@@ -1942,6 +2156,7 @@
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfonycasts/reset-password-bundle/src/Resources/translations/ResetPasswordBundle.pt.xlf</argument>
           </argument>
           <argument key="pt_BR" type="collection">
+<<<<<<< HEAD
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.pt_BR.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/form/Resources/translations/validators.pt_BR.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.pt_BR.xlf</argument>
@@ -1959,6 +2174,25 @@
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.ru.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfonycasts/reset-password-bundle/src/Resources/translations/ResetPasswordBundle.ru.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.ru.xliff</argument>
+=======
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.pt_BR.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.pt_BR.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.pt_BR.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.pt_BR.xliff</argument>
+          </argument>
+          <argument key="ro" type="collection">
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.ro.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.ro.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.ro.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ro.xliff</argument>
+          </argument>
+          <argument key="ru" type="collection">
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.ru.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.ru.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.ru.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.ru.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ru.xliff</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
           </argument>
           <argument key="sk" type="collection">
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.sk.xlf</argument>
@@ -1987,10 +2221,17 @@
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.sr_Latn.xlf</argument>
           </argument>
           <argument key="sv" type="collection">
+<<<<<<< HEAD
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.sv.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/form/Resources/translations/validators.sv.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.sv.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.sv.xliff</argument>
+=======
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.sv.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.sv.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.sv.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.sv.xliff</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
           </argument>
           <argument key="th" type="collection">
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.th.xlf</argument>
@@ -2003,6 +2244,7 @@
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.tl.xlf</argument>
           </argument>
           <argument key="tr" type="collection">
+<<<<<<< HEAD
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.tr.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/form/Resources/translations/validators.tr.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.tr.xlf</argument>
@@ -2015,6 +2257,20 @@
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations/security.uk.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfonycasts/reset-password-bundle/src/Resources/translations/ResetPasswordBundle.uk.xlf</argument>
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.uk.xliff</argument>
+=======
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.tr.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.tr.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.tr.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.tr.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.tr.xliff</argument>
+          </argument>
+          <argument key="uk" type="collection">
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations\validators.uk.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations\validators.uk.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations\security.uk.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.uk.xlf</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.uk.xliff</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
           </argument>
           <argument key="uz" type="collection">
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations/validators.uz.xlf</argument>
@@ -2045,8 +2301,15 @@
           <argument key="sw" type="collection">
             <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.sw.xliff</argument>
           </argument>
+          <argument key="ky" type="collection">
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ky.xliff</argument>
+          </argument>
+          <argument key="sw" type="collection">
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.sw.xliff</argument>
+          </argument>
         </argument>
         <argument key="scanned_directories" type="collection">
+<<<<<<< HEAD
           <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/validator/Resources/translations</argument>
           <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/form/Resources/translations</argument>
           <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/symfony/security-core/Resources/translations</argument>
@@ -2116,6 +2379,77 @@
             <argument>src/Resources/SymfonyCastsResetPasswordBundle/translations</argument>
             <argument>src/Resources/KnpPaginatorBundle/translations</argument>
             <argument>src/Resources/translations</argument>
+=======
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfonycasts\reset-password-bundle\src/Resources/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\framework-bundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/FrameworkBundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\sensio\framework-extra-bundle\src/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/SensioFrameworkExtraBundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\twig-bundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/TwigBundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\web-profiler-bundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/WebProfilerBundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\monolog-bundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/MonologBundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\debug-bundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/DebugBundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\maker-bundle\src/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/MakerBundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\doctrine\doctrine-bundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/DoctrineBundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\doctrine\doctrine-migrations-bundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/DoctrineMigrationsBundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-bundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/SecurityBundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\twig\extra-bundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/TwigExtraBundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\web-server-bundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/WebServerBundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/SymfonyCastsResetPasswordBundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/KnpPaginatorBundle/translations</argument>
+          <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/translations</argument>
+        </argument>
+        <argument key="cache_vary" type="collection">
+          <argument key="scanned_directories" type="collection">
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\validator/Resources/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\form/Resources/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-core/Resources/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfonycasts\reset-password-bundle\src/Resources/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/translations</argument>
+            <argument>translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\framework-bundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/FrameworkBundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\sensio\framework-extra-bundle\src/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/SensioFrameworkExtraBundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\twig-bundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/TwigBundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\web-profiler-bundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/WebProfilerBundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\monolog-bundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/MonologBundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\debug-bundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/DebugBundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\maker-bundle\src/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/MakerBundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\doctrine\doctrine-bundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/DoctrineBundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\doctrine\doctrine-migrations-bundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/DoctrineMigrationsBundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\security-bundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/SecurityBundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\twig\extra-bundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/TwigExtraBundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\symfony\web-server-bundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/WebServerBundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/SymfonyCastsResetPasswordBundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/KnpPaginatorBundle/translations</argument>
+            <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\src/Resources/translations</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
           </argument>
         </argument>
       </argument>
@@ -2388,8 +2722,13 @@
         <argument type="service" id="data_collector.config"/>
       </call>
     </service>
+<<<<<<< HEAD
     <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage">
       <argument>file:/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/profiler</argument>
+=======
+    <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage" public="false">
+      <argument>file:C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/profiler</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener">
       <tag name="kernel.event_subscriber"/>
@@ -2427,7 +2766,11 @@
       <tag name="data_collector" template="@WebProfiler/Collector/logger.html.twig" id="logger" priority="300"/>
       <tag name="monolog.logger" channel="profiler"/>
       <argument type="service" id="monolog.logger.profiler" on-invalid="ignore"/>
+<<<<<<< HEAD
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/srcApp_KernelDevDebugContainer</argument>
+=======
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/srcApp_KernelDevDebugContainer</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <argument type="service" id="request_stack" on-invalid="ignore"/>
     </service>
     <service id="data_collector.time" class="Symfony\Component\HttpKernel\DataCollector\TimeDataCollector">
@@ -3107,7 +3450,11 @@
       <argument type="service" id=".service_locator.EyZUPFz.router.default"/>
       <argument>kernel::loadRoutes</argument>
       <argument type="collection">
+<<<<<<< HEAD
         <argument key="cache_dir">/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev</argument>
+=======
+        <argument key="cache_dir">C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\CompiledUrlGenerator</argument>
         <argument key="generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\CompiledUrlGeneratorDumper</argument>
@@ -3207,13 +3554,21 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
+<<<<<<< HEAD
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/annotations.php</argument>
+=======
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/annotations.php</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <argument>#^Symfony\\(?:Component\\HttpKernel\\|Bundle\\FrameworkBundle\\Controller\\(?!.*Controller$))#</argument>
       <argument>true</argument>
     </service>
     <service id="annotations.cache_adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
       <tag name="container.hot_path"/>
+<<<<<<< HEAD
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/annotations.php</argument>
+=======
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/annotations.php</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -3325,10 +3680,17 @@
           </service>
         </argument>
       </argument>
+<<<<<<< HEAD
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/serialization.php</argument>
     </service>
     <service id="serializer.mapping.cache.symfony" class="Psr\Cache\CacheItemPoolInterface">
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/serialization.php</argument>
+=======
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/serialization.php</argument>
+    </service>
+    <service id="serializer.mapping.cache.symfony" class="Psr\Cache\CacheItemPoolInterface" public="false">
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/serialization.php</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <argument type="service" id="cache.serializer"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -3480,7 +3842,11 @@
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
         <argument key="autoescape">name</argument>
+<<<<<<< HEAD
         <argument key="cache">/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/twig</argument>
+=======
+        <argument key="cache">C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/twig</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
         <argument key="charset">UTF-8</argument>
       </argument>
       <call method="addExtension">
@@ -3662,12 +4028,24 @@
         <argument>!Security</argument>
       </call>
       <call method="addPath">
+<<<<<<< HEAD
         <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/knplabs/knp-paginator-bundle/templates</argument>
         <argument>KnpPaginator</argument>
       </call>
       <call method="addPath">
         <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/vendor/knplabs/knp-paginator-bundle/templates</argument>
         <argument>!KnpPaginator</argument>
+=======
+        <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/templates</argument>
+        <argument>KnpPaginator</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\vendor\knplabs\knp-paginator-bundle/templates</argument>
+        <argument>!KnpPaginator</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45/templates</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       </call>
       <call method="addPath">
         <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/templates</argument>
@@ -4347,8 +4725,13 @@
     <service id="doctrine.orm.entity_manager.abstract" class="Doctrine\ORM\EntityManager" lazy="true" abstract="true">
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
+<<<<<<< HEAD
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
       <argument type="service" id=".service_locator.FcOEY2h"/>
+=======
+    <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
+      <argument type="service" id=".service_locator.7fIBdgh"/>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -4492,7 +4875,11 @@
         <argument type="service" id="doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
+<<<<<<< HEAD
         <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/doctrine/orm/Proxies</argument>
+=======
+        <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/doctrine/orm/Proxies</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -5439,7 +5826,11 @@
       <tag name="console.command" command="server:run"/>
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/public</argument>
       <argument>dev</argument>
+<<<<<<< HEAD
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache</argument>
+=======
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <call method="setName">
         <argument>server:run</argument>
       </call>
@@ -5448,21 +5839,33 @@
       <tag name="console.command" command="server:start"/>
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/public</argument>
       <argument>dev</argument>
+<<<<<<< HEAD
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache</argument>
+=======
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <call method="setName">
         <argument>server:start</argument>
       </call>
     </service>
     <service id="web_server.command.server_stop" class="Symfony\Bundle\WebServerBundle\Command\ServerStopCommand">
       <tag name="console.command" command="server:stop"/>
+<<<<<<< HEAD
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache</argument>
+=======
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <call method="setName">
         <argument>server:stop</argument>
       </call>
     </service>
     <service id="web_server.command.server_status" class="Symfony\Bundle\WebServerBundle\Command\ServerStatusCommand">
       <tag name="console.command" command="server:status"/>
+<<<<<<< HEAD
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache</argument>
+=======
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <call method="setName">
         <argument>server:status</argument>
       </call>
@@ -6053,7 +6456,11 @@
         <argument key="repp" type="service_closure" id="App\Repository\DemandesRepository"/>
       </argument>
     </service>
+<<<<<<< HEAD
     <service id=".service_locator.FU77Vc9" class="Symfony\Component\DependencyInjection\ServiceLocator">
+=======
+    <service id=".service_locator.xotv1VO" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="cartService" type="service_closure" id="App\Services\cart\CartService"/>
@@ -6089,7 +6496,11 @@
         <argument key="rep" type="service_closure" id="App\Repository\EvenementRepository"/>
       </argument>
     </service>
+<<<<<<< HEAD
     <service id=".service_locator.ifliuQZ" class="Symfony\Component\DependencyInjection\ServiceLocator">
+=======
+    <service id=".service_locator.p5IAfle" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="cartService" type="service_closure" id="App\Services\cart\CartService"/>
@@ -6178,7 +6589,11 @@
         <argument key="repp" type="service_closure" id="App\Repository\CommandeRepository"/>
       </argument>
     </service>
+<<<<<<< HEAD
     <service id=".service_locator.tkXk2Ur" class="Symfony\Component\DependencyInjection\ServiceLocator">
+=======
+    <service id=".service_locator.XJ8tPAB" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="cartService" type="service_closure" id="App\Services\cart\CartService"/>
@@ -6194,7 +6609,11 @@
         <argument key="rep" type="service_closure" id="App\Repository\ReponseRepository"/>
       </argument>
     </service>
+<<<<<<< HEAD
     <service id=".service_locator.HRLBiz5" class="Symfony\Component\DependencyInjection\ServiceLocator">
+=======
+    <service id=".service_locator.M01OQSl" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="paginator" type="service_closure" id="knp_paginator"/>
@@ -6218,7 +6637,11 @@
         <argument key="subj" type="service_closure" id=".errored..service_locator.eQN3DII.App\Entity\Reclamation"/>
       </argument>
     </service>
+<<<<<<< HEAD
     <service id=".service_locator.asJvmJ9" class="Symfony\Component\DependencyInjection\ServiceLocator">
+=======
+    <service id=".service_locator.3TCLsVi" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="paginator" type="service_closure" id="knp_paginator"/>
@@ -6232,14 +6655,22 @@
         <argument key="rep" type="service_closure" id="App\Repository\ReponseRepository"/>
       </argument>
     </service>
+<<<<<<< HEAD
     <service id=".service_locator._jO2vD9" class="Symfony\Component\DependencyInjection\ServiceLocator">
+=======
+    <service id=".service_locator.nVBwsfT" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="rep" type="service_closure" id="App\Repository\ReponseRepository"/>
         <argument key="repp" type="service_closure" id="App\Repository\DemandesRepository"/>
       </argument>
     </service>
+<<<<<<< HEAD
     <service id=".service_locator.D4nGOut" class="Symfony\Component\DependencyInjection\ServiceLocator">
+=======
+    <service id=".service_locator.tejTvi1" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="mailer" type="service_closure" id="mailer.mailer"/>
@@ -6288,6 +6719,7 @@
         <argument key="rep" type="service_closure" id="App\Repository\VehiculeRepository"/>
       </argument>
     </service>
+<<<<<<< HEAD
     <service id=".service_locator.Mn1denL" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6460,6 +6892,180 @@
       </argument>
     </service>
     <service id=".service_locator.19_mNxd" class="Symfony\Component\DependencyInjection\ServiceLocator">
+=======
+    <service id=".service_locator.tx4TgRZ" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="App\Controller\AdminController::AcceptDem" type="service_closure" id=".service_locator.9dW19ZD"/>
+        <argument key="App\Controller\AdminController::DeleteDem" type="service_closure" id=".service_locator.RZBlnd0"/>
+        <argument key="App\Controller\AdminController::DeleteUser" type="service_closure" id=".service_locator.N9H1lzz"/>
+        <argument key="App\Controller\AdminController::afficherDemande" type="service_closure" id=".service_locator.RZBlnd0"/>
+        <argument key="App\Controller\AdminController::afficherUser" type="service_closure" id=".service_locator..eSqCpn"/>
+        <argument key="App\Controller\AdminController::index" type="service_closure" id=".service_locator.mKrhAuH"/>
+        <argument key="App\Controller\BoutiqueController::Supprimer" type="service_closure" id=".service_locator.iyp5ci2"/>
+        <argument key="App\Controller\BoutiqueController::add" type="service_closure" id=".service_locator.CAQV149"/>
+        <argument key="App\Controller\BoutiqueController::afficher" type="service_closure" id=".service_locator.nxwfP0X"/>
+        <argument key="App\Controller\BoutiqueController::afficherProduit" type="service_closure" id=".service_locator.pkTBxC3"/>
+        <argument key="App\Controller\CartController::add" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\CartController::add1" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\CartController::delete" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\CartController::delete1" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\CartController::deleteall" type="service_closure" id=".service_locator.o3htLhs"/>
+        <argument key="App\Controller\CartController::index" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\CartController::remove" type="service_closure" id=".service_locator.qjLVb2I"/>
+        <argument key="App\Controller\CommandeController::afficher" type="service_closure" id=".service_locator.3W4j79a"/>
+        <argument key="App\Controller\CommandeController::affichermescommandes" type="service_closure" id=".service_locator.xotv1VO"/>
+        <argument key="App\Controller\CommandeController::ajoutercommande" type="service_closure" id=".service_locator.klL5FJS"/>
+        <argument key="App\Controller\CommandeController::modifiercommande" type="service_closure" id=".service_locator.tLO4e6_"/>
+        <argument key="App\Controller\CommandeController::supprimercommande" type="service_closure" id=".service_locator.p26ou2t"/>
+        <argument key="App\Controller\CommentairesController::Supprimer" type="service_closure" id=".service_locator.owUo2kA"/>
+        <argument key="App\Controller\CommentairesController::index" type="service_closure" id=".service_locator.GGjQ1bX"/>
+        <argument key="App\Controller\DemandeController::AddActeur" type="service_closure" id=".service_locator.ykTLCfZ"/>
+        <argument key="App\Controller\DemandeController::index" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\EvenementController::Add" type="service_closure" id=".service_locator.CAQV149"/>
+        <argument key="App\Controller\EvenementController::Supprimer" type="service_closure" id=".service_locator.p5lFTbi"/>
+        <argument key="App\Controller\EvenementController::Update" type="service_closure" id=".service_locator.QVh39BR"/>
+        <argument key="App\Controller\EvenementController::afficher" type="service_closure" id=".service_locator.QVh39BR"/>
+        <argument key="App\Controller\EvenementController::detail" type="service_closure" id=".service_locator.p5IAfle"/>
+        <argument key="App\Controller\FrontController::afficherevenement" type="service_closure" id=".service_locator.iL5tyiY"/>
+        <argument key="App\Controller\FrontController::delete1" type="service_closure" id=".service_locator.qjLVb2I"/>
+        <argument key="App\Controller\FrontController::detail" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\FrontController::details" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\FrontController::index" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\LigneCommandeController::index" type="service_closure" id=".service_locator.zbyTg0K"/>
+        <argument key="App\Controller\LigneCommandeController::supprimercommande" type="service_closure" id=".service_locator.fSKtku3"/>
+        <argument key="App\Controller\LivraisonControlleur::Add" type="service_closure" id=".service_locator.H1C7pzf"/>
+        <argument key="App\Controller\LivraisonControlleur::Supprimer" type="service_closure" id=".service_locator.W._dOeO"/>
+        <argument key="App\Controller\LivraisonControlleur::Update" type="service_closure" id=".service_locator.rPh7Twi"/>
+        <argument key="App\Controller\LivraisonControlleur::afficher" type="service_closure" id=".service_locator._RhsWYq"/>
+        <argument key="App\Controller\LivraisonControlleur::index" type="service_closure" id=".service_locator.CAQV149"/>
+        <argument key="App\Controller\PaymentController::chekout" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\PaymentController::error" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\PaymentController::success" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\PdfController::index" type="service_closure" id=".service_locator.OoeDy.C"/>
+        <argument key="App\Controller\ProduitController::Supprimer" type="service_closure" id=".service_locator.dCtSWL8"/>
+        <argument key="App\Controller\ProduitController::add" type="service_closure" id=".service_locator.CAQV149"/>
+        <argument key="App\Controller\ProduitController::afficher" type="service_closure" id=".service_locator.pkTBxC3"/>
+        <argument key="App\Controller\ProduitController::update" type="service_closure" id=".service_locator.CAQV149"/>
+        <argument key="App\Controller\ReclamationController::add" type="service_closure" id=".service_locator.7.Cer78"/>
+        <argument key="App\Controller\ReclamationController::afficheReponse" type="service_closure" id=".service_locator.2zXwowr"/>
+        <argument key="App\Controller\ReclamationController::afficher" type="service_closure" id=".service_locator.XJ8tPAB"/>
+        <argument key="App\Controller\ReclamationController::index" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\ReponseController::Delete_reclamation" type="service_closure" id=".service_locator.9haQGQi"/>
+        <argument key="App\Controller\ReponseController::Delete_reponse" type="service_closure" id=".service_locator.XkRG9bV"/>
+        <argument key="App\Controller\ReponseController::addResponse" type="service_closure" id=".service_locator.e.YMiV1"/>
+        <argument key="App\Controller\ReponseController::afficher" type="service_closure" id=".service_locator.M01OQSl"/>
+        <argument key="App\Controller\ReponseController::afficher_reponses" type="service_closure" id=".service_locator.3TCLsVi"/>
+        <argument key="App\Controller\ReponseController::update_reponse" type="service_closure" id=".service_locator.nVBwsfT"/>
+        <argument key="App\Controller\ResetPasswordController::request" type="service_closure" id=".service_locator.tejTvi1"/>
+        <argument key="App\Controller\ResetPasswordController::reset" type="service_closure" id=".service_locator.IHMIEEW"/>
+        <argument key="App\Controller\StatisticController::statistiques" type="service_closure" id=".service_locator.9haQGQi"/>
+        <argument key="App\Controller\UtilisateursController::AddUser" type="service_closure" id=".service_locator.ykTLCfZ"/>
+        <argument key="App\Controller\UtilisateursController::Compte" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\UtilisateursController::ConfirmUser" type="service_closure" id=".service_locator.cTCCVEY"/>
+        <argument key="App\Controller\UtilisateursController::EditPassword" type="service_closure" id=".service_locator.sxGJU_z"/>
+        <argument key="App\Controller\UtilisateursController::Update" type="service_closure" id=".service_locator.cTCCVEY"/>
+        <argument key="App\Controller\UtilisateursController::login" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\VehiculeController::AddCamion" type="service_closure" id=".service_locator..eSqCpn"/>
+        <argument key="App\Controller\VehiculeController::AddMoto" type="service_closure" id=".service_locator..eSqCpn"/>
+        <argument key="App\Controller\VehiculeController::AddVoiture" type="service_closure" id=".service_locator..eSqCpn"/>
+        <argument key="App\Controller\VehiculeController::SupprimerCamion" type="service_closure" id=".service_locator.a1R6nYn"/>
+        <argument key="App\Controller\VehiculeController::SupprimerMoto" type="service_closure" id=".service_locator.a1R6nYn"/>
+        <argument key="App\Controller\VehiculeController::SupprimerVoiture" type="service_closure" id=".service_locator.a1R6nYn"/>
+        <argument key="App\Controller\VehiculeController::Update" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController::UpdateCamion" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController::UpdateMoto" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController::afficherCamion" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController::afficherMoto" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController::afficherVoiture" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController::index" type="service_closure" id=".service_locator.CAQV149"/>
+        <argument key="App\Controller\AdminController:AcceptDem" type="service_closure" id=".service_locator.9dW19ZD"/>
+        <argument key="App\Controller\AdminController:DeleteDem" type="service_closure" id=".service_locator.RZBlnd0"/>
+        <argument key="App\Controller\AdminController:DeleteUser" type="service_closure" id=".service_locator.N9H1lzz"/>
+        <argument key="App\Controller\AdminController:afficherDemande" type="service_closure" id=".service_locator.RZBlnd0"/>
+        <argument key="App\Controller\AdminController:afficherUser" type="service_closure" id=".service_locator..eSqCpn"/>
+        <argument key="App\Controller\AdminController:index" type="service_closure" id=".service_locator.mKrhAuH"/>
+        <argument key="App\Controller\BoutiqueController:Supprimer" type="service_closure" id=".service_locator.iyp5ci2"/>
+        <argument key="App\Controller\BoutiqueController:add" type="service_closure" id=".service_locator.CAQV149"/>
+        <argument key="App\Controller\BoutiqueController:afficher" type="service_closure" id=".service_locator.nxwfP0X"/>
+        <argument key="App\Controller\BoutiqueController:afficherProduit" type="service_closure" id=".service_locator.pkTBxC3"/>
+        <argument key="App\Controller\CartController:add" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\CartController:add1" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\CartController:delete" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\CartController:delete1" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\CartController:deleteall" type="service_closure" id=".service_locator.o3htLhs"/>
+        <argument key="App\Controller\CartController:index" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\CartController:remove" type="service_closure" id=".service_locator.qjLVb2I"/>
+        <argument key="App\Controller\CommandeController:afficher" type="service_closure" id=".service_locator.3W4j79a"/>
+        <argument key="App\Controller\CommandeController:affichermescommandes" type="service_closure" id=".service_locator.xotv1VO"/>
+        <argument key="App\Controller\CommandeController:ajoutercommande" type="service_closure" id=".service_locator.klL5FJS"/>
+        <argument key="App\Controller\CommandeController:modifiercommande" type="service_closure" id=".service_locator.tLO4e6_"/>
+        <argument key="App\Controller\CommandeController:supprimercommande" type="service_closure" id=".service_locator.p26ou2t"/>
+        <argument key="App\Controller\CommentairesController:Supprimer" type="service_closure" id=".service_locator.owUo2kA"/>
+        <argument key="App\Controller\CommentairesController:index" type="service_closure" id=".service_locator.GGjQ1bX"/>
+        <argument key="App\Controller\DemandeController:AddActeur" type="service_closure" id=".service_locator.ykTLCfZ"/>
+        <argument key="App\Controller\DemandeController:index" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\EvenementController:Add" type="service_closure" id=".service_locator.CAQV149"/>
+        <argument key="App\Controller\EvenementController:Supprimer" type="service_closure" id=".service_locator.p5lFTbi"/>
+        <argument key="App\Controller\EvenementController:Update" type="service_closure" id=".service_locator.QVh39BR"/>
+        <argument key="App\Controller\EvenementController:afficher" type="service_closure" id=".service_locator.QVh39BR"/>
+        <argument key="App\Controller\EvenementController:detail" type="service_closure" id=".service_locator.p5IAfle"/>
+        <argument key="App\Controller\FrontController:afficherevenement" type="service_closure" id=".service_locator.iL5tyiY"/>
+        <argument key="App\Controller\FrontController:delete1" type="service_closure" id=".service_locator.qjLVb2I"/>
+        <argument key="App\Controller\FrontController:detail" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\FrontController:details" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\FrontController:index" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\LigneCommandeController:index" type="service_closure" id=".service_locator.zbyTg0K"/>
+        <argument key="App\Controller\LigneCommandeController:supprimercommande" type="service_closure" id=".service_locator.fSKtku3"/>
+        <argument key="App\Controller\LivraisonControlleur:Add" type="service_closure" id=".service_locator.H1C7pzf"/>
+        <argument key="App\Controller\LivraisonControlleur:Supprimer" type="service_closure" id=".service_locator.W._dOeO"/>
+        <argument key="App\Controller\LivraisonControlleur:Update" type="service_closure" id=".service_locator.rPh7Twi"/>
+        <argument key="App\Controller\LivraisonControlleur:afficher" type="service_closure" id=".service_locator._RhsWYq"/>
+        <argument key="App\Controller\LivraisonControlleur:index" type="service_closure" id=".service_locator.CAQV149"/>
+        <argument key="App\Controller\PaymentController:chekout" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\PaymentController:error" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\PaymentController:success" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\PdfController:index" type="service_closure" id=".service_locator.OoeDy.C"/>
+        <argument key="App\Controller\ProduitController:Supprimer" type="service_closure" id=".service_locator.dCtSWL8"/>
+        <argument key="App\Controller\ProduitController:add" type="service_closure" id=".service_locator.CAQV149"/>
+        <argument key="App\Controller\ProduitController:afficher" type="service_closure" id=".service_locator.pkTBxC3"/>
+        <argument key="App\Controller\ProduitController:update" type="service_closure" id=".service_locator.CAQV149"/>
+        <argument key="App\Controller\ReclamationController:add" type="service_closure" id=".service_locator.7.Cer78"/>
+        <argument key="App\Controller\ReclamationController:afficheReponse" type="service_closure" id=".service_locator.2zXwowr"/>
+        <argument key="App\Controller\ReclamationController:afficher" type="service_closure" id=".service_locator.XJ8tPAB"/>
+        <argument key="App\Controller\ReclamationController:index" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\ReponseController:Delete_reclamation" type="service_closure" id=".service_locator.9haQGQi"/>
+        <argument key="App\Controller\ReponseController:Delete_reponse" type="service_closure" id=".service_locator.XkRG9bV"/>
+        <argument key="App\Controller\ReponseController:addResponse" type="service_closure" id=".service_locator.e.YMiV1"/>
+        <argument key="App\Controller\ReponseController:afficher" type="service_closure" id=".service_locator.M01OQSl"/>
+        <argument key="App\Controller\ReponseController:afficher_reponses" type="service_closure" id=".service_locator.3TCLsVi"/>
+        <argument key="App\Controller\ReponseController:update_reponse" type="service_closure" id=".service_locator.nVBwsfT"/>
+        <argument key="App\Controller\ResetPasswordController:request" type="service_closure" id=".service_locator.tejTvi1"/>
+        <argument key="App\Controller\ResetPasswordController:reset" type="service_closure" id=".service_locator.IHMIEEW"/>
+        <argument key="App\Controller\StatisticController:statistiques" type="service_closure" id=".service_locator.9haQGQi"/>
+        <argument key="App\Controller\UtilisateursController:AddUser" type="service_closure" id=".service_locator.ykTLCfZ"/>
+        <argument key="App\Controller\UtilisateursController:Compte" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\UtilisateursController:ConfirmUser" type="service_closure" id=".service_locator.cTCCVEY"/>
+        <argument key="App\Controller\UtilisateursController:EditPassword" type="service_closure" id=".service_locator.sxGJU_z"/>
+        <argument key="App\Controller\UtilisateursController:Update" type="service_closure" id=".service_locator.cTCCVEY"/>
+        <argument key="App\Controller\UtilisateursController:login" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\VehiculeController:AddCamion" type="service_closure" id=".service_locator..eSqCpn"/>
+        <argument key="App\Controller\VehiculeController:AddMoto" type="service_closure" id=".service_locator..eSqCpn"/>
+        <argument key="App\Controller\VehiculeController:AddVoiture" type="service_closure" id=".service_locator..eSqCpn"/>
+        <argument key="App\Controller\VehiculeController:SupprimerCamion" type="service_closure" id=".service_locator.a1R6nYn"/>
+        <argument key="App\Controller\VehiculeController:SupprimerMoto" type="service_closure" id=".service_locator.a1R6nYn"/>
+        <argument key="App\Controller\VehiculeController:SupprimerVoiture" type="service_closure" id=".service_locator.a1R6nYn"/>
+        <argument key="App\Controller\VehiculeController:Update" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController:UpdateCamion" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController:UpdateMoto" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController:afficherCamion" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController:afficherMoto" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController:afficherVoiture" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController:index" type="service_closure" id=".service_locator.CAQV149"/>
+      </argument>
+    </service>
+    <service id=".service_locator.Y7gDuDN" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntityValidator" type="service_closure" id="doctrine.orm.validator.unique"/>
@@ -6518,7 +7124,11 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
+<<<<<<< HEAD
     <service id=".service_locator..hIz5jK" class="Symfony\Component\DependencyInjection\ServiceLocator">
+=======
+    <service id=".service_locator.lwgyrAj" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\ActeurType" type="service_closure" id="App\Form\ActeurType"/>
@@ -6712,7 +7322,11 @@
       <argument type="service" id="cache.doctrine.orm.default.result"/>
       <factory class="Doctrine\Common\Cache\Psr6\DoctrineProvider" method="wrap"/>
     </service>
+<<<<<<< HEAD
     <service id=".service_locator.FcOEY2h" class="Symfony\Component\DependencyInjection\ServiceLocator">
+=======
+    <service id=".service_locator.7fIBdgh" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\BoutiqueRepository" type="service_closure" id="App\Repository\BoutiqueRepository"/>
@@ -7041,6 +7655,7 @@
     <service id="debug.security.user_value_resolver.inner" class="Symfony\Component\Security\Http\Controller\UserValueResolver">
       <argument type="service" id="security.token_storage"/>
     </service>
+<<<<<<< HEAD
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <argument type="service" id=".service_locator.Mn1denL"/>
     </service>
@@ -7048,6 +7663,15 @@
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <argument type="service" id=".service_locator.Mn1denL"/>
+=======
+    <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
+      <argument type="service" id=".service_locator.tx4TgRZ"/>
+    </service>
+    <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
+    <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
+    <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
+      <argument type="service" id=".service_locator.tx4TgRZ"/>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -7254,7 +7878,11 @@
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter">
       <argument>2fJNiFZoJm</argument>
       <argument>0</argument>
+<<<<<<< HEAD
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/pools</argument>
+=======
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/pools</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
@@ -7264,7 +7892,11 @@
       <argument>bY1Jxru9+F</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
+<<<<<<< HEAD
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/pools</argument>
+=======
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/pools</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -7272,7 +7904,11 @@
       <argument>f7SjWQKS+p</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
+<<<<<<< HEAD
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/pools</argument>
+=======
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/pools</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -7280,7 +7916,11 @@
       <argument>lLMzKdNYh3</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
+<<<<<<< HEAD
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/pools</argument>
+=======
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/pools</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -7288,7 +7928,11 @@
       <argument>dFbj7nKm7J</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
+<<<<<<< HEAD
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/pools</argument>
+=======
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/pools</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -7296,7 +7940,11 @@
       <argument>xgEJ4tK2Wz</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
+<<<<<<< HEAD
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/pools</argument>
+=======
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/pools</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -7306,7 +7954,11 @@
       <argument>Ocd39lwdI9</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
+<<<<<<< HEAD
       <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/pools</argument>
+=======
+      <argument>C:\Users\mariem\Documents\piDEV\ErrorMakers-3A45\var\cache\dev/pools</argument>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -7454,9 +8106,15 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker"/>
     <service id="SymfonyCasts\Bundle\ResetPassword\ResetPasswordHelperInterface" alias="symfonycasts.reset_password.helper"/>
     <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
+<<<<<<< HEAD
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
     <service id="argument_resolver.controller_locator" alias=".service_locator.Mn1denL"/>
+=======
+    <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
+    <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.tx4TgRZ"/>
+>>>>>>> 01a6aecbe4506ab1c86c666b5a331483300a5453
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>
