@@ -43,10 +43,7 @@ class Commentaires
      */
     private $created_at;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    private $rgpd;
+
 
     /**
      * @ORM\ManyToOne(targetEntity=Evenement::class, inversedBy="commentaires")

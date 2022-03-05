@@ -81,6 +81,14 @@ class UtilisateursController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
+            
+            $file = $form->get('Image')->getData();
+            
+            if($file != null){
+            $filename = md5(uniqid()) . '.' . $file->guessExtension();
+            $file->move($this->getParameter('uploads_directory'), $filename);
+            $user->setImage($filename);
+            }
 
         $em=$this->getDoctrine()->getManager();
         $em->flush();
@@ -99,7 +107,7 @@ class UtilisateursController extends AbstractController
      /**
      * @Route("/utilisateurs/compte",name="usercompte")
      */
-    public function Compte(CartService $cartService ){
+    public function Compte(CartService $cartService){
         
         $dataPanier = $cartService->getFullCart();  
         $total = $cartService->getTotal();
@@ -169,6 +177,8 @@ class UtilisateursController extends AbstractController
 
      }
     
+
+     
      /**
      * @Route("/login", name="login")
      */
