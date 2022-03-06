@@ -44,7 +44,6 @@ class Commentaires
     private $created_at;
 
 
-
     /**
      * @ORM\ManyToOne(targetEntity=Evenement::class, inversedBy="commentaires")
      * @ORM\JoinColumn(nullable=false)
@@ -125,17 +124,7 @@ class Commentaires
         return $this;
     }
 
-    public function getRgpd(): ?bool
-    {
-        return $this->rgpd;
-    }
 
-    public function setRgpd(bool $rgpd): self
-    {
-        $this->rgpd = $rgpd;
-
-        return $this;
-    }
 
     public function getAnnonces(): ?Evenement
     {

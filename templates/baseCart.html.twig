@@ -670,6 +670,18 @@
         });
     });
 </script>
+ <script>
+    window.onlaod = () => {
+        
+			// On met un écouteur d'évènements sur tous les boutons répondre
+			document.querySelectorAll("[data-reply]").forEach(element => {
+				element.addEventListener("click", function(){
+                        console.log(this);
+				});
+			});
+
+    }
+    </script>
 {% endblock %}
 </body>
 
