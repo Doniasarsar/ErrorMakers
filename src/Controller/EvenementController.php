@@ -137,12 +137,13 @@ class EvenementController extends AbstractController
         if($CommentairesForm->isSubmitted() && $CommentairesForm->isValid()){
             $Commentaires->setCreatedAt(new DateTimeImmutable());
             $Commentaires->setAnnonces($evenement);
-            $parent = $CommentairesForm->get("parent_id")->getData();
+            
+            $parent_id = $CommentairesForm->get("parent_id")->getData();
               // On va chercher le commentaire correspondant
               $em = $this->getDoctrine()->getManager();
 
-              if($parent != null){
-                  $parent = $em->getRepository(Commentaires::class)->find($parent);
+              if($parent_id != null){
+                  $parent = $em->getRepository(Commentaires::class)->find($parent_id);
               }
   
               // On définit le parent

@@ -21,7 +21,7 @@
                                                 <h3 class="li-blog-heading pt-25"><a href="#">{{tab.nom}}</a></h3>
                                                 <div class="li-blog-meta">
                                                     <a class="author" href="#"><i class="fa fa-map-marker"></i>{{tab.adresse}}</a>
-                                                    <a class="comment" href="#desc_bas"><i class="fa fa-comment-o"></i> {{comments | length}} Commentaires</a>
+                                                    <a class="comment" href="#affichage_commentaire"><i class="fa fa-comment-o"></i> {{comments | length}} Commentaires</a>
                                                     <a class="post-time" href="#"><i class="fa fa-calendar"></i>DateDebut {{tab.date|date('Y-m-d H:i:s')}}</a>
                                                     <a class="post-time" href="#"><i class="fa fa-calendar"></i>DateFin {{tab.Datefin|date('Y-m-d H:i:s')}}</a>
                                                 </div>
@@ -39,7 +39,7 @@
                                         </div>
                                     </div>
                                     <!-- Begin Li's Blog Comment Section -->
-                                    <div class="li-comment-section" id="desc_bas">
+                                    <div class="li-comment-section" id="affichage_commentaire">
                                        
                                         <h3>{{comments | length}} Commentaires</h3>
                                          {% for comment in comments %}
@@ -49,10 +49,10 @@
                                                     <img src="{{asset('images/product-details/user.png')}}" alt="User">
                                                 </div>
                                                 <div class="comment-body pl-15">
-                                                        <span class="reply-btn pt-15 pt-xs-5"><a href="#">reply</a></span>
+                                                        <span class="reply-btn pt-15 pt-xs-5"><a href="#ajout_commentaire" data-reply data-id={{comment.id}}>Répondre</a></span>
                                                     <h5 class="comment-author pt-15">{{comment.pseudo}}</h5>
                                                     <div class="comment-post-date">
-                                                        {{comment.createdAt | date('y-m-d-h:m:s')}}
+                                                        {{comment.createdAt | date('y-m-d  h:m:s')}}
                                                     </div>
                                                     <p>{{comment.contenu}}</p>
                                                 </div>
@@ -63,7 +63,7 @@
                                     </div>
                                     <!-- Li's Blog Comment Section End Here -->
                                     <!-- Begin Blog comment Box Area -->
-                                    <div class="li-blog-comment-wrapper" >
+                                    <div class="li-blog-comment-wrapper" id="ajout_commentaire">
                                         <h3>Laisse un commentaire</h3>
                                         <p>Votre adresse email ne sera pas publiée. Tous les champs sont requis </p>
                                         {{ form_start(Commentaires_Form,{'attr': {'novalidate': 'novalidate'}} ) }}
@@ -124,4 +124,19 @@
             <!-- Li's Main Blog Page Area End Here -->
         </div>
         <!-- Body Wrapper End Here -->
+{% endblock %}
+{% block javascript %}
+    <script>
+    window.onlaod = () => {
+        
+			// On met un écouteur d'évènements sur tous les boutons répondre
+			document.querySelectorAll("[data-reply]").forEach(element => {
+				element.addEventListener("click", function(){
+					document.querySelector("#commentaires_parent_id").value = this.dataset.id;
+				});
+			});
+
+    }
+
+    </script>
 {% endblock %}

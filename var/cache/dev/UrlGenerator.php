@@ -85,5 +85,6 @@ return [
     'mot_update' => [['id'], ['_controller' => 'App\\Controller\\VehiculeController::UpdateMoto'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/moto/update']], [], []],
     'cam_add' => [[], ['_controller' => 'App\\Controller\\VehiculeController::AddCamion'], [], [['text', '/admin/camion/add']], [], []],
     'cam_update' => [['id'], ['_controller' => 'App\\Controller\\VehiculeController::UpdateCamion'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/camion/update']], [], []],
+    'fc_load_events' => [[], ['_controller' => 'CalendarBundle\\Controller\\CalendarController::loadAction'], [], [['text', '/fc-load-events']], [], []],
     'index' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/']], [], []],
 ];

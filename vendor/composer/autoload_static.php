@@ -150,6 +150,10 @@ class ComposerStaticInitd5b687b959e1cfb5a01c54228c316de9
             'Doctrine\\Bundle\\DoctrineBundle\\' => 31,
             'DeepCopy\\' => 9,
         ),
+        'C' => 
+        array (
+            'CalendarBundle\\' => 15,
+        ),
         'A' => 
         array (
             'App\\Tests\\' => 10,
@@ -553,6 +557,10 @@ class ComposerStaticInitd5b687b959e1cfb5a01c54228c316de9
         'DeepCopy\\' => 
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
+        ),
+        'CalendarBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/tattali/calendar-bundle/src',
         ),
         'App\\Tests\\' => 
         array (

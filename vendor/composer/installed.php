@@ -1,22 +1,22 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '682071f40b50fd4d48b1399e5112582f8039e340',
+        'reference' => 'c0c002893b2fcf29507fd3607559d983da012bf1',
         'name' => '__root__',
         'dev' => true,
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '682071f40b50fd4d48b1399e5112582f8039e340',
+            'reference' => 'c0c002893b2fcf29507fd3607559d983da012bf1',
             'dev_requirement' => false,
         ),
         'doctrine/annotations' => array(
@@ -1263,6 +1263,15 @@
             'install_path' => __DIR__ . '/../symfony/yaml',
             'aliases' => array(),
             'reference' => 'd7f637cc0f0cc14beb0984f2bb50da560b271311',
+            'dev_requirement' => false,
+        ),
+        'tattali/calendar-bundle' => array(
+            'pretty_version' => 'v1.2.3',
+            'version' => '1.2.3.0',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../tattali/calendar-bundle',
+            'aliases' => array(),
+            'reference' => 'efb64931ed6343b714fbdc422e121070d29ccdd3',
             'dev_requirement' => false,
         ),
         'theseer/tokenizer' => array(
