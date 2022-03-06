@@ -23,7 +23,7 @@ class CommentairesType extends AbstractType
             ->add('contenu')
             ->add('Pseudo')
            
-            ->add('parent_id', HiddenType::class,[
+            ->add('parent', HiddenType::class,[
                 'mapped' => false
             ])
             ->add('Envoyer', SubmitType::class)
