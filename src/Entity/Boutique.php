@@ -47,13 +47,11 @@ class Boutique
 
     /**
      * @ORM\OneToOne(targetEntity=Utilisateurs::class)
-    
      */
     private $Commercant;
 
     /**
-     * @ORM\OneToMany(targetEntity=Images::class, mappedBy="boutique", cascade={"persist", "remove"})
-     
+     * @ORM\OneToMany(targetEntity=Images::class, mappedBy="boutique", cascade={"persist", "remove"})   
      */
     private $images;
 

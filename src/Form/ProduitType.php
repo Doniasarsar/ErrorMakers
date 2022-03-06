@@ -26,16 +26,7 @@ class ProduitType extends AbstractType
                 'label' => 'Telecharger une image '
 
             ])
-            ->add('boutique', EntityType::class, [
-           
-                'class' => Boutique::class,
-                'choice_label' => 'nomBoutique',
-               
-            
-                // used to render a select box, check boxes or radios
-                // 'multiple' => true,
-                // 'expanded' => true,
-            ])
+          
         ;
         
     }

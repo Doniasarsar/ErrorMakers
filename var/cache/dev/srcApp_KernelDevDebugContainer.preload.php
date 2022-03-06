@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).'/vendor/autoload.php';
-(require __DIR__.'/srcApp_KernelDevDebugContainer.php')->set(\ContainerOMXBhez\srcApp_KernelDevDebugContainer::class, null);
+(require __DIR__.'/srcApp_KernelDevDebugContainer.php')->set(\Container0XyGJPi\srcApp_KernelDevDebugContainer::class, null);
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -75,7 +75,6 @@ $classes[] = 'App\Form\ResetPasswordRequestFormType';
 $classes[] = 'App\Form\UtilisateursType';
 $classes[] = 'App\Form\VoitureType';
 $classes[] = 'App\Repository\BoutiqueRepository';
-$classes[] = 'App\Repository\BoutiquesRepository';
 $classes[] = 'App\Repository\CommandeRepository';
 $classes[] = 'App\Repository\CommentairesRepository';
 $classes[] = 'App\Repository\DemandesRepository';
