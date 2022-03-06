@@ -173,17 +173,4 @@
         </div>
         <!-- Body Wrapper End Here -->
 {% endblock %}
-{% block javascript %}
-    <script>
-    window.onlaod = () => {
-        
-			// On met un écouteur d'évènements sur tous les boutons répondre
-			document.querySelectorAll("[data-reply]").forEach(element => {
-				element.addEventListener("click", function(){
-					document.querySelector("#commentaires_parent_id").value = this.dataset.id;
-				});
-			});
 
-    }
-    </script>
-{% endblock %}
