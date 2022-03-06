@@ -22,19 +22,20 @@ class LigneCommandeRepository extends ServiceEntityRepository
     // /**
     //  * @return LigneCommande[] Returns an array of LigneCommande objects
     //  */
-    /*
-    public function findByExampleField($value)
+    
+    public function findByidclient($id)
     {
         return $this->createQueryBuilder('l')
-            ->andWhere('l.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('l.id', 'ASC')
+            ->andWhere('l.commande = :val')
+            ->setParameter('val', $id)
+            ->orderBy('l.commande', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()
         ;
     }
-    */
+  
+    
 
     /*
     public function findOneBySomeField($value): ?LigneCommande

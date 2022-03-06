@@ -41,6 +41,8 @@
     <link rel="stylesheet" href="{{asset('style.css')}}">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
+
+    
     <!-- Modernizr js -->
     <script src="{{asset('s/vendor/modernizr-2.8.3.min.js')}}j"></script>
 </head>
@@ -112,7 +114,7 @@
                             <!-- Begin Header Logo Area -->
                             <div class="col-lg-3">
                                 <div class="logo pb-sm-30 pb-xs-30">
-                                    <a href="index.html">
+                                    <a href="{{path('home')}}">
                                         <img src="{{asset('images/menu/logo/protech.png')}}" height="60" width="188" alt="">
                                     </a>
                                 </div>
@@ -217,13 +219,14 @@
                                     <nav>
                                         <ul>
                                          <li><a href="{{path('home')}}">Home</a></li> 
-                                         <li><a href="#">Boutique</a></li> 
+                                         <li><a href="#nosBoutiques">Boutique</a></li> 
                                          <li><a href="{{path('ev_front_aff')}}">Evenement</a></li> 
                                          {% if  app.user %}    
                                         <li class="dropdown-holder"><a href="#">Reclamation</a>
                                              <ul class="hb-dropdown">
-                                                 <li class="sub-dropdown-holder"><a href="{{ path('r_add', {id:app.user.id}) }}">Add Reclamation</a>
-                                                 </li>
+                                                <li class="sub-dropdown-holder"><a href="{{ path('listmescommande', {value:app.user.Telephone}) }}">Mes Commandes</a>
+                                                </li>
+                                               
                                                  <li class="sub-dropdown-holder"><a href="{{path('r_list', {value:app.user.id}) }}">Historique</a>                                                                                               
                                                  </li>
                                              </ul>
@@ -652,6 +655,21 @@
 <script src="{{asset('js/scrollUp.min.js')}}"></script>
 <!-- Main/Activator js -->
 <script src="{{asset('js/main.js')}}"></script>
+
+<!-- Etoile -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+ 
+<script> 
+    $(function () {
+        $(".rateyo").rateYo().on("rateyo.change", function (e, data) {
+            var rating = data.rating;
+            $(this).parent().find('.score').text('score :'+ $(this).attr('data-rateyo-score'));
+            $(this).parent().find('.result').text('rating :'+ rating);
+            $(this).parent().find('input[id=rating]').val(rating); //add rating value to input field
+        });
+    });
+</script>
 {% endblock %}
 </body>
 

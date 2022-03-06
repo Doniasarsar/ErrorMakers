@@ -10,15 +10,17 @@ use App\Entity\LigneCommande;
 use App\Services\cart\CartService;
 use App\Repository\ProduitRepository;
 use App\Repository\CommandeRepository;
+use App\Repository\DemandesRepository;
 use App\Repository\UtilisateurRepository;
 use App\Repository\LigneCommandeRepository;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
 class CommandeController extends AbstractController
@@ -45,7 +47,6 @@ class CommandeController extends AbstractController
             $em = $this->getDoctrine()->getManager();
             $em->persist($commande);
             $em->flush();
-            $this->addFlash('Success','Commande delivred');
 
            
 
@@ -66,9 +67,20 @@ class CommandeController extends AbstractController
                 $em->persist($ligneCommande);
                 $em->flush();
 
+
                 }
 
-             return $this->redirectToRoute('home');
+                $test = $test->getModePaiemenet();
+                if ( $test == 0 )
+                {
+                    
+                    return $this->redirectToRoute('checkout');
+                }else {
+                    $this->addFlash('success','Successful payment');
+                    return $this->redirectToRoute('home');
+                }
+             
+
         }
        
 
@@ -84,13 +96,16 @@ class CommandeController extends AbstractController
      * @Route("/admin/affcommande", name="admincommande")
      */
 
-     function afficher(CommandeRepository $rep,LigneCommandeRepository $ligneCommande)
+     function afficher(CommandeRepository $rep,LigneCommandeRepository $ligneCommande,DemandesRepository $repp)
     {
+        $demandes= $repp->findAll();
+
          $commande = $rep->findall();
          $ligneCommande = $ligneCommande->findall();
          return $this->render('dashboard/commande/index.html.twig', [
              'tab' => $commande,
-             'tab1' => $ligneCommande
+             'tab1' => $ligneCommande,
+             'demandes'=>$demandes,
 
          ]);
 
@@ -116,8 +131,10 @@ class CommandeController extends AbstractController
      * @Route("/admin/modifcommande/{id}", name="adminmodif")
      */
 
-    function modifiercommande($id ,CommandeRepository $rep, Request $request)
+    function modifiercommande($id ,CommandeRepository $rep, Request $request,DemandesRepository $repp)
     {
+        $demandes= $repp->findAll();
+
         $commande=$rep->find($id);
         $form = $this->createForm(CommandeType::class, $commande);
         $form->handleRequest($request);
@@ -131,7 +148,31 @@ class CommandeController extends AbstractController
 
        return $this->render('dashboard/commande/modifier.html.twig', [
         'form' => $form->createView(),
+        'demandes'=>$demandes,
     ]);
     }
+
+     /**
+     * @Route("commande/list/{value}", name="listmescommande")
+     */
+    public function affichermescommandes($value, CommandeRepository $rep,CartService $cartService,LigneCommandeRepository $ligneCommande, Request $request, PaginatorInterface $paginator): Response
+    {    $dataPanier = $cartService->getFullCart();  
+        $total = $cartService->getTotal();
+
+        $commande=$rep->findByPhone($value);
+        $donnees = $paginator->paginate(
+            $commande,
+            $request->query->getInt('page', 1), // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
+            2 // Nombre de résultats par page
+        );
+        $ligneCommande = $ligneCommande->findall();
+        return $this->render('commande/listCommande.html.twig', [
+            'tab' => $donnees,
+            'tab1' => $ligneCommande,
+            'elements' => $dataPanier,
+            'total' => $total
+        ]);
+    }
+
 
 }

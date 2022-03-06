@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use App\Entity\Commande;
 use App\Entity\Reclamation;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -30,7 +31,8 @@ class ReclamationType extends AbstractType
                 'multiple' => false,
                 'expanded' => false
             ])
-            ->add('idCommande')
+         
+            
         
 
         ;

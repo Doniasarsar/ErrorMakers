@@ -6,7 +6,9 @@ use App\Entity\Reponse;
 use App\Form\ReponseType;
 use App\Entity\Reclamation;
 use App\Repository\ReponseRepository;
+use App\Repository\DemandesRepository;
 use App\Repository\ReclamationRepository;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -35,11 +37,19 @@ class ReponseController extends AbstractController
      * @return Response
      * @Route("admin/reponse/recList", name="list_reclamation")
      */
-    public function afficher(ReclamationRepository $rep): Response
+    public function afficher(ReclamationRepository $rep,DemandesRepository $repp, Request $request, PaginatorInterface $paginator): Response
     {
+        $demandes=$repp->findAll();
+
         $reclamations=$rep->findAll();
+        $donnees = $paginator->paginate(
+            $reclamations,
+            $request->query->getInt('page', 1), // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
+            4 // Nombre de résultats par page
+        );
         return $this->render('reponse/listReclamationAdmin.html.twig', [
-            'tab' => $reclamations,
+            'tab' => $donnees,
+            'demandes'=>$demandes,
         ]);
     }
 
@@ -61,9 +71,10 @@ class ReponseController extends AbstractController
     /**
      * @Route("/reponse/add/{id}", name="rep_add")
      */
-    public function addResponse (Reclamation $recl,Reclamation $subj,Request $req, ReclamationRepository $rep, $id,SessionInterface $session)
+    public function addResponse (Reclamation $recl,Reclamation $subj,Request $req, ReclamationRepository $rep, $id,SessionInterface $session,DemandesRepository $repp)
     {   
-        $reclamation = $session->get("reclamation", $recl->getIdCommande());
+        $demandes=$repp->findAll();
+       
         $subject = $session->get("subj", $subj->getSubject());
 
 
@@ -88,8 +99,8 @@ class ReponseController extends AbstractController
 
         return $this->render('reponse/addReponse.html.twig', [
             'formA'=>$form->createView(), 
-            'reclamation' => $reclamation,
-            'subject' => $subject
+            'subject' => $subject,
+            'demandes'=>$demandes,
             
         ]);
     }
@@ -99,11 +110,20 @@ class ReponseController extends AbstractController
      * @return Response
      * @Route("admin/reponse/list", name="reponse_list")
      */
-    public function afficher_reponses(ReponseRepository $rep): Response
+    public function afficher_reponses(ReponseRepository $rep,DemandesRepository $repp, Request $request, PaginatorInterface $paginator): Response
     {
+        $demandes=$repp->findAll();
+
         $reponses=$rep->findAll();
+        $donnees = $paginator->paginate(
+            $reponses,
+            $request->query->getInt('page', 1), // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
+            4 // Nombre de résultats par page
+        );
+
         return $this->render('reponse/listReponses.html.twig', [
-            'tab1' => $reponses,
+            'tab1' => $donnees,
+            'demandes'=>$demandes,
         ]);
     }
 
@@ -125,8 +145,9 @@ class ReponseController extends AbstractController
     /**
      * @Route("reponse/update/{id}", name="reponse_update")
      */
-    public function update_reponse(Request $request, $id, ReponseRepository $rep)
+    public function update_reponse(Request $request, $id, ReponseRepository $rep,DemandesRepository $repp)
     {
+        $demandes=$repp->findAll();
        
         $reponse=$rep->find($id);
 
@@ -145,6 +166,7 @@ class ReponseController extends AbstractController
         }
         return $this->render('reponse/update.html.twig', [
             'formA'=>$form->createView(),
+            'demandes'=>$demandes,
         ]);
     }
 

@@ -43,7 +43,6 @@ class Commentaires
      */
     private $created_at;
 
-   
 
     /**
      * @ORM\ManyToOne(targetEntity=Evenement::class, inversedBy="commentaires")

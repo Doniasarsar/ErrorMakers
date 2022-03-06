@@ -81,6 +81,7 @@ class Utilisateurs implements UserInterface
      */
     private $boutique;
 
+
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message="Question 1 is required")
@@ -101,6 +102,11 @@ class Utilisateurs implements UserInterface
      * @ORM\OneToMany(targetEntity=Reclamation::class, mappedBy="client")
      */
     private $reclamations;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $Image;
 
     
 
@@ -296,6 +302,18 @@ class Utilisateurs implements UserInterface
                 $reclamation->setClient(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->Image;
+    }
+
+    public function setImage(?string $Image): self
+    {
+        $this->Image = $Image;
 
         return $this;
     }

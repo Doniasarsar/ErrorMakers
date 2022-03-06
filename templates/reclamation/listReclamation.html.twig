@@ -24,6 +24,7 @@
             <th>Reclamation Subject</th>
             <th>Message</th>
             <th>Reclamation Type</th>
+            <th>Produit</th>
             {#<th>CreatedAt</th>#}
             <th>Reclamation Status</th>
         </tr>
@@ -35,8 +36,15 @@
                 <td>{{ r.subject}}</td>
                 <td>{{ r.message }}</td>
                 <td>{{ r.type }}</td>
+              <td>  {% for des in tab1 %}
+                  {% if des.commande.id == r.id %}
+                  *{{ des.produit.nomProduit  }} <br>
+                  {% endif %}
+                  {% endfor %}
+                </td>
                {% if r.reponse != null %}
-                <td><a href="{{path('etat_rec', {id:r.reponse.id})}}"    onclick="return confirm('Do You want to see The Response to Your reclamation?')">{{ r.etat }}</a></td>
+                <td><a href="{{path('etat_rec', {id:r.reponse.id})}}"
+                        onclick="return confirm('Do You want to see The Response to Your reclamation?')">{{ r.etat }}</a></td>
                 {% else %}
                 {#<td>{{ r.createdAt|date('Y-m-d H:i:s') }}</td> #}
                 <td><a href="#">{{ r.etat }}</a></td>
@@ -44,6 +52,7 @@
                 {% endif %} 
             </tr>
         {% endfor %}
+        {{ knp_pagination_render(tab) }}
     </table>
     </div>
     </div>

@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Utilisateurs;
 use App\Form\UtilisateursType;
 use App\Repository\DemandesRepository;
+use App\Repository\ReclamationRepository;
 use App\Repository\UtilisateursRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -21,20 +22,46 @@ class AdminController extends AbstractController
     /**
      * @Route("/dashboard", name="dashboard")
      */
-    public function index(): Response
+    public function index(ReclamationRepository $rep , UtilisateursRepository $urp, DemandesRepository $repD)
     {
+
+        //$nbr = $urp->CountClient();
+
+        $demandes=$repD->findAll();
+        $reclamations = $rep->countByType();
+
+        $recType = [];
+        $recCount = [];
+
+        foreach($reclamations as $reclamation){
+        
+        //$recType[] = $reclamation->getType();
+        $recType[] = $reclamation ['type'];
+        $recCount[]= $reclamation ['count'];
+        //$recCount[] = count($recType);
+        }
+        
+
+           
+       
         return $this->render('dashboard/index.html.twig', [
             'controller_name' => 'AdminController',
+            'recType' => json_encode($recType),
+            'recCount' => json_encode($recCount),
+            'demandes' => $demandes,
+
         ]);
     }
     /**
      * @return Reponse
      * @Route("/dashboard/listU", name="userlist")
      */
-    public function afficherUser(UtilisateursRepository $rep){
+    public function afficherUser(UtilisateursRepository $rep, DemandesRepository $repp){
         $users=$rep->findAll();
+        $demandes=$repp->findAll();
         return $this->render('/dashboard/userslist.html.twig', [
             'users' => $users,
+            'demandes' => $demandes,
         ]);
     }
      /**

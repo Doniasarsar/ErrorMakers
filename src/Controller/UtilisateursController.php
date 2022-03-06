@@ -81,6 +81,14 @@ class UtilisateursController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
+            
+            $file = $form->get('Image')->getData();
+            
+            if($file != null){
+            $filename = md5(uniqid()) . '.' . $file->guessExtension();
+            $file->move($this->getParameter('uploads_directory'), $filename);
+            $user->setImage($filename);
+            }
 
         $em=$this->getDoctrine()->getManager();
         $em->flush();
@@ -99,7 +107,7 @@ class UtilisateursController extends AbstractController
      /**
      * @Route("/utilisateurs/compte",name="usercompte")
      */
-    public function Compte(CartService $cartService ){
+    public function Compte(CartService $cartService){
         
         $dataPanier = $cartService->getFullCart();  
         $total = $cartService->getTotal();
@@ -111,6 +119,23 @@ class UtilisateursController extends AbstractController
 
 
      }
+     /**
+      * @Route("/utilisateurs/deleteimg/{id}",name="imgdetele")
+      */
+
+     public function deleteImg($id, UtilisateursRepository $rep){
+         
+         $user=$rep->find($id);
+         $user->setImage(null);
+         $em = $this->getDoctrine()->getManager();
+         $em->flush();
+
+         $this->addFlash('success', 'Image deleted');
+         return $this->redirectToRoute('usercompte');
+
+
+     }
+     
      /**
      * @Route("/utilisateurs/updatepass",name="passupdate")
      */
@@ -169,6 +194,8 @@ class UtilisateursController extends AbstractController
 
      }
     
+
+     
      /**
      * @Route("/login", name="login")
      */

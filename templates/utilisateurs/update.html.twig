@@ -32,8 +32,20 @@
                                 <div class="login-form">
                                     <h4 class="login-title">Update Account</h4>
                                     {{ form_start(userForm,{'attr': {'novalidate': 'novalidate'}} ) }}
-
                                     <div class="row">
+                                        <div class="col-md-8 col-12 mb-10">
+                                        {% if app.user.Image == null %}
+                                        <center><img src="{{asset('uploads/user.png')}}" width="120" height="120"></center>
+                                        {% else %}
+                                        <center><img src="{{asset('uploads/') ~ app.user.Image}}" width="120" height="120">
+                                        <a href="{{path('imgdetele',{'id':app.user.id})}}">Delete photo</a></center>
+                                        {% endif %}
+
+                                            <td>{{ form_label(userForm.Image,"Update photo") }}</td>
+                                            <td>{{ form_widget(userForm.Image,{'attr':{"class":"input-file","id":"file"}}) }}</td>
+                                           
+                                        </div>
+                                      
                                         <div class="col-md-8 col-12 mb-10">
                                            
                                           <td>{{ form_label(userForm.Prenom,"First Name") }}</td>

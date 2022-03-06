@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Produit;
 use App\Services\cart\CartService;
 use App\Repository\ProduitRepository;
+use App\Repository\BoutiqueRepository;
 use App\Repository\EvenementRepository;
 use App\Repository\UtilisateursRepository;
 use Symfony\Component\HttpFoundation\Request;
@@ -19,19 +20,22 @@ class FrontController extends AbstractController
     /**
      * @Route("/home", name="home")
      */
-    public function index(CartService $cartService,ProduitRepository $produitrep): Response
+    public function index(CartService $cartService,ProduitRepository $rep, BoutiqueRepository $repp): Response
     {
         
         $dataPanier = $cartService->getFullCart();  
         $total = $cartService->getTotal();
 
+        $produits=$rep->findAll();
+        $boutiques=$repp->findAll();
        
 
-        $produit=$produitrep->findall(); 
         return $this->render('front/home.html.twig', [
-            'tab' => $produit,
             'elements' => $dataPanier,
-            'total' => $total
+            'total' => $total,
+            'controller_name' => 'FrontController',
+            'tabprod' => $produits,
+            'tabbout' => $boutiques
         ]);
     }
     
@@ -73,6 +77,50 @@ class FrontController extends AbstractController
          ]);
 
     }
+
+     
+     /**
+     * @Route("/details/{id}", name="details")
+     */
+    public function details($id,ProduitRepository $rep, BoutiqueRepository $repp,CartService $cartService)
+    {
+        $dataPanier = $cartService->getFullCart();  
+        $total = $cartService->getTotal();
+
+        $produits=$rep->findByBoutique($id);
+        $boutiques=$repp->find($id);
+        return $this->render('front/details.html.twig', [
+             'prod' => $produits,
+            'bout' => $boutiques,
+            'total' => $total,
+            'elements' => $dataPanier
+           
+        ]);
+    }
+
+
+    
+    /**
+     * @Route("/detail/{id}", name="detail")
+     */
+    public function detail($id,ProduitRepository $rep,BoutiqueRepository $repp,CartService $cartService)
+    {
+        $produits=$rep->find($id);
+        $boutiques=$repp->find($id);
+
+        $dataPanier = $cartService->getFullCart();  
+        $total = $cartService->getTotal();
+
+        return $this->render('front/detail.html.twig', [
+            
+            'prod' => $produits,
+            'bout' => $boutiques,
+            'total' => $total,
+            'elements' => $dataPanier
+
+        ]);
+    }
+
 
  
    

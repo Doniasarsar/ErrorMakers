@@ -45,6 +45,16 @@ class UtilisateursRepository extends ServiceEntityRepository
             ->getSingleResult()
         ;
     }
+/*
+    public function CountClient()
+    {
+        $role = '[ROLE_ADMIN]';
+        $query = $this->getEntityManager()->createQuery("
+           SELECT r.role as role, COUNT(r) as count FROM App\Entity\Utilisateurs r where r.role = "+ $role +"
+       ");
+
+       return $query->getResult();
+    }*/
 
     /*
     public function findOneBySomeField($value): ?Utilisateurs
