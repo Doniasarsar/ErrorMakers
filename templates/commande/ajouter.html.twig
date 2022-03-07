@@ -45,8 +45,8 @@
                             <div class="col-md-12">
                                 <div class="checkout-form-list">
                                     <label>Adress<span class="required">*</span></label>
-                                    {{ form_widget(formA.adresse) }}
-                                    {{ form_errors(formA.adresse) }}
+                                    {{ form_widget(formA.adresse,  {'id': 'adresse'} ) }}
+                                    {{ form_errors(formA.adresse,  {'id': 'adresse'} ) }}
 
                                     
                                 </div>
@@ -91,13 +91,11 @@
                               
                             </div>
                             {{form_widget(formA.etatCommande , {'value':0 ,'type':'hidden'})}}
-                            {{ form_widget(formA.longitude,  {'id': 'coordinates'} ) }}
-                            {{ form_widget(formA.longitude,  {'id': 'latitude'} ) }}
+                            {{ form_widget(formA.longitude,  {'id': 'longitudee','type':'hidden'} ) }}
+                            {{ form_widget(formA.latitude,  {'id': 'latitudee','type':'hidden'} ) }}
                             <body>
                               <div id="map"></div>
-                              <p id="coordinates"></p>
-                              <p id="latitude"></p>
-                              <p id="test"></p>
+                             
                         
                           
                             </body>
@@ -234,8 +232,7 @@ draggable: true
 
 function onDragEnd() {
 const lngLat = marker.getLngLat();
-coordinates.innerHTML = `${lngLat.lng}`;
-latitude.innerHTML = `${lngLat.lat}`;
+
 
 const coords = lngLat.toArray();
 
@@ -252,20 +249,14 @@ arcgisRest
 
     const lngLat = [result.location.x, result.location.y];
 
-    const label = `${result.address.LongLabel}<br>${lngLat[0].toLocaleString()}, ${lngLat[1].toLocaleString()}`;
-    console.log(label);
+    const label = `${result.address.LongLabel}`;
+    const longitudee= `${lngLat[0].toLocaleString()}`;
+    const latitudee= `${lngLat[1].toLocaleString()}`;
 
-    new mapboxgl.Popup().setLngLat(lngLat).setHTML(label).addTo(map);
+    $("#longitudee").val(longitudee)
+    $("#latitudee").val(latitudee)
+    $("#adresse").val(label)
 
-    // const lngLat = [result.location.x, result.location.y];  
-    //  label = `${result.address.LongLabel}<br>${lngLat[0].toLocaleString()}, ${lngLat[1].toLocaleString()}`;
-
-    
-
-    // label = result.address.
-    //           LongLabel;
-    //           console.log(label);
-              test.innerHTML = label ;
   })
    
   .catch((error) => {
