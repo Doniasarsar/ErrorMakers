@@ -20,7 +20,7 @@ return [
         '/admin/logout' => [[['_route' => 'admin_logoutadmin', '_controller' => 'App\\Controller\\AdminController::logout'], null, null, null, false, false, null]],
         '/boutique' => [[['_route' => 'boutique', '_controller' => 'App\\Controller\\BoutiqueController::index'], null, null, null, false, false, null]],
         '/admin/boutique/list' => [[['_route' => 'boutique_list', '_controller' => 'App\\Controller\\BoutiqueController::afficher'], null, null, null, false, false, null]],
-        '/admin/boutique/add' => [[['_route' => 'boutique_add', '_controller' => 'App\\Controller\\BoutiqueController::add'], null, null, null, false, false, null]],
+        '/boutique/add' => [[['_route' => 'boutique_add', '_controller' => 'App\\Controller\\BoutiqueController::add'], null, null, null, false, false, null]],
         '/cart' => [[['_route' => 'cart_index', '_controller' => 'App\\Controller\\CartController::index'], null, null, null, true, false, null]],
         '/cart/deleteall' => [[['_route' => 'cart_deleteall', '_controller' => 'App\\Controller\\CartController::deleteall'], null, null, null, false, false, null]],
         '/commande' => [[['_route' => 'commande', '_controller' => 'App\\Controller\\CommandeController::ajoutercommande'], null, null, null, false, false, null]],
@@ -40,7 +40,7 @@ return [
         '/success' => [[['_route' => 'success', '_controller' => 'App\\Controller\\PaymentController::success'], null, null, null, false, false, null]],
         '/admin/produit' => [[['_route' => 'produit', '_controller' => 'App\\Controller\\ProduitController::index'], null, null, null, false, false, null]],
         '/admin/produit/list' => [[['_route' => 'produit_list', '_controller' => 'App\\Controller\\ProduitController::afficher'], null, null, null, false, false, null]],
-        '/admin/produit/add' => [[['_route' => 'produit_add', '_controller' => 'App\\Controller\\ProduitController::add'], null, null, null, false, false, null]],
+        '/produit/add' => [[['_route' => 'produit_add', '_controller' => 'App\\Controller\\ProduitController::add'], null, null, null, false, false, null]],
         '/reclamation' => [[['_route' => 'reclamation', '_controller' => 'App\\Controller\\ReclamationController::index'], null, null, null, false, false, null]],
         '/reponse' => [[['_route' => 'reponse', '_controller' => 'App\\Controller\\ReponseController::index'], null, null, null, false, false, null]],
         '/admin/reponse/recList' => [[['_route' => 'list_reclamation', '_controller' => 'App\\Controller\\ReponseController::afficher'], null, null, null, false, false, null]],
@@ -90,94 +90,99 @@ return [
                             .'|accept/([^/]++)(*:264)'
                         .')'
                     .')'
-                    .'|boutique/(?'
-                        .'|listProduit/([^/]++)(*:306)'
-                        .'|edit/([^/]++)(*:327)'
-                        .'|delete/([^/]++)(*:350)'
-                    .')'
                     .'|supp(?'
-                        .'|commande/([^/]++)(*:383)'
-                        .'|ligne/([^/]++)(*:405)'
+                        .'|commande/([^/]++)(*:298)'
+                        .'|ligne/([^/]++)(*:320)'
                     .')'
                     .'|mo(?'
-                        .'|difcommande/([^/]++)(*:439)'
+                        .'|difcommande/([^/]++)(*:354)'
                         .'|to/(?'
-                            .'|delete/([^/]++)(*:468)'
-                            .'|update/([^/]++)(*:491)'
+                            .'|delete/([^/]++)(*:383)'
+                            .'|update/([^/]++)(*:406)'
                         .')'
                     .')'
                     .'|evenement/(?'
-                        .'|delete/([^/]++)(*:529)'
-                        .'|update/([^/]++)(*:552)'
+                        .'|delete/([^/]++)(*:444)'
+                        .'|update/([^/]++)(*:467)'
                     .')'
                     .'|livraison/(?'
-                        .'|delete/([^/]++)(*:589)'
-                        .'|add/([^/]++)(*:609)'
-                        .'|update/([^/]++)(*:632)'
-                    .')'
-                    .'|produit/(?'
-                        .'|edit/([^/]++)(*:665)'
-                        .'|delete/([^/]++)(*:688)'
+                        .'|delete/([^/]++)(*:504)'
+                        .'|add/([^/]++)(*:524)'
+                        .'|update/([^/]++)(*:547)'
                     .')'
                     .'|voiture/(?'
-                        .'|delete/([^/]++)(*:723)'
-                        .'|update/([^/]++)(*:746)'
+                        .'|delete/([^/]++)(*:582)'
+                        .'|update/([^/]++)(*:605)'
                     .')'
                     .'|camion/(?'
-                        .'|delete/([^/]++)(*:780)'
-                        .'|update/([^/]++)(*:803)'
+                        .'|delete/([^/]++)(*:639)'
+                        .'|update/([^/]++)(*:662)'
                     .')'
+                .')'
+                .'|/boutique/(?'
+                    .'|list(?'
+                        .'|/([^/]++)(*:701)'
+                        .'|Produit/([^/]++)(*:725)'
+                    .')'
+                    .'|edit/([^/]++)(*:747)'
+                    .'|delete/([^/]++)(*:770)'
                 .')'
                 .'|/c(?'
                     .'|art/(?'
                         .'|add(?'
-                            .'|/([^/]++)(*:840)'
-                            .'|1/([^/]++)(*:858)'
+                            .'|/([^/]++)(*:806)'
+                            .'|1/([^/]++)(*:824)'
                         .')'
-                        .'|remove/([^/]++)(*:882)'
+                        .'|remove/([^/]++)(*:848)'
                         .'|delete(?'
-                            .'|/([^/]++)(*:908)'
-                            .'|1/([^/]++)(*:926)'
+                            .'|/([^/]++)(*:874)'
+                            .'|1/([^/]++)(*:892)'
                         .')'
                     .')'
                     .'|omm(?'
-                        .'|ande/list/([^/]++)(*:960)'
+                        .'|ande/list/([^/]++)(*:926)'
                         .'|entaires/(?'
-                            .'|([^/]++)(*:988)'
-                            .'|delete/([^/]++)(*:1011)'
+                            .'|([^/]++)(*:954)'
+                            .'|delete/([^/]++)(*:977)'
                         .')'
                     .')'
                 .')'
-                .'|/evenement/detail/([^/]++)(*:1049)'
+                .'|/evenement/detail/([^/]++)(*:1014)'
                 .'|/de(?'
-                    .'|lete1/([^/]++)(*:1078)'
+                    .'|lete1/([^/]++)(*:1043)'
                     .'|tail(?'
-                        .'|s/([^/]++)(*:1104)'
-                        .'|/([^/]++)(*:1122)'
+                        .'|s/([^/]++)(*:1069)'
+                        .'|/([^/]++)(*:1087)'
                     .')'
                 .')'
-                .'|/pdf/([^/]++)(*:1146)'
+                .'|/p(?'
+                    .'|df/([^/]++)(*:1114)'
+                    .'|roduit/(?'
+                        .'|edit/([^/]++)(*:1146)'
+                        .'|delete/([^/]++)(*:1170)'
+                    .')'
+                .')'
                 .'|/re(?'
                     .'|clamation/(?'
-                        .'|add/([^/]++)/([^/]++)(*:1195)'
-                        .'|list/([^/]++)(*:1217)'
-                        .'|etat/([^/]++)(*:1239)'
+                        .'|add/([^/]++)/([^/]++)(*:1221)'
+                        .'|list/([^/]++)(*:1243)'
+                        .'|etat/([^/]++)(*:1265)'
                     .')'
                     .'|s(?'
                         .'|ponse/delete(?'
-                            .'|Rec/([^/]++)(*:1280)'
-                            .'|/([^/]++)(*:1298)'
+                            .'|Rec/([^/]++)(*:1306)'
+                            .'|/([^/]++)(*:1324)'
                         .')'
-                        .'|et\\-password/reset(?:/([^/]++))?(*:1340)'
+                        .'|et\\-password/reset(?:/([^/]++))?(*:1366)'
                     .')'
                     .'|ponse/(?'
-                        .'|add/([^/]++)(*:1371)'
-                        .'|update/([^/]++)(*:1395)'
+                        .'|add/([^/]++)(*:1397)'
+                        .'|update/([^/]++)(*:1421)'
                     .')'
                 .')'
                 .'|/utilisateurs/(?'
-                    .'|update/([^/]++)(*:1438)'
-                    .'|deleteimg/([^/]++)(*:1465)'
+                    .'|update/([^/]++)(*:1464)'
+                    .'|deleteimg/([^/]++)(*:1491)'
                 .')'
             .')/?$}sD',
     ],
@@ -192,48 +197,49 @@ return [
         213 => [[['_route' => 'admin_userdelete', '_controller' => 'App\\Controller\\AdminController::DeleteUser'], ['id'], null, null, false, true, null]],
         241 => [[['_route' => 'admin_demdelete', '_controller' => 'App\\Controller\\AdminController::DeleteDem'], ['id'], null, null, false, true, null]],
         264 => [[['_route' => 'admin_demaccept', '_controller' => 'App\\Controller\\AdminController::AcceptDem'], ['id'], null, null, false, true, null]],
-        306 => [[['_route' => 'boutique_listProduit', '_controller' => 'App\\Controller\\BoutiqueController::afficherProduit'], ['val'], null, null, false, true, null]],
-        327 => [[['_route' => 'update_boutique', '_controller' => 'App\\Controller\\BoutiqueController::update'], ['id'], null, null, false, true, null]],
-        350 => [[['_route' => 'boutique_delete', '_controller' => 'App\\Controller\\BoutiqueController::Supprimer'], ['id'], null, null, false, true, null]],
-        383 => [[['_route' => 'adminsupp', '_controller' => 'App\\Controller\\CommandeController::supprimercommande'], ['id'], null, null, false, true, null]],
-        405 => [[['_route' => 'adminlignesupp', '_controller' => 'App\\Controller\\LigneCommandeController::supprimercommande'], ['id'], null, null, false, true, null]],
-        439 => [[['_route' => 'adminmodif', '_controller' => 'App\\Controller\\CommandeController::modifiercommande'], ['id'], null, null, false, true, null]],
-        468 => [[['_route' => 'mot_delete', '_controller' => 'App\\Controller\\VehiculeController::SupprimerMoto'], ['id'], null, null, false, true, null]],
-        491 => [[['_route' => 'mot_update', '_controller' => 'App\\Controller\\VehiculeController::UpdateMoto'], ['id'], null, null, false, true, null]],
-        529 => [[['_route' => 'ev_delete', '_controller' => 'App\\Controller\\EvenementController::Supprimer'], ['id'], null, null, false, true, null]],
-        552 => [[['_route' => 'ev_update', '_controller' => 'App\\Controller\\EvenementController::Update'], ['id'], null, null, false, true, null]],
-        589 => [[['_route' => 'livraison_delete', '_controller' => 'App\\Controller\\LivraisonControlleur::Supprimer'], ['id'], null, null, false, true, null]],
-        609 => [[['_route' => 'liv_add', '_controller' => 'App\\Controller\\LivraisonControlleur::Add'], ['id'], null, null, false, true, null]],
-        632 => [[['_route' => 'livraison_update', '_controller' => 'App\\Controller\\LivraisonControlleur::Update'], ['id'], null, null, false, true, null]],
-        665 => [[['_route' => 'update_produit', '_controller' => 'App\\Controller\\ProduitController::update'], ['id'], null, null, false, true, null]],
-        688 => [[['_route' => 'produit_delete', '_controller' => 'App\\Controller\\ProduitController::Supprimer'], ['id'], null, null, false, true, null]],
-        723 => [[['_route' => 'voi_delete', '_controller' => 'App\\Controller\\VehiculeController::SupprimerVoiture'], ['id'], null, null, false, true, null]],
-        746 => [[['_route' => 'voi_update', '_controller' => 'App\\Controller\\VehiculeController::Update'], ['id'], null, null, false, true, null]],
-        780 => [[['_route' => 'cam_delete', '_controller' => 'App\\Controller\\VehiculeController::SupprimerCamion'], ['id'], null, null, false, true, null]],
-        803 => [[['_route' => 'cam_update', '_controller' => 'App\\Controller\\VehiculeController::UpdateCamion'], ['id'], null, null, false, true, null]],
-        840 => [[['_route' => 'cart_add', '_controller' => 'App\\Controller\\CartController::add'], ['id'], null, null, false, true, null]],
-        858 => [[['_route' => 'cart_add1', '_controller' => 'App\\Controller\\CartController::add1'], ['id'], null, null, false, true, null]],
-        882 => [[['_route' => 'cart_remove', '_controller' => 'App\\Controller\\CartController::remove'], ['id'], null, null, false, true, null]],
-        908 => [[['_route' => 'cart_delete', '_controller' => 'App\\Controller\\CartController::delete'], ['id'], null, null, false, true, null]],
-        926 => [[['_route' => 'cart_delete1', '_controller' => 'App\\Controller\\CartController::delete1'], ['id'], null, null, false, true, null]],
-        960 => [[['_route' => 'listmescommande', '_controller' => 'App\\Controller\\CommandeController::affichermescommandes'], ['value'], null, null, false, true, null]],
-        988 => [[['_route' => 'commentaires', '_controller' => 'App\\Controller\\CommentairesController::index'], ['id'], null, null, false, true, null]],
-        1011 => [[['_route' => 'com_delete', '_controller' => 'App\\Controller\\CommentairesController::Supprimer'], ['id'], null, null, false, true, null]],
-        1049 => [[['_route' => 'ev_front_detail', '_controller' => 'App\\Controller\\EvenementController::detail'], ['id'], null, null, false, true, null]],
-        1078 => [[['_route' => 'delete1', '_controller' => 'App\\Controller\\FrontController::delete1'], ['id'], null, null, false, true, null]],
-        1104 => [[['_route' => 'details', '_controller' => 'App\\Controller\\FrontController::details'], ['id'], null, null, false, true, null]],
-        1122 => [[['_route' => 'detail', '_controller' => 'App\\Controller\\FrontController::detail'], ['id'], null, null, false, true, null]],
-        1146 => [[['_route' => 'pdf', '_controller' => 'App\\Controller\\PdfController::index'], ['id'], null, null, false, true, null]],
-        1195 => [[['_route' => 'r_add', '_controller' => 'App\\Controller\\ReclamationController::add'], ['id', 'cmd'], null, null, false, true, null]],
-        1217 => [[['_route' => 'r_list', '_controller' => 'App\\Controller\\ReclamationController::afficher'], ['value'], null, null, false, true, null]],
-        1239 => [[['_route' => 'etat_rec', '_controller' => 'App\\Controller\\ReclamationController::afficheReponse'], ['id'], null, null, false, true, null]],
-        1280 => [[['_route' => 'reclam_delete', '_controller' => 'App\\Controller\\ReponseController::Delete_reclamation'], ['id'], null, null, false, true, null]],
-        1298 => [[['_route' => 'response_delete', '_controller' => 'App\\Controller\\ReponseController::Delete_reponse'], ['id'], null, null, false, true, null]],
-        1340 => [[['_route' => 'app_reset_password', 'token' => null, '_controller' => 'App\\Controller\\ResetPasswordController::reset'], ['token'], null, null, false, true, null]],
-        1371 => [[['_route' => 'rep_add', '_controller' => 'App\\Controller\\ReponseController::addResponse'], ['id'], null, null, false, true, null]],
-        1395 => [[['_route' => 'reponse_update', '_controller' => 'App\\Controller\\ReponseController::update_reponse'], ['id'], null, null, false, true, null]],
-        1438 => [[['_route' => 'userupdate', '_controller' => 'App\\Controller\\UtilisateursController::Update'], ['id'], null, null, false, true, null]],
-        1465 => [
+        298 => [[['_route' => 'adminsupp', '_controller' => 'App\\Controller\\CommandeController::supprimercommande'], ['id'], null, null, false, true, null]],
+        320 => [[['_route' => 'adminlignesupp', '_controller' => 'App\\Controller\\LigneCommandeController::supprimercommande'], ['id'], null, null, false, true, null]],
+        354 => [[['_route' => 'adminmodif', '_controller' => 'App\\Controller\\CommandeController::modifiercommande'], ['id'], null, null, false, true, null]],
+        383 => [[['_route' => 'mot_delete', '_controller' => 'App\\Controller\\VehiculeController::SupprimerMoto'], ['id'], null, null, false, true, null]],
+        406 => [[['_route' => 'mot_update', '_controller' => 'App\\Controller\\VehiculeController::UpdateMoto'], ['id'], null, null, false, true, null]],
+        444 => [[['_route' => 'ev_delete', '_controller' => 'App\\Controller\\EvenementController::Supprimer'], ['id'], null, null, false, true, null]],
+        467 => [[['_route' => 'ev_update', '_controller' => 'App\\Controller\\EvenementController::Update'], ['id'], null, null, false, true, null]],
+        504 => [[['_route' => 'livraison_delete', '_controller' => 'App\\Controller\\LivraisonControlleur::Supprimer'], ['id'], null, null, false, true, null]],
+        524 => [[['_route' => 'liv_add', '_controller' => 'App\\Controller\\LivraisonControlleur::Add'], ['id'], null, null, false, true, null]],
+        547 => [[['_route' => 'livraison_update', '_controller' => 'App\\Controller\\LivraisonControlleur::Update'], ['id'], null, null, false, true, null]],
+        582 => [[['_route' => 'voi_delete', '_controller' => 'App\\Controller\\VehiculeController::SupprimerVoiture'], ['id'], null, null, false, true, null]],
+        605 => [[['_route' => 'voi_update', '_controller' => 'App\\Controller\\VehiculeController::Update'], ['id'], null, null, false, true, null]],
+        639 => [[['_route' => 'cam_delete', '_controller' => 'App\\Controller\\VehiculeController::SupprimerCamion'], ['id'], null, null, false, true, null]],
+        662 => [[['_route' => 'cam_update', '_controller' => 'App\\Controller\\VehiculeController::UpdateCamion'], ['id'], null, null, false, true, null]],
+        701 => [[['_route' => 'ma_boutique', '_controller' => 'App\\Controller\\BoutiqueController::maBoutique'], ['id'], null, null, false, true, null]],
+        725 => [[['_route' => 'boutique_listProduit', '_controller' => 'App\\Controller\\BoutiqueController::afficherProduit'], ['val'], null, null, false, true, null]],
+        747 => [[['_route' => 'update_boutique', '_controller' => 'App\\Controller\\BoutiqueController::update'], ['id'], null, null, false, true, null]],
+        770 => [[['_route' => 'boutique_delete', '_controller' => 'App\\Controller\\BoutiqueController::Supprimer'], ['id'], null, null, false, true, null]],
+        806 => [[['_route' => 'cart_add', '_controller' => 'App\\Controller\\CartController::add'], ['id'], null, null, false, true, null]],
+        824 => [[['_route' => 'cart_add1', '_controller' => 'App\\Controller\\CartController::add1'], ['id'], null, null, false, true, null]],
+        848 => [[['_route' => 'cart_remove', '_controller' => 'App\\Controller\\CartController::remove'], ['id'], null, null, false, true, null]],
+        874 => [[['_route' => 'cart_delete', '_controller' => 'App\\Controller\\CartController::delete'], ['id'], null, null, false, true, null]],
+        892 => [[['_route' => 'cart_delete1', '_controller' => 'App\\Controller\\CartController::delete1'], ['id'], null, null, false, true, null]],
+        926 => [[['_route' => 'listmescommande', '_controller' => 'App\\Controller\\CommandeController::affichermescommandes'], ['value'], null, null, false, true, null]],
+        954 => [[['_route' => 'commentaires', '_controller' => 'App\\Controller\\CommentairesController::index'], ['id'], null, null, false, true, null]],
+        977 => [[['_route' => 'com_delete', '_controller' => 'App\\Controller\\CommentairesController::Supprimer'], ['id'], null, null, false, true, null]],
+        1014 => [[['_route' => 'ev_front_detail', '_controller' => 'App\\Controller\\EvenementController::detail'], ['id'], null, null, false, true, null]],
+        1043 => [[['_route' => 'delete1', '_controller' => 'App\\Controller\\FrontController::delete1'], ['id'], null, null, false, true, null]],
+        1069 => [[['_route' => 'details', '_controller' => 'App\\Controller\\FrontController::details'], ['id'], null, null, false, true, null]],
+        1087 => [[['_route' => 'detail', '_controller' => 'App\\Controller\\FrontController::detail'], ['id'], null, null, false, true, null]],
+        1114 => [[['_route' => 'pdf', '_controller' => 'App\\Controller\\PdfController::index'], ['id'], null, null, false, true, null]],
+        1146 => [[['_route' => 'update_produit', '_controller' => 'App\\Controller\\ProduitController::update'], ['id'], null, null, false, true, null]],
+        1170 => [[['_route' => 'produit_delete', '_controller' => 'App\\Controller\\ProduitController::Supprimer'], ['id'], null, null, false, true, null]],
+        1221 => [[['_route' => 'r_add', '_controller' => 'App\\Controller\\ReclamationController::add'], ['id', 'cmd'], null, null, false, true, null]],
+        1243 => [[['_route' => 'r_list', '_controller' => 'App\\Controller\\ReclamationController::afficher'], ['value'], null, null, false, true, null]],
+        1265 => [[['_route' => 'etat_rec', '_controller' => 'App\\Controller\\ReclamationController::afficheReponse'], ['id'], null, null, false, true, null]],
+        1306 => [[['_route' => 'reclam_delete', '_controller' => 'App\\Controller\\ReponseController::Delete_reclamation'], ['id'], null, null, false, true, null]],
+        1324 => [[['_route' => 'response_delete', '_controller' => 'App\\Controller\\ReponseController::Delete_reponse'], ['id'], null, null, false, true, null]],
+        1366 => [[['_route' => 'app_reset_password', 'token' => null, '_controller' => 'App\\Controller\\ResetPasswordController::reset'], ['token'], null, null, false, true, null]],
+        1397 => [[['_route' => 'rep_add', '_controller' => 'App\\Controller\\ReponseController::addResponse'], ['id'], null, null, false, true, null]],
+        1421 => [[['_route' => 'reponse_update', '_controller' => 'App\\Controller\\ReponseController::update_reponse'], ['id'], null, null, false, true, null]],
+        1464 => [[['_route' => 'userupdate', '_controller' => 'App\\Controller\\UtilisateursController::Update'], ['id'], null, null, false, true, null]],
+        1491 => [
             [['_route' => 'imgdetele', '_controller' => 'App\\Controller\\UtilisateursController::deleteImg'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
