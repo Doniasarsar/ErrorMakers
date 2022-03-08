@@ -27,6 +27,7 @@
             <th>Produit</th>
             {#<th>CreatedAt</th>#}
             <th>Reclamation Status</th>
+            <th>Check Response</th>
         </tr>
         {% for r in tab %}
             <tr>
@@ -45,10 +46,16 @@
                {% if r.reponse != null %}
                 <td><a href="{{path('etat_rec', {id:r.reponse.id})}}"
                         onclick="return confirm('Do You want to see The Response to Your reclamation?')">{{ r.etat }}</a></td>
+                {% set var = "http://127.0.0.1:8000/reclamation/etat/" ~ r.reponse.id  %}
+
+                <td><img src="{{ qr_code_url(var)}}" style="width: 150px; height: 150px"/></td>
+
                 {% else %}
                 {#<td>{{ r.createdAt|date('Y-m-d H:i:s') }}</td> #}
                 <td><a href="#">{{ r.etat }}</a></td>
+                 <td><img src="{{ qr_code_url("http://127.0.0.1:8000/reclamation/error")}}" style="width: 150px; height: 150px"/></td>
 
+                
                 {% endif %} 
             </tr>
         {% endfor %}

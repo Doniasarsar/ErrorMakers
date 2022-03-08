@@ -10,7 +10,11 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).''.\DIRECTORY_SEPARATOR.'vendor/autoload.php';
+<<<<<<< HEAD
 (require __DIR__.'/srcApp_KernelDevDebugContainer.php')->set(\ContainerFDy0mAk\srcApp_KernelDevDebugContainer::class, null);
+=======
+require __DIR__.'/ContainerZ4WG1gL/srcApp_KernelDevDebugContainer.php';
+>>>>>>> 68d3fb70388084164d3c014cc7a418da74ffa615
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -27,6 +31,7 @@ $classes[] = 'Twig\Extra\TwigExtraBundle\TwigExtraBundle';
 $classes[] = 'Symfony\Bundle\WebServerBundle\WebServerBundle';
 $classes[] = 'SymfonyCasts\Bundle\ResetPassword\SymfonyCastsResetPasswordBundle';
 $classes[] = 'Knp\Bundle\PaginatorBundle\KnpPaginatorBundle';
+$classes[] = 'Endroid\QrCodeBundle\EndroidQrCodeBundle';
 $classes[] = 'Symfony\Component\HttpClient\TraceableHttpClient';
 $classes[] = 'Symfony\Contracts\HttpClient\HttpClientInterface';
 $classes[] = 'Symfony\Component\HttpClient\HttpClient';
@@ -95,6 +100,14 @@ $classes[] = 'Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Dbal\ManagerRegistryAwareConnectionProvider';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Registry';
 $classes[] = 'Doctrine\DBAL\Tools\Console\Command\RunSqlCommand';
+$classes[] = 'Endroid\QrCodeBundle\Controller\GenerateController';
+$classes[] = 'Endroid\QrCodeBundle\Twig\QrCodeRuntime';
+$classes[] = 'Endroid\QrCode\Builder\BuilderRegistry';
+$classes[] = 'Endroid\QrCode\Builder\Builder';
+$classes[] = 'Endroid\QrCode\Encoding\Encoding';
+$classes[] = 'Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevelLow';
+$classes[] = 'Endroid\QrCode\RoundBlockSizeMode\RoundBlockSizeModeMargin';
+$classes[] = 'Endroid\QrCode\Writer\PngWriter';
 $classes[] = 'SymfonyCasts\Bundle\ResetPassword\Command\ResetPasswordRemoveExpiredCommand';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\Controller\RedirectController';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\Controller\TemplateController';
@@ -175,6 +188,7 @@ $classes[] = 'Symfony\Component\HttpKernel\EventListener\DumpListener';
 $classes[] = 'Symfony\Component\VarDumper\Dumper\ContextualizedDumper';
 $classes[] = 'Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider';
 $classes[] = 'Symfony\Component\HttpKernel\Debug\FileLinkFormatter';
+$classes[] = 'string';
 $classes[] = 'Symfony\Bridge\Monolog\Processor\DebugProcessor';
 $classes[] = 'Symfony\Component\Security\Core\Authorization\TraceableAccessDecisionManager';
 $classes[] = 'Symfony\Component\Security\Core\Authorization\AccessDecisionManager';
@@ -216,7 +230,6 @@ $classes[] = 'Doctrine\Migrations\Configuration\Configuration';
 $classes[] = 'Doctrine\Migrations\Metadata\Storage\TableMetadataStorageConfiguration';
 $classes[] = 'Doctrine\Migrations\Configuration\EntityManager\ManagerRegistryEntityManager';
 $classes[] = 'Doctrine\ORM\Mapping\Driver\AnnotationDriver';
-$classes[] = 'Doctrine\ORM\Proxy\Autoloader';
 $classes[] = 'Doctrine\ORM\EntityManager';
 $classes[] = 'Doctrine\ORM\Configuration';
 $classes[] = 'Doctrine\Common\Cache\CacheProvider';
@@ -253,6 +266,7 @@ $classes[] = 'Doctrine\Migrations\Tools\Console\Command\ListCommand';
 $classes[] = 'Symfony\Component\HttpKernel\Controller\ErrorController';
 $classes[] = 'Symfony\Component\ErrorHandler\ErrorRenderer\SerializerErrorRenderer';
 $classes[] = 'Symfony\Bridge\Twig\ErrorRenderer\TwigErrorRenderer';
+$classes[] = 'bool';
 $classes[] = 'Symfony\Component\ErrorHandler\ErrorRenderer\HtmlErrorRenderer';
 $classes[] = 'Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher';
 $classes[] = 'Symfony\Component\EventDispatcher\EventDispatcher';
@@ -526,6 +540,7 @@ $classes[] = 'Symfony\Component\VarDumper\Dumper\HtmlDumper';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Twig\DoctrineExtension';
 $classes[] = 'Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension';
 $classes[] = 'Knp\Bundle\PaginatorBundle\Helper\Processor';
+$classes[] = 'Endroid\QrCodeBundle\Twig\QrCodeExtension';
 $classes[] = 'Symfony\Bridge\Twig\AppVariable';
 $classes[] = 'Twig\RuntimeLoader\ContainerRuntimeLoader';
 $classes[] = 'Twig\Extra\TwigExtraBundle\MissingExtensionSuggestor';
@@ -577,4 +592,4 @@ $classes[] = 'Symfony\Bundle\WebServerBundle\Command\ServerStartCommand';
 $classes[] = 'Symfony\Bundle\WebServerBundle\Command\ServerStatusCommand';
 $classes[] = 'Symfony\Bundle\WebServerBundle\Command\ServerStopCommand';
 
-$preloaded = Preloader::preload($classes);
+Preloader::preload($classes);

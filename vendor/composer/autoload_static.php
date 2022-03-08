@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit08af09498a212aa26a79c6269c79791b
+class ComposerStaticInit016524f8dfaf9f4b79e10b55d1d7faf3
 {
     public static $files = array (
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
@@ -15,12 +15,20 @@ class ComposerStaticInit08af09498a212aa26a79c6269c79791b
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         '92c8763cd6170fce6fcfe7e26b4e8c10' => __DIR__ . '/..' . '/symfony/phpunit-bridge/bootstrap.php',
+<<<<<<< HEAD
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
+=======
+        '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
+        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
+        'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
+>>>>>>> 68d3fb70388084164d3c014cc7a418da74ffa615
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '6a47392539ca2329373e0d33e1dba053' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/bootstrap.php',
         'c2aad8997a98dfc4771bdbffea3d62b7' => __DIR__ . '/..' . '/laminas/laminas-code/polyfill/ReflectionEnumPolyfill.php',
@@ -53,7 +61,6 @@ class ComposerStaticInit08af09498a212aa26a79c6269c79791b
             'Symfony\\Polyfill\\Intl\\Normalizer\\' => 33,
             'Symfony\\Polyfill\\Intl\\Idn\\' => 26,
             'Symfony\\Polyfill\\Intl\\Icu\\' => 26,
-            'Symfony\\Polyfill\\Intl\\Grapheme\\' => 31,
             'Symfony\\Flex\\' => 13,
             'Symfony\\Contracts\\Translation\\' => 30,
             'Symfony\\Contracts\\Service\\' => 26,
@@ -66,7 +73,6 @@ class ComposerStaticInit08af09498a212aa26a79c6269c79791b
             'Symfony\\Component\\VarDumper\\' => 28,
             'Symfony\\Component\\Validator\\' => 28,
             'Symfony\\Component\\Translation\\' => 30,
-            'Symfony\\Component\\String\\' => 25,
             'Symfony\\Component\\Stopwatch\\' => 28,
             'Symfony\\Component\\Serializer\\' => 29,
             'Symfony\\Component\\Security\\Http\\' => 32,
@@ -118,6 +124,7 @@ class ComposerStaticInit08af09498a212aa26a79c6269c79791b
             'SymfonyCasts\\Bundle\\ResetPassword\\' => 34,
             'Svg\\' => 4,
             'Stripe\\' => 7,
+            'Snipe\\BanBuilder\\' => 17,
             'Sensio\\Bundle\\FrameworkExtraBundle\\' => 35,
             'Sabberworm\\CSS\\' => 15,
         ),
@@ -159,6 +166,9 @@ class ComposerStaticInit08af09498a212aa26a79c6269c79791b
         ),
         'E' => 
         array (
+            'Endroid\\QrCode\\' => 15,
+            'Endroid\\QrCodeBundle\\' => 21,
+            'Endroid\\Installer\\' => 18,
             'Egulias\\EmailValidator\\' => 23,
         ),
         'D' => 
@@ -180,6 +190,11 @@ class ComposerStaticInit08af09498a212aa26a79c6269c79791b
             'Doctrine\\Bundle\\MigrationsBundle\\' => 33,
             'Doctrine\\Bundle\\DoctrineBundle\\' => 31,
             'DeepCopy\\' => 9,
+            'DASPRiD\\Enum\\' => 13,
+        ),
+        'B' => 
+        array (
+            'BaconQrCode\\' => 12,
         ),
         'A' => 
         array (
@@ -239,10 +254,6 @@ class ComposerStaticInit08af09498a212aa26a79c6269c79791b
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-intl-icu',
         ),
-        'Symfony\\Polyfill\\Intl\\Grapheme\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme',
-        ),
         'Symfony\\Flex\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/flex/src',
@@ -290,10 +301,6 @@ class ComposerStaticInit08af09498a212aa26a79c6269c79791b
         'Symfony\\Component\\Translation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/translation',
-        ),
-        'Symfony\\Component\\String\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/string',
         ),
         'Symfony\\Component\\Stopwatch\\' => 
         array (
@@ -499,6 +506,10 @@ class ComposerStaticInit08af09498a212aa26a79c6269c79791b
         array (
             0 => __DIR__ . '/..' . '/stripe/stripe-php/lib',
         ),
+        'Snipe\\BanBuilder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/snipe/banbuilder/src',
+        ),
         'Sensio\\Bundle\\FrameworkExtraBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/sensio/framework-extra-bundle/src',
@@ -580,6 +591,18 @@ class ComposerStaticInit08af09498a212aa26a79c6269c79791b
         array (
             0 => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib',
         ),
+        'Endroid\\QrCode\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/endroid/qr-code/src',
+        ),
+        'Endroid\\QrCodeBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/endroid/qr-code-bundle/src',
+        ),
+        'Endroid\\Installer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/endroid/installer/src',
+        ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/src',
@@ -653,6 +676,14 @@ class ComposerStaticInit08af09498a212aa26a79c6269c79791b
         'DeepCopy\\' => 
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
+        ),
+        'DASPRiD\\Enum\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dasprid/enum/src',
+        ),
+        'BaconQrCode\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/bacon/bacon-qr-code/src',
         ),
         'App\\Tests\\' => 
         array (
@@ -1312,9 +1343,9 @@ class ComposerStaticInit08af09498a212aa26a79c6269c79791b
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit08af09498a212aa26a79c6269c79791b::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit08af09498a212aa26a79c6269c79791b::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit08af09498a212aa26a79c6269c79791b::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit016524f8dfaf9f4b79e10b55d1d7faf3::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit016524f8dfaf9f4b79e10b55d1d7faf3::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit016524f8dfaf9f4b79e10b55d1d7faf3::$classMap;
 
         }, null, ClassLoader::class);
     }
