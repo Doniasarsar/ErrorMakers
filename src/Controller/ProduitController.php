@@ -3,6 +3,7 @@
 namespace App\Controller;
 use App\Entity\Produit;
 use App\Form\ProduitType;
+use App\Repository\BoutiqueRepository;
 use App\Repository\ProduitRepository;
 use App\Repository\DemandesRepository;
 use Symfony\Component\HttpFoundation\Request;
@@ -41,10 +42,10 @@ class ProduitController extends AbstractController
        
     
      /**
-     * @Route("admin/produit/add",name="produit_add")
+     * @Route("/produit/add",name="produit_add")
      */
 
-    public function add(Request $request,DemandesRepository $repp): Response
+    public function add(Request $request,DemandesRepository $repp, BoutiqueRepository $repo): Response
     {
         $demandes=$repp->findAll();
         $produit = new Produit();
@@ -54,6 +55,10 @@ class ProduitController extends AbstractController
  
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+            //on attribue la boutique 
+            $boutique=$this->getUser()->getBoutique();
+            $produit->setBoutique($boutique);
+
             $file = $form->get('image')->getData();
             $filename = md5(uniqid()).'.'.$file->guessExtension();
             $file->move($this->getParameter('uploads_directory'),$filename);
@@ -72,7 +77,7 @@ class ProduitController extends AbstractController
     }
 
     /**
-     * @Route("admin/produit/edit/{id}",name="update_produit")
+     * @Route("/produit/edit/{id}",name="update_produit")
      * Method({"GET", "POST"})
      */
     public function update($id, Request $request,DemandesRepository $repp)
@@ -119,7 +124,7 @@ class ProduitController extends AbstractController
     }
 
      /**
-     *@Route("admin/produit/delete/{id}", name="produit_delete")
+     *@Route("/produit/delete/{id}", name="produit_delete")
      */
 
     public function Supprimer($id,ProduitRepository $rep){

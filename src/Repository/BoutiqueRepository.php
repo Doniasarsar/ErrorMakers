@@ -28,12 +28,22 @@ class BoutiqueRepository extends ServiceEntityRepository
         return $this->createQueryBuilder('b')
             ->andWhere('b.Commercant = :val')
             ->setParameter('val', $value)
-            ->orderBy('b.id', 'ASC')
-        
+            ->orderBy('b.id', 'ASC') 
             ->getQuery()
             ->getResult()
         ;
     }
+    public function findByCOM($value)
+    {
+        return $this->createQueryBuilder('b')
+            ->andWhere('b.Commercant = :val')
+            ->setParameter('val', $value)
+            ->orderBy('b.id', 'ASC')
+            ->setMaxResults(1)
+            ->getQuery()
+            ->getResult();
+    }
+   
     
 
     /*

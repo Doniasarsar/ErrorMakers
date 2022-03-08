@@ -10,7 +10,19 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).''.\DIRECTORY_SEPARATOR.'vendor/autoload.php';
-require __DIR__.'/ContainerLgDMtZv/srcApp_KernelDevDebugContainer.php';
+<<<<<<< HEAD
+require __DIR__.'/ContainerWFbOqtx/srcApp_KernelDevDebugContainer.php';
+=======
+<<<<<<< HEAD
+require __DIR__.'/ContainerM9UAvDo/srcApp_KernelDevDebugContainer.php';
+=======
+<<<<<<< HEAD
+(require __DIR__.'/srcApp_KernelDevDebugContainer.php')->set(\ContainerFDy0mAk\srcApp_KernelDevDebugContainer::class, null);
+=======
+require __DIR__.'/ContainerZ4WG1gL/srcApp_KernelDevDebugContainer.php';
+>>>>>>> 68d3fb70388084164d3c014cc7a418da74ffa615
+>>>>>>> af06d54c74c16eab49fe8c59fdb65f2e82d7985a
+>>>>>>> c212b60f3757842f186186b13eeed8fa78347b68
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -27,6 +39,7 @@ $classes[] = 'Twig\Extra\TwigExtraBundle\TwigExtraBundle';
 $classes[] = 'Symfony\Bundle\WebServerBundle\WebServerBundle';
 $classes[] = 'SymfonyCasts\Bundle\ResetPassword\SymfonyCastsResetPasswordBundle';
 $classes[] = 'Knp\Bundle\PaginatorBundle\KnpPaginatorBundle';
+$classes[] = 'Endroid\QrCodeBundle\EndroidQrCodeBundle';
 $classes[] = 'Symfony\Component\HttpClient\TraceableHttpClient';
 $classes[] = 'Symfony\Contracts\HttpClient\HttpClientInterface';
 $classes[] = 'Symfony\Component\HttpClient\HttpClient';
@@ -75,7 +88,6 @@ $classes[] = 'App\Form\ResetPasswordRequestFormType';
 $classes[] = 'App\Form\UtilisateursType';
 $classes[] = 'App\Form\VoitureType';
 $classes[] = 'App\Repository\BoutiqueRepository';
-$classes[] = 'App\Repository\BoutiquesRepository';
 $classes[] = 'App\Repository\CommandeRepository';
 $classes[] = 'App\Repository\CommentairesRepository';
 $classes[] = 'App\Repository\DemandesRepository';
@@ -96,6 +108,14 @@ $classes[] = 'Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Dbal\ManagerRegistryAwareConnectionProvider';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Registry';
 $classes[] = 'Doctrine\DBAL\Tools\Console\Command\RunSqlCommand';
+$classes[] = 'Endroid\QrCodeBundle\Controller\GenerateController';
+$classes[] = 'Endroid\QrCodeBundle\Twig\QrCodeRuntime';
+$classes[] = 'Endroid\QrCode\Builder\BuilderRegistry';
+$classes[] = 'Endroid\QrCode\Builder\Builder';
+$classes[] = 'Endroid\QrCode\Encoding\Encoding';
+$classes[] = 'Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevelLow';
+$classes[] = 'Endroid\QrCode\RoundBlockSizeMode\RoundBlockSizeModeMargin';
+$classes[] = 'Endroid\QrCode\Writer\PngWriter';
 $classes[] = 'SymfonyCasts\Bundle\ResetPassword\Command\ResetPasswordRemoveExpiredCommand';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\Controller\RedirectController';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\Controller\TemplateController';
@@ -528,6 +548,7 @@ $classes[] = 'Symfony\Component\VarDumper\Dumper\HtmlDumper';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Twig\DoctrineExtension';
 $classes[] = 'Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension';
 $classes[] = 'Knp\Bundle\PaginatorBundle\Helper\Processor';
+$classes[] = 'Endroid\QrCodeBundle\Twig\QrCodeExtension';
 $classes[] = 'Symfony\Bridge\Twig\AppVariable';
 $classes[] = 'Twig\RuntimeLoader\ContainerRuntimeLoader';
 $classes[] = 'Twig\Extra\TwigExtraBundle\MissingExtensionSuggestor';

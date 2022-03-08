@@ -20,19 +20,7 @@ class BoutiqueType extends AbstractType
             ->add('nomBoutique')
             ->add('descBoutique')
             ->add('adresseBoutique')
-            ->add('Commercant', EntityType::class, [
            
-                'class' => Utilisateurs::class,
-        
-                'choice_label' => function ($Utilisateurs) {
-                    if($Utilisateurs->getBoutique() == NULL){return $Utilisateurs->getEmail();}
-                    
-               
-                }
-                // used to render a select box, check boxes or radios
-                // 'multiple' => true,
-                // 'expanded' => true,
-            ])
             ->add('images', FileType::class,[
                 'label' => false,
                 'multiple' => true,

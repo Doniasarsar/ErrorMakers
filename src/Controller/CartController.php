@@ -58,8 +58,10 @@ class CartController extends AbstractController
     public function add1($id,CartService $cartService)
     {
 
-     $cartService->add($id);
-    return $this->redirecttoRoute("home");
+     $panier = $cartService->add($id);
+
+    return new  Response(json_encode($panier));
+
 
     }
 

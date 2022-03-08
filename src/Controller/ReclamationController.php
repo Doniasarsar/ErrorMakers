@@ -18,6 +18,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Snipe\BanBuilder\CensorWords;
 
 class ReclamationController extends AbstractController
 {
@@ -53,7 +54,14 @@ class ReclamationController extends AbstractController
         $form->add('Ajouter', SubmitType::class);
         $form->handleRequest($req);
         if($form->isSubmitted() && $form->isValid())
-        {$em=$this->getDoctrine()->getManager();
+        {   $messageContent =$form->get('message')->getData();
+            $censor = new CensorWords;
+    
+
+            $string = $censor->censorString($messageContent);
+            $reclamations->setMessage($string['clean']);
+            
+            $em=$this->getDoctrine()->getManager();
             $user=$rep->find($id);
             $reclamations->setClient($user);
             
@@ -125,6 +133,23 @@ class ReclamationController extends AbstractController
         ]);
     }
 
+
+      /** 
+     * @Route("reclamation/error", name="etat_error")
+     */
+    public function afficheErreur(CartService $cartService): Response
+    {
+        $dataPanier = $cartService->getFullCart();  
+        $total = $cartService->getTotal();
+        
+        return $this->render('reclamation/error.html.twig', [
+            'elements' => $dataPanier,
+            'total' => $total
+        ]);
+    }
+
+
+    
 
 
     

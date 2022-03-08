@@ -5,9 +5,12 @@ use App\Entity\Images;
 use App\Entity\Boutique;
 use App\Form\BoutiqueType;
 use App\Entity\Utilisateurs;
+use Mediumart\Orange\SMS\SMS;
 use App\Repository\ProduitRepository;
 use App\Repository\BoutiqueRepository;
 use App\Repository\DemandesRepository;
+use Mediumart\Orange\SMS\Http\SMSClient;
+use App\Repository\UtilisateursRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -19,13 +22,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class BoutiqueController extends AbstractController
 {
+
     /**
-     * @Route("/boutique", name="boutique")
+     * @Route("/commercant", name="commercant")
      */
-    public function index(): Response
+    public function Commercant(DemandesRepository $repD)
     {
-        return $this->render('boutique/index.html.twig', [
-            'controller_name' => 'BoutiqueController',
+        $demandes = $repD->findAll();
+        return $this->render('boutique/commercant.html.twig', [
+            'demandes' => $demandes,
         ]);
     }
 
@@ -42,13 +47,30 @@ class BoutiqueController extends AbstractController
             'demandes'=>$demandes,
         ]);
     }
+    /**
+     * @param BoutiqueRepository $rep
+     * @return Reponse
+     * @Route("/boutique/list/{id}", name="ma_boutique")
+     */
+    public function maBoutique($id,BoutiqueRepository $rep,UtilisateursRepository $repo ,DemandesRepository $repp)
+    {
+        $com=$repo->find($id);
+
+        $boutiques = $rep->findByCOM($com);
+
+        $demandes = $repp->findAll();
+        return $this->render('boutique/maboutique.html.twig', [
+            'tab' => $boutiques,
+            'demandes' => $demandes,
+        ]);
+    }
 
      
 
     /**
      * @param ProduitRepository $rep
      * @return Reponse
-     * @Route("admin/boutique/listProduit/{val}", name="boutique_listProduit")
+     * @Route("/boutique/listProduit/{val}", name="boutique_listProduit")
      */
     public function afficherProduit($val,ProduitRepository $rep,DemandesRepository $repp){
         $demandes=$repp->findAll();
@@ -61,42 +83,67 @@ class BoutiqueController extends AbstractController
         ]);
     }
     /**
-     * @Route("admin/boutique/add",name="boutique_add")
+     * @Route("/boutique/add",name="boutique_add")
      */
 
-    public function add(Request $request,DemandesRepository $repp): Response
+    public function add(Request $request,DemandesRepository $repp,UtilisateursRepository $repo ): Response
     {
         $demandes=$repp->findAll();
         $boutique = new Boutique();
         $form = $this->createForm(BoutiqueType::class,$boutique);
         $form->add('Ajouter',SubmitType::class);
+        $utilisateur=$repo->findAll();
         
  
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+
+            //on ajoute le commercant
+            $user=$this->getUser();
+            $user->setBoutique($boutique);
+            $boutique->setCommercant($user);
+
             // On récupère les images transmises
-    $images = $form->get('images')->getData();
-    
-    // On boucle sur les images
-    foreach($images as $image){
-        // On génère un nouveau nom de fichier
-        $fichier = md5(uniqid()).'.'.$image->guessExtension();
-        
-        // On copie le fichier dans le dossier uploads
-        $image->move(
-            $this->getParameter('images_directory'),
-            $fichier
-        );
-        
-        // On crée l'image dans la base de données
-        $img = new Images();
-        $img->setName($fichier);
-        $boutique->addImage($img);
-    }
-            
-            $entityManager = $this->getDoctrine()->getManager();
+                $images = $form->get('images')->getData();
+                
+                // On boucle sur les images
+                foreach($images as $image){
+                    // On génère un nouveau nom de fichier
+                    $fichier = md5(uniqid()).'.'.$image->guessExtension();
+                    
+                    // On copie le fichier dans le dossier uploads
+                    $image->move(
+                        $this->getParameter('images_directory'),
+                        $fichier
+                    );
+                    
+                    // On crée l'image dans la base de données
+                    $img = new Images();
+                    $img->setName($fichier);
+                    $boutique->addImage($img);
+                                            }
+                       foreach ($user as $utilisateur){
+                          // if($user->getRole()=="ROLE_USER"){
+          
+                        $client = SMSClient::getInstance('xaIAqzMGp0t2Qeh8n40GXr7Q93AkWBBw','2PhqRiICxtNqSiW7');
+                        $sms = new SMS($client);
+                        $sms->message('Nous avons ajouté un nouveau produit '.$boutique->getNomboutique().'
+                                                                             '.$boutique->getDescboutique().'
+                                                                             '.$boutique->getadresseboutique())
+                        ->from('+21655841954')
+                        ->to('+21655203244')
+                        ->send();
+                                
+                                                                //}
+                                                             }
+             $entityManager = $this->getDoctrine()->getManager();
              $entityManager->persist($boutique);
              $entityManager->flush();
+             
+
+
+             
+
              return $this->redirectToRoute('produit_add');
         }
 
@@ -108,11 +155,13 @@ class BoutiqueController extends AbstractController
     }
 
     /**
-     * @Route("admin/boutique/edit/{id}",name="update_boutique")
+     * @Route("/boutique/edit/{id}",name="update_boutique")
      * Method({"GET", "POST"})
      */
-    public function update($id, Request $request)
+    public function update($id, Request $request,DemandesRepository $repp)
     {
+        $demandes = $repp->findAll();
+
         $boutique = new boutique();
         $boutique = $this->getDoctrine()
             ->getRepository(boutique::class)
@@ -167,11 +216,12 @@ class BoutiqueController extends AbstractController
           
             $entityManager = $this->getDoctrine()->getManager();
              $entityManager->flush();
-             return $this->redirectToRoute('boutique_list');
+             return $this->redirectToRoute('ma_boutique',['id' => $this->getUser()->getId() ] );
          }
          return $this->render('boutique/update.html.twig', [
              'Fbout' => $form->createView(),
              'bout' => $boutique,
+             'demandes'=>$demandes,
 
 
 
@@ -179,7 +229,7 @@ class BoutiqueController extends AbstractController
     }
 
      /**
-     *@Route("admin/boutique/delete/{id}", name="boutique_delete")
+     *@Route("/boutique/delete/{id}", name="boutique_delete")
      */
 
     public function Supprimer($id,BoutiqueRepository $rep){

@@ -81,7 +81,7 @@
             </form>
           </div>
         </li>
-
+      {% if is_granted('ROLE_ADMIN') %}
         <!-- Messages Dropdown Menu -->
         <li class="nav-item dropdown">
           <a class="nav-link" data-toggle="dropdown" href="#">
@@ -126,6 +126,7 @@
           </div>
           </a>
         </li>
+        
         <!-- Notifications Dropdown Menu -->
         <li class="nav-item dropdown">
           <a class="nav-link" data-toggle="dropdown" href="#">
@@ -153,6 +154,7 @@
             <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
           </div>
         </li>
+        {% endif %}
         <li class="nav-item">
           <a class="nav-link" data-widget="fullscreen" href="#" role="button">
             <i class="fas fa-expand-arrows-alt"></i>
@@ -164,10 +166,11 @@
           </a>
         </li>
       </ul>
+      
     </nav>
     <!-- /.navbar -->
 
-    <!-- Main Sidebar Container -->
+   <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
       <a href="index3.html" class="brand-link">
@@ -183,9 +186,15 @@
           <div class="image">
             <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
           </div>
+          {% if is_granted("ROLE_ADMIN") %}
           <div class="info">
             <a href="#" class="d-block">ADMIN</a>
           </div>
+          {% else %}
+          <div class="info">
+            <a href="#" class="d-block">COMMERCANT</a>
+          </div>
+          {% endif %}
         </div>
 
         <!-- SidebarSearch Form -->
@@ -205,29 +214,15 @@
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+              {% if is_granted('ROLE_ADMIN') %}
             <li class="nav-item menu">
               <a href="{{path('admin_dashboard')}}" class="nav-link active">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                   Dashboard
-                  <i class="right fas fa-angle-left"></i>
+                 
                 </p>
               </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="{{path('admin_dashboard')}}" class="nav-link ">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Dashboard v1</p>
-                  </a>
-                </li>
-
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Dashboard v2</p>
-                  </a>
-                </li>
-              </ul>
             </li>
             <li class="nav-item menu">
               <a href="#" class="nav-link ">
@@ -346,6 +341,7 @@
           </ul>
           </li>
           </li>
+          
           <li class="nav-item menu">
             <a href="#" class="nav-link ">
               <i class="nav-icon fas fa-shopping-bag"></i>
@@ -369,8 +365,26 @@
               </li>
             </ul>
           </li>
-
-
+          {% elseif is_granted('ROLE_COMM') %}
+          <li class="nav-item menu">
+            <a href="{{path('commercant') }}"  class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+                <i class=""></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item menu">
+            <a href="{{path('ma_boutique',{id : app.user.id }) }}" class="nav-link ">
+              <i class="nav-icon fas fa-shopping-bag"></i>
+              <p>
+                Ma Boutique
+                <i class=""></i>
+              </p>
+            </a>
+          </li>
+        {% endif %}
           </ul>
           </ul>
         </nav>
