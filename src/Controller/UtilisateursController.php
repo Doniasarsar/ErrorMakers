@@ -45,9 +45,10 @@ class UtilisateursController extends AbstractController
         if($form->isSubmitted() && $form->isValid())
         {
            
-
+            $tel=$user->getTelephone();
             $hash = $encoder->encodePassword($user, $user->getPassword());
             $user->setPassword($hash);
+            $user->setTelephone("+216".$tel);
             
             $user->setEtat("Disponible");
 
