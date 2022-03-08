@@ -41,6 +41,7 @@
                         <th>Reclamation Subject</th>
                         <th>Message</th>
                         <th>Reclamation Type</th>
+                        <th>Reclamation Status</th>
                         <th>ACTION</th>
                     </tr>
                   </thead>
@@ -53,6 +54,7 @@
                 <td>{{ r.subject}}</td>
                 <td>{{ r.message }}</td>
                 <td>{{ r.type }}</td>
+                <td>{{ r.etat }}</td>
                 <td>
                   <a class="btn btn-info" href="{{path('rep_add',{id:r.id})}}">Reply</a>
                   <a class="btn btn-danger" href="{{path('reclam_delete',{id:r.id})}}">delete</a>

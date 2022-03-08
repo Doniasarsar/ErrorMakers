@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Utilisateurs;
 use App\Form\UtilisateursType;
 use App\Repository\DemandesRepository;
+use App\Repository\ProduitRepository;
 use App\Repository\ReclamationRepository;
 use App\Repository\UtilisateursRepository;
 use Symfony\Component\HttpFoundation\Request;
@@ -21,7 +22,7 @@ class AdminController extends AbstractController
     /**
      * @Route("/admin/dashboard", name="admin_dashboard")
      */
-    public function index(ReclamationRepository $rep , UtilisateursRepository $urp, DemandesRepository $repD)
+    public function index(ReclamationRepository $rep , UtilisateursRepository $urp, DemandesRepository $repD,ProduitRepository $repp)
     {
 
         //$nbr = $urp->CountClient();
@@ -29,8 +30,14 @@ class AdminController extends AbstractController
         $demandes=$repD->findAll();
         $reclamations = $rep->countByType();
 
+        $produits = $repp->countByQuantite();
+
         $recType = [];
-        $recCount = [];
+        $recCount = []; 
+
+        $prodQuantite = [];
+        $prodNom = [];
+        $prodCount = [];
 
         foreach($reclamations as $reclamation){
         
@@ -39,6 +46,14 @@ class AdminController extends AbstractController
         $recCount[]= $reclamation ['count'];
         //$recCount[] = count($recType);
         }
+
+        foreach($produits as $prod){
+        
+            //$recType[] = $produit->getType();
+            $prodQuantite[] = $prod ['quantite'];
+            $prodNom[]= $prod ['nom'];
+            //$recCount[] = count($recType);
+            }
         
 
            
@@ -48,6 +63,8 @@ class AdminController extends AbstractController
             'recType' => json_encode($recType),
             'recCount' => json_encode($recCount),
             'demandes' => $demandes,
+            'prodQuantite' => json_encode($prodQuantite),
+            'prodNom' => json_encode($prodNom),
 
         ]);
     }

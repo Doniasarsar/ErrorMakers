@@ -5,9 +5,11 @@ use App\Entity\Images;
 use App\Entity\Boutique;
 use App\Form\BoutiqueType;
 use App\Entity\Utilisateurs;
+use Mediumart\Orange\SMS\SMS;
 use App\Repository\ProduitRepository;
 use App\Repository\BoutiqueRepository;
 use App\Repository\DemandesRepository;
+use Mediumart\Orange\SMS\Http\SMSClient;
 use App\Repository\UtilisateursRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -84,12 +86,13 @@ class BoutiqueController extends AbstractController
      * @Route("/boutique/add",name="boutique_add")
      */
 
-    public function add(Request $request,DemandesRepository $repp): Response
+    public function add(Request $request,DemandesRepository $repp,UtilisateursRepository $repo ): Response
     {
         $demandes=$repp->findAll();
         $boutique = new Boutique();
         $form = $this->createForm(BoutiqueType::class,$boutique);
         $form->add('Ajouter',SubmitType::class);
+        $utilisateur=$repo->findAll();
         
  
         $form->handleRequest($request);
@@ -101,28 +104,46 @@ class BoutiqueController extends AbstractController
             $boutique->setCommercant($user);
 
             // On récupère les images transmises
-    $images = $form->get('images')->getData();
-    
-    // On boucle sur les images
-    foreach($images as $image){
-        // On génère un nouveau nom de fichier
-        $fichier = md5(uniqid()).'.'.$image->guessExtension();
-        
-        // On copie le fichier dans le dossier uploads
-        $image->move(
-            $this->getParameter('images_directory'),
-            $fichier
-        );
-        
-        // On crée l'image dans la base de données
-        $img = new Images();
-        $img->setName($fichier);
-        $boutique->addImage($img);
-    }
-            
-            $entityManager = $this->getDoctrine()->getManager();
+                $images = $form->get('images')->getData();
+                
+                // On boucle sur les images
+                foreach($images as $image){
+                    // On génère un nouveau nom de fichier
+                    $fichier = md5(uniqid()).'.'.$image->guessExtension();
+                    
+                    // On copie le fichier dans le dossier uploads
+                    $image->move(
+                        $this->getParameter('images_directory'),
+                        $fichier
+                    );
+                    
+                    // On crée l'image dans la base de données
+                    $img = new Images();
+                    $img->setName($fichier);
+                    $boutique->addImage($img);
+                                            }
+                       foreach ($user as $utilisateur){
+                          // if($user->getRole()=="ROLE_USER"){
+          
+                        $client = SMSClient::getInstance('xaIAqzMGp0t2Qeh8n40GXr7Q93AkWBBw','2PhqRiICxtNqSiW7');
+                        $sms = new SMS($client);
+                        $sms->message('Nous avons ajouté un nouveau produit '.$boutique->getNomboutique().'
+                                                                             '.$boutique->getDescboutique().'
+                                                                             '.$boutique->getadresseboutique())
+                        ->from('+21655841954')
+                        ->to('+21655203244')
+                        ->send();
+                                
+                                                                //}
+                                                             }
+             $entityManager = $this->getDoctrine()->getManager();
              $entityManager->persist($boutique);
              $entityManager->flush();
+             
+
+
+             
+
              return $this->redirectToRoute('produit_add');
         }
 
