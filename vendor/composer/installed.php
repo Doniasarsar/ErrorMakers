@@ -1,21 +1,26 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
+<<<<<<< HEAD
         'reference' => 'a49594f38f9e4cdc02f24d57331e346549fdbb34',
+=======
+        'reference' => NULL,
+>>>>>>> 351638ea802c5edecaf927132ed678564d5af07e
         'name' => '__root__',
         'dev' => true,
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
+<<<<<<< HEAD
             'reference' => 'a49594f38f9e4cdc02f24d57331e346549fdbb34',
             'dev_requirement' => false,
         ),
@@ -35,6 +40,9 @@
             'install_path' => __DIR__ . '/../dasprid/enum',
             'aliases' => array(),
             'reference' => '5abf82f213618696dda8e3bf6f64dd042d8542b2',
+=======
+            'reference' => NULL,
+>>>>>>> 351638ea802c5edecaf927132ed678564d5af07e
             'dev_requirement' => false,
         ),
         'doctrine/annotations' => array(

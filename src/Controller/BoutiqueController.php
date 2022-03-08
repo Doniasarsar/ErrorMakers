@@ -22,12 +22,12 @@ class BoutiqueController extends AbstractController
 {
 
     /**
-     * @Route("/comercant", name="comercant")
+     * @Route("/commercant", name="commercant")
      */
-    public function Comercant(DemandesRepository $repD)
+    public function Commercant(DemandesRepository $repD)
     {
         $demandes = $repD->findAll();
-        return $this->render('boutique/comercant.html.twig', [
+        return $this->render('boutique/commercant.html.twig', [
             'demandes' => $demandes,
         ]);
     }
