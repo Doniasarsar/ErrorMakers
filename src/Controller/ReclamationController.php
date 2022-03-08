@@ -126,6 +126,23 @@ class ReclamationController extends AbstractController
     }
 
 
+      /** 
+     * @Route("reclamation/error", name="etat_error")
+     */
+    public function afficheErreur(CartService $cartService): Response
+    {
+        $dataPanier = $cartService->getFullCart();  
+        $total = $cartService->getTotal();
+        
+        return $this->render('reclamation/error.html.twig', [
+            'elements' => $dataPanier,
+            'total' => $total
+        ]);
+    }
+
+
+    
+
 
     
 

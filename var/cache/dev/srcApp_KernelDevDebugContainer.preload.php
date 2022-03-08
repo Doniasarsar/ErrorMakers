@@ -9,8 +9,8 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
     return;
 }
 
-require dirname(__DIR__, 3).'/vendor/autoload.php';
-(require __DIR__.'/srcApp_KernelDevDebugContainer.php')->set(\ContainerWrbWrv2\srcApp_KernelDevDebugContainer::class, null);
+require dirname(__DIR__, 3).''.\DIRECTORY_SEPARATOR.'vendor/autoload.php';
+(require __DIR__.'/srcApp_KernelDevDebugContainer.php')->set(\Container9Wo9TCT\srcApp_KernelDevDebugContainer::class, null);
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -27,6 +27,7 @@ $classes[] = 'Twig\Extra\TwigExtraBundle\TwigExtraBundle';
 $classes[] = 'Symfony\Bundle\WebServerBundle\WebServerBundle';
 $classes[] = 'SymfonyCasts\Bundle\ResetPassword\SymfonyCastsResetPasswordBundle';
 $classes[] = 'Knp\Bundle\PaginatorBundle\KnpPaginatorBundle';
+$classes[] = 'Endroid\QrCodeBundle\EndroidQrCodeBundle';
 $classes[] = 'Symfony\Component\HttpClient\TraceableHttpClient';
 $classes[] = 'Symfony\Contracts\HttpClient\HttpClientInterface';
 $classes[] = 'Symfony\Component\HttpClient\HttpClient';
@@ -95,6 +96,14 @@ $classes[] = 'Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Dbal\ManagerRegistryAwareConnectionProvider';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Registry';
 $classes[] = 'Doctrine\DBAL\Tools\Console\Command\RunSqlCommand';
+$classes[] = 'Endroid\QrCodeBundle\Controller\GenerateController';
+$classes[] = 'Endroid\QrCodeBundle\Twig\QrCodeRuntime';
+$classes[] = 'Endroid\QrCode\Builder\BuilderRegistry';
+$classes[] = 'Endroid\QrCode\Builder\Builder';
+$classes[] = 'Endroid\QrCode\Encoding\Encoding';
+$classes[] = 'Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevelLow';
+$classes[] = 'Endroid\QrCode\RoundBlockSizeMode\RoundBlockSizeModeMargin';
+$classes[] = 'Endroid\QrCode\Writer\PngWriter';
 $classes[] = 'SymfonyCasts\Bundle\ResetPassword\Command\ResetPasswordRemoveExpiredCommand';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\Controller\RedirectController';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\Controller\TemplateController';
@@ -526,6 +535,7 @@ $classes[] = 'Symfony\Component\VarDumper\Dumper\HtmlDumper';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Twig\DoctrineExtension';
 $classes[] = 'Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension';
 $classes[] = 'Knp\Bundle\PaginatorBundle\Helper\Processor';
+$classes[] = 'Endroid\QrCodeBundle\Twig\QrCodeExtension';
 $classes[] = 'Symfony\Bridge\Twig\AppVariable';
 $classes[] = 'Twig\RuntimeLoader\ContainerRuntimeLoader';
 $classes[] = 'Twig\Extra\TwigExtraBundle\MissingExtensionSuggestor';
