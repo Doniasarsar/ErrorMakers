@@ -120,10 +120,18 @@
 							<div class="card-body">
 								<div class="row">
 									<div class="col-6">
-                  	<p class="text-center">
+                  							<p class="text-center">
 											<strong>Reclamation Statistics</strong>
 										</p>
 										<canvas id="types" width="400" height="200"></canvas>
+
+
+									</div>
+									<div class="col-6">
+                  							<p class="text-center">
+											<strong>Produit Statistics</strong>
+										</p>
+										<canvas id="quantite" width="400" height="200"></canvas>
 
 
 									</div>
@@ -260,6 +268,25 @@
 							data: {{ recCount|raw }},
 							backgroundColor: ["pink", "lgreen", "lightblue"]
 							}
+							]
+
+							}
+							})
+			</script>
+
+			<script>
+							let quantite = document.querySelector("#quantite")
+							let quantiteGraph = new Chart(quantite, {
+							type: "pie",
+							data: {
+							labels: {{ prodNom|raw }},
+							datasets: [
+							{
+							label: "Récupération des quantites des produits",
+							data: {{ prodQuantite|raw }},
+							backgroundColor: ["lgreen", "lightblue"]
+							}
+							
 							]
 
 							}
