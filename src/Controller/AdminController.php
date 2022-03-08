@@ -14,13 +14,12 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
-/**
- * @Route("admin" , name="admin_")
- */
+
 class AdminController extends AbstractController
 {
+   
     /**
-     * @Route("/dashboard", name="dashboard")
+     * @Route("/admin/dashboard", name="admin_dashboard")
      */
     public function index(ReclamationRepository $rep , UtilisateursRepository $urp, DemandesRepository $repD)
     {
@@ -54,7 +53,7 @@ class AdminController extends AbstractController
     }
     /**
      * @return Reponse
-     * @Route("/dashboard/listU", name="userlist")
+     * @Route("/admin/dashboard/listU", name="admin_userlist")
      */
     public function afficherUser(UtilisateursRepository $rep, DemandesRepository $repp){
         $users=$rep->findAll();
@@ -66,7 +65,7 @@ class AdminController extends AbstractController
     }
      /**
      * @return Reponse
-     * @Route("/dashboard/listD", name="demandelist")
+     * @Route("/dashboard/listD", name="admin_demandelist")
      */
     public function afficherDemande(DemandesRepository $rep){
         $demandes=$rep->findAll();
@@ -76,7 +75,7 @@ class AdminController extends AbstractController
     }
      /**
      * @return Reponse
-     * @Route("/dashboard/listU/delete/{id}", name="userdelete")
+     * @Route("/admin/dashboard/listU/delete/{id}", name="admin_userdelete")
      */
 
     public function DeleteUser($id,UtilisateursRepository $rep){
@@ -90,7 +89,7 @@ class AdminController extends AbstractController
 
      /**
      * @return Reponse
-     * @Route("/dashboard/listD/delete/{id}", name="demdelete")
+     * @Route("/admin/dashboard/listD/delete/{id}", name="admin_demdelete")
      */
 
     public function DeleteDem($id,DemandesRepository $rep){
@@ -104,7 +103,7 @@ class AdminController extends AbstractController
 
     /**
      * @return Reponse
-     * @Route("/dashboard/listD/accept/{id}", name="demaccept")
+     * @Route("/admin/dashboard/listD/accept/{id}", name="admin_demaccept")
      */
 
     public function AcceptDem($id,DemandesRepository $rep, UserPasswordEncoderInterface $encoder){
@@ -134,14 +133,14 @@ class AdminController extends AbstractController
     }
 
      /**
-     * @Route("/loginadmin", name="loginadmin")
+     * @Route("admin/loginadmin", name="admin_loginadmin")
      */
     public function login(): Response
     {
         return $this->render('dashboard/loginadmin.html.twig');
     }
      /**
-     * @Route("/logout", name="logoutadmin")
+     * @Route("admin/logout", name="admin_logoutadmin")
      */
     public function logout(){}
 }

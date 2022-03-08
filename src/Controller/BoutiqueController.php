@@ -20,13 +20,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class BoutiqueController extends AbstractController
 {
+
     /**
-     * @Route("/boutique", name="boutique")
+     * @Route("/comercant", name="comercant")
      */
-    public function index(): Response
+    public function Comercant(DemandesRepository $repD)
     {
-        return $this->render('boutique/index.html.twig', [
-            'controller_name' => 'BoutiqueController',
+        $demandes = $repD->findAll();
+        return $this->render('boutique/comercant.html.twig', [
+            'demandes' => $demandes,
         ]);
     }
 
