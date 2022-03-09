@@ -7,6 +7,10 @@
   <title>ProTECH| Dashboard</title>
   {% block stylesheets %}
   <!-- Google Font: Source Sans Pro -->
+    <link href='fullcalendar/main.css' rel='stylesheet' />
+<!-- fullCalendar -->
+  <link rel="stylesheet" href="{{asset('plugins/fullcalendar/main.css')}}">
+  
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback')">
   <!-- Font Awesome -->
@@ -268,6 +272,12 @@
                     <p>Ligne de Commandes</p>
                   </a>
                 </li>
+                <li class="nav-item">
+                  <a href="{{path('livraison_list')}}" class="nav-link ">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Liste Livraisons</p>
+                  </a>
+                </li>
 
               </ul>
 
@@ -449,6 +459,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
   integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg=="
   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="{{asset('plugins/fullcalendar/main.js')}}"></script>
 
 
 {% endblock %}

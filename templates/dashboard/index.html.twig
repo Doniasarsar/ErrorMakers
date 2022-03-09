@@ -135,6 +135,15 @@
 
 
 									</div>
+
+									<div class="col-6">
+                  							<p class="text-center">
+											<strong>Vehicules Statistics</strong>
+										</p>
+										<canvas id="types" width="400" height="200"></canvas>
+
+
+									</div>
 						
 									<!-- /.col -->
 									<div class="col-6">
@@ -284,6 +293,24 @@
 							{
 							label: "Récupération des quantites des produits",
 							data: {{ prodQuantite|raw }},
+							backgroundColor: ["lgreen", "lightblue"]
+							}
+							
+							]
+
+							}
+							})
+			</script>
+		<script>
+							let typeV = document.querySelector("#typeV")
+							let typeGraph = new Chart(typeV, {
+							type: "pie",
+							data: {
+							labels: {{ typeVehicule|raw }},
+							datasets: [
+							{
+							label: "Récupération des quantites des produits",
+							data: {{ vehCount|raw }},
 							backgroundColor: ["lgreen", "lightblue"]
 							}
 							
