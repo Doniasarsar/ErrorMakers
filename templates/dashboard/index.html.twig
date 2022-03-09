@@ -146,9 +146,9 @@
 									</div>
 									<div class="col-6">
 										<p class="text-center">
-											<strong>Utilisateurs Age Statistics</strong>
+											<strong>Commande date Statistics</strong>
 										</p>
-										<canvas id="age" width="400" height="200"></canvas>
+										<canvas id="commandes" width="400" height="200"></canvas>
 									
 									
 									</div>
@@ -265,5 +265,27 @@
 										}
 										})
 			</script>
+			<script>
+        let commandes = document.querySelector("#commandes")
+        let comGraph = new Chart(commandes, {
+            type: "line",
+            data: {
+                labels: {{ dates|raw }},
+                datasets: [{
+                    label: "Nombre de Commande",
+                    data: {{ commandesCount|raw }}
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        })
+    </script>
 			
 {% endblock %}

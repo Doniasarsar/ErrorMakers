@@ -54,6 +54,16 @@ class Produit
      */
     private $boutique;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Note::class, mappedBy="produit")
+     */
+    private $notes;
+
+    public function __construct()
+    {
+        $this->notes = new ArrayCollection();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -127,6 +137,36 @@ class Produit
     public function setBoutique(?Boutique $boutique): self
     {
         $this->boutique = $boutique;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Note>
+     */
+    public function getNotes(): Collection
+    {
+        return $this->notes;
+    }
+
+    public function addNote(Note $note): self
+    {
+        if (!$this->notes->contains($note)) {
+            $this->notes[] = $note;
+            $note->setProduit($this);
+        }
+
+        return $this;
+    }
+
+    public function removeNote(Note $note): self
+    {
+        if ($this->notes->removeElement($note)) {
+            // set the owning side to null (unless already changed)
+            if ($note->getProduit() === $this) {
+                $note->setProduit(null);
+            }
+        }
 
         return $this;
     }

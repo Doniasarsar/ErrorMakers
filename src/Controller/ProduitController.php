@@ -3,9 +3,13 @@
 namespace App\Controller;
 use App\Entity\Produit;
 use App\Form\ProduitType;
-use App\Repository\BoutiqueRepository;
+use Mediumart\Orange\SMS\SMS;
 use App\Repository\ProduitRepository;
+use App\Repository\BoutiqueRepository;
 use App\Repository\DemandesRepository;
+use Mediumart\Orange\SMS\Http\SMSClient;
+use App\Repository\UtilisateursRepository;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -30,11 +34,17 @@ class ProduitController extends AbstractController
      * @return Reponse
      * @Route("admin/produit/list", name="produit_list")
      */
-    public function afficher(ProduitRepository $rep,DemandesRepository $repp){
+    public function afficher(ProduitRepository $rep,DemandesRepository $repp,PaginatorInterface $paginator, Request $request){
         $demandes=$repp->findAll();
         $produits=$rep->findAll();
+        $donnees = $paginator->paginate(
+            $produits,
+            $request->query->getInt('page', 1), // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
+            1 // Nombre de résultats par page
+        );
         return $this->render('dashboard/produit/listproduit.html.twig', [
-            'tab' => $produits,
+           
+            'tab' => $donnees,
             'demandes'=>$demandes,
         ]);
     }
@@ -45,14 +55,13 @@ class ProduitController extends AbstractController
      * @Route("/produit/add",name="produit_add")
      */
 
-    public function add(Request $request,DemandesRepository $repp, BoutiqueRepository $repo): Response
+    public function add(Request $request,DemandesRepository $repp, BoutiqueRepository $repo,UtilisateursRepository $reppp): Response
     {
         $demandes=$repp->findAll();
         $produit = new Produit();
         $form = $this->createForm(ProduitType::class,$produit);
         $form->add('Ajouter',SubmitType::class);
         
- 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             //on attribue la boutique 
@@ -66,6 +75,9 @@ class ProduitController extends AbstractController
              $entityManager = $this->getDoctrine()->getManager();
              $entityManager->persist($produit);
              $entityManager->flush();
+
+            
+    
              return $this->redirectToRoute('boutique_listProduit' ,[ 'val' =>$produit->getBoutique()->getId() ]);
         }
 
@@ -135,4 +147,7 @@ class ProduitController extends AbstractController
 
         return $this->redirectToRoute('produit_list');
     }
+
+  
+    
 }
