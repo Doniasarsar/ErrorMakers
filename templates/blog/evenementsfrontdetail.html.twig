@@ -101,7 +101,10 @@
                                                     <img src="{{asset('images/product-details/user.png')}}" alt="User">
                                                 </div>
                                                 <div class="comment-body pl-15">
+                                                    {% if is_granted("ROLE_ADMIN") %}
+
                                                         <span class="reply-btn pt-15 pt-xs-5"><a href="#ajout_commentaire" data-reply data-id={{comment.id}}>Répondre</a></span>
+                                                   {% endif %}
                                                     <h5 class="comment-author pt-15">{{comment.pseudo}}</h5>
                                                     <div class="comment-post-date">
                                                         {{comment.createdAt | date('y-m-d  h:m:s')}}
