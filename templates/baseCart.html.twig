@@ -46,7 +46,7 @@
 
     
     <!-- Modernizr js -->
-    <script src="{{asset('s/vendor/modernizr-2.8.3.min.js')}}j"></script>
+    <script src="{{asset('js/vendor/modernizr-2.8.3.min.js')}}"></script>
 </head>
         {% endblock %}
    
@@ -159,24 +159,27 @@
                                         
                                         <!-- Header Middle Wishlist Area End Here -->
                                         <!-- Begin Header Mini Cart Area -->
+                                        
                                         <li class="hm-minicart">
                                             <div class="hm-minicart-trigger">
                                                 <span class="item-icon"></span>
-                                                <span class="item-text">{{total}}
+                                                <div id="dem">
+                                                <span  class="item-text">{{total}}
                                                   {#  <span class="cart-item-count">{{quantitetotale}}</span> #}
                                                 </span>
+                                                </div>
                                             </div>
                                             <span></span>
                                             
                                             
-                                            <div class="minicart">
+                                            <div id="div_refresh" class="minicart">
                                                
                                                 <ul class="minicart-product-list">
                                                 {% for element in elements %}    
                                                     <li>
                                                         <a href="single-product.html" class="minicart-product-image">
                                                             <img src="{{asset('uploads/') ~ element.produit.image }}" alt="cart products">
-
+                                        
                                                         </a>
                                                         <div class="minicart-product-details">
                                                             <h6><a href="single-product.html">{{ element.produit.nomProduit}}</a></h6>
@@ -186,7 +189,7 @@
                                                         <button class="close">
                                                             
                                                             <td class="li-product-remove"><a href="{{path("delete1",{id: element.produit.id})}}"><i class="fa fa-times"></i></a></td>
-
+                                        
                                                         </button>
                                                     </li>
                                                 {% else %}
@@ -203,6 +206,8 @@
                                                 
                                                 
                                             </div>
+                                        
+                                            
                                         </li>
                                         <!-- Header Mini Cart Area End Here -->
                                     </ul>
@@ -675,6 +680,8 @@
         });
     });
 </script>
+   <script>
+    window.onlaod = () => {
  <script>
     window.onload = () => {
         
@@ -687,6 +694,31 @@
 
     }
     </script>
+
+    <script>
+    $(document).ready(function(){
+		 $("#div_refresh").load("loadcart");
+        setInterval(function() {
+            $("#div_refresh").load("loadcart");
+         }, 3000);
+    });
+
+   </script>
+   <script>
+    $(document).ready(function () {
+        setInterval(function () {
+            $("#dem").load(window.location.href + " #dem");
+        }, 6000);
+        });
+  </script>
+
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+
+    
+    <script src="https://unpkg.com/@esri/arcgis-rest-request@3.0.0/dist/umd/request.umd.js"></script>
+    <script src="https://unpkg.com/@esri/arcgis-rest-geocoding@3.0.0/dist/umd/geocoding.umd.js"></script>
+    <script src="https://unpkg.com/@esri/arcgis-rest-auth@3.0.0/dist/umd/auth.umd.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
     <script>
         var countdowns = $(".countdown");
         countdowns.each(function()

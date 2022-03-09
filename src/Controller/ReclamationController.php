@@ -148,6 +148,21 @@ class ReclamationController extends AbstractController
         ]);
     }
 
+     /**
+     * @Route("/reclamation/searchajax", name="ajaxsearchRec",methods={"GET"})
+     */
+    public function search(Request $request,ReclamationRepository $rep, LigneCommandeRepository $ligneCommande)
+    {
+        $str1 = $request->get('searchValue');
+        
+
+        $result = $rep->searchRec($str1);
+        return $this->render('reclamation/reclamationAjax.html.twig', [
+            "tab" => $result,
+            'tab1' => $ligneCommande,
+        ]);
+    }
+
 
     
 
