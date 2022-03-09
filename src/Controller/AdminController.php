@@ -34,7 +34,9 @@ class AdminController extends AbstractController
 
         $produits = $repp->countByQuantite();
 
-        $vehicules = $reppo->countByType();
+        $vehicules = $reppo->countByTypeV();
+
+        $utilisateurs=$urp->countByAge();
       
         $recType = [];
         $recCount = []; 
@@ -45,6 +47,9 @@ class AdminController extends AbstractController
 
         $typeVehicule = [];
         $vehCount = [];
+
+        $ageUtilisateurs = [];
+        $countUtilisateurs = [];
 
      
         foreach($reclamations as $reclamation){
@@ -70,6 +75,14 @@ class AdminController extends AbstractController
                 $vehCount[]= $veh ['countV'];
                 //$recCount[] = count($recType);
                 }
+
+        foreach ($utilisateurs as $users) {
+
+            //$recType[] = $produit->getType();
+            $ageUtilisateurs[] = $users['age'];
+            $countUtilisateurs[] = $users['count'];
+            //$recCount[] = count($recType);
+        }
             
 
            
@@ -83,6 +96,9 @@ class AdminController extends AbstractController
             'prodNom' => json_encode($prodNom),
             'typeVehicule' => json_encode($typeVehicule),
             'vehCount' => json_encode($vehCount),
+
+            'ageUtilisateurs' => json_encode($ageUtilisateurs),
+            'countUtilisateurs' => json_encode($countUtilisateurs),
       
            
 

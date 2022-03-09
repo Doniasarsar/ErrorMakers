@@ -110,6 +110,11 @@ class Utilisateurs implements UserInterface
 
     protected $captchaCode;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $Age;
+
     
 
     
@@ -328,6 +333,18 @@ class Utilisateurs implements UserInterface
     public function setCaptchaCode($captchaCode)
     {
         $this->captchaCode = $captchaCode;
+    }
+
+    public function getAge(): ?string
+    {
+        return $this->Age;
+    }
+
+    public function setAge(string $Age): self
+    {
+        $this->Age = $Age;
+
+        return $this;
     }
 
     
