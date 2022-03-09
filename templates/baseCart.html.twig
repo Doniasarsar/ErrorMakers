@@ -712,6 +712,40 @@
             }, 1000);
         });
     </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   <script>
+   function onClickBtnLike(event){
+       event.preventDefault();
+
+       const url = this.href;
+       const spanCount = this.querySelector('span.js-likes');
+       const icone = this.querySelector('i');
+
+       axios.get(url).then(function(response){
+          spanCount.textContent = response.data.likes;
+
+          if (icone.classlist.contains('far')){
+            icone.classlist.replace('far','fas');
+          }
+          else{
+            icone.classlist.replace('fas','far');
+          }
+       }).catch(function(error){    
+           if(error.response.status === 403){
+               window.alert("vous ne pouvez pas liker si vous etes pas connecté ! ")
+
+           } else {
+               window.alert("une erreur s'est produit, reessayez plus tard !");
+           }
+
+       });
+   }
+   document.querySelectorAll('a.js-like').forEach(function(link){
+       link.addEventListener('click',onClickBtnLike);
+   })
+   </script>
+
+    
 {% endblock %}
 </body>
 

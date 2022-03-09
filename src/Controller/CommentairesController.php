@@ -2,8 +2,12 @@
 
 namespace App\Controller;
 
+use App\Entity\CommentLike;
+use App\Entity\Commentaires;
 use App\Repository\DemandesRepository;
 use App\Repository\EvenementRepository;
+use Doctrine\Persistence\ObjectManager;
+use App\Repository\CommentLikeRepository;
 use App\Repository\CommentairesRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -46,8 +50,49 @@ class CommentairesController extends AbstractController
 
         
     }
+    /**
+     * @Route("/commentaire/{id}/like",name="commentaire_like")
+     * 
+     */
+    public function like(Commentaires $commentaire, CommentLikeRepository $likerepo ) : Response
+    {
+        $utilisateur= $this->getUser();
+        if(!$utilisateur) return $this->json([
+            'code'=> 403,
+            'message' => "unauthorized"
+        ],403);
 
-    
+        if($commentaire ->isLikedByUtilisateur($utilisateur)){
+            $like =$likerepo->findOneBy([
+                'comment'=>$commentaire,
+                'utilisateur'=>$utilisateur
+            ]);
+            $em=$this->getDoctrine()->getManager();
+            $em->remove($like);
+            $em->flush();
+
+            return $this->json([
+                'code' => 200,
+                'message' => 'Like bien supprimé',
+                'likes' => $likerepo->count(['comment'=>$commentaire])
+            ],200);
+            
+        }
+        $like = new CommentLike();
+        $like->setComment($commentaire)
+            ->setUtilisateur($utilisateur);
+            $em=$this->getDoctrine()->getManager();
+            $em->persist($like);
+            $em->flush();
+           
+
+
+        return $this->json([
+            'code'=> 200 ,
+            'message'=>'Like bien ajouté' ,
+            'likes'=>$likerepo->count(['comment'=>$commentaire])
+        ],200);
+    }
 
 
 

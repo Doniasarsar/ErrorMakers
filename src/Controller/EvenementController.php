@@ -22,8 +22,7 @@ use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-
-
+use Snipe\BanBuilder\CensorWords;
 
 
 
@@ -145,7 +144,7 @@ class EvenementController extends AbstractController
         //// initialisation note    
         $note = new Note();      
         $noteform = $this->createForm(NoteType::class,$note);
-        $noteform->add('ajouter',SubmitType::class);
+       
         $noteform->handleRequest($request);
 
         if ($noteform->isSubmitted() && $noteform->isValid()) {
@@ -166,6 +165,12 @@ class EvenementController extends AbstractController
         $CommentairesForm=$this ->createForm(CommentairesType::class, $Commentaires);
         $CommentairesForm->handleRequest($request);
         if($CommentairesForm->isSubmitted() && $CommentairesForm->isValid()){
+            $CommentaireContent =$CommentairesForm->get('contenu')->getData();
+            $censor = new CensorWords;
+    
+
+            $string = $censor->censorString($CommentaireContent);
+            $Commentaires->setContenu($string['clean']);
             $Commentaires->setCreatedAt(new DateTimeImmutable());
             $Commentaires->setAnnonces($evenement);
             

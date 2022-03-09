@@ -2,6 +2,7 @@
 
 {% block body %}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
 
   <!-- Begin Body Wrapper -->
         <div class="body-wrapper">
@@ -53,6 +54,8 @@
                                            {{form_start(noteform)}}
                                          <div>
                                               {{form_widget(noteform.nom , {'value':tab.nom ,'type':'hidden'})}}
+                                            
+                                              
 
                                            </div>
 
@@ -67,21 +70,29 @@
                                                         </div>
                                                         <br>
                                                   <style>
+                                                  
                                                   h3{
                                                      color:grey;
                                                   
                                                   }
                                                   </style>
-                    
-                                                 <h3>Raiting : {{somme|number_format(1, '.')}} /5</h3>
+                                             
+                        {{ form_widget(noteform.ajouter, {'attr': {'class': 'register-button mt-0'} }) }}<br>
+                                        
+                                                <br><br> <h3>Rating : {{somme|number_format(1, '.')}} /5 &nbsp;&nbsp; {{ Notes|length}} Avis </h3>
                                                  
                                                  {{form_widget(noteform.note , { 'id': 'rating','type':'hidden'} ) }}
+
+                                                          
+                                                        
                                                  <br>
-                                                 {{form_end(noteform)}}
+ 
+                                                
                     
-                                                   <p>{{ Notes|length}} Avis</p>
-                                                 <br>
                                                   
+                                                    
+                                                 <br>
+                                                   {{form_end(noteform)}}
                                            </div>
                                     </div>       
                                         
@@ -101,10 +112,24 @@
                                                     <img src="{{asset('images/product-details/user.png')}}" alt="User">
                                                 </div>
                                                 <div class="comment-body pl-15">
-                                                    {% if is_granted("ROLE_ADMIN") %}
-
-                                                        <span class="reply-btn pt-15 pt-xs-5"><a href="#ajout_commentaire" data-reply data-id={{comment.id}}>Répondre</a></span>
+                                                   <a href='{{ path('commentaire_like',{'id':comment.id})}}' class="btn btn-link js-like">
+                                                   {% if app.user and comment.isLikedByUtilisateur(app.user) %}
+                                                   <i class="fas fa-thumbs-up"></i>
+                                                   {% else %}
+                                                   <i class="far fa-thumbs-up"></i>
                                                    {% endif %}
+                                                    
+                                                    
+                                                    <span class="js-likes">{{comment.likes| length}}</span>
+                                                    <span class="js-label">J'aime</span>
+                                                    </a>
+                                                    {% if is_granted("ROLE_ADMIN") %}
+                                                        
+                                                        <span class="reply-btn pt-15 pt-xs-5">
+                                
+                                                     <a href="#ajout_commentaire" data-reply data-id={{comment.id}}>Répondre</a></span>
+                                                   {% endif %}
+                                                   
                                                     <h5 class="comment-author pt-15">{{comment.pseudo}}</h5>
                                                     <div class="comment-post-date">
                                                         {{comment.createdAt | date('y-m-d  h:m:s')}}
@@ -176,6 +201,7 @@
                                                         <div class="coment-btn pt-30 pb-sm-30 pb-xs-30 f-left">
                                                             
                                                             {{ form_widget(Commentaires_Form.Envoyer, {'attr': {'class': 'li-btn-2'} }) }}
+                                                           
                                                         </div>
                                                     </div>
                                                 </div>

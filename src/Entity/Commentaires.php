@@ -2,10 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\CommentairesRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use App\Entity\Utilisateurs;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\CommentairesRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
@@ -66,9 +67,15 @@ class Commentaires
      */
     private $Pseudo;
 
+    /**
+     * @ORM\OneToMany(targetEntity=CommentLike::class, mappedBy="comment")
+     */
+    private $likes;
+
     public function __construct()
     {
         $this->reponses = new ArrayCollection();
+        $this->likes = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -190,5 +197,47 @@ class Commentaires
         $this->Pseudo = $Pseudo;
 
         return $this;
+    }
+
+    /**
+     * @return Collection<int, CommentLike>
+     */
+    public function getLikes(): Collection
+    {
+        return $this->likes;
+    }
+
+    public function addLike(CommentLike $like): self
+    {
+        if (!$this->likes->contains($like)) {
+            $this->likes[] = $like;
+            $like->setComment($this);
+        }
+
+        return $this;
+    }
+
+    public function removeLike(CommentLike $like): self
+    {
+        if ($this->likes->removeElement($like)) {
+            // set the owning side to null (unless already changed)
+            if ($like->getComment() === $this) {
+                $like->setComment(null);
+            }
+        }
+
+        return $this;
+    }
+    /**
+     * Permet de savoir si cet article est liké par un user
+     *  
+     * @param Utilisateurs $utilisateur
+     * @return boolean
+     */
+    public function isLikedByUtilisateur(Utilisateurs $utilisateur ) : bool {
+             foreach($this->likes as $like){
+                 if($like->getUtilisateur() === $utilisateur) return true;
+                }
+                return false;
     }
 }

@@ -108,6 +108,11 @@ class Utilisateurs implements UserInterface
      */
     private $Image;
 
+    /**
+     * @ORM\OneToMany(targetEntity=CommentLike::class, mappedBy="utilisateur")
+     */
+    private $likes;
+
     
 
     
@@ -116,6 +121,7 @@ class Utilisateurs implements UserInterface
     {
         $this->Livraison = new ArrayCollection();
         $this->reclamations = new ArrayCollection();
+        $this->likes = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -314,6 +320,36 @@ class Utilisateurs implements UserInterface
     public function setImage(?string $Image): self
     {
         $this->Image = $Image;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, CommentLike>
+     */
+    public function getLikes(): Collection
+    {
+        return $this->likes;
+    }
+
+    public function addLike(CommentLike $like): self
+    {
+        if (!$this->likes->contains($like)) {
+            $this->likes[] = $like;
+            $like->setUtilisateur($this);
+        }
+
+        return $this;
+    }
+
+    public function removeLike(CommentLike $like): self
+    {
+        if ($this->likes->removeElement($like)) {
+            // set the owning side to null (unless already changed)
+            if ($like->getUtilisateur() === $this) {
+                $like->setUtilisateur(null);
+            }
+        }
 
         return $this;
     }
