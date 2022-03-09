@@ -6,8 +6,18 @@
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
     <parameter key="kernel.name">src</parameter>
+<<<<<<< HEAD
     <parameter key="kernel.cache_dir">C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev</parameter>
     <parameter key="kernel.logs_dir">C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\log</parameter>
+=======
+<<<<<<< HEAD
+    <parameter key="kernel.cache_dir">C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev</parameter>
+    <parameter key="kernel.logs_dir">C:\Users\doghm\Desktop\PiDev\ErrorMakers-3A45\var\log</parameter>
+=======
+    <parameter key="kernel.cache_dir">/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev</parameter>
+    <parameter key="kernel.logs_dir">/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/log</parameter>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
@@ -139,21 +149,49 @@
       <parameter key="cookie_samesite">lax</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
+<<<<<<< HEAD
     <parameter key="session.save_path">C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/sessions</parameter>
+=======
+<<<<<<< HEAD
+    <parameter key="session.save_path">C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/sessions</parameter>
+=======
+    <parameter key="session.save_path">/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/sessions</parameter>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="form.type_extension.csrf.enabled">true</parameter>
     <parameter key="form.type_extension.csrf.field_name">_token</parameter>
     <parameter key="asset.request_context.base_path"></parameter>
     <parameter key="asset.request_context.secure">false</parameter>
+<<<<<<< HEAD
     <parameter key="validator.mapping.cache.file">C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/validation.php</parameter>
+=======
+<<<<<<< HEAD
+    <parameter key="validator.mapping.cache.file">C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/validation.php</parameter>
+=======
+    <parameter key="validator.mapping.cache.file">/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/validation.php</parameter>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
     <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="translator.logging">false</parameter>
     <parameter key="translator.default_path">C:\Users\PCS\Desktop\Wadie Pi\Error-makers/translations</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_master_requests">false</parameter>
+<<<<<<< HEAD
     <parameter key="profiler.storage.dsn">file:C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/profiler</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
     <parameter key="debug.container.dump">C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/srcApp_KernelDevDebugContainer.xml</parameter>
+=======
+<<<<<<< HEAD
+    <parameter key="profiler.storage.dsn">file:C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/profiler</parameter>
+    <parameter key="debug.error_handler.throw_at">-1</parameter>
+    <parameter key="debug.container.dump">C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/srcApp_KernelDevDebugContainer.xml</parameter>
+=======
+    <parameter key="profiler.storage.dsn">file:/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/profiler</parameter>
+    <parameter key="debug.error_handler.throw_at">-1</parameter>
+    <parameter key="debug.container.dump">/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/srcApp_KernelDevDebugContainer.xml</parameter>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
@@ -161,7 +199,15 @@
     <parameter key="router.cache_class_prefix">srcApp_KernelDevDebugContainer</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
+<<<<<<< HEAD
     <parameter key="serializer.mapping.cache.file">C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/serialization.php</parameter>
+=======
+<<<<<<< HEAD
+    <parameter key="serializer.mapping.cache.file">C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/serialization.php</parameter>
+=======
+    <parameter key="serializer.mapping.cache.file">/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/serialization.php</parameter>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
     <parameter key="twig.exception_listener.controller">null</parameter>
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
@@ -255,7 +301,15 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
+<<<<<<< HEAD
     <parameter key="doctrine.orm.proxy_dir">C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/doctrine/orm/Proxies</parameter>
+=======
+<<<<<<< HEAD
+    <parameter key="doctrine.orm.proxy_dir">C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/doctrine/orm/Proxies</parameter>
+=======
+    <parameter key="doctrine.orm.proxy_dir">/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/doctrine/orm/Proxies</parameter>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="doctrine.migrations.preferred_em">null</parameter>
     <parameter key="doctrine.migrations.preferred_connection">null</parameter>
@@ -699,7 +753,15 @@
     <service id="cache_warmer" class="Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate" public="true">
       <argument type="tagged_iterator" tag="kernel.cache_warmer"/>
       <argument>true</argument>
+<<<<<<< HEAD
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/srcApp_KernelDevDebugContainerDeprecations.log</argument>
+=======
+<<<<<<< HEAD
+      <argument>C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/srcApp_KernelDevDebugContainerDeprecations.log</argument>
+=======
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/srcApp_KernelDevDebugContainerDeprecations.log</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer" public="true">
       <argument type="tagged_iterator" tag="kernel.cache_clearer"/>
@@ -1204,7 +1266,15 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
+<<<<<<< HEAD
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/pools</argument>
+=======
+<<<<<<< HEAD
+      <argument>C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/pools</argument>
+=======
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/pools</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -1233,7 +1303,15 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
+<<<<<<< HEAD
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/pools</argument>
+=======
+<<<<<<< HEAD
+      <argument>C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/pools</argument>
+=======
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/pools</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
@@ -1344,8 +1422,18 @@
       <argument>0</argument>
       <argument>false</argument>
     </service>
+<<<<<<< HEAD
     <service id=".1_NativeFileSessionHandler~rdrK81s" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler">
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/sessions</argument>
+=======
+<<<<<<< HEAD
+    <service id=".1_NativeFileSessionHandler~7qYCVlO" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
+      <argument>C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/sessions</argument>
+=======
+    <service id=".1_NativeFileSessionHandler~NlNUMTn" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/sessions</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
     </service>
     <service id="session" class="Symfony\Component\HttpFoundation\Session\Session" public="true">
       <argument type="service" id="session.storage.native"/>
@@ -1370,8 +1458,17 @@
       <argument>attributes</argument>
       <factory service="session" method="getBag"/>
     </service>
+<<<<<<< HEAD
     <service id="session.storage.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage">
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/sessions</argument>
+=======
+    <service id="session.storage.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage" public="false">
+<<<<<<< HEAD
+      <argument>C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/sessions</argument>
+=======
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/sessions</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
@@ -1649,14 +1746,31 @@
     <service id="validator.mapping.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="validator.builder"/>
+<<<<<<< HEAD
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/validation.php</argument>
+=======
+<<<<<<< HEAD
+      <argument>C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/validation.php</argument>
+=======
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/validation.php</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
     </service>
     <service id="validator.mapping.cache.symfony" class="Symfony\Component\Validator\Mapping\Cache\Psr6Cache">
       <argument type="service" id="validator.mapping.cache.adapter"/>
       <deprecated package="" version="">The "%service_id%" service is deprecated since Symfony 4.4. Use validator.mapping.cache.adapter instead.</deprecated>
     </service>
+<<<<<<< HEAD
     <service id="validator.mapping.cache.adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/validation.php</argument>
+=======
+    <service id="validator.mapping.cache.adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
+<<<<<<< HEAD
+      <argument>C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/validation.php</argument>
+=======
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/validation.php</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
       <argument type="service" id="cache.validator"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -1727,7 +1841,15 @@
         </argument>
       </argument>
       <argument type="collection">
+<<<<<<< HEAD
         <argument key="cache_dir">C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/translations</argument>
+=======
+<<<<<<< HEAD
+        <argument key="cache_dir">C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/translations</argument>
+=======
+        <argument key="cache_dir">/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/translations</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
         <argument key="debug">true</argument>
         <argument key="resource_files" type="collection">
           <argument key="af" type="collection">
@@ -2402,8 +2524,17 @@
         <argument type="service" id="data_collector.config"/>
       </call>
     </service>
+<<<<<<< HEAD
     <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage">
       <argument>file:C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/profiler</argument>
+=======
+    <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage" public="false">
+<<<<<<< HEAD
+      <argument>file:C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/profiler</argument>
+=======
+      <argument>file:/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/profiler</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener">
       <tag name="kernel.event_subscriber"/>
@@ -2441,7 +2572,15 @@
       <tag name="data_collector" template="@WebProfiler/Collector/logger.html.twig" id="logger" priority="300"/>
       <tag name="monolog.logger" channel="profiler"/>
       <argument type="service" id="monolog.logger.profiler" on-invalid="ignore"/>
+<<<<<<< HEAD
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/srcApp_KernelDevDebugContainer</argument>
+=======
+<<<<<<< HEAD
+      <argument>C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/srcApp_KernelDevDebugContainer</argument>
+=======
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/srcApp_KernelDevDebugContainer</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
       <argument type="service" id="request_stack" on-invalid="ignore"/>
     </service>
     <service id="data_collector.time" class="Symfony\Component\HttpKernel\DataCollector\TimeDataCollector">
@@ -3121,7 +3260,15 @@
       <argument type="service" id=".service_locator.EyZUPFz.router.default"/>
       <argument>kernel::loadRoutes</argument>
       <argument type="collection">
+<<<<<<< HEAD
         <argument key="cache_dir">C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev</argument>
+=======
+<<<<<<< HEAD
+        <argument key="cache_dir">C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev</argument>
+=======
+        <argument key="cache_dir">/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\CompiledUrlGenerator</argument>
         <argument key="generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\CompiledUrlGeneratorDumper</argument>
@@ -3221,13 +3368,29 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
+<<<<<<< HEAD
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/annotations.php</argument>
+=======
+<<<<<<< HEAD
+      <argument>C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/annotations.php</argument>
+=======
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/annotations.php</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
       <argument>#^Symfony\\(?:Component\\HttpKernel\\|Bundle\\FrameworkBundle\\Controller\\(?!.*Controller$))#</argument>
       <argument>true</argument>
     </service>
     <service id="annotations.cache_adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
       <tag name="container.hot_path"/>
+<<<<<<< HEAD
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/annotations.php</argument>
+=======
+<<<<<<< HEAD
+      <argument>C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/annotations.php</argument>
+=======
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/annotations.php</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -3339,10 +3502,24 @@
           </service>
         </argument>
       </argument>
+<<<<<<< HEAD
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/serialization.php</argument>
     </service>
     <service id="serializer.mapping.cache.symfony" class="Psr\Cache\CacheItemPoolInterface">
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/serialization.php</argument>
+=======
+<<<<<<< HEAD
+      <argument>C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/serialization.php</argument>
+    </service>
+    <service id="serializer.mapping.cache.symfony" class="Psr\Cache\CacheItemPoolInterface" public="false">
+      <argument>C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/serialization.php</argument>
+=======
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/serialization.php</argument>
+    </service>
+    <service id="serializer.mapping.cache.symfony" class="Psr\Cache\CacheItemPoolInterface" public="false">
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/serialization.php</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
       <argument type="service" id="cache.serializer"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -3494,7 +3671,15 @@
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
         <argument key="autoescape">name</argument>
+<<<<<<< HEAD
         <argument key="cache">C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/twig</argument>
+=======
+<<<<<<< HEAD
+        <argument key="cache">C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/twig</argument>
+=======
+        <argument key="cache">/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/twig</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
         <argument key="charset">UTF-8</argument>
       </argument>
       <call method="addExtension">
@@ -4509,7 +4694,15 @@
         <argument type="service" id="doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
+<<<<<<< HEAD
         <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/doctrine/orm/Proxies</argument>
+=======
+<<<<<<< HEAD
+        <argument>C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/doctrine/orm/Proxies</argument>
+=======
+        <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/doctrine/orm/Proxies</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -5630,7 +5823,15 @@
       <tag name="console.command" command="server:run"/>
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers/public</argument>
       <argument>dev</argument>
+<<<<<<< HEAD
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache</argument>
+=======
+<<<<<<< HEAD
+      <argument>C:\Users\doghm\Desktop\PiDev\ErrorMakers-3A45</argument>
+=======
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
       <call method="setName">
         <argument>server:run</argument>
       </call>
@@ -5639,21 +5840,45 @@
       <tag name="console.command" command="server:start"/>
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers/public</argument>
       <argument>dev</argument>
+<<<<<<< HEAD
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache</argument>
+=======
+<<<<<<< HEAD
+      <argument>C:\Users\doghm\Desktop\PiDev\ErrorMakers-3A45</argument>
+=======
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
       <call method="setName">
         <argument>server:start</argument>
       </call>
     </service>
     <service id="web_server.command.server_stop" class="Symfony\Bundle\WebServerBundle\Command\ServerStopCommand">
       <tag name="console.command" command="server:stop"/>
+<<<<<<< HEAD
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache</argument>
+=======
+<<<<<<< HEAD
+      <argument>C:\Users\doghm\Desktop\PiDev\ErrorMakers-3A45</argument>
+=======
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
       <call method="setName">
         <argument>server:stop</argument>
       </call>
     </service>
     <service id="web_server.command.server_status" class="Symfony\Bundle\WebServerBundle\Command\ServerStatusCommand">
       <tag name="console.command" command="server:status"/>
+<<<<<<< HEAD
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache</argument>
+=======
+<<<<<<< HEAD
+      <argument>C:\Users\doghm\Desktop\PiDev\ErrorMakers-3A45</argument>
+=======
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
       <call method="setName">
         <argument>server:status</argument>
       </call>
@@ -6493,7 +6718,19 @@
         <argument key="rep" type="service_closure" id="App\Repository\CommandeRepository"/>
       </argument>
     </service>
+<<<<<<< HEAD
     <service id=".service_locator.vL84t4d" class="Symfony\Component\DependencyInjection\ServiceLocator">
+=======
+    <service id=".service_locator.5olCekI" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="commanderepo" type="service_closure" id="App\Repository\CommandeRepository"/>
+        <argument key="lignerepo" type="service_closure" id="App\Repository\LigneCommandeRepository"/>
+        <argument key="livrepo" type="service_closure" id="App\Repository\LivraisonRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.VcLe5V." class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="repo" type="service_closure" id="App\Repository\BoutiqueRepository"/>
@@ -6632,6 +6869,7 @@
         <argument key="rep" type="service_closure" id="App\Repository\VehiculeRepository"/>
       </argument>
     </service>
+<<<<<<< HEAD
     <service id=".service_locator.jTpm.ao" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6826,6 +7064,202 @@
       </argument>
     </service>
     <service id=".service_locator.19_mNxd" class="Symfony\Component\DependencyInjection\ServiceLocator">
+=======
+    <service id=".service_locator.OybctRl" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="App\Controller\AdminController::AcceptDem" type="service_closure" id=".service_locator.9dW19ZD"/>
+        <argument key="App\Controller\AdminController::DeleteDem" type="service_closure" id=".service_locator.RZBlnd0"/>
+        <argument key="App\Controller\AdminController::DeleteUser" type="service_closure" id=".service_locator.N9H1lzz"/>
+        <argument key="App\Controller\AdminController::afficherDemande" type="service_closure" id=".service_locator.RZBlnd0"/>
+        <argument key="App\Controller\AdminController::afficherUser" type="service_closure" id=".service_locator..eSqCpn"/>
+        <argument key="App\Controller\AdminController::index" type="service_closure" id=".service_locator.s9QifXF"/>
+        <argument key="App\Controller\BoutiqueController::Commercant" type="service_closure" id=".service_locator.9swJ6pj"/>
+        <argument key="App\Controller\BoutiqueController::Supprimer" type="service_closure" id=".service_locator.iyp5ci2"/>
+        <argument key="App\Controller\BoutiqueController::add" type="service_closure" id=".service_locator.R_bAl7f"/>
+        <argument key="App\Controller\BoutiqueController::afficher" type="service_closure" id=".service_locator.nxwfP0X"/>
+        <argument key="App\Controller\BoutiqueController::afficherProduit" type="service_closure" id=".service_locator.pkTBxC3"/>
+        <argument key="App\Controller\BoutiqueController::maBoutique" type="service_closure" id=".service_locator.wgJpfRR"/>
+        <argument key="App\Controller\BoutiqueController::update" type="service_closure" id=".service_locator.CAQV149"/>
+        <argument key="App\Controller\CartController::add" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\CartController::add1" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\CartController::delete" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\CartController::delete1" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\CartController::deleteall" type="service_closure" id=".service_locator.o3htLhs"/>
+        <argument key="App\Controller\CartController::index" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\CartController::remove" type="service_closure" id=".service_locator.qjLVb2I"/>
+        <argument key="App\Controller\CommandeController::afficher" type="service_closure" id=".service_locator.3W4j79a"/>
+        <argument key="App\Controller\CommandeController::affichermescommandes" type="service_closure" id=".service_locator.xotv1VO"/>
+        <argument key="App\Controller\CommandeController::ajoutercommande" type="service_closure" id=".service_locator.klL5FJS"/>
+        <argument key="App\Controller\CommandeController::detail" type="service_closure" id=".service_locator.3W4j79a"/>
+        <argument key="App\Controller\CommandeController::modifiercommande" type="service_closure" id=".service_locator.tLO4e6_"/>
+        <argument key="App\Controller\CommandeController::supprimercommande" type="service_closure" id=".service_locator.p26ou2t"/>
+        <argument key="App\Controller\CommentairesController::Supprimer" type="service_closure" id=".service_locator.owUo2kA"/>
+        <argument key="App\Controller\CommentairesController::index" type="service_closure" id=".service_locator.GGjQ1bX"/>
+        <argument key="App\Controller\DemandeController::AddActeur" type="service_closure" id=".service_locator.ykTLCfZ"/>
+        <argument key="App\Controller\DemandeController::index" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\EvenementController::Add" type="service_closure" id=".service_locator.CAQV149"/>
+        <argument key="App\Controller\EvenementController::Supprimer" type="service_closure" id=".service_locator.p5lFTbi"/>
+        <argument key="App\Controller\EvenementController::Update" type="service_closure" id=".service_locator.QVh39BR"/>
+        <argument key="App\Controller\EvenementController::afficher" type="service_closure" id=".service_locator.QVh39BR"/>
+        <argument key="App\Controller\EvenementController::detail" type="service_closure" id=".service_locator.p5IAfle"/>
+        <argument key="App\Controller\FrontController::afficherevenement" type="service_closure" id=".service_locator.iL5tyiY"/>
+        <argument key="App\Controller\FrontController::delete1" type="service_closure" id=".service_locator.qjLVb2I"/>
+        <argument key="App\Controller\FrontController::detail" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\FrontController::details" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\FrontController::index" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\FrontController::loadcart" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\LigneCommandeController::index" type="service_closure" id=".service_locator.zbyTg0K"/>
+        <argument key="App\Controller\LigneCommandeController::supprimercommande" type="service_closure" id=".service_locator.fSKtku3"/>
+        <argument key="App\Controller\LivraisonControlleur::Add" type="service_closure" id=".service_locator.H1C7pzf"/>
+        <argument key="App\Controller\LivraisonControlleur::Supprimer" type="service_closure" id=".service_locator.W._dOeO"/>
+        <argument key="App\Controller\LivraisonControlleur::Update" type="service_closure" id=".service_locator.rPh7Twi"/>
+        <argument key="App\Controller\LivraisonControlleur::addlivraisonJSON" type="service_closure" id=".service_locator.4wRfwhS"/>
+        <argument key="App\Controller\LivraisonControlleur::afficher" type="service_closure" id=".service_locator.u1AbfN5"/>
+        <argument key="App\Controller\LivraisonControlleur::deletelivraisonSON" type="service_closure" id=".service_locator.4wRfwhS"/>
+        <argument key="App\Controller\LivraisonControlleur::updatelivraisonJSON" type="service_closure" id=".service_locator.4wRfwhS"/>
+        <argument key="App\Controller\PaymentController::chekout" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\PaymentController::error" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\PaymentController::success" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\PdfController::bande" type="service_closure" id=".service_locator.5olCekI"/>
+        <argument key="App\Controller\PdfController::index" type="service_closure" id=".service_locator.OoeDy.C"/>
+        <argument key="App\Controller\ProduitController::Supprimer" type="service_closure" id=".service_locator.dCtSWL8"/>
+        <argument key="App\Controller\ProduitController::add" type="service_closure" id=".service_locator.VcLe5V."/>
+        <argument key="App\Controller\ProduitController::afficher" type="service_closure" id=".service_locator.pkTBxC3"/>
+        <argument key="App\Controller\ProduitController::update" type="service_closure" id=".service_locator.CAQV149"/>
+        <argument key="App\Controller\ReclamationController::add" type="service_closure" id=".service_locator.7.Cer78"/>
+        <argument key="App\Controller\ReclamationController::afficheErreur" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\ReclamationController::afficheReponse" type="service_closure" id=".service_locator.2zXwowr"/>
+        <argument key="App\Controller\ReclamationController::afficher" type="service_closure" id=".service_locator.XJ8tPAB"/>
+        <argument key="App\Controller\ReclamationController::index" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\ReclamationController::search" type="service_closure" id=".service_locator.JweFDTe"/>
+        <argument key="App\Controller\ReponseController::Delete_reclamation" type="service_closure" id=".service_locator.9haQGQi"/>
+        <argument key="App\Controller\ReponseController::Delete_reponse" type="service_closure" id=".service_locator.XkRG9bV"/>
+        <argument key="App\Controller\ReponseController::addResponse" type="service_closure" id=".service_locator.7FMMvbT"/>
+        <argument key="App\Controller\ReponseController::afficher" type="service_closure" id=".service_locator.M01OQSl"/>
+        <argument key="App\Controller\ReponseController::afficher_reponses" type="service_closure" id=".service_locator.3TCLsVi"/>
+        <argument key="App\Controller\ReponseController::update_reponse" type="service_closure" id=".service_locator.nVBwsfT"/>
+        <argument key="App\Controller\ResetPasswordController::request" type="service_closure" id=".service_locator.tejTvi1"/>
+        <argument key="App\Controller\ResetPasswordController::reset" type="service_closure" id=".service_locator.IHMIEEW"/>
+        <argument key="App\Controller\StatisticController::statistiques" type="service_closure" id=".service_locator.9haQGQi"/>
+        <argument key="App\Controller\UtilisateursController::AddUser" type="service_closure" id=".service_locator.ykTLCfZ"/>
+        <argument key="App\Controller\UtilisateursController::Compte" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\UtilisateursController::ConfirmUser" type="service_closure" id=".service_locator.cTCCVEY"/>
+        <argument key="App\Controller\UtilisateursController::EditPassword" type="service_closure" id=".service_locator.sxGJU_z"/>
+        <argument key="App\Controller\UtilisateursController::Update" type="service_closure" id=".service_locator.cTCCVEY"/>
+        <argument key="App\Controller\UtilisateursController::deleteImg" type="service_closure" id=".service_locator.N9H1lzz"/>
+        <argument key="App\Controller\UtilisateursController::login" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\VehiculeController::AddCamion" type="service_closure" id=".service_locator..eSqCpn"/>
+        <argument key="App\Controller\VehiculeController::AddMoto" type="service_closure" id=".service_locator..eSqCpn"/>
+        <argument key="App\Controller\VehiculeController::AddVoiture" type="service_closure" id=".service_locator..eSqCpn"/>
+        <argument key="App\Controller\VehiculeController::SupprimerCamion" type="service_closure" id=".service_locator.a1R6nYn"/>
+        <argument key="App\Controller\VehiculeController::SupprimerMoto" type="service_closure" id=".service_locator.a1R6nYn"/>
+        <argument key="App\Controller\VehiculeController::SupprimerVoiture" type="service_closure" id=".service_locator.a1R6nYn"/>
+        <argument key="App\Controller\VehiculeController::Update" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController::UpdateCamion" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController::UpdateMoto" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController::afficherCamion" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController::afficherMoto" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController::afficherVoiture" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController::index" type="service_closure" id=".service_locator.CAQV149"/>
+        <argument key="App\Controller\AdminController:AcceptDem" type="service_closure" id=".service_locator.9dW19ZD"/>
+        <argument key="App\Controller\AdminController:DeleteDem" type="service_closure" id=".service_locator.RZBlnd0"/>
+        <argument key="App\Controller\AdminController:DeleteUser" type="service_closure" id=".service_locator.N9H1lzz"/>
+        <argument key="App\Controller\AdminController:afficherDemande" type="service_closure" id=".service_locator.RZBlnd0"/>
+        <argument key="App\Controller\AdminController:afficherUser" type="service_closure" id=".service_locator..eSqCpn"/>
+        <argument key="App\Controller\AdminController:index" type="service_closure" id=".service_locator.s9QifXF"/>
+        <argument key="App\Controller\BoutiqueController:Commercant" type="service_closure" id=".service_locator.9swJ6pj"/>
+        <argument key="App\Controller\BoutiqueController:Supprimer" type="service_closure" id=".service_locator.iyp5ci2"/>
+        <argument key="App\Controller\BoutiqueController:add" type="service_closure" id=".service_locator.R_bAl7f"/>
+        <argument key="App\Controller\BoutiqueController:afficher" type="service_closure" id=".service_locator.nxwfP0X"/>
+        <argument key="App\Controller\BoutiqueController:afficherProduit" type="service_closure" id=".service_locator.pkTBxC3"/>
+        <argument key="App\Controller\BoutiqueController:maBoutique" type="service_closure" id=".service_locator.wgJpfRR"/>
+        <argument key="App\Controller\BoutiqueController:update" type="service_closure" id=".service_locator.CAQV149"/>
+        <argument key="App\Controller\CartController:add" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\CartController:add1" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\CartController:delete" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\CartController:delete1" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\CartController:deleteall" type="service_closure" id=".service_locator.o3htLhs"/>
+        <argument key="App\Controller\CartController:index" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\CartController:remove" type="service_closure" id=".service_locator.qjLVb2I"/>
+        <argument key="App\Controller\CommandeController:afficher" type="service_closure" id=".service_locator.3W4j79a"/>
+        <argument key="App\Controller\CommandeController:affichermescommandes" type="service_closure" id=".service_locator.xotv1VO"/>
+        <argument key="App\Controller\CommandeController:ajoutercommande" type="service_closure" id=".service_locator.klL5FJS"/>
+        <argument key="App\Controller\CommandeController:detail" type="service_closure" id=".service_locator.3W4j79a"/>
+        <argument key="App\Controller\CommandeController:modifiercommande" type="service_closure" id=".service_locator.tLO4e6_"/>
+        <argument key="App\Controller\CommandeController:supprimercommande" type="service_closure" id=".service_locator.p26ou2t"/>
+        <argument key="App\Controller\CommentairesController:Supprimer" type="service_closure" id=".service_locator.owUo2kA"/>
+        <argument key="App\Controller\CommentairesController:index" type="service_closure" id=".service_locator.GGjQ1bX"/>
+        <argument key="App\Controller\DemandeController:AddActeur" type="service_closure" id=".service_locator.ykTLCfZ"/>
+        <argument key="App\Controller\DemandeController:index" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\EvenementController:Add" type="service_closure" id=".service_locator.CAQV149"/>
+        <argument key="App\Controller\EvenementController:Supprimer" type="service_closure" id=".service_locator.p5lFTbi"/>
+        <argument key="App\Controller\EvenementController:Update" type="service_closure" id=".service_locator.QVh39BR"/>
+        <argument key="App\Controller\EvenementController:afficher" type="service_closure" id=".service_locator.QVh39BR"/>
+        <argument key="App\Controller\EvenementController:detail" type="service_closure" id=".service_locator.p5IAfle"/>
+        <argument key="App\Controller\FrontController:afficherevenement" type="service_closure" id=".service_locator.iL5tyiY"/>
+        <argument key="App\Controller\FrontController:delete1" type="service_closure" id=".service_locator.qjLVb2I"/>
+        <argument key="App\Controller\FrontController:detail" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\FrontController:details" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\FrontController:index" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\FrontController:loadcart" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\LigneCommandeController:index" type="service_closure" id=".service_locator.zbyTg0K"/>
+        <argument key="App\Controller\LigneCommandeController:supprimercommande" type="service_closure" id=".service_locator.fSKtku3"/>
+        <argument key="App\Controller\LivraisonControlleur:Add" type="service_closure" id=".service_locator.H1C7pzf"/>
+        <argument key="App\Controller\LivraisonControlleur:Supprimer" type="service_closure" id=".service_locator.W._dOeO"/>
+        <argument key="App\Controller\LivraisonControlleur:Update" type="service_closure" id=".service_locator.rPh7Twi"/>
+        <argument key="App\Controller\LivraisonControlleur:addlivraisonJSON" type="service_closure" id=".service_locator.4wRfwhS"/>
+        <argument key="App\Controller\LivraisonControlleur:afficher" type="service_closure" id=".service_locator.u1AbfN5"/>
+        <argument key="App\Controller\LivraisonControlleur:deletelivraisonSON" type="service_closure" id=".service_locator.4wRfwhS"/>
+        <argument key="App\Controller\LivraisonControlleur:updatelivraisonJSON" type="service_closure" id=".service_locator.4wRfwhS"/>
+        <argument key="App\Controller\PaymentController:chekout" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\PaymentController:error" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\PaymentController:success" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\PdfController:bande" type="service_closure" id=".service_locator.5olCekI"/>
+        <argument key="App\Controller\PdfController:index" type="service_closure" id=".service_locator.OoeDy.C"/>
+        <argument key="App\Controller\ProduitController:Supprimer" type="service_closure" id=".service_locator.dCtSWL8"/>
+        <argument key="App\Controller\ProduitController:add" type="service_closure" id=".service_locator.VcLe5V."/>
+        <argument key="App\Controller\ProduitController:afficher" type="service_closure" id=".service_locator.pkTBxC3"/>
+        <argument key="App\Controller\ProduitController:update" type="service_closure" id=".service_locator.CAQV149"/>
+        <argument key="App\Controller\ReclamationController:add" type="service_closure" id=".service_locator.7.Cer78"/>
+        <argument key="App\Controller\ReclamationController:afficheErreur" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\ReclamationController:afficheReponse" type="service_closure" id=".service_locator.2zXwowr"/>
+        <argument key="App\Controller\ReclamationController:afficher" type="service_closure" id=".service_locator.XJ8tPAB"/>
+        <argument key="App\Controller\ReclamationController:index" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\ReclamationController:search" type="service_closure" id=".service_locator.JweFDTe"/>
+        <argument key="App\Controller\ReponseController:Delete_reclamation" type="service_closure" id=".service_locator.9haQGQi"/>
+        <argument key="App\Controller\ReponseController:Delete_reponse" type="service_closure" id=".service_locator.XkRG9bV"/>
+        <argument key="App\Controller\ReponseController:addResponse" type="service_closure" id=".service_locator.7FMMvbT"/>
+        <argument key="App\Controller\ReponseController:afficher" type="service_closure" id=".service_locator.M01OQSl"/>
+        <argument key="App\Controller\ReponseController:afficher_reponses" type="service_closure" id=".service_locator.3TCLsVi"/>
+        <argument key="App\Controller\ReponseController:update_reponse" type="service_closure" id=".service_locator.nVBwsfT"/>
+        <argument key="App\Controller\ResetPasswordController:request" type="service_closure" id=".service_locator.tejTvi1"/>
+        <argument key="App\Controller\ResetPasswordController:reset" type="service_closure" id=".service_locator.IHMIEEW"/>
+        <argument key="App\Controller\StatisticController:statistiques" type="service_closure" id=".service_locator.9haQGQi"/>
+        <argument key="App\Controller\UtilisateursController:AddUser" type="service_closure" id=".service_locator.ykTLCfZ"/>
+        <argument key="App\Controller\UtilisateursController:Compte" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\UtilisateursController:ConfirmUser" type="service_closure" id=".service_locator.cTCCVEY"/>
+        <argument key="App\Controller\UtilisateursController:EditPassword" type="service_closure" id=".service_locator.sxGJU_z"/>
+        <argument key="App\Controller\UtilisateursController:Update" type="service_closure" id=".service_locator.cTCCVEY"/>
+        <argument key="App\Controller\UtilisateursController:deleteImg" type="service_closure" id=".service_locator.N9H1lzz"/>
+        <argument key="App\Controller\UtilisateursController:login" type="service_closure" id=".service_locator.8GkP9wQ"/>
+        <argument key="App\Controller\VehiculeController:AddCamion" type="service_closure" id=".service_locator..eSqCpn"/>
+        <argument key="App\Controller\VehiculeController:AddMoto" type="service_closure" id=".service_locator..eSqCpn"/>
+        <argument key="App\Controller\VehiculeController:AddVoiture" type="service_closure" id=".service_locator..eSqCpn"/>
+        <argument key="App\Controller\VehiculeController:SupprimerCamion" type="service_closure" id=".service_locator.a1R6nYn"/>
+        <argument key="App\Controller\VehiculeController:SupprimerMoto" type="service_closure" id=".service_locator.a1R6nYn"/>
+        <argument key="App\Controller\VehiculeController:SupprimerVoiture" type="service_closure" id=".service_locator.a1R6nYn"/>
+        <argument key="App\Controller\VehiculeController:Update" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController:UpdateCamion" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController:UpdateMoto" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController:afficherCamion" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController:afficherMoto" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController:afficherVoiture" type="service_closure" id=".service_locator.6Iy6cZU"/>
+        <argument key="App\Controller\VehiculeController:index" type="service_closure" id=".service_locator.CAQV149"/>
+      </argument>
+    </service>
+    <service id=".service_locator.u8z4W6F" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntityValidator" type="service_closure" id="doctrine.orm.validator.unique"/>
@@ -7407,6 +7841,7 @@
     <service id="debug.security.user_value_resolver.inner" class="Symfony\Component\Security\Http\Controller\UserValueResolver">
       <argument type="service" id="security.token_storage"/>
     </service>
+<<<<<<< HEAD
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <argument type="service" id=".service_locator.jTpm.ao"/>
     </service>
@@ -7414,6 +7849,15 @@
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <argument type="service" id=".service_locator.jTpm.ao"/>
+=======
+    <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
+      <argument type="service" id=".service_locator.OybctRl"/>
+    </service>
+    <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
+    <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
+    <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
+      <argument type="service" id=".service_locator.OybctRl"/>
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -7621,7 +8065,15 @@
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter">
       <argument>a3wInGjgWV</argument>
       <argument>0</argument>
+<<<<<<< HEAD
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/pools</argument>
+=======
+<<<<<<< HEAD
+      <argument>C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/pools</argument>
+=======
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/pools</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
@@ -7631,7 +8083,15 @@
       <argument>TvXRX0scIy</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
+<<<<<<< HEAD
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/pools</argument>
+=======
+<<<<<<< HEAD
+      <argument>C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/pools</argument>
+=======
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/pools</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -7639,7 +8099,15 @@
       <argument>oc8qyLQh2T</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
+<<<<<<< HEAD
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/pools</argument>
+=======
+<<<<<<< HEAD
+      <argument>C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/pools</argument>
+=======
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/pools</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -7647,7 +8115,15 @@
       <argument>OeIZlWwFbI</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
+<<<<<<< HEAD
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/pools</argument>
+=======
+<<<<<<< HEAD
+      <argument>C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/pools</argument>
+=======
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/pools</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -7655,7 +8131,15 @@
       <argument>d00MXpKizF</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
+<<<<<<< HEAD
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/pools</argument>
+=======
+<<<<<<< HEAD
+      <argument>C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/pools</argument>
+=======
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/pools</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -7663,7 +8147,15 @@
       <argument>6rksbzfQua</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
+<<<<<<< HEAD
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/pools</argument>
+=======
+<<<<<<< HEAD
+      <argument>C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/pools</argument>
+=======
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/pools</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -7673,7 +8165,15 @@
       <argument>sGI8I5LHTH</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
+<<<<<<< HEAD
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/pools</argument>
+=======
+<<<<<<< HEAD
+      <argument>C:/Users/doghm/Desktop/PiDev/ErrorMakers-3A45/var/cache/dev/pools</argument>
+=======
+      <argument>/Users/skanderzouaoui/Documents/ErrorMakers-3A45/var/cache/dev/pools</argument>
+>>>>>>> db12c52c2aab90629ff7231a2f093fd01c4b30c8
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -7825,12 +8325,21 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker"/>
     <service id="SymfonyCasts\Bundle\ResetPassword\ResetPasswordHelperInterface" alias="symfonycasts.reset_password.helper"/>
     <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
+<<<<<<< HEAD
     <service id="Endroid\QrCode\Builder\BuilderInterface" alias="Endroid\QrCode\Builder\Builder"/>
     <service id="Endroid\QrCode\Builder\BuilderRegistryInterface" alias="Endroid\QrCode\Builder\BuilderRegistry"/>
     <service id="Endroid\QrCode\Builder\BuilderInterface $defaultQrCodeBuilder" alias="endroid_qr_code.default_builder"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
     <service id="argument_resolver.controller_locator" alias=".service_locator.jTpm.ao"/>
+=======
+    <service id="Endroid\QrCode\Builder\BuilderInterface" alias="Endroid\QrCode\Builder\Builder" public="false"/>
+    <service id="Endroid\QrCode\Builder\BuilderRegistryInterface" alias="Endroid\QrCode\Builder\BuilderRegistry" public="false"/>
+    <service id="Endroid\QrCode\Builder\BuilderInterface $defaultQrCodeBuilder" alias="endroid_qr_code.default_builder" public="false"/>
+    <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
+    <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.OybctRl"/>
+>>>>>>> fa580fcec8ecd924bd34da1a532e94aa4596b2c4
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

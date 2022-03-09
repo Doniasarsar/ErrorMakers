@@ -96,13 +96,6 @@ class ReponseController extends AbstractController
             $em->persist($reponses);
             $em->flush();
 
-           
-        
-
-       
-
-
-
         $email = (new TemplatedEmail())
         ->from(new Address('ProTECH@gmail.com', 'ProTECH'))
         ->to($recl->getEmail())
