@@ -58,15 +58,9 @@ class CartController extends AbstractController
     public function add1($id,CartService $cartService)
     {
 
-<<<<<<< Updated upstream
      $panier = $cartService->add($id);
 
     return new  Response(json_encode($panier));
-=======
-     $cartService->add($id);
-
-     return new Response(json_encode($resultat)) ;
->>>>>>> Stashed changes
 
 
     }
