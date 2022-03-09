@@ -43,11 +43,14 @@
     <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
     
 
+        <script src="{{asset('js/codeinspiration.js')}}" async ></script>
+
+
 
     
-    <!-- Modernizr js -->
+    <!-- Modernizr js 
     <script src="{{asset('s/vendor/modernizr-2.8.3.min.js')}}j"></script>
-</head>
+--> </head>
         {% endblock %}
    
 <!--[if lt IE 8]>
@@ -232,6 +235,8 @@
                                                  <li class="sub-dropdown-holder"><a href="{{path('r_list', {value:app.user.id}) }}">Historique</a>                                                                                               
                                                  </li>
                                              </ul>
+                                              
+                                             
                                          </li>
                                          {% endif %}       
                                         {% if not app.user %}
@@ -240,7 +245,11 @@
                                                  <li><a href="{{path("usercompte",{'id':app.user.id}) }}">{{app.user.Nom}},{{app.user.Prenom}}</a></li>
                                                  <li><a href="{{path('logout')}}">logout</a></li>
                                         {% endif %}
+                                        
+                                        
+                                                
                                         </ul>
+                                       
                                     </nav>
                                 </div>
                                 <!-- Header Bottom Menu Area End Here -->
@@ -592,7 +601,7 @@
                                         </form>
                                     </div>
                                     <div class="product-additional-info pt-25">
-                                        <a class="wishlist-btn" href="#"><i class="fa fa-heart-o"></i>Add to wishlist</a>
+                                        <a class="wishlist-btn" ><i class="fa fa-heart-o"></i>Add to wishlist</a>
                                         <div class="product-social-sharing pt-25">
                                             <ul>
                                                 <li class="facebook"><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>

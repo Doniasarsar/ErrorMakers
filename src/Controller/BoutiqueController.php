@@ -92,7 +92,7 @@ class BoutiqueController extends AbstractController
         $boutique = new Boutique();
         $form = $this->createForm(BoutiqueType::class,$boutique);
         $form->add('Ajouter',SubmitType::class);
-        $utilisateur=$repo->findAll();
+        $users=$repo->findAll();
         
  
         $form->handleRequest($request);
@@ -122,23 +122,28 @@ class BoutiqueController extends AbstractController
                     $img->setName($fichier);
                     $boutique->addImage($img);
                                             }
-                       foreach ($user as $utilisateur){
-                          // if($user->getRole()=="ROLE_USER"){
-          
-                        $client = SMSClient::getInstance('xaIAqzMGp0t2Qeh8n40GXr7Q93AkWBBw','2PhqRiICxtNqSiW7');
+
+                     $entityManager = $this->getDoctrine()->getManager();
+                     $entityManager->persist($boutique);
+                     $entityManager->flush();
+
+                     foreach($users as $user){
+                
+
+                        $client = SMSClient::getInstance('xaIAqzMGp0t2Qeh8n40GXr7Q93AkWBBw', '2PhqRiICxtNqSiW7');
                         $sms = new SMS($client);
-                        $sms->message('Nous avons ajouté un nouveau produit '.$boutique->getNomboutique().'
-                                                                             '.$boutique->getDescboutique().'
-                                                                             '.$boutique->getadresseboutique())
-                        ->from('+21655841954')
-                        ->to('+21655203244')
-                        ->send();
-                                
-                                                                //}
-                                                             }
-             $entityManager = $this->getDoctrine()->getManager();
-             $entityManager->persist($boutique);
-             $entityManager->flush();
+                        $sms->message('Nous avons ajoute une nouvelle boutique Nom :'.$boutique->getNomBoutique().
+                                                                        'Description :'.$boutique->getDescBoutique().
+                                                                        'Adresse :'.$boutique->getAdresseBoutique())
+                            ->from('+21655841954')
+                            ->to("+216".$user->getTelephone())
+                            ->send();
+                       
+            
+                        }
+                    
+                                                          
+             
              
 
 

@@ -2,7 +2,10 @@
 
 namespace App\Controller;
 
+use App\Entity\Note;
+use App\Form\NoteType;
 use App\Entity\Produit;
+use App\Repository\NoteRepository;
 use App\Services\cart\CartService;
 use App\Repository\ProduitRepository;
 use App\Repository\BoutiqueRepository;
@@ -103,7 +106,8 @@ class FrontController extends AbstractController
     /**
      * @Route("/detail/{id}", name="detail")
      */
-    public function detail($id,ProduitRepository $rep,BoutiqueRepository $repp,CartService $cartService)
+    public function detailProd($id,ProduitRepository $rep,BoutiqueRepository $repp,
+    CartService $cartService,Request $request,NoteRepository $noteRepository)
     {
         $produits=$rep->find($id);
         $boutiques=$repp->find($id);
@@ -111,12 +115,31 @@ class FrontController extends AbstractController
         $dataPanier = $cartService->getFullCart();  
         $total = $cartService->getTotal();
 
+        //// initialisation note    
+        $note = new Note();      
+        $noteform = $this->createForm(NoteType::class,$note);
+        $noteform->add('ajouter',SubmitType::class);
+        $noteform->handleRequest($request);
+
+        if ($noteform->isSubmitted() && $noteform->isValid()) {
+           
+            $note->setProduit($produits);
+            $em=$this->getDoctrine()->getManager();
+            
+            $em->persist($note);
+            $em->flush();
+            
+        }
+
+
         return $this->render('front/detail.html.twig', [
             
             'prod' => $produits,
             'bout' => $boutiques,
             'total' => $total,
-            'elements' => $dataPanier
+            'elements' => $dataPanier,
+            'noteform' => $noteform->createView(),
+            'Notes'=> $noteRepository->findByNom($produits->getNomProduit()),
 
         ]);
     }

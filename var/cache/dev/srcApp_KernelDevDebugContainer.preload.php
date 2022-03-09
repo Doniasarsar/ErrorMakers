@@ -10,11 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).''.\DIRECTORY_SEPARATOR.'vendor/autoload.php';
-<<<<<<< HEAD
-(require __DIR__.'/srcApp_KernelDevDebugContainer.php')->set(\ContainerFDy0mAk\srcApp_KernelDevDebugContainer::class, null);
-=======
-require __DIR__.'/ContainerZ4WG1gL/srcApp_KernelDevDebugContainer.php';
->>>>>>> 68d3fb70388084164d3c014cc7a418da74ffa615
+(require __DIR__.'/srcApp_KernelDevDebugContainer.php')->set(\Container7C5VcIC\srcApp_KernelDevDebugContainer::class, null);
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -188,7 +184,6 @@ $classes[] = 'Symfony\Component\HttpKernel\EventListener\DumpListener';
 $classes[] = 'Symfony\Component\VarDumper\Dumper\ContextualizedDumper';
 $classes[] = 'Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider';
 $classes[] = 'Symfony\Component\HttpKernel\Debug\FileLinkFormatter';
-$classes[] = 'string';
 $classes[] = 'Symfony\Bridge\Monolog\Processor\DebugProcessor';
 $classes[] = 'Symfony\Component\Security\Core\Authorization\TraceableAccessDecisionManager';
 $classes[] = 'Symfony\Component\Security\Core\Authorization\AccessDecisionManager';
@@ -230,6 +225,7 @@ $classes[] = 'Doctrine\Migrations\Configuration\Configuration';
 $classes[] = 'Doctrine\Migrations\Metadata\Storage\TableMetadataStorageConfiguration';
 $classes[] = 'Doctrine\Migrations\Configuration\EntityManager\ManagerRegistryEntityManager';
 $classes[] = 'Doctrine\ORM\Mapping\Driver\AnnotationDriver';
+$classes[] = 'Doctrine\ORM\Proxy\Autoloader';
 $classes[] = 'Doctrine\ORM\EntityManager';
 $classes[] = 'Doctrine\ORM\Configuration';
 $classes[] = 'Doctrine\Common\Cache\CacheProvider';
@@ -266,7 +262,6 @@ $classes[] = 'Doctrine\Migrations\Tools\Console\Command\ListCommand';
 $classes[] = 'Symfony\Component\HttpKernel\Controller\ErrorController';
 $classes[] = 'Symfony\Component\ErrorHandler\ErrorRenderer\SerializerErrorRenderer';
 $classes[] = 'Symfony\Bridge\Twig\ErrorRenderer\TwigErrorRenderer';
-$classes[] = 'bool';
 $classes[] = 'Symfony\Component\ErrorHandler\ErrorRenderer\HtmlErrorRenderer';
 $classes[] = 'Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher';
 $classes[] = 'Symfony\Component\EventDispatcher\EventDispatcher';
@@ -592,4 +587,4 @@ $classes[] = 'Symfony\Bundle\WebServerBundle\Command\ServerStartCommand';
 $classes[] = 'Symfony\Bundle\WebServerBundle\Command\ServerStatusCommand';
 $classes[] = 'Symfony\Bundle\WebServerBundle\Command\ServerStopCommand';
 
-Preloader::preload($classes);
+$preloaded = Preloader::preload($classes);

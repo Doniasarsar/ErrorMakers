@@ -1,7 +1,9 @@
+
 {% extends "baseCart.html.twig" %}
 {% block title %}<title>ProTECH|Home</title>{% endblock %}
 
  {% block body %}  
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
 <!-- content-wraper start -->
             <div class="content-wraper">
                 <div class="container">
@@ -29,17 +31,43 @@
                                 <div class="product-info">
                                     <h2>{{prod.nomProduit}}</h2>
 
-                                    <div class="rating-box pt-20">
-                                        <ul class="rating rating-with-review-item">
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                            <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                            <li class="review-item"><a href="#">Read Review</a></li>
-                                            <li class="review-item"><a href="#">Write Review</a></li>
-                                        </ul>
-                                    </div>
+                                     <div class="container">
+                                        <div class="row">
+
+                                           {{form_start(noteform)}}
+                                         <div>
+                                              {{form_widget(noteform.nom , {'value':prod.nomProduit ,'type':'hidden'})}}
+
+                                           </div>
+
+                                                  {% set somme = 0 %}
+                                                 {% for eve in Notes %}
+                                                       {% set somme = (eve.note / Notes|length)+ somme %}  
+                                                 {% endfor %}
+                                                     <div class="rateyo" id= "rating"
+                                                        data-rateyo-rating={{somme}}
+                                                        data-rateyo-num-stars="5"
+                                                        data-rateyo-score="3">
+                                                        </div>
+                                                        <br>
+                                                  <style>
+                                                  h4{
+                                                     color:grey;
+                                                  
+                                                  }
+                                                  </style>
+                    
+                                                 <h4>Raiting : {{somme|number_format(1, '.')}} /5</h4>
+                                                 
+                                                 {{form_widget(noteform.note , { 'id': 'rating','type':'hidden'} ) }}
+                                                 <br>
+                                                 {{form_end(noteform)}}
+                    
+                                                   <p>{{ Notes|length}} Avis</p>
+                                                 <br>
+                                                  
+                                           </div>
+                                    </div>   
                                     <div class="price-box pt-20">
                                         <span class="new-price new-price-2">{{prod.prixProduit}} DT</span>
                                     </div>
@@ -48,6 +76,8 @@
                                             <span>{{prod.descProduit}}</span>
                                         </p>
                                     </div>
+                                                                             <a class="wishlist-btn" href="#"><i class="fa fa-heart-o"></i>Add to wishlist</a>
+
 
                                    {# <div class="single-add-to-cart">
                                     <form action="#" href="{{path('details',{id : bout.id })}}" class="cart-quantity">
