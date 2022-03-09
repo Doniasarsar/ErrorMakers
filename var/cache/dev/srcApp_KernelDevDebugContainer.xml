@@ -1517,6 +1517,11 @@
       <argument type="service" id="assets.empty_version_strategy"/>
       <argument type="service" id="assets.context"/>
     </service>
+    <service id="psr18.http_client" class="Symfony\Component\HttpClient\Psr18Client">
+      <argument type="service" id=".debug.http_client"/>
+      <argument>null</argument>
+      <argument>null</argument>
+    </service>
     <service id="mailer.mailer" class="Symfony\Component\Mailer\Mailer">
       <argument type="service" id="mailer.transports"/>
       <argument>null</argument>
@@ -6411,7 +6416,7 @@
         <argument key="rep" type="service_closure" id="App\Repository\VehiculeRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.EJCGRj5" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.qyLYf6k" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AdminController::AcceptDem" type="service_closure" id=".service_locator.9dW19ZD"/>
@@ -6437,6 +6442,7 @@
         <argument key="App\Controller\CommandeController::afficher" type="service_closure" id=".service_locator.3W4j79a"/>
         <argument key="App\Controller\CommandeController::affichermescommandes" type="service_closure" id=".service_locator.xotv1VO"/>
         <argument key="App\Controller\CommandeController::ajoutercommande" type="service_closure" id=".service_locator.klL5FJS"/>
+        <argument key="App\Controller\CommandeController::detail" type="service_closure" id=".service_locator.3W4j79a"/>
         <argument key="App\Controller\CommandeController::modifiercommande" type="service_closure" id=".service_locator.tLO4e6_"/>
         <argument key="App\Controller\CommandeController::supprimercommande" type="service_closure" id=".service_locator.p26ou2t"/>
         <argument key="App\Controller\CommentairesController::Supprimer" type="service_closure" id=".service_locator.owUo2kA"/>
@@ -6453,6 +6459,7 @@
         <argument key="App\Controller\FrontController::detail" type="service_closure" id=".service_locator.g8vn46o"/>
         <argument key="App\Controller\FrontController::details" type="service_closure" id=".service_locator.g8vn46o"/>
         <argument key="App\Controller\FrontController::index" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\FrontController::loadcart" type="service_closure" id=".service_locator.g8vn46o"/>
         <argument key="App\Controller\LigneCommandeController::index" type="service_closure" id=".service_locator.zbyTg0K"/>
         <argument key="App\Controller\LigneCommandeController::supprimercommande" type="service_closure" id=".service_locator.fSKtku3"/>
         <argument key="App\Controller\LivraisonControlleur::Add" type="service_closure" id=".service_locator.H1C7pzf"/>
@@ -6526,6 +6533,7 @@
         <argument key="App\Controller\CommandeController:afficher" type="service_closure" id=".service_locator.3W4j79a"/>
         <argument key="App\Controller\CommandeController:affichermescommandes" type="service_closure" id=".service_locator.xotv1VO"/>
         <argument key="App\Controller\CommandeController:ajoutercommande" type="service_closure" id=".service_locator.klL5FJS"/>
+        <argument key="App\Controller\CommandeController:detail" type="service_closure" id=".service_locator.3W4j79a"/>
         <argument key="App\Controller\CommandeController:modifiercommande" type="service_closure" id=".service_locator.tLO4e6_"/>
         <argument key="App\Controller\CommandeController:supprimercommande" type="service_closure" id=".service_locator.p26ou2t"/>
         <argument key="App\Controller\CommentairesController:Supprimer" type="service_closure" id=".service_locator.owUo2kA"/>
@@ -6542,6 +6550,7 @@
         <argument key="App\Controller\FrontController:detail" type="service_closure" id=".service_locator.g8vn46o"/>
         <argument key="App\Controller\FrontController:details" type="service_closure" id=".service_locator.g8vn46o"/>
         <argument key="App\Controller\FrontController:index" type="service_closure" id=".service_locator.g8vn46o"/>
+        <argument key="App\Controller\FrontController:loadcart" type="service_closure" id=".service_locator.g8vn46o"/>
         <argument key="App\Controller\LigneCommandeController:index" type="service_closure" id=".service_locator.zbyTg0K"/>
         <argument key="App\Controller\LigneCommandeController:supprimercommande" type="service_closure" id=".service_locator.fSKtku3"/>
         <argument key="App\Controller\LivraisonControlleur:Add" type="service_closure" id=".service_locator.H1C7pzf"/>
@@ -7176,12 +7185,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.EJCGRj5"/>
+      <argument type="service" id=".service_locator.qyLYf6k"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.EJCGRj5"/>
+      <argument type="service" id=".service_locator.qyLYf6k"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -7503,6 +7512,7 @@
     <service id="form.choice_list_factory" alias="form.choice_list_factory.cached" public="false"/>
     <service id="Symfony\Component\Asset\Packages" alias="assets.packages" public="false"/>
     <service id="Symfony\Contracts\HttpClient\HttpClientInterface" alias=".debug.http_client"/>
+    <service id="Psr\Http\Client\ClientInterface" alias="psr18.http_client"/>
     <service id="mailer" alias="mailer.mailer"/>
     <service id="Symfony\Component\Mailer\MailerInterface" alias="mailer.mailer"/>
     <service id="Symfony\Component\Mailer\Transport\TransportInterface" alias="mailer.default_transport"/>
@@ -7590,7 +7600,7 @@
     <service id="Endroid\QrCode\Builder\BuilderInterface $defaultQrCodeBuilder" alias="endroid_qr_code.default_builder" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.EJCGRj5"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.qyLYf6k"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit178137589b3b584ef7861063ef9e2b61
+class ComposerStaticInit970a2a6826b8f8ab627339897b85ce4f
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -20,8 +20,11 @@ class ComposerStaticInit178137589b3b584ef7861063ef9e2b61
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '6a47392539ca2329373e0d33e1dba053' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/bootstrap.php',
+        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'c2aad8997a98dfc4771bdbffea3d62b7' => __DIR__ . '/..' . '/laminas/laminas-code/polyfill/ReflectionEnumPolyfill.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -119,6 +122,8 @@ class ComposerStaticInit178137589b3b584ef7861063ef9e2b61
         array (
             'Psr\\Log\\' => 8,
             'Psr\\Link\\' => 9,
+            'Psr\\Http\\Message\\' => 17,
+            'Psr\\Http\\Client\\' => 16,
             'Psr\\Container\\' => 14,
             'Psr\\Cache\\' => 10,
             'ProxyManager\\' => 13,
@@ -128,6 +133,7 @@ class ComposerStaticInit178137589b3b584ef7861063ef9e2b61
         'M' => 
         array (
             'Monolog\\' => 8,
+            'Mediumart\\Orange\\SMS\\' => 21,
         ),
         'L' => 
         array (
@@ -137,6 +143,12 @@ class ComposerStaticInit178137589b3b584ef7861063ef9e2b61
         array (
             'Knp\\Component\\' => 14,
             'Knp\\Bundle\\PaginatorBundle\\' => 27,
+        ),
+        'G' => 
+        array (
+            'GuzzleHttp\\Psr7\\' => 16,
+            'GuzzleHttp\\Promise\\' => 19,
+            'GuzzleHttp\\' => 11,
         ),
         'F' => 
         array (
@@ -504,6 +516,15 @@ class ComposerStaticInit178137589b3b584ef7861063ef9e2b61
         array (
             0 => __DIR__ . '/..' . '/psr/link/src',
         ),
+        'Psr\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+        ),
+        'Psr\\Http\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-client/src',
+        ),
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
@@ -528,6 +549,10 @@ class ComposerStaticInit178137589b3b584ef7861063ef9e2b61
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Mediumart\\Orange\\SMS\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mediumart/orange-sms/src',
+        ),
         'Laminas\\Code\\' => 
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-code/src',
@@ -539,6 +564,18 @@ class ComposerStaticInit178137589b3b584ef7861063ef9e2b61
         'Knp\\Bundle\\PaginatorBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/knplabs/knp-paginator-bundle/src',
+        ),
+        'GuzzleHttp\\Psr7\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
+        ),
+        'GuzzleHttp\\Promise\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/promises/src',
+        ),
+        'GuzzleHttp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
         'FontLib\\' => 
         array (
@@ -1296,9 +1333,9 @@ class ComposerStaticInit178137589b3b584ef7861063ef9e2b61
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit178137589b3b584ef7861063ef9e2b61::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit178137589b3b584ef7861063ef9e2b61::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit178137589b3b584ef7861063ef9e2b61::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit970a2a6826b8f8ab627339897b85ce4f::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit970a2a6826b8f8ab627339897b85ce4f::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit970a2a6826b8f8ab627339897b85ce4f::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -110,6 +110,26 @@ class CommandeController extends AbstractController
          ]);
 
     }
+     /**
+     * @Route("/admin/detailcommande/{id}", name="detailcommande")
+     */
+
+    function detail($id,CommandeRepository $rep,DemandesRepository $repp,LigneCommandeRepository $ligneCommande)
+    {
+        $demandes= $repp->findAll();
+
+         $commande = $rep->find($id);
+         $ligneCommande = $ligneCommande->findall();
+
+         return $this->render('dashboard/commande/detail.html.twig', [
+             'tab' => $commande,
+             'demandes'=>$demandes,
+             'tab1' => $ligneCommande,
+
+
+         ]);
+
+    }
 
      /**
      * @Route("/admin/suppcommande/{id}", name="adminsupp")
@@ -174,5 +194,5 @@ class CommandeController extends AbstractController
         ]);
     }
 
-
+   
 }
