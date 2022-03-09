@@ -44,15 +44,20 @@
                                            {{ form_widget(userForm.Nom,{'attr':{"class":"mb-0"}}) }}
                                          
                                         </div>
-                                        <div class="col-md-6 mb-20">
-                                            {{ form_label(userForm.Telephone,"Telephone") }}
-                                            {{ form_widget(userForm.Telephone,{'attr':{"class":"mb-0"}}) }}
-                                           
-                                         </div>
-                                        <div class="col-md-6 mb-20">
+                                       
+                                        <div class="col-md-12 mb-20">
                                             {{ form_label(userForm.Email,"Email Adress") }}
                                             {{ form_widget(userForm.Email,{'attr':{"class":"mb-0"}}) }}
                                           </div>
+                                        <div class="col-md-6 mb-20">
+                                            {{ form_label(userForm.Telephone,"Telephone") }}
+                                            {{ form_widget(userForm.Telephone,{'attr':{"class":"mb-0"}}) }}
+                                        
+                                        </div>
+                                        <div class="col-md-6 mb-20">
+                                            {{ form_label(userForm.Age,"Age") }}
+                                            {{ form_widget(userForm.Age,{'attr':{"class":"mb-0"}}) }}
+                                        </div>
                                         <div class="col-md-6 mb-20">
                                            {{ form_label(userForm.Password,"Password") }}
                                            {{ form_widget(userForm.Password,{'attr':{"class":"mb-0"}}) }}

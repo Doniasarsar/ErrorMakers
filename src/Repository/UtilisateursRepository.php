@@ -45,6 +45,22 @@ class UtilisateursRepository extends ServiceEntityRepository
             ->getSingleResult()
         ;
     }
+
+    /**
+     * 
+     */
+    public function countByAge()
+    {
+        //$query = $this->createQueryBuilder('c')
+        //->select('SUBSTRING(d.date, 1, 10) as date, COUNT(c) as count')
+        //->groupBy('date')
+        //;
+        //return $query->getQuery()->getResult();
+        $query = $this->getEntityManager()->createQuery("
+           SELECT u.Age as age, COUNT(u) as count FROM App\Entity\Utilisateurs u GROUP BY age
+       ");
+        return $query->getResult();
+    }
 /*
     public function CountClient()
     {

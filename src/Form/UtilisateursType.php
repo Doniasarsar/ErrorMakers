@@ -9,6 +9,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Captcha\Bundle\CaptchaBundle\Form\Type\CaptchaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Captcha\Bundle\CaptchaBundle\Validator\Constraints\ValidCaptcha;
@@ -22,6 +23,13 @@ class UtilisateursType extends AbstractType
             ->add('Prenom', TextType::class)
             ->add('Email' ,EmailType::class)
             ->add('Telephone',NumberType::class)
+            ->add('Age', ChoiceType::class, [
+                'choices' => [
+                    "16-25" => "16-25",
+                    "25-40"  => "20-40",
+                    "40+"  => "40+",
+                ]
+            ])
             ->add('Password', PasswordType::class)
             ->add('ConfirmPassword', PasswordType::class)
             ->add('QuestionSecurite1', TextType::class)
