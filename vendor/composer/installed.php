@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '71002acaf839110478f6e70280429db778bcf347',
+        'reference' => 'd89da3b5f211d9d7c856b24d2e08e51f39233dcb',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '71002acaf839110478f6e70280429db778bcf347',
+            'reference' => 'd89da3b5f211d9d7c856b24d2e08e51f39233dcb',
             'dev_requirement' => false,
         ),
         'bacon/bacon-qr-code' => array(
@@ -601,8 +601,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0.0',
-                1 => '1.0|2.0',
+                0 => '1.0|2.0',
+                1 => '1.0.0',
             ),
         ),
         'psr/simple-cache-implementation' => array(
