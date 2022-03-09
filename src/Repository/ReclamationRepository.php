@@ -64,6 +64,14 @@ class ReclamationRepository extends ServiceEntityRepository
             ->getResult()
         ;
     }
+
+    public function searchRec($str1){
+        return $this->createQueryBuilder('r')
+            ->where('r.type LIKE :t ')
+            ->setParameter('t','%'.$str1.'%')
+            ->getQuery()
+            ->getResult();
+    }
     
    /**
     * 
