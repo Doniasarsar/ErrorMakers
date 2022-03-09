@@ -110,6 +110,22 @@ class CommandeController extends AbstractController
          ]);
 
     }
+     /**
+     * @Route("/admin/detailcommande/{id}", name="detailcommande")
+     */
+
+    function detail($id,CommandeRepository $rep,LigneCommandeRepository $ligneCommande,DemandesRepository $repp)
+    {
+        $demandes= $repp->findAll();
+
+         $commande = $rep->find($id);
+         return $this->render('dashboard/commande/detail.html.twig', [
+             'tab' => $commande,
+             'demandes'=>$demandes,
+
+         ]);
+
+    }
 
      /**
      * @Route("/admin/suppcommande/{id}", name="adminsupp")

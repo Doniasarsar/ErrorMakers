@@ -4,48 +4,24 @@
 
 namespace Composer\Autoload;
 
-<<<<<<< HEAD
-class ComposerStaticInitbb54aa9a21566f2aed37ce12a58efa65
-=======
-class ComposerStaticInit016524f8dfaf9f4b79e10b55d1d7faf3
->>>>>>> af06d54c74c16eab49fe8c59fdb65f2e82d7985a
+class ComposerStaticInit139b9722793e3b561b59402d78b20dfb
 {
     public static $files = array (
-        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
-        'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
-        '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
-<<<<<<< HEAD
-        '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
-        'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
-=======
         '92c8763cd6170fce6fcfe7e26b4e8c10' => __DIR__ . '/..' . '/symfony/phpunit-bridge/bootstrap.php',
-<<<<<<< HEAD
-        'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
-        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
-        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
-        '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
-        'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
-        '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
-=======
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
->>>>>>> 68d3fb70388084164d3c014cc7a418da74ffa615
->>>>>>> af06d54c74c16eab49fe8c59fdb65f2e82d7985a
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '6a47392539ca2329373e0d33e1dba053' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/bootstrap.php',
-        '92c8763cd6170fce6fcfe7e26b4e8c10' => __DIR__ . '/..' . '/symfony/phpunit-bridge/bootstrap.php',
-        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         'c2aad8997a98dfc4771bdbffea3d62b7' => __DIR__ . '/..' . '/laminas/laminas-code/polyfill/ReflectionEnumPolyfill.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
-        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -143,8 +119,6 @@ class ComposerStaticInit016524f8dfaf9f4b79e10b55d1d7faf3
         array (
             'Psr\\Log\\' => 8,
             'Psr\\Link\\' => 9,
-            'Psr\\Http\\Message\\' => 17,
-            'Psr\\Http\\Client\\' => 16,
             'Psr\\Container\\' => 14,
             'Psr\\Cache\\' => 10,
             'ProxyManager\\' => 13,
@@ -154,7 +128,6 @@ class ComposerStaticInit016524f8dfaf9f4b79e10b55d1d7faf3
         'M' => 
         array (
             'Monolog\\' => 8,
-            'Mediumart\\Orange\\SMS\\' => 21,
         ),
         'L' => 
         array (
@@ -164,12 +137,6 @@ class ComposerStaticInit016524f8dfaf9f4b79e10b55d1d7faf3
         array (
             'Knp\\Component\\' => 14,
             'Knp\\Bundle\\PaginatorBundle\\' => 27,
-        ),
-        'G' => 
-        array (
-            'GuzzleHttp\\Psr7\\' => 16,
-            'GuzzleHttp\\Promise\\' => 19,
-            'GuzzleHttp\\' => 11,
         ),
         'F' => 
         array (
@@ -218,8 +185,8 @@ class ComposerStaticInit016524f8dfaf9f4b79e10b55d1d7faf3
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -537,15 +504,6 @@ class ComposerStaticInit016524f8dfaf9f4b79e10b55d1d7faf3
         array (
             0 => __DIR__ . '/..' . '/psr/link/src',
         ),
-        'Psr\\Http\\Message\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
-        ),
-        'Psr\\Http\\Client\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/http-client/src',
-        ),
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
@@ -570,10 +528,6 @@ class ComposerStaticInit016524f8dfaf9f4b79e10b55d1d7faf3
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
-        'Mediumart\\Orange\\SMS\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/mediumart/orange-sms/src',
-        ),
         'Laminas\\Code\\' => 
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-code/src',
@@ -585,18 +539,6 @@ class ComposerStaticInit016524f8dfaf9f4b79e10b55d1d7faf3
         'Knp\\Bundle\\PaginatorBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/knplabs/knp-paginator-bundle/src',
-        ),
-        'GuzzleHttp\\Psr7\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
-        ),
-        'GuzzleHttp\\Promise\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/guzzlehttp/promises/src',
-        ),
-        'GuzzleHttp\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
         'FontLib\\' => 
         array (
@@ -672,9 +614,9 @@ class ComposerStaticInit016524f8dfaf9f4b79e10b55d1d7faf3
         ),
         'Doctrine\\Common\\' => 
         array (
-            0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
-            1 => __DIR__ . '/..' . '/doctrine/event-manager/lib/Doctrine/Common',
-            2 => __DIR__ . '/..' . '/doctrine/persistence/lib/Doctrine/Common',
+            0 => __DIR__ . '/..' . '/doctrine/event-manager/lib/Doctrine/Common',
+            1 => __DIR__ . '/..' . '/doctrine/persistence/lib/Doctrine/Common',
+            2 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
         ),
         'Doctrine\\Bundle\\MigrationsBundle\\' => 
         array (
@@ -1354,15 +1296,9 @@ class ComposerStaticInit016524f8dfaf9f4b79e10b55d1d7faf3
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-<<<<<<< HEAD
-            $loader->prefixLengthsPsr4 = ComposerStaticInitbb54aa9a21566f2aed37ce12a58efa65::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitbb54aa9a21566f2aed37ce12a58efa65::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitbb54aa9a21566f2aed37ce12a58efa65::$classMap;
-=======
-            $loader->prefixLengthsPsr4 = ComposerStaticInit016524f8dfaf9f4b79e10b55d1d7faf3::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit016524f8dfaf9f4b79e10b55d1d7faf3::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit016524f8dfaf9f4b79e10b55d1d7faf3::$classMap;
->>>>>>> af06d54c74c16eab49fe8c59fdb65f2e82d7985a
+            $loader->prefixLengthsPsr4 = ComposerStaticInit139b9722793e3b561b59402d78b20dfb::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit139b9722793e3b561b59402d78b20dfb::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit139b9722793e3b561b59402d78b20dfb::$classMap;
 
         }, null, ClassLoader::class);
     }
