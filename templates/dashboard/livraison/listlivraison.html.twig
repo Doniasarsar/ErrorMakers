@@ -78,8 +78,13 @@
                     
                    
                
-                <td><a  class="btn btn-warning" href="{{path("livraison_delete",{'id':class.id}) }}">Delete</a>
-                <a class="btn btn-info" href="{{path("livraison_update",{'id':class.id}) }}">Update</a></td>
+                <td><a  class="btn btn-warning" href="{{path("livraison_delete",{'id':class.id}) }}">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDelete&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                  <br>
+                <a class="btn btn-info" href="{{path("livraison_update",{'id':class.id}) }}">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspUpdate&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                <br>
+                <a class="btn btn-danger" href="{{path("bandelivraison",{'id':class.id}) }}">Bande Livraison</a></td>
+                <br>
+
     
       </tr>
       {% endfor %}
