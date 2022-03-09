@@ -9,12 +9,8 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
     return;
 }
 
-require dirname(__DIR__, 3).''.\DIRECTORY_SEPARATOR.'vendor/autoload.php';
-<<<<<<< HEAD
-(require __DIR__.'/srcApp_KernelDevDebugContainer.php')->set(\Container2geBmas\srcApp_KernelDevDebugContainer::class, null);
-=======
-require __DIR__.'/ContainerXFSxwyF/srcApp_KernelDevDebugContainer.php';
->>>>>>> bc2b98a2c1473393c2929b45479943f19f977890
+require dirname(__DIR__, 3).'/vendor/autoload.php';
+(require __DIR__.'/srcApp_KernelDevDebugContainer.php')->set(\ContainerLIiCaCt\srcApp_KernelDevDebugContainer::class, null);
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -414,13 +410,12 @@ $classes[] = 'Symfony\Component\Security\Http\Firewall\AccessListener';
 $classes[] = 'Symfony\Component\Security\Http\AccessMap';
 $classes[] = 'Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener';
 $classes[] = 'Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener';
-$classes[] = 'Symfony\Component\Security\Http\Session\SessionAuthenticationStrategy';
 $classes[] = 'Symfony\Component\Security\Http\Authentication\DefaultAuthenticationSuccessHandler';
 $classes[] = 'Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler';
 $classes[] = 'Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager';
 $classes[] = 'Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider';
 $classes[] = 'Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider';
-$classes[] = 'Symfony\Component\Security\Core\User\UserChecker';
+$classes[] = 'Symfony\Component\Security\Http\Session\SessionAuthenticationStrategy';
 $classes[] = 'Symfony\Component\Security\Core\Authentication\AuthenticationTrustResolver';
 $classes[] = 'Symfony\Component\Security\Http\Authentication\AuthenticationUtils';
 $classes[] = 'Symfony\Component\Security\Core\Authorization\AuthorizationChecker';
@@ -433,16 +428,16 @@ $classes[] = 'Symfony\Component\Security\Csrf\TokenGenerator\UriSafeTokenGenerat
 $classes[] = 'Symfony\Component\Security\Csrf\TokenStorage\SessionTokenStorage';
 $classes[] = 'Symfony\Component\Security\Core\Encoder\EncoderFactory';
 $classes[] = 'Symfony\Bundle\SecurityBundle\Security\FirewallMap';
-$classes[] = 'Symfony\Bundle\SecurityBundle\Security\FirewallContext';
-$classes[] = 'Symfony\Bundle\SecurityBundle\Security\FirewallConfig';
 $classes[] = 'Symfony\Bundle\SecurityBundle\Security\LazyFirewallContext';
 $classes[] = 'Symfony\Component\Security\Http\Firewall\ExceptionListener';
 $classes[] = 'Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint';
 $classes[] = 'Symfony\Component\Security\Http\Firewall\LogoutListener';
 $classes[] = 'Symfony\Component\Security\Http\Logout\DefaultLogoutSuccessHandler';
+$classes[] = 'Symfony\Bundle\SecurityBundle\Security\FirewallConfig';
+$classes[] = 'Symfony\Bundle\SecurityBundle\Security\FirewallContext';
+$classes[] = 'Symfony\Component\Security\Http\HttpUtils';
 $classes[] = 'Symfony\Component\Security\Http\Logout\CsrfTokenClearingLogoutHandler';
 $classes[] = 'Symfony\Component\Security\Http\Logout\SessionLogoutHandler';
-$classes[] = 'Symfony\Component\Security\Http\HttpUtils';
 $classes[] = 'Symfony\Component\Security\Http\Logout\LogoutUrlGenerator';
 $classes[] = 'Symfony\Component\Security\Core\Encoder\UserPasswordEncoder';
 $classes[] = 'Symfony\Component\Security\Http\RememberMe\ResponseListener';
@@ -451,6 +446,7 @@ $classes[] = 'Symfony\Component\Security\Core\Authentication\Token\Storage\Usage
 $classes[] = 'Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage';
 $classes[] = 'Symfony\Bridge\Doctrine\Security\User\EntityUserProvider';
 $classes[] = 'Symfony\Component\Security\Core\User\InMemoryUserProvider';
+$classes[] = 'Symfony\Component\Security\Core\User\UserChecker';
 $classes[] = 'Symfony\Component\Security\Core\Validator\Constraints\UserPasswordValidator';
 $classes[] = 'Sensio\Bundle\FrameworkExtraBundle\EventListener\HttpCacheListener';
 $classes[] = 'Sensio\Bundle\FrameworkExtraBundle\EventListener\ControllerListener';

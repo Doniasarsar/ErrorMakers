@@ -5,11 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-<<<<<<< HEAD
-        'reference' => 'cd32423784cc58961ab7d22c34c34e214c17cddf',
-=======
-        'reference' => 'c212b60f3757842f186186b13eeed8fa78347b68',
->>>>>>> bc2b98a2c1473393c2929b45479943f19f977890
+        'reference' => '538e8595c7fcf1fdf60ecd75c0899e3d47db7864',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -20,11 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-<<<<<<< HEAD
-            'reference' => 'cd32423784cc58961ab7d22c34c34e214c17cddf',
-=======
-            'reference' => 'c212b60f3757842f186186b13eeed8fa78347b68',
->>>>>>> bc2b98a2c1473393c2929b45479943f19f977890
+            'reference' => '538e8595c7fcf1fdf60ecd75c0899e3d47db7864',
             'dev_requirement' => false,
         ),
         'bacon/bacon-qr-code' => array(
@@ -82,12 +74,12 @@
             'dev_requirement' => false,
         ),
         'doctrine/dbal' => array(
-            'pretty_version' => '3.3.2',
-            'version' => '3.3.2.0',
+            'pretty_version' => '3.3.3',
+            'version' => '3.3.3.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../doctrine/dbal',
             'aliases' => array(),
-            'reference' => '35eae239ef515d55ebb24e9d4715cad09a4f58ed',
+            'reference' => '82331b861727c15b1f457ef05a8729e508e7ead5',
             'dev_requirement' => false,
         ),
         'doctrine/deprecations' => array(
@@ -163,12 +155,12 @@
             'dev_requirement' => false,
         ),
         'doctrine/orm' => array(
-            'pretty_version' => '2.11.1',
-            'version' => '2.11.1.0',
+            'pretty_version' => '2.11.2',
+            'version' => '2.11.2.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../doctrine/orm',
             'aliases' => array(),
-            'reference' => '4b88ce787d3916c8366abf52f6c658a7a27ed3a6',
+            'reference' => '9c351e044478135aec1755e2c0c0493a4b6309db',
             'dev_requirement' => false,
         ),
         'doctrine/persistence' => array(
@@ -243,6 +235,33 @@
             'reference' => 'c828ced1f932094ab79e4120a106a666565e4d9c',
             'dev_requirement' => false,
         ),
+        'guzzlehttp/guzzle' => array(
+            'pretty_version' => '7.4.1',
+            'version' => '7.4.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../guzzlehttp/guzzle',
+            'aliases' => array(),
+            'reference' => 'ee0a041b1760e6a53d2a39c8c34115adc2af2c79',
+            'dev_requirement' => false,
+        ),
+        'guzzlehttp/promises' => array(
+            'pretty_version' => '1.5.1',
+            'version' => '1.5.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../guzzlehttp/promises',
+            'aliases' => array(),
+            'reference' => 'fe752aedc9fd8fcca3fe7ad05d419d32998a06da',
+            'dev_requirement' => false,
+        ),
+        'guzzlehttp/psr7' => array(
+            'pretty_version' => '2.1.0',
+            'version' => '2.1.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../guzzlehttp/psr7',
+            'aliases' => array(),
+            'reference' => '089edd38f5b8abba6cb01567c2a8aaa47cec4c72',
+            'dev_requirement' => false,
+        ),
         'knplabs/knp-components' => array(
             'pretty_version' => 'v3.4.0',
             'version' => '3.4.0.0',
@@ -268,6 +287,15 @@
             'install_path' => __DIR__ . '/../laminas/laminas-code',
             'aliases' => array(),
             'reference' => '6fd96d4d913571a2cd056a27b123fa28cb90ac4e',
+            'dev_requirement' => false,
+        ),
+        'mediumart/orange-sms' => array(
+            'pretty_version' => '2.0.0',
+            'version' => '2.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../mediumart/orange-sms',
+            'aliases' => array(),
+            'reference' => '5350a987b596cb8fc2555da1f7e406f24a02b914',
             'dev_requirement' => false,
         ),
         'monolog/monolog' => array(
@@ -483,7 +511,46 @@
                 0 => '1.0',
             ),
         ),
+        'psr/http-client' => array(
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psr/http-client',
+            'aliases' => array(),
+            'reference' => '2dfb5f6c5eff0e91e20e913f8c5452ed95b86621',
+            'dev_requirement' => false,
+        ),
         'psr/http-client-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.0',
+            ),
+        ),
+        'psr/http-factory' => array(
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psr/http-factory',
+            'aliases' => array(),
+            'reference' => '12ac7fcd07e5b077433f5f2bee95b3a771bf61be',
+            'dev_requirement' => false,
+        ),
+        'psr/http-factory-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.0',
+            ),
+        ),
+        'psr/http-message' => array(
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psr/http-message',
+            'aliases' => array(),
+            'reference' => 'f6561bf28d520154e4b0ec72be95418abe6d9363',
+            'dev_requirement' => false,
+        ),
+        'psr/http-message-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
                 0 => '1.0',
@@ -517,11 +584,7 @@
             'dev_requirement' => false,
             'provided' => array(
                 0 => '1.0|2.0',
-<<<<<<< HEAD
                 1 => '1.0.0 || 2.0.0 || 3.0.0',
-=======
-                1 => '1.0.0',
->>>>>>> bc2b98a2c1473393c2929b45479943f19f977890
             ),
         ),
         'psr/simple-cache-implementation' => array(
@@ -529,6 +592,15 @@
             'provided' => array(
                 0 => '1.0|2.0',
             ),
+        ),
+        'ralouphie/getallheaders' => array(
+            'pretty_version' => '3.0.3',
+            'version' => '3.0.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../ralouphie/getallheaders',
+            'aliases' => array(),
+            'reference' => '120b605dfeb996808c31b6477290a714d356e822',
+            'dev_requirement' => false,
         ),
         'sabberworm/php-css-parser' => array(
             'pretty_version' => '8.4.0',

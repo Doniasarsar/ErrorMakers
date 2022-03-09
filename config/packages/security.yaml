@@ -17,14 +17,28 @@ security:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
-        main:
+        user:
             anonymous: lazy       
             provider: in_database
 
             form_login:
                 login_path: login
                 check_path: login
-                default_target_path: home
+                default_target_path: /home
+                
+
+            logout:
+                path: logout
+                target: home
+
+        admin:
+            anonymous: lazy       
+            provider: in_database
+
+            form_login:
+                login_path: loginadmin
+                check_path: loginadmin
+                default_target_path: /admin/dashboard
                 
 
             logout:
