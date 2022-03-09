@@ -102,10 +102,11 @@
                             {% block stylsheets %}
                             <style>
                             #map {
-                              height:450px ; 
-                              width:500px;
-                              border: 5px solid black;
-                              left: 300px;
+                              height:60vh ; 
+                              width: 150vh;
+                              border: 2px solid black;
+                              bottom: -25px;
+                              left: 30px;
                             }
                             
                             </style>
@@ -218,6 +219,7 @@ const test= document.getElementById('test');
 const map = new mapboxgl.Map({
 container: "map",
 style: `https://basemaps-api.arcgis.com/arcgis/rest/services/styles/${basemapEnum}?type=style&token=${apiKey}`,
+cooperativeGestures: true,
 zoom: 6,
 
 center: [9.541625307219647, 35.660282489135156], // starting position ([lng, lat] for Mombasa, Kenya)
@@ -268,6 +270,10 @@ arcgisRest
 }
 
 marker.on('dragend', onDragEnd);
+map.addControl(new mapboxgl.FullscreenControl());
+map.addControl(new mapboxgl.NavigationControl());
+
+
 
 
 
