@@ -35,6 +35,21 @@ class VehiculeRepository extends ServiceEntityRepository
     }
     
 
+     /**
+    * 
+    */
+    public function countByTypeV(){
+        //$query = $this->createQueryBuilder('c')
+            //->select('SUBSTRING(d.date, 1, 10) as date, COUNT(c) as count')
+            //->groupBy('date')
+        //;
+        //return $query->getQuery()->getResult();
+       $query = $this->getEntityManager()->createQuery("
+           SELECT v.typeVehicule as typeV, COUNT(v) as countV FROM App\Entity\Vehicule v GROUP BY typeV
+       ");
+       return $query->getResult();
+   }
+
     /*
     public function findOneBySomeField($value): ?Vehicule
     {

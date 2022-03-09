@@ -4,8 +4,10 @@ namespace App\Controller;
 
 use App\Entity\Utilisateurs;
 use App\Form\UtilisateursType;
-use App\Repository\DemandesRepository;
 use App\Repository\ProduitRepository;
+use App\Repository\DemandesRepository;
+use App\Repository\VehiculeRepository;
+use App\Repository\LivraisonRepository;
 use App\Repository\ReclamationRepository;
 use App\Repository\UtilisateursRepository;
 use Symfony\Component\HttpFoundation\Request;
@@ -22,7 +24,7 @@ class AdminController extends AbstractController
     /**
      * @Route("/admin/dashboard", name="admin_dashboard")
      */
-    public function index(ReclamationRepository $rep , UtilisateursRepository $urp, DemandesRepository $repD,ProduitRepository $repp)
+    public function index(ReclamationRepository $rep , UtilisateursRepository $urp, DemandesRepository $repD,ProduitRepository $repp, VehiculeRepository $reppo)
     {
 
         //$nbr = $urp->CountClient();
@@ -32,6 +34,10 @@ class AdminController extends AbstractController
 
         $produits = $repp->countByQuantite();
 
+        $vehicules = $reppo->countByTypeV();
+
+        $utilisateurs=$urp->countByAge();
+      
         $recType = [];
         $recCount = []; 
 
@@ -39,6 +45,13 @@ class AdminController extends AbstractController
         $prodNom = [];
         $prodCount = [];
 
+        $typeVehicule = [];
+        $vehCount = [];
+
+        $ageUtilisateurs = [];
+        $countUtilisateurs = [];
+
+     
         foreach($reclamations as $reclamation){
         
         //$recType[] = $reclamation->getType();
@@ -55,6 +68,22 @@ class AdminController extends AbstractController
             //$recCount[] = count($recType);
             }
         
+            foreach($vehicules as $veh){
+        
+                //$recType[] = $produit->getType();
+                $typeVehicule[] = $veh ['typeV'];
+                $vehCount[]= $veh ['countV'];
+                //$recCount[] = count($recType);
+                }
+
+        foreach ($utilisateurs as $users) {
+
+            //$recType[] = $produit->getType();
+            $ageUtilisateurs[] = $users['age'];
+            $countUtilisateurs[] = $users['count'];
+            //$recCount[] = count($recType);
+        }
+            
 
            
        
@@ -65,6 +94,13 @@ class AdminController extends AbstractController
             'demandes' => $demandes,
             'prodQuantite' => json_encode($prodQuantite),
             'prodNom' => json_encode($prodNom),
+            'typeVehicule' => json_encode($typeVehicule),
+            'vehCount' => json_encode($vehCount),
+
+            'ageUtilisateurs' => json_encode($ageUtilisateurs),
+            'countUtilisateurs' => json_encode($countUtilisateurs),
+      
+           
 
         ]);
     }

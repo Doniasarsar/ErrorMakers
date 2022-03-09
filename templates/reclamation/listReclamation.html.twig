@@ -15,9 +15,11 @@
     <!-- Li's Breadcrumb Area End Here -->
     <div class="container align-content-center mt-50">
     <h1 align="center">Reclamations History</h1>
+    <input type="text" id="search" class="form-control col-md-3" placeholder="Search">
     <div class="form-group mt-20">
     <table class="table table-striped">
-        <tr>
+         
+         <tr>
         
             <th>Your Name</th>
             <th>Email</th>
@@ -29,6 +31,8 @@
             <th>Reclamation Status</th>
             <th>Check Response</th>
         </tr>
+        
+        <tbody id="all">
         {% for r in tab %}
             <tr>
             
@@ -37,7 +41,7 @@
                 <td>{{ r.subject}}</td>
                 <td>{{ r.message }}</td>
                 <td>{{ r.type }}</td>
-              <td>  {% for des in tab1 %}
+                <td>  {% for des in tab1 %}
                   {% if des.commande.id == r.id %}
                   *{{ des.produit.nomProduit  }} <br>
                   {% endif %}
@@ -58,9 +62,47 @@
                 
                 {% endif %} 
             </tr>
+
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
         {% endfor %}
-        {{ knp_pagination_render(tab) }}
+    </tbody>
     </table>
+    {{ knp_pagination_render(tab) }}
+
+{% block javascripts %}
+        <script src="{{ asset('js/jquery.min.js') }}"></script>
+        <script>
+        $( document ).ready(function() {
+            var currentRequest = null;
+            $("#search").keyup(function(e){
+                var value = $(this).val();
+                if(value =='')
+                {
+                    currentRequest.abort()
+                }
+                else if(currentRequest != null) {
+                    currentRequest.abort();
+                }
+                
+                currentRequest = $.ajax({
+                    url : "{{ path('ajaxsearchRec') }}",
+                    type : 'GET',
+                    data: {
+                        'searchValue' : value
+                    },
+                    success : function(retour)
+                    {
+                        $('#all').html(retour);
+                    },
+                });
+                return false;
+            });
+        });
+    </script>
+{% endblock %}
     </div>
     </div>
 {% endblock %}

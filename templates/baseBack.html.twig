@@ -7,6 +7,10 @@
   <title>ProTECH| Dashboard</title>
   {% block stylesheets %}
   <!-- Google Font: Source Sans Pro -->
+    <link href='fullcalendar/main.css' rel='stylesheet' />
+<!-- fullCalendar -->
+  <link rel="stylesheet" href="{{asset('plugins/fullcalendar/main.css')}}">
+  
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback')">
   <!-- Font Awesome -->
@@ -38,10 +42,7 @@
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
 
-    <!-- Preloader -->
-    <div class="preloader flex-column justify-content-center align-items-center">
-      <img class="animation__shake" src="{{asset('dist/img/logo.png')}}" alt="AdminLTELogo" height="60" width="60">
-    </div>
+  
 
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -83,7 +84,7 @@
         </li>
       {% if is_granted('ROLE_ADMIN') %}
         <!-- Messages Dropdown Menu -->
-        <li class="nav-item dropdown">
+        <li id="dem" class="nav-item dropdown">
           <a class="nav-link" data-toggle="dropdown" href="#">
             <i class="far fa-user"></i>
             <span class="badge badge-danger navbar-badge">{{demandes | length}}</span>
@@ -268,6 +269,12 @@
                     <p>Ligne de Commandes</p>
                   </a>
                 </li>
+                <li class="nav-item">
+                  <a href="{{path('livraison_list')}}" class="nav-link ">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Liste Livraisons</p>
+                  </a>
+                </li>
 
               </ul>
 
@@ -449,6 +456,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
   integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg=="
   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="{{asset('plugins/fullcalendar/main.js')}}"></script>
+  <script>
+  $(document).ready(function () {
+      setInterval(function () {
+        $("#dem").load(window.location.href + " #dem");
+      }, 6000);
+    });
+  </script>
 
 
 {% endblock %}
