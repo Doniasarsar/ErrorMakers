@@ -5,11 +5,14 @@ namespace App\Controller;
 use App\Entity\Reponse;
 use App\Form\ReponseType;
 use App\Entity\Reclamation;
+use Symfony\Component\Mime\Address;
 use App\Repository\ReponseRepository;
 use App\Repository\DemandesRepository;
 use App\Repository\ReclamationRepository;
 use Knp\Component\Pager\PaginatorInterface;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Validator\Constraints\DateTime;
@@ -71,7 +74,7 @@ class ReponseController extends AbstractController
     /**
      * @Route("/reponse/add/{id}", name="rep_add")
      */
-    public function addResponse (Reclamation $recl,Reclamation $subj,Request $req, ReclamationRepository $rep, $id,SessionInterface $session,DemandesRepository $repp)
+    public function addResponse (MailerInterface $mailer, Reclamation $recl,Reclamation $subj,Request $req, ReclamationRepository $rep, $id,SessionInterface $session,DemandesRepository $repp)
     {   
         $demandes=$repp->findAll();
        
@@ -92,6 +95,15 @@ class ReponseController extends AbstractController
             $em=$this->getDoctrine()->getManager();
             $em->persist($reponses);
             $em->flush();
+
+        $email = (new TemplatedEmail())
+        ->from(new Address('ProTECH@gmail.com', 'ProTECH'))
+        ->to($recl->getEmail())
+        ->subject('You have received a response to your reclamation')
+        ->htmlTemplate('emails/email.html.twig');
+
+         $mailer->send($email);
+
             $this->addFlash('success', 'Your Response is added successfully');
             return $this->redirectToRoute('reponse_list');
 

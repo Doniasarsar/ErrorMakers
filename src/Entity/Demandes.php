@@ -62,6 +62,8 @@ class Demandes implements UserInterface
      */
     private $ConfirmPassword;
 
+    protected $captchaCode;
+
     
 
     /**
@@ -256,6 +258,17 @@ class Demandes implements UserInterface
 
         return $this;
     }
+
+    public function getCaptchaCode()
+    {
+        return $this->captchaCode;
+    }
+
+    public function setCaptchaCode($captchaCode)
+    {
+        $this->captchaCode = $captchaCode;
+    }
+
 
     
    

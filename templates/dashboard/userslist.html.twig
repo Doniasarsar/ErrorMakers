@@ -36,9 +36,9 @@
                     <th>NOM</th>
                     <th>PRENOM</th>
                     <th>EMAIL</th>
+                    <th>AGE</th>
                     <th>TELEPHONE</th>
                     <th>ROLE</th>
-                    <th>ETAT</th>
                     <th>OPTION</th>
                     
                   </tr>
@@ -50,6 +50,7 @@
                           <td>{{user.Nom}}</td>
                           <td>{{user.Prenom}}</td>
                           <td>{{user.Email}}</td>
+                          <td>{{user.Age}}</td>
                           <td>{{user.Telephone}}</td>
                           <td>{% for role in user.Role %}
                           {% if role == "ROLE_USER" %} 
@@ -63,7 +64,6 @@
 
                           {% endif %}
                           {% endfor %}</td>
-                          <td>{{user.Etat}}</td>
                          
                           <td><a class="btn btn-danger" href="{{path("admin_userdelete",{'id':user.id}) }}">Delete</a>
 

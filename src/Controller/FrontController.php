@@ -144,6 +144,23 @@ class FrontController extends AbstractController
         ]);
     }
 
+     /**
+     * @Route("/loadcart", name="loadcart")
+     */
+    public function loadcart(CartService $cartService,ProduitRepository $rep, BoutiqueRepository $repp): Response
+    {
+        
+        $dataPanier = $cartService->getFullCart();  
+        $total = $cartService->getTotal();
+
+        return $this->render('/laodcart.html.twig', [
+            'elements' => $dataPanier,
+            'total' => $total,
+            
+        ]);
+    }
+    
+
 
  
    

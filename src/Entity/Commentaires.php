@@ -51,12 +51,12 @@ class Commentaires
     private $annonces;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Commentaires::class, inversedBy="reponses")
+     * @ORM\ManyToOne(targetEntity=Commentaires::class, inversedBy="reponses", cascade={"persist", "remove"})
      */
     private $parent;
 
     /**
-     * @ORM\OneToMany(targetEntity=Commentaires::class, mappedBy="parent")
+     * @ORM\OneToMany(targetEntity=Commentaires::class, mappedBy="parent" ,cascade={"persist", "remove"})
      */
     private $reponses;
 

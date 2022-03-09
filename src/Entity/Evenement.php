@@ -96,6 +96,8 @@ class Evenement
     {
         $this->commentaires = new ArrayCollection();
         $this->notes = new ArrayCollection();
+        $this->date = new \DateTime('now');
+        $this->datefin = new \DateTime('now');
     }
 
     public function getId(): ?int

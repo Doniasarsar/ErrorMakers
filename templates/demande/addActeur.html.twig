@@ -79,11 +79,17 @@
                                                  {{ form_widget(ActeurForm.QuestionSecurite2,{'attr':{"class":"mb-0"}}) }}
                                                  
                                               </div>
+                                            <div class="col-md-6 mb-20">
+                                                {{ form_label(ActeurForm.captchaCode,"Captcha") }}
+                                                {{ form_widget(ActeurForm.captchaCode,{'attr':{"class":"mb-0"}}) }}
+                                            
+                                            </div>
                                               <div class="col-md-6 mb-20">
                                                 {{ form_label(ActeurForm.Role,"Rôles") }}
                                                 {{ form_widget(ActeurForm.Role,{'attr':{"class":"mb-0"}}) }}
                                                 {{ form_errors(ActeurForm.Role,{'attr':{"class":"mb-0"}}) }}
                                              </div>
+                                            
                                         <div class="col-12">
                                             {{ form_row(ActeurForm.Register,{'attr':{ "label":"Register" ,"class":"register-button mt-0"}}) }}
                                         </div>

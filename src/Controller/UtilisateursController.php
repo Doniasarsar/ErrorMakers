@@ -210,6 +210,15 @@ class UtilisateursController extends AbstractController
             'total' => $total,
         ]);
     }
+    /**
+     * @Route("/loginadmin", name="loginadmin")
+     */
+    public function loginadmin(): Response
+    {
+            return $this->render('security/loginadmin.html.twig', [
+          
+        ]);
+    }
      /**
      * @Route("/logout", name="logout")
      */

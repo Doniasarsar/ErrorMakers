@@ -1,8 +1,8 @@
 {% extends "baseCart.html.twig" %}
 {% block title %}<title>ProTECH|Home</title>{% endblock %}
     {% block body %}
-    <body>
-
+    <body >
+    
             <!-- Begin Slider With Banner Area -->
             <div class="slider-with-banner">
                 <div class="container">
@@ -233,7 +233,7 @@
                                                 </div>
                                                 <div class="add-actions">
                                                     <ul class="add-actions-link">
-                                                        <li class="add-cart active"><a href="{{path("cart_add1",{id:prod.id})}}">Add to cart</a></li>
+                                                        <li class="add-cart active"><a id="dev_button_start" onclick="getselectcontent('{{ path("cart_add1", {'id': prod.id}) }}')">Add to cart</a></li>
                                                         <li><a class="links-details" href="single-product.html"><i class="fa fa-heart-o"></i></a></li>
                                                         <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i></a></li>
                                                     </ul>
@@ -348,7 +348,7 @@
                                                         <li><a class="links-details" href="single-product.html"><i class="fa fa-heart-o"></i></a></li>
                                                         <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i></a></li>
                                                     </ul>
-                                                </div>
+                                                  </div>
                                             </div>
                                         </div>
                                         <!-- single-product-wrap end -->
@@ -973,4 +973,21 @@
             </div>
             <!-- Group Featured Product Area End Here -->
            <!-- jQuery-V1.12.4 -->
+<script>
+  function getselectcontent(chemin) {
+console.log(chemin);
+$.ajax({
+  type: "POST" , 
+  url: chemin,
+  success: function() {
+    alert("ADDEED");
+  }
+}) 
+}
+
+
+</script>
+
+
+
 {% endblock %}

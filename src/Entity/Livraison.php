@@ -2,12 +2,13 @@
 
 namespace App\Entity;
 use DateTimeInterface;
-use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\LivraisonRepository;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Validator\Constraints\Date;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
 /**
  * @ORM\Entity(repositoryClass=LivraisonRepository::class)
@@ -66,6 +67,10 @@ class Livraison
      */
     private $vehicule;
 
+    
+
+   
+
  
 
   
@@ -77,6 +82,7 @@ class Livraison
     {
         $this->livraisonId = new ArrayCollection();
         $this->dateLivraison = new \DateTime('now');
+        //$this->finLivraison = new \DateTime('now');
     }
 
     public function getId(): ?int
@@ -160,6 +166,10 @@ class Livraison
 
         return $this;
     }
+
+    
+
+    
 
     
 
