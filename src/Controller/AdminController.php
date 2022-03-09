@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Utilisateurs;
 use App\Form\UtilisateursType;
 use App\Repository\ProduitRepository;
+use App\Repository\CommandeRepository;
 use App\Repository\DemandesRepository;
 use App\Repository\VehiculeRepository;
 use App\Repository\LivraisonRepository;
@@ -24,7 +25,7 @@ class AdminController extends AbstractController
     /**
      * @Route("/admin/dashboard", name="admin_dashboard")
      */
-    public function index(ReclamationRepository $rep , UtilisateursRepository $urp, DemandesRepository $repD,ProduitRepository $repp, VehiculeRepository $reppo)
+    public function index(CommandeRepository $commanderepo,ReclamationRepository $rep , UtilisateursRepository $urp, DemandesRepository $repD,ProduitRepository $repp, VehiculeRepository $reppo)
     {
 
         //$nbr = $urp->CountClient();
@@ -37,6 +38,8 @@ class AdminController extends AbstractController
         $vehicules = $reppo->countByTypeV();
 
         $utilisateurs=$urp->countByAge();
+
+        $commandes = $commanderepo->countByDate();
       
         $recType = [];
         $recCount = []; 
@@ -50,6 +53,9 @@ class AdminController extends AbstractController
 
         $ageUtilisateurs = [];
         $countUtilisateurs = [];
+
+        $dates = [];
+        $commandesCount = [];
 
      
         foreach($reclamations as $reclamation){
@@ -83,6 +89,11 @@ class AdminController extends AbstractController
             $countUtilisateurs[] = $users['count'];
             //$recCount[] = count($recType);
         }
+
+        foreach($commandes as $Commande){
+            $dates[] = $Commande ['dateCommande'];
+            $commandesCount[] = $Commande['count'];
+        }
             
 
            
@@ -99,6 +110,9 @@ class AdminController extends AbstractController
 
             'ageUtilisateurs' => json_encode($ageUtilisateurs),
             'countUtilisateurs' => json_encode($countUtilisateurs),
+
+            'dates' => json_encode($dates),
+            'commandesCount' => json_encode($commandesCount),
       
            
 
