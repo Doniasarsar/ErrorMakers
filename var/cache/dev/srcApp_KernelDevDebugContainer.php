@@ -16,6 +16,6 @@ if (!\class_exists(srcApp_KernelDevDebugContainer::class, false)) {
 
 return new \Container2geBmas\srcApp_KernelDevDebugContainer([
     'container.build_hash' => '2geBmas',
-    'container.build_id' => '09106684',
-    'container.build_time' => 1646821586,
+    'container.build_id' => 'eb9e76e3',
+    'container.build_time' => 1646823142,
 ], __DIR__.\DIRECTORY_SEPARATOR.'Container2geBmas');

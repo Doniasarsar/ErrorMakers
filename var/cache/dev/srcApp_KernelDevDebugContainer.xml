@@ -92,7 +92,10 @@
     <parameter key="container.dumper.inline_class_loader">true</parameter>
     <parameter key="container.dumper.inline_factories">true</parameter>
     <parameter key="uploads_directory">C:\Users\PCS\Desktop\Wadie Pi\Error-makers/public/uploads</parameter>
+<<<<<<< Updated upstream
     <parameter key="images_directory">C:\Users\PCS\Desktop\Wadie Pi\Error-makers/public/uploads</parameter>
+=======
+>>>>>>> Stashed changes
     <parameter key="event_dispatcher.event_aliases" type="collection">
       <parameter key="Symfony\Component\Console\Event\ConsoleCommandEvent">console.command</parameter>
       <parameter key="Symfony\Component\Console\Event\ConsoleErrorEvent">console.error</parameter>
@@ -836,11 +839,19 @@
         <argument>/_fragment</argument>
       </call>
     </service>
+<<<<<<< Updated upstream
     <service id=".2_~MxWeIHr">
       <argument type="service" id="request_stack"/>
       <factory class="Symfony\Component\ErrorHandler\ErrorRenderer\HtmlErrorRenderer" method="getAndCleanOutputBuffer"/>
     </service>
     <service id=".1_~MxWeIHr">
+=======
+    <service id=".2_~MxWeIHr" public="false">
+      <argument type="service" id="request_stack"/>
+      <factory class="Symfony\Component\ErrorHandler\ErrorRenderer\HtmlErrorRenderer" method="getAndCleanOutputBuffer"/>
+    </service>
+    <service id=".1_~MxWeIHr" public="false">
+>>>>>>> Stashed changes
       <argument type="service" id="request_stack"/>
       <argument>true</argument>
       <factory class="Symfony\Component\ErrorHandler\ErrorRenderer\HtmlErrorRenderer" method="isDebug"/>
@@ -1017,7 +1028,10 @@
         <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations</argument>
       </argument>
       <argument type="collection">
+<<<<<<< Updated upstream
         <argument>public/images</argument>
+=======
+>>>>>>> Stashed changes
         <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\twig-bridge/Resources/views/Email</argument>
         <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\twig-bridge/Resources/views/Form</argument>
       </argument>
@@ -1039,7 +1053,10 @@
         <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations</argument>
       </argument>
       <argument type="collection">
+<<<<<<< Updated upstream
         <argument>public/images</argument>
+=======
+>>>>>>> Stashed changes
         <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\twig-bridge/Resources/views/Email</argument>
         <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\twig-bridge/Resources/views/Form</argument>
       </argument>
@@ -1340,7 +1357,11 @@
       <argument>0</argument>
       <argument>false</argument>
     </service>
+<<<<<<< Updated upstream
     <service id=".1_NativeFileSessionHandler~rdrK81s" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler">
+=======
+    <service id=".1_NativeFileSessionHandler~rdrK81s" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
+>>>>>>> Stashed changes
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/sessions</argument>
     </service>
     <service id="session" class="Symfony\Component\HttpFoundation\Session\Session" public="true">
@@ -1366,12 +1387,20 @@
       <argument>attributes</argument>
       <factory service="session" method="getBag"/>
     </service>
+<<<<<<< Updated upstream
     <service id="session.storage.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage">
+=======
+    <service id="session.storage.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage" public="false">
+>>>>>>> Stashed changes
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
+<<<<<<< Updated upstream
     <service id="session.handler.native_file" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\StrictSessionHandler">
+=======
+    <service id="session.handler.native_file" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\StrictSessionHandler" public="false">
+>>>>>>> Stashed changes
       <argument type="service" id=".1_NativeFileSessionHandler~rdrK81s"/>
     </service>
     <service id="session.abstract_handler" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\AbstractSessionHandler">
@@ -1404,7 +1433,11 @@
     <service id="twig.extension.security_csrf" class="Symfony\Bridge\Twig\Extension\CsrfExtension">
       <tag name="twig.extension"/>
     </service>
+<<<<<<< Updated upstream
     <service id="form.resolved_type_factory" class="Symfony\Component\Form\Extension\DataCollector\Proxy\ResolvedTypeFactoryDataCollectorProxy">
+=======
+    <service id="form.resolved_type_factory" class="Symfony\Component\Form\Extension\DataCollector\Proxy\ResolvedTypeFactoryDataCollectorProxy" public="false">
+>>>>>>> Stashed changes
       <argument type="service" id=".1_ResolvedFormTypeFactory~CtTnw5g"/>
       <argument type="service" id="data_collector.form"/>
     </service>
@@ -1651,7 +1684,11 @@
       <argument type="service" id="validator.mapping.cache.adapter"/>
       <deprecated package="" version="">The "%service_id%" service is deprecated since Symfony 4.4. Use validator.mapping.cache.adapter instead.</deprecated>
     </service>
+<<<<<<< Updated upstream
     <service id="validator.mapping.cache.adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
+=======
+    <service id="validator.mapping.cache.adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
+>>>>>>> Stashed changes
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/validation.php</argument>
       <argument type="service" id="cache.validator"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
@@ -1735,8 +1772,11 @@
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.ar.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.ar.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.ar.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.ar.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ar.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="az" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.az.xlf</argument>
@@ -1752,7 +1792,10 @@
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.bg.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.bg.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.bg.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.bg.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="bs" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.bs.xlf</argument>
@@ -1768,8 +1811,11 @@
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.cs.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.cs.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.cs.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.cs.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.cs.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="cy" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.cy.xlf</argument>
@@ -1778,14 +1824,20 @@
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.da.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.da.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.da.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.da.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="de" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.de.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.de.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.de.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.de.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.de.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="el" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.el.xlf</argument>
@@ -1796,15 +1848,21 @@
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.en.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.en.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.en.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.en.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.en.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="es" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.es.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.es.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.es.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.es.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.es.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="et" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.et.xlf</argument>
@@ -1815,27 +1873,39 @@
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.eu.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.eu.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.eu.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.eu.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="fa" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.fa.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.fa.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.fa.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.fa.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="fi" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.fi.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.fi.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.fi.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.fi.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.fi.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="fr" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.fr.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.fr.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.fr.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.fr.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.fr.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="gl" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.gl.xlf</argument>
@@ -1851,14 +1921,20 @@
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.hr.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.hr.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.hr.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.hr.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="hu" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.hu.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.hu.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.hu.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.hu.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.hu.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="hy" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.hy.xlf</argument>
@@ -1869,21 +1945,30 @@
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.id.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.id.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.id.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.id.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="it" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.it.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.it.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.it.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.it.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.it.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="ja" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.ja.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.ja.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.ja.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.ja.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ja.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="lb" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.lb.xlf</argument>
@@ -1894,7 +1979,10 @@
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.lt.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.lt.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.lt.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.lt.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="lv" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.lv.xlf</argument>
@@ -1920,8 +2008,11 @@
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.nl.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.nl.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.nl.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle+intl-icu.nl.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.nl.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="nn" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.nn.xlf</argument>
@@ -1932,45 +2023,66 @@
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.no.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.no.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.no.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.no.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="pl" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.pl.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.pl.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.pl.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.pl.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.pl.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="pt" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.pt.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.pt.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.pt.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.pt.xlf</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="pt_BR" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.pt_BR.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.pt_BR.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.pt_BR.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.pt_BR.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="ro" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.ro.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.ro.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.ro.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ro.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="ru" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.ru.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.ru.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.ru.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.ru.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ru.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="sk" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.sk.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.sk.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.sk.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.sk.xlf</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="sl" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.sl.xlf</argument>
@@ -1996,7 +2108,10 @@
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.sv.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.sv.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.sv.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.sv.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="th" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.th.xlf</argument>
@@ -2012,15 +2127,21 @@
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.tr.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.tr.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.tr.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.tr.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.tr.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="uk" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.uk.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.uk.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.uk.xlf</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.uk.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.uk.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
           <argument key="uz" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.uz.xlf</argument>
@@ -2041,6 +2162,7 @@
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations\validators.zh_TW.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations\validators.zh_TW.xlf</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations\security.zh_TW.xlf</argument>
+<<<<<<< Updated upstream
           </argument>
           <argument key="sr" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.sr.xlf</argument>
@@ -2050,14 +2172,19 @@
           </argument>
           <argument key="sw" type="collection">
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.sw.xliff</argument>
+=======
+>>>>>>> Stashed changes
           </argument>
         </argument>
         <argument key="scanned_directories" type="collection">
           <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations</argument>
           <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations</argument>
           <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations</argument>
+<<<<<<< Updated upstream
           <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfonycasts\reset-password-bundle\src/Resources/translations</argument>
           <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations</argument>
+=======
+>>>>>>> Stashed changes
           <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers/translations</argument>
           <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\framework-bundle/translations</argument>
           <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\src/Resources/FrameworkBundle/translations</argument>
@@ -2083,10 +2210,13 @@
           <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\src/Resources/TwigExtraBundle/translations</argument>
           <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\web-server-bundle/translations</argument>
           <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\src/Resources/WebServerBundle/translations</argument>
+<<<<<<< Updated upstream
           <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\src/Resources/SymfonyCastsResetPasswordBundle/translations</argument>
           <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\src/Resources/KnpPaginatorBundle/translations</argument>
           <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\endroid\qr-code-bundle\src/translations</argument>
           <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\src/Resources/EndroidQrCodeBundle/translations</argument>
+=======
+>>>>>>> Stashed changes
           <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\src/Resources/translations</argument>
         </argument>
         <argument key="cache_vary" type="collection">
@@ -2094,8 +2224,11 @@
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\validator/Resources/translations</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\form/Resources/translations</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\security-core/Resources/translations</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfonycasts\reset-password-bundle\src/Resources/translations</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/translations</argument>
+=======
+>>>>>>> Stashed changes
             <argument>translations</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\framework-bundle/translations</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\src/Resources/FrameworkBundle/translations</argument>
@@ -2121,10 +2254,13 @@
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\src/Resources/TwigExtraBundle/translations</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\web-server-bundle/translations</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\src/Resources/WebServerBundle/translations</argument>
+<<<<<<< Updated upstream
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\src/Resources/SymfonyCastsResetPasswordBundle/translations</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\src/Resources/KnpPaginatorBundle/translations</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\endroid\qr-code-bundle\src/translations</argument>
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\src/Resources/EndroidQrCodeBundle/translations</argument>
+=======
+>>>>>>> Stashed changes
             <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\src/Resources/translations</argument>
           </argument>
         </argument>
@@ -2398,7 +2534,11 @@
         <argument type="service" id="data_collector.config"/>
       </call>
     </service>
+<<<<<<< Updated upstream
     <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage">
+=======
+    <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage" public="false">
+>>>>>>> Stashed changes
       <argument>file:C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/profiler</argument>
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener">
@@ -2492,8 +2632,13 @@
         <argument type="service" id="cache.security_expression_language"/>
       </call>
     </service>
+<<<<<<< Updated upstream
     <service id=".1_ResolvedFormTypeFactory~CtTnw5g" class="Symfony\Component\Form\ResolvedFormTypeFactory"/>
     <service id="form.type_extension.form.data_collector" class="Symfony\Component\Form\Extension\DataCollector\Type\DataCollectorTypeExtension">
+=======
+    <service id=".1_ResolvedFormTypeFactory~CtTnw5g" class="Symfony\Component\Form\ResolvedFormTypeFactory" public="false"/>
+    <service id="form.type_extension.form.data_collector" class="Symfony\Component\Form\Extension\DataCollector\Type\DataCollectorTypeExtension" public="false">
+>>>>>>> Stashed changes
       <tag name="form.type_extension"/>
       <argument type="service" id="data_collector.form"/>
     </service>
@@ -3043,7 +3188,11 @@
     <service id="debug.log_processor" class="Symfony\Bridge\Monolog\Processor\DebugProcessor">
       <argument type="service" id="request_stack"/>
     </service>
+<<<<<<< Updated upstream
     <service id=".1_LegacyRouteLoaderContainer~pB9rUyK" class="Symfony\Bundle\FrameworkBundle\Routing\LegacyRouteLoaderContainer">
+=======
+    <service id=".1_LegacyRouteLoaderContainer~pB9rUyK" class="Symfony\Bundle\FrameworkBundle\Routing\LegacyRouteLoaderContainer" public="false">
+>>>>>>> Stashed changes
       <argument type="service" id="service_container"/>
       <argument type="service" id=".service_locator.kODoftA"/>
     </service>
@@ -3182,8 +3331,13 @@
       <argument type="service" id="file_locator"/>
       <argument type="service" id="routing.loader.annotation"/>
     </service>
+<<<<<<< Updated upstream
     <service id=".2_ArrayAdapter~7MRgQ3R" class="Symfony\Component\Cache\Adapter\ArrayAdapter"/>
     <service id=".1_DoctrineProvider~7MRgQ3R" class="Symfony\Component\Cache\DoctrineProvider">
+=======
+    <service id=".2_ArrayAdapter~7MRgQ3R" class="Symfony\Component\Cache\Adapter\ArrayAdapter" public="false"/>
+    <service id=".1_DoctrineProvider~7MRgQ3R" class="Symfony\Component\Cache\DoctrineProvider" public="false">
+>>>>>>> Stashed changes
       <argument type="service" id=".2_ArrayAdapter~7MRgQ3R"/>
     </service>
     <service id="annotations.reader" class="Doctrine\Common\Annotations\AnnotationReader">
@@ -3245,12 +3399,20 @@
     <service id="secrets.local_vault" class="Symfony\Bundle\FrameworkBundle\Secrets\DotenvVault">
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers/.env.dev.local</argument>
     </service>
+<<<<<<< Updated upstream
     <service id=".2_~eMJt6uJ">
+=======
+    <service id=".2_~eMJt6uJ" public="false">
+>>>>>>> Stashed changes
       <argument type="service" id="request_stack"/>
       <argument>true</argument>
       <factory class="Symfony\Component\ErrorHandler\ErrorRenderer\HtmlErrorRenderer" method="isDebug"/>
     </service>
+<<<<<<< Updated upstream
     <service id=".1_~eMJt6uJ">
+=======
+    <service id=".1_~eMJt6uJ" public="false">
+>>>>>>> Stashed changes
       <argument type="service" id="request_stack"/>
       <factory class="Symfony\Component\ErrorHandler\ErrorRenderer\SerializerErrorRenderer" method="getPreferredFormat"/>
     </service>
@@ -3337,7 +3499,11 @@
       </argument>
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/serialization.php</argument>
     </service>
+<<<<<<< Updated upstream
     <service id="serializer.mapping.cache.symfony" class="Psr\Cache\CacheItemPoolInterface">
+=======
+    <service id="serializer.mapping.cache.symfony" class="Psr\Cache\CacheItemPoolInterface" public="false">
+>>>>>>> Stashed changes
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/serialization.php</argument>
       <argument type="service" id="cache.serializer"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
@@ -3479,7 +3645,11 @@
     <service id="framework_extra_bundle.argument_name_convertor" class="Sensio\Bundle\FrameworkExtraBundle\Request\ArgumentNameConverter">
       <argument type="service" id="argument_metadata_factory"/>
     </service>
+<<<<<<< Updated upstream
     <service id=".1_bool~nzdk9z9" class="bool">
+=======
+    <service id=".1_bool~nzdk9z9" class="bool" public="false">
+>>>>>>> Stashed changes
       <argument type="service" id="request_stack"/>
       <argument>true</argument>
       <factory class="Symfony\Bridge\Twig\ErrorRenderer\TwigErrorRenderer" method="isDebug"/>
@@ -3598,7 +3768,10 @@
       <argument type="service" id="kernel"/>
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\src</argument>
       <argument type="collection">
+<<<<<<< Updated upstream
         <argument key="public/images">images</argument>
+=======
+>>>>>>> Stashed changes
         <argument key="C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\twig-bridge/Resources/views/Email">email</argument>
         <argument key="C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\twig-bridge/Resources/views/Form">null</argument>
       </argument>
@@ -3614,10 +3787,13 @@
       <tag name="twig.loader"/>
       <argument type="collection"/>
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers</argument>
+<<<<<<< Updated upstream
       <call method="addPath">
         <argument>public/images</argument>
         <argument>images</argument>
       </call>
+=======
+>>>>>>> Stashed changes
       <call method="addPath">
         <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\symfony\framework-bundle/Resources/views</argument>
         <argument>Framework</argument>
@@ -3675,6 +3851,7 @@
         <argument>!Security</argument>
       </call>
       <call method="addPath">
+<<<<<<< Updated upstream
         <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\vendor\knplabs\knp-paginator-bundle/templates</argument>
         <argument>KnpPaginator</argument>
       </call>
@@ -3683,6 +3860,8 @@
         <argument>!KnpPaginator</argument>
       </call>
       <call method="addPath">
+=======
+>>>>>>> Stashed changes
         <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers/templates</argument>
       </call>
       <call method="addPath">
@@ -3823,7 +4002,11 @@
     <service id="twig.mime_body_renderer" class="Symfony\Bridge\Twig\Mime\BodyRenderer">
       <argument type="service" id="twig"/>
     </service>
+<<<<<<< Updated upstream
     <service id=".2_HtmlDumper~WJP4ZPD" class="Symfony\Component\VarDumper\Dumper\HtmlDumper">
+=======
+    <service id=".2_HtmlDumper~WJP4ZPD" class="Symfony\Component\VarDumper\Dumper\HtmlDumper" public="false">
+>>>>>>> Stashed changes
       <argument>null</argument>
       <argument>UTF-8</argument>
       <argument>1</argument>
@@ -3834,7 +4017,11 @@
         </argument>
       </call>
     </service>
+<<<<<<< Updated upstream
     <service id=".1_NonceGenerator~WJP4ZPD" class="Symfony\Bundle\WebProfilerBundle\Csp\NonceGenerator"/>
+=======
+    <service id=".1_NonceGenerator~WJP4ZPD" class="Symfony\Bundle\WebProfilerBundle\Csp\NonceGenerator" public="false"/>
+>>>>>>> Stashed changes
     <service id="web_profiler.controller.profiler" class="Symfony\Bundle\WebProfilerBundle\Controller\ProfilerController" public="true">
       <argument type="service" id="router.default" on-invalid="null"/>
       <argument type="service" id="profiler" on-invalid="null"/>
@@ -3862,7 +4049,11 @@
       <argument type="service" id="error_handler.error_renderer.html"/>
       <argument type="service" id="profiler" on-invalid="null"/>
     </service>
+<<<<<<< Updated upstream
     <service id="web_profiler.csp.handler" class="Symfony\Bundle\WebProfilerBundle\Csp\ContentSecurityPolicyHandler">
+=======
+    <service id="web_profiler.csp.handler" class="Symfony\Bundle\WebProfilerBundle\Csp\ContentSecurityPolicyHandler" public="false">
+>>>>>>> Stashed changes
       <argument type="service" id=".1_NonceGenerator~WJP4ZPD"/>
     </service>
     <service id="twig.extension.webprofiler" class="Symfony\Bundle\WebProfilerBundle\Twig\WebProfilerExtension">
@@ -3945,6 +4136,7 @@
       <argument type="collection"/>
       <argument type="collection"/>
     </service>
+<<<<<<< Updated upstream
     <service id=".6_HtmlDescriptor~_.zsCAH" class="Symfony\Component\VarDumper\Command\Descriptor\HtmlDescriptor">
       <argument type="service" id="var_dumper.html_dumper"/>
     </service>
@@ -3956,11 +4148,28 @@
       <argument type="service" id="request_stack"/>
     </service>
     <service id=".2_SourceContextProvider~_.zsCAH" class="Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider">
+=======
+    <service id=".6_HtmlDescriptor~_.zsCAH" class="Symfony\Component\VarDumper\Command\Descriptor\HtmlDescriptor" public="false">
+      <argument type="service" id="var_dumper.html_dumper"/>
+    </service>
+    <service id=".5_CliDescriptor~_.zsCAH" class="Symfony\Component\VarDumper\Command\Descriptor\CliDescriptor" public="false">
+      <argument type="service" id="var_dumper.contextualized_cli_dumper.inner"/>
+    </service>
+    <service id=".4_CliContextProvider~_.zsCAH" class="Symfony\Component\VarDumper\Dumper\ContextProvider\CliContextProvider" public="false"/>
+    <service id=".3_RequestContextProvider~_.zsCAH" class="Symfony\Component\VarDumper\Dumper\ContextProvider\RequestContextProvider" public="false">
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id=".2_SourceContextProvider~_.zsCAH" class="Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider" public="false">
+>>>>>>> Stashed changes
       <argument>UTF-8</argument>
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
     </service>
+<<<<<<< Updated upstream
     <service id=".1_SourceContextProvider~_.zsCAH" class="Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider">
+=======
+    <service id=".1_SourceContextProvider~_.zsCAH" class="Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider" public="false">
+>>>>>>> Stashed changes
       <argument>UTF-8</argument>
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
@@ -4340,7 +4549,11 @@
         </service>
       </argument>
     </service>
+<<<<<<< Updated upstream
     <service id=".1_ServiceLocator~mcFxJhq" class="Symfony\Component\DependencyInjection\ServiceLocator">
+=======
+    <service id=".1_ServiceLocator~mcFxJhq" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+>>>>>>> Stashed changes
       <argument type="collection"/>
     </service>
     <service id="doctrine.orm.proxy_cache_warmer" class="Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer">
@@ -7404,7 +7617,11 @@
         <argument key="maker.auto_command.make_migration" type="service_closure" id="maker.auto_command.make_migration"/>
       </argument>
     </service>
+<<<<<<< Updated upstream
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter">
+=======
+    <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter" public="false">
+>>>>>>> Stashed changes
       <argument>a3wInGjgWV</argument>
       <argument>0</argument>
       <argument>C:\Users\PCS\Desktop\Wadie Pi\Error-makers\var\cache\dev/pools</argument>
@@ -7413,7 +7630,11 @@
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
     </service>
+<<<<<<< Updated upstream
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
+=======
+    <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
+>>>>>>> Stashed changes
       <argument>TvXRX0scIy</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
@@ -7421,7 +7642,11 @@
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
+<<<<<<< Updated upstream
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
+=======
+    <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
+>>>>>>> Stashed changes
       <argument>oc8qyLQh2T</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
@@ -7429,7 +7654,11 @@
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
+<<<<<<< Updated upstream
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
+=======
+    <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
+>>>>>>> Stashed changes
       <argument>OeIZlWwFbI</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
@@ -7437,7 +7666,11 @@
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
+<<<<<<< Updated upstream
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
+=======
+    <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
+>>>>>>> Stashed changes
       <argument>d00MXpKizF</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
@@ -7445,7 +7678,11 @@
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
+<<<<<<< Updated upstream
     <service id="cache.property_info.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
+=======
+    <service id="cache.property_info.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
+>>>>>>> Stashed changes
       <argument>6rksbzfQua</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
@@ -7453,9 +7690,15 @@
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
+<<<<<<< Updated upstream
     <service id="cache.doctrine.orm.default.result.recorder_inner" class="Symfony\Component\Cache\Adapter\ArrayAdapter"/>
     <service id="cache.doctrine.orm.default.query.recorder_inner" class="Symfony\Component\Cache\Adapter\ArrayAdapter"/>
     <service id="cache.security_expression_language.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
+=======
+    <service id="cache.doctrine.orm.default.result.recorder_inner" class="Symfony\Component\Cache\Adapter\ArrayAdapter" public="false"/>
+    <service id="cache.doctrine.orm.default.query.recorder_inner" class="Symfony\Component\Cache\Adapter\ArrayAdapter" public="false"/>
+    <service id="cache.security_expression_language.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
+>>>>>>> Stashed changes
       <argument>sGI8I5LHTH</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
