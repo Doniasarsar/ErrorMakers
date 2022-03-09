@@ -35,10 +35,10 @@ class VehiculeRepository extends ServiceEntityRepository
     }
     
 
-     /**
+      /**
     * 
     */
-    public function countByTypeV(){
+    public function countByType(){
         //$query = $this->createQueryBuilder('c')
             //->select('SUBSTRING(d.date, 1, 10) as date, COUNT(c) as count')
             //->groupBy('date')

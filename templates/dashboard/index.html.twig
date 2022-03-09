@@ -140,7 +140,7 @@
                   							<p class="text-center">
 											<strong>Vehicules Statistics</strong>
 										</p>
-										<canvas id="types" width="400" height="200"></canvas>
+										<canvas id="vehicule" width="400" height="200"></canvas>
 
 
 									</div>
@@ -301,17 +301,17 @@
 							}
 							})
 			</script>
-		<script>
-							let typeV = document.querySelector("#typeV")
-							let typeGraph = new Chart(typeV, {
+			<script>
+							let vehicule = document.querySelector("#vehicule")
+							let vehiculeGraph = new Chart(vehicule, {
 							type: "pie",
 							data: {
 							labels: {{ typeVehicule|raw }},
 							datasets: [
 							{
-							label: "Récupération des quantites des produits",
+							label: "Récupération des vehicules des produits",
 							data: {{ vehCount|raw }},
-							backgroundColor: ["lgreen", "lightblue"]
+							backgroundColor: ["black", "yellow","lgreen"]
 							}
 							
 							]

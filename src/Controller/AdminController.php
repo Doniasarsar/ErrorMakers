@@ -34,7 +34,7 @@ class AdminController extends AbstractController
 
         $produits = $repp->countByQuantite();
 
-        $vehicules = $reppo->countByTypeV();
+        $vehicules = $reppo->countByType();
       
         $recType = [];
         $recCount = []; 
