@@ -54,7 +54,13 @@
                 <td>{{ r.subject}}</td>
                 <td>{{ r.message }}</td>
                 <td>{{ r.type }}</td>
-                <td>{{ r.etat }}</td>
+                {% if r.etat == "En cours" %}
+                  <td class="btn btn-warning">{{ r.etat }}</td>
+                {% endif %}
+                {% if r.etat  == "Résolue" %}
+                    <td class="btn btn-success">{{ r.etat }}</td>
+                {% endif %}
+                
                 <td>
                   <a class="btn btn-info" href="{{path('rep_add',{id:r.id})}}">Reply</a>
                   <a class="btn btn-danger" href="{{path('reclam_delete',{id:r.id})}}">delete</a>
@@ -63,9 +69,10 @@
             </tr>
             
         {% endfor %}
-        {{ knp_pagination_render(tab) }}
                   </tbody>
                 </table>
+                        {{ knp_pagination_render(tab) }}
+
               </div>
               <!-- /.card-body -->
             </div>
@@ -106,7 +113,7 @@
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
     $('#example2').DataTable({
-      "paging": true,
+      "paging": false,
       "lengthChange": false,
       "searching": false,
       "ordering": true,
