@@ -1,0 +1,44 @@
+
+    <div class="hm-minicart-trigger">
+        <span class="item-icon"></span>
+        <span class="item-text">{{total}}
+          {#  <span class="cart-item-count">{{quantitetotale}}</span> #}
+        </span>
+    </div>
+    <span></span>
+    
+    
+    <div class="minicart">
+       
+        <ul class="minicart-product-list">
+        {% for element in elements %}    
+            <li>
+                <a href="single-product.html" class="minicart-product-image">
+                    <img src="{{asset('uploads/') ~ element.produit.image }}" alt="cart products">
+
+                </a>
+                <div class="minicart-product-details">
+                    <h6><a href="single-product.html">{{ element.produit.nomProduit}}</a></h6>
+                    <span>{{ element.produit.prixProduit}}DT</span>
+                    <span>* {{ element.quantite}}</span>
+                </div>
+                <button class="close">
+                    
+                    <td class="li-product-remove"><a href="{{path("delete1",{id: element.produit.id})}}"><i class="fa fa-times"></i></a></td>
+
+                </button>
+            </li>
+        {% else %}
+        <td colspan="3" class="text-center">Votre Panier est vide</td>    
+        {% endfor %}
+        </ul>
+        <p class="minicart-total">SUBTOTAL: <span>{{total}}$</span></p>
+        <div class="minicart-button">
+            <a  href="{{path('cart_index')}}" class="li-button li-button-dark li-button-fullwidth li-button-sm">
+                <span>View Full Cart</span>
+            </a>
+          
+        </div>
+        
+        
+    </div>

@@ -159,7 +159,7 @@
                                         
                                         <!-- Header Middle Wishlist Area End Here -->
                                         <!-- Begin Header Mini Cart Area -->
-                                        <li class="hm-minicart">
+                                        <li id="div_refresh" class="hm-minicart">
                                             <div class="hm-minicart-trigger">
                                                 <span class="item-icon"></span>
                                                 <span class="item-text">{{total}}
@@ -176,7 +176,7 @@
                                                     <li>
                                                         <a href="single-product.html" class="minicart-product-image">
                                                             <img src="{{asset('uploads/') ~ element.produit.image }}" alt="cart products">
-
+                                        
                                                         </a>
                                                         <div class="minicart-product-details">
                                                             <h6><a href="single-product.html">{{ element.produit.nomProduit}}</a></h6>
@@ -186,7 +186,7 @@
                                                         <button class="close">
                                                             
                                                             <td class="li-product-remove"><a href="{{path("delete1",{id: element.produit.id})}}"><i class="fa fa-times"></i></a></td>
-
+                                        
                                                         </button>
                                                     </li>
                                                 {% else %}
@@ -203,6 +203,8 @@
                                                 
                                                 
                                             </div>
+                                        
+                                            
                                         </li>
                                         <!-- Header Mini Cart Area End Here -->
                                     </ul>
@@ -687,6 +689,19 @@
 
     }
     </script>
+
+    <script>
+    $(document).ready(function(){
+		 $("#div_refresh").load("loadcart");
+        setInterval(function() {
+            $("#div_refresh").load("loadcart");
+         }, 3000);
+    });
+
+   </script>
+
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+
     
     <script src="https://unpkg.com/@esri/arcgis-rest-request@3.0.0/dist/umd/request.umd.js"></script>
     <script src="https://unpkg.com/@esri/arcgis-rest-geocoding@3.0.0/dist/umd/geocoding.umd.js"></script>
