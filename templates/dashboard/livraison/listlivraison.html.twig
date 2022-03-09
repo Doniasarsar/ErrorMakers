@@ -39,12 +39,13 @@
                    
                     <th>etatLivraison</th>
                     <th>dateLivraison</th>
-                     <th>finLivraison</th>
                   <th>adresseCommande</th>
                      <th>PrixLivraison</th>
                       <th>Livreur</th>
                       <th>Vehicule</th>
-                      
+                    
+                      <th>Map</th>
+                        <th>Message </th>
                     <th>Action</th>
                   </tr>
                   </thead>
@@ -68,6 +69,9 @@
                      
                     <td>{{class.livreur.Email }} </td>
                      <td>{{class.Vehicule.getVehicule() }} </td>
+                     <td>  <a href="https://www.bing.com/maps?q={{class.Commande.latitude}}+%2C+{{class.Commande.longitude}}&cvid=993001ce00214b6ab9ba468a3866a2f6&aqs=edge.0.69i59j69i60l3.670j0j4&FORM=ANAB01&PC=NMTS">View Larger Map</a></small> 
+                     </td>
+                     <td><div class="countdown" dateD="{{ class.dateLivraison|date}}"></div></td>
            
 
                      
@@ -372,5 +376,31 @@
     });
   });
 </script>
+
+  <script>
+        var countdowns = $(".countdown");
+        countdowns.each(function()
+        {
+            var countDownDate = new Date($(this).attr("dateD")).getTime();
+            var countdownObj = $(this);
+            var myfunc = setInterval(function() {
+                var now = new Date().getTime();
+                var timeleft = countDownDate - now;
+
+                var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+                console.log(countdownObj);
+                console.log("updating " + days + "d " + hours + "h " + minutes + "m " + seconds + "s");
+                countdownObj.text(days + "d " + hours + "h " + minutes + "m " + seconds + "s");
+                if (timeleft < 0) {
+                    clearInterval(myfunc);
+                    countdownObj.text(" DELIVERY STARTED!!");
+                
+                }
+            }, 1000);
+        });
+    </script>
 
 {% endblock %}
