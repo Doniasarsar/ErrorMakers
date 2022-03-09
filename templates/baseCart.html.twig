@@ -679,11 +679,13 @@
 </script>
    <script>
     window.onlaod = () => {
+ <script>
+    window.onload = () => {
         
 			// On met un écouteur d'évènements sur tous les boutons répondre
 			document.querySelectorAll("[data-reply]").forEach(element => {
 				element.addEventListener("click", function(){
-                        console.log(this);
+					document.querySelector("#commentaires_parent_id").value = this.dataset.id;
 				});
 			});
 
@@ -707,6 +709,31 @@
     <script src="https://unpkg.com/@esri/arcgis-rest-geocoding@3.0.0/dist/umd/geocoding.umd.js"></script>
     <script src="https://unpkg.com/@esri/arcgis-rest-auth@3.0.0/dist/umd/auth.umd.js"></script>
     <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <script>
+        var countdowns = $(".countdown");
+        countdowns.each(function()
+        {
+            var countDownDate = new Date($(this).attr("dateD")).getTime();
+            var countdownObj = $(this);
+            var myfunc = setInterval(function() {
+                var now = new Date().getTime();
+                var timeleft = countDownDate - now;
+
+                var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+                console.log(countdownObj);
+                console.log("updating " + days + "d " + hours + "h " + minutes + "m " + seconds + "s");
+                countdownObj.text(days + "d " + hours + "h " + minutes + "m " + seconds + "s");
+                if (timeleft < 0) {
+                    clearInterval(myfunc);
+                    countdownObj.text("THIS EVENT HAS BEGAN!!");
+                
+                }
+            }, 1000);
+        });
+    </script>
 {% endblock %}
 </body>
 
