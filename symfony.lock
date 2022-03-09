@@ -2,6 +2,12 @@
     "bacon/bacon-qr-code": {
         "version": "2.0.6"
     },
+    "captcha-com/captcha": {
+        "version": "4.2.5"
+    },
+    "captcha-com/symfony-captcha-bundle": {
+        "version": "4.2.12"
+    },
     "dasprid/enum": {
         "version": "1.0.3"
     },
@@ -671,15 +677,6 @@
     },
     "theseer/tokenizer": {
         "version": "1.2.1"
-    },
-    "toiba/fullcalendar-bundle": {
-        "version": "6.2",
-        "recipe": {
-            "repo": "github.com/symfony/recipes-contrib",
-            "branch": "master",
-            "version": "6.2",
-            "ref": "43c9033fa6f75f9325f9ac21787c8e8acb086934"
-        }
     },
     "twig/extra-bundle": {
         "version": "v3.3.8"

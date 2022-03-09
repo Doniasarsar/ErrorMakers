@@ -47,7 +47,7 @@ class Utilisateurs implements UserInterface
     private $Email;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string")
      * @Assert\NotBlank(message="Telephone is required")
      * @Assert\Length(min=8,
      *                max=8,
@@ -107,6 +107,8 @@ class Utilisateurs implements UserInterface
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $Image;
+
+    protected $captchaCode;
 
     
 
@@ -316,6 +318,16 @@ class Utilisateurs implements UserInterface
         $this->Image = $Image;
 
         return $this;
+    }
+
+    public function getCaptchaCode()
+    {
+        return $this->captchaCode;
+    }
+
+    public function setCaptchaCode($captchaCode)
+    {
+        $this->captchaCode = $captchaCode;
     }
 
     
