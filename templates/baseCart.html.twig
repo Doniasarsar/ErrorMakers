@@ -159,17 +159,20 @@
                                         
                                         <!-- Header Middle Wishlist Area End Here -->
                                         <!-- Begin Header Mini Cart Area -->
-                                        <li id="div_refresh" class="hm-minicart">
+                                        
+                                        <li class="hm-minicart">
                                             <div class="hm-minicart-trigger">
                                                 <span class="item-icon"></span>
-                                                <span class="item-text">{{total}}
+                                                <div id="dem">
+                                                <span  class="item-text">{{total}}
                                                   {#  <span class="cart-item-count">{{quantitetotale}}</span> #}
                                                 </span>
+                                                </div>
                                             </div>
                                             <span></span>
                                             
                                             
-                                            <div class="minicart">
+                                            <div id="div_refresh" class="minicart">
                                                
                                                 <ul class="minicart-product-list">
                                                 {% for element in elements %}    
@@ -701,6 +704,13 @@
     });
 
    </script>
+   <script>
+    $(document).ready(function () {
+        setInterval(function () {
+            $("#dem").load(window.location.href + " #dem");
+        }, 6000);
+        });
+  </script>
 
     <script src="https://code.jquery.com/jquery-latest.js"></script>
 
