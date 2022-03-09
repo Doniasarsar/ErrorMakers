@@ -57,7 +57,7 @@ class UtilisateursRepository extends ServiceEntityRepository
         //;
         //return $query->getQuery()->getResult();
         $query = $this->getEntityManager()->createQuery("
-           SELECT u.Age as age, COUNT(u) as count FROM App\Entity\Utilisateurs u GROUP BY age
+           SELECT u.Age as age, COUNT(u) as count FROM App\Entity\Utilisateurs u where u.Age IS NOT NULL GROUP BY age 
        ");
         return $query->getResult();
     }
