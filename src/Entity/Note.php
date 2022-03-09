@@ -32,6 +32,11 @@ class Note
      */
     private $evenement;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Produit::class, inversedBy="notes")
+     */
+    private $produit;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class Note
     public function setEvenement(?Evenement $evenement): self
     {
         $this->evenement = $evenement;
+
+        return $this;
+    }
+
+    public function getProduit(): ?Produit
+    {
+        return $this->produit;
+    }
+
+    public function setProduit(?Produit $produit): self
+    {
+        $this->produit = $produit;
 
         return $this;
     }
