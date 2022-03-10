@@ -47,7 +47,7 @@ class Utilisateurs implements UserInterface
     private $Email;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string")
      * @Assert\NotBlank(message="Telephone is required")
      * @Assert\Length(min=8,
      *                max=8,
@@ -112,6 +112,11 @@ class Utilisateurs implements UserInterface
      * @ORM\OneToMany(targetEntity=CommentLike::class, mappedBy="utilisateur")
      */
     private $likes;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Age;
 
     
 
@@ -350,6 +355,18 @@ class Utilisateurs implements UserInterface
                 $like->setUtilisateur(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getAge(): ?string
+    {
+        return $this->Age;
+    }
+
+    public function setAge(string $Age): self
+    {
+        $this->Age = $Age;
 
         return $this;
     }

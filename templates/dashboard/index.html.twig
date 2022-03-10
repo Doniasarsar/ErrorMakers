@@ -119,6 +119,7 @@
 							<!-- /.card-header -->
 							<div class="card-body">
 								<div class="row">
+									
 									<div class="col-6">
                   							<p class="text-center">
 											<strong>Reclamation Statistics</strong>
@@ -127,6 +128,7 @@
 
 
 									</div>
+									<br>
 									<div class="col-6">
                   							<p class="text-center">
 											<strong>Produit Statistics</strong>
@@ -135,23 +137,26 @@
 
 
 									</div>
+									<br>
+									<div class="col-12">
+										<p class="text-center">
+											<strong>Users Statistics</strong>
+										</p>
+										<canvas id="users" width="400" height="200"></canvas>
+									
+									
+									</div>
+									<br>
 
-									<div class="col-6">
-                  							<p class="text-center">
+									<div class="col-8">
+										<p class="text-center">
 											<strong>Vehicules Statistics</strong>
 										</p>
-										<canvas id="vehicule" width="400" height="200"></canvas>
-
-
-									</div>
-									<div class="col-6">
-										<p class="text-center">
-											<strong>Commande date Statistics</strong>
-										</p>
-										<canvas id="commandes" width="400" height="200"></canvas>
-									
+										<canvas id="typeV" width="400" height="200"></canvas>
 									
 									</div>
+									
+									
 
 									
 						
@@ -214,14 +219,14 @@
 			<script>
 							let quantite = document.querySelector("#quantite")
 							let quantiteGraph = new Chart(quantite, {
-							type: "pie",
+							type: "doughnut",
 							data: {
 							labels: {{ prodNom|raw }},
 							datasets: [
 							{
 							label: "Récupération des quantites des produits",
 							data: {{ prodQuantite|raw }},
-							backgroundColor: ["lgreen", "lightblue"]
+							backgroundColor: ["blue", "lgreen"]
 							}
 							
 							]
@@ -229,35 +234,36 @@
 							}
 							})
 			</script>
-			<script>
-							let typeV = document.querySelector("#typeV")
-							let typeGraph = new Chart(typeV, {
-							type: "pie",
-							data: {
-							labels: {{ typeVehicule|raw }},
-							datasets: [
-							{
-							label: "Récupération des vehicules des produits",
-							data: {{ vehCount|raw }},
-							backgroundColor: ["black", "yellow","lgreen"]
-							}
-							
-							]
+				<script>
+					let typeV = document.querySelector("#typeV")
+					let typeVGraph = new Chart(typeV, {
+						type: "doughnut",
+						data: {
+							labels: {{ typeVehicule| raw }},
+					datasets: [
+						{
+							label: "Récupération des typeVs des produits",
+							data: {{ vehCount| raw }},
+						backgroundColor: ["pink", "lightblue"]
+											}
 
-							}
-							})
-			</script>
+					]
+				
+											}
+											})
+				</script>
+			
 			<script>
-				let age = document.querySelector("#age")
+				let age = document.querySelector("#users")
 				let ageGraph = new Chart(age, {
-					type: "pie",
+					type: "bar",
 					data: {
 						labels: {{ ageUtilisateurs| raw }},
 				datasets: [
 					{
-						label: "Récupération des ages des produits",
+						label: "Récupération des ages des utilisateurs",
 						data: {{ countUtilisateurs| raw }},
-					backgroundColor: ["lgreen", "lightblue"]
+					backgroundColor: ["lgreen", "lightblue","black"]
 										}
 
 				]
@@ -265,27 +271,6 @@
 										}
 										})
 			</script>
-			<script>
-        let commandes = document.querySelector("#commandes")
-        let comGraph = new Chart(commandes, {
-            type: "line",
-            data: {
-                labels: {{ dates|raw }},
-                datasets: [{
-                    label: "Nombre de Commande",
-                    data: {{ commandesCount|raw }}
-                }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
-            }
-        })
-    </script>
+		
 			
 {% endblock %}
