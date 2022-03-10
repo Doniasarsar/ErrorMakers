@@ -147,6 +147,14 @@
 									
 									</div>
 
+									<div class="col-10">
+										<p class="text-center">
+											<strong>Vehicules Statistics</strong>
+										</p>
+										<canvas id="typeV" width="400" height="200"></canvas>
+									
+									</div>
+
 									<div class="col-12">
 										<p class="text-center">
 									  <strong>Statistiques Commande par date</strong>
@@ -156,17 +164,11 @@
 
 							     </div>
 
+
 									
 									
 									<br>
 
-									<div class="col-8">
-										<p class="text-center">
-											<strong>Vehicules Statistics</strong>
-										</p>
-										<canvas id="typeV" width="400" height="200"></canvas>
-									
-									</div>
 									
 									
 
@@ -246,22 +248,24 @@
 							}
 							})
 			</script>
-				<script>
-					let typeV = document.querySelector("#typeV")
-					let typeVGraph = new Chart(typeV, {
-						type: "doughnut",
-						data: {
-							labels: {{ typeVehicule| raw }},
-					datasets: [
-						{
-							label: "Récupération des typeVs des produits",
-							data: {{ vehCount| raw }},
-						backgroundColor: ["pink", "lightblue"]
-											}
+					<script>
+						let typeV = document.querySelector("#typeV")
+						let typeVGraph = new Chart(typeV, {
+							type: "doughnut",
+							data: {
+								labels: {{ typeVehicule| raw }},
+						datasets: [
+							{
+								label: "Récupération des typeVs des produits",
+								data: {{ vehCount| raw }},
+							backgroundColor: ["blue", "lgreen"]
+												}
 
-							}
-							})
-			</script>
+						]
+					
+												}
+												})
+					</script>
 
 			 <script>
         let commandes = document.querySelector("#commandes")
