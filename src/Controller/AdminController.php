@@ -25,9 +25,8 @@ class AdminController extends AbstractController
     /**
      * @Route("/admin/dashboard", name="admin_dashboard")
      */
-    public function index(CommandeRepository $commanderepo,ReclamationRepository $rep , UtilisateursRepository $urp, DemandesRepository $repD,ProduitRepository $repp, VehiculeRepository $reppo)
+    public function index(CommandeRepository $comRepo,ReclamationRepository $rep , UtilisateursRepository $urp, DemandesRepository $repD,ProduitRepository $repp, VehiculeRepository $reppo)
     {
-
         //$nbr = $urp->CountClient();
 
         $demandes=$repD->findAll();
@@ -38,6 +37,12 @@ class AdminController extends AbstractController
         $vehicules = $reppo->countByType();
 
         $utilisateurs=$urp->countByAge();
+
+      $commandes = $comRepo->countByDate();
+
+      $dates = [];
+      $commandesCount = [];
+
 
       
       
@@ -88,6 +93,17 @@ class AdminController extends AbstractController
              $countUtilisateurs[] = $users['count'];
              //$recCount[] = count($recType);
          }
+        //     //$recType[] = $produit->getType();
+        //     $ageUtilisateurs[] = $users['age'];
+        //     $countUtilisateurs[] = $users['count'];
+        //     //$recCount[] = count($recType);
+        // }
+        
+        // On va chercher le nombre de commande par date
+        foreach($commandes as $Commande){
+            $dates[] = $Commande ['dateCommande'];
+            $commandesCount[] = $Commande['count'];
+        }
 
        
             
@@ -109,6 +125,9 @@ class AdminController extends AbstractController
 
              'ageUtilisateurs' => json_encode($ageUtilisateurs),
              'countUtilisateurs' => json_encode($countUtilisateurs),
+
+            'dates' => json_encode($dates),
+            'commandesCount' => json_encode($commandesCount),
 
       
            
