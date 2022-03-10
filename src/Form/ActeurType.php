@@ -25,6 +25,13 @@ class ActeurType extends AbstractType
         ->add('Prenom', TextType::class)
         ->add('Email' ,EmailType::class)
         ->add('Telephone',NumberType::class)
+        ->add('Age', ChoiceType::class, [
+            'choices' => [
+                "16-25" => "16-25",
+                "25-40"  => "20-40",
+                "40+"  => "40+",
+            ]
+        ])
         ->add('Password', PasswordType::class)
          ->add('ConfirmPassword', PasswordType::class)
         

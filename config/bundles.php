@@ -15,5 +15,7 @@ return [
     Symfony\Bundle\WebServerBundle\WebServerBundle::class => ['dev' => true],
     SymfonyCasts\Bundle\ResetPassword\SymfonyCastsResetPasswordBundle::class => ['all' => true],
     Knp\Bundle\PaginatorBundle\KnpPaginatorBundle::class => ['all' => true],
-    Endroid\QrCodeBundle\EndroidQrCodeBundle::class => ['all' => true],  
+    Endroid\QrCodeBundle\EndroidQrCodeBundle::class => ['all' => true],
+    Captcha\Bundle\CaptchaBundle\CaptchaBundle::class => ['all' => true],
+
 ];

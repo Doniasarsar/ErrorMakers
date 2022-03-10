@@ -51,6 +51,11 @@
                                            
                                          </div>
                                         <div class="col-md-6 mb-20">
+                                            {{ form_label(ActeurForm.Age,"Age") }}
+                                            {{ form_widget(ActeurForm.Age,{'attr':{"class":"mb-0"}}) }}
+                                        
+                                        </div>
+                                        <div class="col-md-12 mb-20">
                                             {{ form_label(ActeurForm.Email,"Email Adress") }}
                                             {{ form_widget(ActeurForm.Email,{'attr':{"class":"mb-0"}}) }}
                                         </div>

@@ -113,6 +113,8 @@ class Utilisateurs implements UserInterface
      */
     private $likes;
 
+    protected $captchaCode;
+
     /**
      * @ORM\Column(type="string", length=255)
      */
@@ -357,6 +359,16 @@ class Utilisateurs implements UserInterface
         }
 
         return $this;
+    }
+    
+    public function getCaptchaCode()
+    {
+        return $this->captchaCode;
+    }
+
+    public function setCaptchaCode($captchaCode)
+    {
+        $this->captchaCode = $captchaCode;
     }
 
     public function getAge(): ?string

@@ -94,6 +94,11 @@ class Demandes implements UserInterface
      */
     private $Etat;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Age;
+
     
 
     
@@ -267,6 +272,18 @@ class Demandes implements UserInterface
     public function setCaptchaCode($captchaCode)
     {
         $this->captchaCode = $captchaCode;
+    }
+
+    public function getAge(): ?string
+    {
+        return $this->Age;
+    }
+
+    public function setAge(string $Age): self
+    {
+        $this->Age = $Age;
+
+        return $this;
     }
 
 

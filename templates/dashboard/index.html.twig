@@ -137,8 +137,16 @@
 
 
 									</div>
-									<br>
 									<div class="col-12">
+										<p class="text-center">
+											<strong>Statistiques Commande par date</strong>
+										</p>
+										<canvas id="commandes" width="400" height="100"></canvas>
+									
+									
+									</div>
+									<br>
+									<div class="col-6">
 										<p class="text-center">
 											<strong>Users Statistics</strong>
 										</p>
@@ -147,7 +155,7 @@
 									
 									</div>
 
-									<div class="col-10">
+									<div class="col-6">
 										<p class="text-center">
 											<strong>Vehicules Statistics</strong>
 										</p>
@@ -155,14 +163,7 @@
 									
 									</div>
 
-									<div class="col-12">
-										<p class="text-center">
-									  <strong>Statistiques Commande par date</strong>
-								  </p>
-								  <canvas id="commandes" width="400" height="100"></canvas>
-
-
-							     </div>
+									
 
 
 									
@@ -251,14 +252,14 @@
 					<script>
 						let typeV = document.querySelector("#typeV")
 						let typeVGraph = new Chart(typeV, {
-							type: "doughnut",
+							type: "pie",
 							data: {
 								labels: {{ typeVehicule| raw }},
 						datasets: [
 							{
 								label: "Récupération des typeVs des produits",
 								data: {{ vehCount| raw }},
-							backgroundColor: ["blue", "lgreen"]
+							backgroundColor: ["orange", "lgreen"]
 												}
 
 						]
@@ -299,14 +300,15 @@
 			<script>
 				let age = document.querySelector("#users")
 				let ageGraph = new Chart(age, {
-					type: "bar",
+					type: "polarArea",
+					minBarLength: 2,
 					data: {
 						labels: {{ ageUtilisateurs| raw }},
 				datasets: [
 					{
 						label: "Récupération des ages des utilisateurs",
 						data: {{ countUtilisateurs| raw }},
-					backgroundColor: ["lgreen", "lightblue","black"]
+					backgroundColor: ["lgreen", "royalblue","skyblue"]
 										}
 
 				]
