@@ -37,7 +37,7 @@ class AdminController extends AbstractController
 
         $vehicules = $reppo->countByType();
 
-      //  $utilisateurs=$urp->countByAge();
+        $utilisateurs=$urp->countByAge();
 
       
       
@@ -51,8 +51,8 @@ class AdminController extends AbstractController
         $typeVehicule = [];
         $vehCount = [];
 
-        // $ageUtilisateurs = [];
-        // $countUtilisateurs = [];
+         $ageUtilisateurs = [];
+         $countUtilisateurs = [];
 
       
 
@@ -81,13 +81,13 @@ class AdminController extends AbstractController
                 //$recCount[] = count($recType);
                 }
 
-        // foreach ($utilisateurs as $users) {
+        foreach ($utilisateurs as $users) {
 
-        //     //$recType[] = $produit->getType();
-        //     $ageUtilisateurs[] = $users['age'];
-        //     $countUtilisateurs[] = $users['count'];
-        //     //$recCount[] = count($recType);
-        // }
+             //$recType[] = $produit->getType();
+             $ageUtilisateurs[] = $users['age'];
+             $countUtilisateurs[] = $users['count'];
+             //$recCount[] = count($recType);
+         }
 
        
             
@@ -97,16 +97,18 @@ class AdminController extends AbstractController
         return $this->render('dashboard/index.html.twig', [
             'controller_name' => 'AdminController',
             'recType' => json_encode($recType),
+
             'recCount' => json_encode($recCount),
             'demandes' => $demandes,
+
             'prodQuantite' => json_encode($prodQuantite),
             'prodNom' => json_encode($prodNom),
             
             'typeVehicule' => json_encode($typeVehicule),
             'vehCount' => json_encode($vehCount),
 
-            // 'ageUtilisateurs' => json_encode($ageUtilisateurs),
-            // 'countUtilisateurs' => json_encode($countUtilisateurs),
+             'ageUtilisateurs' => json_encode($ageUtilisateurs),
+             'countUtilisateurs' => json_encode($countUtilisateurs),
 
       
            
