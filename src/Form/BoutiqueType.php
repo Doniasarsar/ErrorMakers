@@ -27,6 +27,8 @@ class BoutiqueType extends AbstractType
                 'mapped' => false,
                 'required' => false
             ])
+            ->add('latitude')
+            ->add('longitude')
         
         ;
     }
