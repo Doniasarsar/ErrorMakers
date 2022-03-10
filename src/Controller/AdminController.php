@@ -35,9 +35,9 @@ class AdminController extends AbstractController
 
         $produits = $repp->countByQuantite();
 
-        $vehicules = $reppo->countByTypeV();
+        $vehicules = $reppo->countByType();
 
-        $utilisateurs=$urp->countByAge();
+      //  $utilisateurs=$urp->countByAge();
 
         $commandes = $commanderepo->countByDate();
       
@@ -51,8 +51,8 @@ class AdminController extends AbstractController
         $typeVehicule = [];
         $vehCount = [];
 
-        $ageUtilisateurs = [];
-        $countUtilisateurs = [];
+        // $ageUtilisateurs = [];
+        // $countUtilisateurs = [];
 
         $dates = [];
         $commandesCount = [];
@@ -82,13 +82,13 @@ class AdminController extends AbstractController
                 //$recCount[] = count($recType);
                 }
 
-        foreach ($utilisateurs as $users) {
+        // foreach ($utilisateurs as $users) {
 
-            //$recType[] = $produit->getType();
-            $ageUtilisateurs[] = $users['age'];
-            $countUtilisateurs[] = $users['count'];
-            //$recCount[] = count($recType);
-        }
+        //     //$recType[] = $produit->getType();
+        //     $ageUtilisateurs[] = $users['age'];
+        //     $countUtilisateurs[] = $users['count'];
+        //     //$recCount[] = count($recType);
+        // }
 
         foreach($commandes as $Commande){
             $dates[] = $Commande ['dateCommande'];
@@ -108,8 +108,8 @@ class AdminController extends AbstractController
             'typeVehicule' => json_encode($typeVehicule),
             'vehCount' => json_encode($vehCount),
 
-            'ageUtilisateurs' => json_encode($ageUtilisateurs),
-            'countUtilisateurs' => json_encode($countUtilisateurs),
+            // 'ageUtilisateurs' => json_encode($ageUtilisateurs),
+            // 'countUtilisateurs' => json_encode($countUtilisateurs),
 
             'dates' => json_encode($dates),
             'commandesCount' => json_encode($commandesCount),

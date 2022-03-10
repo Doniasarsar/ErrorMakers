@@ -51,9 +51,9 @@ class CommandeRepository extends ServiceEntityRepository
             //->groupBy('date')
         //;
         //return $query->getQuery()->getResult();
-       $query = $this->getEntityManager()->createQuery("
-           SELECT SUBSTRING(a.Date, 1,10) as date, COUNT(a) as  FROM App\Entity\Commande a GROUP BY dateCommande
-       ");
+        $query = $this->getEntityManager()->createQuery("
+        SELECT SUBSTRING(a.dateCommande, 1, 10) as dateCommande, COUNT(a) as count FROM App\Entity\Commande a GROUP BY dateCommande
+    ");
        return $query->getResult();
    }
 

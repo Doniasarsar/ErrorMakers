@@ -161,62 +161,67 @@
                                         {% endif %}
                                         
                                         <!-- Header Middle Wishlist Area End Here -->
-                                        <!-- Begin Header Mini Cart Area -->
-                                        <li class="hm-minicart">
-                                            <div class="hm-minicart-trigger">
-                                                <span class="item-icon"></span>
-                                                <span class="item-text">{{total}}
-                                                  {#  <span class="cart-item-count">{{quantitetotale}}</span> #}
-                                                </span>
+                                       <!-- Begin Header Mini Cart Area -->
+                                        
+                                       <li class="hm-minicart">
+                                        <div class="hm-minicart-trigger">
+                                            <span class="item-icon"></span>
+                                            <div id="dem">
+                                            <span  class="item-text">{{total}}
+                                              {#  <span class="cart-item-count">{{quantitetotale}}</span> #}
+                                            </span>
                                             </div>
-                                            <span></span>
-                                            
-                                            
-                                            <div class="minicart">
-                                               
-                                                <ul class="minicart-product-list">
-                                                {% for element in elements %}    
-                                                    <li>
-                                                        <a href="single-product.html" class="minicart-product-image">
-                                                            <img src="{{asset('uploads/') ~ element.produit.image }}" alt="cart products">
-
-                                                        </a>
-                                                        <div class="minicart-product-details">
-                                                            <h6><a href="single-product.html">{{ element.produit.nomProduit}}</a></h6>
-                                                            <span>{{ element.produit.prixProduit}}DT</span>
-                                                            <span>* {{ element.quantite}}</span>
-                                                        </div>
-                                                        <button class="close">
-                                                            
-                                                            <td class="li-product-remove"><a href="{{path("delete1",{id: element.produit.id})}}"><i class="fa fa-times"></i></a></td>
-
-                                                        </button>
-                                                    </li>
-                                                {% else %}
-                                                <td colspan="3" class="text-center">Votre Panier est vide</td>    
-                                                {% endfor %}
-                                                </ul>
-                                                <p class="minicart-total">SUBTOTAL: <span>{{total}}$</span></p>
-                                                <div class="minicart-button">
-                                                    <a  href="{{path('cart_index')}}" class="li-button li-button-dark li-button-fullwidth li-button-sm">
-                                                        <span>View Full Cart</span>
+                                        </div>
+                                        <span></span>
+                                        
+                                        
+                                        <div id="div_refresh" class="minicart">
+                                           
+                                            <ul class="minicart-product-list">
+                                            {% for element in elements %}    
+                                                <li>
+                                                    <a href="single-product.html" class="minicart-product-image">
+                                                        <img src="{{asset('uploads/') ~ element.produit.image }}" alt="cart products">
+                                    
                                                     </a>
-                                                  
-                                                </div>
-                                                
-                                                
+                                                    <div class="minicart-product-details">
+                                                        <h6><a href="single-product.html">{{ element.produit.nomProduit}}</a></h6>
+                                                        <span>{{ element.produit.prixProduit}}DT</span>
+                                                        <span>* {{ element.quantite}}</span>
+                                                    </div>
+                                                    <button class="close">
+                                                        
+                                                        <td class="li-product-remove"><a href="{{path("delete1",{id: element.produit.id})}}"><i class="fa fa-times"></i></a></td>
+                                    
+                                                    </button>
+                                                </li>
+                                            {% else %}
+                                            <td colspan="3" class="text-center">Votre Panier est vide</td>    
+                                            {% endfor %}
+                                            </ul>
+                                            <p class="minicart-total">SUBTOTAL: <span>{{total}}$</span></p>
+                                            <div class="minicart-button">
+                                                <a  href="{{path('cart_index')}}" class="li-button li-button-dark li-button-fullwidth li-button-sm">
+                                                    <span>View Full Cart</span>
+                                                </a>
+                                              
                                             </div>
-                                        </li>
-                                        <!-- Header Mini Cart Area End Here -->
-                                    </ul>
-                                </div>
-                                <!-- Header Middle Right Area End Here -->
+                                            
+                                            
+                                        </div>
+                                    
+                                        
+                                    </li>
+                                    <!-- Header Mini Cart Area End Here -->
+                                </ul>
                             </div>
                             <!-- Header Middle Right Area End Here -->
                         </div>
+                        <!-- Header Middle Right Area End Here -->
                     </div>
                 </div>
-                <!-- Header Middle Area End Here -->
+            </div>
+            <!-- Header Middle Area End Here -->
                 <!-- Begin Header Bottom Area -->
                 <div class="header-bottom header-sticky stick d-none d-lg-block d-xl-block">
                     <div class="container">
@@ -752,6 +757,22 @@
        link.addEventListener('click',onClickBtnLike);
    })
    </script>
+
+   <script>
+    $(document).ready(function(){
+		 $("#div_refresh").load("loadcart");
+        setInterval(function() {
+            $("#div_refresh").load("loadcart");
+         }, 3000);
+    });
+   </script>
+   <script>
+    $(document).ready(function () {
+        setInterval(function () {
+            $("#dem").load(window.location.href + " #dem");
+        }, 6000);
+        });
+  </script>
 
     
 {% endblock %}
