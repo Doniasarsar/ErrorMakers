@@ -42,7 +42,7 @@
                 <td>{{ r.message }}</td>
                 <td>{{ r.type }}</td>
                 <td>  {% for des in tab1 %}
-                  {% if des.commande.id == r.id %}
+                  {% if des.commande.id == r.commande.id %}
                   *{{ des.produit.nomProduit  }} <br>
                   {% endif %}
                   {% endfor %}

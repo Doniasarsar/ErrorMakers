@@ -75,9 +75,9 @@ class Utilisateurs implements UserInterface
      */
     private $Role = [];
 
-   
-   /**
-     * @ORM\OneToOne(targetEntity=Boutique::class, cascade={"persist", "remove"})
+
+    /**
+     * @ORM\OneToOne(targetEntity=Boutique::class, orphanRemoval=true)
      */
     private $boutique;
 
@@ -116,7 +116,7 @@ class Utilisateurs implements UserInterface
     protected $captchaCode;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255 , nullable=true)
      */
     private $Age;
 

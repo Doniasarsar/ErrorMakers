@@ -35,12 +35,11 @@
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
-                    <th>ID</th>
                    
-                    <th>etatLivraison</th>
-                    <th>dateLivraison</th>
-                  <th>adresseCommande</th>
-                     <th>PrixLivraison</th>
+                    <th>etat Livraison</th>
+                    <th>date Livraison</th>
+                  <th>adresse Commande</th>
+                     <th>Prix Livraison</th>
                       <th>Livreur</th>
                       <th>Vehicule</th>
                     
@@ -52,7 +51,6 @@
                   <tbody>
                       {% for class in tab %}
                   <tr>
-                  <td>{{class.id}}</td>
        
                   {% if class.etatLivraison == 1 %}
                     <td>Livrée </td>
@@ -78,12 +76,12 @@
                     
                    
                
-                <td><a  class="btn btn-warning" href="{{path("livraison_delete",{'id':class.id}) }}">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDelete&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                <td>
+                  <a  class="btn btn-warning" href="{{path("livraison_delete",{'id':class.id}) }}">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDelete&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
                   <br>
                 <a class="btn btn-info" href="{{path("livraison_update",{'id':class.id}) }}">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspUpdate&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
                 <br>
                 <a class="btn btn-danger" href="{{path("bandelivraison",{'id':class.id}) }}">Bande Livraison</a></td>
-                <br>
 
     
       </tr>
@@ -92,6 +90,8 @@
                 
                   </tbody>
                 </table>
+                    {{ knp_pagination_render(tab) }}
+
               </div>
               <!-- /.card-body -->
             </div>
@@ -208,6 +208,7 @@
                           <td colspan="6">Il n'y a aucun Livreur inscrit!</td>
                           {% endfor %}
                 </table>
+
               </div>
               <!-- /.card-body -->
             </div>

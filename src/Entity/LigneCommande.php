@@ -23,12 +23,12 @@ class LigneCommande
     private $quantite;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Produit::class, inversedBy="ligneCommandes", cascade={"persist", "remove"})
+     * @ORM\ManyToOne(targetEntity=Produit::class, inversedBy="ligneCommandes", orphanRemoval=true)
      */
     private $produit;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Commande::class, inversedBy="ligneCommandes" , cascade={"persist", "remove"})
+     * @ORM\ManyToOne(targetEntity=Commande::class, inversedBy="ligneCommandes" , orphanRemoval=true)
      */
     private $commande;
 

@@ -82,12 +82,12 @@ class Commande
     private $modePaiemenet;
 
     /**
-     * @ORM\OneToMany(targetEntity=LigneCommande::class, mappedBy="commande", cascade={"persist", "remove"})
+     * @ORM\OneToMany(targetEntity=LigneCommande::class, mappedBy="commande",orphanRemoval=true)
      */
     private $ligneCommandes;
 
     /**
-     * @ORM\OneToMany(targetEntity=Reclamation::class, mappedBy="commande")
+     * @ORM\OneToMany(targetEntity=Reclamation::class, mappedBy="commande" , orphanRemoval=true)
      */
     private $reclamations;
 

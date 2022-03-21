@@ -100,7 +100,7 @@ class ReclamationController extends AbstractController
         $donnees = $paginator->paginate(
             $reclamations,
             $request->query->getInt('page', 1), // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
-            3 // Nombre de résultats par page
+            2 // Nombre de résultats par page
         );
 
 

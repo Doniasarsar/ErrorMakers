@@ -716,8 +716,8 @@
                 var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
                 var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
                 console.log(countdownObj);
-                console.log("updating " + days + "d " + hours + "h " + minutes + "m " + seconds + "s");
-                countdownObj.text(days + "d " + hours + "h " + minutes + "m " + seconds + "s");
+                console.log("updating " + days + "D " + hours + "H " + minutes + "M " + seconds + "S");
+                countdownObj.text(days + "D " + hours + "H " + minutes + "M " + seconds + "S");
                 if (timeleft < 0) {
                     clearInterval(myfunc);
                     countdownObj.text("THIS EVENT HAS BEGAN!!");
