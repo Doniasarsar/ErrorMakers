@@ -50,7 +50,7 @@ class Produit
     private $nomProduit;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Boutique::class, inversedBy="produit", orphanRemoval=true)
+     * @ORM\ManyToOne(targetEntity=Boutique::class, inversedBy="produit")
      */
     private $boutique;
 

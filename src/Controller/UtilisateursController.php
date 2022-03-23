@@ -11,10 +11,13 @@ use App\Repository\UtilisateursRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Core\Encoder\MessageDigestPasswordEncoder;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
 class UtilisateursController extends AbstractController
 {
@@ -225,6 +228,40 @@ class UtilisateursController extends AbstractController
     public function logout(){}
 
   
+#***************************MOBILE*******************************#
+    
+    /**
+     * @Route("/utilisateursjson", name="json_index", methods={"GET"})
+     */
+    public function afficherJSON(UtilisateursRepository $UtilisateursRepository, SerializerInterface $serializer): Response
+    {
+        $result = $UtilisateursRepository->findAll();
+        /* $n = $normalizer->normalize($result, null, ['groups' => 'pack:read']);
+        $json = json_encode($n); */
+        $json = $serializer->serialize($result, 'json', ['groups' => 'utilisateurs:read']);
+        return new JsonResponse($json, 200, [], true);
+    }
+    /**
+     * @Route("/adduserJSON",name="adduserJSON")
+     */
+
+    public function adduserJSON(Request $request, NormalizerInterface $Normalizer)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $utilisateurs = new Utilisateurs();
+        $utilisateurs->setNom($request->get('Nom'));
+        $utilisateurs->setPrenom($request->get('Prenom'));
+        $utilisateurs->setEmail($request->get('Email'));
+        $utilisateurs->setTelephone($request->get('Telephone'));
+        $utilisateurs->setPassword($request->get('Password'));
+
+        $em->persist($utilisateurs);
+        $em->flush();
+        $jsonContent = $Normalizer->normalize($utilisateurs, 'json', ['groups' => 'utilisateurs:read']);
+        return new Response(json_encode($jsonContent));;
+    }
+
+    /**********************************************************/
 
      
 }
