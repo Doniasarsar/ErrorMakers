@@ -9,8 +9,13 @@ use App\Repository\EvenementRepository;
 use Doctrine\Persistence\ObjectManager;
 use App\Repository\CommentLikeRepository;
 use App\Repository\CommentairesRepository;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Serializer\SerializerInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class CommentairesController extends AbstractController
@@ -93,7 +98,57 @@ class CommentairesController extends AbstractController
             'likes'=>$likerepo->count(['comment'=>$commentaire])
         ],200);
     }
+#***************************MOBILE*******************************#
+    
+    /**
+     * @Route("/Commentairesjson", name="json_commentaires", methods={"GET"})
+     */
+    public function afficherJSON(CommentairesRepository $CommentairesRepository, SerializerInterface $serializer,Request $request): Response
+    {
+        $id_event= $request->get('id');
 
+
+        $result = $CommentairesRepository->findByEeven($id_event);
+
+        $json = $serializer->serialize($result, 'json', ['groups' => 'commentaires:read']);
+        return new JsonResponse($json, 200, [], true);
+    }
+   
+
+    /**********************************************************/
+
+     /**
+     * @Route("/commentairejson", name="addCommenhbjktairesJSffON")
+     * @Method("POST")
+     */
+    public function addcomentaires(Request $request,CommentairesRepository $CommentairesRepository,EvenementRepository $eve, SerializerInterface $serializer)
+    {  
+      
+        $em = $this->getDoctrine()->getManager();
+        $Commentaire = new Commentaires();
+
+        $id = $request->get('id');
+        $email = $request->get('Email');
+        $pseudo = $request->get('pseudo');
+        $contenu = $request->get('contenu');
+
+
+        $id_eve = $eve->find($id);
+
+        $Commentaire->setAnnonces($id_eve);
+        $Commentaire->setEmail($email);
+        $Commentaire->setPseudo($pseudo);
+        $Commentaire->setContenu($contenu);
+        
+
+        $em->persist($Commentaire);
+        $em->flush();
+        
+        $json = $serializer->serialize($Commentaire, 'json', ['groups' => ['normal']]);
+        return new JsonResponse($json, 200, [], true);
+
+  
+    }
 
 
     
