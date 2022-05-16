@@ -2,13 +2,12 @@
 
 namespace App\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
 use App\Repository\EvenementRepository;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
-use Symfony\Component\Serializer\Annotation\Groups;
-
+use Doctrine\Common\Collections\Collection;
+use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 /**
@@ -20,14 +19,12 @@ class Evenement
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Groups("evenement:read")
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=30)
      * @Assert\NotBlank(message="nom is required")
-     * @Groups("evenement:read")
 
      */
     private $nom;
@@ -43,7 +40,6 @@ class Evenement
     /**
      * @ORM\Column(type="string", length=100)
      * @Assert\NotBlank(message="adresse is required")
-     * @Groups("evenement:read")
 
      */
     private $adresse;
@@ -72,14 +68,12 @@ class Evenement
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      * @Assert\NotBlank(message="description is required")
-     * @Groups("evenement:read")
 
      */
     private $description;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("evenement:read")
      */
     private $affiche;
 
@@ -90,7 +84,6 @@ class Evenement
 
     /**
      * @ORM\Column(type="text")
-     * @Groups("evenement:read")
      */
     private $longdesc;
 

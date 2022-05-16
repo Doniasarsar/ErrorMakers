@@ -51,10 +51,7 @@
                     <td>{{ bout.descBoutique}}</td>
                     <td>{{ bout.adresseBoutique}}</td>
                     <td>{{ bout.Commercant.getEmail()}}</td>
-                   <td> {% for image in bout.images %}
-                    <img src="{{ asset('/uploads/' ~ image.name) }}" alt="" width="200">
-                   
-                     {% endfor %} </td>
+                   <td> <img src="{{ asset('/uploads/' ~ bout.image) }}" alt="" width="200"></td>
       {# Si la route est "update_boutique on affiche les images #}
  {#	{% if app.request.attributes.get('_route') == 'update_boutique' %} 
         <h2>Images</h2>
@@ -74,8 +71,11 @@
                      <a class="btn btn-warning"  href="{{path('boutique_listProduit',{val : bout.id })}}">Afficher Produits</a>
                      </td>  
                        <td>
-                        <a class="btn btn-warning"  href="{{path('boutique_delete',{id : bout.id })}}">Supprimer</a>
+                        <a class="btn btn-danger"  href="{{path('boutique_delete',{id : bout.id })}}">Supprimer</a>
                         <hr>
+                        
+                          <a class="btn btn-info" href="{{path('update_boutique',{id : bout.id })}}">Modifier Boutiques</a>
+                        
                     </td>                 
                    </tr>
                    {% endfor %}

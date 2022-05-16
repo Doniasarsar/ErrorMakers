@@ -76,7 +76,7 @@ class Reclamation
     private $client;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Commande::class, inversedBy="reclamations" )
+     * @ORM\ManyToOne(targetEntity=Commande::class, inversedBy="reclamations" , orphanRemoval=true)
      */
     private $commande;
 

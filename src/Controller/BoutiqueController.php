@@ -104,24 +104,18 @@ class BoutiqueController extends AbstractController
             $boutique->setCommercant($user);
 
             // On récupère les images transmises
-                $images = $form->get('images')->getData();
-                
-                // On boucle sur les images
-                foreach($images as $image){
-                    // On génère un nouveau nom de fichier
+                $image = $form->get('image')->getData();
+
                     $fichier = md5(uniqid()).'.'.$image->guessExtension();
                     
                     // On copie le fichier dans le dossier uploads
-                    $image->move(
-                        $this->getParameter('images_directory'),
+                    $image->move($this->getParameter('images_directory'),
                         $fichier
                     );
                     
-                    // On crée l'image dans la base de données
-                    $img = new Images();
-                    $img->setName($fichier);
-                    $boutique->addImage($img);
-                                            }
+                    
+                    $boutique->setImage($fichier);
+                                            
 
                      $entityManager = $this->getDoctrine()->getManager();
                      $entityManager->persist($boutique);
@@ -187,22 +181,20 @@ class BoutiqueController extends AbstractController
             // 'multiple' => true,
             // 'expanded' => true,
         ])
-        ->add('images', FileType::class,[
-            'label' => false,
-            'multiple' => true,
-            'mapped' => false,
-            'required' => false
-        ])
+            ->add('image', FileType::class, [
+                'mapped' => false,
+                'label' => ' Telecharger une imagee'
+
+            ])
         ->add('Edit',SubmitType::class)
 
         ->getForm();
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
              // On récupère les images transmises
-    $images = $form->get('images')->getData();
+    $image = $form->get('image')->getData();
     
     // On boucle sur les images
-    foreach($images as $image){
         // On génère un nouveau nom de fichier
         $fichier = md5(uniqid()).'.'.$image->guessExtension();
         
@@ -211,12 +203,10 @@ class BoutiqueController extends AbstractController
             $this->getParameter('images_directory'),
             $fichier
         );
-        
-        // On crée l'image dans la base de données
-        $img = new Images();
-        $img->setName($fichier);
-        $boutique->addImage($img);
-    }
+
+            // On crée l'image dans la base de données
+            $boutique->setImage($fichier);
+    
             
           
             $entityManager = $this->getDoctrine()->getManager();

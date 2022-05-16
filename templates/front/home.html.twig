@@ -112,10 +112,10 @@
                                             <div class="product-image">
                                                 <a href="{{path('details',{id : bout.id })}}">
                                                     
-                                                     {% for image in bout.images %}
-                                              <img src="{{ asset('/uploads/' ~ image.name) }}" alt="" width="200">
+                                                    
+                                              <img src="{{ asset('/uploads/' ~ bout.image) }}" alt="" width="200">
                    
-                                                      {% endfor %}
+                                                     
                                                     
                                                     
                                                      </a>

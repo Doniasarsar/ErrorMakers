@@ -58,7 +58,13 @@ class Boutique
     /**
      * @ORM\Column(type="string", length=255)
      */
+
     private $latitude;
+
+    /**
+     * @ORM\Column(type="string", length=255 )
+     */
+    private $image;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -86,6 +92,18 @@ class Boutique
     public function setNomBoutique(string $nomBoutique): self
     {
         $this->nomBoutique = $nomBoutique;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }

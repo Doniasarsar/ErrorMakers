@@ -49,10 +49,10 @@
                    <div class="form-group">
                    
                     <label for="exampleInputPassword1">Photo de Profil </label>
-                    {% for image in Fbout.images %}
-                    {{ form_widget(image.name, {'attr': {'class': 'form-control'}}) }}
-                    {{ form_errors(image.name,{'attr':{"class":"mb-0"}}) }}
-                     {% endfor %}
+                   
+                  {{ form_widget(Fbout.image, {'attr': {'class': 'form-control'} ,'id': 'image'}) }}
+                  {{ form_errors(Fbout.image,{'attr':{"class":"mb-0"} ,'id': 'image'}) }}
+               
                  
                    </div>
               

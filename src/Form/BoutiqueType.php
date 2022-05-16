@@ -20,12 +20,11 @@ class BoutiqueType extends AbstractType
             ->add('nomBoutique')
             ->add('descBoutique')
             ->add('adresseBoutique')
-           
-            ->add('images', FileType::class,[
-                'label' => false,
-                'multiple' => true,
+
+            ->add('image', FileType::class, [
                 'mapped' => false,
-                'required' => false
+                'label' => 'Telecharger une image '
+
             ])
             ->add('latitude')
             ->add('longitude')

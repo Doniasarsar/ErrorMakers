@@ -6,7 +6,6 @@ use Doctrine\ORM\Mapping as ORM;
 use App\Repository\UtilisateursRepository;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
-use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -25,21 +24,18 @@ class Utilisateurs implements UserInterface
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Groups("utilisateurs:read")
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="Last Name is required")
-     * @Groups("utilisateurs:read")
+     *@Assert\NotBlank(message="Last Name is required")
      */
     private $Nom;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message="First Name is required")
-     * @Groups("utilisateurs:read")
      */
     private $Prenom;
 
@@ -47,7 +43,6 @@ class Utilisateurs implements UserInterface
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message="Email is required")
      * @Assert\Email(message = "The email '{{ value }}' is not a valid email.")
-     * @Groups("utilisateurs:read")
      */
     private $Email;
 
@@ -58,15 +53,13 @@ class Utilisateurs implements UserInterface
      *                max=8,
      *                minMessage = "Telephone must has {{ limit }} numbers",
      *                maxMessage = "Telephone must has {{ limit }} numbers")
-     * @Groups("utilisateurs:read")
      */
     private $Telephone;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message="Password is required")
-     * @Assert\Length(min=8, minMessage = "Your Password must be at least {{ limit }} characters long")
-     * @Groups("utilisateurs:read")
+     * @Assert\Length(min=8, minMessage = "Your Password must be at least {{ limit }} characters long",)
      */
     private $Password;
 
@@ -389,8 +382,6 @@ class Utilisateurs implements UserInterface
 
         return $this;
     }
-
-    
 
     
    

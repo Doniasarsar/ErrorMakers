@@ -51,10 +51,10 @@
                                         <td>{{ bout.descBoutique}}</td>
                                         <td>{{ bout.adresseBoutique}}</td>
                                         <td>{{ bout.Commercant.getEmail()}}</td>
-                                        <td> {% for image in bout.images %}
-                                            <img src="{{ asset('/uploads/' ~ image.name) }}" alt="" width="200">
+                                      
+                                            <td><img src="{{ asset('/uploads/' ~ bout.image) }}" alt="" width="200"></td>
 
-                                            {% endfor %}
+                                            
                                         </td>
                                         {# Si la route est "update_boutique on affiche les images #}
                                         {# {% if app.request.attributes.get('_route') == 'update_boutique' %}
