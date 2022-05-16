@@ -15,6 +15,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -234,6 +236,33 @@ class BoutiqueController extends AbstractController
         $em->flush();
 
         return $this->redirectToRoute('boutique_list');
+    }
+
+    /**
+    * @Route("/Listboutiquejson", methods={"GET"})
+    */
+    public function jsonindex(BoutiqueRepository $BoutiqueRepository , SerializerInterface $serializer): Response
+    {
+       $result = $BoutiqueRepository->findAll();
+       /* $n = $normalizer->normalize($result, null, ['groups' => 'pack:read']);
+        $json = json_encode($n); */
+        $json = $serializer->serialize($result, 'json', ['groups' => 'boutique:read']);
+        return new JsonResponse($json, 200, [], true);
+    }
+
+    /**
+     * @Route("/mesproduits", name="jsonmescppde" , methods={"GET"})
+     */
+    public function mescommandes(Request $request,ProduitRepository $rep, SerializerInterface $serializer)
+    {
+        $id = $request->get("id");
+
+
+        $boutique = $rep->findByBoutique($id);
+
+        $json = $serializer->serialize($boutique, 'json', ['groups' => 'produit:read']);
+        return new JsonResponse($json, 200, [], true);
+
     }
     
 
